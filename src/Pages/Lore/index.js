@@ -1,6 +1,4 @@
 import React, {useEffect, useState} from "react"
-import ParallaxBanner from "../../Components/ParallaxBanner"
-import MainImage from "../../Assets/Images/bdd08568a019c9fdd025ecb0e0f02ed3.jpeg"
 import LoreExcerpt from "../../Components/LoreExcerpt"
 
 const Lore = () => {
