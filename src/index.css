@@ -7,7 +7,85 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Homepage */
+.Page {
+  width:100%;
+  margin:auto;
+}
+
+.introduction {
+  margin-top:5%;
+  width:100%;
+  min-height: 500px;
+}
+
+/* Lore */
+.sideMenu {
+  margin-top:1%;
+  height:1000px;
+  width:30%;
+  margin-left:1%;
+}
+
+.sideMenu2 {
+  margin-top:1%;
+  margin-left:2.5%;
+  margin-right:2.5%;
+  height:1000px;
+  width:95%;
+}
+
+
+.entry {
+  width:100%;
+  margin:auto;
+  background-color: #dcd8c0;
+}
+
+.excerpt-text {
+color: #dcd8c0;
+width: 80%;
+margin:auto;
+}
+
+.entry:hover {
+  width:100%;
+  margin:auto;
+  background-color: #dcd8c0b8;
+}
+
+.nav-item{
+  width:20vh;
+  margin:auto;
+  font-size: large;
+
+}
+
+.navbar-brand{
+  margin-left:1%;
+  color:#dcd8c0;
+}
+
+
+.navbar{
+  width:100%;
+}
+
+.parralax-container {
+  z-index: -1;
+  width: 100%;
+  min-height: 750px;
+  height: 75%;
+  margin: auto;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
