@@ -4,6 +4,7 @@ import Home from './Pages/Home/index.js'
 import Lore from './Pages/Lore/index.js'
 import Navigation from './Components/Navigation';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Rules from './Pages/Rules';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/Lore" element={<Lore />} />
+            <Route exact path="/Rules" element={<Rules />} />
           </Routes>
         </BrowserRouter>
       </header>

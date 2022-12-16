@@ -49,7 +49,7 @@ code {
   background-color: #dcd8c0;
 }
 
-.excerpt-text {
+.excerpt-text, .rules-text{
 color: #dcd8c0;
 width: 80%;
 margin:auto;
@@ -59,6 +59,7 @@ margin:auto;
   width:100%;
   margin:auto;
   background-color: #dcd8c0b8;
+  transition: background-color 0.25s ease;
 }
 
 .nav-item{
@@ -88,4 +89,16 @@ margin:auto;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.rulesPage {
+  margin:auto;
+  margin-top:1%;
+}
+
+.rules-excerpt-container:hover {
+  width:100%;
+  margin:auto;
+  background-color: #dcd8c0b8;
+  transition: background-color 0.5s ease;
 }

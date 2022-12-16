@@ -24,7 +24,7 @@ function Navigation() {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link " to="/Lore">
+                            <Link className="nav-link " to="/Rules">
                                 Laws of Purgatory
                             </Link>
                         </li>
