@@ -16,7 +16,7 @@ function ParallaxBanner(props) {
         data-testid={`Image-Parallax  ${background}`}
         className={`parralax-container ${transition} `}
         style={{ backgroundImage: `url(${background})` }}
-      ></div>
+      />
     </div>
   );
 }
