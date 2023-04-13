@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Navigation() {
     return (
-        <nav className="navbar navbar-expand-lg bg-dark ">
+        <nav className="navbar navbar-expand-lg bg-dark fixed-top">
             <div className="container-fluid ">
                 <Link className="navbar-brand " to="/">
                     Pariah
@@ -11,7 +11,7 @@ function Navigation() {
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
+                <div className="collapse navbar-collapse " id="navbarNav">
                     <ul className="navbar-nav " style={{ backgroundColor: `#dcd8c0` }}>
                         <li className="nav-item " >
                             <Link className="nav-link" to="/" >
@@ -25,7 +25,7 @@ function Navigation() {
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link " to="/Rules">
-                                Laws of Purgatory
+                                Ruleset
                             </Link>
                         </li>
                         <li className="nav-item">
@@ -34,17 +34,17 @@ function Navigation() {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link " to="/Lore">
-                                Adventures Log
+                            <Link className="nav-link " to="/Deaths">
+                                Deaths
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link " to="/Lore">
-                                Contact the Gods
+                            <Link className="nav-link " to="/HowToStart">
+                                Join the Adventure
                             </Link>
                         </li>
 
-                        <li className="nav-item dropdown">
+                        {/* <li className="nav-item dropdown">
                             <Link className="nav-link dropdown-toggle"
                                 to="/Classes"
                                 href="#"
@@ -52,7 +52,7 @@ function Navigation() {
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
                             >
-                                Classes
+                                Classes (WIP)
                             </Link>
                             <ul className="dropdown-menu" style={{ backgroundColor: `#dcd8c0` }}>
                                 <li><a className="dropdown-item text-center" href="#">Fighter</a></li>
@@ -61,7 +61,7 @@ function Navigation() {
                                 <li><a className="dropdown-item text-center" href="#">Paladin</a></li>
 
                             </ul>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </div>

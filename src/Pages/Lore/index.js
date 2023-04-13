@@ -124,7 +124,7 @@ const Lore = () => {
         },
 
     ]
-    
+
     const [selectedLore, setSelectedLore] = useState([
         {
             id: 0,

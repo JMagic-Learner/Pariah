@@ -14,8 +14,9 @@
 }
 
 .App-header {
-  background-color: #dcd8c0; 
+  background-color: #dcd8c0;
   min-height: 100vh;
+  min-width: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,7 +33,23 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
+  }
+}
+
+
+@media (min-width: 300px) {
+  .App-header {
+    background-color: #dcd8c0;
+    min-height: 2000px;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
   }
 }
