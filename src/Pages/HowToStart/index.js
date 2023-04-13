@@ -4,7 +4,6 @@ import { ContactCard } from "../../Components/ContactCard"
 export const HowToStart = () => {
     return (
         <div className=" Page">
-
             <div className="introduction bg-dark">
                 <hr></hr>
                 <h3 className="leading"> Upcoming Dungeon 4/22/2023: Cliffside Abbey</h3>
@@ -15,15 +14,10 @@ export const HowToStart = () => {
                 <div className="flex-wrap mx-auto w-75">
                     <p> Adventure Status: 0/5 </p>
                 </div>
-
             </div>
-
             <div className="introduction bg-dark " >
-
                 <ContactCard />
-
             </div>
-
         </div >
     )
 }

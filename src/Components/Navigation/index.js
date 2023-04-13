@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Navigation() {
+export const Navigation = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-dark fixed-top">
             <div className="container-fluid ">
@@ -9,7 +9,7 @@ function Navigation() {
                     Pariah
                 </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
+                    <span className="navbar-toggler-icon" style={{ backgroundColor: `#dcd8c0` }}></span>
                 </button>
                 <div className="collapse navbar-collapse " id="navbarNav">
                     <ul className="navbar-nav " style={{ backgroundColor: `#dcd8c0` }}>
@@ -69,4 +69,3 @@ function Navigation() {
     );
 }
 
-export default Navigation;

@@ -1,6 +1,6 @@
 import React from 'react'
 import RulesExcerpt from '../../Components/RulesExcerpt'
-const Rules = () => {
+export const Rules = () => {
 
   const RulesArray = [
     {
@@ -36,8 +36,6 @@ const Rules = () => {
       text: "One failed death saving throw and the character is dead."
     }
   ]
-
-
   return (
     <div className="Page w-75">
       {RulesArray.map((rules) => {
@@ -53,4 +51,3 @@ const Rules = () => {
   )
 }
 
-export default Rules

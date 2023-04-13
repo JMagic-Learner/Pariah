@@ -42,30 +42,6 @@ code {
   width: 95%;
 }
 
-
-
-.nav-item {
-  width: 20vh;
-  margin: auto;
-  font-size: large;
-
-}
-
-.navbar-brand {
-  margin-left: 1%;
-  color: #dcd8c0;
-  font-size: 5vh;
-}
-
-.navbar {
-  width: 100%;
-  font-size: 5vh;
-}
-
-.nav-link {
-  font-size: 2vh;
-}
-
 .parralax-container {
   z-index: -1;
   width: 100%;
@@ -95,9 +71,34 @@ code {
   width: 75%;
 }
 
+.centered-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  padding: 1%;
+  border: 2px solid gray;
+  border-radius: 25px;
+}
 
+.navbar-toggler,
+.navbar-toggler-icon {
+  color: #dcd8c0
+}
 
 @media (min-width: 300px) {
+  .centered-overlay {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    padding: 1%;
+    border: 2px solid gray;
+    border-radius: 25px;
+  }
+
   .navbar-nav {
     margin: auto;
   }
@@ -107,6 +108,7 @@ code {
     margin: auto;
     background-color: #dcd8c0;
     font-size: 2vh;
+    height: 30px;
   }
 
   .excerpt-text,
@@ -140,6 +142,17 @@ code {
 }
 
 @media (min-width: 750px) {
+  .centered-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    padding: 1%;
+    border: 2px solid gray;
+    border-radius: 25px;
+  }
+
   .navbar-nav {
     margin-left: 12.5%;
   }

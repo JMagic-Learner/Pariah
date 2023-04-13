@@ -3,7 +3,6 @@ import DeathProfile from '../../Components/DeathProfile'
 import { DeathArray } from "./PlayerDeaths"
 
 export const Deaths = () => {
-
     const [death, setDeath] = useState([
         {
             date: "4/12/2023",
@@ -16,14 +15,10 @@ export const Deaths = () => {
             damage: 50,
         },
     ])
-
     const Open = (characterName) => {
         let selectT = DeathArray.filter((item) => item.characterName === characterName)
         setDeath(selectT)
     }
-
-
-
     return (
         <div className="Page">
             <div className="d-flex">

@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import Home from './Pages/Home/index.js'
-import Lore from './Pages/Lore/index.js'
-import Navigation from './Components/Navigation';
+import { Lore } from './Pages/Lore/index.js'
+import { Navigation } from './Components/Navigation';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Rules from './Pages/Rules/index.js';
-import Map from './Pages/Map/index.js';
+import { Rules } from './Pages/Rules/index.js';
+import { Map } from './Pages/Map/index.js';
 import { Deaths } from './Pages/Deaths';
 import { HowToStart } from "./Pages/HowToStart"
 

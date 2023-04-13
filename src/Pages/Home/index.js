@@ -6,10 +6,14 @@ const Home = () => {
     return (
         <div className="Homepage Page">
             <ParallaxBanner background={MainImage} />
-            <div className="introduction bg-dark">
-                <p> Welcome to Purgatory</p>
+
+            <h2 className="centered-overlay bg-dark"> Welcome to Durandis.</h2>
+
+
+            {/* <div className="introduction bg-dark">
+
                 <hr></hr>
-            </div>
+            </div> */}
 
         </div>
     )
