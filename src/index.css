@@ -57,12 +57,12 @@ code {
 .rules-excerpt-container:hover {
   width: 100%;
   margin: auto;
-  background-color: #dcd8c0b8;
+  background-color: #000000;
   transition: background-color 0.5s ease;
 }
 
 .card-text {
-  color: black;
+  color: white;
 }
 
 .CardContainer {
@@ -84,7 +84,7 @@ code {
 
 .navbar-toggler,
 .navbar-toggler-icon {
-  color: #dcd8c0
+  color: hotpink
 }
 
 @media (min-width: 300px) {
@@ -106,14 +106,15 @@ code {
   .entry {
     width: 100%;
     margin: auto;
-    background-color: #dcd8c0;
+    background-color: gray;
     font-size: 2vh;
-    height: 30px;
+    height: 35px;
+    color: white;
   }
 
   .excerpt-text,
   .rules-text {
-    color: #dcd8c0;
+    color: white;
     width: 80%;
     margin: auto;
     font-size: 2.5vh;
@@ -127,7 +128,7 @@ code {
 
   .navbar-brand {
     margin-left: 1%;
-    color: #dcd8c0;
+    color: white;
     font-size: 5vh;
   }
 
@@ -160,13 +161,13 @@ code {
   .entry {
     width: 100%;
     margin: auto;
-    background-color: #dcd8c0;
+    background-color: gray;
     font-size: 2.5vh;
   }
 
   .excerpt-text,
   .rules-text {
-    color: #dcd8c0;
+    color: white;
     width: 80%;
     margin: auto;
     font-size: 2.5vh;
@@ -181,7 +182,7 @@ code {
 
   .navbar-brand {
     margin-left: 1%;
-    color: #dcd8c0;
+    color: white;
     font-size: 5vh;
   }
 
@@ -198,6 +199,6 @@ code {
 .entry:hover {
   width: 100%;
   margin: auto;
-  background-color: #dcd8c0b8;
+  background-color: hotpink;
   transition: background-color 0.25s ease;
 }
