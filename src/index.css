@@ -101,6 +101,7 @@ code {
 
   .navbar-nav {
     margin: auto;
+    color: white
   }
 
   .entry {
@@ -115,6 +116,14 @@ code {
   .excerpt-text,
   .rules-text {
     color: white;
+    width: 80%;
+    margin: auto;
+    font-size: 2.5vh;
+  }
+
+  .excerpt-text,
+  .rules-text:hover {
+    color: hotpink;
     width: 80%;
     margin: auto;
     font-size: 2.5vh;
@@ -139,6 +148,17 @@ code {
 
   .nav-link {
     font-size: 3vh;
+    color: white;
+  }
+
+  .nav-link:hover {
+    font-size: 3vh;
+    color: hotpink;
+  }
+
+  .nav-link:focus {
+    font-size: 3vh;
+    color: hotpink;
   }
 }
 
@@ -156,6 +176,7 @@ code {
 
   .navbar-nav {
     margin-left: 12.5%;
+    color: white
   }
 
   .entry {
@@ -173,11 +194,19 @@ code {
     font-size: 2.5vh;
   }
 
+  .excerpt-text,
+  .rules-text:hover {
+    color: hotpink;
+    width: 80%;
+    margin: auto;
+    font-size: 2.5vh;
+  }
+
   .nav-item {
     width: 20vh;
     margin: auto;
     font-size: large;
-
+    color: white
   }
 
   .navbar-brand {
@@ -193,6 +222,17 @@ code {
 
   .nav-link {
     font-size: 2vh;
+    color: white;
+  }
+
+  .nav-link:hover {
+    font-size: 2vh;
+    color: hotpink;
+  }
+
+  .nav-link:focus {
+    font-size: 2vh;
+    color: hotpink;
   }
 }
 
@@ -201,4 +241,32 @@ code {
   margin: auto;
   background-color: hotpink;
   transition: background-color 0.25s ease;
+}
+
+.Right-Column {
+  margin: 2%;
+  background-color: black;
+  color: white;
+  height: 100%;
+  border-radius: 15px 15px 15px 15px;
+  width: 50%;
+}
+
+.EmphasizedTitle {
+  color: hotpink
+}
+
+.AbilitiyScores {
+  margin-left: 5%;
+  text-align: left;
+  font-size: 2vh;
+}
+
+.Left-Column {
+  margin: 2%;
+  background-color: black;
+  color: white;
+  height: 100%;
+  border-radius: 15px 15px 15px 15px;
+  width: 50%;
 }

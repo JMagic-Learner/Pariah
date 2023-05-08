@@ -8,6 +8,7 @@ import { Rules } from './Pages/Rules/index.js';
 import { Map } from './Pages/Map/index.js';
 import { Deaths } from './Pages/Deaths';
 import { HowToStart } from "./Pages/HowToStart"
+import { CharacterCreation } from "./Pages/CharacterCreation"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Navigation />
           <Routes>
             <Route exact path="/" element={<Home />} />
+            <Route exact path="/CharacterCreation" element={<CharacterCreation />} />
             <Route exact path="/Lore" element={<Lore />} />
             <Route exact path="/Rules" element={<Rules />} />
             <Route exact path="/Map" element={<Map />} />

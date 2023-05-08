@@ -9,13 +9,18 @@ export const Navigation = () => {
                     Pariah
                 </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon" style={{ backgroundColor: `#dadada` }}></span>
+                    <span className="navbar-toggler-icon bg-dark" ></span>
                 </button>
                 <div className="collapse navbar-collapse " id="navbarNav">
-                    <ul className="navbar-nav " style={{ backgroundColor: `#dadada` }}>
+                    <ul className="navbar-nav bg-dark " >
                         <li className="nav-item " >
                             <Link className="nav-link" to="/" >
                                 Home
+                            </Link>
+                        </li>
+                        <li className="nav-item " >
+                            <Link className="nav-link" to="/CharacterCreation" >
+                                Character
                             </Link>
                         </li>
                         <li className="nav-item">
