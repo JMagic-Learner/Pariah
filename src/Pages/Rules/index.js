@@ -82,6 +82,18 @@ export const Rules = () => {
       <section>
         <img src={require("../../Assets/Images/GUI.jpg")} style={{ width: "50%", height: "50%" }} />
       </section>
+      <h1 className="EmphasizedTitle"> Overt Checks - Opposed Checks </h1>
+      <li className="h6"> If the player chooses to use Overt programs, the player must succeed on a TEC check.</li>
+      <li className="h6"> In addition, the player's TEC check must also succeed against an opposing TEC check made by the referee, to represent firewall breach protocols and other active net defenses.</li>
+      <li className="h6"> Failing the TEC check expends the RAM for the duration of session until recharged. </li>
+      <li className="h6"> Failing the TEC check does not alert active net defense systems  </li>
+      <li className="h6"> Rolling a TEC check result lower than the opposed referree roll does alert active net defense systems to the player's attempted (succesfull, or unsuccesfull) breach.  </li>
+      <hr></hr>
+      <h1 className="EmphasizedTitle"> Expenditure of RAM </h1>
+      <li className="h6"> RAM expends battery power of the hacking device</li>
+      <li className="h6"> RAM costs marked `continous` occupy that much ram on your hacking device until you decide to no longer use that program. Continous programs no longer in use refund 1/2 (rounded down) of the RAM initially used to upkeep the program.</li>
+      <li className="h6"> RAM does not recover until the hacking device is jacked into an appropriate PSU</li>
+      <li className="h6"> A device at 0 RAM is effectively unusable </li>
       {RulesArray.map((rules) => {
         return (
 
