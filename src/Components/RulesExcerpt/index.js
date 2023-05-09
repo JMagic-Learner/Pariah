@@ -1,11 +1,14 @@
 import React from "react"
 
 const RulesExcerpt = (props) => {
-    const {ruleTitle, ruleText} = props
-    return(
+    const { ruleTitle, ruleText, rulesCost, rulesType } = props
+    return (
         <div className="rules-excerpt-container">
-            <h2> {ruleTitle} </h2>
-            <p className="rules-text"> {ruleText} </p>
+            <div className="HorizontalContainer">
+                <h1 className="EmphasizedTitle h4">{ruleTitle} </h1>
+                <h1 className="EmphasizedTitle h5">{rulesCost} {rulesType} </h1>
+                <p> {ruleText} </p>
+            </div>
         </div>
     )
 }

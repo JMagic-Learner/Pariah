@@ -1,5 +1,9 @@
 import { Abilities } from "../../Components/Abilities";
 import { Origins } from "../../Components/Origins";
+import { Background } from "../../Components/Background";
+import { TraitDrive } from "../../Components/TraitsDrive";
+import { Allegiances } from "../../Components/Allegiances";
+import { HPDefense } from "../../Components/HPDefense";
 export const CharacterCreation = () => {
     return (
         <div className="Page CharacterCreation bg-dark">
@@ -8,10 +12,16 @@ export const CharacterCreation = () => {
                 <section className="Right-Column">
                     <Abilities />
                     <hr></hr>
-                    <Abilities />
+                    <Background />
+                    <hr></hr>
+                    <TraitDrive />
+                    <hr></hr>
+                    <Allegiances />
                 </section>
                 <section className="Left-Column">
                     <Origins />
+                    <hr></hr>
+                    <HPDefense />
                 </section>
 
             </section>

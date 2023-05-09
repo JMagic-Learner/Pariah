@@ -46,7 +46,7 @@ code {
   z-index: -1;
   width: 100%;
   min-height: 750px;
-  height: 75%;
+  height: 100%;
   margin: auto;
   background-attachment: fixed;
   background-position: center;
@@ -256,7 +256,7 @@ code {
   color: hotpink
 }
 
-.AbilitiyScores {
+.HorizontalContainer {
   margin-left: 5%;
   text-align: left;
   font-size: 2vh;
@@ -269,4 +269,59 @@ code {
   height: 100%;
   border-radius: 15px 15px 15px 15px;
   width: 50%;
+}
+
+.BackGroundRow {
+  height: 45px;
+  margin-top: 1%;
+  width: 200px;
+}
+
+.TableDescription {
+  width: 70%;
+}
+
+th {
+  width: 50px;
+}
+
+.TraitsDriveDetailsTable {
+  width: 30%;
+}
+
+.TraitsDriveDetailsTableIndex {
+  width: 30%;
+}
+
+.TraitsDriveDetailsTableTitle {
+  width: 70%;
+}
+
+.TraitsDriveDetailsTableRow {
+  margin-top: 1.5%;
+}
+
+.Keyword {
+  margin-left: 10px;
+}
+
+.randomGenerationContainer {
+  width: 75%;
+  margin: auto;
+}
+
+.randomButton {
+  width: 250px;
+  height: 75px;
+}
+
+.randomButtonLarge {
+  width: 100%;
+}
+
+.QuadContainer {
+  margin-left: 1%;
+  text-align: left;
+  font-size: 2vh;
+  width: 25%;
 }

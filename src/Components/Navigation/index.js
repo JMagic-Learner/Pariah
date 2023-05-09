@@ -25,12 +25,12 @@ export const Navigation = () => {
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link " to="/Lore">
-                                Ancient Lore
+                                Lore
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link " to="/Rules">
-                                Ruleset
+                                Hacking
                             </Link>
                         </li>
                         <li className="nav-item">
@@ -41,11 +41,6 @@ export const Navigation = () => {
                         <li className="nav-item">
                             <Link className="nav-link " to="/Deaths">
                                 Deaths
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link " to="/HowToStart">
-                                Join the Adventure
                             </Link>
                         </li>
 

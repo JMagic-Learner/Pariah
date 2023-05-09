@@ -1,122 +1,72 @@
 export const WorldLore = [
     {
         id: 0,
-        title: "Durandis",
+        title: "The Gem War",
         imageUrl: "xxxxxxxx",
-        text: "Durandis. Nowhere. Limbo. These are all aliases for a pocket dimension created by the Shards. The Shards forged Durandis from the remains of dead Abominations, using their bones, flesh and souls to craft an artificial plane of existence",
-        text2: ""
+        text: "A war fought for the control and extraction of Gems. Gems are known for their exceptional ability to refract light. This property allowed civilzations to advance technology such as the bridger spacecraft. Value and speculation on open markets forced political entities into a all-out corporate war. ",
+        text2: "The war ended around 10 years ago. Due to disrupted supply lines and the inability to extract Gems efficiently on a mass scale, technological advancement has atrophied."
     },
     {
         id: 1,
-        title: "The Shards",
+        title: "The Void",
         imageUrl: "xxxxxxxx",
-        text: "The Shards were a triumvate of divine bodies. They are the first inheritors of Durandis.",
-        text2: "The Shards do not align with traditional values of black and white. Their creeds and methods follow orange and blue, as a Scholar once said. If one of the Shards were to be asked, 'Is the act of killing evil?', they would most likely respond by asking `Is the death of any consequence?'. Ironically, the Shards will never be able to answer a simple question, for they are all dead."
+        text: "Dark energy that used to expand the universe is now working in reverse. Cosmic measurements of light between stars have reported shorter every year. As a byproduct of a collasping universe, the Void has appeared",
+        text2: "The Void manifests as a corrupting, omnicient, force of the universe. It pervades electronics as a phantom static or sometimes causes nightmarish events out of nowhere."
     },
     {
         id: 2,
-        title: "The Pariah",
+        title: "Varyk Industries",
         imageUrl: "xxxxxxxx",
-        text: "The Ursurper. The Traitor. The Invader. The God-Slayer. These titles were given to the Pariah, an unknown entity that brought war to Durandis's front doorstep. Nobody knows if the Pariah is a divine being, or a mortal given unfathomable power. What is known by the surviving denizens of Durandis is that the Pariah waged total war on the Shards. The Pariah brought three gifts to Durandis; The Pandemonium - The eventaul decay of sanity, The Faceless - monsters beyond comprehension, and the Shackling - the inability for deceased souls of Durandis to arrive at their final destination",
-        text2: "The Pariah was ultimately defeated in the closing battle of the `War in Heaven`. Despite this, the Pariah has perverted the minds of some individuals in Durandis. Those individuals in turn formed the Pariah Cults. Although the Shards have been butchered, the Pariah Cults aim to bring about a second incursion of their patron, the Pariah"
+        text: "Varyk Industries was one of the major corporate powers involved in the Gem War. Varyk Industries specializes in hyper-light drives, cold-core engines, and heavy manufacturing. Primarily stationed in the Eastern Satellite Rings, they have maintained a standing private army complete with a naval fleet. Given the disruption in Gem supply, Varyyk Industries is shifted from production of thier trademark bridger format drive to the maintenance and preservation of the bridger drives that remain. ",
+        text2: "Varyk Industries is headed by a C-Suite consisting of equal shares. Varyk Industries homeworld is Mave VII, a world that suffered WMD, Orbital, and biochemical bombardment during the Gem War. They are undergoing a massive infrastructure overhaul on Mave VII, drawing in many laborers from around the Tenebris system "
     },
     {
         id: 3,
-        title: "The War in Heaven",
+        title: "Universal Mining Coalition",
         imageUrl: "xxxxxxxx",
-        text: "The War in Heaven was as a cataclysmic event that occured around 643 years ago. In truth, 'The War in Heaven' is a misnomer. A war, by definitiion , is a violent and prolongued confrontation between two or more opposing sides. The more accurate name would be 'the Purge'. For in fact, this 'war' was a one sided massacre perpetrated by the Pariah. When the Pariah first arrived in Durandis, its arrival sundered the Wall. The divine magics that held plane-shifting in check were broken, and the Pariah brought it's Faceless legions with it. The Shards did not pay much heed to the Pariah, that is, until the Pariah outright murdered one of their number. By the time the two surviving Shards mustered their might to fight the intruder, the Pariah was already set on scouring Durandis.",
-        text2: "The War in Heaven was fought without regard for mortal lives. The weapons of choice were apocalyptic in scope. Cities and nations were turned into funeral pyres"
+        text: "A amalgration of smaller mining companies, the UMC is a fleet-based corporate power that primarily resides in the Eyra Asteroid Belts. They maintain a number of deep space mining platforms around the Tenebris system, although they have almost lost the entire south east sector to pirates. Just prior to the Gem War, the UMC was competing with other major mining companies for exclusive rights to Gem extraction. Many surviving denizens of the Tenebris system indirectly blame UMC and other like-minded mining coalitions for kickstarting the Gem race into a hot war.",
+        text2: "The UMC played a pivotal role in the closing conflicts of the Gem War. Outfitting their mining frigates with WMDs, they cold jumped many frigates behind enemy lines to later remotely detonate. While an effective strategy at first, the use of WMDS prompted other corporations to respond in kind, clearly demolishing both manpower and resources on all fronts of the Gem War."
     },
     {
         id: 4,
-        title: "A World without Gods",
+        title: "Judeas Telecoms Inc",
         imageUrl: "xxxxxxxx",
-        text: "The Shards are dead. The Pariah has been exiled. Despite this, remnants of divine power linger in Durandis. Although divine magic and miracles has been hobbled by the deaths of the Shards, Clerics and Paladins/ and other religious individuals manage to keep the faith. Divine acts are stronger around the God-Tombs, massive temples of worship erected on top of the final resting places of the Shards. The further one travels farther from a God-Tomb, the less likely prayers are answered. ",
-        text2: "Clerics and Paladin player characters receive disadvantage on casting respective spells. Clerics and Paladins receive advantage when casting spells within 25 kilometers of a God Tomb. Reviving the dead is impossible, as the Pariah has instigated the Shackling, a supernatural phenomena that causes deceased individuals to either become a shade or a shadow",
+        text: "Judeas Telecoms Inc had a clear stake during the Gem War. The refractive properties of Gems allowed JT Inc to create new telecommunicaion chips that pushed the envelope on interstellar relay speed. Seeing Gems as the lifeblood of the neo-synthetic chipware, Judeas Telecoms entered the Gem War with the idea that they can secure a couple of dig sites and hold out until things cool down. Unfortunately, war never goes according to plan, and JT Inc was reduced to a shadow of it's former self, as it's territorial holdings were subject to hostile takeovers by other corporate superpowers. Judeas Telecommunications is now limited to five worlds in the Tenebris system, one of which is their corporate headquarters (Uriel II)",
+        text2: "Despite such catostrophic results, Judeas Telecoms Inc did manage to secure one Gem extraction site on a undiclosed location. Other corporations have reported sent agents to uncover where this site is located. So far, the CEO of JT Inc has remained silent on such matters, much to the frustration of it's immediate competitors",
     },
     {
         id: 5,
-        title: "The Pandemonium",
+        title: "Mastchiff",
         imageUrl: "xxxxxxxx",
-        text: "When the Pariah first set foot in Durandis, it brought the Pandemonium with it. The Pandemonium is a planar curse that adversely affects magical users, items, and creatures. For living creatures in particular, those with a connection to the arcane immediately went mad when the Pariah tore into the pocket reality of Durandis. Nowadays, mages, wizards, sorcerers, and warlocks are cautious about delving too deep into mystics, lest they suffer the same fate as those 643 years prior. Becuase of this, spells, spellscrolls, and arcane knowledge are rare and far between.",
-        text2: "Whenever a Wizard, Sorcerer, Druid, Warlock, or any player character that casts an Arcane spell, if the resulting roll is a 5 or lower, that player takes 1d4(per spell level) pyschic damage."
+        text: "Mastchiff is a weapons manufacturer that specializes in the `big guns`. While other manufacturers are statisfied with small and medium arms, Mastchiff was a chief manufacturer of MBT (Main Battle Tanks), EXO-Suits, Orbital Weapon Platforms, and in-atmosphere Gunships, etc. The Gem War was a godsend advent, as Mastchiff supplied all manners of weaponary to corporate entities. While Mastchiff was not a direct participant in the Gem War, Mastchiff did partipate in the coroporate subterfuge and espionage theatre, as it tried to scope out the R&D works of Fen & Smith, Gaunt Corporate, and NeoBank",
+        text2: "Interestingly, Mastchiff never officially expanded its hold on territory. Instead, Mastchiff aimed for market dominance of the weapons sector, in which it achieved partial success. Orbital station directors often go to Mastchiff representatives first to discuss defensive solutions to pirates, bandits and other unwanted troubles."
     },
     {
         id: 6,
-        title: "Humanity",
+        title: "NeoBank",
         imageUrl: "xxxxxxxx",
-        text: "Of all the races of Durandis, Humanity suffered the most. Their pysche was relatively weak and malleable, allowing the insidious influence of the Pariah to pollute their minds and turn the vast majority of Humanity against the Shards. The Shards in turn used divine ordinance to raze the cities of Humanity to glass and rubble. Although not all of Humanity turned, Humanity's actions and overall abandonment of the Shards earned lasting prejudice by the remaining races of Durandis. Today, Humanity is also derided as the 'Host of Traitors'",
-        text2: "Human Racial Traits: ECHOES OF TREACHERY - Once per day, Human PC's can choose to take 2d6 psychic damage, opening their mind to the lingering whispers of the Pariah. The Human PC can reroll natural 1s for a duration of a combat encounter. This racial ability can be activated after a natural 1 has already been rolled."
+        text: "When things go batshit insane, someone out there has to maintain trust in the financial system. And that was NeoBank. NeoBank forcibly siezed control of minor orbital banks to help stabilze the ensueing panic that followed in the Gem War. NeoBank operated as a lender, financier, and stakeholder in many corporations that found themselves tight in pursestrings. NeoBank is found on every orbital, planetary, and mining station. While NeoBank officially does not control 100% of all satellite bank operations, most Tenebris denizens recognize that NeoBank is inching closer to total monopolistic control of the banking sector.",
+        text2: "Becuase of this, other corporations such as Mastchiff, Judeas Telecoms Inc, and UMC etc are trying to create their own subsector banks to avoid NeoBank's overeaching authority. In addition, there have been recent riots against NeoBank for leveraging high-interest rates to areas of the Tenebris sector that seemingly lost the Gem War."
     },
     {
         id: 7,
-        title: "Dwarves",
+        title: "Gaunt Corporate",
         imageUrl: "xxxxxxxx",
-        text: "The Dwarven race are not strangers to war. Before the 'War in Heaven', numerous Dwarven clans waged ritual crusades against each other for the entertainment of the Shards. Their expertise in warfare highlighted them as the first race for extermination by the Pariah. The Faceless legions assaulted dwarven holds on all levels of Durandis, tearing holes in long established frontlines. Dwarven warmasters were stubborn, but they eventually realized that they were fighting a losing war. Clanholds were toppled, razed, and sometimes threw into a gravity well with dwarven clansmen still fighting Faceless. The dwarves were forced to flee to central Durandis. Dwarves of all kind long for the day that they can reclaim their homelands.'",
-        text2: "Dwarven Racial Trait: REMEMBER OUR LEGACY - Dwarven PC's gain advantage on History skill checks when recalling facts related to the War in Heaven, Dwarven Holds, culture, language, magics, and technology."
+        text: "Gaunt Corporate is one of the other pillars of the weapons manufacturing sector. Gaunt Corporate specializes in manufacturing ballistic and hypersonic missles, drone operators, and electronic warfare. Their main products from the Gem War are no longer able to be mass produced, but whatever remains is still just as deadly. Gaunt Corporate is stationed above a gas giant, in it's massive fortress station of Artemis Without.",
+        text2: "During the Gem War, Gaunt Corporate came into direct conflict with Judeas Telecoms Inc and was one of the main reason why JT lost so much territory. Gaunt Corporate keeps tabs on Mastchiff and Fen Smith, using their top-notche EW / ECW division to do dirty work on outlying reaches."
     },
     {
         id: 8,
-        title: "Elves",
+        title: "Fen & Smith",
         imageUrl: "xxxxxxxx",
-        text: "The Elves were one of the first races created by the Shards. This fact did not go unnoticed by the Pariah. The Pariah shattered a portion of the Moon, causing it to crash down upon the original birthplace of the Elven race, The Moonlight Obelisk. With the loss of the Moonlight Obelisk, the anguished dead of the Elven race could not reach their final destination in the afterlife. The cycle of rebirth and reincarnation of the Elven race came to an end. With no new elven souls forged from the Obelisk, it is now said that for the last 643 years that the elven race is in it's final twilight",
-        text2: "Elven Racial Trait: THE WILL TO LIVE - Elven PC's gain advantage on death saving throws. Since there is no hope of reincarnation, all Elves aspire to live."
+        text: "If you open your drawers, you are more than likely to see a Fen & Smith manufactured firearm. Fen & Smith are your common man's weapon provider, providing elegant lead-based / laser / direct action solutions to problems you need gone. Fen & Smith had no direct interest in the Gem War, seeing that they could lose more than could possibly gain by joining the corporate pissing contest. Fen & Smith instead offshored manufacturing sites,knowing that the resulting status quo of the Gem War would be somewhat dire in terms of raw material refinement and manufacturing.",
+        text2: "Fen & Smith is one of the rare coporations where they can take your junk firearm and somewhat restore it to working condition. AI Revolvers, Messier Shotguns, and other handy tools of the trade have been retrofitted and repaired to working order by Fen & Smith engineers. Despite the universal disdian of corporations, Fen & Smith somewhat survived public opinion, as it is one of the few corporations that helps you stay alive a little longer."
     },
     {
         id: 9,
-        title: "Halfings",
+        title: "The Iron Ring",
         imageUrl: "xxxxxxxx",
-        text: "The War in Heaven caused a rift in Halfling communities. For the vast existence of Durandis, Halfing communities tried to steer clear of the Shards, wary of their machinations. When the Pariah brought chaos to Durandis, many of the halfling communities tried to parlay with the outsider. Unfortunately, the concept of mercy was alien to the Pariah. The Halflings faced an ultimatum, fight at the behest of the Shards and become fodder in the war against the Faceless, or meet certain extinction.",
-        text2: "Halfling Racial Trait: QUICK LEARNERS - At Level 6, 12, 18, Halfling's PCs can learn an extra feat."
+        text: "The Iron Ring is a massive ring-like structure assembled from thousands of old spacecraft and refinery modules, surrounding the moon Inauro, like the a belt of metal. The ring is divided into irregularly sized sectors, made up of everything from several small connected ships to a single large mining carrier. A lot of sectors within the Iron Ring are inhabited, either too dilapated , or just too dangerous to be in. In the inhabited sectors, salvagers, miners, and drugged cultists co-exist in the melting pot, filled with sharp smells from food stalls, ear piercing noise from workshops that constantly assemble/dissemble, and rebuild things, and the shouting of AI bodyguards offering their services in every known language.",
+        text2: "To get between sectors, one must often walk through docking connectors or occasionally open space. There are also shuttles that run between some of the sectors. most technology is recycled from old equipment. There is someone selling junk or offering cheap repairs in every corner in every sector. Society is harsh, and some do not hesitate to step on others to get a step ahead. For those that cannot afford their own living quarters, there are common areas, with rows of bed capsules placed in steel scaffolding, each capsule having room for one person. Between the scafolding platforms"
     },
-    {
-        id: 10,
-        title: "Shades",
-        imageUrl: "xxxxxxxx",
-        text: "When the Pariah was finally defeated, the mortal races quickly learned to thier horror the final gift that the Pariah left them; the Shackling. The deceased either turned into malevent Shadows or managed to maintian their sanity to manifest as a Shade. The Shades are not true undead, but rather a incomplete mirror of thier living selves. In the daylight, the form of a shade wavers, bordering on reverting to an incorporeal form.",
-        text2: "A player character can choose to be a Shade. The player character at ability score creation suffers a -3 to their Constituion ability score in addition to thier original race ability bonuses. In turn, the Shade gains 5 Cold Resistance, and 5 Resist to Bludgeoning, Slashing, and Piercing damage. Shades can utilize thier racial abiltity: WRAITHFORM - The player character becomes incorporeal for 2 minutes once per day."
-    },
-    {
-        id: 11,
-        title: "Faceless",
-        imageUrl: "xxxxxxxx",
-        text: "Monsters from beyond. The Faceless are the boogeymen of legend. According to accounts 643 years ago, the Faceless were nearly immortal. They bore no facial features, towered over the Elves, stronger than Dwarves, and bore translucent, pale skin that pulsed with a unsettling ripple. They did not burn, did not sleep, and did not stop killing. The Faceless are divided into castes, from the lowly Grimnyr to the dreaded Heralds",
-        text2: "The eventual banishment of the Pariah also exiled the Faceless with it. Despite this, there are rumours of Faceless appearing in the absolute edges of Durandis"
-    },
-    {
-        id: 12,
-        title: "Godfall",
-        imageUrl: "xxxxxxxx",
-        text: "Godfall, the doomed birthplace of the elves. Originally known as Irie Syral, this blasted city is a littered with shards of the moon. Horrifically, the energy of the Pariah pervades this place, leading to a mass concentration of Faceless",
-        text2: "Elves yearn to retake this city from Faceless remannts. Dead trees, and desolate lands surround Godfall. The crater from the impact of the shattered moon has left a lake where the original Moonlight obelisk used to reside."
-    },
-    {
-        id: 13,
-        title: "Avard",
-        imageUrl: "xxxxxxxx",
-        text: "Avard, the city of Humanity. When the Pariah breached this world, Avard was turned into a hellscape of civil war. Human turncoats formed the Pariah Cults, and waged an continent wide insurrection while the Pariah decimated the Western continents. Loyalist forces were eventually routed, forced into a fighting retreat as both the Pariah Cults and the Faceless assaulted them. Loyalist forces choose to flee north toward Vos Tyr, abandoning the metropolis free city of Jerat. ",
-        text2: "Nowadays, Avard is a shell of it's former self. Burnt city walls, and crumbling infrastructure paint a bleak outlook. The remaining loyalists struggle to maintain diplomatic relations with the rest of Durandis, as humanity is percieved as the Host of Traitors. It's relationship with it's sister city, Jerat, was forever sundered in the War in Heaven. The multitude of races in Jerat that had to fight tooth and nail to survive the Pariah only remember that Humanity at large chose to turn their backs. Humans in Avard are trying to dispell racial emnity via the profileration of human adventuring corps"
-    },
-    {
-        id: 14,
-        title: "Hartlock",
-        imageUrl: "xxxxxxxx",
-        text: "Hartlock was a sleepy fishing village known for hunting Borealis whales. It suddenly became the place for refugees fleeing the carnage in the Western and Eastern continents during the War in Heaven. In the late stages of the War in Heaven, it served as a staging point for military reconquest of the Western continent. The veterans who survived returned to Hartlock, forming a militant society focused on martial prowess and practical applications of military strategy. Comprised of a multitude of races, Hartlock hosts one of the most premier military acadamies in Durandis, Volyr",
-        text2: "Hartlock is primarily comprised of humans. There were few elves that managed to flee to Hartlock. While there is some prejudice against Humanity, Hartlock's military vanguard forces earned some redemption for Humanity. The current leader of Hartlock is a aging Vanguard captain named Percival Clint"
-    },
-    {
-        id: 15,
-        title: "Jerat",
-        imageUrl: "xxxxxxxx",
-        text: "Jerat was the southern jewel of Durandis. Positioned south of Avard and west of Il Phos Kvyr, Jerat was a strategic gateway for merchandise flowing into and out of the Western continent. Before and after the War in Heaven, Jerat was home to a multitude of races. Dwarven smiths, Elven soothsayers, Human politicians and other individuals worked thier trades up to the Pariah's appearnce. When the Pariah broke the fortress city of Il Phos Kyvr, the Faceless incoming assault razed Jerat to the ground. Jerat lost centuries of craft knowledge.",
-        text2: "Jerat is now rebuilding and securing it's soveriegn borders. Loyalist humans who stayed in defense of Jerat sport ritualistic tattoos, proving thier ancestral allegiance to Jerat in the dark days of the War. Elves and dwarves who managed to flee from the Il Phos Kvyr also chose to make their stand at Jerat. There is an arcane revival movement in Jerat, filled with mages coveting a return to the era where the Pandemonium did not exist. Currently, there are rumours of a land war brewing between Avard and Jerat, as old grudges are resurfacing via politicians pointing fingers at each other"
-    },
-    {
-        id: 15,
-        title: "Il Phos Kyvr",
-        imageUrl: "xxxxxxxx",
-        text: "Il Phos Kvyr. It used to be known as the most dominant and impenentrable dwarven fortress in Durandis. Now, it is a dune blasted necropolis, filled with the lurching undead. 9 Dwarven clans once ruled Il Phos Kvyr. Of the original nine, four dwarven clans survive to this day; Muer , Glinthelm, Suryanr, and Volheart. The five other clans perished in defense of Il Phos Kvyr, as they tried to hold the line against the initial onslaught of the Faceless. Il Phos Kvyr also proved a pivotal moment in dwarven-elven relations, as the dwarves buried their old greivances with the decimated Elves to allow them to pass under the gates of Il Phos Kyvr",
-        text2: "Il Phos Kvyr is the focus of the Dwarven reclamation movement. Currently, there are multiple clan camps on the eastern side of Il Phos Kvyr. These clan holds send expeditionary forces into the fortress hold of Il Phos Kvyr to retrieve dwarven artifacts, heirlooms and pieces of history. Il Phos Kvyr is a labryithian keep, stretching deep underground. When the Pariah arrived at Il Phos Kvyr, a lich lieutenant of a particular Pariah Cult raised the sacred remains of dwarven heroes long gone in the Kvyr crypts, leading to a suprise assault from the surface (Faceless) and from below",
-    },
-
 ]

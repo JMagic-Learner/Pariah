@@ -1,10 +1,10 @@
 import React from "react"
-import { Example } from "../../Assets/Images/Example.jpg"
+// import { Example } from "../../Assets/Images/Example.jpg"
 export const ContactCard = () => {
     return (
         <div className="CardContainer" >
             <div className="card" style={{ width: "1000px" }}>
-                <img className="card-img-top" src={require("../../Assets/Images/Durandis.jpg")} alt="Card image cap" />
+                {/* <img className="card-img-top" src={require("../../Assets/Images/Durandis.jpg")} alt="Card image cap" /> */}
                 <div className="card-body width-75">
                     <p className="card-text"> DM: Jason Ma </p>
                     <p className="card-text">  ZenithHighlight@gmail.com </p>

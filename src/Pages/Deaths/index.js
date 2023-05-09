@@ -10,8 +10,8 @@ export const Deaths = () => {
             characterName: "Example",
             race: "Example",
             class: "Example",
-            causeOfDeath: "Stabbed to death by goblins",
-            description: "A generic fighter who liked to wear plate armor",
+            causeOfDeath: "Stabbed to death by orbital station thugs",
+            description: "Your true death is found at the edge of a galaxy. You feel your existence being peeled away from a existential horror, in a lake of mirrors",
             damage: 50,
         },
     ])
