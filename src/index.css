@@ -1,15 +1,12 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 /* Homepage */
@@ -21,9 +18,9 @@ code {
 }
 
 .introduction {
-  margin-top: 5%;
-  width: 100%;
-  min-height: 500px;
+  width: 75%;
+  min-height: 250px;
+  margin: auto;
 }
 
 /* Lore */
@@ -45,13 +42,13 @@ code {
 .parralax-container {
   z-index: -1;
   width: 100%;
-  min-height: 750px;
+  min-height: 800px;
   height: 100%;
   margin: auto;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: fit;
 }
 
 .rules-excerpt-container:hover {
@@ -84,7 +81,7 @@ code {
 
 .navbar-toggler,
 .navbar-toggler-icon {
-  color: hotpink
+  color: #db4f3d
 }
 
 @media (min-width: 300px) {
@@ -123,7 +120,7 @@ code {
 
   .excerpt-text,
   .rules-text:hover {
-    color: hotpink;
+    color: #db4f3d;
     width: 80%;
     margin: auto;
     font-size: 2.5vh;
@@ -153,12 +150,12 @@ code {
 
   .nav-link:hover {
     font-size: 3vh;
-    color: hotpink;
+    color: #db4f3d;
   }
 
   .nav-link:focus {
     font-size: 3vh;
-    color: hotpink;
+    color: #db4f3d;
   }
 }
 
@@ -196,7 +193,7 @@ code {
 
   .excerpt-text,
   .rules-text:hover {
-    color: hotpink;
+    color: #db4f3d;
     width: 80%;
     margin: auto;
     font-size: 2.5vh;
@@ -227,19 +224,19 @@ code {
 
   .nav-link:hover {
     font-size: 2vh;
-    color: hotpink;
+    color: #db4f3d;
   }
 
   .nav-link:focus {
     font-size: 2vh;
-    color: hotpink;
+    color: #db4f3d;
   }
 }
 
 .entry:hover {
   width: 100%;
   margin: auto;
-  background-color: hotpink;
+  background-color: #db4f3d;
   transition: background-color 0.25s ease;
 }
 
@@ -253,7 +250,7 @@ code {
 }
 
 .EmphasizedTitle {
-  color: hotpink
+  color: #db4f3d
 }
 
 .HorizontalContainer {

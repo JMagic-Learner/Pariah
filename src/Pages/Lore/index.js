@@ -13,7 +13,6 @@ export const Lore = () => {
         }
     ])
     const Open = (title1) => {
-        console.log("We have clicked on a lore entry")
         let selectT = WorldLore.filter((item) => item.title === title1)
         setSelectedLore(selectT)
     }

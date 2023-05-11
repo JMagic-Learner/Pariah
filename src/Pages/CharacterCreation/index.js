@@ -6,7 +6,7 @@ import { Allegiances } from "../../Components/Allegiances";
 import { HPDefense } from "../../Components/HPDefense";
 export const CharacterCreation = () => {
     return (
-        <div className="Page CharacterCreation bg-dark">
+        <div className="Page CharacterCreation">
             <h2 className="EmphasizedTitle"> Character Creation </h2>
             <section className="d-flex flex-row">
                 <section className="Right-Column">

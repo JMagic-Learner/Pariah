@@ -11,11 +11,11 @@ function ParallaxBanner(props) {
   }, []);
 
   return (
-    <div className="About">
+    <div>
       <div
         data-testid={`Image-Parallax  ${background}`}
         className={`parralax-container ${transition} `}
-        style={{ backgroundImage: `url(${background})`, opacity: transition, transition: "opacity 2s ease-in-out", width: "75%", height: "100%" }}
+        style={{ backgroundImage: `url(${background})`, opacity: transition, transition: "opacity 2s ease-in-out", width: "100%", height: "100%" }}
       />
     </div>
   );

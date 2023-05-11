@@ -9,7 +9,7 @@ import { Map } from './Pages/Map/index.js';
 import { Deaths } from './Pages/Deaths';
 import { HowToStart } from "./Pages/HowToStart"
 import { CharacterCreation } from "./Pages/CharacterCreation"
-
+import { Footer } from "./Components/Footer"
 function App() {
   return (
     <div className="App">
@@ -25,8 +25,11 @@ function App() {
             <Route exact path="/Deaths" element={<Deaths />} />
             <Route exact path="/HowToStart" element={<HowToStart />} />
           </Routes>
+          {/* <Footer /> */}
         </BrowserRouter>
       </header>
+
+
     </div>
   );
 }
