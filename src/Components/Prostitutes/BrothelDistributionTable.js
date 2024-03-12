@@ -1,0 +1,51 @@
+export const BrothelDistributionTable = [
+  {
+    Race: "Human",
+    Fine: "01-62",
+    Normal: "01-67",
+    Low: "01-70",
+    Slave: "01-60",
+  },
+  {
+    Race: "Elf",
+    Fine: "63-70",
+    Normal: "68-70",
+    Low: "--",
+    Slave: "61-64",
+  },
+  {
+    Race: "Half-ElF",
+    Fine: "71-82",
+    Normal: "71-79",
+    Low: "71-75",
+    Slave: "65-74",
+  },
+  {
+    Race: "Dwarf",
+    Fine: "83-84",
+    Normal: "80",
+    Low: "--",
+    Slave: "75",
+  },
+  {
+    Race: "Halfling",
+    Fine: "85",
+    Normal: "81",
+    Low: "--",
+    Slave: "76",
+  },
+  {
+    Race: "Half Orc",
+    Fine: "86-90",
+    Normal: "82-99",
+    Low: "76-95",
+    Slave: "77-95",
+  },
+  {
+    Race: "Exotic (other)",
+    Fine: "91-00",
+    Normal: "00",
+    Low: "96-00",
+    Slave: "96-00",
+  },
+];

@@ -5,7 +5,29 @@ import MainImage from "../../Assets/Images/DiSHomeBanner.jpg"
 const Home = () => {
     return (
         <div className="Homepage Page">
-            <ParallaxBanner background={MainImage} />
+            <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+                <div className="carousel-inner">
+                    <div className="carousel-item active">
+                        <img src={MainImage} className="d-block w-100" alt="..." />
+                    </div>
+                    <div className="carousel-item">
+                        <img src={MainImage} className="d-block w-100" alt="..." />
+
+                    </div>
+                    <div className="carousel-item">
+                        <img src={MainImage} className="d-block w-100" alt="..." />
+
+                    </div>
+                </div>
+                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Previous</span>
+                </button>
+                <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Next</span>
+                </button>
+            </div>
 
             {/* <h2 className="centered-overlay bg-dark"> Welcome to Pariah, DiS Supplement.</h2> */}
 

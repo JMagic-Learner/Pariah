@@ -34,8 +34,8 @@ export const Navigation = () => {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link " to="/Map">
-                                World Map
+                            <Link className="nav-link " to="/Enemies">
+                                Enemies
                             </Link>
                         </li>
                         <li className="nav-item">

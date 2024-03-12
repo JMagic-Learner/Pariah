@@ -10,6 +10,7 @@ import { Deaths } from './Pages/Deaths';
 import { HowToStart } from "./Pages/HowToStart"
 import { CharacterCreation } from "./Pages/CharacterCreation"
 import { Footer } from "./Components/Footer"
+import { Enemies } from "./Pages/Enemies"
 function App() {
   return (
     <div className="App">
@@ -21,9 +22,9 @@ function App() {
             <Route exact path="/CharacterCreation" element={<CharacterCreation />} />
             <Route exact path="/Lore" element={<Lore />} />
             <Route exact path="/Rules" element={<Rules />} />
-            <Route exact path="/Map" element={<Map />} />
             <Route exact path="/Deaths" element={<Deaths />} />
             <Route exact path="/HowToStart" element={<HowToStart />} />
+            <Route exact path="/Enemies" element={<Enemies />} />
           </Routes>
           {/* <Footer /> */}
         </BrowserRouter>
