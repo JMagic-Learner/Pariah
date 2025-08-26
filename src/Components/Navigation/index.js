@@ -2,49 +2,57 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export const Navigation = () => {
-    return (
-        <nav className="navbar navbar-expand-lg bg-dark fixed-top">
-            <div className="container-fluid ">
-                <Link className="navbar-brand" to="/">
-                    Pariah
-                </Link>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon bg-dark" ></span>
-                </button>
-                <div className="collapse navbar-collapse " id="navbarNav">
-                    <ul className="navbar-nav bg-dark " >
-                        <li className="nav-item " >
-                            <Link className="nav-link" to="/" >
-                                Home
-                            </Link>
-                        </li>
-                        <li className="nav-item " >
-                            <Link className="nav-link" to="/CharacterCreation" >
-                                Character
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link " to="/Lore">
-                                Lore
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link " to="/Rules">
-                                Hacking
-                            </Link>
-                        </li>
-                        <li className="nav-item">
+  return (
+    <nav className="navbar navbar-expand-lg bg-dark fixed-top">
+      <div className="container-fluid ">
+        <Link className="navbar-brand" to="/">
+          Pariah
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon bg-dark"></span>
+        </button>
+        <div className="collapse navbar-collapse " id="navbarNav">
+          <ul className="navbar-nav bg-dark ">
+            <li className="nav-item ">
+              <Link className="nav-link" to="/">
+                Home
+              </Link>
+            </li>
+            <li className="nav-item ">
+              <Link className="nav-link" to="/CharacterCreation">
+                Character
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link " to="/Lore">
+                Lore
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link " to="/Rules">
+                Hacking
+              </Link>
+            </li>
+            {/* <li className="nav-item">
                             <Link className="nav-link " to="/Enemies">
                                 Enemies
                             </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link " to="/Deaths">
-                                Deaths
-                            </Link>
-                        </li>
+                        </li> */}
+            <li className="nav-item">
+              <Link className="nav-link " to="/Deaths">
+                Deaths
+              </Link>
+            </li>
 
-                        {/* <li className="nav-item dropdown">
+            {/* <li className="nav-item dropdown">
                             <Link className="nav-link dropdown-toggle"
                                 to="/Classes"
                                 href="#"
@@ -62,10 +70,9 @@ export const Navigation = () => {
 
                             </ul>
                         </li> */}
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    );
-}
-
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
+};
