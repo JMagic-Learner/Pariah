@@ -3,10 +3,10 @@ import { MunitionsTable } from "../../../Components/Table/MunitionsTable";
 export const Munitions = () => {
   return (
     <div>
-      <h2 className="f2 fw7 dark-red bb pb2 mb3 tj">2.7 — Munitions</h2>
+      <h2 className="f2 fw7 dark-red bb pb2 mb3">2.7 — Munitions</h2>
       <p className="lh-copy tj">
         [MUNITIONS] are special payloads used by missiles, grenade launchers,
-        grenades, and other indirect-fire weapons. When a weapon lists{" "}
+        grenades, and other [INDIRECT]-fire weapons. When a weapon lists{" "}
         <span className="fw6">[MUNITIONS]</span> as its damage value, the actual
         damage and area of effect are determined by the munition type loaded at
         the time of firing.

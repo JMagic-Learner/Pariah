@@ -323,7 +323,7 @@ export const FactionsArray = [
     factionBonuses: [
       {
         title: "HEAVY WEAPONS SPECIALIST",
-        text: "All [HEAVY] weapons automatically gain the [MOUNTABLE] keyword",
+        text: "All [HEAVY] weapons automatically gain the [MOUNTABLE keyword",
       },
       {
         title: "IMPROMPTU MECHANICS",

@@ -1,0 +1,142 @@
+export const KEYWORDS = [
+  {
+    name: "[AP(X)]",
+    desc: "Declare Anti-Armor or Anti-Material mode when attacking. Anti-Armor: deal (X) damage to the next adjacent hit location; direct TORSO hits also remove one randomly chosen equipment (roll 1d3) and deal (X) bonus damage to the Torso. Anti-Material: enemy MSU cannot nullify hit locations with HARD COVER.",
+  },
+  {
+    name: "[AOE(X)]",
+    desc: "On a direct hit or at a targeted [INDIRECT] point, all other MSUs within (X) inches suffer half the weapon's base damage (rounded up) to one hit location.",
+  },
+  {
+    name: "[AKIMBO]",
+    desc: "Reduces simultaneous-attack penalties when dual-wielding. MEDIUM or HEAVY with [AKIMBO]: –2 penalty → –1. LIGHT with [AKIMBO]: –2 penalty → 0. Weapons of different weight classes each apply their own reduced penalty.",
+  },
+  {
+    name: "[AMBPHIBIOUS]",
+    desc: "No movement penalties in water terrain. Gain BOOST[X+1] while moving through water.",
+  },
+  {
+    name: "[BRACE]",
+    desc: "HEAVY weapons with [BRACE] do not require two hands to fire, as long as the weapon is supported by a Gunpla feature or limb (shoulder mount, leg [BRACE], deployed shield, etc.).",
+  },
+  {
+    name: "[BURST(X)]",
+    desc: "When declaring an attack, reduce the weapon's ROF by 2 to reroll (X) attack dice. Cannot be used simultaneously with [FULL AUTO].",
+  },
+  {
+    name: "[CLEAVE(X)]",
+    desc: "On a successful melee attack, roll (X) additional hit locations where X is equal to the [PILOT] Brawl skill.",
+  },
+  {
+    name: "[CLUSTER]",
+    desc: "Automatically hits enemy targets within 6 inches — no evasion roll allowed. Additionally, one attack die (up to ROF) can be assigned per MISSILE TOKEN within 12 inches; those tokens are destroyed immediately without triggering their MUNITIONS effects.",
+  },
+  {
+    name: "[COUNTERSTRIKE]",
+    desc: "When an incoming melee attack is declared: rotate the MSU up to two hex facings. Use Brawl instead of Piloting for Evasion checks against melee (formula: 1d6 + Brawl + Weapon Mod vs. incoming attack roll). If the check succeeds, the attacker suffers this weapon's damage to one hit location. Does not interact with CLEAVE — only one location is rolled.",
+  },
+  {
+    name: "[COMMANDER]",
+    desc: "A [PILOT] with this keyword gains access to [COMMANDER] actions",
+  },
+  {
+    name: "[DEPLOYABLE]",
+    desc: "This equipment can be physically placed on the battlefield. Usually specifies a base size. Deployed equipment auto-hits when targeted and has 10 HP with one hit location. MSUs spend one action during the MOVEMENT phase to deploy equipment within 8 inches. Equipment cannot be deployed as a Reaction.",
+  },
+  {
+    name: "[EXTRA ARMOR(X)]",
+    desc: "Increase the designated hit location's hit points by (X). Cannot modify the hit points of Shields or Heavy Shields.",
+  },
+  {
+    name: "[FULL AUTO]",
+    desc: "Increase the weapon's ROF by 3 and incur a –2 modifier to all Gunnery Skill checks for the attack. Cannot be used with BURST.",
+  },
+  {
+    name: "[GRIP]",
+    desc: "If the MSU model is holding this weapon with two hands, reroll all hit dice that show a 1.",
+  },
+  {
+    name: "[GUIDED]",
+    desc: "Missiles with [GUIDED] can rotate their hex facing by 45° at Status Phase Step 1.2. Missiles with [ENHANCED GUIDED] (a Newtype upgrade) can rotate 90° instead.",
+  },
+  {
+    name: "[HEAVY]",
+    desc: "6+ tons in weight. Requires two hands to wield, mounted, or one hand with a [BRACE] weapon",
+  },
+  {
+    name: "[IMPACT(X)]",
+    desc: "On a successful hit, push the target directly away from the attacker. LIGHT weapon: (X) inches. MEDIUM: [X+1] inches. HEAVY: [X+2] inches. If the target's base contacts HARD COVER or another MSU, both take 5 damage to one hit location. The push occurs once per attack declaration, after all dice are resolved.",
+  },
+  {
+    name: "[INBUILT]",
+    desc: "Integrated into the MSU frame. Can be fired in Reaction and Shooting phases without a SWAP action. Occupies either the WEAPON slot or an Equipment slot at its hit location. Cannot be the target of Swap actions.",
+  },
+  {
+    name: "[INDIRECT]",
+    desc: "Can target a point or enemy MSU without line of sight. Targeting a point: roll 1d6 + STAT MOD + other mods – 2 ([INDIRECT] penalty) against a static value of 3. Targeting an MSU outside LOS: GS check + mods – 2 vs. the target's Evasion Skill check.",
+  },
+  {
+    name: "[LETHAL]",
+    desc: "When hit location dice show matching doubles (two 1s, two 2s, two 3s, etc.), double the weapon's base damage for that hit.",
+  },
+  {
+    name: "[LIMITED USE(X)]",
+    desc: "This weapon or piece of equipment can only be used up to (X) times per battle. Track usage on the MSU sheet.",
+  },
+  {
+    name: "[LIGHT]",
+    desc: "This weapon is 1-2 tons in weight, and can be wielded in either hand",
+  },
+  {
+    name: "[MEDIUM]",
+    desc: "This weapon is 3-5 tons in weight, and can be wielded in either hand",
+  },
+  {
+    name: "[MISSILE(X)]",
+    desc: "Uses the Deploy Missile Action instead of a standard GS skill check. Place MISSILE tokens in the front arc (one per ROF) each with a d6 countdown of 2. Each Status Phase Step 1.2, move tokens (X) inches straight ahead ([GUIDED] tokens may rotate 45°). The missile detonates on contact with terrain, an MSU, or when the timer expires. The target rolls Evasion 7 to negate. Missiles cannot detonate within the minimum range band.",
+  },
+  {
+    name: "[MOUNTABLE]",
+    desc: "Weapon is attached via pegs or hardpoints. Can be fired in Attack actions. Cannot be fired in Reactive Attack actions. Ignores HEAVY two-hand restrictions. Cannot be the target of Swap actions.",
+  },
+  {
+    name: "[MUNITIONS]",
+    desc: "Weapons with the Munitions type can customize their explosive payload, declared at MSU creation. Munitions do not cost additional tonnage or MCU. Two weapons of the same type may carry different Munitions.",
+  },
+  {
+    name: "[PRECISE]",
+    desc: "When comparing hit rolls against Evasion Checks, the attacker now succeeds on tied results (normally a tie is a miss).",
+  },
+  {
+    name: "[PSYCOMMU]",
+    desc: "MSU, equipment, or weapons with this keyword require a pilot with the NEWTYPE or CYBER-NEWTYPE trait.",
+  },
+  {
+    name: "[PSYCOFRAME]",
+    desc: "Pilots using an MSU with this keyword gain one additional Newtype Pilot trait.",
+  },
+  {
+    name: "[QUICK SWAP]",
+    desc: "Swap actions from [STOWAGE] to this weapon are free. Can swap this weapon between hands. Can declare SWAP in the Attack Phase and as a Reaction.",
+  },
+  {
+    name: "[SCOPE]",
+    desc: "Ranged attacks using this weapon impose a –1 Evasion modifier on the target. Once per attack declaration, reroll one hit location die.",
+  },
+  {
+    name: "[SLOW RELOAD]",
+    desc: "See the [SLOW RELOAD] action (Section 3.2). The weapon must be reloaded before it can be fired again.",
+  },
+  {
+    name: "[STOWAGE] / [STORED] / [STOWED]",
+    desc: "Equipment that is holstered, attached to a rack, or otherwise [STORED]. Weapons in [STOWAGE] cannot be used for Attacks or Reactive Attacks until readied by a SWAP action.",
+  },
+  {
+    name: "[SUPPRESSIVE]",
+    desc: "When this weapon hits two or more distinct hit locations on the same target in one attack, that MSU enters SUPPRESSED state. Suppressed: must stop all forward movement; can only move sideways or backward; cannot move closer to the wielder. SUPPRESSED is removed when: the target spends an action; the wielder breaks LOS, moves, or moves out of max rangebands.",
+  },
+  {
+    name: "[THROW]",
+    desc: "This weapon can be [THROW]n as a ranged attack. [THROW]n range band is listed in parentheses next to the normal range band. [THROW]n attacks use PS instead of GS.",
+  },
+];

@@ -1,7 +1,7 @@
 export const WeaponsEquipment = () => {
   return (
     <div>
-      <h2 className="f2 fw7 dark-red bb pb2 mb3 tj">
+      <h2 className="f2 fw7 dark-red bb pb2 mb3">
         2.4 — Weapons and Equipment
       </h2>
 

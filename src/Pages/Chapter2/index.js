@@ -6,8 +6,9 @@ import { Keywords } from "./sections/Keywords";
 import { FactionBonuses } from "./sections/FactionBonuses";
 import { FireteamCreation } from "./sections/FireteamCreation";
 import { RangedWeapons } from "./sections/RangedWeapons";
-import { RangedWeapons } from "./sections/MeleeWeapons";
+import { MeleeWeapons } from "./sections/MeleeWeapons";
 import { MobileSuits } from "./sections/MobileSuits";
+import { NewtypeUpgrades } from "./sections/NewtypeUpgrades";
 
 const SECTIONS = [
   { id: "pilots", title: "2.1 — Pilots", Component: Pilots },
@@ -21,10 +22,11 @@ const SECTIONS = [
     title: "2.3 — Fireteam Creation",
     Component: FireteamCreation,
   },
-  { id: "equipment", title: "2.4 — Ranged Weapons", Component: RangedWeapons },
-  { id: "equipment", title: "2.5 — Melee Weapons", Component: MeleeWeapons },
-  { id: "keywords", title: "2.6 — Keywords", Component: Keywords },
-  { id: "factions", title: "2.7 — Faction Bonuses", Component: FactionBonuses },
+  { id: "ranged", title: "2.4 — Ranged Weapons", Component: RangedWeapons },
+  { id: "melee", title: "2.5 — Melee Weapons", Component: MeleeWeapons },
+  { id: "newtype", title: "Newtype Upgrades", Component: NewtypeUpgrades },
+  { id: "keywords", title: "2.9 — Keywords", Component: Keywords },
+  { id: "factions", title: "Faction Bonuses", Component: FactionBonuses },
 ];
 
 export const Chapter2 = () => (

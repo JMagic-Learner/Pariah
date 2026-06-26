@@ -121,7 +121,7 @@ export const MobileSuits = () => {
 
       <p className="tj lh-copy">
         Each MSU's FRO count essentially represents how much power is available
-        to use beam weapons, BOOST[X], turn facing, etc. When choosing a MSU to
+        to use beam weapons, BOOST(X), turn facing, etc. When choosing a MSU to
         purchase, [PILOTS] must visualize their individaul playstyle and how FRO
         can limit the aggression / offense a suit can bring to the battlefield
       </p>
@@ -155,7 +155,7 @@ export const MobileSuits = () => {
         If the MSU is ever destroyed via a direct [TORSO] hit (hit location roll
         of a 2 or a 12), the enemy [PILOT] rolls 1d6 + [1 per each FRO that
         exceeds the FRO Limit]. On a 6+, the MSU explodes spectacularly. The MSU
-        emits a AOE[X] explosion from it's basing, where X is the FRO value.
+        emits a [AOE(X)] explosion from it's basing, where X is the FRO value.
         Each MSU (friend or foe) takes 10 damage to three hit location
       </p>
 
@@ -170,7 +170,7 @@ export const MobileSuits = () => {
       <p className="tj lh-copy">
         How far an MSU moves during the movement phase is factored into evasion
         tier tables. This means that how far an MSU moved after [MOVEMENT],
-        BOOST[X], and [BLITZ] actions are taken into consideration.
+        BOOST(X), and [BLITZ] actions are taken into consideration.
       </p>
 
       <h3 className="f4 fw7 mt4 mb2 tj">ARMOR</h3>

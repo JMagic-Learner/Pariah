@@ -87,7 +87,7 @@ const SUPPORT = [
     qty: 2,
     mcu: 15,
     effect:
-      'Spend [X] FRO to increase melee range of a beam weapon by 3" and damage by [X]',
+      'Spend (X) FRO to increase melee range of a beam weapon by 3" and damage by (X)',
   },
   {
     name: "CAMO Cloak",
@@ -120,7 +120,7 @@ const SUPPORT = [
       "+1 ROF to Rifle/MG/SMG/Pistol/Grenade Launcher type weapons. If two [CYCLIC] upgrades are given to a beam rifle, increase active FRO cost by 1 ",
   },
   {
-    name: "CounterStrike",
+    name: "[COUNTERSTRIKE]",
     loc: "Weapon",
     ton: "–",
     pfro: "–",
@@ -223,13 +223,13 @@ const SUPPORT = [
     effect: "See Forward Observe Action (Section 3.7).",
   },
   {
-    name: "Grip Upgrade",
-    loc: "N/A",
+    name: "[GRIP] Upgrade",
+    loc: "[INBUILT]/A",
     ton: 0,
     pfro: "–",
     qty: "–",
     mcu: 25,
-    effect: "Add Grip keyword to one ranged weapon.",
+    effect: "Add [GRIP] keyword to one ranged weapon.",
   },
   {
     name: "Hardpoints",
@@ -238,7 +238,7 @@ const SUPPORT = [
     pfro: "–",
     qty: 6,
     mcu: 30,
-    effect: "Add one hardpoint slot for a [MOUNTABLE] weapon.",
+    effect: "Add one hardpoint slot for a [MOUNTABLE weapon.",
   },
   {
     name: "Heavy Boosters",
@@ -251,12 +251,12 @@ const SUPPORT = [
   },
   {
     name: "High Velocity/Missile",
-    loc: "N/A",
+    loc: "[INBUILT]/A",
     ton: 1,
     pfro: "–",
     qty: 1,
     mcu: 30,
-    effect: "MISSILE[X] becomes MISSILE[X+6].",
+    effect: "[MISSILE(X)] becomes MISSILE[X+6].",
   },
   {
     name: "Hover Platform",
@@ -269,14 +269,14 @@ const SUPPORT = [
       "Omnidirectional movement; prevents CROUCHED state.Can now turn facing for 1 inch move",
   },
   {
-    name: "I Field",
+    name: "[INBUILT] Field",
     loc: "Shoulder/Torso",
     ton: 2,
     pfro: 3,
     qty: 1,
     mcu: 75,
     effect:
-      "Deploy I Field at any phase: nullifies all beam attacks for one round. LIMITED USE[1].",
+      "Deploy [INBUILT] Field at any phase: nullifies all beam attacks for one round. LIMITED USE[1].",
   },
   {
     name: "Impact",
@@ -297,7 +297,7 @@ const SUPPORT = [
     effect: 'Turn base facing costs 1" instead of 2" during [MOVEMENT].',
   },
   {
-    name: "Lethal Upgrade",
+    name: "[LETHAL] Upgrade",
     loc: "Weapons",
     ton: "–",
     pfro: "–",
@@ -330,7 +330,7 @@ const SUPPORT = [
     pfro: "–",
     qty: 2,
     mcu: 25,
-    effect: "Increase Limited Use[X] of two weapons by 1.",
+    effect: "Increase [LIMITED USE(X)] of two weapons by 1.",
   },
   {
     name: "Nanolaminate Chaff",
@@ -358,16 +358,16 @@ const SUPPORT = [
     pfro: "–",
     qty: 4,
     mcu: 15,
-    effect: "Pistols gain [PRECISE] and [LETHAL], +4 damage.",
+    effect: "Pistols gain [[PRECISE]] and [LETHAL], +4 damage.",
   },
   {
-    name: "Precise Upgrade",
+    name: "[PRECISE] Upgrade",
     loc: "Weapon",
     ton: "–",
     pfro: "–",
     qty: 2,
     mcu: 15,
-    effect: "Add Precise to one weapon that has [SCOPE].",
+    effect: "Add [PRECISE] to one weapon that has [SCOPE].",
   },
   {
     name: "Predictive Fire Control",
@@ -386,7 +386,7 @@ const SUPPORT = [
     qty: 3,
     mcu: 20,
     effect:
-      'MSU moving within 4" takes 15 damage to both LEG locations. LIMITED USE[1], AOE[4]. DEPLOYABLE',
+      'MSU moving within 4" takes 15 damage to both LEG locations. LIMITED USE[1], AOE[4]. [DEPLOYABLE]',
   },
   {
     name: "Psycommu Funnel/Bit",
@@ -407,13 +407,13 @@ const SUPPORT = [
     effect: "Access to INCOMS Beam/Shield Bits without Newtype trait.",
   },
   {
-    name: "Quick Draw Upgrade",
+    name: "[QUICK SWAP] Upgrade",
     loc: "Weapon",
     ton: "–",
     pfro: "–",
     qty: "–",
     mcu: 15,
-    effect: "Add [QUICK DRAW] to one [LIGHT] or [MEDIUM] weapon.",
+    effect: "Add [QUICK SWAP] to one [LIGHT] or [MEDIUM] weapon.",
   },
   {
     name: "Recoil Counterbalance",
@@ -463,14 +463,14 @@ const SUPPORT = [
       "Same as above, but replace `Torso, or the respective's attached arm's side (left leg + left arm example)` with the [HIT LOCATION]",
   },
   {
-    name: "Shields [20, Deployable]",
+    name: "Shields [20, [DEPLOYABLE]]",
     loc: "Arms",
     ton: 2,
     pfro: "–",
     qty: 2,
     mcu: 20,
     effect:
-      "Same as Shields (20); additionally provides BRACE and HARD COVER. DEPLOYABLE",
+      "Same as Shields (20); additionally provides [BRACE] and HARD COVER. [DEPLOYABLE]",
   },
   {
     name: "Shields (HEAVY) [30]",
@@ -510,7 +510,7 @@ const SUPPORT = [
     effect: 'Gain [STEALTH] state when moving <8".',
   },
   {
-    name: "Suppressive Upgrade",
+    name: "[SUPPRESSIVE] Upgrade",
     loc: "Weapon",
     ton: "–",
     pfro: "–",
@@ -526,7 +526,7 @@ const SUPPORT = [
     qty: 2,
     mcu: 25,
     effect:
-      "Shotguns lose [CLUSTER], gain ROF 2; Arm Cannons/Shotguns gain AP 10.",
+      "Shotguns lose [[CLUSTER]], gain ROF 2; Arm Cannons/Shotguns gain AP 10.",
   },
   {
     name: "Tactical Data Uplink",

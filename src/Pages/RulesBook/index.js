@@ -31,6 +31,7 @@ import { Assault } from "../Chapter4/sections/Assault";
 import { SectorControl } from "../Chapter4/sections/SectorControl";
 import { Extraction } from "../Chapter4/sections/Extraction";
 import { ColonyDrop } from "../Chapter4/sections/ColonyDrop";
+import { NewtypeUpgrades } from "../Chapter2/sections/NewtypeUpgrades";
 
 const CHAPTERS = [
   {
@@ -80,12 +81,17 @@ const CHAPTERS = [
         title: "2.8 — Support Equipment",
         Component: SupportEquipment,
       },
-      { id: "keywords", title: "2.9 — Keywords", Component: Keywords },
+      {
+        id: "newtypeUpgrades",
+        title: "2.9 — Newtype Upgrades",
+        Component: NewtypeUpgrades,
+      },
       {
         id: "factions",
         title: "2.10 — Faction Bonuses",
         Component: FactionBonuses,
       },
+      { id: "keywords", title: "2.11 — Keywords", Component: Keywords },
     ],
   },
   {
