@@ -53,6 +53,12 @@ export const Navigation = () => {
             Ch.4 Missions
           </Link>
         </div>
+
+        <div className={classNames({ "w-20": !isMobile, "w-50": isMobile })}>
+          <Link className={linkClass} to="/Rules">
+            Rules
+          </Link>
+        </div>
       </nav>
     </div>
   );

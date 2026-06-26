@@ -30,6 +30,7 @@ function App() {
             <Route exact path="/chapter2" element={<Chapter2 />} />
             <Route exact path="/chapter3" element={<Chapter3 />} />
             <Route exact path="/chapter4" element={<Chapter4 />} />
+            <Route exact path="/Rules" element={<Rules />} />
           </Routes>
           <Footer />
         </BrowserRouter>
