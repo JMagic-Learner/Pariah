@@ -7,24 +7,36 @@ export const Pilots = () => {
 
       <p className="lh-copy tj">
         In Flashpoint, each Mobile Suit Unit is piloted by a single [PILOT].
-        Pilots have three base statistics and a pool of 5 Trait Points used to
-        customize their skills and abilities.
+        Pilots have three base statistics, 250 MCU (Monetary Credit Units) and a
+        pool of 5 Trait Points used to customize their skills and abilities.
+        This section goes over the base stats and trait rules. MCU will be
+        overviewed in Section 2.2 and Section 2.3
       </p>
 
       <h3 className="f4 fw7 mt4 mb2 tj">Base Statistics</h3>
-      <p className="lh-copy tj">Gunnery (GS) - Used to make ranged attacks</p>
-      <p className="lh-copy tj">Brawl (BS)- Used to make melee attacks</p>
+      <p className="lh-copy tj">
+        Gunnery (GS) - Used to make ranged attacks. Begins at base value 1
+      </p>
+      <p className="lh-copy tj">
+        Brawl (BS)- Used to make melee attacks. Begins at base value 1
+      </p>
       <p className="lh-copy tj">
         Piloting (PS) - Used to roll initiatve, use certain equipment, and to
-        evade attacks
+        evade attacks. Begins at base value 1
+      </p>
+      <p className="lh-copy tj">
+        Trait Points (TP) - Used to purchase pilot traits. Each [PILOT] has 5 TP
+      </p>
+      <p className="lh-copy tj">
+        Actions (A) - Each [PILOT] begins with two action points. These are used
+        to conduct [ATTACK], [MOVEMENT], [COMMANDER], and other actions
       </p>
 
       <h3 className="f4 fw7 mt4 mb2 tj"> What are [PILOT] stats used for</h3>
       <p className="lh-copy tj">
         {" "}
         [PILOT] stats are used to caculate final results of certain actions and
-        skill checks. All [PILOT] skills start at 1, but may be increased
-        permanently or temporary based on the source"
+        skill checks.
       </p>
       <p className="lh-copy tj">
         {" "}
@@ -56,7 +68,7 @@ export const Pilots = () => {
 
       <h3 className="f4 fw7 mt4 mb2 tj">Traits</h3>
       <p className="lh-copy tj">
-        Each [PILOT] has a Trait Point (TP) budget. Normally, all pilots begin
+        Each [PILOT] has a Trait Point (TP) budget. Normally, all [PILOT]s begin
         with 5 trait points. Traits are purchased from the table below. Some
         traits are stackable and can be taken multiple times.
       </p>

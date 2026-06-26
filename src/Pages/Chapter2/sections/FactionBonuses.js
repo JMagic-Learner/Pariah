@@ -2,11 +2,11 @@ const FACTIONS = [
   {
     name: "Earth Federation",
     color: "bg-dark-blue",
-    lore: "The Earth Federation Space Force fields mass-produced mobile suits in large numbers, backed by superior logistics and coordination. Their pilots emphasize combined-arms tactics and precision fire.",
+    lore: "The Earth Federation Space Force fields mass-produced mobile suits in large numbers, backed by superior logistics and coordination. Their [PILOT]s emphasize combined-arms tactics and precision fire.",
     generalBonuses: [
       {
         title: "CORRUPT GOVERNMENT",
-        text: "For each unspent Pilot Trait, gain +50 MCU.",
+        text: "For each unspent pilot Trait, gain +50 MCU.",
       },
       {
         title: "HEAD MOUNTED VULCANS",
@@ -23,7 +23,7 @@ const FACTIONS = [
           },
           {
             title: "CYBER NEWTYPE EXPERIMENTATION",
-            text: "You may purchase the [CYBER-NEWTYPE] Pilot trait.",
+            text: "You may purchase the [CYBER-NEWTYPE] pilot trait.",
           },
         ],
       },
@@ -84,11 +84,11 @@ const FACTIONS = [
   {
     name: "Principality of ZEON",
     color: "bg-dark-red",
-    lore: "ZEON mobile suits are built for speed, shock, and overwhelming close-quarters violence. ZEON pilots are aggressive, relying on superior mobility and powerful weapons to break enemy lines before they can react.",
+    lore: "ZEON mobile suits are built for speed, shock, and overwhelming close-quarters violence. ZEON [PILOT]s are aggressive, relying on superior mobility and powerful weapons to break enemy lines before they can react.",
     generalBonuses: [
       {
         title: "SIEG ZEON!",
-        text: "After conducting a [BLITZ] manuever, the Pilot may choose to autodenotate any number of grenades or panzerfausts. Grenades fired in this manner are assumed to denotate in base contact with the MSU. All ZEON MSUs may come equipped with Spiky Shoulders. These Spiky Shoulders occupy one equipment slot in either arm location. In addition, these Spiky Shoulders do not incur tonnage and do not cost MCU. Furthermore, this equipment do not factor into base cost calcualtions of the MSU",
+        text: "After conducting a [BLITZ] manuever, the [PILOT] may choose to autodenotate any number of grenades or panzerfausts. Grenades fired in this manner are assumed to denotate in base contact with the MSU. All ZEON MSUs may come equipped with Spiky Shoulders. These Spiky Shoulders occupy one equipment slot in either arm location. In addition, these Spiky Shoulders do not incur tonnage and do not cost MCU. Furthermore, this equipment do not factor into base cost calcualtions of the MSU",
       },
       {
         title: "MILITANT INNOVATION",
@@ -199,7 +199,7 @@ const FACTIONS = [
           },
           {
             title: "CIVILIAN CASUALTIES",
-            text: "Enemy pilots who destroy an Infantry unit for the first time, must make a [FEAR/SHAKEN] state test at a -1 penalty",
+            text: "Enemy [PILOT]s who destroy an Infantry unit for the first time, must make a [FEAR/SHAKEN] state test at a -1 penalty",
           },
         ],
       },
@@ -246,7 +246,7 @@ const FACTIONS = [
           },
           {
             title: "CONTRACT KILLERS",
-            text: "Nominate one enemy Pilot/MSU. All MERCENARY Pilots gain +1 Gunnery and +1 Brawl when declaring ATTACK actions against that nominated Pilot/MSU",
+            text: "Nominate one enemy [PILOT]/MSU. All MERCENARY Pilots gain +1 Gunnery and +1 Brawl when declaring ATTACK actions against that nominated [PILOT]/MSU",
           },
           {
             title: "AFTERMARKET EQUIPMENT",
@@ -261,7 +261,7 @@ const FACTIONS = [
 export const FactionBonuses = () => {
   return (
     <div>
-      <h2 className="f2 fw7 dark-red bb pb2 mb3">2.5 — Faction Bonuses</h2>
+      <h2 className="f2 fw7 dark-red bb pb2 mb3">2.10 — Faction Bonuses</h2>
       <p className="lh-copy mb4">
         Each Fireteam can belong to an overarching faction; Earth Federation,
         Principality of ZEON, etc. Within each faction, players may select a

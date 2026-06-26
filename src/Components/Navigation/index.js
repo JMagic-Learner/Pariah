@@ -18,7 +18,7 @@ export const Navigation = () => {
           "pv2 w-100": isMobile,
         })}
       >
-        <div className={classNames({ "w-20": !isMobile, "w-50": isMobile })}>
+        <div className={classNames({ "w-50": true })}>
           <Link
             className={classNames("link dim red no-underline fw7", {
               h3: !isMobile,
@@ -30,32 +30,8 @@ export const Navigation = () => {
           </Link>
         </div>
 
-        <div className={classNames({ "w-20": !isMobile, "w-50": isMobile })}>
-          <Link className={linkClass} to="/chapter1">
-            Ch.1 Intro
-          </Link>
-        </div>
-
-        <div className={classNames({ "w-20": !isMobile, "w-50": isMobile })}>
-          <Link className={linkClass} to="/chapter2">
-            Ch.2 Forces
-          </Link>
-        </div>
-
-        <div className={classNames({ "w-20": !isMobile, "w-50": isMobile })}>
-          <Link className={linkClass} to="/chapter3">
-            Ch.3 Gameplay
-          </Link>
-        </div>
-
-        <div className={classNames({ "w-20": !isMobile, "w-50": isMobile })}>
-          <Link className={linkClass} to="/chapter4">
-            Ch.4 Missions
-          </Link>
-        </div>
-
-        <div className={classNames({ "w-20": !isMobile, "w-50": isMobile })}>
-          <Link className={linkClass} to="/Rules">
+        <div className={classNames({ "w-50": true })}>
+          <Link className={linkClass} to="/RulesBook">
             Rules
           </Link>
         </div>

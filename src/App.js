@@ -6,10 +6,7 @@ import { Navigation } from "./Components/Navigation";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Rules } from "./Pages/Rules/index.js";
 import { Footer } from "./Components/Footer/index.js";
-import { Chapter1 } from "./Pages/Chapter1/index.js";
-import { Chapter2 } from "./Pages/Chapter2/index.js";
-import { Chapter3 } from "./Pages/Chapter3/index.js";
-import { Chapter4 } from "./Pages/Chapter4/index.js";
+import { RulesBook } from "./Pages/RulesBook/index.js";
 
 function App() {
   return (
@@ -25,12 +22,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/Factions" element={<Factions />} />
-            <Route exact path="/Rules" element={<Rules />} />
-            <Route exact path="/chapter1" element={<Chapter1 />} />
-            <Route exact path="/chapter2" element={<Chapter2 />} />
-            <Route exact path="/chapter3" element={<Chapter3 />} />
-            <Route exact path="/chapter4" element={<Chapter4 />} />
-            <Route exact path="/Rules" element={<Rules />} />
+            <Route exact path="/RulesBook" element={<RulesBook />} />
           </Routes>
           <Footer />
         </BrowserRouter>

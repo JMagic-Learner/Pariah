@@ -30,7 +30,7 @@ const KEYWORDS = [
 export const Keywords = () => {
   return (
     <div>
-      <h2 className="f2 fw7 dark-red bb pb2 mb3">2.4 — Keywords</h2>
+      <h2 className="f2 fw7 dark-red bb pb2 mb3">2.9 — Keywords</h2>
       <p className="lh-copy mb4">
         Keywords appear on weapons and support systems to define special rules. When a rule
         conflicts with a keyword, the keyword takes precedence. Keywords marked with{' '}
