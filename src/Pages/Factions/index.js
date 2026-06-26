@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { ProjectEntry } from "../../Components/ProjectExcerpt";
-import { Projects } from "./loreArray";
+import { FactionsArray } from "./FactionsArray";
 import { useMediaQuery } from "@custom-react-hooks/all";
 import classNames from "classnames";
 
-export const Gallery = () => {
+export const Factions = () => {
   const isMobile = useMediaQuery("(max-width: 600px)");
-  const [selectedProject, setSelectedEntry] = useState([
+  const [selectedFaction, setSelectedEntry] = useState([
     {
       id: 0,
       title: "Welcome to Death In Space",
@@ -15,9 +15,10 @@ export const Gallery = () => {
     },
   ]);
   const Open = (title1) => {
-    let selectT = Projects.filter((item) => item.title === title1)?.[0];
+    let selectT = FactionsArray.filter((item) => item.title === title1)?.[0];
     setSelectedEntry(selectT);
   };
+
   return (
     <div
       className={classNames("", {
@@ -31,7 +32,7 @@ export const Gallery = () => {
           "w-100": isMobile,
         })}
       >
-        {Projects.map((entry) => {
+        {FactionsArray.map((entry) => {
           return (
             <button
               className={classNames("w-100", {
@@ -47,7 +48,7 @@ export const Gallery = () => {
       </div>
 
       <div className="w-100">
-        <ProjectEntry propEntry={selectedProject} />
+        <ProjectEntry propEntry={selectedFaction} />
       </div>
     </div>
   );

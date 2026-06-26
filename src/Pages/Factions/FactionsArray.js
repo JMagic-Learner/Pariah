@@ -1,7 +1,7 @@
-export const Projects = [
+export const FactionsArray = [
   {
     id: 0,
-    title: "BattleTech",
+    title: "Anti Earth Union Group (AEUG) ",
     images: [
       {
         id: 0,
@@ -94,11 +94,27 @@ export const Projects = [
         url: "https://s3-us-west-2.amazonaws.com/prnt/adam-stern-191110_960.jpg",
       },
     ],
-    text: "A war fought for the control and extraction of Gems. Gems are known for their exceptional ability to refract light. This property allowed civilzations to advance technology such as the bridger spacecraft. Value and speculation on open markets forced political entities into a all-out corporate war. ",
+    factionBonuses: [
+      {
+        title: "ANAHEIM SUPPLIER",
+        text: "You may purhcase MSU from either EFF or ZEON force lists from 0088 UC or earlier",
+      },
+      {
+        title: "NEMO ORIGINS",
+        text: "You may purchase the MSA-003 NEMU MSU for 100 MCU",
+      },
+      {
+        title: "COALITION FORCE",
+        text: "Pilots obtain the [CROSS DISCIPLINE] Trait for free and may target faction bonuses from either ZEON or EFF",
+      },
+    ],
+    generalBonuses: [],
+    description:
+      "The AEUG is an anti-Federation movement which opposes the oppressive tactics of the Federation's elite Titans taskforce. The AEUG's ultimate political agenda was to reform the corrupt Earth Federation government, but after the Colony 30 Incident of U.C. 0085, the organization became focused on the more urgent task of fighting the Titans with military force.",
   },
   {
     id: 1,
-    title: "BLKOUT",
+    title: "CROSSBONE VANGUARD",
     images: [
       {
         id: 0,
@@ -191,11 +207,27 @@ export const Projects = [
         url: "https://s3-us-west-2.amazonaws.com/prnt/adam-stern-191110_960.jpg",
       },
     ],
-    text: "Infinity",
+    factionBonuses: [
+      {
+        title: "SPACE PIRACY",
+        text: "You may purchase MSU from either EFF or ZEON force lists",
+      },
+      {
+        title: "VANGUARD AMBUSH",
+        text: "You may select three terrain pieces 24 inches outside the enemy deployment edge. These terrain pieces are considered to be trapped with explosives. When an enemy MSU enters within 6 inches of a trapped terrain piece, that MSU must make a PS 6 check or take 10 damage to one hit location",
+      },
+      {
+        title: "CAPTAIN'S ORDERS",
+        text: "Whenever a [COMMANDER] performs a [REPOSITION] action, all friendly units may move an additional 4 inches without penalty (to a max total pf 10 inches of movement per MSU)",
+      },
+    ],
+    generalBonuses: [],
+    description:
+      "The Crossbone Vanguard is a fighting force organized by the Ronah family in U.C. 0106, drawing on the skilled personnel of the Buch Concern and its vocational training school. This private army is meant to serve as an advance guard, or vanguard, for the nation of Cosmo Babylonia. Originally founded by Meitzer Ronah, the Crossbone Vanguard is eventually placed under the command of the mysterious Iron Mask. By the late U.C. 120s the Crossbone Vanguard was reorganized into the Crossbone Vanguard Space Pirates, led by Berah Ronah.",
   },
   {
-    id: 2,
-    title: "Heavy Gear",
+    id: 1,
+    title: "EARTH FEDERATION GROUND FORCES",
     images: [
       {
         id: 0,
@@ -288,11 +320,38 @@ export const Projects = [
         url: "https://s3-us-west-2.amazonaws.com/prnt/adam-stern-191110_960.jpg",
       },
     ],
-    text: "Varyk Industries was one of the major corporate powers involved in the Gem War. Varyk Industries specializes in hyper-light drives, cold-core engines, and heavy manufacturing. Primarily stationed in the Eastern Satellite Rings, they have maintained a standing private army complete with a naval fleet. Given the disruption in Gem supply, Varyyk Industries is shifted from production of thier trademark bridger format drive to the maintenance and preservation of the bridger drives that remain. ",
+    factionBonuses: [
+      {
+        title: "HEAVY WEAPONS SPECIALIST",
+        text: "All [HEAVY] weapons automatically gain the [MOUNTABLE] keyword",
+      },
+      {
+        title: "IMPROMPTU MECHANICS",
+        text: "All Pilots may purchase the [MECHANIC PRO] pilot trait",
+        extraTrait: {
+          traitName: "Mechanic Pro",
+          traitCost: 2,
+          traitEffect:
+            "Reduce the FRO cost of one weapon by 2 and obtain 1 [HARDPOINT] support equipment for free.",
+        },
+      },
+    ],
+    generalBonuses: [
+      {
+        title: "CORRUPT GOVERNMENT",
+        text: "For each pilot trait unspent, the MSU credit limit is increased by 50",
+      },
+      {
+        title: "HEAD MOUNTED VULCANS",
+        text: "All EFF MSUs may come equipped with head mounted Vulcan Cannons without extra tonnage and MCU cost. These Vulcan Cannons are not included in the base MSU cost calculations",
+      },
+    ],
+    description:
+      "The Crossbone Vanguard is a fighting force organized by the Ronah family in U.C. 0106, drawing on the skilled personnel of the Buch Concern and its vocational training school. This private army is meant to serve as an advance guard, or vanguard, for the nation of Cosmo Babylonia. Originally founded by Meitzer Ronah, the Crossbone Vanguard is eventually placed under the command of the mysterious Iron Mask. By the late U.C. 120s the Crossbone Vanguard was reorganized into the Crossbone Vanguard Space Pirates, led by Berah Ronah.",
   },
   {
-    id: 3,
-    title: "Infinity",
+    id: 1,
+    title: "EARTH FEDERATION SPACE FORCE",
     images: [
       {
         id: 0,
@@ -385,7 +444,34 @@ export const Projects = [
         url: "https://s3-us-west-2.amazonaws.com/prnt/adam-stern-191110_960.jpg",
       },
     ],
-    text: "A amalgration of smaller mining companies, the UMC is a fleet-based corporate power that primarily resides in the Eyra Asteroid Belts. They maintain a number of deep space mining platforms around the Tenebris system, although they have almost lost the entire south east sector to pirates. Just prior to the Gem War, the UMC was competing with other major mining companies for exclusive rights to Gem extraction. Many surviving denizens of the Tenebris system indirectly blame UMC and other like-minded mining coalitions for kickstarting the Gem race into a hot war.",
+    factionBonuses: [
+      {
+        title: "NAVAL WARFARE SPECIALIST",
+        text: "You may purchase Anti-Ship Rifles for 75 MCU",
+      },
+      {
+        title: "NAVAL BOMBARDMENT",
+        text: "All deployment, the MCU [COMMANDER] singals for NAVAL BOMBARDMENT. The MCU [COMMANDER] immediately nominates a point on the battlefield and places a [AIRSTRIKE!] marker outside 16 inches of the enemy's deployment edge",
+        extraTrait: {
+          traitName: "Mechanic Pro",
+          traitCost: 2,
+          traitEffect:
+            "Reduce the FRO cost of one weapon by 2 and obtain 1 [HARDPOINT] support equipment for free.",
+        },
+      },
+    ],
+    generalBonuses: [
+      {
+        title: "CORRUPT GOVERNMENT",
+        text: "For each pilot trait unspent, the MSU credit limit is increased by 50",
+      },
+      {
+        title: "HEAD MOUNTED VULCANS",
+        text: "All EFF MSUs may come equipped with head mounted Vulcan Cannons without extra tonnage and MCU cost. These Vulcan Cannons are not included in the base MSU cost calculations",
+      },
+    ],
+    description:
+      "The Crossbone Vanguard is a fighting force organized by the Ronah family in U.C. 0106, drawing on the skilled personnel of the Buch Concern and its vocational training school. This private army is meant to serve as an advance guard, or vanguard, for the nation of Cosmo Babylonia. Originally founded by Meitzer Ronah, the Crossbone Vanguard is eventually placed under the command of the mysterious Iron Mask. By the late U.C. 120s the Crossbone Vanguard was reorganized into the Crossbone Vanguard Space Pirates, led by Berah Ronah.",
   },
   {
     id: 4,
