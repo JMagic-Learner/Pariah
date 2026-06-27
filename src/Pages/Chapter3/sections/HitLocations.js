@@ -1,99 +1,65 @@
 const HIT_TABLE = [
   {
     roll: "2",
-    location: "Torso (Critical)",
+    location: "Torso",
     effect:
-      "Double damage applied to Torso. If Torso HP reaches 0, MSU is destroyed.",
+      "If Torso HP reaches 0, MSU is destroyed. See REACTOR CRITICAL rules in Section 2.2",
   },
   {
     roll: "3",
-    location: "Right Leg",
-    effect:
-      "Damage applied to Right Leg. At 0 HP: CRIPPLED (Right Leg). Both legs destroyed: KNOCKDOWN.",
+    location: "Left Arm",
+    effect: "Damage applied to Left Arm. At 0 HP: Weapons and Equipment lost.",
   },
   {
     roll: "4",
-    location: "Left Leg",
-    effect:
-      "Damage applied to Left Leg. At 0 HP: CRIPPLED (Left Leg). Both legs destroyed: KNOCKDOWN.",
+    location: "Right Arm",
+    effect: "Damage applied to Right Arm. At 0 HP: Weapons and Equipment lost",
   },
   {
     roll: "5",
-    location: "Right Arm",
+    location: "Left Leg",
     effect:
-      "Damage applied to Right Arm. At 0 HP: CRIPPLED (Right Arm). Cannot use weapons held in that arm.",
+      "Damage applied to Right Leg. At 0 HP, MSU gains KNOCKDOWN, CRIPPLIED status.",
   },
   {
     roll: "6",
-    location: "Torso",
-    effect: "Damage applied to Torso. At 0 HP: MSU is destroyed.",
+    location: "Right Leg",
+    effect:
+      "Damage applied to Right Leg. At 0 HP, MSU gains KNOCKDOWN, CRIPPLED status.",
   },
   {
     roll: "7",
-    location: "Torso",
-    effect: "Damage applied to Torso. At 0 HP: MSU is destroyed.",
+    location: "Left Arm",
+    effect: "Damage applied to Left Arm. At 0 HP: Weapons and Equipment lost",
   },
   {
     roll: "8",
-    location: "Torso",
-    effect: "Damage applied to Torso. At 0 HP: MSU is destroyed.",
+    location: "Right Arm",
+    effect: "Damage applied to Right Arm. At 0 HP: Weapons and Equipment lost",
   },
   {
     roll: "9",
-    location: "Left Arm",
+    location: "Left Leg",
     effect:
-      "Damage applied to Left Arm. At 0 HP: CRIPPLED (Left Arm). Cannot use weapons held in that arm.",
+      "Damage applied to Left Leg. At 0 HP, MSU gains KNOCKDOWN, CRIPPLIED status.",
   },
   {
     roll: "10",
     location: "Right Leg",
     effect:
-      "Damage applied to Right Leg. At 0 HP: CRIPPLED (Right Leg). Both legs destroyed: KNOCKDOWN.",
+      "Damage applied to Right Leg. At 0 HP, MSU gains KNOCKDOWN, CRIPPLIED status.",
   },
   {
     roll: "11",
-    location: "Left Leg",
+    location: "Head",
     effect:
-      "Damage applied to Left Leg. At 0 HP: CRIPPLED (Left Leg). Both legs destroyed: KNOCKDOWN.",
+      "Damage applied to Head. At 0 HP, lose weapons and equipment. MSU suffers from -1 Penalty to all Skill Checks",
   },
   {
     roll: "12",
-    location: "Head",
-    effect:
-      "Damage applied to Head. At 0 HP: Pilot loses 1 PS permanently. Head sensors destroyed: -1 GS for remainder of game.",
-  },
-];
-
-const LOCATION_HP = [
-  {
-    location: "Head",
-    baseArmor: 10,
-    notes: "Lowest HP. Sensor destruction at 0.",
-  },
-  {
-    location: "Right Arm",
-    baseArmor: 15,
-    notes: "Weapons in this arm disabled at 0.",
-  },
-  {
-    location: "Left Arm",
-    baseArmor: 15,
-    notes: "Weapons in this arm disabled at 0.",
-  },
-  {
-    location: "Right Leg",
-    baseArmor: 20,
-    notes: "CRIPPLED at 0. KNOCKDOWN if both legs reach 0.",
-  },
-  {
-    location: "Left Leg",
-    baseArmor: 20,
-    notes: "CRIPPLED at 0. KNOCKDOWN if both legs reach 0.",
-  },
-  {
     location: "Torso",
-    baseArmor: 30,
-    notes: "MSU destroyed at 0. Double damage on roll of 2.",
+    effect:
+      "If Torso HP reaches 0, MSU is destroyed. See REACTOR CRITICAL rules in Section 2.2",
   },
 ];
 
@@ -111,81 +77,50 @@ export const HitLocations = () => {
 
       <h3 className="f4 fw7 mt3 mb2">Hit Location Table (2d6)</h3>
       <div className="overflow-auto mv2">
-        <table className="f6 w-100 collapse ba b--black-10">
+        <table className="f6 w-100" cellSpacing="0">
           <thead>
-            <tr className="bg-near-black white tl">
-              <th className="pa2 fw6 w-10 tc">2d6 Roll</th>
-              <th className="pa2 fw6 w-25">Location</th>
-              <th className="pa2 fw6">Consequence</th>
+            <tr>
+              <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc w-10">
+                2d6 Roll
+              </th>
+              <th className="fw6 bb b--black-20 pb3 pr3 bg-white tl w-25">
+                Location
+              </th>
+              <th className="fw6 bb b--black-20 pb3 pr3 bg-white tl">
+                Consequence
+              </th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="lh-copy">
             {HIT_TABLE.map((row, i) => (
               <tr
                 key={i}
                 className={i % 2 === 0 ? "bg-near-white" : "bg-white"}
               >
-                <td className="pa2 tc fw7 dark-red f5">{row.roll}</td>
-                <td className="pa2 fw7">{row.location}</td>
-                <td className="pa2 lh-copy">{row.effect}</td>
+                <td className="pv2 pr3 bb b--black-20 tc fw7 dark-red f5">
+                  {row.roll}
+                </td>
+                <td className="pv2 pr3 bb b--black-20 fw7">{row.location}</td>
+                <td className="pv2 pr3 bb b--black-20 lh-copy">{row.effect}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-
-      <h3 className="f4 fw7 mt4 mb2">Hit Location Base Armor</h3>
-      <p className="lh-copy mb2">
-        Each hit location has its own Armor pool. Armor is subtracted from
-        incoming damage before HP is reduced. Armor does not regen between
-        rounds unless a support system provides regen. Armor can be increased
-        per location via Extra Armor support upgrades.
-      </p>
-      <div className="overflow-auto mv2">
-        <table className="f6 w-100 collapse ba b--black-10">
-          <thead>
-            <tr className="bg-near-black white tl">
-              <th className="pa2 fw6">Location</th>
-              <th className="pa2 fw6 tc">Base Armor</th>
-              <th className="pa2 fw6">Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            {LOCATION_HP.map((row, i) => (
-              <tr
-                key={i}
-                className={i % 2 === 0 ? "bg-near-white" : "bg-white"}
-              >
-                <td className="pa2 fw7">{row.location}</td>
-                <td className="pa2 tc">{row.baseArmor}</td>
-                <td className="pa2 lh-copy">{row.notes}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <p className="f6 i lh-copy mt2">
-        Note: Base Armor values shown are for a standard grunt-tier MSU.
-        Higher-tier MSUs may have higher armor values configured during Force
-        Creation.
-      </p>
 
       <h3 className="f4 fw7 mt4 mb2">Applying Damage</h3>
       <ol className="lh-copy pl3">
         <li className="pv1">
-          Roll to hit (1d6 + GS or BR vs. target number, adjusted by EVA).
+          Roll 1d6 per ROF (1d6 + [GS/BR] + Mods) vs. enemy [PILOT] Evasion
+          roll.
         </li>
         <li className="pv1">
-          For each successful hit, roll 2d6 for the hit location (unless
-          [PRECISE]).
+          For each successful hit, roll 2d6 for the hit location.
         </li>
         <li className="pv1">
-          Apply AP reduction to that location's Armor (Armor − AP[X], minimum
-          0).
-        </li>
-        <li className="pv1">
-          Subtract remaining Armor from DAM. If DAM exceeds 0, reduce that
-          location's HP.
+          Subtract remaining Armor by Damage amount. If Armor goes reachs 0 or
+          below, that hit location is destroyed and any excess damage is
+          transfered to the [TORSO]
         </li>
         <li className="pv1">
           If HP reaches 0, apply the location's consequence (CRIPPLED,
@@ -195,11 +130,11 @@ export const HitLocations = () => {
 
       <h3 className="f4 fw7 mt4 mb2">Shields</h3>
       <p className="lh-copy">
-        If an MSU has a Shield equipped, it may intercept hits to the Torso or
-        the arm holding the shield. Declare the shield interception before
-        rolling damage. The shield's Armor pool absorbs damage instead of the
-        body location. If the shield's HP reaches 0, remaining damage carries
-        over to the intended location.
+        If an MSU has a Shield equipped, it may intercept hits (See Shield rules
+        in Section 2.8 under Equipment effects). Declare the shield interception
+        before rolling damage. The shield's Armor pool absorbs damage instead of
+        the body location. If the shield's HP reaches 0, remaining damage
+        carries over to the intended location.
       </p>
     </div>
   );

@@ -3,125 +3,145 @@ export const AttackSequence = () => {
     <div>
       <h2 className="f2 fw7 dark-red bb pb2 mb3">3.5 — Attack Sequence</h2>
 
-      <p className="lh-copy mb4">
-        All ranged and melee attacks follow the same nine-step sequence. Resolve
-        each step in order before proceeding to the next.
+      <p className="lh-copy mb4 tj">
+        All attacks — whether in the Combat Phase or Shooting Phase — follow the
+        same sequence. Each step must be resolved in order before proceeding.
+        The defending [PILOT] rolls Evasion dice as a single pool compared
+        against the attacker's full batch of attack dice.
       </p>
 
-      {[
-        {
-          step: 1,
-          title: "Declare Attack",
-          body: "The active player declares which of their MSU's weapons is being used, and nominates a target MSU. Confirm the target is valid (in range, in LOS, not STEALTH-hidden).",
-        },
-        {
-          step: 2,
-          title: "Check Line of Sight (LOS)",
-          body: "Draw an imaginary line from the attacker's base to the target's base. If the line is fully blocked by terrain, the attack is invalid. If partially blocked, the target gains +1 EVA die (Obscuring Cover). STEALTH MSUs cannot be targeted unless the attacker moved within 4\" of them.",
-        },
-        {
-          step: 3,
-          title: "Determine Range Band",
-          body: "Measure the distance between bases. Compare to the weapon's range band table to identify the applicable band (Close / Short / Medium / Long). Apply the corresponding MOD to the attack roll. If the distance exceeds the Long range band, the attack is invalid.",
-        },
-        {
-          step: 4,
-          title: "Check Arc",
-          body: "Verify the target falls within the attacker's front-facing arc (180°). Rear-arc attacks suffer −2 to hit. Weapons with Panoptic Canopy support system may fire from 360° with no penalty.",
-        },
-        {
-          step: 5,
-          title: "Roll to Hit",
-          body: "Roll 1d6. Add the pilot's GS (ranged) or BR (melee) modifier, the weapon's range band MOD, and any circumstance modifiers (traits, states, terrain). Compare the total to the Target Number (default 4). One roll per ROF die.",
-        },
-        {
-          step: 6,
-          title: "Roll Evasion",
-          body: "The defending player rolls their EVA dice pool. Each die result of 4+ removes one incoming hit. Apply all relevant EVA modifiers before rolling. Hits removed by EVA do not proceed to the next steps.",
-        },
-        {
-          step: 7,
-          title: "Roll Hit Locations",
-          body: "For each hit that survived the Evasion roll, roll 2d6 on the Hit Location table. Weapons with [PRECISE] keyword allow the attacker to choose the location instead. AOE hits distribute across multiple locations per the AOE rules.",
-        },
-        {
-          step: 8,
-          title: "Apply Armor & Damage",
-          body: "For each hit location: subtract AP[X] from that location's current Armor (min 0). Then subtract remaining Armor from the weapon's DAM. Any remaining damage is applied to that location's HP. Track HP on the MSU sheet.",
-        },
-        {
-          step: 9,
-          title: "Resolve Consequences",
-          body: "Check each hit location. If HP reaches 0, apply the consequence: Head → sensor loss; Arm → CRIPPLED; Leg → CRIPPLED (both destroyed → KNOCKDOWN); Torso → MSU destroyed. Apply any keyword effects ([SUPPRESSIVE] → SUPPRESSED token; [IMPACT(X)] → push; Lethal → permanent armor reduction; Cleave → additional hit).",
-        },
-      ].map(({ step, title, body }) => (
-        <div key={step} className="flex mb4 ba b--black-10 pa3">
-          <div className="flex-shrink-0 w2 h2 bg-dark-red white fw7 f4 br-100 flex items-center justify-center mr3">
-            {step}
-          </div>
-          <div>
-            <h3 className="f5 fw7 ma0 mb1">{title}</h3>
-            <p className="lh-copy ma0 f6">{body}</p>
-          </div>
-        </div>
-      ))}
+      {/* Attack Action */}
+      <div className="bg-near-white ba b--black-10 br2 pa3 mb3">
+        <h3 className="f4 fw7 dark-red mt0 mb1">
+          [ATTACK]{" "}
+          <span className="fw4 f5">[ACTION] [ATTACK PHASE / COMBAT PHASE]</span>
+        </h3>
+        <p className="lh-copy f6 mb2 tj">
+          Choose one weapon that is currently [READIED], [INBUILT], or
+          [MOUNTED]. Once declared, you cannot change weapon choice until the
+          entire Attack sequence ends.
+        </p>
+        <ul className="lh-copy pl3 f6 ma0 tj">
+          <li className="pv1">
+            <span className="fw6">Step 1:</span> Check [LOS] to the enemy MSU
+            and measure range from base to base. If LOS and eligible ranges are
+            confirmed, proceed to Step 3. Otherwise the attack is invalid — do
+            not continue.
+          </li>
+          <li className="pv1 ">
+            <span className="fw6">Step 2:</span> If firing an [INDIRECT] weapon,
+            you may skip the LOS requirement and continue to Step 3.
+          </li>
+          <li className="pv1">
+            <span className="fw6">Step 3:</span> Check the ROF of the eligible
+            weapon.
+          </li>
+          <li className="pv1">
+            <span className="fw6">Step 4:</span> Roll a number of dice equal to
+            the weapon's ROF. This is called a <span className="fw6">SET</span>{" "}
+            or <span className="fw6">BATCH</span> of attack dice.
+          </li>
+          <li className="pv1">
+            <span className="fw6">Step 5:</span> Add [GS] (ranged) or [BR]
+            (melee), Range Mod, and any other relevant modifiers to each d6. The
+            total of each die is its final attack result. The maximum total
+            modifier cap is{" "}
+            <span className="fw6">+4 after all penalties and bonuses.</span>
+          </li>
+          <li className="pv1">
+            <span className="fw6">Step 6:</span> The target MSU rolls [x]d3
+            according to the Evasion Tier Table and adds [PS] + any relevant
+            modifiers. This is the{" "}
+            <span className="fw6">Evasion Check total.</span>
+          </li>
+          <li className="pv1">
+            <span className="fw6">Step 7:</span> Compare the Evasion Check total
+            against each die in the attacker's BATCH. For each attack die that{" "}
+            <span className="fw6">exceeds</span> the Evasion Check, the attacker
+            rolls 2d6 and assigns one hit location.
+          </li>
+        </ul>
+      </div>
 
-      <h3 className="f4 fw7 mt4 mb2">Melee-Specific Rules</h3>
-      <ul className="lh-copy pl3">
-        <li className="pv1">
-          Melee attacks require the attacking MSU to be within the weapon's
-          range (measured from base to base).
-        </li>
-        <li className="pv1">
-          Melee attacks use BR instead of GS for the hit roll.
-        </li>
-        <li className="pv1">
-          Opponents in base contact may use Counterstrike weapons as a free
-          reaction.
-        </li>
-        <li className="pv1">
-          Melee attacks against the rear arc of an MSU add +1 hit location roll
-          (roll 2d6, use the higher result).
-        </li>
-        <li className="pv1">
-          BLITZ attacks add base melee weapon damage as normal; if the attacker
-          moved 21"+ this round, Kinetic Force applies.
-        </li>
-      </ul>
+      {/* Simultaneous Attack */}
+      <div className="bg-near-white ba b--black-10 br2 pa3 mb3">
+        <h3 className="f4 fw7 dark-red mt0 mb1">
+          [SIMULTANEOUS ATTACK]{" "}
+          <span className="fw4 f5">[ACTION] [ATTACK PHASE / COMBAT PHASE]</span>
+        </h3>
+        <p className="lh-copy f6 mb2">
+          Choose <span className="fw6">two weapons</span> that are currently
+          [READIED], [INBUILT], or [MOUNTED]. Shooting two weapons
+          simultaneously incurs a{" "}
+          <span className="fw6 dark-red">−2 penalty</span> to all attack dice
+          unless a keyword (such as [AKIMBO]) states otherwise.
+        </p>
+        <ul className="lh-copy pl3 f6 ma0 tj">
+          <li className="pv1">
+            <span className="fw6">Step 1:</span> Choose two weapons. Once
+            declared, you cannot change weapon choice until the entire Attack
+            sequence ends.
+          </li>
+          <li className="pv1">
+            <span className="fw6">Step 2:</span> Measure range to determine
+            rangeband and range modifiers. Confirm [LOS] to the target.
+          </li>
+          <li className="pv1">
+            <span className="fw6">Step 3:</span> For each weapon, roll 1d6 per
+            ROF and add [GS] (ranged) or [BR] (melee) + any mods. Apply the −2
+            simultaneous penalty to each die unless reduced by a keyword.
+          </li>
+          <li className="pv1">
+            <span className="fw6">Step 4:</span> Each weapon generates its own
+            separate BATCH of attack dice. The defender rolls a separate Evasion
+            Check against each BATCH.
+          </li>
+          <li className="pv1">
+            <span className="fw6">Step 5:</span> For each attack die in each
+            BATCH that exceeds the corresponding Evasion Check, roll 2d6 for one
+            hit location.
+          </li>
+        </ul>
+        <p className="lh-copy f7 mt2 mb0">
+          Note: You may assign 1 attack die per individual target, including
+          [MISSILE] tokens. [MOUNTED] weapons cannot be used in [SIMULTANEOUS
+          ATTACK].
+        </p>
+      </div>
 
-      <h3 className="f4 fw7 mt4 mb2">Common Attack Modifiers Summary</h3>
-      <div className="overflow-auto mv2">
-        <table className="f6 w-100 collapse ba b--black-10">
-          <thead>
-            <tr className="bg-near-black white tl">
-              <th className="pa2 fw6">Situation</th>
-              <th className="pa2 fw6 tc">Modifier</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[
-              ["REPOSE this round (ranged)", "+1 GS"],
-              ["Target in Obscuring Cover (ranged)", "+1 EVA die to defender"],
-              ["Target in Hard Cover (ranged)", "+1 EVA die to defender"],
-              ["Full Auto keyword used", "−2 to all hit rolls"],
-              ["Scope at Long range", "−1 penalty (negated)"],
-              ["Target in rear arc", "+2 hit mod (attacker advantage)"],
-              [
-                "Attacking SUPPRESSED target",
-                "Normal (Titans faction: +1 DAM)",
-              ],
-              ["Attacking KNOCKED DOWN target", "Auto-hit, no EVA"],
-            ].map(([sit, mod], i) => (
-              <tr
-                key={i}
-                className={i % 2 === 0 ? "bg-near-white" : "bg-white"}
-              >
-                <td className="pa2">{sit}</td>
-                <td className="pa2 tc fw6 dark-red">{mod}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      {/* Worked Example */}
+      <div className="bg-near-white ba b--black-10 br2 pa3 mb3 tj">
+        <h3 className="f4 fw7 dark-red mt0 mb2">Worked Example</h3>
+        <p className="lh-copy f6 mb2 fw6">Single Weapon ([ATTACK]):</p>
+        <p className="lh-copy f6 mb3">
+          An attacker with a Kinetic Rifle (ROF 3) rolls three dice:{" "}
+          <span className="fw6">4, 5, 7</span>. The defender rolls 2d3 + [PS] +
+          mods for a total of <span className="fw6">6</span>. The attack values
+          of <span className="fw6">4</span> and <span className="fw6">5</span>{" "}
+          do not exceed 6 — those dice are negated. The attack die of{" "}
+          <span className="fw6">7</span> exceeds 6 and scores a hit. The
+          attacker rolls 2d6 for one hit location and the defender marks down
+          the appropriate damage.
+        </p>
+        <p className="lh-copy f6 mb2 fw6">
+          Two Weapons ([SIMULTANEOUS ATTACK]):
+        </p>
+        <p className="lh-copy f6 mb0">
+          An attacker fires two Kinetic Rifles simultaneously (ROF 3 each, −2
+          penalty applied). Batch 1 results:{" "}
+          <span className="fw6">4, 5, 7</span>. Batch 2 results:{" "}
+          <span className="fw6">2, 8, 7</span>. The defender rolls a total of{" "}
+          <span className="fw6">6</span> vs ALL ATTACK DICE{" "}
+        </p>
+        <p className="lh-copy f6 mb0">
+          {" "}
+          "Against Batch 1 dice 4, 5 are negated — only the"{" "}
+          <span className="fw6">7</span> scores a hit (1 hit location). Against
+          Batch 2: dice 2 are negated — the <span className="fw6">8</span> and{" "}
+          <span className="fw6">7</span> both score hits (2 hit locations).
+          Damage is assigned to the defender's hit locations for all three
+          successful hits.
+        </p>
       </div>
     </div>
   );

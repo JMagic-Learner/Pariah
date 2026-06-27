@@ -65,6 +65,11 @@ export const Pilots = () => {
       <p className="lh-copy tj">
         Skill Checks must meet or exceed a static numerical value.
       </p>
+      <p className="lh-copy tj">
+        The total bonus (base stat + any modifiers) is capped at 4. Meaning a
+        [PILOT] can never exceed a +4 total bonus even after purchasing support
+        systems, weapons, and increased base stats.
+      </p>
 
       <h3 className="f4 fw7 mt4 mb2 tj">Traits</h3>
       <p className="lh-copy tj">
@@ -75,7 +80,8 @@ export const Pilots = () => {
       <p className="lh-copy tj">
         Each [PILOT] can only have a maximum of five pilot traits. This means
         that if a faction bonus were to grant a [PILOT] an additional trait by
-        default, the [PILOT] can only obtain 4 more traits.
+        default, the [PILOT] can only obtain 4 more traits. A [PILOT] cannot
+        have duplicate traits unless it is Gunnery, Brawl, Piloting
       </p>
       <PilotTraits />
     </div>

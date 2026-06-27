@@ -2,64 +2,152 @@ export const Phases = () => {
   return (
     <div>
       <h2 className="f2 fw7 dark-red bb pb2 mb3">3.1 — Phases</h2>
-      <p className="lh-copy mb3">
-        A game of Flashpoint is divided into Battle Rounds. Each Battle Round consists of six
-        phases that both players move through simultaneously. Phases must be resolved in order.
+      <p className="lh-copy mb4">
+        A game of Flashpoint is played in rounds. Each round proceeds through
+        the following phases in order. Phases must be resolved sequentially
+        before advancing to the next.
       </p>
 
-      <div className="overflow-auto mv3">
-        <table className="f6 w-100 collapse ba b--black-10">
-          <thead>
-            <tr className="bg-near-black white tl">
-              <th className="pa2 fw6 w-10">Phase</th>
-              <th className="pa2 fw6 w-20">Name</th>
-              <th className="pa2 fw6">Steps</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[
-              ['0', 'Status Phase', 'Resolve all ongoing states. Recharge passive systems. Resolve Beam Shield regen. Remove expired tokens.'],
-              ['1', 'Command Phase', 'Perform Commander Actions. Spend RALLY tokens. Resolve any pre-movement effects.'],
-              ['2', 'Initiative Phase', 'All pilots roll 1d6 + PS. Highest result activates first. Ties rerolled unless a trait modifies the result.'],
-              ['3', 'Movement Phase', 'Players alternate activating one MSU at a time in initiative order. Each activated MSU may Move, BOOST, BLITZ, or Repose. Declare actions before measuring.'],
-              ['4', 'Attack Phase', 'Players alternate activating one MSU at a time in initiative order. Each activated MSU may perform one Ranged, Melee, or Aim action. Reactive attacks resolve immediately when triggered.'],
-              ['5', 'End Phase', 'Check victory conditions. Place any end-of-round tokens or effects. Advance the round counter.'],
-            ].map(([phase, name, steps], i) => (
-              <tr key={i} className={i % 2 === 0 ? 'bg-near-white' : 'bg-white'}>
-                <td className="pa2 tc fw7 dark-red f4">{phase}</td>
-                <td className="pa2 fw7">{name}</td>
-                <td className="pa2 lh-copy">{steps}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div className="bg-washed-blue ba b--light-blue br2 pa3 mb4 tj">
+        <h3 className="f4 fw7 mt0 mb1">Deployment Phase</h3>
+        <p className="lh-copy f6 i mb2">
+          Resolved once before the game begins — not part of the recurring round
+          cycle.
+        </p>
+        <ul className="lh-copy pl3 f6 ma0">
+          <li className="pv1">
+            Both players nominate one [PILOT] on their roster to be [COMMANDER].
+          </li>
+          <li className="pv1">
+            The [COMMANDER] uses their PS as the base value for Initiative
+            Rolls.
+          </li>
+          <li className="pv1">
+            Both players roll off 2d6 + PS to determine who places the first
+            MSU.
+          </li>
+          <li className="pv1">
+            Typical deployment is within 6 inches of the board edge.
+          </li>
+        </ul>
       </div>
 
-      <h3 className="f4 fw7 mt4 mb2">Phase 0 — Status Phase Detail</h3>
-      <p className="lh-copy mb2">Resolve in this order each round:</p>
-      <ol className="lh-copy pl3">
-        <li className="pv1"><strong>Step 0.1:</strong> Remove all SUPPRESSED tokens from all MSUs.</li>
-        <li className="pv1"><strong>Step 0.2:</strong> Beam Shield regen: all Beam Shields restore 10 Armor.</li>
-        <li className="pv1"><strong>Step 0.3:</strong> Remove STEALTH tokens from MSUs that fired last round.</li>
-        <li className="pv1"><strong>Step 0.4:</strong> Any MSU in KNOCKDOWN state makes a PS 5 check to stand up; failure extends KNOCKDOWN for one more round.</li>
-      </ol>
+      <div className="bg-near-white ba b--black-10 br2 pa3 mb3 tj">
+        <h3 className="f4 fw7 dark-red mt0 mb2">1. Initiative Phase</h3>
+        <p className="lh-copy f6 ma0">
+          Both players roll 2d6 + [PILOT] PS for each MSU. Each MSU is then
+          ranked from highest to lowest to determine the activation order for
+          the round. Players activate their MSUs according to this order. If
+          initiative is tied, reroll.
+        </p>
+      </div>
 
-      <h3 className="f4 fw7 mt4 mb2">Phase 1 — Command Phase Detail</h3>
-      <ol className="lh-copy pl3">
-        <li className="pv1"><strong>Step 1.1:</strong> Commander may use Command Protocol (if equipped) to RALLY one friendly MSU for free.</li>
-        <li className="pv1"><strong>Step 1.2:</strong> Both players may spend RALLY tokens earned last round.</li>
-        <li className="pv1"><strong>Step 1.3:</strong> Resolve AMS checks (PS 7) for each MISSILE token within 18" of an equipped AMS MSU.</li>
-        <li className="pv1"><strong>Step 1.4:</strong> Pilot trait actions that occur "At Step 1.4" (Aura Farmer, Trash Talker) are resolved now.</li>
-      </ol>
+      <div className="bg-near-white ba b--black-10 br2 pa3 mb3 tj">
+        <h3 className="f4 fw7 dark-red mt0 mb2">2. Status Phase</h3>
+        <ul className="lh-copy pl3 f6 ma0">
+          <li className="pv1">
+            <span className="fw6">Step 0:</span> Pilots with the [COMMANDER]
+            keyword can perform specific actions.
+          </li>
+          <li className="pv1">
+            <span className="fw6">Step 1:</span> All MSU reset their FRO to max
+            cap.
+          </li>
+          <li className="pv1">
+            <span className="fw6">Step 2:</span> All [MISSILE] tokens must
+            immediately move up to [MISSILE(X)] inches in a straight line.
+          </li>
+          <li className="pv1">
+            <span className="fw6">Step 3:</span> Resolve all missile tokens upon
+            contact.
+          </li>
+          <li className="pv1">
+            <span className="fw6">Step 4:</span> All [PILOT]s reset their action
+            count to 2.
+          </li>
+        </ul>
+      </div>
 
-      <h3 className="f4 fw7 mt4 mb2">Activation Order</h3>
-      <p className="lh-copy">
-        During the Movement and Attack phases, players alternate activating one MSU at a time,
-        starting with the MSU with the highest initiative result. In the event of a tie between
-        players, both MSUs are activated simultaneously and resolve effects at the same time.
-        If a player has more MSUs than their opponent, they continue activating their remaining
-        MSUs after the opponent has activated all of theirs.
-      </p>
+      <div className="bg-near-white ba b--black-10 br2 pa3 mb3 tj">
+        <h3 className="f4 fw7 dark-red mt0 mb2">3. Movement Phase</h3>
+        <ul className="lh-copy pl3 f6 ma0">
+          <li className="pv1">
+            <span className="fw6">Step 1:</span> Players activate [PILOT]/MSU
+            according to initiative order, from highest to lowest.
+          </li>
+          <li className="pv1">
+            <span className="fw6">Step 2:</span> Player activates one
+            [PILOT]/MSU at a time, choosing to spend any FRO or actions as
+            necessary. Typically [PILOT]/MSU can use [MOVEMENT],[BLITZ],[DEPLOY]
+            during 3.2
+          </li>
+          <li className="pv1">
+            <span className="fw6">Step 3:</span> The enemy MSU may declare
+            Reactions ([REACTIVE ATTACK], other Reactions from traits or
+            equipment etc).
+          </li>
+          <li className="pv1">
+            <span className="fw6">Step 4:</span> An MSU that has moved within
+            its equipped melee weapon range during Step 2 may immediately enter
+            the Combat Phase. If there are no eligible Combat Phases, proceed to
+            the Shooting Phase.
+          </li>
+        </ul>
+      </div>
+
+      <div className="bg-near-white ba b--black-10 br2 pa3 mb3 tj">
+        <h3 className="f4 fw7 dark-red mt0 mb2">
+          4. Combat Phase <span className="f6 fw4 dark-gray">(Immediate)</span>
+        </h3>
+        <p className="lh-copy f6 mb2 i">
+          Triggered when an MSU moves within its equipped melee weapon range
+          during the Movement Phase.
+        </p>
+        <ul className="lh-copy pl3 f6 ma0">
+          <li className="pv1">
+            <span className="fw6">Step 1:</span> The MSU may declare an [ATTACK]
+            action using a melee weapon.
+          </li>
+          <li className="pv1">
+            <span className="fw6">Step 2:</span> Once resolved, return to
+            Movement Phase Step 1.
+          </li>
+        </ul>
+      </div>
+
+      <div className="bg-near-white ba b--black-10 br2 pa3 mb3 tj">
+        <h3 className="f4 fw7 dark-red mt0 mb2">5. Shooting Phase</h3>
+        <ul className="lh-copy pl3 f6 ma0">
+          <li className="pv1">
+            <span className="fw6">Step 1:</span> Starting with the MSU with the
+            lowest initiative, that MSU may declare an [ATTACK] action. An MSU
+            may also perform [SIMULTAENOUS ATTACK] actions
+          </li>
+          <li className="pv1">
+            <span className="fw6">Step 2:</span> Resolve Shooting Phase
+            sequences.
+          </li>
+          <li className="pv1">
+            <span className="fw6">Step 3:</span> The MSU with the next lowest
+            initiative activates. Repeat Steps 1–3 until all MSUs have activated
+            in the Shooting Phase.
+          </li>
+        </ul>
+      </div>
+
+      <div className="bg-near-white ba b--black-10 br2 pa3 mb3 tj">
+        <h3 className="f4 fw7 dark-red mt0 mb2">6. End of Round</h3>
+        <ul className="lh-copy pl3 f6 ma0">
+          <li className="pv1">
+            <span className="fw6">Step 1:</span> Resolve any remaining Reactions
+            or Actions.
+          </li>
+          <li className="pv1">
+            <span className="fw6">Step 2:</span> Advance to the next round and
+            return to the Initiative Phase.
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };

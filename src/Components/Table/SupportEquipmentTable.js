@@ -1,7 +1,7 @@
 import { useMediaQuery } from "@custom-react-hooks/all";
 import classNames from "classnames";
 
-const SUPPORT = [
+export const SUPPORT = [
   {
     name: "Advanced Fire Solutions",
     loc: "Head/Torso",
@@ -38,7 +38,7 @@ const SUPPORT = [
     qty: 1,
     mcu: 25,
     effect:
-      'At Step 1.1 of the Status Phase, roll PS 5 for each enemy MISSILE token within 18"; remove on success.',
+      'At Step 1.1 of the Status Phase, roll PS 5+ for each enemy [MISSILE] token within 18"; remove tokens on success.',
   },
   {
     name: "Anti-Beam Coating Kit",
@@ -77,7 +77,7 @@ const SUPPORT = [
     qty: 2,
     mcu: 15,
     effect:
-      "Add AP(2) to one non-beam melee weapon. If this weapon already has AP(X), instead add AP(X+2)",
+      "Add [AP(2)] to one non-beam melee weapon. If this weapon already has [AP(x)], instead add [AP(x+2)]",
   },
   {
     name: "Beam Focus",
@@ -136,7 +136,7 @@ const SUPPORT = [
     qty: 1,
     mcu: 25,
     effect:
-      'End of Status Phase: roll PS 6; all friendly within 8" gain +1 EVA vs ranged weapons this round.',
+      'End of Status Phase: roll PS 6+; all friendly within 8" gain +1 EVA vs ranged weapons this round.',
   },
   {
     name: "Emergency Proximity System",
@@ -145,7 +145,7 @@ const SUPPORT = [
     pfro: 1,
     qty: 1,
     mcu: 45,
-    effect: 'Once per round when an enemy enters within 12", BOOST[6].',
+    effect: 'Once per round when an enemy enters within 12", [BOOST(6)].',
   },
   {
     name: "Enhanced Visors",
@@ -154,7 +154,7 @@ const SUPPORT = [
     pfro: 1,
     qty: 1,
     mcu: 50,
-    effect: "All ranged weapons are treated as having [SCOPE].",
+    effect: "All ranged weapons are treated as having [SCOPE] keyword.",
   },
   {
     name: "Enhanced Ejection",
@@ -211,7 +211,7 @@ const SUPPORT = [
     qty: 2,
     mcu: 25,
     effect:
-      'Deploy Flare token within 8"; enemy missiles can rotate 45* if possible and move toward it. LIMITED USE[1].',
+      'Deploy Flare token within 8"; enemy missiles can rotate 45* if possible and move toward it. [Limited Use(1)].',
   },
   {
     name: "Forward Observer",
@@ -224,7 +224,7 @@ const SUPPORT = [
   },
   {
     name: "[GRIP] Upgrade",
-    loc: "[INBUILT]/A",
+    loc: "Weapon",
     ton: 0,
     pfro: "–",
     qty: "–",
@@ -247,11 +247,11 @@ const SUPPORT = [
     pfro: "–",
     qty: 1,
     mcu: 25,
-    effect: "BOOST[1] becomes BOOST[2].",
+    effect: "[BOOST(1)] becomes [BOOST(2)].",
   },
   {
     name: "High Velocity/Missile",
-    loc: "[INBUILT]/A",
+    loc: "Weapon",
     ton: 1,
     pfro: "–",
     qty: 1,
@@ -269,14 +269,14 @@ const SUPPORT = [
       "Omnidirectional movement; prevents CROUCHED state.Can now turn facing for 1 inch move",
   },
   {
-    name: "[INBUILT] Field",
+    name: "I-Field",
     loc: "Shoulder/Torso",
     ton: 2,
     pfro: 3,
     qty: 1,
     mcu: 75,
     effect:
-      "Deploy [INBUILT] Field at any phase: nullifies all beam attacks for one round. LIMITED USE[1].",
+      "Deploy I-Field at any phase: nullifies all beam attacks for one round. [Limited Use(1)].",
   },
   {
     name: "Impact",
@@ -340,7 +340,7 @@ const SUPPORT = [
     qty: 2,
     mcu: 15,
     effect:
-      'Deploy 8" chaff cloud blocking LOS and detonating missiles. LIMITED USE[1].',
+      'Deploy 8" chaff cloud blocking LOS and detonating missiles. [Limited Use(1)].',
   },
   {
     name: "Panoptic Canopy",
@@ -358,7 +358,7 @@ const SUPPORT = [
     pfro: "–",
     qty: 4,
     mcu: 15,
-    effect: "Pistols gain [[PRECISE]] and [LETHAL], +4 damage.",
+    effect: "Pistols gain [PRECISE] and [LETHAL], +4 damage.",
   },
   {
     name: "[PRECISE] Upgrade",
@@ -386,7 +386,7 @@ const SUPPORT = [
     qty: 3,
     mcu: 20,
     effect:
-      'MSU moving within 4" takes 15 damage to both LEG locations. LIMITED USE[1], AOE[4]. [DEPLOYABLE]',
+      'MSU moving within 4" takes 15 damage to both LEG locations. [Limited Use(1)], [AOE(4)]. [DEPLOYABLE]',
   },
   {
     name: "Psycommu Funnel/Bit",
@@ -395,7 +395,8 @@ const SUPPORT = [
     pfro: 2,
     qty: 1,
     mcu: 75,
-    effect: "Requires NEWTYPE/CYBER-NEWTYPE trait; deploy 2 bits as weapons.",
+    effect:
+      "Requires [NEWTYPE]/[CYBER-NEWTYPE] trait; deploy 2 bits as weapons.",
   },
   {
     name: "Quasi Psycommu System",
@@ -404,7 +405,7 @@ const SUPPORT = [
     pfro: 3,
     qty: 1,
     mcu: 120,
-    effect: "Access to INCOMS Beam/Shield Bits without Newtype trait.",
+    effect: "Access to [INCOMS] Beam/Shield Bits without Newtype trait.",
   },
   {
     name: "[QUICK SWAP] Upgrade",
@@ -526,7 +527,7 @@ const SUPPORT = [
     qty: 2,
     mcu: 25,
     effect:
-      "Shotguns lose [[CLUSTER]], gain ROF 2; Arm Cannons/Shotguns gain AP 10.",
+      "Shotguns lose [CLUSTER], gain ROF 2; Arm Cannons/Shotguns gain [AP(10)].",
   },
   {
     name: "Tactical Data Uplink",
@@ -544,7 +545,17 @@ const SUPPORT = [
     pfro: "–",
     qty: 1,
     mcu: 40,
-    effect: "Allows Airstrike action. LIMITED USE[1].",
+    effect: "Allows Airstrike action. [Limited Use(1)].",
+  },
+  {
+    name: "Vertical Jump Jets",
+    loc: "Head",
+    ton: 2,
+    pfro: "–",
+    qty: 1,
+    mcu: 35,
+    effect:
+      "The MSU may [BOOST(8)] vertically without movement penalty. The MSU can move in this manner twice per turn",
   },
 ];
 
@@ -554,73 +565,57 @@ export const SupportEquipmentTable = () => {
     <div className={classNames("", { "flex mt5": !isMobile, mt2: isMobile })}>
       <div className="center w-100">
         <div className="mh3">
-          {!isMobile && (
-            <div className="overflow-auto">
-              <table className="f9 w-100 mh2" cellSpacing="0">
-                <thead>
-                  <tr>
-                    <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">
-                      Name
-                    </th>
-                    <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">
-                      Location
-                    </th>
-                    <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">
-                      Ton
-                    </th>
-                    <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">
-                      Passive FRO
-                    </th>
-                    <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">
-                      Qty
-                    </th>
-                    <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">
-                      MCU
-                    </th>
-                    <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">
-                      Effect
-                    </th>
+          <div className="overflow-auto">
+            <table className="f9 w-100 mh2" cellSpacing="0">
+              <thead>
+                <tr>
+                  <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">
+                    Name
+                  </th>
+                  <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">
+                    Location
+                  </th>
+                  <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">
+                    Ton
+                  </th>
+                  <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">
+                    Passive FRO
+                  </th>
+                  <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">
+                    Qty
+                  </th>
+                  <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">
+                    MCU
+                  </th>
+                  <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">
+                    Effect
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="lh-copy">
+                {SUPPORT.map((item, i) => (
+                  <tr
+                    key={i}
+                    className={i % 2 === 0 ? "bg-near-white" : "bg-white"}
+                  >
+                    <td className="pv3 pr3 bb b--black-20 fw6 nowrap">
+                      {item.name}
+                    </td>
+                    <td className="pv3 pr3 bb b--black-20">{item.loc}</td>
+                    <td className="pv3 pr3 bb b--black-20 tc">{item.ton}</td>
+                    <td className="pv3 pr3 bb b--black-20 tc dark-red fw6">
+                      {item.pfro}
+                    </td>
+                    <td className="pv3 pr3 bb b--black-20 tc">{item.qty}</td>
+                    <td className="pv3 pr3 bb b--black-20 tc">{item.mcu}</td>
+                    <td className="pv3 pr3 bb b--black-20 lh-copy">
+                      {item.effect}
+                    </td>
                   </tr>
-                </thead>
-                <tbody className="lh-copy">
-                  {SUPPORT.map((item, i) => (
-                    <tr
-                      key={i}
-                      className={i % 2 === 0 ? "bg-near-white" : "bg-white"}
-                    >
-                      <td className="pv3 pr3 bb b--black-20 fw6 nowrap">
-                        {item.name}
-                      </td>
-                      <td className="pv3 pr3 bb b--black-20">{item.loc}</td>
-                      <td className="pv3 pr3 bb b--black-20 tc">{item.ton}</td>
-                      <td className="pv3 pr3 bb b--black-20 tc dark-red fw6">
-                        {item.pfro}
-                      </td>
-                      <td className="pv3 pr3 bb b--black-20 tc">{item.qty}</td>
-                      <td className="pv3 pr3 bb b--black-20 tc">{item.mcu}</td>
-                      <td className="pv3 pr3 bb b--black-20 lh-copy">
-                        {item.effect}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          )}
-          {isMobile && (
-            <div className="w-100">
-              {SUPPORT.map((item, i) => (
-                <div key={i} className="mb2 pa3 ba b--black-10 bg-near-white">
-                  <p className="fw7 ma0 mb1">{item.name}</p>
-                  <p className="ma0 f7 dark-red mb1">
-                    {item.loc} · Ton {item.ton} · P.FRO {item.pfro} · Qty{" "}
-                    {item.qty} · {item.mcu} MCU
-                  </p>
-                  <p className="ma0 f7 lh-copy">{item.effect}</p>
-                </div>
-              ))}
-            </div>
-          )}
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>

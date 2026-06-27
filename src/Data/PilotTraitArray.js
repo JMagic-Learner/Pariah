@@ -6,6 +6,11 @@ export const TRAITS = [
       "At Step 1.4 of Status Phase, spend an action to repose MSU in epic fashion. Enemy MSUs with LOS suffer -1 to GS, BR, and PS. This MSU cannot use a [MOVEMENT] action.",
   },
   {
+    name: "Avalanche",
+    cost: 1,
+    effect: "This [PILOT] may declare [BLITZ] as a reaction.",
+  },
+  {
     name: "Back Stabber",
     cost: 1,
     effect:
@@ -15,13 +20,13 @@ export const TRAITS = [
     name: "Boost Assault",
     cost: 2,
     effect:
-      "When this MSU consumes 3 FRO to BOOST(X), this [PILOT] gains +1 Brawl and Piloting.",
+      "When this MSU consumes 3 FRO to [BOOST(X)], this [PILOT] gains +1 Brawl and Piloting.",
   },
   {
     name: "Boost Junkie",
     cost: 2,
     effect:
-      "When this MSU consumes 3 FRO to BOOST(X), this [PILOT] gains +1 Gunnery and Piloting.",
+      "When this MSU consumes 3 FRO to [BOOST(X)], this [PILOT] gains +1 Gunnery and Piloting.",
   },
   { name: "Brawler", cost: 2, effect: "Gain +1 to Brawl (Stackable)." },
   {
@@ -102,7 +107,7 @@ export const TRAITS = [
     name: "Grenadier God",
     cost: 1,
     effect:
-      "[MUNITIONS] for grenades and grenade launchers gain AOE[6]. High Explosive Munitions are now AOE[9].",
+      "[MUNITIONS] for grenades and grenade launchers gain AOE[6]. High Explosive Munitions are now [AOE(9)].",
   },
   {
     name: "Guerilla Ops",
@@ -138,7 +143,7 @@ export const TRAITS = [
   {
     name: "Measured Trigger",
     cost: 1,
-    effect: "Replace the [FULL AUTO] weapon keyword with [BURST[3] keyword.",
+    effect: "Replace the [FULL AUTO] weapon keyword with [[BURST(3)] keyword.",
   },
   {
     name: "Mechanic",
@@ -156,7 +161,7 @@ export const TRAITS = [
     name: "Momentum Specialist",
     cost: 1,
     effect:
-      "When this MSU consumes 3 FRO to BOOST(X), increase melee attack dice from 1d6 to 2d3 + 1 Trait Mod.",
+      "When this MSU consumes 3 FRO to [BOOST(X)], increase melee attack dice from 1d6 to 2d3 + 1 Trait Mod.",
   },
   {
     name: "Newtype",
@@ -188,6 +193,12 @@ export const TRAITS = [
     cost: 1,
     effect:
       "Melee attacks made with Hands or Gauntlets gain +1 Trait Bonus to hit, and +1 ROF.",
+  },
+  {
+    name: "Predictive Fire",
+    cost: 1,
+    effect:
+      "[AOE(x)] weapons gain [INDIRECT] in [REACTIVE FIRE] actions. [INDIRECT] weapons no longer receive the -2 penalty for targeting a point on the battlefield.",
   },
   {
     name: "Quick Hands",
@@ -274,5 +285,11 @@ export const TRAITS = [
     cost: 2,
     effect:
       'If 1 friendly MSU within 8": reroll 1 hit roll per round. If 2 friendly MSUs within 8": reroll 1 evasion roll per round. If 3+ friendly MSUs within 8": gain +1 Piloting, +1 Brawl, +1 Gunnery.',
+  },
+  {
+    name: "War Criminal",
+    cost: 1,
+    effect:
+      "This [PILOT] may target [CIVILIANS] without penalty. This [PILOT] does not incur Victory Point penalties for killing [CIVILIANS]",
   },
 ];

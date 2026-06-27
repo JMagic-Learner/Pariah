@@ -1,104 +1,241 @@
 export const Movement = () => {
   return (
     <div>
-      <h2 className="f2 fw7 dark-red bb pb2 mb3">3.2 — Movement</h2>
-      <p className="lh-copy mb3">
-        During the Movement Phase, each MSU may perform one of the following
-        movement actions when activated. Movement is measured in inches from the
-        leading edge of the base. All movement is declared and measured before
-        resolution.
-      </p>
+      <h2 className="f2 fw7 dark-red bb pb2 mb3">3.2 — Facing and Movement</h2>
 
-      <h3 className="f4 fw7 mt3 mb2">Facing</h3>
-      <p className="lh-copy mb2">
-        All MSUs have a front-facing arc (180°). LOS, ranged attacks, and
-        arc-based rules use this facing. Rotating to change facing costs{" "}
-        <strong>2 inches of Move</strong> per 90° turned (or 1" with Inertia
-        Redirection System). Rotation during BOOST is free.
-      </p>
-
-      <h3 className="f4 fw7 mt4 mb2">Movement Types</h3>
-      <div className="overflow-auto mv2">
-        <table className="f6 w-100 collapse ba b--black-10">
-          <thead>
-            <tr className="bg-near-black white tl">
-              <th className="pa2 fw6 w-25">Action</th>
-              <th className="pa2 fw6">Rules</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[
-              [
-                "MOVE",
-                "Move up to your base Move speed in inches. You may change facing during a Move (at 2\" cost per 90° turn). Moving sideways or backward costs double movement (halved move). Hard Cover terrain reduces movement by the terrain's cost (see Section 3.8).",
-              ],
-              [
-                "BOOST[X]",
-                'Spend X FRO to boost. BOOST[1] moves you +6" in any direction with free rotation. BOOST[2] (via Heavy Boosters) moves you +12". You may still Move after a Boost in the same activation. Boost does not trigger Reactive attacks unless the enemy has the Eyes on You trait.',
-              ],
-              [
-                "BLITZ",
-                'Spend your entire movement to charge an enemy MSU within your Move range. Move directly toward the target. If you reach them, immediately resolve a free melee attack before the Attack Phase. The target may make a Reactive attack against you as you approach. On contact, if moving 21"+ this round, Kinetic Force trait applies.',
-              ],
-              [
-                "REPOSE",
-                "The MSU does not move. Instead, it enters a stabilized stance: gain +1 GS on ranged attacks made this round. Some traits and weapons ([BRACE], Heavy Weapons Specialist) require REPOSE to activate their full effect.",
-              ],
-            ].map(([action, desc], i) => (
-              <tr
-                key={i}
-                className={i % 2 === 0 ? "bg-near-white" : "bg-white"}
-              >
-                <td className="pa2 fw7 dark-red v-top">{action}</td>
-                <td className="pa2 lh-copy">{desc}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      {/* Measuring Distance and LOS */}
+      <div className="bg-near-white ba b--black-10 br2 pa3 mb4">
+        <h3 className="f4 fw7 dark-red mt0 mb2">
+          Measuring Distance and Line of Sight
+        </h3>
+        <ul className="lh-copy pl3 f6 ma0">
+          <li className="pv1">
+            <span className="fw6">Distance</span> is measured from any part of
+            the base.
+          </li>
+          <li className="pv1">
+            <span className="fw6">Line of Sight</span> is measured from any part
+            of the Front Facing arc and to [HEAD] level.
+          </li>
+          <li className="pv1">
+            Firing arcs, [BOOST(X)] paths, and rear arc vulnerability are all
+            determined by the MSU's current facing.
+          </li>
+        </ul>
       </div>
 
-      <h3 className="f4 fw7 mt4 mb2">Movement Penalties by Equipment</h3>
-      <div className="overflow-auto mv2">
-        <table className="f6 w-100 collapse ba b--black-10">
-          <thead>
-            <tr className="bg-near-black white tl">
-              <th className="pa2 fw6">Condition</th>
-              <th className="pa2 fw6">Penalty</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[
-              ["Each HEAVY weapon equipped", '-1" Move'],
-              ["Each SUPER HEAVY weapon equipped", '-2" Move'],
-              ["SUPPRESSED state", "Move halved"],
-              [
-                "CRIPPLED Legs",
-                'Move halved (or -2" with Enduring Will trait)',
-              ],
-              ["Moving sideways or backward", "Move halved for that direction"],
-              ["[BRACE] stance", "Cannot move (BOOST allowed)"],
-            ].map(([cond, pen], i) => (
-              <tr
-                key={i}
-                className={i % 2 === 0 ? "bg-near-white" : "bg-white"}
-              >
-                <td className="pa2">{cond}</td>
-                <td className="pa2 fw6 dark-red">{pen}</td>
+      {/* Evasion Tier Table */}
+      <div className="bg-near-white ba b--black-10 br2 pa3 mb3">
+        <h3 className="f4 fw7 dark-red mt0 mb2">Evasion Tier Table</h3>
+        <p className="lh-copy f6 mb3">
+          Total movement made during the Movement Phase determines how many
+          evasion dice a [PILOT] rolls when defending against attacks. Distance
+          moved from all [MOVEMENT] actions (ADVANCE, BLITZ, BOOST) and [FALL]
+          counts toward this total. (Yes, thats right, you can fall from [HOVER]
+          state and count that as movement for Evasion Tier calculations)
+        </p>
+        <div className="overflow-auto">
+          <table className="f6 w-100" cellSpacing="0">
+            <thead>
+              <tr>
+                <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">
+                  Evasion Tier
+                </th>
+                <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">
+                  Movement (inches)
+                </th>
+                <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">
+                  Evasion Dice
+                </th>
+                <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">
+                  Gunnery Penalty
+                </th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody className="lh-copy">
+              <tr>
+                <td className="pv2 pr3 bb b--black-20 fw6 dark-red">
+                  Tier 1 — Slow
+                </td>
+                <td className="pv2 pr3 bb b--black-20">0″ – 8″</td>
+                <td className="pv2 pr3 bb b--black-20 fw6">2d3 + PS − 1</td>
+                <td className="pv2 pr3 bb b--black-20 fw6">+ 1 GS</td>
+              </tr>
+              <tr>
+                <td className="pv2 pr3 bb b--black-20 fw6 dark-red">
+                  Tier 2 — Moving
+                </td>
+                <td className="pv2 pr3 bb b--black-20">9″ – 20″</td>
+                <td className="pv2 pr3 bb b--black-20 fw6">2d3 + PS</td>
+                <td className="pv2 pr3 bb b--black-20 fw6"> N/A </td>
+              </tr>
+              <tr>
+                <td className="pv2 pr3 fw6 dark-red">Tier 3 — Fast</td>
+                <td className="pv2 pr3">21″ +</td>
+                <td className="pv2 pr3 fw6">2d3 + PS + 1</td>
+                <td className="pv2 pr3 bb b--black-20 fw6"> -1 </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="lh-copy f7 mt2 mb0">
+          1d3 = 1d6 ÷ 2, rounded up. For example, a roll of 3 on 1d6 becomes 2.
+        </p>
       </div>
 
-      <h3 className="f4 fw7 mt4 mb2">Collision & Fall Damage</h3>
-      <p className="lh-copy">
-        If an MSU is pushed (via Impact keyword) or falls into terrain or
-        another MSU, it takes <strong>5 damage per 6 inches</strong> of distance
-        collided (applied to the closest facing hit location). MSUs falling from
-        heights greater than 12" take <strong>10 damage per 6" fallen</strong>,
-        reduced to 0 with Reinforced Hydraulics support system. A fallen MSU
-        gains KNOCKDOWN state.
-      </p>
+      {/* MOVE Action */}
+      <div className="bg-near-white ba b--black-10 br2 pa3 mb3">
+        <h3 className="f4 fw7 dark-red mt0 mb1">
+          [ADVANCE]{" "}
+          <span className="fw4 f5">[MOVEMENT] [1 FRO] [1 ACTION]</span>
+        </h3>
+        <p className="lh-copy f6 mb2">
+          An MSU can move forward up to its [MOVEMENT] value in inches.
+        </p>
+        <ul className="lh-copy pl3 f6 ma0">
+          <li className="pv1">
+            Turning one hex facing, moving backwards, or moving sideways each
+            cost <span className="fw6">2 inches of movement</span>.
+          </li>
+          <li className="pv1">
+            Moving or flying <span className="fw6">vertically</span> (jumping)
+            costs{" "}
+            <span className="fw6">
+              2 inches of movement per 1 inch of height
+            </span>{" "}
+            travelled.
+          </li>
+          <li className="pv1">
+            An MSU may end its movement while airborne (mid-air). An MSU that
+            begins its activation in mid-air must choose one of the following:
+            <ul className="pl3 mt1">
+              <li className="pv1">
+                <span className="fw6">[FALL]</span> — drop to ground level at no
+                movement cost. The MSU takes fall damage (see below).
+              </li>
+              <li className="pv1">
+                <span className="fw6">[HOVER]</span> — the MSU expends 1 FRO
+                during Step 1.2 of the Status Phase to maintain its current
+                altitude for the round.
+              </li>
+            </ul>
+          </li>
+          <li className="pv1">
+            An MSU may [REPOSE] for 4 inches of movement. Repositioning allows
+            the MSU to adjust its stance to better benefit from [HARD COVER].
+          </li>
+        </ul>
+        <p className="lh-copy f7 dark-red mt2 mb0">
+          Fall damage: If an MSU falls for any reason, the [PILOT] makes a PS 5
+          Skill Check. If the [PILOT] fails, it's MSU will suffers 3 damage per
+          4 inches of distance to one hit location. If the [PILOT] succeeds at
+          this PS 5 Skill Check, the [PILOT]/MSU may also make a [ATTACK] action
+          if the MSU finishes its [FALL] movement within melee range of enemy
+          [PILOT]s/MSU
+        </p>
+      </div>
+
+      {/* BOOST Action */}
+      <div className="bg-near-white ba b--black-10 br2 pa3 mb3">
+        <h3 className="f4 fw7 dark-red mt0 mb1">
+          [BOOST(X)]{" "}
+          <span className="fw4 f5">
+            [MOVEMENT] [Move X inches forward per 1 FRO spent]
+          </span>
+        </h3>
+        <p className="lh-copy f6 mb2">
+          An MSU that BOOST9(X) can accelerate directly forward or vertically{" "}
+          <span className="fw6">[X] inches</span> by spending{" "}
+          <span className="fw6">1 FRO</span>.
+        </p>
+        <ul className="lh-copy pl3 f6 ma0">
+          <li className="pv1">
+            All MSUs have <span className="fw6">[BOOST(1)]</span> by default.
+            The Heavy Boosters support equipment upgrades this to [BOOST(2)].
+          </li>
+          <li className="pv1">
+            An MSU may [BOOST] more than once per activation, as long as it can
+            pay the [FRO] cost for each [BOOST].
+          </li>
+          <li className="pv1">
+            An MSU may also use a [BOOST] to{" "}
+            <span className="fw6">turn one hex facing</span> instead of moving
+            forward or vertically.
+          </li>
+          <li className="pv1">
+            [BOOST] movement is counted when calculating Evasion modifiers from
+            the Evasion Tier Table.
+          </li>
+        </ul>
+      </div>
+
+      {/* BLITZ Maneuver */}
+      <div className="bg-near-white ba b--black-10 br2 pa3 mb3">
+        <h3 className="f4 fw7 dark-red mt0 mb1">
+          [BLITZ] <span className="fw4 f5">[MOVEMENT] [2 Actions] [1 FRO]</span>
+        </h3>
+        <p className="lh-copy f6 mb2 i">
+          Maneuvers are special actions that require two Actions to perform.
+        </p>
+        <ul className="lh-copy pl3 f6 ma0">
+          <li className="pv1">
+            <span className="fw6">Minimum distance:</span> 10 inches between the
+            Blitzing MSU and the target MSU at the start of the action.
+          </li>
+          <li className="pv1">
+            This movement must be in a{" "}
+            <span className="fw6">straight line</span>.
+          </li>
+          <li className="pv1">
+            Move the Blitzing MSU double its base movement, and increase its
+            movement by any additional [FRO] it wishes to spend.
+          </li>
+          <li className="pv1">
+            If the enemy MSU has LOS to the Blitzing MSU, the enemy may spend an
+            Action to evade. That MSU rolls a PS Skill Check 7. If successful,
+            the opposing MSU may move its base movement sideways without
+            penalty.
+          </li>
+          <li className="pv1">
+            If the Blitzing MSU comes into contact with one or more enemy MSUs,
+            those MSUs are pushed along the straight path. A single [Blitz] can
+            push multiple MSUs simultaneously.
+          </li>
+          <li className="pv1">
+            <span className="fw6">Collision damage:</span>
+            <ul className="pl3 mt1">
+              <li className="pv1">
+                Target MSU:{" "}
+                <span className="fw6">10 damage + 1 per 3 inches</span> of
+                movement.
+              </li>
+              <li className="pv1">
+                Blitzing MSU:{" "}
+                <span className="fw6">5 damage + 1 per 3 inches</span> of
+                movement.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p className="lh-copy f7 mt2 mb0">
+          Any movement during the Movement Phase appends to the Evasion modifier
+          from Section 2.2.
+        </p>
+      </div>
+
+      {/* REPOSE */}
+      <div className="bg-near-white ba b--black-10 br2 pa3 mb3">
+        <h3 className="f4 fw7 dark-red mt0 mb2">
+          [REPOSE] <span className="fw4 f5">[MOVEMENT]</span>
+        </h3>
+        <p className="lh-copy f6 ma0">
+          Repositioning the MSU may allow a player to adjust its model to better
+          benefit from [HARD COVER]. For example, a player may repose the MSU
+          into a crouching position, shifting [HARD COVER] protection to also
+          cover the Torso. Reposing counts as{" "}
+          <span className="fw6">4 inches of movement</span>.
+        </p>
+      </div>
     </div>
   );
 };

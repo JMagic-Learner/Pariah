@@ -33,6 +33,11 @@ import { Extraction } from "../Chapter4/sections/Extraction";
 import { ColonyDrop } from "../Chapter4/sections/ColonyDrop";
 import { NewtypeUpgrades } from "../Chapter2/sections/NewtypeUpgrades";
 
+import { SupportUnitsOverview } from "../Chapter5/sections/Overview";
+import { Infantry } from "../Chapter5/sections/Infantry";
+import { ArmoredVehicles } from "../Chapter5/sections/ArmoredVehicles";
+import { AirSupport } from "../Chapter5/sections/AirSupport";
+
 const CHAPTERS = [
   {
     id: "ch1",
@@ -147,6 +152,16 @@ const CHAPTERS = [
         title: "Mission 6: Colony Drop",
         Component: ColonyDrop,
       },
+    ],
+  },
+  {
+    id: "ch5",
+    title: "Ch.5 — Support Units",
+    sections: [
+      { id: "supportoverview",    title: "5.0 — Overview",         Component: SupportUnitsOverview },
+      { id: "infantry",           title: "5.1 — Infantry",         Component: Infantry },
+      { id: "armoredvehicles",    title: "5.2 — Armored Vehicles", Component: ArmoredVehicles },
+      { id: "airsupport",         title: "5.3 — Air Support",      Component: AirSupport },
     ],
   },
 ];

@@ -3,159 +3,166 @@ export const OtherActions = () => {
     <div>
       <h2 className="f2 fw7 dark-red bb pb2 mb3">3.7 — Other Actions</h2>
 
-      <p className="lh-copy mb3">
-        Beyond standard Move and Attack actions, MSUs and Commanders can perform
-        a variety of special actions. These are declared during the appropriate
-        phase.
-      </p>
-
-      <h3 className="f4 fw7 mt3 mb2">MSU Actions</h3>
-
-      <div className="overflow-auto mv2">
-        <table className="f6 w-100 collapse ba b--black-10">
-          <thead>
-            <tr className="bg-near-black white tl">
-              <th className="pa2 fw6 w-25">Action</th>
-              <th className="pa2 fw6 w-15">Phase</th>
-              <th className="pa2 fw6">Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[
-              [
-                "AIM",
-                "Attack",
-                "Spend one full action to Aim. This MSU cannot attack this round. Next round, add +1 GS to one ranged attack. Aim Assist support makes this a free action (costs +1 FRO).",
-              ],
-              [
-                "SEEK COVER",
-                "Movement",
-                "Move up to half your Move speed. At the end of movement, if adjacent to terrain that provides Hard or Obscuring Cover, gain CROUCHED state. You cannot attack while CROUCHED unless using a Mounted weapon.",
-              ],
-              [
-                "SWAP",
-                "Attack",
-                "Switch between stowed weapons. Standard SWAP costs one Minor Action. [QUICK SWAP] weapons only cost a free action. [QUICK SWAP] weapons are free to draw or holster.",
-              ],
-              [
-                "RELOAD",
-                "Attack",
-                "Spend your full activation reloading a [SLOW RELOAD] weapon. The weapon can be fired next round. Some Limited Use weapons may recover 1 charge with Munitions Racks or Resupply Protocol.",
-              ],
-              [
-                "CAPTURE",
-                "Attack/Movement",
-                'Move into base contact with an objective marker and spend one full action. The objective is claimed at the end of the next round if no enemy is within 3" of it. See Chapter 4 for mission-specific rules.',
-              ],
-              [
-                "PUSH",
-                "Movement",
-                'If your MSU is base-to-base with a destroyed enemy MSU wreck, spend 2" of Move to push it up to 6" in any direction. Wrecks can be used as terrain.',
-              ],
-            ].map(([action, phase, desc], i) => (
-              <tr
-                key={i}
-                className={i % 2 === 0 ? "bg-near-white" : "bg-white"}
-              >
-                <td className="pa2 fw7 dark-red v-top">{action}</td>
-                <td className="pa2 v-top">{phase}</td>
-                <td className="pa2 lh-copy">{desc}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      {/* Seek Cover */}
+      <div className="bg-light-gray pa3 mb3 br2">
+        <p className="fw7 dark-red f5 ma0 mb1">SEEK COVER! [AUTOMATIC]</p>
+        <p className="lh-copy f6 mb2 i">
+          When a Mobile Suit receives damage, its Pilot isn't going to stand
+          still. It will actively seek a safer location.
+        </p>
+        <p className="lh-copy f6 mb2 tj">
+          The Pilot makes a <span className="fw6">PS Skill Check of 5+</span>{" "}
+          after receiving damage in any location. If successful, the Pilot
+          immediately recognizes he / she is in grave danger, and{" "}
+          <span className="fw6">CAN</span> move the MSU its base movement speed
+          to one of the following targets in terms of priority; if the Pilot
+          fails, he / she <span className="fw6">MUST</span> make this Seek Cover
+          move. (A [SUPPRESSED] MSU can still move backward / sideways to one of
+          the following priorities.)
+        </p>
+        <ol className="lh-copy pl3 f6 ma0">
+          <li className="pv1">
+            Toward the nearest full cover, obscuring as much of the MSU as it
+            can.
+          </li>
+          <li className="pv1">
+            Toward the nearest partial cover, obscuring as much of the MSU as it
+            can.
+          </li>
+          <li className="pv1">Toward the nearest friendly unit.</li>
+          <li className="pv1">To the nearest board edge.</li>
+        </ol>
+        <p className="lh-copy f7 mt2 mb0 tj">
+          This movement is also counted in the Evasion Table. This mechanic aims
+          to soften focus fire from multiple sources.
+        </p>
       </div>
 
-      <h3 className="f4 fw7 mt4 mb2">Commander Actions</h3>
-      <p className="lh-copy mb3">
-        Commander Actions are performed by the designated Fireteam Commander
-        during Phase 1 (Command Phase). The Commander may perform{" "}
-        <strong>one Commander Action per round</strong> at a standard cost of
-        one action, unless the Captain trait or Command Protocol allows more.
-      </p>
-
-      <div className="overflow-auto mv2">
-        <table className="f6 w-100 collapse ba b--black-10">
-          <thead>
-            <tr className="bg-near-black white tl">
-              <th className="pa2 fw6 w-25">Commander Action</th>
-              <th className="pa2 fw6">Effect</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[
-              ["RALLY", 'Remove SHAKEN from one friendly MSU within 12".'],
-              [
-                "COORDINATE",
-                'Choose two friendly MSUs within 12". They may each reroll 1 die on their next attack this round.',
-              ],
-              [
-                "SUPPRESS ORDERS",
-                'Choose one enemy MSU within 24". That MSU must make a PS 5 check or lose 1 action this round.',
-              ],
-              [
-                "EMERGENCY ORDERS",
-                'One friendly MSU within 18" may immediately perform a Move action out of sequence (does not use its normal activation).',
-              ],
-              [
-                "TACTICAL ADVANCE",
-                'All friendly MSUs within 8" gain +2" Move this round.',
-              ],
-            ].map(([action, effect], i) => (
-              <tr
-                key={i}
-                className={i % 2 === 0 ? "bg-near-white" : "bg-white"}
-              >
-                <td className="pa2 fw7 dark-red v-top">{action}</td>
-                <td className="pa2 lh-copy">{effect}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      {/* Get it together — Commander */}
+      <div className="bg-light-gray pa3 mb3 br2">
+        <p className="fw7 dark-red f5 ma0 mb1">
+          GET IT TOGETHER! [ACTION] [COMMANDER]
+        </p>
+        <p className="lh-copy f6 mb2 i">A [COMMANDER] can rally the squad.</p>
+        <p className="lh-copy f6 mb0 tj">
+          A [COMMANDER] can spend an action to RALLY squadmates at{" "}
+          <span className="fw6">Step 1.4 of the Status Phase</span>. This is a{" "}
+          <span className="fw6">PS Skill Check of 5+</span>. If successful,
+          remove any <span className="fw6">[FEAR / SHAKEN]</span> and{" "}
+          <span className="fw6">[SUPPRESSED]</span> status on all squadmates
+          within <span className="fw6">18 inches</span>.
+        </p>
       </div>
 
-      <h3 className="f4 fw7 mt4 mb2">Airstrike</h3>
-      <p className="lh-copy mb2">
-        Requires: <strong>Target Designator</strong> support system (LIMITED USE
-        [1]).
-      </p>
-      <ol className="lh-copy pl3">
-        <li className="pv1">
-          Declare the Airstrike action during your Attack Phase activation.
-        </li>
-        <li className="pv1">
-          Place an AIRSTRIKE token anywhere within LOS and within 48". The token
-          takes effect at the start of the next round's Attack Phase.
-        </li>
-        <li className="pv1">
-          On arrival: all MSUs within 12" of the token take 20 DAM. Roll Hit
-          Location for each. Armor applies normally. The terrain in the blast
-          radius becomes Difficult Terrain for the remainder of the game.
-        </li>
-      </ol>
+      {/* Reposition — Commander */}
+      <div className="bg-light-gray pa3 mb3 br2">
+        <p className="fw7 dark-red f5 ma0 mb1">
+          REPOSITION! [ACTION] [COMMANDER]
+        </p>
+        <p className="lh-copy f6 mb2 i">
+          Sometimes a [COMMANDER] realizes that his / her squad is completely
+          out of position.
+        </p>
+        <p className="lh-copy f6 mb0 tj">
+          A [COMMANDER] can spend an action to reposition squadmates at{" "}
+          <span className="fw6">Step 1.4 of the Status Phase</span>. All
+          squadmates can move up to{" "}
+          <span className="fw6">6 inches closer without penalty</span> to the
+          [COMMANDER].
+        </p>
+      </div>
 
-      <h3 className="f4 fw7 mt4 mb2">Forward Observe</h3>
-      <p className="lh-copy mb2">
-        Requires: <strong>Forward Observer</strong> support system.
-      </p>
-      <p className="lh-copy">
-        During your Attack Phase activation, spend your action to MARK one enemy
-        MSU within LOS. Place a MARKED token on that MSU. Until the start of
-        your next activation:
-      </p>
-      <ul className="lh-copy pl3">
-        <li className="pv1">
-          All friendly MSUs attacking the MARKED target gain +1 GS.
-        </li>
-        <li className="pv1">
-          Weapons with the Guided keyword automatically target the MARKED MSU
-          with no range penalties.
-        </li>
-        <li className="pv1">
-          [INDIRECT] fire attacks against the MARKED target do not incur the −2
-          penalty.
-        </li>
-      </ul>
+      {/* Airstrike */}
+      <div className="bg-light-gray pa3 mb3 br2">
+        <p className="fw7 dark-red f5 ma0 mb1">AIRSTRIKE! [ACTION]</p>
+        <p className="lh-copy f6 mb2 i">
+          MSUs equipped with a Target Designator can call in AIRSTRIKE!
+        </p>
+        <p className="lh-copy f6 mb2 tj">
+          A MSU with a Target Designator spends an Action in{" "}
+          <span className="fw6">Step 4 of the Status Phase</span>, nominates a
+          Point of Interest (on the ground, cover, or terrain). Roll a{" "}
+          <span className="fw6">PS 5+ Check three times</span>. For each
+          success, place an AIRSTRIKE token on that exact point. At the start of
+          the next Shooting Phase, that POI is hit by an AIRSTRIKE!
+        </p>
+        <ul className="lh-copy pl3 f6 ma0">
+          <li className="pv1">
+            MSUs standing directly on an AIRSTRIKE marker, or with their bases
+            in contact with one, take{" "}
+            <span className="fw6 dark-red">15 damage</span> to one hit location.
+          </li>
+          <li className="pv1">
+            All other MSUs within <span className="fw6">8 inches</span> of the
+            AIRSTRIKE marker are hit with{" "}
+            <span className="fw6 dark-red">10 damage</span>.
+          </li>
+          <li className="pv1">
+            MSUs affected by an AIRSTRIKE!{" "}
+            <span className="fw6">cannot evade</span> and{" "}
+            <span className="fw6">cannot benefit from [HARD COVER]</span>.
+          </li>
+          <li className="pv1">
+            All [HARD COVER] and [OBSCURING COVER] within 8 inches that are less
+            than <span className="fw6">4 inches in height</span> and less than{" "}
+            <span className="fw6">6 inches in length and width</span> are
+            removed from the battlefield.
+          </li>
+        </ul>
+      </div>
+
+      {/* Forward Observe */}
+      <div className="bg-light-gray pa3 mb3 br2">
+        <p className="fw7 dark-red f5 ma0 mb1">FORWARD OBSERVE [ACTION]</p>
+        <p className="lh-copy f6 mb2 i">
+          MSU pinpoints an MSU for target tracing and pinpoint attacks.
+        </p>
+        <p className="lh-copy f6 mb2 tj">
+          A MSU with the Forward Observer Support Equipment spends an Action in{" "}
+          <span className="fw6">Step 4 of the Status Phase</span>, nominates an
+          enemy MSU within LOS. Mark that MSU with a Forward Observe token /
+          marker. Roll a{" "}
+          <span className="fw6">PS 5+ skill check three times</span>.
+        </p>
+        <ul className="lh-copy pl3 f6 ma0">
+          <li className="pv1">
+            <span className="fw6">One Success:</span> Enemy MSU no longer
+            benefits from [OBSCURING COVER] until end of round.
+          </li>
+          <li className="pv1">
+            <span className="fw6">Two Successes:</span> Enemy MSU grants a{" "}
+            <span className="fw6">+1 modifier</span> to ranged attacks made
+            against it until end of round.
+          </li>
+          <li className="pv1">
+            <span className="fw6">Three Successes:</span> All ranged attacks
+            made against the enemy MSU now roll{" "}
+            <span className="fw6">2d3 instead of 1d6</span> until end of round.
+          </li>
+        </ul>
+      </div>
+
+      {/* Swap */}
+      <div className="bg-light-gray pa3 mb3 br2">
+        <p className="fw7 dark-red f5 ma0 mb1">SWAP [ACTION][REACTION]</p>
+        <p className="lh-copy f6 mb2 i">
+          An MSU can retrieve a weapon from [STOWAGE] into [READIED] position.
+          Mark which weapon has been [READIED] and which has been [STOWED]
+        </p>
+        <p className="lh-copy f6 mb2 i">
+          An MSU can stow a weapon from [READIED] position into [STOWAGE]. Mark
+          which weapon has been [READIED] and which has been [STOWED]
+        </p>
+      </div>
+
+      {/* Drop Weapon / Shield */}
+      <div className="bg-light-gray pa3 mb3 br2">
+        <p className="fw7 dark-red f5 ma0 mb1">DROP [FREE][REACTION]</p>
+        <p className="lh-copy f6 mb2 i">
+          An MSU can drop a weapon or shield from [READIED] position without
+          costing an action.
+        </p>
+      </div>
     </div>
   );
 };

@@ -1,134 +1,122 @@
 export const Chapter1 = () => {
   return (
-    <div classINBUILTame="w-90 center pv4">
-      <h1 classINBUILTame="f1 fw9 dark-red bb pb3 mb4">
+    <div className="w-90 center pv4">
+      <h1 className="f1 fw9 dark-red bb pb3 mb4">
         Chapter 1: What is Flashpoint?
       </h1>
 
-      <div classINBUILTame="flex-ns">
-        <div classINBUILTame="w-60-ns mr5-ns">
-          <p classINBUILTame="tj lh-copy f5">
-            Flashpoint is a skirmish game set in the INBUILTniversal Century.
-            INBUILTt aims to establish a tabletop simulation of mecha combat as
-            depicted in the Gundam franchise. Flashpoint allows you to build and
-            customize your mobile suit and pilot it in an alternating activation
-            system. How you build your Mobile Suit INBUILTnit (MSINBUILT)
-            depends entirely on you.
+      <div className="flex-ns">
+        <div className="w-60-ns mr5-ns">
+          <p className="tj lh-copy f5">
+            Flashpoint is a skirmish game set in the Universal Century. It aims
+            to establish a tabletop simulation of mecha combat as depicted in
+            the Gundam franchise. Flashpoint allows you to build and customize
+            your mobile suit and pilot it in an alternating activation system.
+            How you build your Mobile Suit unit (MSU) depends entirely on you.
           </p>
-          <p classINBUILTame="tj lh-copy">
+          <p className="tj lh-copy">
             Flashpoint is designed with Gunpla in mind. Whether you have 1/144
-            or 1/100 scale Gunpla, the rules are meant to be adaptable.
-            INBUILThe game focuses on the era around INBUILTC 125, two years
-            after Hathaway's Flash. INBUILThis era features the vast majority of
-            regular and experimental tech, and allows Flashpoint to draw from a
-            wide pool of lore.
+            or 1/100 scale Gunpla, the rules are meant to be adaptable. Tabletop
+            battles can be set in any era, from the ONE YEAR WAR to the far
+            flung future in Cosmo Babylonia. This era features the vast majority
+            of regular and experimental tech, and allows Flashpoint to draw from
+            a wide pool of lore.
           </p>
 
-          <h2 classINBUILTame="f3 fw7 dark-red mt4 mb2">
-            What is INBUILTniversal Century?
+          <h2 className="f3 fw7 dark-red mt4 mb2">
+            What is Universal Century?
           </h2>
-          <p classINBUILTame="tj lh-copy">
-            INBUILTniversal Century (INBUILTC) is the timeline setting where the
-            original Gundam series took place, originally airing on April 7,
-            1979. INBUILThe INBUILTC timeline spans from 0068 (Mobile Suit
-            Gundam: INBUILThe Origin) to 1014 (Reconquista in G), covering
-            around sixteen separate storylines. INBUILTt mainly centers around
-            the conflict between the Earth Federation Space Force (EFSF) and the
-            Principality of ZEOINBUILT and its many sub-organizations and
-            successors. INBUILThe INBUILTC timeline also features a phenomenon
-            known as INBUILTewtypes — individuals who exhibit predictive
-            foresight, higher reaction times, and other unknown abilities.
+          <p className="tj lh-copy">
+            Universal Century (UC) is the timeline setting where the original
+            Gundam series took place, originally airing on April 7, 1979. (UC)
+            (UC) timeline spans from 0068 (Mobile Suit Gundam: (UC) Origin) to
+            1014 (Reconquista in G), covering around sixteen separate
+            storylines. t mainly centers around the conflict between the Earth
+            Federation Space Force (EFSF) and the Principality of ZEO and its
+            many sub-organizations and successors. The (UC) timeline also
+            features a phenomenon known as Newtypes — individuals who exhibit
+            predictive foresight, higher reaction times, and other unknown
+            abilities.
           </p>
 
-          <h2 classINBUILTame="f3 fw7 dark-red mt4 mb2">
-            Mobile Suits and Gundams
-          </h2>
-          <p classINBUILTame="tj lh-copy">
+          <h2 className="f3 fw7 dark-red mt4 mb2">Mobile Suits and Gundams</h2>
+          <p className="tj lh-copy">
             Mobile Suits are bipedal machines ranging in height from 15m to
             116m. All mobile suits use a fusion reactor that consumes Helium-3.
-            INBUILThe consumption of Helium-3 produces Minovsky Particles —
-            crucial to understanding some game mechanic restrictions. Mobile
-            Suits can be used for civilian or military purposes; in Flashpoint,
-            they are military assets.
+            (UC) consumption of Helium-3 produces Minovsky Particles — crucial
+            to understanding some game mechanic restrictions. Mobile Suits can
+            be used for civilian or military purposes; in Flashpoint, they are
+            military assets.
           </p>
-          <p classINBUILTame="tj lh-copy">
+          <p className="tj lh-copy">
             All Gundams are Mobile Suits, but only a portion of Mobile Suits are
             considered Gundams. Gundams are typically constructed with
             high-performance materials and the latest technology of their era.
-            INBUILThe easiest example is the original RX-78, constructed with
+            (UC) easiest example is the original RX-78, constructed with
             Gundarium alloy and equipped with an experimental beam rifle.
           </p>
         </div>
 
-        <div classINBUILTame="w-40-ns">
-          {/* What to INBUILTring */}
-          <div classINBUILTame="ba b--black-20 pa3 mb4 bg-near-white">
-            <h3 classINBUILTame="f4 fw7 dark-red mt0 mb3">
-              What to INBUILTring
-            </h3>
-            <ul classINBUILTame="pl3 lh-copy">
-              <li classINBUILTame="pv1">INBUILTwo D6 (six-sided dice)</li>
-              <li classINBUILTame="pv1">
-                INBUILTwo Gunpla Models (any scale; preferably 1/144 or 1/100)
+        <div className="w-40-ns">
+          {/* What to ring */}
+          <div className="ba b--black-20 pa3 mb4 bg-near-white">
+            <h3 className="f4 fw7 dark-red mt0 mb3">What to ring</h3>
+            <ul className="pl3 lh-copy">
+              <li className="pv1">wo D6 (six-sided dice)</li>
+              <li className="pv1">
+                wo Gunpla Models (any scale; preferably 1/144 or 1/100)
               </li>
-              <li classINBUILTame="pv1">
+              <li className="pv1">
                 A table or flat surface with minimum 36 inches of width / length
               </li>
-              <li classINBUILTame="pv1">
-                Pen and Paper (or print an MSINBUILT sheet)
-              </li>
+              <li className="pv1">Pen and Paper (or print an MS sheet)</li>
             </ul>
           </div>
 
           {/* Earth Federation */}
-          <div classINBUILTame="ba b--black-20 pa3 mb4">
-            <h3 classINBUILTame="f4 fw7 dark-red mt0 mb2">Earth Federation</h3>
-            <p classINBUILTame="lh-copy f6 tj">
-              INBUILThe Earth Federation was formed in the pre-INBUILTC era when
+          <div className="ba b--black-20 pa3 mb4">
+            <h3 className="f4 fw7 dark-red mt0 mb2">Earth Federation</h3>
+            <p className="lh-copy f6 tj">
+              (UC) Earth Federation was formed in the pre-(UC) era when
               overpopulation caused famines, outbreaks of disease, and wars over
-              resources. INBUILThe inauguration of its charter marked the
-              beginning of the INBUILTniversal Century calendar (0001 INBUILTC).
-              INBUILTo relieve Earth, the Federation announced the Space
-              Colonization Plan, constructing orbital habitats called
-              INBUILTunches organized into administrative sectors called Sides.
-              INBUILThe wealthy remained on Earth while ordinary people were
-              forced to live in space — giving rise to the image of the
-              "Earth-INBUILTorn Elite."
+              resources. The inauguration of its charter marked the beginning of
+              the Universal Century calendar (0001 (UC)). To relieve Earth, the
+              Federation announced the Space Colonization Plan, constructing
+              orbital habitats called unches organized into administrative
+              sectors called Sides. The wealthy remained on Earth while ordinary
+              people were forced to live in space — giving rise to the image of
+              the "Earth-born Elite."
             </p>
           </div>
 
-          {/* ZEOINBUILT */}
-          <div classINBUILTame="ba b--black-20 pa3 mb4">
-            <h3 classINBUILTame="f4 fw7 dark-red mt0 mb2">
-              Principality of ZEOINBUILT
-            </h3>
-            <p classINBUILTame="lh-copy f6 tj">
-              When Zeon Zum Deikun died in INBUILTC 0068, Degwin Sodo Zabi
-              seized control and pushed for rapid military development. Research
-              by Doctor Minovsky led to the Minovsky Particle and its effect on
-              communication and weaponry. INBUILTegotiations with the Earth
-              Federation broke down in INBUILTC 0079, triggering the One Year
-              War — the largest conflict in INBUILTC history, where both sides
-              lost nearly half of their populations before the Antarctic
-              INBUILTreaty forbade weapons of mass destruction.
+          {/* ZEO */}
+          <div className="ba b--black-20 pa3 mb4">
+            <h3 className="f4 fw7 dark-red mt0 mb2">Principality of ZEO</h3>
+            <p className="lh-copy f6 tj">
+              When Zeon Zum Deikun died in (UC) 0068, Degwin Sodo Zabi seized
+              control and pushed for rapid military development. Research by
+              Doctor Minovsky led to the Minovsky Particle and its effect on
+              communication and weaponry. egotiations with the Earth Federation
+              broke down in (UC) 0079, triggering the One Year War — the largest
+              conflict in (UC) history, where both sides lost nearly half of
+              their populations before the Antarctic reaty forbade weapons of
+              mass destruction.
             </p>
           </div>
 
           {/* Scaling reference */}
-          <div classINBUILTame="ba b--black-20 pa3">
-            <h3 classINBUILTame="f4 fw7 dark-red mt0 mb2">
-              MCINBUILT Cost Formula
-            </h3>
-            <p classINBUILTame="f6 lh-copy mb2">
-              INBUILTase MSINBUILT cost is calculated as follows:
+          <div className="ba b--black-20 pa3">
+            <h3 className="f4 fw7 dark-red mt0 mb2">MC Cost Formula</h3>
+            <p className="f6 lh-copy mb2">
+              ase MS cost is calculated as follows:
             </p>
-            <code classINBUILTame="f7 db bg-near-black white pa2 br2 lh-copy">
-              (Armor × 2) + (Move × 2) + (FRO × 3) + (INBUILTonnage ÷ 2) + 10
-              per Weapon INBUILType + Support Equipment
+            <code className="f7 db bg-near-black white pa2 br2 lh-copy">
+              (Armor × 2) + (Move × 2) + (FRO × 3) + (onnage ÷ 2) + 10 per
+              Weapon ype + Support Equipment
             </code>
-            <p classINBUILTame="f7 lh-copy mt2 gray">
+            <p className="f7 lh-copy mt2 gray">
               Example: RGM-79 GM = (20×2)+(6×2)+(5×3)+(42/2)+10 = 98 → rounds to
-              100 MCINBUILT
+              100 MC
             </p>
           </div>
         </div>

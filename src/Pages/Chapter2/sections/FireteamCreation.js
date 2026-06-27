@@ -50,7 +50,7 @@ export const FireteamCreation = () => {
 
       <p className="lh-copy tj">
         {" "}
-        Each [FIRETEAM] can belong to a [FACTION], see Section 2.9 for Faction
+        Each [FIRETEAM] can belong to a [FACTION], see Section 2.10 for Faction
         bonuses
       </p>
     </div>

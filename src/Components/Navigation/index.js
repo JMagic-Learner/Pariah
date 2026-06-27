@@ -26,13 +26,16 @@ export const Navigation = () => {
             })}
             to="/"
           >
-            Pariah
+            Gundam Flashpoint
           </Link>
         </div>
 
-        <div className={classNames({ "w-50": true })}>
-          <Link className={linkClass} to="/RulesBook">
+        <div className="flex w-50">
+          <Link className={classNames(linkClass, "mr3")} to="/RulesBook">
             Rules
+          </Link>
+          <Link className={linkClass} to="/PilotSheet">
+            Pilot Sheet
           </Link>
         </div>
       </nav>

@@ -24,7 +24,7 @@ export const RANGED = [
     fro: 8,
     mcu: 150,
     faction: "–",
-    keywords: "AOE(25), Limited Use[2]",
+    keywords: "[AOE(25)], [Limited Use(2)]",
   },
   {
     name: "Arm Cannon",
@@ -37,7 +37,7 @@ export const RANGED = [
     fro: "–",
     mcu: 25,
     faction: "–",
-    keywords: "AOE(6) or [AP(5)], [INBUILT], [QUICK SWAP], Limited Use[1]",
+    keywords: "[AOE(6)] or [AP(5)], [INBUILT], [QUICK SWAP], [Limited Use(1)]",
   },
   {
     name: "Arm Rotary Cannon",
@@ -63,7 +63,7 @@ export const RANGED = [
     fro: "–",
     mcu: 50,
     faction: "–",
-    keywords: "AOE(6), [BRACE]",
+    keywords: "[AOE(6)], [BRACE]",
   },
   {
     name: "Bazooka (Hyper)",
@@ -102,7 +102,7 @@ export const RANGED = [
     fro: 4,
     mcu: 55,
     faction: "EF",
-    keywords: "Scope",
+    keywords: "[SCOPE]",
   },
   {
     name: "Cannon",
@@ -167,7 +167,7 @@ export const RANGED = [
     fro: "–",
     mcu: 15,
     faction: "–",
-    keywords: "[INDIRECT], [QUICK SWAP], Limited Use[1], [THROW]n",
+    keywords: "[INDIRECT], [QUICK SWAP], [Limited Use(1)], [THROW]",
   },
   {
     name: "Homing Missiles",
@@ -196,7 +196,7 @@ export const RANGED = [
     keywords: "MISSILE[24], [MOUNTABLE], [INDIRECT]",
   },
   {
-    name: "MG",
+    name: "Machine Gun",
     type: "MG",
     rof: 5,
     range: "15|30|45|60",
@@ -209,7 +209,7 @@ export const RANGED = [
     keywords: "[FULL AUTO]",
   },
   {
-    name: "MG (Heavy)",
+    name: "(Heavy) Machine Gun",
     type: "MG",
     rof: 5,
     range: "15|30|45|60",
@@ -232,7 +232,7 @@ export const RANGED = [
     fro: "–",
     mcu: 15,
     faction: "–",
-    keywords: "MISSILE[16], [MOUNTABLE], Limited Use[1]",
+    keywords: "[MISSILE(16)], [MOUNTABLE], [Limited Use(1)]",
   },
   {
     name: "Missile Pods ×3",
@@ -245,7 +245,7 @@ export const RANGED = [
     fro: "–",
     mcu: 25,
     faction: "–",
-    keywords: "MISSILE[16], [MOUNTABLE], Limited Use[1]",
+    keywords: "[MISSILE(16)], [MOUNTABLE], [Limited Use(1)]",
   },
   {
     name: "Missile Pods ×8",
@@ -258,7 +258,7 @@ export const RANGED = [
     fro: "–",
     mcu: 40,
     faction: "–",
-    keywords: "MISSILE[16], [MOUNTABLE], Limited Use[1]",
+    keywords: "[MISSILE(16)], [MOUNTABLE], [Limited Use(1)]",
   },
   {
     name: "Missile Pods ×10",
@@ -271,7 +271,7 @@ export const RANGED = [
     fro: "–",
     mcu: 50,
     faction: "–",
-    keywords: "MISSILE[16], [MOUNTABLE], Limited Use[1]",
+    keywords: "[MISSILE(16)], [MOUNTABLE], [Limited Use(1)]",
   },
   {
     name: "PanzerFaust",
@@ -284,10 +284,10 @@ export const RANGED = [
     fro: 1,
     mcu: 10,
     faction: "ZEON",
-    keywords: "MISSILE[18], [AP(5)], [MOUNTABLE], Limited Use[1]",
+    keywords: "MISSILE[18], [AP(5)], [MOUNTABLE], [Limited Use(1)]",
   },
   {
-    name: "Pistol (Ballistic)",
+    name: "Pistol (Kinetic)",
     type: "Pistol",
     rof: 2,
     range: "12|24|36|–",
@@ -349,7 +349,7 @@ export const RANGED = [
     fro: "–",
     mcu: 50,
     faction: "–",
-    keywords: "[GRIP], [AP(5)] OR AOE(6)",
+    keywords: "[GRIP], [AP(5)] OR [AOE(6)]",
   },
   {
     name: "Rifle (Beam)",
@@ -388,10 +388,10 @@ export const RANGED = [
     fro: "–",
     mcu: 25,
     faction: "–",
-    keywords: "Scope, [GRIP]",
+    keywords: "[SCOPE], [GRIP]",
   },
   {
-    name: "Shotgun (Ballistic)",
+    name: "Shotgun (Kinetic)",
     type: "Shotgun",
     rof: "2d3",
     range: "12|24|36|–",
@@ -427,7 +427,7 @@ export const RANGED = [
     fro: 2,
     mcu: 35,
     faction: "–",
-    keywords: "[FULL AUTO], [AKIMBO], Burst[2]",
+    keywords: "[FULL AUTO], [AKIMBO], [BURST(2)]",
   },
   {
     name: "SMG (Kinetic)",
@@ -440,7 +440,7 @@ export const RANGED = [
     fro: "–",
     mcu: 15,
     faction: "–",
-    keywords: "[FULL AUTO], [AKIMBO], Burst[2]",
+    keywords: "[FULL AUTO], [AKIMBO], [BURST(2)]",
   },
   {
     name: "Sniper Rifle (Anti-Ship)",
@@ -453,7 +453,7 @@ export const RANGED = [
     fro: "–",
     mcu: 125,
     faction: "–",
-    keywords: "[AP(5)], [SLOW RELOAD], Scope, [MOUNTABLE]",
+    keywords: "[AP(5)], [SLOW RELOAD], [SCOPE], [MOUNTABLE]",
   },
   {
     name: "Sniper Rifle (Beam)",
@@ -466,7 +466,7 @@ export const RANGED = [
     fro: 4,
     mcu: 100,
     faction: "–",
-    keywords: "Scope, [GRIP], [PRECISE]",
+    keywords: "[SCOPE], [GRIP], [PRECISE]",
   },
   {
     name: "Sniper Rifle (Kinetic)",
@@ -479,7 +479,7 @@ export const RANGED = [
     fro: "–",
     mcu: 70,
     faction: "–",
-    keywords: "[AP(5)], Scope, [GRIP], [PRECISE]",
+    keywords: "[AP(5)], [SCOPE], [GRIP], [PRECISE]",
   },
   {
     name: "Vulcan Cannons",

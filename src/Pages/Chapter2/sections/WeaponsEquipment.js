@@ -162,7 +162,7 @@ export const WeaponsEquipment = () => {
         Weapons attached via [HARDPOINTS] to the outside of an MSU. [MOUNTED]
         weapons can only be used for [ATTACK] and [SIMULTAENOUS ATTACK] actions.
         [MOUNTED] weapons go into the Weapon slot or the Equipment slot of a hit
-        location
+        location.
       </p>
 
       <h3 className="f4 fw7 mt4 mb2 lh-copy tj">

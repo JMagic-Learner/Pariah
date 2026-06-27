@@ -7,7 +7,7 @@ export const MobileSuits = () => {
 
       <p className="lh-copy tj">
         {" "}
-        Mobile Suits - The new standard of warfare in the Universal Century. In
+        Mobile Suits - The new standard of warfare in the UUniversal Century. In
         Gundam Flashpoint, Mobile Suits or MSU (Mobile Suit Units) as
         abbreviated, are the main focus.
       </p>
@@ -121,9 +121,10 @@ export const MobileSuits = () => {
 
       <p className="tj lh-copy">
         Each MSU's FRO count essentially represents how much power is available
-        to use beam weapons, BOOST(X), turn facing, etc. When choosing a MSU to
-        purchase, [PILOTS] must visualize their individaul playstyle and how FRO
-        can limit the aggression / offense a suit can bring to the battlefield
+        to use beam weapons, [BOOST(X)], turn facing, etc. When choosing a MSU
+        to purchase, [PILOTS] must visualize their individaul playstyle and how
+        FRO can limit the aggression / offense a suit can bring to the
+        battlefield
       </p>
 
       <h5 className="f4 fw7 mt4 mb2 tj"> Active FRO Costs </h5>
@@ -170,7 +171,7 @@ export const MobileSuits = () => {
       <p className="tj lh-copy">
         How far an MSU moves during the movement phase is factored into evasion
         tier tables. This means that how far an MSU moved after [MOVEMENT],
-        BOOST(X), and [BLITZ] actions are taken into consideration.
+        [BOOST(X)], and [BLITZ] actions are taken into consideration.
       </p>
 
       <h3 className="f4 fw7 mt4 mb2 tj">ARMOR</h3>

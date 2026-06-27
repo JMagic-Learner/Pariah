@@ -339,7 +339,7 @@ export const FactionsArray = [
     generalBonuses: [
       {
         title: "CORRUPT GOVERNMENT",
-        text: "For each pilot trait unspent, the MSU credit limit is increased by 50",
+        text: "For each unspent pilot trait, the MSU credit limit is increased by 50",
       },
       {
         title: "HEAD MOUNTED VULCANS",
@@ -463,7 +463,7 @@ export const FactionsArray = [
     generalBonuses: [
       {
         title: "CORRUPT GOVERNMENT",
-        text: "For each pilot trait unspent, the MSU credit limit is increased by 50",
+        text: "For each unspent pilot trait, the MSU credit limit is increased by 50",
       },
       {
         title: "HEAD MOUNTED VULCANS",

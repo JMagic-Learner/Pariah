@@ -1,7 +1,7 @@
 import { useMediaQuery } from "@custom-react-hooks/all";
 import classNames from "classnames";
 
-const MUNITIONS = [
+export const MUNITIONS = [
   { name: "AP", dam: 8, effect: "AP(4)" },
   {
     name: "Flash",

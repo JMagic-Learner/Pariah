@@ -46,7 +46,7 @@ export const MELEE = [
     fro: 1,
     mcu: 10,
     faction: "ZEON",
-    keywords: "[AKIMBO], [QUICK SWAP], Cleave, [THROW]",
+    keywords: "[AKIMBO], [QUICK SWAP], [CLEAVE(X)], [THROW]",
   },
   {
     name: "Heat Blade",
@@ -189,7 +189,7 @@ export const MELEE = [
     rof: 1,
     range: '0–15"',
     mod: "+1",
-    dam: "[INBUILT]/A",
+    dam: "" - "",
     ton: 1,
     fro: "–",
     mcu: 10,

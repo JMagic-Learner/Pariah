@@ -105,7 +105,7 @@ export const FACTIONS = [
           },
           {
             title: "PSYCOMMU PIONEERS",
-            text: 'Pilots may purchase Imperfect Psycommu Systems for 65 MCU".',
+            text: "Pilots may purchase Quasi Psycommu Systems for 75 MCU.",
           },
         ],
       },
@@ -131,7 +131,7 @@ export const FACTIONS = [
           },
           {
             title: "AXIS DROP ASSAULT TACTICS",
-            text: "Instead of deploying normally, NEO ZEON SLEEVES Fireteams may move thier base movement and up to three FRO expenditures in BOOST(X). FRO expended in this way are not refreshed in Round 1's Step 1.1 of the Status Phase",
+            text: "Instead of deploying normally, NEO ZEON SLEEVES Fireteams may move thier base movement and up to three FRO expenditures in [BOOST(X)]. The movement done during the deployment phase counts toward the Evasion Tier Table",
           },
         ],
       },
@@ -144,7 +144,7 @@ export const FACTIONS = [
           },
           {
             title: "AVALANCE OF AGGRESSION",
-            text: "Whenever a MSU in this force is targeted by a ranged weapon, and the attacker is in LOS, this MSU may immediately BOOST[6]",
+            text: "Whenever a MSU in this force is targeted by a ranged weapon, and the attacker is in LOS, this MSU may immediately [BOOST(6)]",
           },
         ],
       },
@@ -225,7 +225,7 @@ export const FACTIONS = [
         bonuses: [
           {
             title: "COORDINATED INSURGENCY",
-            text: "Once per round, after two MAFTY units hit the same enemy target, both MAFTY units may BOOST[6] immediately after hit locations have been rolled.",
+            text: "Once per round, after two MAFTY units hit the same enemy target, both MAFTY units may [BOOST(6)] immediately after hit locations have been rolled.",
           },
           {
             title: "PREPARED CELLS",

@@ -1,7 +1,7 @@
 export const KEYWORDS = [
   {
     name: "[AP(X)]",
-    desc: "Declare Anti-Armor or Anti-Material mode when attacking. Anti-Armor: deal (X) damage to the next adjacent hit location; direct TORSO hits also remove one randomly chosen equipment (roll 1d3) and deal (X) bonus damage to the Torso. Anti-Material: enemy MSU cannot nullify hit locations with HARD COVER.",
+    desc: "Declare Anti-Armor or Anti-Material mode when attacking. Anti-Armor: After rolling hit locations and assigning damage to hit locations, assign X damage to the Torso. If a shield intercepted the direct damage, deal X damage to the assigned arm instead. Direct TORSO hits also remove one randomly chosen equipment (roll 1d3). Anti-Material: enemy MSU cannot nullify hit locations with HARD COVER.",
   },
   {
     name: "[AOE(X)]",
@@ -9,11 +9,11 @@ export const KEYWORDS = [
   },
   {
     name: "[AKIMBO]",
-    desc: "Reduces simultaneous-attack penalties when dual-wielding. MEDIUM or HEAVY with [AKIMBO]: –2 penalty → –1. LIGHT with [AKIMBO]: –2 penalty → 0. Weapons of different weight classes each apply their own reduced penalty.",
+    desc: "Reduces [SIMULTANEOUS ATTACK] penalties when dual-wielding. MEDIUM or HEAVY with [AKIMBO]: –2 penalty → –1. LIGHT with [AKIMBO]: –2 penalty → 0. Weapons of different weight classes each apply their own reduced penalty.",
   },
   {
     name: "[AMBPHIBIOUS]",
-    desc: "No movement penalties in water terrain. Gain BOOST[X+1] while moving through water.",
+    desc: "No movement penalties in water terrain. Gain [BOOST(X+1)] while moving through water.",
   },
   {
     name: "[BRACE]",
@@ -24,8 +24,12 @@ export const KEYWORDS = [
     desc: "When declaring an attack, reduce the weapon's ROF by 2 to reroll (X) attack dice. Cannot be used simultaneously with [FULL AUTO].",
   },
   {
+    name: "[CIVILIANS]",
+    desc: "[PILOTS] cannot directly target [CIVILIANS]. [CIVILIANS] are represented by 25mm tokens on the battlefield. [CIVILIANS] have one armor and one hit location. [CIVILANS] deduct 1 victory point per token eliminated. CIVILIANS move 6 inches away from the nearest MSU within 16 inches.",
+  },
+  {
     name: "[CLEAVE(X)]",
-    desc: "On a successful melee attack, roll (X) additional hit locations where X is equal to the [PILOT] Brawl skill.",
+    desc: "On a successful melee attack, roll 1 additional hit locations. That additional hit location does an additional X damage equal to [PILOT] Brawl skill.",
   },
   {
     name: "[CLUSTER]",
@@ -49,7 +53,11 @@ export const KEYWORDS = [
   },
   {
     name: "[FULL AUTO]",
-    desc: "Increase the weapon's ROF by 3 and incur a –2 modifier to all Gunnery Skill checks for the attack. Cannot be used with BURST.",
+    desc: "Increase the weapon's ROF by 3 and incur a –2 modifier to all GS checks for that attack. Cannot be used simulatenously with BURST.",
+  },
+  {
+    name: "[FEATHERWEIGHT]",
+    desc: "MSU whose total equipment tonnage weighs less than 10 tons gain +2 base movespeed",
   },
   {
     name: "[GRIP]",
@@ -73,7 +81,7 @@ export const KEYWORDS = [
   },
   {
     name: "[INDIRECT]",
-    desc: "Can target a point or enemy MSU without line of sight. Targeting a point: roll 1d6 + STAT MOD + other mods – 2 ([INDIRECT] penalty) against a static value of 3. Targeting an MSU outside LOS: GS check + mods – 2 vs. the target's Evasion Skill check.",
+    desc: "Can target a point or enemy MSU without line of sight with a -2 [INDIRECT] penalty. Targeting a point: roll 1d6 + STAT MOD + other mods – 2 ([INDIRECT] penalty) against a static value of 3. Targeting an MSU outside LOS: GS check + mods – 2 vs. the target's Evasion Skill check.",
   },
   {
     name: "[LETHAL]",
@@ -93,11 +101,11 @@ export const KEYWORDS = [
   },
   {
     name: "[MISSILE(X)]",
-    desc: "Uses the Deploy Missile Action instead of a standard GS skill check. Place MISSILE tokens in the front arc (one per ROF) each with a d6 countdown of 2. Each Status Phase Step 1.2, move tokens (X) inches straight ahead ([GUIDED] tokens may rotate 45°). The missile detonates on contact with terrain, an MSU, or when the timer expires. The target rolls Evasion 7 to negate. Missiles cannot detonate within the minimum range band.",
+    desc: "Uses the Deploy Missile Action instead of a standard GS skill check. Place MISSILE tokens in the front arc (one per ROF) each with a d6 countdown of 2. Each Status Phase Step 1.2, move tokens (X) inches straight ahead ([GUIDED] tokens may rotate 45° at the start of Status Phase 1.2 before moving. Rotating 45* does not reduce movement as it would for MSU). The missile detonates on contact with terrain, an MSU, or when the timer expires. The target rolls an evasion check vs a static value of 7 to negate. Missiles cannot detonate within the minimum range band.",
   },
   {
     name: "[MOUNTABLE]",
-    desc: "Weapon is attached via pegs or hardpoints. Can be fired in Attack actions. Cannot be fired in Reactive Attack actions. Ignores HEAVY two-hand restrictions. Cannot be the target of Swap actions.",
+    desc: "Weapon is attached via pegs or hardpoints. Can be fired in [ATTACK] actions. Cannot be fired in [REACTIVE ATTACK] actions. Ignores HEAVY two-hand restrictions. Cannot be the target of Swap actions.",
   },
   {
     name: "[MUNITIONS]",
@@ -129,7 +137,7 @@ export const KEYWORDS = [
   },
   {
     name: "[STOWAGE] / [STORED] / [STOWED]",
-    desc: "Equipment that is holstered, attached to a rack, or otherwise [STORED]. Weapons in [STOWAGE] cannot be used for Attacks or Reactive Attacks until readied by a SWAP action.",
+    desc: "Equipment that is holstered, attached to a rack, or otherwise [STORED]. Weapons in [STOWAGE] cannot be used for [ATTACK] or [REACTIVE ATTACK] until readied by a SWAP action.",
   },
   {
     name: "[SUPPRESSIVE]",
@@ -137,6 +145,6 @@ export const KEYWORDS = [
   },
   {
     name: "[THROW]",
-    desc: "This weapon can be [THROW]n as a ranged attack. [THROW]n range band is listed in parentheses next to the normal range band. [THROW]n attacks use PS instead of GS.",
+    desc: "This weapon can be thrown as a ranged attack. Thrown range band is listed in parentheses next to the normal range band. Whenever a [PILOT] declares a throwing [ATTACK], use PS instead of GS.",
   },
 ];
