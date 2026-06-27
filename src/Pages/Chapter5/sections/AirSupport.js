@@ -1,40 +1,6 @@
 import { useMediaQuery } from "@custom-react-hooks/all";
 import classNames from "classnames";
-
-const AIR_UNITS = [
-  {
-    name: "Fighter Jet",
-    type: "Vehicle",
-    armor: "10",
-    move: '15" (mandatory)',
-    unitSize: "1 Fighter Jet",
-    maxQty: "6",
-    mcuCost: "25",
-    equipment:
-      "Vulcan Cannons ×2, Missile Pod 2 ×2 ([Limited Use (2)]), Flares",
-  },
-];
-
-const JET_WEAPONS = [
-  {
-    name: "Vulcan Cannons",
-    type: "MG",
-    rof: "3",
-    range: "6 | 24 | 36 | NA",
-    mod: "+2 | +1 | -1 | NA",
-    dam: "3",
-    keywords: "[FULL AUTO], [INBUILT]",
-  },
-  {
-    name: "Missile Pod 2",
-    type: "Missile",
-    rof: "2",
-    range: "Min Band 16",
-    mod: "—",
-    dam: "5",
-    keywords: "[MISSILE(16)], [Limited Use (2)]",
-  },
-];
+import { AIR_UNITS, JET_WEAPONS } from "../../../Data/SupportUnitsArray";
 
 export const AirSupport = () => {
   const isMobile = useMediaQuery("(max-width: 600px)");

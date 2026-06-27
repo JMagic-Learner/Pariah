@@ -147,6 +147,18 @@ export const MELEE = [
     keywords: "[CLEAVE(X)]",
   },
   {
+    name: "Beam Naginata",
+    type: "Sword",
+    rof: 2,
+    range: '0–4"',
+    mod: "+1",
+    dam: 15,
+    ton: 1,
+    fro: 2,
+    mcu: 30,
+    keywords: "[CLEAVE(X)]",
+  },
+  {
     name: "Beam Whip",
     type: "Whip",
     rof: 2,

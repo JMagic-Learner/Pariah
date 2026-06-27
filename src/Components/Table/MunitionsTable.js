@@ -1,33 +1,6 @@
 import { useMediaQuery } from "@custom-react-hooks/all";
 import classNames from "classnames";
-
-export const MUNITIONS = [
-  { name: "AP", dam: 8, effect: "AP(4)" },
-  {
-    name: "Flash",
-    dam: "–",
-    effect:
-      "AOE[3], hit MSU's suffer -2 penalty to all GS,BR, PS,and EVA rolls",
-  },
-  { name: "Frag", dam: 6, effect: "AOE[6]" },
-  {
-    name: "Incendiary",
-    dam: 2,
-    effect:
-      "AOE[3], ignites terrain, critical damage to Infantry and Civilians, MSU hit by Incendiary expend 3 FRO immediately.",
-  },
-  {
-    name: "Tagging Smoke",
-    dam: "-",
-    effect:
-      "hit MSU's grant +1 GS mod to all incoming ranged attacks for 1 round",
-  },
-  {
-    name: "Smoke",
-    dam: "–",
-    effect: "AOE[3], Template provides obscuring cover for 1 round",
-  },
-];
+import { MUNITIONS } from "../../Data/MunitionsArray";
 
 export const MunitionsTable = () => {
   const isMobile = useMediaQuery("(max-width: 600px)");

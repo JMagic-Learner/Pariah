@@ -79,8 +79,8 @@ export const WeaponsEquipment = () => {
 
       <h3 className="f4 fw7 mt4 mb2 tj">Selling Weapons and Equipment</h3>
       <p className="lh-copy tj">
-        Each base weapon and support equipment that comes on a MSU may be sold
-        once for full price.
+        Each base weapon and support equipment that comes stock (marked as FREE)
+        on a MSU may be sold, but they only refund 10 MCU.
       </p>
 
       <h3 className="f4 fw7 mt4 mb2 lh-copy tj">
@@ -192,10 +192,8 @@ export const WeaponsEquipment = () => {
           Hit Location 1/ Hit Location 2
           <span className="fw4 black">
             {" "}
-            Designates that this Support Equipment can either go into Hit
-            Location 1 and/or Hit Location 2. Some [PILOT]s purchase Support
-            Equipment and have it take multiple hit location slots to prevent
-            the complete nullification of a single support equipment loss.
+            Designates that this Support Equipment goes into all hit locations
+            mentioned.
           </span>
         </li>
         <li className="pv1 dark-red fw6">

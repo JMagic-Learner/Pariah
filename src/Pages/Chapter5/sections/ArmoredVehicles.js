@@ -1,52 +1,6 @@
 import { useMediaQuery } from "@custom-react-hooks/all";
 import classNames from "classnames";
-
-const VEHICLE_UNITS = [
-  {
-    name: "Tanks",
-    type: "Vehicle",
-    armor: "15",
-    move: '7"',
-    unitSize: "2 × Tanks",
-    maxQty: "6",
-    mcuCost: "25",
-    equipment: "Tank Cannon, Flares",
-  },
-  {
-    name: "APC Transport",
-    type: "Vehicle",
-    armor: "8",
-    move: '10"',
-    unitSize: "1 Transport",
-    maxQty: "6",
-    mcuCost: "15",
-    equipment: "Flares, LMG",
-  },
-];
-
-const TANK_WEAPONS = [
-  {
-    name: "Tank Cannon",
-    type: "Cannon",
-    rof: "2",
-    range: "20 | 40 | 60 | 80",
-    mod: "+0 | +1 | +0 | -1",
-    dam: "8",
-    keywords: "[AP(2)]",
-  },
-];
-
-const APC_WEAPONS = [
-  {
-    name: "MG (Light)",
-    type: "MG",
-    rof: "4",
-    range: "15 | 35 | 55 | 75",
-    mod: "+1 | +1 | +0 | -1",
-    dam: "1",
-    keywords: "[FULL AUTO], [GRIP], [MOUNTED]",
-  },
-];
+import { VEHICLE_UNITS, TANK_WEAPONS, APC_WEAPONS } from "../../../Data/SupportUnitsArray";
 
 const WeaponTable = ({ weapons, isMobile }) => (
   <div className={classNames("", { "flex mt3": !isMobile, mt2: isMobile })}>

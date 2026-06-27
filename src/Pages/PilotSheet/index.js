@@ -4,18 +4,38 @@ import classNames from "classnames";
 import { TRAITS } from "../../Data/PilotTraitArray";
 import { RANGED } from "../../Data/RangedWeaponsArray";
 import { MELEE } from "../../Data/MeleeWeaponsArray";
+import { MUNITIONS } from "../../Data/MunitionsArray";
+import { SUPPORT } from "../../Data/SupportEquipmentArray";
 import { NEWTYPE_UPGRADES, BITS } from "../../Data/NewtypeUpgrades";
-import { RangedWeaponTable } from "../../Components/Table/WeaponTable";
 import {
-  SUPPORT,
-  SupportEquipmentTable,
-} from "../../Components/Table/SupportEquipmentTable";
-import { MUNITIONS } from "../../Components/Table/MunitionsTable";
+  RangedWeaponTable,
+  MeleeWeaponTable,
+} from "../../Components/Table/WeaponTable";
+import { SupportEquipmentTable } from "../../Components/Table/SupportEquipmentTable";
+import {
+  PRESETS,
+  blankEquip,
+  blankLoc,
+  EF_PRESETS,
+  ZEON_PRESETS,
+} from "../../Data/PresetsArray";
+
+// ─── MCU helpers ─────────────────────────────────────────────────────────────
+
+const parseMCU = (s) => {
+  if (!s) return 0;
+  const clean = String(s).trim().toUpperCase();
+  if (clean === "FREE") return 0;
+  const n = parseFloat(clean);
+  return isNaN(n) ? 0 : n;
+};
 
 // ─── Shared primitives ────────────────────────────────────────────────────────
 
 const SheetHeader = ({ children }) => (
-  <div className="bg-dark-green white fw7 f7 pa2 ttu tracked">{children}</div>
+  <div className="bg-dark-green white fw7 f7 pa2 ttu tracked tc">
+    {children}
+  </div>
 );
 
 const TextInput = ({
@@ -59,8 +79,11 @@ const TH = ({ children, className = "" }) => (
   </th>
 );
 
-const TD = ({ children, className = "" }) => (
-  <td className={classNames("pv2 pr2 bb b--black-20 f7", className)}>
+const TD = ({ children, className = "", colSpan }) => (
+  <td
+    className={classNames("pv2 pr2 bb b--black-20 f7", className)}
+    colSpan={colSpan}
+  >
     {children}
   </td>
 );
@@ -93,20 +116,42 @@ const TraitRow = ({ value, onChange }) => {
 
 // ─── Equipment row ────────────────────────────────────────────────────────────
 
-const EquipmentRow = ({ row, onChange, onNameClick }) => (
-  <tr>
+const EquipmentRow = ({
+  row,
+  onChange,
+  onNameClick,
+  lastCellColSpan = 1,
+  sold,
+  onSell,
+}) => (
+  <tr className={sold ? "o-40" : ""}>
     <TD>
-      <TextInput
-        value={row.name}
-        onChange={(v) => onChange("name", v)}
-        onClick={onNameClick}
-      />
+      <div className={onSell ? "flex items-center" : ""}>
+        {onSell && (
+          <button
+            className={classNames(
+              "f8 ph1 pv0 mr1 bn br1 pointer flex-shrink-0 lh-copy",
+              sold ? "bg-dark-red white" : "bg-near-white dark-gray",
+            )}
+            onClick={onSell}
+            title={sold ? "Click to reinstate" : "Click to sell"}
+          >
+            {sold ? "SOLD" : "SELL"}
+          </button>
+        )}
+        <TextInput
+          value={row.name}
+          onChange={(v) => onChange("name", v)}
+          onClick={!sold ? onNameClick : undefined}
+          className={sold ? "strike" : ""}
+        />
+      </div>
     </TD>
     <TD className="tc">
       <TextInput
         value={row.mcuCost}
         onChange={(v) => onChange("mcuCost", v)}
-        className="tc"
+        className={classNames("tc", { strike: sold })}
       />
     </TD>
     <TD className="tc">
@@ -123,7 +168,7 @@ const EquipmentRow = ({ row, onChange, onNameClick }) => (
         className="tc"
       />
     </TD>
-    <TD>
+    <TD colSpan={lastCellColSpan}>
       <TextInput value={row.notes} onChange={(v) => onChange("notes", v)} />
     </TD>
   </tr>
@@ -427,22 +472,6 @@ const EquipmentPickerModal = ({ onClose, onSelect }) => {
   );
 };
 
-// ─── Helpers ──────────────────────────────────────────────────────────────────
-
-const blankEquip = () => ({
-  name: "",
-  mcuCost: "",
-  fro: "",
-  tonnage: "",
-  notes: "",
-});
-const blankLoc = (equipCount) => ({
-  current: "",
-  max: "",
-  weapon: "",
-  equipment: Array(equipCount).fill(""),
-});
-
 // ─── Single sheet panel ───────────────────────────────────────────────────────
 
 const PilotSheetPanel = ({ onMsuNameChange }) => {
@@ -474,6 +503,24 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
   const [addlEquip, setAddlEquip] = useState(
     Array(8).fill(null).map(blankEquip),
   );
+  const [soldBase, setSoldBase] = useState(Array(8).fill(false));
+
+  const mcuLimit = traits.some((t) => t === "OYW Veteran") ? 325 : 250;
+
+  const totalMCU =
+    parseMCU(mcu) +
+    baseEquip.reduce((sum, row, i) => {
+      if (!soldBase[i]) return sum + parseMCU(row.mcuCost);
+      const isFree = String(row.mcuCost).trim().toUpperCase() === "FREE";
+      return isFree ? sum - 10 : sum - parseMCU(row.mcuCost);
+    }, 0) +
+    addlEquip.reduce((sum, row) => sum + parseMCU(row.mcuCost), 0);
+
+  const totalTonnage =
+    baseEquip.reduce(
+      (sum, row, i) => sum + (soldBase[i] ? 0 : parseMCU(row.tonnage)),
+      0,
+    ) + addlEquip.reduce((sum, row) => sum + parseMCU(row.tonnage), 0);
 
   // Hit locations: Head/Torso get an extra equipment slot
   const [locations, setLocations] = useState({
@@ -488,6 +535,7 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
   // Reference panel visibility
   const [showTraits, setShowTraits] = useState(false);
   const [showWeapons, setShowWeapons] = useState(false);
+  const [showMelee, setShowMelee] = useState(false);
   const [showSupport, setShowSupport] = useState(false);
 
   // Equipment picker popup: null when closed, { onSelect: fn } when open
@@ -527,6 +575,24 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
   const updateLoc = (loc, field, v) =>
     setLocations((prev) => ({ ...prev, [loc]: { ...prev[loc], [field]: v } }));
 
+  const applyPreset = (id) => {
+    const preset = PRESETS.find((p) => p.id === id);
+    if (!preset) return;
+    const d = preset.data;
+    setMsuName(d.msuName);
+    onMsuNameChange?.(d.msuName);
+    setMobileSuit(d.mobileSuit);
+    setMcu(d.mcu);
+    setFro(d.fro);
+    setTonnageLimit(d.tonnageLimit);
+    setMovement(d.movement);
+    setArmorValue(d.armorValue);
+    setBaseEquip(d.baseEquip);
+    setAddlEquip(d.addlEquip);
+    setSoldBase(Array(8).fill(false));
+    setLocations(d.locations);
+  };
+
   // ─── Render ──────────────────────────────────────────────────────────────────
 
   return (
@@ -553,7 +619,7 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
           <table className="w-100 f7" cellSpacing="0">
             <thead>
               <tr>
-                <TH className="w-30">Pilot Name</TH>
+                <TH className="w-30 tc">Pilot Name</TH>
                 <TH className="tc">Gunnery</TH>
                 <TH className="tc">+Mod</TH>
                 <TH className="tc">Brawl</TH>
@@ -569,6 +635,7 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
                     value={pilotName}
                     onChange={setPilotName}
                     placeholder="Pilot name"
+                    className="tc"
                   />
                 </TD>
                 <TD className="tc">
@@ -599,7 +666,7 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
           <table className="w-100 f7" cellSpacing="0">
             <thead>
               <tr>
-                <TH className="w-30">Pilot Trait</TH>
+                <TH className="w-30 tc">Pilot Trait</TH>
                 <TH className="tc w-10">Cost</TH>
                 <TH className="tc">Effect</TH>
               </tr>
@@ -648,22 +715,57 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
         )}
       </div>
 
-      {/* ── Mobile Suit ── */}
+      {/* ── Mobile Suit + Equipment (single table so columns align) ── */}
       <div className="ba b--black-20 mb3">
-        <SheetHeader>Mobile Suit</SheetHeader>
+        <div className="flex items-center justify-between bg-dark-green white fw7 f7 pa2 ttu tracked">
+          <span>Mobile Suit Unit</span>
+          <select
+            className="f7 ba b--white pa1 bg-dark-green white pointer normal"
+            style={{ minWidth: "14rem" }}
+            value=""
+            onChange={(e) => {
+              if (e.target.value) applyPreset(e.target.value);
+            }}
+          >
+            <option value="">— Load Preset —</option>
+            <optgroup label="Earth Federation">
+              {EF_PRESETS.map((p) => (
+                <option key={p.id} value={p.id}>
+                  {p.name}
+                </option>
+              ))}
+            </optgroup>
+            <optgroup label="Zeon">
+              {ZEON_PRESETS.map((p) => (
+                <option key={p.id} value={p.id}>
+                  {p.name}
+                </option>
+              ))}
+            </optgroup>
+          </select>
+        </div>
         <div className="overflow-auto">
           <table className="w-100 f7" cellSpacing="0">
+            <colgroup>
+              <col style={{ width: "40%" }} />
+              <col style={{ width: "5rem" }} />
+              <col style={{ width: "5rem" }} />
+              <col style={{ width: "5.5rem" }} />
+              <col style={{ width: "6rem" }} />
+              <col style={{ width: "5rem" }} />
+            </colgroup>
             <thead>
               <tr>
-                <TH className="w-25">Mobile Suit</TH>
-                <TH className="tc">MCU Cost</TH>
+                <TH className="tc">Mobile Suit</TH>
+                <TH className="tc">MCU Cost / 250</TH>
                 <TH className="tc">FRO</TH>
-                <TH className="tc">Equipment Tonnage </TH>
+                <TH className="tc">Tonnage</TH>
                 <TH className="tc">Movement (Base)</TH>
                 <TH className="tc">Armor Value</TH>
               </tr>
             </thead>
             <tbody>
+              {/* Mobile Suit row */}
               <tr>
                 <TD>
                   <TextInput
@@ -674,12 +776,33 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
                 </TD>
                 <TD className="tc">
                   <NumInput value={mcu} onChange={setMcu} width="4rem" />
+                  <div
+                    className={classNames("f8 fw6 mt1", {
+                      "dark-red": totalMCU > mcuLimit,
+                      "dark-green": totalMCU > 0 && totalMCU <= mcuLimit,
+                      gray: totalMCU === 0,
+                    })}
+                  >
+                    {totalMCU} / {mcuLimit}
+                  </div>
                 </TD>
                 <TD className="tc">
                   <NumInput value={fro} onChange={setFro} />
                 </TD>
                 <TD className="tc">
                   <NumInput value={tonnageLimit} onChange={setTonnageLimit} />
+                  <div
+                    className={classNames("f8 fw6 mt1", {
+                      "dark-red":
+                        totalTonnage > Math.ceil(Number(tonnageLimit) / 3),
+                      "dark-green":
+                        totalTonnage > 0 &&
+                        totalTonnage <= Math.ceil(Number(tonnageLimit) / 3),
+                      gray: totalTonnage === 0,
+                    })}
+                  >
+                    {totalTonnage} / {Math.ceil(Number(tonnageLimit) / 3) || 0}
+                  </div>
                 </TD>
                 <TD className="tc">
                   <TextInput
@@ -697,26 +820,25 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
                   />
                 </TD>
               </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
 
-      {/* ── Base Equipment ── */}
-      <div className="ba b--black-20 mb3">
-        <SheetHeader>Equipment (Base)</SheetHeader>
-        <div className="overflow-auto">
-          <table className="w-100 f7" cellSpacing="0">
-            <thead>
+              {/* ── Equipment (Base) section ── */}
               <tr>
-                <TH className="w-30">Name</TH>
+                <td
+                  colSpan={6}
+                  className="bg-dark-green white fw7 f7 pa2 ttu tracked"
+                >
+                  Equipment (Base)
+                </td>
+              </tr>
+              <tr>
+                <TH className="tc">Name</TH>
                 <TH className="tc">MCU Cost</TH>
                 <TH className="tc">Passive / Active FRO</TH>
                 <TH className="tc">Tonnage</TH>
-                <TH className="tc">Notes</TH>
+                <TH className="tc" colSpan={2}>
+                  Notes
+                </TH>
               </tr>
-            </thead>
-            <tbody>
               {baseEquip.map((row, i) => (
                 <EquipmentRow
                   key={i}
@@ -725,40 +847,34 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
                   onNameClick={() =>
                     openEquipPopup((fields) => applyBaseEquip(i, fields))
                   }
+                  lastCellColSpan={2}
+                  sold={soldBase[i]}
+                  onSell={() =>
+                    setSoldBase((prev) =>
+                      prev.map((s, idx) => (idx === i ? !s : s)),
+                    )
+                  }
                 />
               ))}
-            </tbody>
-          </table>
-        </div>
-        <div className="ph2 pb2">
-          <RefToggle
-            open={showWeapons}
-            onToggle={() => setShowWeapons((v) => !v)}
-            label="Ranged Weapons Reference"
-          />
-        </div>
-        {showWeapons && (
-          <div className="bt b--black-10 ph2 pb2">
-            <RangedWeaponTable />
-          </div>
-        )}
-      </div>
 
-      {/* ── Additional Equipment ── */}
-      <div className="ba b--black-20 mb3">
-        <SheetHeader>Additional Equipment</SheetHeader>
-        <div className="overflow-auto">
-          <table className="w-100 f7" cellSpacing="0">
-            <thead>
+              {/* ── Additional Equipment section ── */}
               <tr>
-                <TH className="w-30">Name</TH>
+                <td
+                  colSpan={6}
+                  className="bg-dark-green white fw7 f7 pa2 ttu tracked"
+                >
+                  Additional Equipment
+                </td>
+              </tr>
+              <tr>
+                <TH>Name</TH>
                 <TH className="tc">MCU Cost</TH>
                 <TH className="tc">Passive / Active FRO</TH>
                 <TH className="tc">Tonnage</TH>
-                <TH className="tc">Effects</TH>
+                <TH className="tc" colSpan={2}>
+                  Effects
+                </TH>
               </tr>
-            </thead>
-            <tbody>
               {addlEquip.map((row, i) => (
                 <EquipmentRow
                   key={i}
@@ -767,18 +883,43 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
                   onNameClick={() =>
                     openEquipPopup((fields) => applyAddlEquip(i, fields))
                   }
+                  lastCellColSpan={2}
                 />
               ))}
             </tbody>
           </table>
         </div>
-        <div className="ph2 pb2">
+
+        {/* Reference toggles */}
+        <div className="ph2 pb2 flex">
+          <RefToggle
+            open={showWeapons}
+            onToggle={() => setShowWeapons((v) => !v)}
+            label="Ranged Weapons Reference"
+          />
+          <span className="mr2" />
+          <RefToggle
+            open={showMelee}
+            onToggle={() => setShowMelee((v) => !v)}
+            label="Melee Weapons Reference"
+          />
+          <span className="mr2" />
           <RefToggle
             open={showSupport}
             onToggle={() => setShowSupport((v) => !v)}
             label="Support Equipment Reference"
           />
         </div>
+        {showWeapons && (
+          <div className="bt b--black-10 ph2 pb2">
+            <RangedWeaponTable />
+          </div>
+        )}
+        {showMelee && (
+          <div className="bt b--black-10 ph2 pb2">
+            <MeleeWeaponTable />
+          </div>
+        )}
         {showSupport && (
           <div className="bt b--black-10 ph2 pb2">
             <SupportEquipmentTable />

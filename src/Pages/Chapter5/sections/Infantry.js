@@ -1,57 +1,6 @@
 import { useMediaQuery } from "@custom-react-hooks/all";
 import classNames from "classnames";
-
-const INFANTRY_UNITS = [
-  {
-    name: "Generalist Squad",
-    type: "Infantry",
-    armor: "1",
-    move: '4"',
-    unitSize: "3 × 5 Infantry",
-    maxQty: "6",
-    mcuCost: "10",
-    equipment: "Infantry Rifles, Anti-Personel Grenades, Rocket Launchers",
-  },
-];
-
-const INFANTRY_WEAPONS = [
-  {
-    name: "Infantry Rifle",
-    type: "Rifle",
-    rof: "2",
-    range: "15 | NA | NA | NA",
-    mod: "+1 | NA | NA | NA",
-    dam: "1",
-    keywords: "—",
-  },
-  {
-    name: "Grenades (A.Per)",
-    type: "Grenade",
-    rof: "1",
-    range: "6 | NA | NA | NA",
-    mod: "+1 | NA | NA | NA",
-    dam: "2",
-    keywords: "[AOE(2)]",
-  },
-  {
-    name: "Rocket Launcher",
-    type: "Missile",
-    rof: "1",
-    range: "Min Band 8",
-    mod: "—",
-    dam: "5",
-    keywords: "[MISSILE(16)], [Limited Use (2)]",
-  },
-  {
-    name: "CQC Weapons",
-    type: "Hands etc",
-    rof: "1",
-    range: "1 | NA | NA | NA",
-    mod: "+1 | NA | NA | NA",
-    dam: "1",
-    keywords: "—",
-  },
-];
+import { INFANTRY_UNITS, INFANTRY_WEAPONS } from "../../../Data/SupportUnitsArray";
 
 export const Infantry = () => {
   const isMobile = useMediaQuery("(max-width: 600px)");

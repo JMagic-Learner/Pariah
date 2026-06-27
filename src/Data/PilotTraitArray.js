@@ -40,7 +40,7 @@ export const TRAITS = [
     name: "CQ Specialist",
     cost: 2,
     effect:
-      'When this [PILOT] targets a MSU within 12", you may reroll 1 hit roll per turn.',
+      'When this [PILOT] targets a MSU within 12", you may reroll 1 attack dice per turn.',
   },
   {
     name: "Cross Discipline",
@@ -61,7 +61,7 @@ export const TRAITS = [
     name: "Duelist",
     cost: 2,
     effect:
-      'If no friendly MSU within 12" of this MSU, you may reroll 1 hit roll per turn.',
+      'If no friendly MSU within 12" of this MSU, you may reroll 1 attack dice per turn.',
   },
   {
     name: "Efficiency Engineer",
@@ -107,7 +107,7 @@ export const TRAITS = [
     name: "Grenadier God",
     cost: 1,
     effect:
-      "[MUNITIONS] for grenades and grenade launchers gain AOE[6]. High Explosive Munitions are now [AOE(9)].",
+      "[MUNITIONS] for grenades and grenade launchers gain AOE[6]. Frag Munitions are now [AOE(9)].",
   },
   {
     name: "Guerilla Ops",
@@ -148,7 +148,8 @@ export const TRAITS = [
   {
     name: "Mechanic",
     cost: 1,
-    effect: "Increase the equipment tonnage limit by 4 OR increase FRO by 2.",
+    effect:
+      "Increase the total tonnage by 12 (+4 Equipment Tonnage) OR increase FRO by 2.",
   },
   {
     name: "Mechanic Pro",
@@ -156,6 +157,13 @@ export const TRAITS = [
     effect:
       "Reduce the FRO requirement of one weapon by 2 and obtain one Hardpoint equipment slot. The [PILOT]'s MSU may purchase Extra Armor at 5 MCU per.",
     restrictions: "EARTH FEDERATION GROUND FORCES ONLY",
+  },
+  {
+    name: "Merchant",
+    cost: 1,
+    effect:
+      "All base equipment can be sold for 25 MCU each instead of 10 MCU each",
+    restrictions: "",
   },
   {
     name: "Momentum Specialist",
@@ -284,7 +292,7 @@ export const TRAITS = [
     name: "Wolf Pack",
     cost: 2,
     effect:
-      'If 1 friendly MSU within 8": reroll 1 hit roll per round. If 2 friendly MSUs within 8": reroll 1 evasion roll per round. If 3+ friendly MSUs within 8": gain +1 Piloting, +1 Brawl, +1 Gunnery.',
+      'If 1 friendly MSU within 8": reroll 1 attack dice per round. If 2 friendly MSUs within 8": reroll 1 evasion roll per round. If 3+ friendly MSUs within 8": gain +1 Piloting, +1 Brawl, +1 Gunnery.',
   },
   {
     name: "War Criminal",

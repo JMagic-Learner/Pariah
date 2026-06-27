@@ -6,7 +6,7 @@ export const Navigation = () => {
   const isMobile = useMediaQuery("(max-width: 600px)");
 
   const linkClass = classNames("link dim black no-underline", {
-    h3: !isMobile,
+    "h3 mh3": !isMobile,
     h5: isMobile,
   });
 
