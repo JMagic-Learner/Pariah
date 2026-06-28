@@ -199,6 +199,15 @@ export const OtherActions = () => {
           an action.
         </p>
       </div>
+
+      {/* Reload */}
+      <div className="bg-light-gray pa3 mb3 br2">
+        <p className="fw7 red f5 ma0 mb1">RELOAD [ACTION][REACTION]</p>
+        <p className="lh-copy f6 mb2 i">
+          Some weapons marked with the [SLOW RELOAD] requires an action to fire
+          again.
+        </p>
+      </div>
     </div>
   );
 };

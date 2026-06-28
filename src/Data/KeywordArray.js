@@ -101,7 +101,7 @@ export const KEYWORDS = [
   },
   {
     name: "[MISSILE(X)]",
-    desc: "Uses the Deploy Missile Action instead of a standard GS skill check. Place MISSILE tokens in the front arc (one per ROF) each with a d6 countdown of 2. Each Status Phase Step 1.2, move tokens (X) inches straight ahead ([GUIDED] tokens may rotate 45° at the start of Status Phase 1.2 before moving. Rotating 45* does not reduce movement as it would for MSU). The missile detonates on contact with terrain, an MSU, or when the timer expires. The target rolls an evasion check vs a static value of 7 to negate. Missiles cannot detonate within the minimum range band.",
+    desc: "When firing MISSILE weapons, do not roll attack dice. Place MISSILE tokens X inches away in the front arc (one per ROF) each with a d6 countdown of 2. Each Status Phase Step 1.2, move tokens (X) inches straight ahead ([GUIDED] tokens may rotate 45° at the start of Status Phase 1.2 before moving. Rotating 45* does not reduce movement as it would for MSU). The missile detonates on contact with terrain, an MSU, or when the timer expires. The target rolls an Evasion check FOR EACH INCOMING MISSILE vs a static value of 6`+ to negate. Missiles cannot detonate within the minimum range band.",
   },
   {
     name: "[MOUNTABLE]",
@@ -132,8 +132,8 @@ export const KEYWORDS = [
     desc: "Ranged attacks using this weapon impose a –1 Evasion modifier on the target. Once per attack declaration, reroll one hit location die.",
   },
   {
-    name: "[SLOW RELOAD]",
-    desc: "See the [SLOW RELOAD] action (Section 3.2). The weapon must be reloaded before it can be fired again.",
+    name: "[RELOAD]",
+    desc: "See the [RELOAD] action (Section 3.2). The weapon must be reloaded before it can be fired again.",
   },
   {
     name: "[STOWAGE] / [STORED] / [STOWED]",

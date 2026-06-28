@@ -98,8 +98,8 @@ export const AttackSequence = () => {
           </li>
           <li className="pv1">
             <span className="fw6 red">Step 4:</span> Each weapon generates its
-            own separate BATCH of attack dice. The defender rolls a separate
-            Evasion Check against each BATCH.
+            own separate BATCH of attack dice. The defender rolls one Evasion
+            Check against both BATCHES.
           </li>
           <li className="pv1">
             <span className="fw6 red">Step 5:</span> For each attack die in each

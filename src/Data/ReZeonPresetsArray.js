@@ -649,7 +649,7 @@ export const REZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "4",
           tonnage: "4",
-          notes: "[FULL AUTO],[SUPPRESSIVE],[GRIP]",
+          notes: "[FULL AUTO],[SUPPRESSIVE],[GRIP],[MOUNTABLE]",
         },
         {
           name: "Shield (Shoulder)",

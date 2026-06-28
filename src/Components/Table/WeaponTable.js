@@ -1,10 +1,14 @@
+import { useState } from "react";
 import { useMediaQuery } from "@custom-react-hooks/all";
 import classNames from "classnames";
 import { RANGED } from "../../Data/RangedWeaponsArray";
 import { MELEE } from "../../Data/MeleeWeaponsArray";
+import { renderKeywords } from "../../utils/renderKeywords";
+import { KeywordDialog } from "../KeywordDialog";
 
 export const RangedWeaponTable = () => {
   const isMobile = useMediaQuery("(max-width: 600px)");
+  const [kwDialog, setKwDialog] = useState(null);
   return (
     <div
       className={classNames("", {
@@ -12,6 +16,7 @@ export const RangedWeaponTable = () => {
         mt2: isMobile,
       })}
     >
+      <KeywordDialog kw={kwDialog} onClose={() => setKwDialog(null)} />
       {!isMobile && (
         <div className="center">
           <div className="mh3">
@@ -90,7 +95,7 @@ export const RangedWeaponTable = () => {
                             {weapon.faction || "NA"}
                           </td>
                           <td className="pv3 pr3 bb b--black-20">
-                            {weapon.keywords || "NA"}
+                            {weapon.keywords ? renderKeywords(weapon.keywords, setKwDialog) : "NA"}
                           </td>
                         </tr>
                       </>
@@ -124,7 +129,7 @@ export const RangedWeaponTable = () => {
               </p>
               <p className="lh-copy ma0 f7 tj">damage: {weapon?.dam || "-"} </p>
               <p className="lh-copy ma0 f7 tj">Mods: {weapon?.mod || "-"} </p>
-              <p className="lh-copy ma0 f7 tj">Effect {weapon.keywords}</p>
+              <p className="lh-copy ma0 f7 tj">Effect {weapon.keywords ? renderKeywords(weapon.keywords, setKwDialog) : ""}</p>
               <p className="lh-copy ma0 f7 tj">
                 Restricted to {weapon.faction}
               </p>
@@ -138,6 +143,7 @@ export const RangedWeaponTable = () => {
 
 export const MeleeWeaponTable = () => {
   const isMobile = useMediaQuery("(max-width: 600px)");
+  const [kwDialog, setKwDialog] = useState(null);
   return (
     <div
       className={classNames("", {
@@ -145,6 +151,7 @@ export const MeleeWeaponTable = () => {
         mt2: isMobile,
       })}
     >
+      <KeywordDialog kw={kwDialog} onClose={() => setKwDialog(null)} />
       {!isMobile && (
         <div className="center">
           <div className="mh3">
@@ -223,7 +230,7 @@ export const MeleeWeaponTable = () => {
                             {weapon.faction || "NA"}
                           </td>
                           <td className="pv3 pr3 bb b--black-20">
-                            {weapon.keywords || "NA"}
+                            {weapon.keywords ? renderKeywords(weapon.keywords, setKwDialog) : "NA"}
                           </td>
                         </tr>
                       </>
@@ -257,7 +264,7 @@ export const MeleeWeaponTable = () => {
               </p>
               <p className="lh-copy ma0 f7 tj">damage: {weapon?.dam || "-"} </p>
               <p className="lh-copy ma0 f7 tj">Mods: {weapon?.mod || "-"} </p>
-              <p className="lh-copy ma0 f7 tj">Effect {weapon.keywords}</p>
+              <p className="lh-copy ma0 f7 tj">Effect {weapon.keywords ? renderKeywords(weapon.keywords, setKwDialog) : ""}</p>
               <p className="lh-copy ma0 f7 tj">
                 Restricted to {weapon.faction}
               </p>

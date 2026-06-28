@@ -135,25 +135,22 @@ export const WeaponsEquipment = () => {
         held/readied determines how it interacts with certain ACTIONS.
       </p>
 
-      <h5 className="f5 fw7 mt3 mb1 lh-copy tj">
-        <span className="fw6 red"> [READIED] </span> Weapons
-      </h5>
+      <h5 className="f5 fw7 mt3 mb1 lh-copy tj">[READIED] Weapons</h5>
       <p className="lh-copy tj">
         The most common way for Gunpla and MSU to hold weapons. These are
         weapons physically held by the Gunpla in either arm(s).{" "}
         <span className="fw6 red"> [READIED] </span>
         weapons allow <span className="fw6 red"> [SWAP]</span>,{" "}
-        <span className="fw6 red"> [DROP]</span>,{" "}
+        <span className="fw6 red"> [DROP] </span>,{" "}
         <span className="fw6 red"> [ATTACK] </span>,{" "}
-        <span className="fw6 red"> [SIMULTANEOUS ATTACK] </span> and{" "}
-        <span className="fw6 red"> [REACTIVE ATTACK] </span> actions.{" "}
+        <span className="fw6 red"> [SIMULTANEOUS ATTACK]</span> and{" "}
+        <span className="fw6 red"> [REACTIVE ATTACK]</span> actions.{" "}
         <span className="fw6 red"> [READIED] </span> weapons are slotted into
         the Weapons slot of the hit location
       </p>
 
       <h5 className="f5 fw7 mt3 mb1 lh-copy tj">
-        <span className="fw6 red"> [INBUILT] </span> Weapons (built into the
-        frame)
+        [INBUILT] Weapons (built into the frame)
       </h5>
       <p className="lh-copy tj">
         A somewhat rare feature on Gunpla and MSUs. These are weapons concealed
@@ -167,7 +164,7 @@ export const WeaponsEquipment = () => {
       </p>
 
       <h5 className="f5 fw7 mt3 mb1 lh-copy tj">
-        <span className="fw6 red"> [STOWED] </span> Weapons (in storage)
+        [STOWED] Weapons (in storage)
       </h5>
       <p className="lh-copy tj">
         <span className="fw6 red"> [STOWED] </span> weapons are usually
@@ -177,14 +174,13 @@ export const WeaponsEquipment = () => {
         <span className="fw6 red"> [REACTIVE ATTACK] </span>
         actions. They can however be used for{" "}
         <span className="fw6 red"> [SWAP]</span> and{" "}
-        <span className="fw6 red"> [DROP]</span>
+        <span className="fw6 red"> [DROP] </span>
         actions. <span className="fw6 red"> [STOWED] </span> weapons can only be
         slotted into the equipment slot of a hit location
       </p>
 
       <h5 className="f5 fw7 mt3 mb1 lh-copy tj">
-        <span className="fw6 red"> [MOUNTED] </span> Weapons (attached to outer
-        armor)
+        [MOUNTED] Weapons (attached to outer armor)
       </h5>
       <p className=" lh-copy tj">
         Weapons attached via <span className="fw6 red"> [HARDPOINTS] </span> to

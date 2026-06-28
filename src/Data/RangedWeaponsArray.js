@@ -128,7 +128,7 @@ export const RANGED = [
     fro: 4,
     mcu: 85,
     faction: "–",
-    keywords: "[FULL AUTO],[SUPPRESSIVE],[GRIP]",
+    keywords: "[FULL AUTO],[SUPPRESSIVE],[GRIP],[MOUNTABLE]",
   },
   {
     name: "Gatling (Kinetic)",
@@ -141,7 +141,7 @@ export const RANGED = [
     fro: "–",
     mcu: 65,
     faction: "–",
-    keywords: "[FULL AUTO],[SUPPRESSIVE],[GRIP]",
+    keywords: "[FULL AUTO],[SUPPRESSIVE],[GRIP],[MOUNTABLE]",
   },
   {
     name: "Grenade Launcher",
@@ -453,7 +453,7 @@ export const RANGED = [
     fro: "–",
     mcu: 125,
     faction: "–",
-    keywords: "[AP(5)],[SLOW RELOAD],[SCOPE],[MOUNTABLE]",
+    keywords: "[AP(5)],[RELOAD],[SCOPE],[MOUNTABLE]",
   },
   {
     name: "Sniper Rifle (Beam)",

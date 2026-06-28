@@ -34,6 +34,8 @@ export const Phases = () => {
         </ul>
       </div>
 
+      <h3 className="f4 fw7 red mt0 mb2">0. START OF ROUND</h3>
+
       <div className="bg-near-white ba b--black-10 br2 pa3 mb3 tj">
         <h3 className="f4 fw7 red mt0 mb2">1. Initiative Phase</h3>
         <p className="lh-copy f6 ma0">

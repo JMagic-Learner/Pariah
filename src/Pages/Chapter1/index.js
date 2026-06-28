@@ -26,8 +26,8 @@ export const Chapter1 = () => {
           <h2 className="f3 fw7 red mt4 mb2">What is Universal Century?</h2>
           <p className="tj lh-copy">
             Universal Century (UC) is the timeline setting where the original
-            Gundam series took place, originally airing on April 7, 1979. (UC)
-            (UC) timeline spans from 0068 (Mobile Suit Gundam: (UC) Origin) to
+            Gundam series took place, originally airing on April 7, 1979. The
+            (UC) timeline spans from 0068 (Mobile Suit Gundam: The Origin) to
             1014 (Reconquista in G), covering around sixteen separate
             storylines. t mainly centers around the conflict between the Earth
             Federation Space Force (EFSF) and the Principality of ZEON and its
@@ -41,16 +41,16 @@ export const Chapter1 = () => {
           <p className="tj lh-copy">
             Mobile Suits are bipedal machines ranging in height from 15m to
             116m. All mobile suits use a fusion reactor that consumes Helium-3.
-            (UC) consumption of Helium-3 produces Minovsky Particles — crucial
-            to understanding some game mechanic restrictions. Mobile Suits can
-            be used for civilian or military purposes; in Flashpoint, they are
+            The consumption of Helium-3 produces Minovsky Particles — crucial to
+            understanding some game mechanic restrictions. Mobile Suits can be
+            used for civilian or military purposes; in Flashpoint, they are
             military assets.
           </p>
           <p className="tj lh-copy">
             All Gundams are Mobile Suits, but only a portion of Mobile Suits are
             considered Gundams. Gundams are typically constructed with
             high-performance materials and the latest technology of their era.
-            (UC) easiest example is the original RX-78, constructed with
+            The easiest example is the original RX-78, constructed with
             Gundarium alloy and equipped with an experimental beam rifle.
           </p>
         </div>

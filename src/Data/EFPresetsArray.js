@@ -2090,7 +2090,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "1 (PASSIVE)",
           tonnage: "3",
-          notes: "",
+          notes: "See Forward Observe Action (Section 3.7).",
         },
         {
           name: "Command Protocol",

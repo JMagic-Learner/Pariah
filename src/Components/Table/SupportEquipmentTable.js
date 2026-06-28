@@ -1,11 +1,16 @@
+import { useState } from "react";
 import { useMediaQuery } from "@custom-react-hooks/all";
 import classNames from "classnames";
 import { SUPPORT } from "../../Data/SupportEquipmentArray";
+import { renderKeywords } from "../../utils/renderKeywords";
+import { KeywordDialog } from "../KeywordDialog";
 
 export const SupportEquipmentTable = () => {
   const isMobile = useMediaQuery("(max-width: 600px)");
+  const [kwDialog, setKwDialog] = useState(null);
   return (
     <div className={classNames("", { "flex mt5": !isMobile, mt2: isMobile })}>
+      <KeywordDialog kw={kwDialog} onClose={() => setKwDialog(null)} />
       {!isMobile && (
         <div className="center w-100">
           <div className="mh3">
@@ -53,7 +58,7 @@ export const SupportEquipmentTable = () => {
                       <td className="pv3 pr3 bb b--black-20 tc">{item.qty}</td>
                       <td className="pv3 pr3 bb b--black-20 tc">{item.mcu}</td>
                       <td className="pv3 pr3 bb b--black-20 lh-copy">
-                        {item.effect}
+                        {renderKeywords(item.effect, setKwDialog)}
                       </td>
                     </tr>
                   ))}

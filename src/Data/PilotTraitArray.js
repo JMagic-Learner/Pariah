@@ -179,7 +179,7 @@ export const TRAITS = [
   {
     name: "Measured Trigger",
     cost: 1,
-    effect: "Replace the [FULL AUTO] weapon keyword with [[BURST(3)] keyword.",
+    effect: "Replace the [FULL AUTO] weapon keyword with [BURST(3)] keyword.",
   },
   {
     name: "Mechanic",
@@ -198,7 +198,7 @@ export const TRAITS = [
     name: "Merchant of Death",
     cost: 1,
     effect:
-      "All base equipment can be sold for 35 MCU each instead of 10 MCU each. The [PILOT] can now purchase all equipment for 5 MCU cheaper.",
+      "All base weapons can be sold for 35 MCU each instead of 10 MCU each.",
     restrictions: "",
   },
   {
