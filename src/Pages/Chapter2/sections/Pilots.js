@@ -68,7 +68,8 @@ export const Pilots = () => {
       </p>
       <p className="lh-copy tj red">
         {" "}
-        Attack Rolls: 1d6 + [GS/BS] + [ GS / BS Mods]{" "}
+        Attack Rolls: 1d6 + [GS/BS] + [ Weapon Mods] + [Situational
+        Modifiers]{" "}
       </p>
       <p className="lh-copy tj red">Initiative Rolls: 1d6 + [PS] + [Mods]</p>
       <p className="lh-copy tj red ">
@@ -76,7 +77,7 @@ export const Pilots = () => {
       </p>
       <p className="lh-copy tj red ">
         {" "}
-        Skill Check Rolls: 1d6 + [GS/BS/PS] + [ GS / BS / PS Mods]{" "}
+        Skill Check Rolls: 1d6 + [GS/BS/PS] + [Situational Mods]{" "}
       </p>
       <p className="lh-copy tj red">Evasion Rolls: 2d3 + [PS] + [EVA Mods]</p>
 

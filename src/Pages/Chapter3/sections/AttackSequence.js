@@ -53,6 +53,10 @@ export const AttackSequence = () => {
             <span className="fw6 red">+4 after all penalties and bonuses.</span>
           </li>
           <li className="pv1">
+            1d6 + [GS/BS] + [Weapon Mods] + [Situational Modifiers]
+          </li>
+
+          <li className="pv1">
             <span className="fw6 red">Step 6:</span> The target MSU rolls [x]d3
             according to the Evasion Tier Table and adds [PS] + any relevant
             modifiers. This is the{" "}
