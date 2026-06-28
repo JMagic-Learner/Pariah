@@ -2,11 +2,8 @@ import { useState } from "react";
 import { useMediaQuery } from "@custom-react-hooks/all";
 import classNames from "classnames";
 import { TRAITS } from "../../Data/PilotTraitArray";
-import { RANGED } from "../../Data/RangedWeaponsArray";
-import { MELEE } from "../../Data/MeleeWeaponsArray";
-import { MUNITIONS } from "../../Data/MunitionsArray";
-import { SUPPORT } from "../../Data/SupportEquipmentArray";
-import { NEWTYPE_UPGRADES, BITS } from "../../Data/NewtypeUpgrades";
+import { TEAMS } from "../../Data/TeamArray";
+import { PICKER_TABS } from "../../Data/EquipmentPickerArray";
 import {
   RangedWeaponTable,
   MeleeWeaponTable,
@@ -22,77 +19,13 @@ import {
   MAFTY_PRESETS,
   REZEON_PRESETS,
 } from "../../Data/PresetsArray";
-
-// ─── MCU helpers ─────────────────────────────────────────────────────────────
-
-const parseMCU = (s) => {
-  if (!s) return 0;
-  const clean = String(s).trim().toUpperCase();
-  if (clean === "FREE") return 0;
-  const n = parseFloat(clean);
-  return isNaN(n) ? 0 : n;
-};
-
-const lookupSupportMCU = (name) => {
-  const norm = (s) =>
-    s
-      .toLowerCase()
-      .replace(/[^a-z0-9\s]/g, " ")
-      .replace(/\s+/g, " ")
-      .trim();
-  const stem = (w) => (w.endsWith("s") && w.length > 3 ? w.slice(0, -1) : w);
-  const words = (s) =>
-    norm(s)
-      .split(" ")
-      .filter((w) => w.length >= 3)
-      .map(stem);
-  const nameWords = new Set(words(name));
-  for (const item of SUPPORT) {
-    const itemWords = words(item.name);
-    if (itemWords.length === 0) continue;
-    const matches = itemWords.filter((w) => nameWords.has(w)).length;
-    if (matches / itemWords.length >= 0.67) return item.mcu;
-  }
-  return null;
-};
-
+import { parseMCU } from "./utilities/parseMCU";
+import { lookupSupportMCU } from "./utilities/lookupMCU";
+import { SheetHeader } from "../../Components/SheetHeader";
+import { TextInput } from "../../Components/TextInput";
+import { NumInput } from "../../Components/NumImput";
+import { LocationCard } from "../../Components/LocationCard";
 // ─── Shared primitives ────────────────────────────────────────────────────────
-
-const SheetHeader = ({ children }) => (
-  <div className="bg-dark-green white fw7 f7 pa2 ttu tracked tc">
-    {children}
-  </div>
-);
-
-const TextInput = ({
-  value,
-  onChange,
-  placeholder = "",
-  className = "",
-  onClick,
-}) => (
-  <input
-    className={classNames(
-      "input-reset ba b--black-20 pa1 bg-white f7 w-100",
-      className,
-    )}
-    value={value}
-    onChange={(e) => onChange(e.target.value)}
-    placeholder={placeholder}
-    onClick={onClick}
-  />
-);
-
-const NumInput = ({ value, onChange, placeholder = "", width = "3rem" }) => (
-  <input
-    type="number"
-    className="input-reset ba b--black-20 pa1 bg-white f7 tc"
-    style={{ width }}
-    value={value}
-    onChange={(e) => onChange(e.target.value)}
-    placeholder={placeholder}
-  />
-);
 
 const TH = ({ children, className = "" }) => (
   <th
@@ -210,67 +143,6 @@ const EquipmentRow = ({
   </tr>
 );
 
-// ─── Hit location card ────────────────────────────────────────────────────────
-
-const LocationCard = ({ title, data, onChange }) => (
-  <div className={classNames("ba h-100", data.destroyed ? "b--red" : "b--black-20")}>
-    <div
-      className={classNames(
-        "fw7 f7 pa2 ttu tracked flex items-center justify-between",
-        data.destroyed ? "bg-red white" : "bg-dark-green white",
-      )}
-    >
-      <span>{title}</span>
-      <button
-        className={classNames(
-          "f8 ph1 pv0 bn br1 pointer flex-shrink-0 lh-copy",
-          data.destroyed ? "bg-white red fw7" : "bg-dark-green white o-70",
-        )}
-        onClick={() => onChange("destroyed", !data.destroyed)}
-        title={data.destroyed ? "Mark as intact" : "Mark as destroyed"}
-      >
-        {data.destroyed ? "DESTROYED" : "destroy"}
-      </button>
-    </div>
-    <div className={classNames("pa2", { "o-40": data.destroyed })}>
-      <div className="flex items-center mb2">
-        <span className="f7 fw6 mr2 nowrap">Armor:</span>
-        <NumInput
-          value={data.current}
-          onChange={(v) => onChange("current", v)}
-          placeholder="Cur"
-        />
-        <span className="f7 mh1">/</span>
-        <NumInput
-          value={data.max}
-          onChange={(v) => onChange("max", v)}
-          placeholder="Max"
-        />
-      </div>
-      <div className="mb2">
-        <div className="f7 fw6 gray mb1">Weapon</div>
-        <TextInput
-          value={data.weapon}
-          onChange={(v) => onChange("weapon", v)}
-        />
-      </div>
-      {data.equipment.map((eq, i) => (
-        <div key={i} className="mb2">
-          <div className="f7 fw6 gray mb1">Equipment</div>
-          <TextInput
-            value={eq}
-            onChange={(v) => {
-              const next = [...data.equipment];
-              next[i] = v;
-              onChange("equipment", next);
-            }}
-          />
-        </div>
-      ))}
-    </div>
-  </div>
-);
-
 // ─── Reference toggle button ──────────────────────────────────────────────────
 
 const RefToggle = ({ open, onToggle, label }) => (
@@ -281,142 +153,6 @@ const RefToggle = ({ open, onToggle, label }) => (
     {open ? `▲ Hide ${label}` : `▼ View ${label}`}
   </button>
 );
-
-// ─── Equipment picker modal ───────────────────────────────────────────────────
-
-const PICKER_TABS = [
-  {
-    label: "Ranged",
-    headers: [
-      "Name",
-      "Type",
-      "ROF",
-      "Range",
-      "Mod",
-      "DAM",
-      "Ton",
-      "FRO",
-      "MCU",
-      "Keywords",
-    ],
-    data: RANGED,
-    getCells: (w) => [
-      w.name,
-      w.type,
-      w.rof,
-      w.range,
-      w.mod,
-      w.dam,
-      w.ton,
-      w.fro,
-      w.mcu,
-      w.keywords || "—",
-    ],
-    getFields: (w) => ({
-      name: w.name,
-      mcuCost: String(w.mcu ?? ""),
-      fro: String(w.fro ?? ""),
-      tonnage: String(w.ton ?? ""),
-      notes: w.keywords || "",
-    }),
-  },
-  {
-    label: "Melee",
-    headers: [
-      "Name",
-      "Type",
-      "ROF",
-      "Range",
-      "Mod",
-      "DAM",
-      "Ton",
-      "FRO",
-      "MCU",
-      "Keywords",
-    ],
-    data: MELEE,
-    getCells: (w) => [
-      w.name,
-      w.type,
-      w.rof,
-      w.range,
-      w.mod,
-      w.dam,
-      w.ton,
-      w.fro,
-      w.mcu,
-      w.keywords || "—",
-    ],
-    getFields: (w) => ({
-      name: w.name,
-      mcuCost: String(w.mcu ?? ""),
-      fro: String(w.fro ?? ""),
-      tonnage: String(w.ton ?? ""),
-      notes: w.keywords || "",
-    }),
-  },
-  {
-    label: "Support",
-    headers: ["Name", "Loc", "Ton", "PFRO", "Qty", "MCU", "Effect"],
-    data: SUPPORT,
-    getCells: (s) => [s.name, s.loc, s.ton, s.pfro, s.qty, s.mcu, s.effect],
-    getFields: (s) => ({
-      name: s.name,
-      mcuCost: String(s.mcu ?? ""),
-      fro: String(s.pfro ?? ""),
-      tonnage: String(s.ton ?? ""),
-      notes: s.effect || "",
-    }),
-  },
-  {
-    label: "Munitions",
-    headers: ["Name", "DAM", "Effect"],
-    data: MUNITIONS,
-    getCells: (m) => [m.name, m.dam, m.effect],
-    getFields: (m) => ({
-      name: m.name,
-      mcuCost: "",
-      fro: "",
-      tonnage: "",
-      notes: m.effect || "",
-    }),
-  },
-  {
-    label: "Newtype",
-    headers: ["Name", "Limit", "MCU", "Effect"],
-    data: NEWTYPE_UPGRADES,
-    getCells: (n) => [n.name, n.limit, n.mcu, n.effect],
-    getFields: (n) => ({
-      name: n.name,
-      mcuCost: String(n.mcu ?? ""),
-      fro: "",
-      tonnage: "",
-      notes: n.effect || "",
-    }),
-  },
-  {
-    label: "Bits / Funnels",
-    headers: ["Type", "Cat", "Armor", "Range", "Mods", "DAM", "MCU", "Faction"],
-    data: BITS,
-    getCells: (b) => [
-      b.type,
-      b.cat,
-      b.armor,
-      b.range,
-      b.mods,
-      b.dam,
-      b.mcu,
-      b.faction,
-    ],
-    getFields: (b) => ({
-      name: b.type + " Bit",
-      mcuCost: String(b.mcu ?? ""),
-      fro: "",
-      tonnage: "",
-      notes: [b.range, b.mods, `DAM ${b.dam}`].filter(Boolean).join(" | "),
-    }),
-  },
-];
 
 const EquipmentPickerModal = ({ onClose, onSelect }) => {
   const [tab, setTab] = useState(0);
@@ -1101,13 +837,6 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
     </div>
   );
 };
-
-// ─── Six-pilot two-team tab wrapper ──────────────────────────────────────────
-
-const TEAMS = [
-  { label: "Team 1", color: "red", pilots: [0, 1, 2] },
-  { label: "Team 2", color: "dark-blue", pilots: [3, 4, 5] },
-];
 
 export const PilotSheet = () => {
   const [activeTab, setActiveTab] = useState(0);

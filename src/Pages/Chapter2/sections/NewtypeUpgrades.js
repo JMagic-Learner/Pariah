@@ -3,7 +3,7 @@ import { NewtypeUpgradesTable } from "../../../Components/Table/NewtypeUpgradesT
 export const NewtypeUpgrades = () => {
   return (
     <div>
-      <h2 className="f2 fw7 red bb pb2 mb3 tj">2.9 Newtype Upgrades</h2>
+      <h2 className="f2 fw7 red bb pb2 mb3 tc">2.9 Newtype Upgrades</h2>
       <p className="lh-copy tj mb2">
         Newtype Upgrades are exclusive enhancements available only to pilots
         with the <strong>NEWTYPE</strong> or <strong>CYBER-NEWTYPE</strong>{" "}

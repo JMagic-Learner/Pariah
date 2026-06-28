@@ -78,8 +78,16 @@ export const WeaponsEquipment = () => {
 
       <h3 className="f4 fw7 mt4 mb2 tj">Selling Weapons and Equipment</h3>
       <p className="lh-copy tj">
-        Each base weapon and support equipment that comes stock (marked as FREE)
-        on a MSU may be sold, but they only refund 10 MCU.
+        Each base weapon that comes stock (marked as FREE) on a MSU may be sold,
+        but they only refund 10 MCU.
+      </p>
+      <p className="lh-copy tj">
+        Each support equipment that comes stock (marked as FREE) on a MSU may be
+        sold for full refund.
+      </p>
+      <p className="lh-copy tj">
+        See Base Calculation costs from the LINKS TAB - Community MSU Folder -
+        Creating your own MSU
       </p>
 
       <h3 className="f4 fw7 mt4 mb2 lh-copy tj">

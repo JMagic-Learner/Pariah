@@ -936,7 +936,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "",
+          notes: `[INBUILT], MSU pulled 6" closer`,
         },
         {
           name: "Spiky Shoulders (ZEON)",
@@ -946,11 +946,11 @@ export const ZEON_PRESETS = [
           notes: "[BLITZ] collision: 15 damage + 1 per 3 inches traveled.",
         },
         {
-          name: "Arm Cannon [INBUILT]",
+          name: "Arm Cannon",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
-          notes: "[INBUILT]",
+          notes: "[AOE(6)] or [AP(5)],[INBUILT],[QUICK SWAP],[Limited Use(1)]",
         },
         B(),
         B(),
@@ -1474,8 +1474,9 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "2",
           tonnage: "1",
-          notes: "",
+          notes: "[CLEAVE(X)]",
         },
+
         {
           name: "Bazooka",
           mcuCost: "FREE",
@@ -2739,11 +2740,11 @@ export const ZEON_PRESETS = [
           notes: "",
         },
         {
-          name: "Vulcan Cannons [INBUILT]",
+          name: "Vulcan Cannons",
           mcuCost: "FREE",
           fro: "",
           tonnage: "",
-          notes: "[INBUILT]",
+          notes: "[FULL AUTO],[INBUILT]",
         },
         {
           name: "Heavy Boosters",
@@ -3288,11 +3289,11 @@ export const ZEON_PRESETS = [
       armorValue: "24",
       baseEquip: [
         {
-          name: "Vulcan Cannons [INBUILT]",
+          name: "Vulcan Cannons",
           mcuCost: "FREE",
           fro: "",
           tonnage: "",
-          notes: "[INBUILT]",
+          notes: "[FULL AUTO],[INBUILT]",
         },
         {
           name: "Beam Rifle",
@@ -3306,8 +3307,9 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "2",
           tonnage: "1",
-          notes: "",
+          notes: "[CLEAVE(X)]",
         },
+
         {
           name: "Shield (Shoulder)",
           mcuCost: "FREE",
@@ -3496,11 +3498,11 @@ export const ZEON_PRESETS = [
           notes: "",
         },
         {
-          name: "Vulcan Cannons [INBUILT]",
+          name: "Vulcan Cannons",
           mcuCost: "FREE",
           fro: "",
           tonnage: "",
-          notes: "[INBUILT]",
+          notes: "[FULL AUTO],[INBUILT]",
         },
         {
           name: "Shield + GL (ZEON)",
@@ -3568,11 +3570,11 @@ export const ZEON_PRESETS = [
       armorValue: "28",
       baseEquip: [
         {
-          name: "Vulcan Cannons [INBUILT]",
+          name: "Vulcan Cannons",
           mcuCost: "FREE",
           fro: "",
           tonnage: "",
-          notes: "[INBUILT]",
+          notes: "[FULL AUTO],[INBUILT]",
         },
         {
           name: "ATOMIC Bazooka",
@@ -3585,8 +3587,8 @@ export const ZEON_PRESETS = [
           name: "Beam Saber",
           mcuCost: "FREE",
           fro: "1",
-          tonnage: "2",
-          notes: "",
+          tonnage: "1",
+          notes: "[CLEAVE(X)]",
         },
         {
           name: "Heavy Shield (30)",

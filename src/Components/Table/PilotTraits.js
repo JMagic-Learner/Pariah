@@ -11,10 +11,10 @@ export const PilotTraits = () => {
         mt2: isMobile,
       })}
     >
-      <div className="center">
-        <div className="mh3">
-          <h1> Pricing </h1>
-          {!isMobile && (
+      {!isMobile && (
+        <div className="center">
+          <div className="mh3">
+            <h1> Traits </h1>(
             <div className="overflow-auto">
               <table className="f9 w-100 mh2" cellspacing="0">
                 <thead>
@@ -57,9 +57,8 @@ export const PilotTraits = () => {
                 </tbody>
               </table>
             </div>
-          )}
-
-          {isMobile && (
+            )
+            {/* {isMobile && (
             <div className="w-100">
               {TRAITS.map((entry) => {
                 return (
@@ -96,80 +95,103 @@ export const PilotTraits = () => {
                 );
               })}
             </div>
-          )}
-        </div>
+          )} */}
+          </div>
 
-        <div className="mh3">
-          <h1> Shipping, and some honest advice </h1>
-          <div
-            className={classNames("w-100", {
-              flex: !isMobile,
-            })}
-          >
+          <div className="mh3">
+            <h1> Shipping, and some honest advice </h1>
             <div
-              className={classNames({
-                "w-50 mr2": !isMobile,
-                "w-90 center": isMobile,
+              className={classNames("w-100", {
+                flex: !isMobile,
               })}
             >
-              <p className="tj">
-                Shipping miniatures is the trickiest part of the commision
-                business. Its the first and final step of any commision, and
-                arguably the most important factor.
-              </p>
+              <div
+                className={classNames({
+                  "w-50 mr2": !isMobile,
+                  "w-90 center": isMobile,
+                })}
+              >
+                <p className="tj">
+                  Shipping miniatures is the trickiest part of the commision
+                  business. Its the first and final step of any commision, and
+                  arguably the most important factor.
+                </p>
 
-              <p className="tj">
-                Before you even begin to think about shipping a miniature, you
-                have to think about it's likeliness to survive the trip. It is
-                generally safer to ship unassembled, or new on sprue miniatures
-                than fully assembled figures. If your miniature has some fragile
-                parts such as exposed spears, lances, swords,{" "}
-                <span className="fw6 red"> [INBUILT] </span> highly recommend
-                leaving the minature assembled and having the sprue act as
-                protective support.
-              </p>
+                <p className="tj">
+                  Before you even begin to think about shipping a miniature, you
+                  have to think about it's likeliness to survive the trip. It is
+                  generally safer to ship unassembled, or new on sprue
+                  miniatures than fully assembled figures. If your miniature has
+                  some fragile parts such as exposed spears, lances, swords,{" "}
+                  <span className="fw6 red"> [INBUILT] </span> highly recommend
+                  leaving the minature assembled and having the sprue act as
+                  protective support.
+                </p>
 
-              <p className="tj">
-                If for whatever reason, you do want to ship a fully assembled
-                miniature, please take a photograph of it's initial condition
-                prior to shipping. If it arrives damaged, or broken,{" "}
-                <span className="fw6 red"> [INBUILT] </span>
-                will return the miniature as is. There have been instances in
-                the past where a resin model has been shattered into oblivion by
-                rough handling at distribution centers, making it nearly
-                impossible to repair and continue the commision work.
-              </p>
+                <p className="tj">
+                  If for whatever reason, you do want to ship a fully assembled
+                  miniature, please take a photograph of it's initial condition
+                  prior to shipping. If it arrives damaged, or broken,{" "}
+                  <span className="fw6 red"> [INBUILT] </span>
+                  will return the miniature as is. There have been instances in
+                  the past where a resin model has been shattered into oblivion
+                  by rough handling at distribution centers, making it nearly
+                  impossible to repair and continue the commision work.
+                </p>
 
-              <p className="tj">
-                <span className="fw6 red"> [INBUILT] </span> in turn, will also
-                take a picture of the miniature when
-                <span className="fw6 red"> [INBUILT] </span> INBUILT send the
-                finished commision back to y
-                <span className="fw6 red"> [INBUILT] </span>ress. INBUILT will
-                most likely also take a final video of me packing the miniature
-                into it's parcel, prior to dropping it off a
-                <span className="fw6 red"> [INBUILT] </span> shipping company.
-                INBUILT will not be able to guarantee the level of handling from
-                the shipping company or it's affiliated distribution centers
-              </p>
-            </div>
+                <p className="tj">
+                  <span className="fw6 red"> [INBUILT] </span> in turn, will
+                  also take a picture of the miniature when
+                  <span className="fw6 red"> [INBUILT] </span> INBUILT send the
+                  finished commision back to y
+                  <span className="fw6 red"> [INBUILT] </span>ress. INBUILT will
+                  most likely also take a final video of me packing the
+                  miniature into it's parcel, prior to dropping it off a
+                  <span className="fw6 red"> [INBUILT] </span> shipping company.
+                  INBUILT will not be able to guarantee the level of handling
+                  from the shipping company or it's affiliated distribution
+                  centers
+                </p>
+              </div>
 
-            <div
-              className={classNames("", {
-                "w-50 ml2": !isMobile,
-                "w-90 center": isMobile,
-              })}
-            >
-              <img
-                className="db w-100"
-                src={
-                  "https://s3-us-west-2.amazonaws.com/prnt/elevaters030211_960.jpg"
-                }
-              />
+              <div
+                className={classNames("", {
+                  "w-50 ml2": !isMobile,
+                  "w-90 center": isMobile,
+                })}
+              >
+                <img
+                  className="db w-100"
+                  src={
+                    "https://s3-us-west-2.amazonaws.com/prnt/elevaters030211_960.jpg"
+                  }
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
+
+      {isMobile && (
+        <div className="w-100 h-100">
+          <h1> Traits </h1>
+          {TRAITS.map((trait, index) => (
+            <div
+              key={index}
+              className={classNames(" bg-light-gray fl mh1 ph1", {
+                "w-100 mb3": isMobile,
+              })}
+            >
+              <p className="fw7 ma0 mb1 red f6 tc"> {trait.name}</p>
+              <p className="lh-copy ma0 f7 tj">
+                Restriction(s): {trait?.restriction || "-"}{" "}
+              </p>
+              <p className="lh-copy ma0 f7 tj">Cost: {trait.cost}</p>
+              <p className="lh-copy ma0 f7 tj">Effect {trait.effect}</p>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

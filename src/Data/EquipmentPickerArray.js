@@ -1,0 +1,141 @@
+import { RANGED } from "./RangedWeaponsArray";
+import { MELEE } from "./MeleeWeaponsArray";
+import { MUNITIONS } from "./MunitionsArray";
+import { SUPPORT } from "./SupportEquipmentArray";
+import { NEWTYPE_UPGRADES } from "./NewtypeUpgrades";
+import { BITS } from "./NewtypeUpgrades";
+// ─── Equipment picker modal ───────────────────────────────────────────────────
+
+export const PICKER_TABS = [
+  {
+    label: "Ranged",
+    headers: [
+      "Name",
+      "Type",
+      "ROF",
+      "Range",
+      "Mod",
+      "DAM",
+      "Ton",
+      "FRO",
+      "MCU",
+      "Keywords",
+    ],
+    data: RANGED,
+    getCells: (w) => [
+      w.name,
+      w.type,
+      w.rof,
+      w.range,
+      w.mod,
+      w.dam,
+      w.ton,
+      w.fro,
+      w.mcu,
+      w.keywords || "—",
+    ],
+    getFields: (w) => ({
+      name: w.name,
+      mcuCost: String(w.mcu ?? ""),
+      fro: String(w.fro ?? ""),
+      tonnage: String(w.ton ?? ""),
+      notes: w.keywords || "",
+    }),
+  },
+  {
+    label: "Melee",
+    headers: [
+      "Name",
+      "Type",
+      "ROF",
+      "Range",
+      "Mod",
+      "DAM",
+      "Ton",
+      "FRO",
+      "MCU",
+      "Keywords",
+    ],
+    data: MELEE,
+    getCells: (w) => [
+      w.name,
+      w.type,
+      w.rof,
+      w.range,
+      w.mod,
+      w.dam,
+      w.ton,
+      w.fro,
+      w.mcu,
+      w.keywords || "—",
+    ],
+    getFields: (w) => ({
+      name: w.name,
+      mcuCost: String(w.mcu ?? ""),
+      fro: String(w.fro ?? ""),
+      tonnage: String(w.ton ?? ""),
+      notes: w.keywords || "",
+    }),
+  },
+  {
+    label: "Support",
+    headers: ["Name", "Loc", "Ton", "PFRO", "Qty", "MCU", "Effect"],
+    data: SUPPORT,
+    getCells: (s) => [s.name, s.loc, s.ton, s.pfro, s.qty, s.mcu, s.effect],
+    getFields: (s) => ({
+      name: s.name,
+      mcuCost: String(s.mcu ?? ""),
+      fro: String(s.pfro ?? ""),
+      tonnage: String(s.ton ?? ""),
+      notes: s.effect || "",
+    }),
+  },
+  {
+    label: "Munitions",
+    headers: ["Name", "DAM", "Effect"],
+    data: MUNITIONS,
+    getCells: (m) => [m.name, m.dam, m.effect],
+    getFields: (m) => ({
+      name: m.name,
+      mcuCost: "",
+      fro: "",
+      tonnage: "",
+      notes: m.effect || "",
+    }),
+  },
+  {
+    label: "Newtype",
+    headers: ["Name", "Limit", "MCU", "Effect"],
+    data: NEWTYPE_UPGRADES,
+    getCells: (n) => [n.name, n.limit, n.mcu, n.effect],
+    getFields: (n) => ({
+      name: n.name,
+      mcuCost: String(n.mcu ?? ""),
+      fro: "",
+      tonnage: "",
+      notes: n.effect || "",
+    }),
+  },
+  {
+    label: "Bits / Funnels",
+    headers: ["Type", "Cat", "Armor", "Range", "Mods", "DAM", "MCU", "Faction"],
+    data: BITS,
+    getCells: (b) => [
+      b.type,
+      b.cat,
+      b.armor,
+      b.range,
+      b.mods,
+      b.dam,
+      b.mcu,
+      b.faction,
+    ],
+    getFields: (b) => ({
+      name: b.type + " Bit",
+      mcuCost: String(b.mcu ?? ""),
+      fro: "",
+      tonnage: "",
+      notes: [b.range, b.mods, `DAM ${b.dam}`].filter(Boolean).join(" | "),
+    }),
+  },
+];

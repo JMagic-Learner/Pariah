@@ -3322,8 +3322,8 @@ export const EF_PRESETS = [
           name: "Beam Saber",
           mcuCost: "FREE",
           fro: "1",
-          tonnage: "2",
-          notes: "",
+          tonnage: "1",
+          notes: "[CLEAVE(X)]",
         },
         {
           name: "Vulcan Cannons",
@@ -3838,8 +3838,8 @@ export const EF_PRESETS = [
           name: "Beam Saber",
           mcuCost: "FREE",
           fro: "1",
-          tonnage: "2",
-          notes: "",
+          tonnage: "1",
+          notes: "[CLEAVE(X)]",
         },
         {
           name: "Vulcan Cannons",
@@ -3946,8 +3946,8 @@ export const EF_PRESETS = [
           name: "Beam Saber",
           mcuCost: "FREE",
           fro: "1",
-          tonnage: "2",
-          notes: "",
+          tonnage: "1",
+          notes: "[CLEAVE(X)]",
         },
         {
           name: "Vulcan Cannons",
