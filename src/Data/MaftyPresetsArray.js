@@ -128,7 +128,7 @@ export const MAFTY_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
-          notes: "[BOOST(1)] is now [BOOST(2)]",
+          notes: "[BOOST(1)] becomes [BOOST(2)]",
         },
         {
           name: "Beam Saber",

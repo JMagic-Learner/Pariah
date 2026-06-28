@@ -353,7 +353,7 @@ export const SUPPORT = [
     name: "Panoptic Canopy",
     loc: "Torso",
     ton: 2,
-    pfro: 0,
+    pfro: "–",
     qty: 1,
     mcu: 50,
     effect: "360° LOS but still fires from front arc only.",
