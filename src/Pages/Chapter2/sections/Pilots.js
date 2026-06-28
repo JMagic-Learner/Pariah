@@ -14,7 +14,7 @@ export const Pilots = () => {
         Section 2.3
       </p>
 
-      <h3 className="f4 fw7 mt4 mb2 tj">Base Statistics</h3>
+      <h3 className="f4 fw7 mt4 mb2 tj">[PILOTS] Default Characteristics</h3>
       <p className="lh-copy tj">
         Gunnery (GS) - Used to make ranged attacks. Begins at base value 1
       </p>
