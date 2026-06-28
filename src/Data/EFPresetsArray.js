@@ -833,28 +833,32 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[MUNITIONS]: Smoke",
+          notes:
+            "[MUNITIONS]: Smoke,[INDIRECT],[QUICK SWAP],[Limited Use(1)],[THROW]",
         },
         {
           name: "Grenade",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[MUNITIONS]: Smoke",
+          notes:
+            "[MUNITIONS]: Smoke,[INDIRECT],[QUICK SWAP],[Limited Use(1)],[THROW]",
         },
         {
           name: "Grenade",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[MUNITIONS]: AP",
+          notes:
+            "[MUNITIONS]: AP,[INDIRECT],[QUICK SWAP],[Limited Use(1)],[THROW]",
         },
         {
           name: "Grenade",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[MUNITIONS]: AP",
+          notes:
+            "[MUNITIONS]: AP,[INDIRECT],[QUICK SWAP],[Limited Use(1)],[THROW]",
         },
         {
           name: "Machine Gun",
@@ -1637,7 +1641,6 @@ export const EF_PRESETS = [
           tonnage: "1",
           notes: "[AKIMBO],[AP(5)]",
         },
-
         {
           name: "Gauntlets",
           mcuCost: "FREE",
@@ -2286,10 +2289,17 @@ export const EF_PRESETS = [
           notes: "No movement penalty sideways; can BOOST sideways.",
         },
         {
-          name: "Missile Pod 3 x 2 (MOUNTED)",
+          name: "Missile Pod 3 (MOUNTED)",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "4",
+          tonnage: "2",
+          notes: "[MISSILE(16)],[MOUNTABLE],[Limited Use(1)]",
+        },
+        {
+          name: "Missile Pod 3 (MOUNTED)",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "2",
           notes: "[MISSILE(16)],[MOUNTABLE],[Limited Use(1)]",
         },
         {
@@ -2299,7 +2309,6 @@ export const EF_PRESETS = [
           tonnage: "2",
           notes: "[MISSILE(16)],[MOUNTABLE],[Limited Use(1)]",
         },
-        B(),
       ],
       addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
       locations: {
@@ -2365,14 +2374,14 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "3",
-          notes: "",
+          notes: "[FULL AUTO]",
         },
         {
           name: "Grenades x 6",
           mcuCost: "FREE",
           fro: "",
           tonnage: "6",
-          notes: "",
+          notes: "[MUNITIONS],[INDIRECT],[QUICK SWAP],[Limited Use(1)],[THROW]",
         },
         {
           name: "Arm Cannons",
@@ -2498,21 +2507,24 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[INDIRECT], [QUICK SWAP], [Limited Use(1)], [THROW]",
+          notes:
+            "[MUNITIONS],[INDIRECT], [QUICK SWAP], [Limited Use(1)], [THROW]",
         },
         {
           name: "Grenades",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[INDIRECT], [QUICK SWAP], [Limited Use(1)], [THROW]",
+          notes:
+            "[MUNITIONS],[INDIRECT], [QUICK SWAP], [Limited Use(1)], [THROW]",
         },
         {
           name: "Grenades",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[INDIRECT], [QUICK SWAP], [Limited Use(1)], [THROW]",
+          notes:
+            "[MUNITIONS],[INDIRECT], [QUICK SWAP], [Limited Use(1)], [THROW]",
         },
         B(),
       ],
@@ -2589,7 +2601,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "1/0",
           tonnage: "1/2",
-          notes: "",
+          notes: "Choose one weapon at loadout",
         },
         {
           name: "Vulcan Cannons",
@@ -2684,11 +2696,18 @@ export const EF_PRESETS = [
         },
         { name: "Shield", mcuCost: "FREE", fro: "", tonnage: "2", notes: "" },
         {
-          name: "2 x Beam Saber",
+          name: "Beam Saber",
           mcuCost: "FREE",
           fro: "1",
-          tonnage: "2",
-          notes: "",
+          tonnage: "1",
+          notes: "[CLEAVE(X)]",
+        },
+        {
+          name: "Beam Saber",
+          mcuCost: "FREE",
+          fro: "1",
+          tonnage: "1",
+          notes: "[CLEAVE(X)]",
         },
         {
           name: "Vulcan Cannons",
@@ -2704,7 +2723,6 @@ export const EF_PRESETS = [
           tonnage: "2",
           notes: "360° LOS but still fires from front arc only.",
         },
-        B(),
         B(),
         B(),
       ],
@@ -3132,21 +3150,24 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[INDIRECT], [QUICK SWAP], [Limited Use(1)], [THROW]",
+          notes:
+            "[MUNITIONS],[INDIRECT], [QUICK SWAP], [Limited Use(1)], [THROW]",
         },
         {
           name: "Grenades",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[INDIRECT], [QUICK SWAP], [Limited Use(1)], [THROW]",
+          notes:
+            "[MUNITIONS],[INDIRECT], [QUICK SWAP], [Limited Use(1)], [THROW]",
         },
         {
           name: "Grenades",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[INDIRECT], [QUICK SWAP], [Limited Use(1)], [THROW]",
+          notes:
+            "[MUNITIONS],[INDIRECT], [QUICK SWAP], [Limited Use(1)], [THROW]",
         },
         {
           name: "Beam Saber",
@@ -3730,11 +3751,18 @@ export const EF_PRESETS = [
         },
         { name: "Shield", mcuCost: "FREE", fro: "", tonnage: "2", notes: "" },
         {
-          name: "2x Beam Saber",
+          name: "Beam Saber",
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "PsychoFrame",
+          notes: "[CLEAVE(X)]",
+        },
+        {
+          name: "Beam Saber",
+          mcuCost: "FREE",
+          fro: "1",
+          tonnage: "1",
+          notes: "[CLEAVE(X)]",
         },
         {
           name: "Vulcan Cannons",
@@ -3764,7 +3792,6 @@ export const EF_PRESETS = [
           tonnage: "8",
           notes: "[AOE(6)], [BRACE]",
         },
-        B(),
       ],
       addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
       locations: {

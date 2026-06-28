@@ -26,7 +26,7 @@ export const Navigation = () => {
             })}
             to="/"
           >
-            Gundam Flashpoint
+            Gundam Flashpoint 0.6.8
           </Link>
         </div>
 
