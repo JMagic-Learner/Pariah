@@ -1,9 +1,7 @@
 export const SupportUnitsOverview = () => {
   return (
     <div>
-      <h2 className="f2 fw7 dark-red bb pb2 mb3">
-        5.0 — Support Units Overview
-      </h2>
+      <h2 className="f2 fw7 red bb pb2 mb3">5.0 — Support Units Overview</h2>
 
       <p className="lh-copy mb3">
         Support Units represent the broader forces of the Universal Century

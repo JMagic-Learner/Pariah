@@ -88,13 +88,23 @@ export const SUPPORT = [
   },
   {
     name: "CAMO Cloak",
-    loc: "Torso",
+    loc: "All Locations",
     ton: "-",
     pfro: "",
     qty: 1,
     mcu: 35,
     effect:
       "In the deployment phase, MSU equipped with the CAMO Cloak may deploy after the opponent has finished deploying their entire force",
+  },
+  {
+    name: "Command Interface",
+    loc: "Head/Torso",
+    ton: 4,
+    pfro: "1 PFRO",
+    qty: 1,
+    mcu: 50,
+    effect:
+      "All friendly MSU (including itself) within 8 inches receives a +1 modifier to PS",
   },
   {
     name: "Command Protocol",
@@ -415,12 +425,13 @@ export const SUPPORT = [
   },
   {
     name: "Recoil Counterbalance",
-    loc: "Arms (Both)",
+    loc: "Any",
     ton: 1,
     pfro: "1 PFRO",
     qty: 1,
     mcu: 35,
-    effect: "[FULL AUTO] weapons do not incur the -2 hit modifier.",
+    effect:
+      "[FULL AUTO] weapons do not incur the -2 hit modifier if Recoil Counterbalance is in the same hit location.",
   },
   {
     name: "Reinforced Hydraulics",
@@ -495,9 +506,9 @@ export const SUPPORT = [
     ton: "–",
     pfro: "–",
     qty: "–",
-    mcu: 35,
+    mcu: 25,
     effect:
-      "When this [PILOT] declares an attack with a ROF 1 weapon, the target cannot reroll the Evasion roll or any Evasion dice. The target is also treated as if it was one Evasion tier lower",
+      "When this [PILOT] declares an attack with a ROF 1 or ROF 2 weapon, the target cannot reroll the Evasion roll or any Evasion dice. The target is also treated as if it was one Evasion tier lower",
   },
   {
     name: "Spiky Shoulders",

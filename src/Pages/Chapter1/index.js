@@ -1,9 +1,7 @@
 export const Chapter1 = () => {
   return (
     <div className="w-90 center pv4">
-      <h1 className="f1 fw9 dark-red bb pb3 mb4">
-        Chapter 1: What is Flashpoint?
-      </h1>
+      <h1 className="f1 fw9 red bb pb3 mb4">Chapter 1: What is Flashpoint?</h1>
 
       <div className="flex-ns">
         <div className="w-60-ns mr5-ns">
@@ -23,9 +21,7 @@ export const Chapter1 = () => {
             a wide pool of lore.
           </p>
 
-          <h2 className="f3 fw7 dark-red mt4 mb2">
-            What is Universal Century?
-          </h2>
+          <h2 className="f3 fw7 red mt4 mb2">What is Universal Century?</h2>
           <p className="tj lh-copy">
             Universal Century (UC) is the timeline setting where the original
             Gundam series took place, originally airing on April 7, 1979. (UC)
@@ -39,7 +35,7 @@ export const Chapter1 = () => {
             abilities.
           </p>
 
-          <h2 className="f3 fw7 dark-red mt4 mb2">Mobile Suits and Gundams</h2>
+          <h2 className="f3 fw7 red mt4 mb2">Mobile Suits and Gundams</h2>
           <p className="tj lh-copy">
             Mobile Suits are bipedal machines ranging in height from 15m to
             116m. All mobile suits use a fusion reactor that consumes Helium-3.
@@ -60,7 +56,7 @@ export const Chapter1 = () => {
         <div className="w-40-ns">
           {/* What to ring */}
           <div className="ba b--black-20 pa3 mb4 bg-near-white">
-            <h3 className="f4 fw7 dark-red mt0 mb3">What to ring</h3>
+            <h3 className="f4 fw7 red mt0 mb3">What to ring</h3>
             <ul className="pl3 lh-copy">
               <li className="pv1">wo D6 (six-sided dice)</li>
               <li className="pv1">
@@ -75,7 +71,7 @@ export const Chapter1 = () => {
 
           {/* Earth Federation */}
           <div className="ba b--black-20 pa3 mb4">
-            <h3 className="f4 fw7 dark-red mt0 mb2">Earth Federation</h3>
+            <h3 className="f4 fw7 red mt0 mb2">Earth Federation</h3>
             <p className="lh-copy f6 tj">
               (UC) Earth Federation was formed in the pre-(UC) era when
               overpopulation caused famines, outbreaks of disease, and wars over
@@ -91,7 +87,7 @@ export const Chapter1 = () => {
 
           {/* ZEO */}
           <div className="ba b--black-20 pa3 mb4">
-            <h3 className="f4 fw7 dark-red mt0 mb2">Principality of ZEO</h3>
+            <h3 className="f4 fw7 red mt0 mb2">Principality of ZEO</h3>
             <p className="lh-copy f6 tj">
               When Zeon Zum Deikun died in (UC) 0068, Degwin Sodo Zabi seized
               control and pushed for rapid military development. Research by
@@ -106,7 +102,7 @@ export const Chapter1 = () => {
 
           {/* Scaling reference */}
           <div className="ba b--black-20 pa3">
-            <h3 className="f4 fw7 dark-red mt0 mb2">MC Cost Formula</h3>
+            <h3 className="f4 fw7 red mt0 mb2">MC Cost Formula</h3>
             <p className="f6 lh-copy mb2">
               ase MS cost is calculated as follows:
             </p>

@@ -1,21 +1,21 @@
 export const Movement = () => {
   return (
     <div>
-      <h2 className="f2 fw7 dark-red bb pb2 mb3">3.2 — Facing and Movement</h2>
+      <h2 className="f2 fw7 red bb pb2 mb3">3.2 — Facing and Movement</h2>
 
       {/* Measuring Distance and LOS */}
       <div className="bg-near-white ba b--black-10 br2 pa3 mb4">
-        <h3 className="f4 fw7 dark-red mt0 mb2">
+        <h3 className="f4 fw7 red mt0 mb2">
           Measuring Distance and Line of Sight
         </h3>
         <ul className="lh-copy pl3 f6 ma0">
           <li className="pv1">
-            <span className="fw6">Distance</span> is measured from any part of
-            the base.
+            <span className="fw6 red">Distance</span> is measured from any part
+            of the base.
           </li>
           <li className="pv1">
-            <span className="fw6">Line of Sight</span> is measured from any part
-            of the Front Facing arc and to [HEAD] level.
+            <span className="fw6 red">Line of Sight</span> is measured from any
+            part of the Front Facing arc and to [HEAD] level.
           </li>
           <li className="pv1">
             Firing arcs, [BOOST(X)] paths, and rear arc vulnerability are all
@@ -26,12 +26,15 @@ export const Movement = () => {
 
       {/* Evasion Tier Table */}
       <div className="bg-near-white ba b--black-10 br2 pa3 mb3">
-        <h3 className="f4 fw7 dark-red mt0 mb2">Evasion Tier Table</h3>
+        <h3 className="f4 fw7 red mt0 mb2">Evasion Tier Table</h3>
         <p className="lh-copy f6 mb3">
           Total movement made during the Movement Phase determines how many
-          evasion dice a [PILOT] rolls when defending against attacks. Distance
-          moved from all [MOVEMENT] actions (ADVANCE, BLITZ, BOOST) and [FALL]
-          counts toward this total. (Yes, thats right, you can fall from [HOVER]
+          evasion dice a <span className="fw6 red"> [PILOT]</span> rolls when
+          defending against attacks. Distance moved from all{" "}
+          <span className="fw6 red"> [MOVEMENT] </span> actions (ADVANCE, BLITZ,
+          BOOST) and <span className="fw6 red"> [FALL] </span> counts toward
+          this total. (Yes, thats right, you can fall from{" "}
+          <span className="fw6 red"> [HOVER] </span>
           state and count that as movement for Evasion Tier calculations)
         </p>
         <div className="overflow-auto">
@@ -54,7 +57,7 @@ export const Movement = () => {
             </thead>
             <tbody className="lh-copy">
               <tr>
-                <td className="pv2 pr3 bb b--black-20 fw6 dark-red">
+                <td className="pv2 pr3 bb b--black-20 fw6 red">
                   Tier 1 — Slow
                 </td>
                 <td className="pv2 pr3 bb b--black-20">0″ – 8″</td>
@@ -62,7 +65,7 @@ export const Movement = () => {
                 <td className="pv2 pr3 bb b--black-20 fw6">+ 1 GS</td>
               </tr>
               <tr>
-                <td className="pv2 pr3 bb b--black-20 fw6 dark-red">
+                <td className="pv2 pr3 bb b--black-20 fw6 red">
                   Tier 2 — Moving
                 </td>
                 <td className="pv2 pr3 bb b--black-20">9″ – 20″</td>
@@ -70,10 +73,10 @@ export const Movement = () => {
                 <td className="pv2 pr3 bb b--black-20 fw6"> N/A </td>
               </tr>
               <tr>
-                <td className="pv2 pr3 fw6 dark-red">Tier 3 — Fast</td>
+                <td className="pv2 pr3 fw6 red">Tier 3 — Fast</td>
                 <td className="pv2 pr3">21″ +</td>
                 <td className="pv2 pr3 fw6">2d3 + PS + 1</td>
-                <td className="pv2 pr3 bb b--black-20 fw6"> -1 </td>
+                <td className="pv2 pr3 bb b--black-20 fw6"> -1 GS </td>
               </tr>
             </tbody>
           </table>
@@ -85,22 +88,28 @@ export const Movement = () => {
 
       {/* MOVE Action */}
       <div className="bg-near-white ba b--black-10 br2 pa3 mb3">
-        <h3 className="f4 fw7 dark-red mt0 mb1">
-          [ADVANCE]{" "}
-          <span className="fw4 f5">[MOVEMENT] [1 FRO] [1 ACTION]</span>
+        <h3 className="f4 fw7 red mt0 mb1">
+          [ADVANCE]
+          <span className="fw4 f5">
+            <span className="fw6 red"> [MOVEMENT] </span> [1 FRO] [1 ACTION]
+          </span>
         </h3>
         <p className="lh-copy f6 mb2">
-          An MSU can move forward up to its [MOVEMENT] value in inches.
+          An MSU can move forward up to its{" "}
+          <span className="fw6 red"> [MOVEMENT] </span> value in inches.
         </p>
         <ul className="lh-copy pl3 f6 ma0">
           <li className="pv1">
-            Turning one hex facing, moving backwards, or moving sideways each
-            cost <span className="fw6">2 inches of movement</span>.
+            <span className="fw6 red">
+              Turning one hex facing, moving backwards, or moving sideways each
+              cost 2 inches of movement
+            </span>
+            .
           </li>
           <li className="pv1">
-            Moving or flying <span className="fw6">vertically</span> (jumping)
-            costs{" "}
-            <span className="fw6">
+            Moving or flying <span className="fw6 red">vertically</span>{" "}
+            (jumping) costs{" "}
+            <span className="fw6 red">
               2 inches of movement per 1 inch of height
             </span>{" "}
             travelled.
@@ -110,13 +119,18 @@ export const Movement = () => {
             begins its activation in mid-air must choose one of the following:
             <ul className="pl3 mt1">
               <li className="pv1">
-                <span className="fw6">[FALL]</span> — drop to ground level at no
-                movement cost. The MSU takes fall damage (see below).
+                <span className="fw6 red">
+                  <span className="fw6 red"> [FALL] </span>
+                </span>{" "}
+                — drop to ground level at no movement cost. The MSU takes fall
+                damage (see below).
               </li>
               <li className="pv1">
-                <span className="fw6">[HOVER]</span> — the MSU expends 1 FRO
-                during Step 1.2 of the Status Phase to maintain its current
-                altitude for the round.
+                <span className="fw6 red">
+                  <span className="fw6 red"> [HOVER] </span>
+                </span>{" "}
+                — the MSU expends 1 FRO during Step 1.2 of the Status Phase to
+                maintain its current altitude for the round.
               </li>
             </ul>
           </li>
@@ -125,66 +139,75 @@ export const Movement = () => {
             the MSU to adjust its stance to better benefit from [HARD COVER].
           </li>
         </ul>
-        <p className="lh-copy f7 dark-red mt2 mb0">
-          Fall damage: If an MSU falls for any reason, the [PILOT] makes a PS 5
-          Skill Check. If the [PILOT] fails, it's MSU will suffers 3 damage per
-          4 inches of distance to one hit location. If the [PILOT] succeeds at
-          this PS 5 Skill Check, the [PILOT]/MSU may also make a [ATTACK] action
-          if the MSU finishes its [FALL] movement within melee range of enemy
-          [PILOT]s/MSU
+        <p className="lh-copy f7 red mt2 mb0">
+          Fall damage: If an MSU falls for any reason, the{" "}
+          <span className="fw6 red"> [PILOT]</span> makes a PS 5 Skill Check. If
+          the <span className="fw6 red"> [PILOT]</span> fails, it's MSU will
+          suffers 3 damage per 4 inches of distance to one hit location. If the{" "}
+          <span className="fw6 red"> [PILOT]</span> succeeds at this PS 5 Skill
+          Check, the <span className="fw6 red"> [PILOT]</span>/MSU may also make
+          a <span className="fw6 red"> [ATTACK] </span> action if the MSU
+          finishes its <span className="fw6 red"> [FALL] </span> movement within
+          melee range of enemy <span className="fw6 red"> [PILOT]</span>s/MSU
         </p>
       </div>
 
       {/* BOOST Action */}
       <div className="bg-near-white ba b--black-10 br2 pa3 mb3">
-        <h3 className="f4 fw7 dark-red mt0 mb1">
+        <h3 className="f4 fw7 red mt0 mb1">
           [BOOST(X)]{" "}
           <span className="fw4 f5">
-            [MOVEMENT] [Move X inches forward per 1 FRO spent]
+            <span className="fw6 red"> [MOVEMENT] </span> [Move X inches forward
+            per 1 FRO spent]
           </span>
         </h3>
         <p className="lh-copy f6 mb2">
           An MSU that BOOST9(X) can accelerate directly forward or vertically{" "}
-          <span className="fw6">[X] inches</span> by spending{" "}
-          <span className="fw6">1 FRO</span>.
+          <span className="fw6 red">[X] inches</span> by spending{" "}
+          <span className="fw6 red">1 FRO</span>.
         </p>
         <ul className="lh-copy pl3 f6 ma0">
           <li className="pv1">
-            All MSUs have <span className="fw6">[BOOST(1)]</span> by default.
-            The Heavy Boosters support equipment upgrades this to [BOOST(2)].
+            All MSUs have <span className="fw6 red">[BOOST(1)]</span> by
+            default. The Heavy Boosters support equipment upgrades this to
+            <span className="fw6 red"> [BOOST(2)]</span>.
           </li>
           <li className="pv1">
-            An MSU may [BOOST] more than once per activation, as long as it can
-            pay the [FRO] cost for each [BOOST].
+            An MSU may <span className="fw6 red"> [BOOST] </span> more than once
+            per activation, as long as it can pay the [FRO] cost for each{" "}
+            <span className="fw6 red"> [BOOST] </span>.
           </li>
           <li className="pv1">
-            An MSU may also use a [BOOST] to{" "}
-            <span className="fw6">turn one hex facing</span> instead of moving
-            forward or vertically.
+            An MSU may also use a <span className="fw6 red"> [BOOST] </span> to{" "}
+            <span className="fw6 red">turn one hex facing</span> instead of
+            moving forward or vertically.
           </li>
           <li className="pv1">
-            [BOOST] movement is counted when calculating Evasion modifiers from
-            the Evasion Tier Table.
+            <span className="fw6 red"> [BOOST] </span> movement is counted when
+            calculating Evasion modifiers from the Evasion Tier Table.
           </li>
         </ul>
       </div>
 
       {/* BLITZ Maneuver */}
       <div className="bg-near-white ba b--black-10 br2 pa3 mb3">
-        <h3 className="f4 fw7 dark-red mt0 mb1">
-          [BLITZ] <span className="fw4 f5">[MOVEMENT] [2 Actions] [1 FRO]</span>
+        <h3 className="f4 fw7 red mt0 mb1">
+          [BLITZ]{" "}
+          <span className="fw4 f5">
+            <span className="fw6 red"> [MOVEMENT] </span> [2 Actions] [1 FRO]
+          </span>
         </h3>
         <p className="lh-copy f6 mb2 i">
           Maneuvers are special actions that require two Actions to perform.
         </p>
         <ul className="lh-copy pl3 f6 ma0">
           <li className="pv1">
-            <span className="fw6">Minimum distance:</span> 10 inches between the
-            Blitzing MSU and the target MSU at the start of the action.
+            <span className="fw6 red">Minimum distance:</span> 6 inches between
+            the Blitzing MSU and the target MSU at the start of the action.
           </li>
           <li className="pv1">
             This movement must be in a{" "}
-            <span className="fw6">straight line</span>.
+            <span className="fw6 red">straight line</span>.
           </li>
           <li className="pv1">
             Move the Blitzing MSU double its base movement, and increase its
@@ -192,26 +215,26 @@ export const Movement = () => {
           </li>
           <li className="pv1">
             If the enemy MSU has LOS to the Blitzing MSU, the enemy may spend an
-            Action to evade. That MSU rolls a PS Skill Check 7. If successful,
-            the opposing MSU may move its base movement sideways without
-            penalty.
+            Action to evade. That MSU rolls a Evasion Check vs a static value of
+            6. If successful, the opposing MSU may move its base movement
+            sideways without penalty.
           </li>
           <li className="pv1">
             If the Blitzing MSU comes into contact with one or more enemy MSUs,
-            those MSUs are pushed along the straight path. A single [Blitz] can
+            those MSUs are pushed along the straight path. A single [BLITZ] can
             push multiple MSUs simultaneously.
           </li>
           <li className="pv1">
-            <span className="fw6">Collision damage:</span>
+            <span className="fw6 red">Collision damage:</span>
             <ul className="pl3 mt1">
               <li className="pv1">
                 Target MSU:{" "}
-                <span className="fw6">10 damage + 1 per 3 inches</span> of
+                <span className="fw6 red">10 damage + 1 per 3 inches</span> of
                 movement.
               </li>
               <li className="pv1">
                 Blitzing MSU:{" "}
-                <span className="fw6">5 damage + 1 per 3 inches</span> of
+                <span className="fw6 red">5 damage + 1 per 3 inches</span> of
                 movement.
               </li>
             </ul>
@@ -225,15 +248,18 @@ export const Movement = () => {
 
       {/* REPOSE */}
       <div className="bg-near-white ba b--black-10 br2 pa3 mb3">
-        <h3 className="f4 fw7 dark-red mt0 mb2">
-          [REPOSE] <span className="fw4 f5">[MOVEMENT]</span>
+        <h3 className="f4 fw7 red mt0 mb2">
+          [REPOSE]{" "}
+          <span className="fw4 f5">
+            <span className="fw6 red"> [MOVEMENT] </span>
+          </span>
         </h3>
         <p className="lh-copy f6 ma0">
           Repositioning the MSU may allow a player to adjust its model to better
           benefit from [HARD COVER]. For example, a player may repose the MSU
           into a crouching position, shifting [HARD COVER] protection to also
           cover the Torso. Reposing counts as{" "}
-          <span className="fw6">4 inches of movement</span>.
+          <span className="fw6 red">4 inches of movement</span>.
         </p>
       </div>
     </div>

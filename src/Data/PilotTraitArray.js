@@ -11,10 +11,22 @@ export const TRAITS = [
     effect: "This [PILOT] may declare [BLITZ] as a reaction.",
   },
   {
+    name: "Aggressive",
+    cost: 1,
+    effect:
+      "After declaring an [ATTACK] or [REACTIVE ATTACK] action, the [PILOT]/MSU may move 4 inches forward. This movement cannot be used to rotate facing",
+  },
+  {
     name: "Back Stabber",
     cost: 1,
     effect:
       "Melee attacks against an MSU's rear arc inflict one additional hit location.",
+  },
+  {
+    name: "Beam Specialist",
+    cost: 1,
+    effect:
+      "Reduce the active FRO cost of Beam Weapons by 1, to a mininum of 1.",
   },
   {
     name: "Boost Assault",
@@ -37,6 +49,12 @@ export const TRAITS = [
     restrictions: "Limited 1 per [FIRETEAM]",
   },
   {
+    name: "CORRUPT GOVERNMENT (EF GENERAL)",
+    cost: 0,
+    effect: "Represents an unspent Trait point. Gain +50 MCU",
+    restrictions: "Earth Federation Only",
+  },
+  {
     name: "CQ Specialist",
     cost: 2,
     effect:
@@ -51,7 +69,7 @@ export const TRAITS = [
       "THe [PILOT] may not exchange for a faction bonus that gives a free trait.",
   },
   {
-    name: "Cyber-Newtype",
+    name: "Cyber-Newtype (TITANS)",
     cost: 1,
     effect:
       "Increase one of the [PILOTS] stats by one. This [PILOT] now gains access to [NEWTYPE] traits",
@@ -98,6 +116,12 @@ export const TRAITS = [
     effect: "This [PILOT] can never be affected by [FEAR/SHAKEN].",
   },
   {
+    name: "Freelancer",
+    cost: 1,
+    effect:
+      "This [PILOT] can purchase a MSU from any [FACTION], but does not receive the any [FACTION] bonuses.",
+  },
+  {
     name: "Generous",
     cost: 1,
     effect:
@@ -110,10 +134,22 @@ export const TRAITS = [
       "[MUNITIONS] for grenades and grenade launchers gain AOE[6]. Frag Munitions are now [AOE(9)].",
   },
   {
+    name: "Guardian Angel",
+    cost: 2,
+    effect:
+      "All friendly MSU within 8 inches of this [PILOT]/MSU can reroll one of their evasion dice.",
+  },
+  {
     name: "Guerilla Ops",
     cost: 1,
     effect:
       "If this MSU is within OBSCURING COVER, incoming ranged attacks suffer a -1 GS penalty.",
+  },
+  {
+    name: "Guns Blazing",
+    cost: 3,
+    effect:
+      "When declaring [SIMULTANEOUS ATTACK], the [PILOT] may now nominate one additional ranged weapon to fire at a -1 trait mod (such that three weapons fire per [SIMULTANEOUS ATTACK], with the third weapon suffering a -3 mod total). In addition, [MOUNTED] weapons are now eligible for [REACTIVE ATTACKS]",
   },
   { name: "Gunnery", cost: 2, effect: "Increase Gunnery by 1 (Stackable)." },
   {
@@ -152,17 +188,17 @@ export const TRAITS = [
       "Increase the total tonnage by 12 (+4 Equipment Tonnage) OR increase FRO by 2.",
   },
   {
-    name: "Mechanic Pro",
+    name: "Mechanic Pro (EFGF)",
     cost: 2,
     effect:
       "Reduce the FRO requirement of one weapon by 2 and obtain one Hardpoint equipment slot. The [PILOT]'s MSU may purchase Extra Armor at 5 MCU per.",
     restrictions: "EARTH FEDERATION GROUND FORCES ONLY",
   },
   {
-    name: "Merchant",
+    name: "Merchant of Death",
     cost: 1,
     effect:
-      "All base equipment can be sold for 25 MCU each instead of 10 MCU each",
+      "All base equipment can be sold for 35 MCU each instead of 10 MCU each. The [PILOT] can now purchase all equipment for 5 MCU cheaper.",
     restrictions: "",
   },
   {
@@ -178,13 +214,25 @@ export const TRAITS = [
       "Increase two different base pilot stats by 1. Gain access to [NEWTYPE] upgrade traits.",
   },
   {
+    name: "Nemesis",
+    cost: 2,
+    effect:
+      "Once per round, this [PILOT] can perform a free [REACTIVE ATTACK] action",
+  },
+  {
+    name: "Oldtype Ace",
+    cost: 2,
+    effect:
+      "This [PILOT] cannot take the [CYBER NEWTYPE] or [NEWTYPE] pilot traits. Once per turn, this [PILOT] may reroll an Evasion Check",
+  },
+  {
     name: "Opportunistic",
     cost: 1,
     effect:
       "Attacks made by this [PILOT] against enemy MSUs with lower initiative may reroll 1 attack dice.",
   },
   {
-    name: "OYW Veteran",
+    name: "One Year War Veteran",
     cost: 1,
     effect:
       "Increase this [PILOT]'s starting MCU allotment by 75 points. (250 MCU limit to 325 MCU Limit",
@@ -299,5 +347,68 @@ export const TRAITS = [
     cost: 1,
     effect:
       "This [PILOT] may target [CIVILIANS] without penalty. This [PILOT] does not incur Victory Point penalties for killing [CIVILIANS]",
+  },
+  {
+    name: "Black Ops (REZEON)",
+    cost: 2,
+    effect:
+      "When this Pilot's MSU moves less than 8 inches, you may reroll [X] hit locations per round equal to this pilot's Piloting.",
+    restrictions: "REZEON ONLY",
+  },
+  {
+    name: "Body Guard (REZEON)",
+    cost: 2,
+    effect:
+      "When another friendly MSU is targeted within 8 inches, you may spend an action and 1 FRO to move into base contact with the friendly MSU. If base contact is established, any damage inflicted onto the friendly MSU is halved rounding up, with the remainder attributed to a random hit location on this Pilot's MSU.",
+    restrictions: "REZEON ONLY",
+  },
+  {
+    name: "Gryps War Veteran (REZEON)",
+    cost: 1,
+    effect:
+      "When piloting a TITAN's MSU, you may increase one of the following stats: Gunnery, Brawl or Piloting by 1.",
+    restrictions: "REZEON ONLY",
+  },
+  {
+    name: "Hardened (REZEON)",
+    cost: 1,
+    effect:
+      "When making a Seek Cover automatic reaction, this pilot may choose to pass or fail without making a PS skill roll.",
+    restrictions: "REZEON ONLY",
+  },
+  {
+    name: "Martian Engineering (REZEON)",
+    cost: 2,
+    effect:
+      "This Pilot may purchase EXTRA ARMOR [10] upgrades for 5 MCU each instead of 10.",
+    restrictions: "REZEON ONLY",
+  },
+  {
+    name: "Militant Training (REZEON)",
+    cost: 3,
+    effect:
+      "At step 1.4 of Status Phase, Friendly MSUs within 8 inches may spend 2 FRO to rotate up to 360°.",
+    restrictions: "REZEON ONLY",
+  },
+  {
+    name: "Nostalgic (REZEON)",
+    cost: 2,
+    effect:
+      'This Pilot ignores the ZEON restricted MSUs in "DEVELOPMENTAL SPLIT". This Pilot also gains +1 Piloting.',
+    restrictions: "REZEON ONLY",
+  },
+  {
+    name: "Predator (REZEON)",
+    cost: 3,
+    effect:
+      "Whenever this Pilot targets an enemy MSU, that MSU suffers a -1 penalty to EVASION skill checks.",
+    restrictions: "REZEON ONLY",
+  },
+  {
+    name: "TR Engineer (REZEON)",
+    cost: 2,
+    effect:
+      'If this Pilot is controlling a "TR" named MSU, reduce the MCU cost by 25.',
+    restrictions: "REZEON ONLY",
   },
 ];

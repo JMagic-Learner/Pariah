@@ -6,7 +6,7 @@ export const Keywords = () => {
   console.log(isMobile);
   return (
     <div>
-      <h2 className="f2 fw7 dark-red bb pb2 mb3">2.11 — Keywords</h2>
+      <h2 className="f2 fw7 red bb pb2 mb3">2.11 — Keywords</h2>
       <p className="lh-copy mb4">
         Keywords appear on weapons, support systems, and abilities to define
         special rules. When a keyword conflicts with a general rule, the keyword
@@ -28,7 +28,7 @@ export const Keywords = () => {
                 key={i}
                 className={i % 2 === 0 ? "bg-near-white" : "bg-white"}
               >
-                <td className="pa2 fw7 dark-red v-top nowrap">{kw.name}</td>
+                <td className="pa2 fw7 red v-top nowrap">{kw.name}</td>
                 <td className="pa2 lh-copy">{kw.desc}</td>
               </tr>
             ))}
@@ -44,7 +44,7 @@ export const Keywords = () => {
               "w-100 mb3": isMobile,
             })}
           >
-            <p className="fw7 ma0 mb1 dark-red f6 tc">{keyword.name}</p>
+            <p className="fw7 ma0 mb1 red f6 tc">{keyword.name}</p>
             <p className="lh-copy ma0 f7 tj">{keyword.desc}</p>
           </div>
         ))}

@@ -1,7 +1,7 @@
 export const Overview = () => {
   return (
     <div>
-      <h2 className="f2 fw7 dark-red bb pb2 mb3">4.0 — Missions Overview</h2>
+      <h2 className="f2 fw7 red bb pb2 mb3">4.0 — Missions Overview</h2>
 
       <p className="lh-copy mb3">
         Chapter 4 contains all playable missions for Flashpoint. Each mission
@@ -17,7 +17,8 @@ export const Overview = () => {
       </p>
       <ul className="lh-copy pl3">
         <li className="pv1">
-          Minimum of 2 MSUs per [FIRETEAM] regardless of budget.
+          Minimum of 2 MSUs per <span className="fw6 red"> [FIRETEAM] </span>{" "}
+          regardless of budget.
         </li>
       </ul>
 

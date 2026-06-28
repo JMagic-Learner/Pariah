@@ -46,7 +46,7 @@ export const MELEE = [
     fro: 1,
     mcu: 10,
     faction: "ZEON",
-    keywords: "[AKIMBO], [QUICK SWAP], [CLEAVE(X)], [THROW]",
+    keywords: "[AKIMBO],[QUICK SWAP],[CLEAVE(X)],[THROW]",
   },
   {
     name: "Heat Blade",
@@ -59,7 +59,7 @@ export const MELEE = [
     fro: 1,
     mcu: 20,
     faction: "ZEON",
-    keywords: "[CLEAVE(X)], [LETHAL]",
+    keywords: "[CLEAVE(X)],[LETHAL]",
   },
   {
     name: "Beam Hawk",
@@ -72,7 +72,7 @@ export const MELEE = [
     fro: 1,
     mcu: 25,
     faction: "ZEON",
-    keywords: "[AKIMBO], [QUICK SWAP], [CLEAVE(X)]",
+    keywords: "[AKIMBO],[QUICK SWAP],[CLEAVE(X)]",
   },
   {
     name: "Hand(s)",
@@ -84,7 +84,7 @@ export const MELEE = [
     ton: 0,
     fro: 0,
     mcu: 0,
-    keywords: "[QUICK SWAP], [AKIMBO]",
+    keywords: "[QUICK SWAP],[AKIMBO]",
   },
   {
     name: "Gauntlets",
@@ -96,7 +96,7 @@ export const MELEE = [
     ton: 1,
     fro: "–",
     mcu: 15,
-    keywords: "[AKIMBO], [AP(5)]",
+    keywords: "[AKIMBO],[AP(5)]",
   },
   {
     name: "Combat Knife",
@@ -108,7 +108,7 @@ export const MELEE = [
     ton: 0,
     fro: "–",
     mcu: 10,
-    keywords: "[AKIMBO], [QUICK SWAP], [THROW], [PRECISE], [COUNTERSTRIKE]",
+    keywords: "[AKIMBO],[QUICK SWAP],[THROW],[PRECISE],[COUNTERSTRIKE]",
   },
   {
     name: "Beam Knife",
@@ -120,7 +120,7 @@ export const MELEE = [
     ton: 0,
     fro: 1,
     mcu: 15,
-    keywords: "[AKIMBO], [QUICK SWAP], [PRECISE], [LETHAL], [COUNTERSTRIKE]",
+    keywords: "[AKIMBO],[QUICK SWAP],[PRECISE],[LETHAL],[COUNTERSTRIKE]",
   },
   {
     name: "Lance",
@@ -132,10 +132,10 @@ export const MELEE = [
     ton: 3,
     fro: "–",
     mcu: 15,
-    keywords: "[AP(5)], [PRECISE], [LETHAL]",
+    keywords: "[AP(5)],[PRECISE],[LETHAL]",
   },
   {
-    name: "Beam Sabre",
+    name: "Beam Saber",
     type: "Sword",
     rof: 1,
     range: '0–4"',

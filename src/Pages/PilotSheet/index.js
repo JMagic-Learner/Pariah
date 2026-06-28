@@ -18,6 +18,9 @@ import {
   blankLoc,
   EF_PRESETS,
   ZEON_PRESETS,
+  CROSSBONE_PRESETS,
+  MAFTY_PRESETS,
+  REZEON_PRESETS,
 } from "../../Data/PresetsArray";
 
 // ─── MCU helpers ─────────────────────────────────────────────────────────────
@@ -28,6 +31,29 @@ const parseMCU = (s) => {
   if (clean === "FREE") return 0;
   const n = parseFloat(clean);
   return isNaN(n) ? 0 : n;
+};
+
+const lookupSupportMCU = (name) => {
+  const norm = (s) =>
+    s
+      .toLowerCase()
+      .replace(/[^a-z0-9\s]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  const stem = (w) => (w.endsWith("s") && w.length > 3 ? w.slice(0, -1) : w);
+  const words = (s) =>
+    norm(s)
+      .split(" ")
+      .filter((w) => w.length >= 3)
+      .map(stem);
+  const nameWords = new Set(words(name));
+  for (const item of SUPPORT) {
+    const itemWords = words(item.name);
+    if (itemWords.length === 0) continue;
+    const matches = itemWords.filter((w) => nameWords.has(w)).length;
+    if (matches / itemWords.length >= 0.67) return item.mcu;
+  }
+  return null;
 };
 
 // ─── Shared primitives ────────────────────────────────────────────────────────
@@ -123,20 +149,30 @@ const EquipmentRow = ({
   lastCellColSpan = 1,
   sold,
   onSell,
+  onClear,
 }) => (
   <tr className={sold ? "o-40" : ""}>
     <TD>
-      <div className={onSell ? "flex items-center" : ""}>
+      <div className={onSell || onClear ? "flex items-center" : ""}>
         {onSell && (
           <button
             className={classNames(
               "f8 ph1 pv0 mr1 bn br1 pointer flex-shrink-0 lh-copy",
-              sold ? "bg-dark-red white" : "bg-near-white dark-gray",
+              sold ? "bg-red white" : "bg-near-white dark-gray",
             )}
             onClick={onSell}
             title={sold ? "Click to reinstate" : "Click to sell"}
           >
             {sold ? "SOLD" : "SELL"}
+          </button>
+        )}
+        {onClear && (
+          <button
+            className="f8 ph1 pv0 mr1 bn br1 pointer flex-shrink-0 lh-copy bg-near-white dark-gray"
+            onClick={onClear}
+            title="Clear row"
+          >
+            ×
           </button>
         )}
         <TextInput
@@ -177,9 +213,26 @@ const EquipmentRow = ({
 // ─── Hit location card ────────────────────────────────────────────────────────
 
 const LocationCard = ({ title, data, onChange }) => (
-  <div className="ba b--black-20 h-100">
-    <SheetHeader>{title}</SheetHeader>
-    <div className="pa2">
+  <div className={classNames("ba h-100", data.destroyed ? "b--red" : "b--black-20")}>
+    <div
+      className={classNames(
+        "fw7 f7 pa2 ttu tracked flex items-center justify-between",
+        data.destroyed ? "bg-red white" : "bg-dark-green white",
+      )}
+    >
+      <span>{title}</span>
+      <button
+        className={classNames(
+          "f8 ph1 pv0 bn br1 pointer flex-shrink-0 lh-copy",
+          data.destroyed ? "bg-white red fw7" : "bg-dark-green white o-70",
+        )}
+        onClick={() => onChange("destroyed", !data.destroyed)}
+        title={data.destroyed ? "Mark as intact" : "Mark as destroyed"}
+      >
+        {data.destroyed ? "DESTROYED" : "destroy"}
+      </button>
+    </div>
+    <div className={classNames("pa2", { "o-40": data.destroyed })}>
       <div className="flex items-center mb2">
         <span className="f7 fw6 mr2 nowrap">Armor:</span>
         <NumInput
@@ -505,14 +558,19 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
   );
   const [soldBase, setSoldBase] = useState(Array(8).fill(false));
 
-  const mcuLimit = traits.some((t) => t === "OYW Veteran") ? 325 : 250;
+  const mcuLimit =
+    250 +
+    (traits.some((t) => t === "One Year War Veteran") ? 75 : 0) +
+    (traits.some((t) => t === "CORRUPT GOVERNEMENT (EF GENERAL)") ? 50 : 0);
 
   const totalMCU =
     parseMCU(mcu) +
     baseEquip.reduce((sum, row, i) => {
       if (!soldBase[i]) return sum + parseMCU(row.mcuCost);
       const isFree = String(row.mcuCost).trim().toUpperCase() === "FREE";
-      return isFree ? sum - 10 : sum - parseMCU(row.mcuCost);
+      if (!isFree) return sum - parseMCU(row.mcuCost);
+      const supportMCU = lookupSupportMCU(row.name);
+      return supportMCU !== null ? sum - supportMCU : sum - 10;
     }, 0) +
     addlEquip.reduce((sum, row) => sum + parseMCU(row.mcuCost), 0);
 
@@ -717,32 +775,38 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
 
       {/* ── Mobile Suit + Equipment (single table so columns align) ── */}
       <div className="ba b--black-20 mb3">
-        <div className="flex items-center justify-between bg-dark-green white fw7 f7 pa2 ttu tracked">
+        <div className="flex items-center justify-between flex-wrap bg-dark-green white fw7 f7 pa2 ttu tracked">
           <span>Mobile Suit Unit</span>
-          <select
-            className="f7 ba b--white pa1 bg-dark-green white pointer normal"
-            style={{ minWidth: "14rem" }}
-            value=""
-            onChange={(e) => {
-              if (e.target.value) applyPreset(e.target.value);
-            }}
+          <div
+            className="flex items-center flex-wrap"
+            style={{ gap: "0.5rem" }}
           >
-            <option value="">— Load Preset —</option>
-            <optgroup label="Earth Federation">
-              {EF_PRESETS.map((p) => (
-                <option key={p.id} value={p.id}>
-                  {p.name}
-                </option>
-              ))}
-            </optgroup>
-            <optgroup label="Zeon">
-              {ZEON_PRESETS.map((p) => (
-                <option key={p.id} value={p.id}>
-                  {p.name}
-                </option>
-              ))}
-            </optgroup>
-          </select>
+            {[
+              { label: "EF", presets: EF_PRESETS },
+              { label: "ZEON", presets: ZEON_PRESETS },
+              { label: "CBV", presets: CROSSBONE_PRESETS },
+              { label: "MAFTY", presets: MAFTY_PRESETS },
+              { label: "REZEON", presets: REZEON_PRESETS },
+            ].map(({ label, presets }) => (
+              <div key={label} className="flex items-center">
+                <span className="f8 mr1 nowrap">{label}:</span>
+                <select
+                  className="f7 ba b--white pa1 bg-dark-green white pointer normal"
+                  value=""
+                  onChange={(e) => {
+                    if (e.target.value) applyPreset(e.target.value);
+                  }}
+                >
+                  <option value="">— Preset —</option>
+                  {presets.map((p) => (
+                    <option key={p.id} value={p.id}>
+                      {p.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            ))}
+          </div>
         </div>
         <div className="overflow-auto">
           <table className="w-100 f7" cellSpacing="0">
@@ -778,7 +842,7 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
                   <NumInput value={mcu} onChange={setMcu} width="4rem" />
                   <div
                     className={classNames("f8 fw6 mt1", {
-                      "dark-red": totalMCU > mcuLimit,
+                      red: totalMCU > mcuLimit,
                       "dark-green": totalMCU > 0 && totalMCU <= mcuLimit,
                       gray: totalMCU === 0,
                     })}
@@ -793,8 +857,7 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
                   <NumInput value={tonnageLimit} onChange={setTonnageLimit} />
                   <div
                     className={classNames("f8 fw6 mt1", {
-                      "dark-red":
-                        totalTonnage > Math.ceil(Number(tonnageLimit) / 3),
+                      red: totalTonnage > Math.ceil(Number(tonnageLimit) / 3),
                       "dark-green":
                         totalTonnage > 0 &&
                         totalTonnage <= Math.ceil(Number(tonnageLimit) / 3),
@@ -863,11 +926,19 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
                   colSpan={6}
                   className="bg-dark-green white fw7 f7 pa2 ttu tracked"
                 >
-                  Additional Equipment
+                  <span className="v-mid">Additional Equipment</span>
+                  <button
+                    className="ml3 f7 fw6 ph2 pv1 bg-red white bn br1 pointer ttu tracked v-mid"
+                    onClick={() =>
+                      setAddlEquip(Array(8).fill(null).map(blankEquip))
+                    }
+                  >
+                    Clear All
+                  </button>
                 </td>
               </tr>
               <tr>
-                <TH>Name</TH>
+                <TH className="tc">Name</TH>
                 <TH className="tc">MCU Cost</TH>
                 <TH className="tc">Passive / Active FRO</TH>
                 <TH className="tc">Tonnage</TH>
@@ -883,6 +954,7 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
                   onNameClick={() =>
                     openEquipPopup((fields) => applyAddlEquip(i, fields))
                   }
+                  onClear={() => applyAddlEquip(i, blankEquip())}
                   lastCellColSpan={2}
                 />
               ))}
@@ -1033,7 +1105,7 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
 // ─── Six-pilot two-team tab wrapper ──────────────────────────────────────────
 
 const TEAMS = [
-  { label: "Team 1", color: "dark-red", pilots: [0, 1, 2] },
+  { label: "Team 1", color: "red", pilots: [0, 1, 2] },
   { label: "Team 2", color: "dark-blue", pilots: [3, 4, 5] },
 ];
 
@@ -1108,8 +1180,7 @@ export const PilotSheet = () => {
                   className={classNames(
                     "f7 bn bg-transparent pointer dim tl pa0 truncate w-70",
                     {
-                      "fw7 dark-red":
-                        team.color === "dark-red" && activeTab === i,
+                      "fw7 red": team.color === "red" && activeTab === i,
                       "fw7 dark-blue":
                         team.color === "dark-blue" && activeTab === i,
                       "dark-gray": activeTab !== i,

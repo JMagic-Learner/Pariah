@@ -1,7 +1,7 @@
 export const SectorControl = () => {
   return (
     <div>
-      <h2 className="f2 fw7 dark-red bb pb2 mb3">Mission 4 — Sector Control</h2>
+      <h2 className="f2 fw7 red bb pb2 mb3">Mission 4 — Sector Control</h2>
 
       <div className="pa3 bg-near-white ba b--black-10 mb4">
         <p className="i lh-copy ma0">
@@ -36,15 +36,15 @@ export const SectorControl = () => {
           <h3 className="f4 fw7 mb2">Victory Conditions</h3>
           <ul className="lh-copy pl3 tj">
             <li className="pv1">
-              <strong className="dark-red">+2 VP</strong> — Control a sector
-              (per sector, per round end)
+              <strong className="red">+2 VP</strong> — Control a sector (per
+              sector, per round end)
             </li>
             <li className="pv1">
-              <strong className="dark-red">+2 VP</strong> — Control more sectors
-              than your opponent
+              <strong className="red">+2 VP</strong> — Control more sectors than
+              your opponent
             </li>
             <li className="pv1">
-              <strong className="dark-red">+5 VP</strong> — Control majority of
+              <strong className="red">+5 VP</strong> — Control majority of
               sectors at game end
             </li>
           </ul>

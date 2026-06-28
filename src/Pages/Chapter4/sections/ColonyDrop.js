@@ -1,7 +1,7 @@
 export const ColonyDrop = () => {
   return (
     <div>
-      <h2 className="f2 fw7 dark-red bb pb2 mb3">Mission 6 — Colony Drop</h2>
+      <h2 className="f2 fw7 red bb pb2 mb3">Mission 6 — Colony Drop</h2>
 
       <div className="pa3 bg-near-white ba b--black-10 mb4">
         <p className="i lh-copy ma0">
@@ -38,20 +38,20 @@ export const ColonyDrop = () => {
           <h3 className="f4 fw7 mb2">Victory Conditions</h3>
           <ul className="lh-copy pl3 tj">
             <li className="pv1">
-              <strong className="dark-red">+10 VP</strong> — Attacker: Reduce
-              Colony Drop Core to 0 HP
+              <strong className="red">+10 VP</strong> — Attacker: Reduce Colony
+              Drop Core to 0 HP
             </li>
             <li className="pv1">
-              <strong className="dark-red">+10 VP</strong> — Defender: Colony
-              Drop Core survives all 8 rounds
+              <strong className="red">+10 VP</strong> — Defender: Colony Drop
+              Core survives all 8 rounds
             </li>
             <li className="pv1">
-              <strong className="dark-red">+3 VP</strong> — Either: Destroy
-              enemy Commander MSU
+              <strong className="red">+3 VP</strong> — Either: Destroy enemy
+              Commander MSU
             </li>
             <li className="pv1">
-              <strong className="dark-red">+3 VP</strong> — Attacker: Deal 40+
-              damage to Colony Drop Core
+              <strong className="red">+3 VP</strong> — Attacker: Deal 40+ damage
+              to Colony Drop Core
             </li>
           </ul>
         </div>

@@ -66,7 +66,7 @@ const HIT_TABLE = [
 export const HitLocations = () => {
   return (
     <div>
-      <h2 className="f2 fw7 dark-red bb pb2 mb3">3.3 — Hit Locations</h2>
+      <h2 className="f2 fw7 red bb pb2 mb3">3.3 — Hit Locations</h2>
 
       <p className="lh-copy mb3">
         Each successful hit on an MSU requires rolling on the Hit Location table
@@ -97,7 +97,7 @@ export const HitLocations = () => {
                 key={i}
                 className={i % 2 === 0 ? "bg-near-white" : "bg-white"}
               >
-                <td className="pv2 pr3 bb b--black-20 tc fw7 dark-red f5">
+                <td className="pv2 pr3 bb b--black-20 tc fw7 red f5">
                   {row.roll}
                 </td>
                 <td className="pv2 pr3 bb b--black-20 fw7">{row.location}</td>
@@ -111,8 +111,8 @@ export const HitLocations = () => {
       <h3 className="f4 fw7 mt4 mb2">Applying Damage</h3>
       <ol className="lh-copy pl3">
         <li className="pv1">
-          Roll 1d6 per ROF (1d6 + [GS/BR] + Mods) vs. enemy [PILOT] Evasion
-          roll.
+          Roll 1d6 per ROF (1d6 + [GS/BR] + Mods) vs. enemy{" "}
+          <span className="fw6 red"> [PILOT]</span> Evasion roll.
         </li>
         <li className="pv1">
           For each successful hit, roll 2d6 for the hit location.

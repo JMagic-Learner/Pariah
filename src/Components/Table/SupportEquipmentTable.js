@@ -46,7 +46,7 @@ export const SupportEquipmentTable = () => {
                     </td>
                     <td className="pv3 pr3 bb b--black-20">{item.loc}</td>
                     <td className="pv3 pr3 bb b--black-20 tc">{item.ton}</td>
-                    <td className="pv3 pr3 bb b--black-20 tc dark-red fw6">
+                    <td className="pv3 pr3 bb b--black-20 tc red fw6">
                       {item.pfro}
                     </td>
                     <td className="pv3 pr3 bb b--black-20 tc">{item.qty}</td>

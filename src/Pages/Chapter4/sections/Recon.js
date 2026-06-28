@@ -1,7 +1,7 @@
 export const Recon = () => {
   return (
     <div>
-      <h2 className="f2 fw7 dark-red bb pb2 mb3">Mission 2 — Recon</h2>
+      <h2 className="f2 fw7 red bb pb2 mb3">Mission 2 — Recon</h2>
 
       <div className="pa3 bg-near-white ba b--black-10 mb4">
         <p className="i lh-copy ma0">
@@ -35,20 +35,20 @@ export const Recon = () => {
           <h3 className="f4 fw7 mb2">Victory Conditions</h3>
           <ul className="lh-copy pl3 tj">
             <li className="pv1">
-              <strong className="dark-red">+1 VP</strong> — Forward Observe an
-              enemy MSU
+              <strong className="red">+1 VP</strong> — Forward Observe an enemy
+              MSU
             </li>
             <li className="pv1">
-              <strong className="dark-red">+3 VP</strong> — Control 3 of 5 Recon
+              <strong className="red">+3 VP</strong> — Control 3 of 5 Recon
               Points at any round end
             </li>
             <li className="pv1">
-              <strong className="dark-red">+1 VP</strong> — Hold a Recon Point
-              at end of game
+              <strong className="red">+1 VP</strong> — Hold a Recon Point at end
+              of game
             </li>
             <li className="pv1">
-              <strong className="dark-red">+2 VP</strong> — MSU returns to
-              friendly deployment edge from opponent's half
+              <strong className="red">+2 VP</strong> — MSU returns to friendly
+              deployment edge from opponent's half
             </li>
           </ul>
         </div>

@@ -123,15 +123,17 @@ export const PilotTraits = () => {
                 have to think about it's likeliness to survive the trip. It is
                 generally safer to ship unassembled, or new on sprue miniatures
                 than fully assembled figures. If your miniature has some fragile
-                parts such as exposed spears, lances, swords, [INBUILT] highly
-                recommend leaving the minature assembled and having the sprue
-                act as protective support.
+                parts such as exposed spears, lances, swords,{" "}
+                <span className="fw6 red"> [INBUILT] </span> highly recommend
+                leaving the minature assembled and having the sprue act as
+                protective support.
               </p>
 
               <p className="tj">
                 If for whatever reason, you do want to ship a fully assembled
                 miniature, please take a photograph of it's initial condition
-                prior to shipping. If it arrives damaged, or broken, [INBUILT]
+                prior to shipping. If it arrives damaged, or broken,{" "}
+                <span className="fw6 red"> [INBUILT] </span>
                 will return the miniature as is. There have been instances in
                 the past where a resin model has been shattered into oblivion by
                 rough handling at distribution centers, making it nearly
@@ -139,13 +141,16 @@ export const PilotTraits = () => {
               </p>
 
               <p className="tj">
-                [INBUILT] in turn, will also take a picture of the miniature
-                when[INBUILT] INBUILT send the finished commision back to
-                y[INBUILT]ress. INBUILT will most likely also take a final video
-                of me packing the miniature into it's parcel, prior to dropping
-                it off a[INBUILT] shipping company. INBUILT will not be able to
-                guarantee the level of handling from the shipping company or
-                it's affiliated distribution centers
+                <span className="fw6 red"> [INBUILT] </span> in turn, will also
+                take a picture of the miniature when
+                <span className="fw6 red"> [INBUILT] </span> INBUILT send the
+                finished commision back to y
+                <span className="fw6 red"> [INBUILT] </span>ress. INBUILT will
+                most likely also take a final video of me packing the miniature
+                into it's parcel, prior to dropping it off a
+                <span className="fw6 red"> [INBUILT] </span> shipping company.
+                INBUILT will not be able to guarantee the level of handling from
+                the shipping company or it's affiliated distribution centers
               </p>
             </div>
 

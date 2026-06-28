@@ -1,7 +1,7 @@
 export const Assault = () => {
   return (
     <div>
-      <h2 className="f2 fw7 dark-red bb pb2 mb3">Mission 3 — Assault</h2>
+      <h2 className="f2 fw7 red bb pb2 mb3">Mission 3 — Assault</h2>
 
       <div className="pa3 bg-near-white ba b--black-10 mb4">
         <p className="i lh-copy ma0">
@@ -38,23 +38,23 @@ export const Assault = () => {
           <h3 className="f4 fw7 mb2">Victory Conditions</h3>
           <ul className="lh-copy pl3 tj">
             <li className="pv1">
-              <strong className="dark-red">+3 VP</strong> — Attacker holds
-              Objective Building at round end
+              <strong className="red">+3 VP</strong> — Attacker holds Objective
+              Building at round end
             </li>
             <li className="pv1">
-              <strong className="dark-red">+3 VP</strong> — Attacker holds
-              Objective Building at game end (bonus)
+              <strong className="red">+3 VP</strong> — Attacker holds Objective
+              Building at game end (bonus)
             </li>
             <li className="pv1">
-              <strong className="dark-red">+3 VP</strong> — Destroy enemy
-              Commander MSU
+              <strong className="red">+3 VP</strong> — Destroy enemy Commander
+              MSU
             </li>
             <li className="pv1">
-              <strong className="dark-red">+1 VP</strong> — Destroy each
-              additional enemy non-Commander MSU
+              <strong className="red">+1 VP</strong> — Destroy each additional
+              enemy non-Commander MSU
             </li>
             <li className="pv1">
-              <strong className="dark-red">+3 VP</strong> — Defender: Prevent
+              <strong className="red">+3 VP</strong> — Defender: Prevent
               Attacker from entering Objective Building for 3+ rounds
             </li>
           </ul>

@@ -31,11 +31,23 @@ export const Navigation = () => {
         </div>
 
         <div className="flex w-50">
-          <Link className={classNames(linkClass, "mr3")} to="/RulesBook">
+          {/* <Link className={classNames(linkClass, "mr3")} to="/RulesBook">
             Rules
-          </Link>
-          <Link className={linkClass} to="/PilotSheet">
+          </Link> */}
+          <Link className={classNames(linkClass, "mr3")} to="/PilotSheet">
             Pilot Sheet
+          </Link>
+          <Link className={classNames(linkClass, "mr3")} to="/ForceLists">
+            Force Lists
+          </Link>
+          <Link className={classNames(linkClass, "mr3")} to="/ReZeonExpansion">
+            ReZeon
+          </Link>
+          <Link className={classNames(linkClass, "mr3")} to="/Contact">
+            Contact
+          </Link>
+          <Link className={linkClass} to="/Links">
+            Links
           </Link>
         </div>
       </nav>

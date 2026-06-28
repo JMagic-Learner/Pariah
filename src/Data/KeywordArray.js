@@ -41,7 +41,7 @@ export const KEYWORDS = [
   },
   {
     name: "[COMMANDER]",
-    desc: "A [PILOT] with this keyword gains access to [COMMANDER] actions",
+    desc: "If a [PILOT] is a [COMMANDER], the [PILOT] gains one Command Action. These Command Actions are not refreshed on Staus Phase Step 1.4, so they are single use. These Command Actions can only be spent on [COMMANDER ACTION] abilities. A [PILOT] with this keyword gains access to [COMMANDER ACTIONS]",
   },
   {
     name: "[DEPLOYABLE]",

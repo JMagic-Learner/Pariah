@@ -158,10 +158,18 @@ const CHAPTERS = [
     id: "ch5",
     title: "Ch.5 — Support Units",
     sections: [
-      { id: "supportoverview",    title: "5.0 — Overview",         Component: SupportUnitsOverview },
-      { id: "infantry",           title: "5.1 — Infantry",         Component: Infantry },
-      { id: "armoredvehicles",    title: "5.2 — Armored Vehicles", Component: ArmoredVehicles },
-      { id: "airsupport",         title: "5.3 — Air Support",      Component: AirSupport },
+      {
+        id: "supportoverview",
+        title: "5.0 — Overview",
+        Component: SupportUnitsOverview,
+      },
+      { id: "infantry", title: "5.1 — Infantry", Component: Infantry },
+      {
+        id: "armoredvehicles",
+        title: "5.2 — Armored Vehicles",
+        Component: ArmoredVehicles,
+      },
+      { id: "airsupport", title: "5.3 — Air Support", Component: AirSupport },
     ],
   },
 ];
@@ -212,7 +220,7 @@ export const RulesBook = () => {
                   className={classNames(
                     "db w-100 tl pv2 ph3 bn pointer f6 bb b--black-10 lh-copy",
                     {
-                      "bg-dark-red white fw7": activeSectionId === s.id,
+                      "bg-red white fw7": activeSectionId === s.id,
                       "bg-near-white dark-gray": activeSectionId !== s.id,
                     },
                   )}
