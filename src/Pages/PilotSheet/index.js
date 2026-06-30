@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { usePilotSheet, usePilotSlot } from "../../context/PilotSheetContext";
 import { useMediaQuery } from "@custom-react-hooks/all";
 import classNames from "classnames";
 import { TRAITS } from "../../Data/PilotTraitArray";
@@ -100,7 +101,7 @@ const EquipmentRow = ({
           <button
             className={classNames(
               "f8 ph1 pv0 mr1 bn br1 pointer flex-shrink-0 lh-copy",
-              sold ? "bg-red white" : "bg-near-white dark-gray",
+              sold ? "bg-orange white" : "bg-near-white dark-gray",
             )}
             onClick={onSell}
             title={sold ? "Click to reinstate" : "Click to sell"}
@@ -171,10 +172,18 @@ const parseLocInstructions = (loc) => {
   const l = loc.toLowerCase().trim();
   if (l === "–" || l === "-" || l === "any") return [];
   // Weapon/upgrade attachments live in weapon slots, not equipment slots
-  if (/^(weapon|weapons|melee weapon)$/.test(l) || l.startsWith("weapon")) return [];
+  if (/^(weapon|weapons|melee weapon)$/.test(l) || l.startsWith("weapon"))
+    return [];
 
   if (l.includes("all location")) {
-    return [["head"], ["torso"], ["rightArm"], ["leftArm"], ["rightLeg"], ["leftLeg"]];
+    return [
+      ["head"],
+      ["torso"],
+      ["rightArm"],
+      ["leftArm"],
+      ["rightLeg"],
+      ["leftLeg"],
+    ];
   }
 
   const slots = [];
@@ -196,9 +205,12 @@ const parseLocInstructions = (loc) => {
 };
 
 const LOC_LABELS = {
-  head: "Head", torso: "Torso",
-  rightArm: "Right Arm", leftArm: "Left Arm",
-  rightLeg: "Right Leg", leftLeg: "Left Leg",
+  head: "Head",
+  torso: "Torso",
+  rightArm: "Right Arm",
+  leftArm: "Left Arm",
+  rightLeg: "Right Leg",
+  leftLeg: "Left Leg",
 };
 
 const EquipmentPickerModal = ({ onClose, onSelect }) => {
@@ -310,46 +322,71 @@ const EquipmentPickerModal = ({ onClose, onSelect }) => {
 
 // ─── Single sheet panel ───────────────────────────────────────────────────────
 
-const PilotSheetPanel = ({ onMsuNameChange }) => {
+const PilotSheetPanel = ({ slotIndex }) => {
   const isMobile = useMediaQuery("(max-width: 600px)");
 
-  // Pilot
-  const [msuName, setMsuName] = useState("");
-  const [pilotName, setPilotName] = useState("");
-  const [gunnery, setGunnery] = useState("");
-  const [gunneryMod, setGunneryMod] = useState("");
-  const [brawl, setBrawl] = useState("");
-  const [brawlMod, setBrawlMod] = useState("");
-  const [piloting, setPiloting] = useState("");
-  const [pilotingMod, setPilotingMod] = useState("");
-  const [traits, setTraits] = useState(["", "", "", "", ""]);
-
-  // Mobile Suit
-  const [mobileSuit, setMobileSuit] = useState("");
-  const [mcu, setMcu] = useState("");
-  const [fro, setFro] = useState("");
-  const [tonnageLimit, setTonnageLimit] = useState("");
-  const [movement, setMovement] = useState("");
-  const [armorValue, setArmorValue] = useState("");
-
-  // Equipment
-  const [baseEquip, setBaseEquip] = useState(
-    Array(8).fill(null).map(blankEquip),
-  );
-  const [addlEquip, setAddlEquip] = useState(
-    Array(8).fill(null).map(blankEquip),
-  );
-  const [soldBase, setSoldBase] = useState(Array(8).fill(false));
-  const [customPreset, setCustomPreset] = useState(() => {
-    try { return JSON.parse(localStorage.getItem("gf_custom_preset")) ?? null; }
-    catch { return null; }
-  });
-  const [mechanicChoice, setMechanicChoice] = useState(""); // "tonnage" | "fro" | ""
-  const [newtypeChoice1, setNewtypeChoice1] = useState(""); // "gs"|"bs"|"ps"|""
-  const [newtypeChoice2, setNewtypeChoice2] = useState("");
-  const [cyberNewtypeChoice, setCyberNewtypeChoice] = useState("");
-  const [ramboChoice, setRamboChoice] = useState(""); // "gs"|"bs"|""
-  const [grypsVetChoice, setGrypsVetChoice] = useState("");
+  const {
+    msuName,
+    setMsuName,
+    pilotName,
+    setPilotName,
+    gunnery,
+    setGunnery,
+    brawl,
+    setBrawl,
+    piloting,
+    setPiloting,
+    traits,
+    setTraits,
+    mobileSuit,
+    setMobileSuit,
+    mcu,
+    setMcu,
+    fro,
+    setFro,
+    tonnageLimit,
+    setTonnageLimit,
+    movement,
+    setMovement,
+    armorValue,
+    setArmorValue,
+    baseEquip,
+    setBaseEquip,
+    addlEquip,
+    setAddlEquip,
+    soldBase,
+    setSoldBase,
+    mechanicChoice,
+    setMechanicChoice,
+    newtypeChoice1,
+    setNewtypeChoice1,
+    newtypeChoice2,
+    setNewtypeChoice2,
+    cyberNewtypeChoice,
+    setCyberNewtypeChoice,
+    ramboChoice,
+    setRamboChoice,
+    grypsVetChoice,
+    setGrypsVetChoice,
+    locations,
+    setLocations,
+    showTraits,
+    setShowTraits,
+    showWeapons,
+    setShowWeapons,
+    showMelee,
+    setShowMelee,
+    showSupport,
+    setShowSupport,
+    showKeywords,
+    setShowKeywords,
+    showNewtype,
+    setShowNewtype,
+    customPreset,
+    setCustomPreset,
+    setTabNames,
+    setAll,
+  } = usePilotSlot(slotIndex);
 
   const hasMechanic = traits.some((t) => t === "Mechanic");
   const hasNewtype = traits.some((t) => t === "Newtype");
@@ -363,28 +400,38 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
 
   const gsBonus =
     gunneryTraitCount +
-    (hasNewtype ? (newtypeChoice1 === "gs" ? 1 : 0) + (newtypeChoice2 === "gs" ? 1 : 0) : 0) +
+    (hasNewtype
+      ? (newtypeChoice1 === "gs" ? 1 : 0) + (newtypeChoice2 === "gs" ? 1 : 0)
+      : 0) +
     (hasCyberNewtype && cyberNewtypeChoice === "gs" ? 1 : 0) +
     (hasRambo && ramboChoice === "gs" ? 1 : 0) +
     (hasGrypsVet && grypsVetChoice === "gs" ? 1 : 0);
   const bsBonus =
     brawlerTraitCount +
-    (hasNewtype ? (newtypeChoice1 === "bs" ? 1 : 0) + (newtypeChoice2 === "bs" ? 1 : 0) : 0) +
+    (hasNewtype
+      ? (newtypeChoice1 === "bs" ? 1 : 0) + (newtypeChoice2 === "bs" ? 1 : 0)
+      : 0) +
     (hasCyberNewtype && cyberNewtypeChoice === "bs" ? 1 : 0) +
     (hasRambo && ramboChoice === "bs" ? 1 : 0) +
     (hasGrypsVet && grypsVetChoice === "bs" ? 1 : 0);
   const psBonus =
     pilotingTraitCount +
-    (hasNewtype ? (newtypeChoice1 === "ps" ? 1 : 0) + (newtypeChoice2 === "ps" ? 1 : 0) : 0) +
+    (hasNewtype
+      ? (newtypeChoice1 === "ps" ? 1 : 0) + (newtypeChoice2 === "ps" ? 1 : 0)
+      : 0) +
     (hasCyberNewtype && cyberNewtypeChoice === "ps" ? 1 : 0) +
     (hasGrypsVet && grypsVetChoice === "ps" ? 1 : 0);
 
   const efrCount =
-    baseEquip.filter((row, i) => row.name === "Enhanced Fusion Reactors" && !soldBase[i]).length +
+    baseEquip.filter(
+      (row, i) => row.name === "Enhanced Fusion Reactors" && !soldBase[i],
+    ).length +
     addlEquip.filter((row) => row.name === "Enhanced Fusion Reactors").length;
-  const froBonus = (hasMechanic && mechanicChoice === "fro" ? 2 : 0) + efrCount * 2;
+  const froBonus =
+    (hasMechanic && mechanicChoice === "fro" ? 2 : 0) + efrCount * 2;
   const effectiveTonnageLimit =
-    Number(tonnageLimit) + (hasMechanic && mechanicChoice === "tonnage" ? 12 : 0);
+    Number(tonnageLimit) +
+    (hasMechanic && mechanicChoice === "tonnage" ? 12 : 0);
 
   const mcuLimit =
     250 +
@@ -411,35 +458,21 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
       0,
     ) + addlEquip.reduce((sum, row) => sum + parseMCU(row.tonnage), 0);
 
-  // Hit locations: Head/Torso get an extra equipment slot
-  const [locations, setLocations] = useState({
-    head: blankLoc(3),
-    torso: blankLoc(3),
-    rightArm: blankLoc(3),
-    leftArm: blankLoc(3),
-    rightLeg: blankLoc(3),
-    leftLeg: blankLoc(3),
-  });
-
-  // Reference panel visibility
-  const [showTraits, setShowTraits] = useState(false);
-  const [showWeapons, setShowWeapons] = useState(false);
-  const [showMelee, setShowMelee] = useState(false);
-  const [showSupport, setShowSupport] = useState(false);
-  const [showKeywords, setShowKeywords] = useState(false);
-  const [showNewtype, setShowNewtype] = useState(false);
-
-  // Equipment picker popup: null when closed, { onSelect: fn } when open
+  // Ephemeral UI-only state (dialogs/popups — not persisted)
   const [equipPopup, setEquipPopup] = useState(null);
-  const [slotWarning, setSlotWarning] = useState(null); // null | string message
-  const [kwDialog, setKwDialog] = useState(null); // null | { name, desc }
+  const [slotWarning, setSlotWarning] = useState(null);
+  const [kwDialog, setKwDialog] = useState(null);
   const openEquipPopup = (onSelect) => setEquipPopup({ onSelect });
   const closeEquipPopup = () => setEquipPopup(null);
 
   // Updaters
   const handleMsuName = (v) => {
     setMsuName(v);
-    onMsuNameChange?.(v);
+    setTabNames((prev) =>
+      prev.map((label, i) =>
+        i === slotIndex ? (v.trim() ? v : `Pilot ${slotIndex + 1}`) : label,
+      ),
+    );
   };
 
   const updateTrait = (i, v) =>
@@ -527,63 +560,107 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
 
   const saveCustomPreset = () => {
     const snapshot = {
-      msuName, pilotName, mobileSuit, mcu, fro, tonnageLimit, movement, armorValue,
-      gunnery, brawl, piloting, traits,
-      baseEquip, addlEquip, soldBase, locations,
-      mechanicChoice, newtypeChoice1, newtypeChoice2, cyberNewtypeChoice, ramboChoice, grypsVetChoice,
+      msuName,
+      pilotName,
+      mobileSuit,
+      mcu,
+      fro,
+      tonnageLimit,
+      movement,
+      armorValue,
+      gunnery,
+      brawl,
+      piloting,
+      traits,
+      baseEquip,
+      addlEquip,
+      soldBase,
+      locations,
+      mechanicChoice,
+      newtypeChoice1,
+      newtypeChoice2,
+      cyberNewtypeChoice,
+      ramboChoice,
+      grypsVetChoice,
     };
-    try { localStorage.setItem("gf_custom_preset", JSON.stringify(snapshot)); } catch {}
+    try {
+      localStorage.setItem("gf_custom_preset", JSON.stringify(snapshot));
+    } catch {}
     setCustomPreset(snapshot);
   };
 
   const loadCustomPreset = () => {
     if (!customPreset) return;
     const d = customPreset;
-    setMsuName(d.msuName ?? "");
-    onMsuNameChange?.(d.msuName ?? "");
-    setPilotName(d.pilotName ?? "");
-    setMobileSuit(d.mobileSuit ?? "");
-    setMcu(d.mcu ?? "");
-    setFro(d.fro ?? "");
-    setTonnageLimit(d.tonnageLimit ?? "");
-    setMovement(d.movement ?? "");
-    setArmorValue(d.armorValue ?? "");
-    setGunnery(d.gunnery ?? "");
-    setBrawl(d.brawl ?? "");
-    setPiloting(d.piloting ?? "");
-    setTraits(d.traits ?? ["", "", "", "", ""]);
-    setBaseEquip(d.baseEquip ?? Array(8).fill(null).map(blankEquip));
-    setAddlEquip(d.addlEquip ?? Array(8).fill(null).map(blankEquip));
-    setSoldBase(d.soldBase ?? Array(8).fill(false));
-    setLocations(d.locations ?? {
-      head: blankLoc(3), torso: blankLoc(3),
-      rightArm: blankLoc(3), leftArm: blankLoc(3),
-      rightLeg: blankLoc(3), leftLeg: blankLoc(3),
+    setAll({
+      msuName: d.msuName ?? "",
+      pilotName: d.pilotName ?? "",
+      mobileSuit: d.mobileSuit ?? "",
+      mcu: d.mcu ?? "",
+      fro: d.fro ?? "",
+      tonnageLimit: d.tonnageLimit ?? "",
+      movement: d.movement ?? "",
+      armorValue: d.armorValue ?? "",
+      gunnery: d.gunnery ?? "",
+      brawl: d.brawl ?? "",
+      piloting: d.piloting ?? "",
+      traits: d.traits ?? ["", "", "", "", ""],
+      baseEquip: d.baseEquip ?? Array(8).fill(null).map(blankEquip),
+      addlEquip: d.addlEquip ?? Array(8).fill(null).map(blankEquip),
+      soldBase: d.soldBase ?? Array(8).fill(false),
+      locations: d.locations ?? {
+        head: blankLoc(3),
+        torso: blankLoc(3),
+        rightArm: blankLoc(3),
+        leftArm: blankLoc(3),
+        rightLeg: blankLoc(3),
+        leftLeg: blankLoc(3),
+      },
+      mechanicChoice: d.mechanicChoice ?? "",
+      newtypeChoice1: d.newtypeChoice1 ?? "",
+      newtypeChoice2: d.newtypeChoice2 ?? "",
+      cyberNewtypeChoice: d.cyberNewtypeChoice ?? "",
+      ramboChoice: d.ramboChoice ?? "",
+      grypsVetChoice: d.grypsVetChoice ?? "",
     });
-    setMechanicChoice(d.mechanicChoice ?? "");
-    setNewtypeChoice1(d.newtypeChoice1 ?? "");
-    setNewtypeChoice2(d.newtypeChoice2 ?? "");
-    setCyberNewtypeChoice(d.cyberNewtypeChoice ?? "");
-    setRamboChoice(d.ramboChoice ?? "");
-    setGrypsVetChoice(d.grypsVetChoice ?? "");
+    const name = d.msuName ?? "";
+    setTabNames((prev) =>
+      prev.map((label, i) =>
+        i === slotIndex
+          ? name.trim()
+            ? name
+            : `Pilot ${slotIndex + 1}`
+          : label,
+      ),
+    );
   };
 
   const applyPreset = (id) => {
     const preset = PRESETS.find((p) => p.id === id);
     if (!preset) return;
     const d = preset.data;
-    setMsuName(d.msuName);
-    onMsuNameChange?.(d.msuName);
-    setMobileSuit(d.mobileSuit);
-    setMcu(d.mcu);
-    setFro(d.fro);
-    setTonnageLimit(d.tonnageLimit);
-    setMovement(d.movement);
-    setArmorValue(d.armorValue);
-    setBaseEquip(d.baseEquip);
-    setAddlEquip(d.addlEquip);
-    setSoldBase(Array(8).fill(false));
-    setLocations(d.locations);
+    setAll({
+      msuName: d.msuName,
+      mobileSuit: d.mobileSuit,
+      mcu: d.mcu,
+      fro: d.fro,
+      tonnageLimit: d.tonnageLimit,
+      movement: d.movement,
+      armorValue: d.armorValue,
+      baseEquip: d.baseEquip,
+      addlEquip: d.addlEquip,
+      soldBase: Array(8).fill(false),
+      locations: d.locations,
+    });
+    setTabNames((prev) =>
+      prev.map((label, i) =>
+        i === slotIndex
+          ? d.msuName.trim()
+            ? d.msuName
+            : `Pilot ${slotIndex + 1}`
+          : label,
+      ),
+    );
   };
 
   // ─── Render ──────────────────────────────────────────────────────────────────
@@ -633,21 +710,27 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
                 </TD>
                 <TD className="tc">
                   <NumInput value={gunnery} onChange={setGunnery} />
-                  {hasRookie && <div className="f8 fw6 mt1 red">base: 0</div>}
+                  {hasRookie && (
+                    <div className="f8 fw6 mt1 orange">base: 0</div>
+                  )}
                 </TD>
                 <TD className="tc">
                   <NumInput value={gsBonus} onChange={() => {}} />
                 </TD>
                 <TD className="tc">
                   <NumInput value={brawl} onChange={setBrawl} />
-                  {hasRookie && <div className="f8 fw6 mt1 red">base: 0</div>}
+                  {hasRookie && (
+                    <div className="f8 fw6 mt1 orange">base: 0</div>
+                  )}
                 </TD>
                 <TD className="tc">
                   <NumInput value={bsBonus} onChange={() => {}} />
                 </TD>
                 <TD className="tc">
                   <NumInput value={piloting} onChange={setPiloting} />
-                  {hasRookie && <div className="f8 fw6 mt1 red">base: 0</div>}
+                  {hasRookie && (
+                    <div className="f8 fw6 mt1 orange">base: 0</div>
+                  )}
                 </TD>
                 <TD className="tc">
                   <NumInput value={psBonus} onChange={() => {}} />
@@ -682,140 +765,178 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
 
         {/* Trait modifiers */}
         {(hasMechanic ||
-          gunneryTraitCount > 0 || brawlerTraitCount > 0 || pilotingTraitCount > 0 ||
-          hasNewtype || hasCyberNewtype || hasRambo || hasRookie || hasGrypsVet) && (() => {
-          const StatBtn = ({ label, active, onClick }) => (
-            <button
-              className={classNames(
-                "f8 ph2 pv1 mr1 bn br1 pointer lh-copy",
-                active ? "bg-dark-green white fw7" : "bg-near-white dark-gray",
-              )}
-              onClick={onClick}
-            >
-              {label}
-            </button>
-          );
-          return (
-            <div className="ph3 pv2 bt b--black-10 bg-washed-green">
-              <p className="f8 fw7 ttu tracked mb2 dark-green">Active Trait Modifiers</p>
+          gunneryTraitCount > 0 ||
+          brawlerTraitCount > 0 ||
+          pilotingTraitCount > 0 ||
+          hasNewtype ||
+          hasCyberNewtype ||
+          hasRambo ||
+          hasRookie ||
+          hasGrypsVet) &&
+          (() => {
+            const StatBtn = ({ label, active, onClick }) => (
+              <button
+                className={classNames(
+                  "f8 ph2 pv1 mr1 bn br1 pointer lh-copy",
+                  active
+                    ? "bg-dark-green white fw7"
+                    : "bg-near-white dark-gray",
+                )}
+                onClick={onClick}
+              >
+                {label}
+              </button>
+            );
+            return (
+              <div className="ph3 pv2 bt b--black-10 bg-washed-green">
+                <p className="f8 fw7 ttu tracked mb2 dark-green">
+                  Active Trait Modifiers
+                </p>
 
-              {/* Stackable stat traits — auto-applied, no toggle needed */}
-              {(gunneryTraitCount > 0 || brawlerTraitCount > 0 || pilotingTraitCount > 0) && (
-                <div className="flex items-center mb2 flex-wrap">
-                  {gunneryTraitCount > 0 && (
-                    <span className="f8 mr3 dark-green fw6">Gunnery ×{gunneryTraitCount} → +{gunneryTraitCount} GS</span>
-                  )}
-                  {brawlerTraitCount > 0 && (
-                    <span className="f8 mr3 dark-green fw6">Brawler ×{brawlerTraitCount} → +{brawlerTraitCount} BS</span>
-                  )}
-                  {pilotingTraitCount > 0 && (
-                    <span className="f8 dark-green fw6">Piloting ×{pilotingTraitCount} → +{pilotingTraitCount} PS</span>
-                  )}
-                </div>
-              )}
+                {/* Stackable stat traits — auto-applied, no toggle needed */}
+                {(gunneryTraitCount > 0 ||
+                  brawlerTraitCount > 0 ||
+                  pilotingTraitCount > 0) && (
+                  <div className="flex items-center mb2 flex-wrap">
+                    {gunneryTraitCount > 0 && (
+                      <span className="f8 mr3 dark-green fw6">
+                        Gunnery ×{gunneryTraitCount} → +{gunneryTraitCount} GS
+                      </span>
+                    )}
+                    {brawlerTraitCount > 0 && (
+                      <span className="f8 mr3 dark-green fw6">
+                        Brawler ×{brawlerTraitCount} → +{brawlerTraitCount} BS
+                      </span>
+                    )}
+                    {pilotingTraitCount > 0 && (
+                      <span className="f8 dark-green fw6">
+                        Piloting ×{pilotingTraitCount} → +{pilotingTraitCount}{" "}
+                        PS
+                      </span>
+                    )}
+                  </div>
+                )}
 
-              {/* Newtype — choose 2 different stats */}
-              {hasNewtype && (
-                <div className="mb2">
-                  <span className="f7 fw6 mr2">Newtype (choose 2 stats):</span>
-                  <div className="flex items-center mt1 flex-wrap">
-                    <span className="f8 mr2 gray">Choice 1:</span>
+                {/* Newtype — choose 2 different stats */}
+                {hasNewtype && (
+                  <div className="mb2">
+                    <span className="f7 fw6 mr2">
+                      Newtype (choose 2 stats):
+                    </span>
+                    <div className="flex items-center mt1 flex-wrap">
+                      <span className="f8 mr2 gray">Choice 1:</span>
+                      {["gs", "bs", "ps"].map((s) => (
+                        <StatBtn
+                          key={s}
+                          label={`+1 ${s.toUpperCase()}`}
+                          active={newtypeChoice1 === s}
+                          onClick={() =>
+                            setNewtypeChoice1((p) => (p === s ? "" : s))
+                          }
+                        />
+                      ))}
+                      <span className="f8 mh2 gray">Choice 2:</span>
+                      {["gs", "bs", "ps"]
+                        .filter((s) => s !== newtypeChoice1)
+                        .map((s) => (
+                          <StatBtn
+                            key={s}
+                            label={`+1 ${s.toUpperCase()}`}
+                            active={newtypeChoice2 === s}
+                            onClick={() =>
+                              setNewtypeChoice2((p) => (p === s ? "" : s))
+                            }
+                          />
+                        ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Cyber-Newtype — choose 1 stat */}
+                {hasCyberNewtype && (
+                  <div className="flex items-center mb2 flex-wrap">
+                    <span className="f7 fw6 mr2 nowrap">Cyber-Newtype:</span>
                     {["gs", "bs", "ps"].map((s) => (
                       <StatBtn
                         key={s}
                         label={`+1 ${s.toUpperCase()}`}
-                        active={newtypeChoice1 === s}
-                        onClick={() => setNewtypeChoice1((p) => (p === s ? "" : s))}
-                      />
-                    ))}
-                    <span className="f8 mh2 gray">Choice 2:</span>
-                    {["gs", "bs", "ps"].filter((s) => s !== newtypeChoice1).map((s) => (
-                      <StatBtn
-                        key={s}
-                        label={`+1 ${s.toUpperCase()}`}
-                        active={newtypeChoice2 === s}
-                        onClick={() => setNewtypeChoice2((p) => (p === s ? "" : s))}
+                        active={cyberNewtypeChoice === s}
+                        onClick={() =>
+                          setCyberNewtypeChoice((p) => (p === s ? "" : s))
+                        }
                       />
                     ))}
                   </div>
-                </div>
-              )}
+                )}
 
-              {/* Cyber-Newtype — choose 1 stat */}
-              {hasCyberNewtype && (
-                <div className="flex items-center mb2 flex-wrap">
-                  <span className="f7 fw6 mr2 nowrap">Cyber-Newtype:</span>
-                  {["gs", "bs", "ps"].map((s) => (
-                    <StatBtn
-                      key={s}
-                      label={`+1 ${s.toUpperCase()}`}
-                      active={cyberNewtypeChoice === s}
-                      onClick={() => setCyberNewtypeChoice((p) => (p === s ? "" : s))}
-                    />
-                  ))}
-                </div>
-              )}
+                {/* Rambo — choose GS or BS */}
+                {hasRambo && (
+                  <div className="flex items-center mb2">
+                    <span className="f7 fw6 mr2 nowrap">Rambo:</span>
+                    {["gs", "bs"].map((s) => (
+                      <StatBtn
+                        key={s}
+                        label={`+1 ${s.toUpperCase()}`}
+                        active={ramboChoice === s}
+                        onClick={() =>
+                          setRamboChoice((p) => (p === s ? "" : s))
+                        }
+                      />
+                    ))}
+                  </div>
+                )}
 
-              {/* Rambo — choose GS or BS */}
-              {hasRambo && (
-                <div className="flex items-center mb2">
-                  <span className="f7 fw6 mr2 nowrap">Rambo:</span>
-                  {["gs", "bs"].map((s) => (
-                    <StatBtn
-                      key={s}
-                      label={`+1 ${s.toUpperCase()}`}
-                      active={ramboChoice === s}
-                      onClick={() => setRamboChoice((p) => (p === s ? "" : s))}
-                    />
-                  ))}
-                </div>
-              )}
+                {/* Gryps War Veteran (REZEON) — choose 1 stat */}
+                {hasGrypsVet && (
+                  <div className="flex items-center mb2 flex-wrap">
+                    <span className="f7 fw6 mr2 nowrap">
+                      Gryps War Veteran:
+                    </span>
+                    {["gs", "bs", "ps"].map((s) => (
+                      <StatBtn
+                        key={s}
+                        label={`+1 ${s.toUpperCase()}`}
+                        active={grypsVetChoice === s}
+                        onClick={() =>
+                          setGrypsVetChoice((p) => (p === s ? "" : s))
+                        }
+                      />
+                    ))}
+                  </div>
+                )}
 
-              {/* Gryps War Veteran (REZEON) — choose 1 stat */}
-              {hasGrypsVet && (
-                <div className="flex items-center mb2 flex-wrap">
-                  <span className="f7 fw6 mr2 nowrap">Gryps War Veteran:</span>
-                  {["gs", "bs", "ps"].map((s) => (
-                    <StatBtn
-                      key={s}
-                      label={`+1 ${s.toUpperCase()}`}
-                      active={grypsVetChoice === s}
-                      onClick={() => setGrypsVetChoice((p) => (p === s ? "" : s))}
-                    />
-                  ))}
-                </div>
-              )}
+                {/* Rookie — reminder */}
+                {hasRookie && (
+                  <div className="flex items-center mb2">
+                    <span className="f7 fw6 orange mr2 nowrap">Rookie:</span>
+                    <span className="f8 orange">
+                      Base GS / BS / PS default to 0
+                    </span>
+                  </div>
+                )}
 
-              {/* Rookie — reminder */}
-              {hasRookie && (
-                <div className="flex items-center mb2">
-                  <span className="f7 fw6 red mr2 nowrap">Rookie:</span>
-                  <span className="f8 red">Base GS / BS / PS default to 0</span>
-                </div>
-              )}
-
-              {/* Mechanic */}
-              {hasMechanic && (
-                <div className="flex items-center mb2">
-                  <span className="f7 fw6 mr2 nowrap">Mechanic:</span>
-                  {[
-                    { label: "+12 Tonnage", value: "tonnage" },
-                    { label: "+2 FRO", value: "fro" },
-                  ].map(({ label, value }) => (
-                    <StatBtn
-                      key={value}
-                      label={label}
-                      active={mechanicChoice === value}
-                      onClick={() => setMechanicChoice((p) => (p === value ? "" : value))}
-                    />
-                  ))}
-                </div>
-              )}
-
-
-            </div>
-          );
-        })()}
+                {/* Mechanic */}
+                {hasMechanic && (
+                  <div className="flex items-center mb2">
+                    <span className="f7 fw6 mr2 nowrap">Mechanic:</span>
+                    {[
+                      { label: "+12 Tonnage", value: "tonnage" },
+                      { label: "+2 FRO", value: "fro" },
+                    ].map(({ label, value }) => (
+                      <StatBtn
+                        key={value}
+                        label={label}
+                        active={mechanicChoice === value}
+                        onClick={() =>
+                          setMechanicChoice((p) => (p === value ? "" : value))
+                        }
+                      />
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })()}
 
         {/* Trait reference */}
         <div className="ph2 pb2 bt b--black-10">
@@ -936,7 +1057,7 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
                   <NumInput value={mcu} onChange={setMcu} width="4rem" />
                   <div
                     className={classNames("f8 fw6 mt1", {
-                      red: totalMCU > mcuLimit,
+                      orange: totalMCU > mcuLimit,
                       "dark-green": totalMCU > 0 && totalMCU <= mcuLimit,
                       gray: totalMCU === 0,
                     })}
@@ -947,14 +1068,17 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
                 <TD className="tc">
                   <NumInput value={fro} onChange={setFro} />
                   {froBonus > 0 && (
-                    <div className="f8 fw6 mt1 dark-green">+{froBonus} bonus</div>
+                    <div className="f8 fw6 mt1 dark-green">
+                      +{froBonus} bonus
+                    </div>
                   )}
                 </TD>
                 <TD className="tc">
                   <NumInput value={tonnageLimit} onChange={setTonnageLimit} />
                   <div
                     className={classNames("f8 fw6 mt1", {
-                      red: totalTonnage > Math.ceil(effectiveTonnageLimit / 3),
+                      orange:
+                        totalTonnage > Math.ceil(effectiveTonnageLimit / 3),
                       "dark-green":
                         totalTonnage > 0 &&
                         totalTonnage <= Math.ceil(effectiveTonnageLimit / 3),
@@ -1028,7 +1152,7 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
                 >
                   <span className="v-mid">Additional Equipment</span>
                   <button
-                    className="ml3 f7 fw6 ph2 pv1 bg-red white bn br1 pointer ttu tracked v-mid"
+                    className="ml3 f7 fw6 ph2 pv1 bg-orange white bn br1 pointer ttu tracked v-mid"
                     onClick={() => {
                       addlEquip.forEach((row) => removeSupportLoc(row.name));
                       setAddlEquip(Array(8).fill(null).map(blankEquip));
@@ -1118,7 +1242,9 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
         )}
         {showNewtype && (
           <div className="bt b--black-10 ph2 pb2 overflow-auto">
-            <p className="f7 fw7 ttu tracked mv2 dark-green">Newtype Upgrades</p>
+            <p className="f7 fw7 ttu tracked mv2 dark-green">
+              Newtype Upgrades
+            </p>
             <table className="w-100 f7 mb3" cellSpacing="0">
               <thead>
                 <tr>
@@ -1130,11 +1256,16 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
               </thead>
               <tbody>
                 {NEWTYPE_UPGRADES.map((u, i) => (
-                  <tr key={i} className={i % 2 === 0 ? "bg-near-white" : "bg-white"}>
+                  <tr
+                    key={i}
+                    className={i % 2 === 0 ? "bg-near-white" : "bg-white"}
+                  >
                     <TD className="fw6">{u.name}</TD>
                     <TD className="tc">{u.limit}</TD>
                     <TD className="tc fw6 dark-green">{u.mcu}</TD>
-                    <TD className="lh-copy">{renderKeywords(u.effect, setKwDialog)}</TD>
+                    <TD className="lh-copy">
+                      {renderKeywords(u.effect, setKwDialog)}
+                    </TD>
                   </tr>
                 ))}
               </tbody>
@@ -1155,7 +1286,10 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
               </thead>
               <tbody>
                 {BITS.map((b, i) => (
-                  <tr key={i} className={i % 2 === 0 ? "bg-near-white" : "bg-white"}>
+                  <tr
+                    key={i}
+                    className={i % 2 === 0 ? "bg-near-white" : "bg-white"}
+                  >
                     <TD className="fw6">{b.type}</TD>
                     <TD className="tc">{b.cat}</TD>
                     <TD className="tc">{b.armor}</TD>
@@ -1181,9 +1315,14 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
               </thead>
               <tbody>
                 {KEYWORDS.map((kw, i) => (
-                  <tr key={i} className={i % 2 === 0 ? "bg-near-white" : "bg-white"}>
+                  <tr
+                    key={i}
+                    className={i % 2 === 0 ? "bg-near-white" : "bg-white"}
+                  >
                     <TD className="fw7 dark-green nowrap">{kw.name}</TD>
-                    <TD className="lh-copy">{renderKeywords(kw.desc, setKwDialog)}</TD>
+                    <TD className="lh-copy">
+                      {renderKeywords(kw.desc, setKwDialog)}
+                    </TD>
                   </tr>
                 ))}
               </tbody>
@@ -1310,17 +1449,21 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
           onClick={() => setSlotWarning(null)}
         >
           <div
-            style={{ background: "white", maxWidth: "22rem", borderRadius: "4px" }}
+            style={{
+              background: "white",
+              maxWidth: "22rem",
+              borderRadius: "4px",
+            }}
             className="pa4"
             onClick={(e) => e.stopPropagation()}
           >
-            <p className="fw7 f5 red ma0 mb2">Equipment Slots Exceeded</p>
+            <p className="fw7 f5 orange ma0 mb2">Equipment Slots Exceeded</p>
             <p className="f6 lh-copy ma0 mb3">
               This MSU configuration exceeds available equipment slots.{" "}
               {slotWarning}
             </p>
             <button
-              className="f7 ph3 pv2 bg-red white bn br1 pointer dim"
+              className="f7 ph3 pv2 bg-orange white bn br1 pointer dim"
               onClick={() => setSlotWarning(null)}
             >
               Dismiss
@@ -1333,24 +1476,8 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
 };
 
 export const PilotSheet = () => {
-  const [activeTab, setActiveTab] = useState(0);
-  const [tabNames, setTabNames] = useState([
-    "Pilot 1",
-    "Pilot 2",
-    "Pilot 3",
-    "Pilot 4",
-    "Pilot 5",
-    "Pilot 6",
-  ]);
-  const [initiatives, setInitiatives] = useState(["", "", "", "", "", ""]);
-
-  const handleMsuNameChange = (tabIndex, name) => {
-    setTabNames((prev) =>
-      prev.map((label, i) =>
-        i === tabIndex ? (name.trim() ? name : `Pilot ${tabIndex + 1}`) : label,
-      ),
-    );
-  };
+  const { activeTab, setActiveTab, tabNames, initiatives, setInitiatives } =
+    usePilotSheet();
 
   const updateInitiative = (i, v) =>
     setInitiatives((prev) => prev.map((val, idx) => (idx === i ? v : val)));
@@ -1403,7 +1530,7 @@ export const PilotSheet = () => {
                   className={classNames(
                     "f7 bn bg-transparent pointer dim tl pa0 truncate w-70",
                     {
-                      "fw7 red": team.color === "red" && activeTab === i,
+                      "fw7 orange": team.color === "orange" && activeTab === i,
                       "fw7 dark-blue":
                         team.color === "dark-blue" && activeTab === i,
                       "dark-gray": activeTab !== i,
@@ -1432,9 +1559,7 @@ export const PilotSheet = () => {
       {/* All six sheets kept mounted — only active one is visible */}
       {[0, 1, 2, 3, 4, 5].map((i) => (
         <div key={i} style={{ display: activeTab === i ? "block" : "none" }}>
-          <PilotSheetPanel
-            onMsuNameChange={(name) => handleMsuNameChange(i, name)}
-          />
+          <PilotSheetPanel slotIndex={i} />
         </div>
       ))}
     </div>

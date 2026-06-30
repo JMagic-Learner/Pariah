@@ -48,7 +48,7 @@ export const MunitionsTable = () => {
               {MUNITIONS.map((item, i) => (
                 <div key={i} className="mb2 pa3 ba b--black-10 bg-near-white">
                   <p className="fw7 ma0 mb1">{item.name}</p>
-                  <p className="ma0 f7 red mb1">DAM: {item.dam}</p>
+                  <p className="ma0 f7 orange mb1">DAM: {item.dam}</p>
                   <p className="ma0 f7 lh-copy">{item.effect}</p>
                 </div>
               ))}

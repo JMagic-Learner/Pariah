@@ -1,7 +1,7 @@
 export const Extraction = () => {
   return (
     <div>
-      <h2 className="f2 fw7 red bb pb2 mb3">Mission 5 — Extraction</h2>
+      <h2 className="f2 fw7 orange bb pb2 mb3">Mission 5 — Extraction</h2>
 
       <div className="pa3 bg-near-white ba b--black-10 mb4">
         <p className="i lh-copy ma0">
@@ -42,20 +42,20 @@ export const Extraction = () => {
           <h3 className="f4 fw7 mb2">Victory Conditions</h3>
           <ul className="lh-copy pl3 tj">
             <li className="pv1">
-              <strong className="red">+8 VP</strong> — Extractor: VIP reaches
+              <strong className="orange">+8 VP</strong> — Extractor: VIP reaches
               Extraction Zone
             </li>
             <li className="pv1">
-              <strong className="red">+2 VP</strong> — Extractor: Destroy enemy
-              Commander MSU
+              <strong className="orange">+2 VP</strong> — Extractor: Destroy
+              enemy Commander MSU
             </li>
             <li className="pv1">
-              <strong className="red">+6 VP</strong> — Interceptor: VIP Marker
-              is destroyed
+              <strong className="orange">+6 VP</strong> — Interceptor: VIP
+              Marker is destroyed
             </li>
             <li className="pv1">
-              <strong className="red">+4 VP</strong> — Interceptor: VIP Marker
-              reaches round 5 uncaptured
+              <strong className="orange">+4 VP</strong> — Interceptor: VIP
+              Marker reaches round 5 uncaptured
             </li>
           </ul>
         </div>

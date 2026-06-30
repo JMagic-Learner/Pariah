@@ -5,7 +5,11 @@ import { ReZeonFactionBonuses } from "./sections/FactionBonuses";
 import { ReZeonPilotTraits } from "./sections/PilotTraits";
 
 const SECTIONS = [
-  { id: "faction-bonuses", title: "Faction Bonuses", Component: ReZeonFactionBonuses },
+  {
+    id: "faction-bonuses",
+    title: "Faction Bonuses",
+    Component: ReZeonFactionBonuses,
+  },
   { id: "pilot-traits", title: "Pilot Traits", Component: ReZeonPilotTraits },
 ];
 
@@ -39,7 +43,7 @@ export const ReZeonExpansion = () => {
           </select>
         ) : (
           <div>
-            <div className="pv3 ph3 bg-dark-red">
+            <div className="pv3 ph3 bg-dark-orange">
               <p className="f6 white fw7 ma0 ttu tracked">ReZeon Expansion</p>
             </div>
             {SECTIONS.map((s) => (
@@ -48,9 +52,9 @@ export const ReZeonExpansion = () => {
                 className={classNames(
                   "db w-100 tl pv2 ph3 bn pointer f6 bb b--black-10 lh-copy",
                   {
-                    "bg-red white fw7": activeSectionId === s.id,
+                    "bg-orange white fw7": activeSectionId === s.id,
                     "bg-near-white dark-gray": activeSectionId !== s.id,
-                  }
+                  },
                 )}
                 onClick={() => setActiveSectionId(s.id)}
               >

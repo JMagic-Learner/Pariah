@@ -1,68 +1,68 @@
 export const Reactions = () => {
   return (
     <div>
-      <h2 className="f2 fw7 red bb pb2 mb3">3.4 — Reactions</h2>
+      <h2 className="f2 fw7 orange bb pb2 mb3">3.4 — Reactions</h2>
 
       <p className="lh-copy mb4 tj">
         Reactions are special actions performed outside of a enemy{" "}
-        <span className="fw6 red"> [PILOT]</span>'s normal activation. Each{" "}
-        <span className="fw6 red"> [PILOT]</span>/MSU may perform multiple
+        <span className="fw6 orange"> [PILOT]</span>'s normal activation. Each{" "}
+        <span className="fw6 orange"> [PILOT]</span>/MSU may perform multiple
         reactions per turn as long as they have the resources to do so, unless a
         trait or special ability imposes a limit.
       </p>
 
-      <p className="lh-copy mb4 tj red">
+      <p className="lh-copy mb4 tj orange">
         Reactions interrupt enemy actions, meaning the reaction resolves first
         before resuming normal turn sequence.
       </p>
 
-      <p className="lh-copy mb4 tj red">
+      <p className="lh-copy mb4 tj orange">
         Reactions can be chained in response to a single instance of an enemy
         activation as long as there are no duplicate REACTIONS in the chained
-        sequence, meaning a <span className="fw6 red"> [PILOT]</span> cannot
-        declare SWAP + <span className="fw6 red"> [REACTIVE ATTACK] </span>+
-        <span className="fw6 red"> [SWAP]</span> or{" "}
-        <span className="fw6 red"> [REACTIVE ATTACK] </span>+
-        <span className="fw6 red">
+        sequence, meaning a <span className="fw6 orange"> [PILOT]</span> cannot
+        declare SWAP + <span className="fw6 orange"> [REACTIVE ATTACK] </span>+
+        <span className="fw6 orange"> [SWAP]</span> or{" "}
+        <span className="fw6 orange"> [REACTIVE ATTACK] </span>+
+        <span className="fw6 orange">
           {" "}
-          <span className="fw6 red"> [REACTIVE ATTACK] </span>
+          <span className="fw6 orange"> [REACTIVE ATTACK] </span>
         </span>
         . However, if the
-        <span className="fw6 red"> [PILOT]</span> chooses to conduct a
-        <span className="fw6 red"> [REACTIVE ATTACK] </span>
+        <span className="fw6 orange"> [PILOT]</span> chooses to conduct a
+        <span className="fw6 orange"> [REACTIVE ATTACK] </span>
         action in response to one enemy{" "}
-        <span className="fw6 red"> [PILOT]</span>, it may still react with
-        another <span className="fw6 red"> [REACTIVE ATTACK] </span>
-        action to another enemy <span className="fw6 red"> [PILOT]</span>
+        <span className="fw6 orange"> [PILOT]</span>, it may still react with
+        another <span className="fw6 orange"> [REACTIVE ATTACK] </span>
+        action to another enemy <span className="fw6 orange"> [PILOT]</span>
       </p>
 
       {/* Reactive Attack */}
       <div className="bg-near-white ba b--black-10 br2 pa3 mb3">
-        <h3 className="f4 fw7 red mt0 mb1">
-          <span className="fw6 red"> [REACTIVE ATTACK] </span>
+        <h3 className="f4 fw7 orange mt0 mb1">
+          <span className="fw6 orange"> [REACTIVE ATTACK] </span>
 
           <span className="fw4 f5">[REACTION] [1 Action]</span>
         </h3>
         <p className="lh-copy f6 mb2">
-          When an enemy <span className="fw6 red"> [PILOT]</span>/MSU within
+          When an enemy <span className="fw6 orange"> [PILOT]</span>/MSU within
           your LOS and within your weapon's range band declares or ends a
-          <span className="fw6 red"> [MOVEMENT] </span> action (including{" "}
-          <span className="fw6 red"> [ADVANCE] </span>,
-          <span className="fw6 red"> [BOOST] </span>, or{" "}
-          <span className="fw6 red"> [BLITZ] </span> or when an enemy{" "}
-          <span className="fw6 red"> [PILOT]</span>/MSU declares a melee
+          <span className="fw6 orange"> [MOVEMENT] </span> action (including{" "}
+          <span className="fw6 orange"> [ADVANCE] </span>,
+          <span className="fw6 orange"> [BOOST] </span>, or{" "}
+          <span className="fw6 orange"> [BLITZ] </span> or when an enemy{" "}
+          <span className="fw6 orange"> [PILOT]</span>/MSU declares a melee
           attack), you may immediately declare a{" "}
-          <span className="fw6 red"> [REACTIVE ATTACK] </span>
+          <span className="fw6 orange"> [REACTIVE ATTACK] </span>
           before or after the enemy resolves their respective action.
         </p>
         <ul className="lh-copy pl3 f6 ma0">
           <li className="pv1 tj">
-            Only <span className="fw6 red"> [READIED] </span>,{" "}
-            <span className="fw6 red"> [INBUILT] </span> can be used in{" "}
-            <span className="fw6 red"> [REACTIVE ATTACK] </span> actions .
+            Only <span className="fw6 orange"> [READIED] </span>,{" "}
+            <span className="fw6 orange"> [INBUILT] </span> can be used in{" "}
+            <span className="fw6 orange"> [REACTIVE ATTACK] </span> actions .
           </li>
           <li className="pv1 tj">
-            The reacting <span className="fw6 red"> [PILOT] </span> must have
+            The reacting <span className="fw6 orange"> [PILOT] </span> must have
             LOS to the enemy MSU at the moment the qualifying action is
             declared.
           </li>
@@ -74,50 +74,50 @@ export const Reactions = () => {
 
       {/* Reactive Attack Sequence */}
       <div className="bg-near-white ba b--black-10 br2 pa3 mb3 tj">
-        <h3 className="f4 fw7 red mt0 mb2">
-          <span className="fw6 red">
+        <h3 className="f4 fw7 orange mt0 mb2">
+          <span className="fw6 orange">
             {" "}
-            <span className="fw6 red"> [REACTIVE ATTACK] </span>
+            <span className="fw6 orange"> [REACTIVE ATTACK] </span>
           </span>{" "}
           Sequence
         </h3>
         <ul className="lh-copy pl3 f6 ma0">
           <li className="pv1 tj">
-            <span className="fw6 red">Step 1:</span> The reacting{" "}
-            <span className="fw6 red"> [PILOT]</span>
+            <span className="fw6 orange">Step 1:</span> The reacting{" "}
+            <span className="fw6 orange"> [PILOT]</span>
             declares{" "}
-            <span className="fw6 red">
+            <span className="fw6 orange">
               {" "}
-              <span className="fw6 red"> [REACTIVE ATTACK] </span>
+              <span className="fw6 orange"> [REACTIVE ATTACK] </span>
             </span>{" "}
             and nominates a single eligible weapon (
-            <span className="fw6 red"> [READIED] </span>,{" "}
-            <span className="fw6 red"> [INBUILT] </span>).
+            <span className="fw6 orange"> [READIED] </span>,{" "}
+            <span className="fw6 orange"> [INBUILT] </span>).
           </li>
           <li className="pv1 tj">
-            <span className="fw6 red">Step 2:</span> The enemy{" "}
-            <span className="fw6 red"> [PILOT]</span>/MSU immediately pauses
+            <span className="fw6 orange">Step 2:</span> The enemy{" "}
+            <span className="fw6 orange"> [PILOT]</span>/MSU immediately pauses
             it's action, waiting for the{" "}
-            <span className="fw6 red">
+            <span className="fw6 orange">
               {" "}
-              <span className="fw6 red"> [REACTIVE ATTACK] </span>
+              <span className="fw6 orange"> [REACTIVE ATTACK] </span>
             </span>
             sequence to resolve
           </li>
           <li className="pv1 tj">
-            <span className="fw6 red">Step 3:</span> The reacting{" "}
-            <span className="fw6 red"> [PILOT]</span> rolls their attack dice
+            <span className="fw6 orange">Step 3:</span> The reacting{" "}
+            <span className="fw6 orange"> [PILOT]</span> rolls their attack dice
             against the enemy MSU using the nominated weapon. Apply any relevant
             modifiers.
           </li>
           <li className="pv1 tj">
-            <span className="fw6 red">Step 4:</span> The enemy{" "}
-            <span className="fw6 red"> [PILOT]</span> rolls Evasion dice as
+            <span className="fw6 orange">Step 4:</span> The enemy{" "}
+            <span className="fw6 orange"> [PILOT]</span> rolls Evasion dice as
             normal.
           </li>
           <li className="pv1 tj">
-            <span className="fw6 red">Step 5:</span> Resolve hits — roll 2d6 for
-            each hit location and apply damage.
+            <span className="fw6 orange">Step 5:</span> Resolve hits — roll 2d6
+            for each hit location and apply damage.
           </li>
         </ul>
       </div>
@@ -125,13 +125,14 @@ export const Reactions = () => {
       <div className="flex w-100">
         {/* Eyes on You */}
         <div className="bg-near-white ba b--black-10 br2 pa3 mb3 w-50 mh2">
-          <h3 className="f4 fw7 red mt0 mb1">
+          <h3 className="f4 fw7 orange mt0 mb1">
             [EYES ON YOU]{" "}
             <span className="fw4 f5">[REACTION] [PILOT TRAIT]</span>
           </h3>
           <p className="lh-copy f6 mb2">
-            A <span className="fw6 red"> [PILOT]</span> with the [EYES ON YOU]
-            trait may, once per Battle Round, declare an [EYES ON YOU] Reaction.
+            A <span className="fw6 orange"> [PILOT]</span> with the [EYES ON
+            YOU] trait may, once per Battle Round, declare an [EYES ON YOU]
+            Reaction.
           </p>
           <ul className="lh-copy pl3 f6 ma0">
             <li className="pv1 tj">
@@ -146,19 +147,20 @@ export const Reactions = () => {
 
         {/* Juke */}
         <div className="bg-near-white ba b--black-10 br2 pa3 mb3 w-50 mh2">
-          <h3 className="f4 fw7 red mt0 mb1">
+          <h3 className="f4 fw7 orange mt0 mb1">
             [JUKE] <span className="fw4 f5">[REACTION] [PILOT TRAIT]</span>
           </h3>
           <p className="lh-copy f6 mb2">
-            A <span className="fw6 red"> [PILOT]</span> with the [JUKE] trait
+            A <span className="fw6 orange"> [PILOT]</span> with the [JUKE] trait
             may, once per Battle Round, declare a [JUKE] Reaction when their MSU
             is targeted by an attack and the reacting{" "}
-            <span className="fw6 red"> [PILOT]</span> has LOS to the attacker.
+            <span className="fw6 orange"> [PILOT]</span> has LOS to the
+            attacker.
           </p>
           <ul className="lh-copy pl3 f6 ma0">
             <li className="pv1">
-              The reacting <span className="fw6 red"> [PILOT]</span> may reroll
-              one of their Evasion dice.
+              The reacting <span className="fw6 orange"> [PILOT]</span> may
+              reroll one of their Evasion dice.
             </li>
             <li className="pv1">
               The new result stands — the die cannot be rerolled again.

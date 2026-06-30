@@ -31,7 +31,7 @@ export const Table = ({ tableTitle, columns, dataArray }) => {
                       "pa2",
                       col.tc ? "tc" : "",
                       col.bold ? "fw7" : "",
-                      col.accent ? "red" : "",
+                      col.accent ? "orange" : "",
                       col.lh ? "lh-copy" : "",
                     ]
                       .filter(Boolean)

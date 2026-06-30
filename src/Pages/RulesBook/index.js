@@ -38,6 +38,9 @@ import { Infantry } from "../Chapter5/sections/Infantry";
 import { ArmoredVehicles } from "../Chapter5/sections/ArmoredVehicles";
 import { AirSupport } from "../Chapter5/sections/AirSupport";
 
+import { ReZeonFactionBonuses } from "../ReZeonExpansion/sections/FactionBonuses";
+import { ReZeonPilotTraits } from "../ReZeonExpansion/sections/PilotTraits";
+
 const CHAPTERS = [
   {
     id: "ch1",
@@ -172,6 +175,22 @@ const CHAPTERS = [
       { id: "airsupport", title: "5.3 — Air Support", Component: AirSupport },
     ],
   },
+  {
+    id: "ch6",
+    title: "Ch.6 — Expanded Content",
+    sections: [
+      {
+        id: "rezeon-faction-bonuses",
+        title: "6.1 — ReZeon Faction Bonuses",
+        Component: ReZeonFactionBonuses,
+      },
+      {
+        id: "rezeon-pilot-traits",
+        title: "6.2 — ReZeon Pilot Traits",
+        Component: ReZeonPilotTraits,
+      },
+    ],
+  },
 ];
 
 const ALL_SECTIONS = CHAPTERS.flatMap((ch) => ch.sections);
@@ -220,7 +239,7 @@ export const RulesBook = () => {
                   className={classNames(
                     "db w-100 tl pv2 ph3 bn pointer f6 bb b--black-10 lh-copy",
                     {
-                      "bg-red white fw7": activeSectionId === s.id,
+                      "bg-orange white fw7": activeSectionId === s.id,
                       "bg-near-white dark-gray": activeSectionId !== s.id,
                     },
                   )}

@@ -1,7 +1,7 @@
 export const MobileSuits = () => {
   return (
     <div>
-      <h2 className="f2 fw7 red bb pb2 mb3">
+      <h2 className="f2 fw7 orange bb pb2 mb3">
         2.2 — Mobile Suits and Mobile Armor
       </h2>
 
@@ -20,7 +20,7 @@ export const MobileSuits = () => {
         suits.
       </p>
       <p className="lh-copy tj">The distinction is as follows:</p>
-      <ul className="lh-copy pl3 tj red fw6">
+      <ul className="lh-copy pl3 tj orange fw6">
         <li className="pv1">
           Mobile Suits have a hexagon action base to represent their field of
           view and the space they take up on the battlefield.
@@ -48,29 +48,29 @@ export const MobileSuits = () => {
       </p>
 
       <ul className="lh-copy pl3 tj">
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           MCU (MONETARY CREDIT UNITS) Cost:{" "}
           <span className="fw4 black">How much a MSU typically costs.</span>
         </li>
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           FRO (FUSION REACTOR OUTPUT):{" "}
           <span className="fw4 black">
             How much power the MSU can use per round.
           </span>
         </li>
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           Equipment Tonnage (TONNAGE/3):{" "}
           <span className="fw4 black">
             How much weight a MSU can incur for equipment and weapons.
           </span>
         </li>
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           Movement (Inches):{" "}
           <span className="fw4 black">
             How far/fast a MSU can traverse the battlefield.
           </span>
         </li>
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           Armor:{" "}
           <span className="fw4 black">
             How tough / how many hit points per hit location.
@@ -94,17 +94,17 @@ export const MobileSuits = () => {
         {" "}
         As noted previosuly in Section 2.1, [PILOTS] begin at 250 MCU. This
         essentially connotes a MCU limit of 250 per pilot. A typical{" "}
-        <span className="fw6 red"> [FIRETEAM] </span>
+        <span className="fw6 orange"> [FIRETEAM] </span>
         is composed of three [PILOTS], therefore there is a total of 750 MCU.
-        <span className="fw6 red"> [FIRETEAM] </span> construction rules will be
-        in Section 2.3
+        <span className="fw6 orange"> [FIRETEAM] </span> construction rules will
+        be in Section 2.3
       </p>
       <p className="lh-copy tj">
         {" "}
         [PILOTS] can purchase MSU according to each individaul MSU cost. Up to
         25 unused MCU can be transfered to another{" "}
-        <span className="fw6 red"> [PILOT]</span> after purchasing equipment and
-        weapons. What generosity!
+        <span className="fw6 orange"> [PILOT]</span> after purchasing equipment
+        and weapons. What generosity!
       </p>
 
       <h3 className="f4 fw7 mt4 mb2 tj">FRO - Fusion Reactor Output</h3>
@@ -148,16 +148,16 @@ export const MobileSuits = () => {
         is no longer incurred.
       </p>
 
-      <h5 className="f4 fw7 mt4 mb2 tj red"> OVERLOADED REACTORS </h5>
+      <h5 className="f4 fw7 mt4 mb2 tj orange"> OVERLOADED REACTORS </h5>
       <p className="lh-copy tj">
         If FRO expenditure ever exceeds the FRO Limit/Total, the{" "}
-        <span className="fw6 red"> [PILOT]</span> suffers a -3 PS penalty.
+        <span className="fw6 orange"> [PILOT]</span> suffers a -3 PS penalty.
       </p>
 
-      <h4 className="f4 fw7 mt4 mb2 tj red"> REACTOR CRITICAL </h4>
+      <h4 className="f4 fw7 mt4 mb2 tj orange"> REACTOR CRITICAL </h4>
       <p className="lh-copy tj">
         If the MSU is ever destroyed via a direct [TORSO] hit (hit location roll
-        of a 2 or a 12), the enemy <span className="fw6 red"> [PILOT]</span>{" "}
+        of a 2 or a 12), the enemy <span className="fw6 orange"> [PILOT]</span>{" "}
         rolls 1d6 + [1 per each FRO that exceeds the FRO Limit]. On a 6+, the
         MSU explodes spectacularly. The MSU emits a [AOE(X)] explosion from it's
         basing, where X is the FRO value. Each MSU (friend or foe) takes 10
@@ -167,7 +167,7 @@ export const MobileSuits = () => {
       <h3 className="f4 fw7 mt4 mb2 tj">MOVEMENT</h3>
       <p className="tj lh-copy">
         A MSU's base movespeed. Used in{" "}
-        <span className="fw6 red"> [MOVEMENT] </span> actions. See Chapter 3,
+        <span className="fw6 orange"> [MOVEMENT] </span> actions. See Chapter 3,
         Section 3.2 for movement rules
       </p>
       <p className="tj lh-copy">
@@ -176,8 +176,8 @@ export const MobileSuits = () => {
       <p className="tj lh-copy">
         How far an MSU moves during the movement phase is factored into evasion
         tier tables. This means that how far an MSU moved after{" "}
-        <span className="fw6 red"> [MOVEMENT] </span>, [BOOST(X)], and [BLITZ]
-        actions are taken into consideration.
+        <span className="fw6 orange"> [MOVEMENT] </span>, [BOOST(X)], and
+        [BLITZ] actions are taken into consideration.
       </p>
 
       <h3 className="f4 fw7 mt4 mb2 tj">ARMOR</h3>
@@ -185,7 +185,7 @@ export const MobileSuits = () => {
         The Armor value attributed to every hit location of a MSU
       </p>
 
-      <h2 className="f2 fw7 red bb pb2 mb3">
+      <h2 className="f2 fw7 orange bb pb2 mb3">
         2.2 Extra — QUICK/EASY or CUSTOM MSU
       </h2>
       <p className="lh-copy tj">
@@ -208,24 +208,24 @@ export const MobileSuits = () => {
       </p>
 
       <ul className="lh-copy pl3 tj">
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           MCU (MONETARY CREDIT UNITS) Cost:{" "}
           <span className="fw4 black">
             {" "}
             Custom suits do not cost any baseline MCU
           </span>
         </li>
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           FRO (FUSION REACTOR OUTPUT): <span className="fw4 black">6</span>
         </li>
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           Equipment Tonnage (TONNAGE/3):{" "}
           <span className="fw4 black">Equipment Tonnage of 16</span>
         </li>
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           Movement (Inches): <span className="fw4 black">8 inches</span>
         </li>
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           Armor: <span className="fw4 black">25</span>
         </li>
       </ul>

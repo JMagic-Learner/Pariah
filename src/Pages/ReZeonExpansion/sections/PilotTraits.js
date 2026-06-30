@@ -7,7 +7,7 @@ export const ReZeonPilotTraits = () => {
 
   return (
     <div>
-      <h2 className="f2 fw7 red bb pb2 mb3">ReZeon Pilot Traits</h2>
+      <h2 className="f2 fw7 orange bb pb2 mb3">ReZeon Pilot Traits</h2>
       <p className="lh-copy mb4">
         ReZeon pilots may take any of these traits in addition to those found in
         the Core Rules. You may not stack multiple of the same trait per pilot
@@ -21,7 +21,9 @@ export const ReZeonPilotTraits = () => {
               <tr>
                 <th className="fw6 bb b--black-20 pb3 pr3 bg-white tl">Name</th>
                 <th className="fw6 bb b--black-20 pb3 pr3 bg-white tl">Cost</th>
-                <th className="fw6 bb b--black-20 pb3 pr3 bg-white tl">Effect</th>
+                <th className="fw6 bb b--black-20 pb3 pr3 bg-white tl">
+                  Effect
+                </th>
               </tr>
             </thead>
             <tbody className="lh-copy">
@@ -41,7 +43,7 @@ export const ReZeonPilotTraits = () => {
         <div className="w-100">
           {REZEON_TRAITS.map((trait, i) => (
             <div key={i} className="ba b--black-20 mb3 pa3">
-              <p className="fw7 ma0 mb1 red">{trait.name}</p>
+              <p className="fw7 ma0 mb1 orange">{trait.name}</p>
               <p className="f7 ma0 mb1 gray">Cost: {trait.cost}</p>
               <p className="f6 lh-copy ma0">{trait.effect}</p>
             </div>

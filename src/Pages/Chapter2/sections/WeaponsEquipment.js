@@ -1,7 +1,7 @@
 export const WeaponsEquipment = () => {
   return (
     <div>
-      <h2 className="f2 fw7 red bb pb2 mb3">2.4 — Weapons and Equipment</h2>
+      <h2 className="f2 fw7 orange bb pb2 mb3">2.4 — Weapons and Equipment</h2>
 
       <h3 className="f4 fw7 mt3 mb2 tj">Weapons Characteristics</h3>
       <p className="lh-copy tj">
@@ -9,24 +9,24 @@ export const WeaponsEquipment = () => {
       </p>
 
       <ul className="lh-copy pl3 tj">
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           Name
           <span className="fw4 black"> Self Explanatory</span>
         </li>
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           Type
           <span className="fw4 black"> What type of weapon category</span>
         </li>
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           ROF
           <span className="fw4 black">
             {" "}
             Rate of Fire, or how many attack dice are rolled per{" "}
-            <span className="fw6 red"> [ATTACK] </span>
+            <span className="fw6 orange"> [ATTACK] </span>
             declaration
           </span>
         </li>
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           Rangebands
           <span className="fw4 black">
             {" "}
@@ -34,7 +34,7 @@ export const WeaponsEquipment = () => {
             | Extreme Range
           </span>
         </li>
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           Mods
           <span className="fw4 black">
             {" "}
@@ -42,33 +42,33 @@ export const WeaponsEquipment = () => {
             Long Range Mods | Extreme Range Mods. Typically ranges from -2 to +2
           </span>
         </li>
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           Damage:{" "}
           <span className="fw4 black">
             How much hit points are subtracted from a hit location
           </span>
         </li>
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           Equipment Tonnage:{" "}
           <span className="fw4 black">How much weight this weapon incurs</span>
         </li>
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           Active FRO:{" "}
           <span className="fw4 black">
             How much FRO a MSU spends to fire this weapon or use this weapon.
           </span>
         </li>
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           MCU (MONETARY CREDIT UNITS) Cost:{" "}
           <span className="fw4 black">How much a weapon typically costs.</span>
         </li>
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           Restrictions:{" "}
           <span className="fw4 black">
             What restrictions are there to purchase this weapon.
           </span>
         </li>
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           Keywords:{" "}
           <span className="fw4 black">
             What special abilities are associated with this weapon
@@ -96,25 +96,25 @@ export const WeaponsEquipment = () => {
       <p className="lh-copy tj">
         The tonnage of certain weapons affect the avaibility of MSU's hands and
         how they perform in{" "}
-        <span className="fw6 red"> [SIMULTANEOUS ATTACK] </span> actions
+        <span className="fw6 orange"> [SIMULTANEOUS ATTACK] </span> actions
       </p>
 
       <ul className="lh-copy pl3 tj">
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           [LIGHT] Weapons
           <span className="fw4 black">
             {" "}
             1 - 2 tons. Can be held in one hand.
           </span>
         </li>
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           [MEDIUM] Weapons
           <span className="fw4 black">
             {" "}
             3 - 5 tons. Can be held in one hand
           </span>
         </li>
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           [HEAVY] Weapons
           <span className="fw4 black">
             {" "}
@@ -125,10 +125,10 @@ export const WeaponsEquipment = () => {
       </ul>
 
       <h3 className="f4 fw7 mt4 mb2 lh-copy tj">
-        Equipping Weapons — <span className="fw6 red"> [READIED] </span> vs{" "}
-        <span className="fw6 red"> [INBUILT] </span> vs{" "}
-        <span className="fw6 red"> [STOWED] </span> vs{" "}
-        <span className="fw6 red"> [MOUNTED] </span>
+        Equipping Weapons — <span className="fw6 orange"> [READIED] </span> vs{" "}
+        <span className="fw6 orange"> [INBUILT] </span> vs{" "}
+        <span className="fw6 orange"> [STOWED] </span> vs{" "}
+        <span className="fw6 orange"> [MOUNTED] </span>
       </h3>
       <p className="lh-copy tj">
         Gunpla have numerous ways to equip weapons. The way a weapon is
@@ -139,13 +139,13 @@ export const WeaponsEquipment = () => {
       <p className="lh-copy tj">
         The most common way for Gunpla and MSU to hold weapons. These are
         weapons physically held by the Gunpla in either arm(s).{" "}
-        <span className="fw6 red"> [READIED] </span>
-        weapons allow <span className="fw6 red"> [SWAP]</span>,{" "}
-        <span className="fw6 red"> [DROP] </span>,{" "}
-        <span className="fw6 red"> [ATTACK] </span>,{" "}
-        <span className="fw6 red"> [SIMULTANEOUS ATTACK]</span> and{" "}
-        <span className="fw6 red"> [REACTIVE ATTACK]</span> actions.{" "}
-        <span className="fw6 red"> [READIED] </span> weapons are slotted into
+        <span className="fw6 orange"> [READIED] </span>
+        weapons allow <span className="fw6 orange"> [SWAP]</span>,{" "}
+        <span className="fw6 orange"> [DROP] </span>,{" "}
+        <span className="fw6 orange"> [ATTACK] </span>,{" "}
+        <span className="fw6 orange"> [SIMULTANEOUS ATTACK]</span> and{" "}
+        <span className="fw6 orange"> [REACTIVE ATTACK]</span> actions.{" "}
+        <span className="fw6 orange"> [READIED] </span> weapons are slotted into
         the Weapons slot of the hit location
       </p>
 
@@ -155,43 +155,43 @@ export const WeaponsEquipment = () => {
       <p className="lh-copy tj">
         A somewhat rare feature on Gunpla and MSUs. These are weapons concealed
         or attached directly to the frame of the MSU.{" "}
-        <span className="fw6 red"> [INBUILT] </span> weapons can be used for{" "}
-        <span className="fw6 red"> [ATTACK] </span>,
-        <span className="fw6 red"> [SIMULTANEOUS ATTACK] </span>,{" "}
-        <span className="fw6 red"> [REACTIVE ATTACK] </span>
-        actions. <span className="fw6 red"> [INBUILT] </span> weapons can either
-        be slotted into the Weapon slot or the Equipment slot of a hit location
+        <span className="fw6 orange"> [INBUILT] </span> weapons can be used for{" "}
+        <span className="fw6 orange"> [ATTACK] </span>,
+        <span className="fw6 orange"> [SIMULTANEOUS ATTACK] </span>,{" "}
+        <span className="fw6 orange"> [REACTIVE ATTACK] </span>
+        actions. <span className="fw6 orange"> [INBUILT] </span> weapons can
+        either be slotted into the Weapon slot or the Equipment slot of a hit
+        location
       </p>
 
       <h5 className="f5 fw7 mt3 mb1 lh-copy tj">
         [STOWED] Weapons (in storage)
       </h5>
       <p className="lh-copy tj">
-        <span className="fw6 red"> [STOWED] </span> weapons are usually
+        <span className="fw6 orange"> [STOWED] </span> weapons are usually
         represented by racked weapons on the back or any other location. These
         weapons are not readied and therefore cannot be used in{" "}
-        <span className="fw6 red"> [ATTACK] </span> or
-        <span className="fw6 red"> [REACTIVE ATTACK] </span>
+        <span className="fw6 orange"> [ATTACK] </span> or
+        <span className="fw6 orange"> [REACTIVE ATTACK] </span>
         actions. They can however be used for{" "}
-        <span className="fw6 red"> [SWAP]</span> and{" "}
-        <span className="fw6 red"> [DROP] </span>
-        actions. <span className="fw6 red"> [STOWED] </span> weapons can only be
-        slotted into the equipment slot of a hit location
+        <span className="fw6 orange"> [SWAP]</span> and{" "}
+        <span className="fw6 orange"> [DROP] </span>
+        actions. <span className="fw6 orange"> [STOWED] </span> weapons can only
+        be slotted into the equipment slot of a hit location
       </p>
 
       <h5 className="f5 fw7 mt3 mb1 lh-copy tj">
         [MOUNTED] Weapons (attached to outer armor)
       </h5>
       <p className=" lh-copy tj">
-        Weapons attached via <span className="fw6 red"> [HARDPOINTS] </span> to
-        the outside of an MSU. <span className="fw6 red"> [MOUNTED] </span>
-        weapons can only be used for <span className="fw6 red">
-          {" "}
-          [ATTACK]{" "}
-        </span>{" "}
-        and <span className="fw6 red"> [SIMULTANEOUS ATTACK] </span> actions.
-        <span className="fw6 red"> [MOUNTED] </span> weapons go into the Weapon
-        slot or the Equipment slot of a hit location.
+        Weapons attached via <span className="fw6 orange"> [HARDPOINTS] </span>{" "}
+        to the outside of an MSU.{" "}
+        <span className="fw6 orange"> [MOUNTED] </span>
+        weapons can only be used for{" "}
+        <span className="fw6 orange"> [ATTACK] </span> and{" "}
+        <span className="fw6 orange"> [SIMULTANEOUS ATTACK] </span> actions.
+        <span className="fw6 orange"> [MOUNTED] </span> weapons go into the
+        Weapon slot or the Equipment slot of a hit location.
       </p>
 
       <h3 className="f4 fw7 mt4 mb2 lh-copy tj">
@@ -199,8 +199,8 @@ export const WeaponsEquipment = () => {
       </h3>
 
       <p className="lh-copy tj">
-        Much like weapons, <span className="fw6 red"> [PILOT]</span>s purchase
-        Support Equipment according to MCU, FRO, and Tonnage limits
+        Much like weapons, <span className="fw6 orange"> [PILOT]</span>s
+        purchase Support Equipment according to MCU, FRO, and Tonnage limits
       </p>
 
       <p className="lh-copy tj">
@@ -209,7 +209,7 @@ export const WeaponsEquipment = () => {
       </p>
 
       <ul className="lh-copy pl3 tj">
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           Hit Location 1
           <span className="fw4 black">
             {" "}
@@ -217,7 +217,7 @@ export const WeaponsEquipment = () => {
             specifeid hit location
           </span>
         </li>
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           Hit Location 1/ Hit Location 2
           <span className="fw4 black">
             {" "}
@@ -225,7 +225,7 @@ export const WeaponsEquipment = () => {
             mentioned.
           </span>
         </li>
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           Both Hit Locations (Legs or Arms)
           <span className="fw4 black">
             {" "}
@@ -235,7 +235,7 @@ export const WeaponsEquipment = () => {
             even if one of the assigned limbs are lost.
           </span>
         </li>
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           Weapon
           <span className="fw4 black">
             {" "}
@@ -245,7 +245,7 @@ export const WeaponsEquipment = () => {
             receives the upgrade.
           </span>
         </li>
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           "-----"
           <span className="fw4 black">
             {" "}

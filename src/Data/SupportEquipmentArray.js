@@ -117,7 +117,7 @@ export const SUPPORT = [
       "[COMMANDER] can perform the RALLY action for free at Step 1.1 of the Status Phase.",
   },
   {
-    name: "Cyclic",
+    name: "[CYCLIC] upgradew",
     loc: "Weapon",
     ton: "–",
     pfro: "–",
@@ -218,7 +218,16 @@ export const SUPPORT = [
     qty: 2,
     mcu: 25,
     effect:
-      'Deploy Flare token within 8"; enemy missiles can rotate 45* if possible and move toward it. [Limited Use(1)].',
+      'Deploy Flare token within 8"; enemy missiles can rotate 45* if possible and move toward it. [LIMITED USE(1)].',
+  },
+  {
+    name: "Front Facing Thrusters",
+    loc: "Torso",
+    ton: 2,
+    pfro: "–",
+    qty: 1,
+    mcu: 25,
+    effect: "The MSU may now [BOOST(X)] backwards without penalty",
   },
   {
     name: "Forward Observer",
@@ -228,6 +237,16 @@ export const SUPPORT = [
     qty: 1,
     mcu: 35,
     effect: "See Forward Observe Action (Section 3.7).",
+  },
+  {
+    name: "Dummy Balloons",
+    loc: "Torso",
+    ton: 0,
+    pfro: "",
+    qty: 1,
+    mcu: 15,
+    effect:
+      "[DEPLOYABLE]. Deploy 5 40mm markers/tokens. Dummy Balloons block LOS but do not count as [OBSCURING COVER]. MSU moving through Dummy Balloons automaticcaly remove deployed markers. [LIMITED USE(1)]",
   },
   {
     name: "[GRIP] Upgrade",
@@ -283,7 +302,7 @@ export const SUPPORT = [
     qty: 1,
     mcu: 75,
     effect:
-      "Deploy I-Field at any phase: nullifies all beam attacks for one round. [Limited Use(1)].",
+      "Deploy I-Field at any phase: nullifies all beam attacks for one round. [LIMITED USE(1)].",
   },
   {
     name: "[IMPACT] Upgrade",
@@ -347,7 +366,7 @@ export const SUPPORT = [
     qty: 2,
     mcu: 15,
     effect:
-      'Deploy 8" chaff cloud blocking LOS and detonating missiles. [Limited Use(1)].',
+      'Deploy 8" chaff cloud blocking LOS and detonating missiles. [LIMITED USE(1)].',
   },
   {
     name: "Panoptic Canopy",
@@ -393,7 +412,7 @@ export const SUPPORT = [
     qty: 3,
     mcu: 20,
     effect:
-      'MSU moving within 4" takes 15 damage to both LEG locations. [Limited Use(1)], [AOE(4)]. [DEPLOYABLE]',
+      'MSU moving within 4" takes 15 damage to both LEG locations. [LIMITED USE(1)], [AOE(4)]. [DEPLOYABLE]',
   },
   {
     name: "Psycommu Funnel/Bit",
@@ -564,7 +583,7 @@ export const SUPPORT = [
     pfro: "–",
     qty: 1,
     mcu: 40,
-    effect: "Allows Airstrike action. [Limited Use(1)].",
+    effect: "Allows Airstrike action. [LIMITED USE(1)].",
   },
   {
     name: "Underslung",

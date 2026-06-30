@@ -1,6 +1,12 @@
 export const MUNITIONS = [
   { name: "[MUNITIONS]: AP", dam: 8, effect: "AP(4)" },
   {
+    name: "[MUNITIONS]: Adhesive",
+    dam: "-",
+    effect:
+      "Enemy MSU that are directly hit by [MUNITIONS]:ADHESIVE reduce base movement by 2 inches",
+  },
+  {
     name: "[MUNITIONS]: Flash",
     dam: "–",
     effect:

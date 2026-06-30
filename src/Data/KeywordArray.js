@@ -44,8 +44,12 @@ export const KEYWORDS = [
     desc: "If a [PILOT] is a [COMMANDER], the [PILOT] gains one Command Action. These Command Actions are not refreshed on Staus Phase Step 1.4, so they are single use. These Command Actions can only be spent on [COMMANDER ACTION] abilities. A [PILOT] with this keyword gains access to [COMMANDER ACTIONS]",
   },
   {
+    name: "[CYCLIC]",
+    desc: "+1 ROF. If two [CYCLIC] upgrades exist on a Beam type weapon, increase active FRO by 1",
+  },
+  {
     name: "[DEPLOYABLE]",
-    desc: "This equipment can be physically placed on the battlefield. Usually specifies a base size. Deployed equipment auto-hits when targeted and has 10 HP with one hit location. MSUs spend one action during the MOVEMENT phase to deploy equipment within 8 inches. Equipment cannot be deployed as a Reaction.",
+    desc: "This equipment can be physically placed on the battlefield. Usually specifies a base size. Deployed equipment auto-hits when targeted and has 10 HP with one hit location. MSUs spend one action during the MOVEMENT phase to deploy equipment within 8 inches. Equipment can be deployed as a reaction",
   },
   {
     name: "[EXTRA ARMOR(X)]",

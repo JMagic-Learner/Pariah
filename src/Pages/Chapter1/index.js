@@ -3,7 +3,9 @@ import { RightHandPanel } from "./RightHandPanel";
 export const Chapter1 = () => {
   return (
     <div className="w-90 center pv4">
-      <h1 className="f1 fw9 red bb pb3 mb4">Chapter 1: What is Flashpoint?</h1>
+      <h1 className="f1 fw9 orange bb pb3 mb4">
+        Chapter 1: What is Flashpoint?
+      </h1>
 
       <div className="flex-ns">
         <div className="w-60-ns mr5-ns">
@@ -23,7 +25,7 @@ export const Chapter1 = () => {
             a wide pool of lore.
           </p>
 
-          <h2 className="f3 fw7 red mt4 mb2">What is Universal Century?</h2>
+          <h2 className="f3 fw7 orange mt4 mb2">What is Universal Century?</h2>
           <p className="tj lh-copy">
             Universal Century (UC) is the timeline setting where the original
             Gundam series took place, originally airing on April 7, 1979. The
@@ -37,7 +39,7 @@ export const Chapter1 = () => {
             abilities.
           </p>
 
-          <h2 className="f3 fw7 red mt4 mb2">Mobile Suits and Gundams</h2>
+          <h2 className="f3 fw7 orange mt4 mb2">Mobile Suits and Gundams</h2>
           <p className="tj lh-copy">
             Mobile Suits are bipedal machines ranging in height from 15m to
             116m. All mobile suits use a fusion reactor that consumes Helium-3.

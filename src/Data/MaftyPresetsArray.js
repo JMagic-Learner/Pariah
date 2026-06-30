@@ -330,7 +330,7 @@ export const MAFTY_PRESETS = [
           fro: "",
           tonnage: "5",
           notes:
-            "[GUIDED],[INBUILT],[MISSILE(16)],[MOUNTABLE],[Limited Use(1)]",
+            "[GUIDED],[INBUILT],[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
           name: "Missile Pod 10 (Guided + INBUILT)",
@@ -338,7 +338,7 @@ export const MAFTY_PRESETS = [
           fro: "",
           tonnage: "5",
           notes:
-            "[GUIDED],[INBUILT],[MISSILE(16)],[MOUNTABLE],[Limited Use(1)]",
+            "[GUIDED],[INBUILT],[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         B(),
       ],

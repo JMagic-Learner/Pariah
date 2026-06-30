@@ -2,7 +2,7 @@ import { ContactCard } from "../../Components/ContactCard";
 
 export const Contact = () => (
   <div className="pa4 center mw8">
-    <h1 className="f2 fw7 red bb pb2 mb4">Contact</h1>
+    <h1 className="f2 fw7 orange bb pb2 mb4">Contact</h1>
     <p className="lh-copy mb5 mw6">
       Have questions, feedback, or want to join a game? Reach out using the
       details below.

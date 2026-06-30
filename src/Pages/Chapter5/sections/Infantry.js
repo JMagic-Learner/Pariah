@@ -10,7 +10,7 @@ export const Infantry = () => {
 
   return (
     <div>
-      <h2 className="f2 fw7 red bb pb2 mb3">5.1 — Infantry</h2>
+      <h2 className="f2 fw7 orange bb pb2 mb3">5.1 — Infantry</h2>
 
       <p className="lh-copy mb4">
         Infantry squads are represented by individual 28mm hex bases grouped
@@ -66,7 +66,7 @@ export const Infantry = () => {
                       <td className="pv3 pr3 bb b--black-20 tc">{u.move}</td>
                       <td className="pv3 pr3 bb b--black-20">{u.unitSize}</td>
                       <td className="pv3 pr3 bb b--black-20 tc">{u.maxQty}</td>
-                      <td className="pv3 pr3 bb b--black-20 tc red fw6">
+                      <td className="pv3 pr3 bb b--black-20 tc orange fw6">
                         {u.mcuCost}
                       </td>
                       <td className="pv3 pr3 bb b--black-20">{u.equipment}</td>
@@ -121,7 +121,7 @@ export const Infantry = () => {
                       <td className="pv3 pr3 bb b--black-20 tc">{w.rof}</td>
                       <td className="pv3 pr3 bb b--black-20">{w.range}</td>
                       <td className="pv3 pr3 bb b--black-20">{w.mod}</td>
-                      <td className="pv3 pr3 bb b--black-20 tc red fw6">
+                      <td className="pv3 pr3 bb b--black-20 tc orange fw6">
                         {w.dam}
                       </td>
                       <td className="pv3 pr3 bb b--black-20">{w.keywords}</td>

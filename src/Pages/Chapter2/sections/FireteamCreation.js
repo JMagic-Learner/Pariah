@@ -1,7 +1,7 @@
 export const FireteamCreation = () => {
   return (
     <div>
-      <h2 className="f2 fw7 red bb pb2 mb3">2.3 — Fireteam Creation</h2>
+      <h2 className="f2 fw7 orange bb pb2 mb3">2.3 — Fireteam Creation</h2>
 
       <p className="lh-copy tj">
         Before playing Flashpoint, each player must construct a Fireteam. A
@@ -15,25 +15,26 @@ export const FireteamCreation = () => {
       <p className="lh-copy tj">
         Each player receives a shared MCU budget agreed upon before the game.
         These shared budgets are split between the{" "}
-        <span className="fw6 red"> [FIRETEAM] </span> members. For example, each{" "}
-        <span className="fw6 red"> [PILOT]</span> in a 2v2 game has a 250 MCU
-        limit, but overall team budgets are 500 MCU. Recommended budgets:
+        <span className="fw6 orange"> [FIRETEAM] </span> members. For example,
+        each <span className="fw6 orange"> [PILOT]</span> in a 2v2 game has a
+        250 MCU limit, but overall team budgets are 500 MCU. Recommended
+        budgets:
       </p>
 
       <ul className="lh-copy pl3 tj">
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           DUEL (250 MCU) The classic 1v1 showdown between two opposing{" "}
-          <span className="fw6 red"> [PILOT]</span>s.
+          <span className="fw6 orange"> [PILOT]</span>s.
         </li>
-        <li className="pv1 red fw6">
-          SKIRMISH (500 MCU) A <span className="fw6 red"> [PILOT]</span>s and a
-          trusted partner team up to go 2v2.
+        <li className="pv1 orange fw6">
+          SKIRMISH (500 MCU) A <span className="fw6 orange"> [PILOT]</span>s and
+          a trusted partner team up to go 2v2.
         </li>
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           FIREFIGHT (750 MCU) A full{" "}
-          <span className="fw6 red"> [FIRETEAM] </span> (3v3) engagement.
+          <span className="fw6 orange"> [FIRETEAM] </span> (3v3) engagement.
         </li>
-        <li className="pv1 red fw6">
+        <li className="pv1 orange fw6">
           FLASHPOINT (1000 MCU) Absolute chaos, 4v4
         </li>
       </ul>
@@ -45,24 +46,27 @@ export const FireteamCreation = () => {
 
       <h3 className="f4 fw7 mt4 mb2 tj">
         {" "}
-        What constitutes a <span className="fw6 red"> [FIRETEAM] </span>
+        What constitutes a <span className="fw6 orange"> [FIRETEAM] </span>
       </h3>
       <p className="lh-copy tj">
-        In order to create a <span className="fw6 red"> [FIRETEAM] </span>, a
+        In order to create a <span className="fw6 orange"> [FIRETEAM] </span>, a
         player must build a force of two or more [PILOTS], with one{" "}
-        <span className="fw6 red"> [PILOT]</span> having the{" "}
-        <span className="fw6 red"> [COMMANDER] </span> keyword.
+        <span className="fw6 orange"> [PILOT]</span> having the{" "}
+        <span className="fw6 orange"> [COMMANDER] </span> keyword.
       </p>
       <p className="lh-copy tj">
         {" "}
-        A player may nominate one <span className="fw6 red"> [PILOT]</span> to
-        have the <span className="fw6 red"> [COMMANDER] </span> keyword, or give
-        the Captain pilot trait to one of their [PILOTS]
+        A player may nominate one <span className="fw6 orange">
+          {" "}
+          [PILOT]
+        </span>{" "}
+        to have the <span className="fw6 orange"> [COMMANDER] </span> keyword,
+        or give the Captain pilot trait to one of their [PILOTS]
       </p>
 
       <p className="lh-copy tj">
         {" "}
-        Each <span className="fw6 red"> [FIRETEAM] </span> can belong to a
+        Each <span className="fw6 orange"> [FIRETEAM] </span> can belong to a
         [FACTION], see Section 2.10 for Faction bonuses
       </p>
     </div>

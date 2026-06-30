@@ -123,16 +123,16 @@ export const PilotTraits = () => {
                   generally safer to ship unassembled, or new on sprue
                   miniatures than fully assembled figures. If your miniature has
                   some fragile parts such as exposed spears, lances, swords,{" "}
-                  <span className="fw6 red"> [INBUILT] </span> highly recommend
-                  leaving the minature assembled and having the sprue act as
-                  protective support.
+                  <span className="fw6 orange"> [INBUILT] </span> highly
+                  recommend leaving the minature assembled and having the sprue
+                  act as protective support.
                 </p>
 
                 <p className="tj">
                   If for whatever reason, you do want to ship a fully assembled
                   miniature, please take a photograph of it's initial condition
                   prior to shipping. If it arrives damaged, or broken,{" "}
-                  <span className="fw6 red"> [INBUILT] </span>
+                  <span className="fw6 orange"> [INBUILT] </span>
                   will return the miniature as is. There have been instances in
                   the past where a resin model has been shattered into oblivion
                   by rough handling at distribution centers, making it nearly
@@ -140,17 +140,17 @@ export const PilotTraits = () => {
                 </p>
 
                 <p className="tj">
-                  <span className="fw6 red"> [INBUILT] </span> in turn, will
+                  <span className="fw6 orange"> [INBUILT] </span> in turn, will
                   also take a picture of the miniature when
-                  <span className="fw6 red"> [INBUILT] </span> INBUILT send the
-                  finished commision back to y
-                  <span className="fw6 red"> [INBUILT] </span>ress. INBUILT will
-                  most likely also take a final video of me packing the
+                  <span className="fw6 orange"> [INBUILT] </span> INBUILT send
+                  the finished commision back to y
+                  <span className="fw6 orange"> [INBUILT] </span>ress. INBUILT
+                  will most likely also take a final video of me packing the
                   miniature into it's parcel, prior to dropping it off a
-                  <span className="fw6 red"> [INBUILT] </span> shipping company.
-                  INBUILT will not be able to guarantee the level of handling
-                  from the shipping company or it's affiliated distribution
-                  centers
+                  <span className="fw6 orange"> [INBUILT] </span> shipping
+                  company. INBUILT will not be able to guarantee the level of
+                  handling from the shipping company or it's affiliated
+                  distribution centers
                 </p>
               </div>
 
@@ -182,7 +182,7 @@ export const PilotTraits = () => {
                 "w-100 mb3": isMobile,
               })}
             >
-              <p className="fw7 ma0 mb1 red f6 tc"> {trait.name}</p>
+              <p className="fw7 ma0 mb1 orange f6 tc"> {trait.name}</p>
               <p className="lh-copy ma0 f7 tj">
                 Restriction(s): {trait?.restriction || "-"}{" "}
               </p>

@@ -834,7 +834,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "1",
           notes:
-            "[MUNITIONS]: Smoke,[INDIRECT],[QUICK SWAP],[Limited Use(1)],[THROW]",
+            "[MUNITIONS]: Smoke,[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
         },
         {
           name: "Grenade",
@@ -842,7 +842,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "1",
           notes:
-            "[MUNITIONS]: Smoke,[INDIRECT],[QUICK SWAP],[Limited Use(1)],[THROW]",
+            "[MUNITIONS]: Smoke,[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
         },
         {
           name: "Grenade",
@@ -850,7 +850,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "1",
           notes:
-            "[MUNITIONS]: AP,[INDIRECT],[QUICK SWAP],[Limited Use(1)],[THROW]",
+            "[MUNITIONS]: AP,[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
         },
         {
           name: "Grenade",
@@ -858,7 +858,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "1",
           notes:
-            "[MUNITIONS]: AP,[INDIRECT],[QUICK SWAP],[Limited Use(1)],[THROW]",
+            "[MUNITIONS]: AP,[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
         },
         {
           name: "Machine Gun",
@@ -1597,14 +1597,14 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "5",
-          notes: "[MISSILE(16)],[MOUNTABLE],[Limited Use(1)]",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
           name: "Missile Pod 10",
           mcuCost: "FREE",
           fro: "",
           tonnage: "5",
-          notes: "[MISSILE(16)],[MOUNTABLE],[Limited Use(1)]",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
           name: "Vulcan Cannon (INBUILT)",
@@ -1730,7 +1730,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "4",
-          notes: "[MISSILE(16)],[MOUNTABLE],[Limited Use(1)]",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
           name: "Beam Rifle + GL",
@@ -1837,7 +1837,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "4",
           notes:
-            "[INBUILT],[AOE(6)] or [AP(5)],[INBUILT],[QUICK SWAP],[Limited Use(1)]",
+            "[INBUILT],[AOE(6)] or [AP(5)],[INBUILT],[QUICK SWAP],[LIMITED USE(1)]",
         },
         {
           name: "Arm Cannons",
@@ -1845,7 +1845,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "4",
           notes:
-            "[INBUILT],[AOE(6)] or [AP(5)],[INBUILT],[QUICK SWAP],[Limited Use(1)]",
+            "[INBUILT],[AOE(6)] or [AP(5)],[INBUILT],[QUICK SWAP],[LIMITED USE(1)]",
         },
         B(),
         B(),
@@ -2293,21 +2293,21 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
-          notes: "[MISSILE(16)],[MOUNTABLE],[Limited Use(1)]",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
           name: "Missile Pod 3 (MOUNTED)",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
-          notes: "[MISSILE(16)],[MOUNTABLE],[Limited Use(1)]",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
           name: "Missile Pod 2 x 2 (MOUNTED)",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
-          notes: "[MISSILE(16)],[MOUNTABLE],[Limited Use(1)]",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
       ],
       addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
@@ -2381,21 +2381,21 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "6",
-          notes: "[MUNITIONS],[INDIRECT],[QUICK SWAP],[Limited Use(1)],[THROW]",
+          notes: "[MUNITIONS],[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
         },
         {
           name: "Arm Cannons",
           mcuCost: "FREE",
           fro: "",
           tonnage: "4",
-          notes: "[AOE(6)] or [AP(5)],[INBUILT],[QUICK SWAP],[Limited Use(1)]",
+          notes: "[AOE(6)] or [AP(5)],[INBUILT],[QUICK SWAP],[LIMITED USE(1)]",
         },
         {
           name: "Arm Cannons",
           mcuCost: "FREE",
           fro: "",
           tonnage: "4",
-          notes: "[AOE(6)] or [AP(5)],[INBUILT],[QUICK SWAP],[Limited Use(1)]",
+          notes: "[AOE(6)] or [AP(5)],[INBUILT],[QUICK SWAP],[LIMITED USE(1)]",
         },
         {
           name: "Vulcan Cannons",
@@ -2482,11 +2482,11 @@ export const EF_PRESETS = [
           notes: "",
         },
         {
-          name: "Shield (Missile Pod 2)",
+          name: "Shield (Missile Pod 4)",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "2",
-          notes: "[MISSILE(16)],[MOUNTABLE],[Limited Use(1)]",
+          tonnage: "3",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
           name: "Beam Saber",
@@ -2508,7 +2508,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "1",
           notes:
-            "[MUNITIONS],[INDIRECT], [QUICK SWAP], [Limited Use(1)], [THROW]",
+            "[MUNITIONS],[INDIRECT], [QUICK SWAP], [LIMITED USE(1)], [THROW]",
         },
         {
           name: "Grenades",
@@ -2516,7 +2516,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "1",
           notes:
-            "[MUNITIONS],[INDIRECT], [QUICK SWAP], [Limited Use(1)], [THROW]",
+            "[MUNITIONS],[INDIRECT], [QUICK SWAP], [LIMITED USE(1)], [THROW]",
         },
         {
           name: "Grenades",
@@ -2524,7 +2524,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "1",
           notes:
-            "[MUNITIONS],[INDIRECT], [QUICK SWAP], [Limited Use(1)], [THROW]",
+            "[MUNITIONS],[INDIRECT], [QUICK SWAP], [LIMITED USE(1)], [THROW]",
         },
         B(),
       ],
@@ -2551,7 +2551,7 @@ export const EF_PRESETS = [
         leftArm: {
           current: "24",
           max: "24",
-          weapon: "Shield (Missile Pod 2)",
+          weapon: "Shield (Missile Pod 4)",
           equipment: ["", "", ""],
         },
         rightLeg: {
@@ -2622,14 +2622,14 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
-          notes: "[MISSILE(16)],[MOUNTABLE],[Limited Use(1)]",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
           name: "Missile Pod 3 (MOUNTED)",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
-          notes: "[MISSILE(16)],[MOUNTABLE],[Limited Use(1)]",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         B(),
       ],
@@ -3151,7 +3151,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "1",
           notes:
-            "[MUNITIONS],[INDIRECT], [QUICK SWAP], [Limited Use(1)], [THROW]",
+            "[MUNITIONS],[INDIRECT], [QUICK SWAP], [LIMITED USE(1)], [THROW]",
         },
         {
           name: "Grenades",
@@ -3159,7 +3159,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "1",
           notes:
-            "[MUNITIONS],[INDIRECT], [QUICK SWAP], [Limited Use(1)], [THROW]",
+            "[MUNITIONS],[INDIRECT], [QUICK SWAP], [LIMITED USE(1)], [THROW]",
         },
         {
           name: "Grenades",
@@ -3167,7 +3167,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "1",
           notes:
-            "[MUNITIONS],[INDIRECT], [QUICK SWAP], [Limited Use(1)], [THROW]",
+            "[MUNITIONS],[INDIRECT], [QUICK SWAP], [LIMITED USE(1)], [THROW]",
         },
         {
           name: "Beam Saber",
@@ -3255,7 +3255,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "3",
-          notes: "[MISSILE(16)],[MOUNTABLE],[Limited Use(1)]",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         { name: "Flares", mcuCost: "FREE", fro: "", tonnage: "2", notes: "" },
         {

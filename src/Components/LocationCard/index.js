@@ -8,20 +8,20 @@ export const LocationCard = ({ title, data, onChange }) => (
   <div
     className={classNames(
       "ba h-100",
-      data.destroyed ? "b--red" : "b--black-20",
+      data.destroyed ? "b--orange" : "b--black-20",
     )}
   >
     <div
       className={classNames(
         "fw7 f7 pa2 ttu tracked flex items-center justify-between",
-        data.destroyed ? "bg-red white" : "bg-dark-green white",
+        data.destroyed ? "bg-orange white" : "bg-dark-green white",
       )}
     >
       <span>{title}</span>
       <button
         className={classNames(
           "f8 ph1 pv0 bn br1 pointer flex-shrink-0 lh-copy",
-          data.destroyed ? "bg-white red fw7" : "bg-dark-green white o-70",
+          data.destroyed ? "bg-white orange fw7" : "bg-dark-green white o-70",
         )}
         onClick={() => onChange("destroyed", !data.destroyed)}
         title={data.destroyed ? "Mark as intact" : "Mark as destroyed"}

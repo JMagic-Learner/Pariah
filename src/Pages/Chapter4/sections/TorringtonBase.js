@@ -1,7 +1,7 @@
 export const TorringtonBase = () => {
   return (
     <div>
-      <h2 className="f2 fw7 red bb pb2 mb3">Mission 1 — Torrington Base</h2>
+      <h2 className="f2 fw7 orange bb pb2 mb3">Mission 1 — Torrington Base</h2>
 
       <div className="pa3 bg-near-white ba b--black-10 mb4">
         <p className="i lh-copy ma0">
@@ -38,12 +38,12 @@ export const TorringtonBase = () => {
           <h3 className="f4 fw7 mb2">Victory Conditions</h3>
           <ul className="lh-copy pl3 tj">
             <li className="pv1">
-              <strong className="red">+2 VP</strong> — Hold Command Bunker at
+              <strong className="orange">+2 VP</strong> — Hold Command Bunker at
               round end
             </li>
             <li className="pv1">
-              <strong className="red">+3 VP</strong> — Attacker: any MSU reaches
-              Defender's deployment zone
+              <strong className="orange">+3 VP</strong> — Attacker: any MSU
+              reaches Defender's deployment zone
             </li>
           </ul>
         </div>

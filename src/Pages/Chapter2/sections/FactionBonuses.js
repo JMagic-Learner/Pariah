@@ -3,7 +3,7 @@ import { FACTIONS } from "../../../Data/FactionsArray";
 export const FactionBonuses = () => {
   return (
     <div>
-      <h2 className="f2 fw7 red bb pb2 mb3">2.10 — Faction Bonuses</h2>
+      <h2 className="f2 fw7 orange bb pb2 mb3">2.10 — Faction Bonuses</h2>
       <p className="lh-copy mb4">
         Each Fireteam can belong to an overarching faction; Earth Federation,
         Principality of ZEON, etc. Within each faction, players may select a
@@ -21,7 +21,7 @@ export const FactionBonuses = () => {
             <div className="pl3">
               {faction.generalBonuses.map((b, bi) => (
                 <div key={bi} className="mb3 pa3 bg-near-white ba b--black-10">
-                  <p className="fw7 ma0 mb1 red">{b.title}</p>
+                  <p className="fw7 ma0 mb1 orange">{b.title}</p>
                   <p className="lh-copy ma0 f6">{b.text}</p>
                 </div>
               ))}
@@ -37,7 +37,7 @@ export const FactionBonuses = () => {
                     <div className="pa3">
                       {sub.bonuses.map((b, bi) => (
                         <div key={bi} className="mb3">
-                          <p className="fw7 ma0 mb1 red f6">{b.title}</p>
+                          <p className="fw7 ma0 mb1 orange f6">{b.title}</p>
                           <p className="lh-copy ma0 f7">{b.text}</p>
                         </div>
                       ))}

@@ -52,7 +52,7 @@ export const SupportEquipmentTable = () => {
                       </td>
                       <td className="pv3 pr3 bb b--black-20">{item.loc}</td>
                       <td className="pv3 pr3 bb b--black-20 tc">{item.ton}</td>
-                      <td className="pv3 pr3 bb b--black-20 tc red fw6">
+                      <td className="pv3 pr3 bb b--black-20 tc orange fw6">
                         {item.pfro}
                       </td>
                       <td className="pv3 pr3 bb b--black-20 tc">{item.qty}</td>
@@ -79,7 +79,7 @@ export const SupportEquipmentTable = () => {
                 "w-100 mb3": isMobile,
               })}
             >
-              <p className="fw7 ma0 mb1 red f6 tc"> {equipment.name}</p>
+              <p className="fw7 ma0 mb1 orange f6 tc"> {equipment.name}</p>
               <p className="lh-copy ma0 f7 tj">MCU: {equipment.mcu}</p>
               <p className="lh-copy ma0 f7 tj">Tonnage: {equipment.ton}</p>
               <p className="lh-copy ma0 f7 tj">Location: {equipment.loc}</p>

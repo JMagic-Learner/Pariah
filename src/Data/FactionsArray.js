@@ -83,7 +83,7 @@ export const FACTIONS = [
   },
   {
     name: "Principality of ZEON",
-    color: "bg-dark-red",
+    color: "bg-dark-orange",
     lore: "ZEON mobile suits are built for speed, shock, and overwhelming close-quarters violence. ZEON [PILOT]s are aggressive, relying on superior mobility and powerful weapons to break enemy lines before they can react.",
     generalBonuses: [
       {

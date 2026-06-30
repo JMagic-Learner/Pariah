@@ -45,14 +45,14 @@ const TERRAIN_TYPES = [
 export const Terrain = () => {
   return (
     <div>
-      <h2 className="f2 fw7 red bb pb2 mb3">3.8 — Terrain and Cover</h2>
+      <h2 className="f2 fw7 orange bb pb2 mb3">3.8 — Terrain and Cover</h2>
 
       <div className="bg-near-white ba b--black-10 pa3 mb4">
         <h3 className="f5 fw7 mb2">Hit Locations and Cover</h3>
         <p className="lh-copy mb2">
           Gundam Flashpoint operates on a true line of sight basis.
         </p>
-        <p className="lh-copy mb2 red b">
+        <p className="lh-copy mb2 orange b">
           If the player gets down on the "eye to eye level" (aka behind the
           MSU's head) and cannot draw line of sight to any hit locations, those
           hit locations are considered protected.

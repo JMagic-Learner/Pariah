@@ -30,7 +30,7 @@ export const REZEON_PRESETS = [
           fro: "3 (PASSIVE)",
           tonnage: "2",
           notes:
-            "Deploy I-Field at any phase: nullifies all beam attacks for one round. [Limited Use(1)]",
+            "Deploy I-Field at any phase: nullifies all beam attacks for one round. [LIMITED USE(1)]",
         },
         {
           name: "Long Blade Rifle (Beam Rifle + CQC)",
@@ -213,7 +213,7 @@ export const REZEON_PRESETS = [
           fro: "3 (PASSIVE)",
           tonnage: "2",
           notes:
-            "Deploy I-Field at any phase: nullifies all beam attacks for one round. [Limited Use(1)]",
+            "Deploy I-Field at any phase: nullifies all beam attacks for one round. [LIMITED USE(1)]",
         },
         {
           name: "I-Field",
@@ -221,7 +221,7 @@ export const REZEON_PRESETS = [
           fro: "3 (PASSIVE)",
           tonnage: "2",
           notes:
-            "Deploy I-Field at any phase: nullifies all beam attacks for one round. [Limited Use(1)]",
+            "Deploy I-Field at any phase: nullifies all beam attacks for one round. [LIMITED USE(1)]",
         },
         {
           name: "Shield Binders (Shield + B.Cannon)",
@@ -413,14 +413,14 @@ export const REZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
-          notes: "[MISSILE(16)],[MOUNTABLE],[Limited Use(1)]",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
           name: "Missile Pod 3",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
-          notes: "[MISSILE(16)],[MOUNTABLE],[Limited Use(1)]",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         B(),
         B(),
@@ -506,14 +506,14 @@ export const REZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "3",
-          notes: "[MISSILE(16)],[MOUNTABLE],[Limited Use(1)]",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
           name: "Flares",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
-          notes: `Deploy Flare token within 8"; enemy missiles can rotate 45* if possible and move toward it. [Limited Use(1)].`,
+          notes: `Deploy Flare token within 8"; enemy missiles can rotate 45* if possible and move toward it. [LIMITED USE(1)].`,
         },
         {
           name: "Heavy Boosters",
@@ -1376,14 +1376,14 @@ export const REZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
-          notes: "[MISSILE(16)],[MOUNTABLE],[Limited Use(1)]",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
           name: "Missile Pod 3",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
-          notes: "[MISSILE(16)],[MOUNTABLE],[Limited Use(1)]",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         B(),
       ],
@@ -1456,7 +1456,7 @@ export const REZEON_PRESETS = [
           fro: "3 (PASSIVE)",
           tonnage: "2",
           notes:
-            "Deploy I-Field at any phase: nullifies all beam attacks for one round. [Limited Use(1)].",
+            "Deploy I-Field at any phase: nullifies all beam attacks for one round. [LIMITED USE(1)].",
         },
         {
           name: "Panoptic Canopy",
@@ -2079,14 +2079,14 @@ export const REZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
-          notes: "[MISSILE(16)],[MOUNTABLE],[Limited Use(1)]",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
           name: "Missile Pod 3",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
-          notes: "[MISSILE(16)],[MOUNTABLE],[Limited Use(1)]",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
           name: "Heavy Boosters",

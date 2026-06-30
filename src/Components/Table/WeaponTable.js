@@ -95,7 +95,9 @@ export const RangedWeaponTable = () => {
                             {weapon.faction || "NA"}
                           </td>
                           <td className="pv3 pr3 bb b--black-20">
-                            {weapon.keywords ? renderKeywords(weapon.keywords, setKwDialog) : "NA"}
+                            {weapon.keywords
+                              ? renderKeywords(weapon.keywords, setKwDialog)
+                              : "NA"}
                           </td>
                         </tr>
                       </>
@@ -118,7 +120,7 @@ export const RangedWeaponTable = () => {
                 "w-100 mb3": isMobile,
               })}
             >
-              <p className="fw7 ma0 mb1 red f6 tc"> {weapon.name}</p>
+              <p className="fw7 ma0 mb1 orange f6 tc"> {weapon.name}</p>
               <p className="lh-copy ma0 f7 tj">MCU: {weapon.mcu}</p>
               <p className="lh-copy ma0 f7 tj">Tonnage: {weapon.ton}</p>
               <p className="lh-copy ma0 f7 tj">FRO Cost: {weapon.fro}</p>
@@ -129,7 +131,12 @@ export const RangedWeaponTable = () => {
               </p>
               <p className="lh-copy ma0 f7 tj">damage: {weapon?.dam || "-"} </p>
               <p className="lh-copy ma0 f7 tj">Mods: {weapon?.mod || "-"} </p>
-              <p className="lh-copy ma0 f7 tj">Effect {weapon.keywords ? renderKeywords(weapon.keywords, setKwDialog) : ""}</p>
+              <p className="lh-copy ma0 f7 tj">
+                Effect{" "}
+                {weapon.keywords
+                  ? renderKeywords(weapon.keywords, setKwDialog)
+                  : ""}
+              </p>
               <p className="lh-copy ma0 f7 tj">
                 Restricted to {weapon.faction}
               </p>
@@ -230,7 +237,9 @@ export const MeleeWeaponTable = () => {
                             {weapon.faction || "NA"}
                           </td>
                           <td className="pv3 pr3 bb b--black-20">
-                            {weapon.keywords ? renderKeywords(weapon.keywords, setKwDialog) : "NA"}
+                            {weapon.keywords
+                              ? renderKeywords(weapon.keywords, setKwDialog)
+                              : "NA"}
                           </td>
                         </tr>
                       </>
@@ -253,7 +262,7 @@ export const MeleeWeaponTable = () => {
                 "w-100 mb3": isMobile,
               })}
             >
-              <p className="fw7 ma0 mb1 red f6 tc"> {weapon.name}</p>
+              <p className="fw7 ma0 mb1 orange f6 tc"> {weapon.name}</p>
               <p className="lh-copy ma0 f7 tj">MCU: {weapon.mcu}</p>
               <p className="lh-copy ma0 f7 tj">Tonnage: {weapon.ton}</p>
               <p className="lh-copy ma0 f7 tj">FRO Cost: {weapon.fro}</p>
@@ -264,7 +273,12 @@ export const MeleeWeaponTable = () => {
               </p>
               <p className="lh-copy ma0 f7 tj">damage: {weapon?.dam || "-"} </p>
               <p className="lh-copy ma0 f7 tj">Mods: {weapon?.mod || "-"} </p>
-              <p className="lh-copy ma0 f7 tj">Effect {weapon.keywords ? renderKeywords(weapon.keywords, setKwDialog) : ""}</p>
+              <p className="lh-copy ma0 f7 tj">
+                Effect{" "}
+                {weapon.keywords
+                  ? renderKeywords(weapon.keywords, setKwDialog)
+                  : ""}
+              </p>
               <p className="lh-copy ma0 f7 tj">
                 Restricted to {weapon.faction}
               </p>
