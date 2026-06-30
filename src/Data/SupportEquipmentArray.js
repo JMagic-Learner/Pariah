@@ -567,6 +567,16 @@ export const SUPPORT = [
     effect: "Allows Airstrike action. [Limited Use(1)].",
   },
   {
+    name: "Underslung",
+    loc: "Weapon",
+    ton: "-",
+    pfro: "–",
+    qty: 1,
+    mcu: 10,
+    effect:
+      "A Grenade Launcher or a Shotgun (Beam/Kinetic) may occupy the same weapon slot as another Rifle type weapon",
+  },
+  {
     name: "Vertical Jump Jets",
     loc: "Both Legs",
     ton: 2,

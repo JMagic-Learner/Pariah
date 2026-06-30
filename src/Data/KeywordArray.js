@@ -104,6 +104,10 @@ export const KEYWORDS = [
     desc: "When firing MISSILE weapons, do not roll attack dice. Place MISSILE tokens X inches away in the front arc (one per ROF) each with a d6 countdown of 2. Each Status Phase Step 1.2, move tokens (X) inches straight ahead ([GUIDED] tokens may rotate 45° at the start of Status Phase 1.2 before moving. Rotating 45* does not reduce movement as it would for MSU). The missile detonates on contact with terrain, an MSU, or when the timer expires. The target rolls an Evasion check FOR EACH INCOMING MISSILE vs a static value of 6`+ to negate. Missiles cannot detonate within the minimum range band.",
   },
   {
+    name: "[MOMENTUM]",
+    desc: "Whenever the wielder declares a [BLITZ], the wielder may also make a ROF 1 Melee attack with a [MOMENTUM] weapon.",
+  },
+  {
     name: "[MOUNTABLE]",
     desc: "Weapon is attached via pegs or hardpoints. Can be fired in [ATTACK] actions. Cannot be fired in [REACTIVE ATTACK] actions. Ignores HEAVY two-hand restrictions. Cannot be the target of Swap actions.",
   },

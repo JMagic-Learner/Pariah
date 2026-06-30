@@ -146,7 +146,7 @@ export const RANGED = [
   {
     name: "Grenade Launcher",
     type: "Grenade",
-    rof: "2d3",
+    rof: "1",
     range: "18|36|54|–",
     mod: "+2|+1|+0|–",
     dam: "[MUNITIONS]",
@@ -159,9 +159,9 @@ export const RANGED = [
   {
     name: "Grenades",
     type: "Grenade",
-    rof: "2d3",
+    rof: "1",
     range: "(18)|(36)|–|–",
-    mod: "+2|+0|–|–",
+    mod: "+0|-2|–|–",
     dam: "[MUNITIONS]",
     ton: 1,
     fro: "–",

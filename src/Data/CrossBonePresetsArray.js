@@ -58,7 +58,7 @@ export const CROSSBONE_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["Panoptic Canopy", "Beam Saber (Stowed)", "", ""],
+          equipment: ["Panoptic Canopy", "Beam Saber (Stowed)", ""],
         },
         rightArm: {
           current: "24",
@@ -148,7 +148,7 @@ export const CROSSBONE_PRESETS = [
           current: "25",
           max: "25",
           weapon: "",
-          equipment: ["Panoptic Canopy", "Beam Saber (Stowed)", "", ""],
+          equipment: ["Panoptic Canopy", "Beam Saber (Stowed)", ""],
         },
         rightArm: {
           current: "25",
@@ -197,13 +197,13 @@ export const CROSSBONE_PRESETS = [
           tonnage: "3",
           notes: "",
         },
-        { name: "Shield", mcuCost: "FREE", fro: "2", tonnage: "2", notes: "" },
+        { name: "Shield", mcuCost: "FREE", fro: "", tonnage: "2", notes: "" },
         {
-          name: "Lance (Pile Bunker)",
+          name: "Lance",
           mcuCost: "FREE",
           fro: "1",
-          tonnage: "1",
-          notes: "",
+          tonnage: "3",
+          notes: "[AP(5)],[PRECISE],[LETHAL],[MOMENTUM]",
         },
         {
           name: "Panoptic Canopy",
@@ -231,7 +231,7 @@ export const CROSSBONE_PRESETS = [
           current: "27",
           max: "27",
           weapon: "",
-          equipment: ["Panoptic Canopy", "", "", ""],
+          equipment: ["Panoptic Canopy", "", ""],
         },
         rightArm: {
           current: "27",
@@ -242,7 +242,7 @@ export const CROSSBONE_PRESETS = [
         leftArm: {
           current: "27",
           max: "27",
-          weapon: "Lance (Pile Bunker)",
+          weapon: "Lance",
           equipment: ["Missile Pod 3 (MOUNTED)", "HMG (INBUILT)", ""],
         },
         rightLeg: {
@@ -289,11 +289,11 @@ export const CROSSBONE_PRESETS = [
             "Reduce Beam damage by 10. Regenerate 10 Shield Armor at Step 0 of Status Phase.",
         },
         {
-          name: "Lance (Pile Bunker)",
+          name: "Lance",
           mcuCost: "FREE",
-          fro: "",
-          tonnage: "4",
-          notes: "",
+          fro: "1",
+          tonnage: "3",
+          notes: "[AP(5)],[PRECISE],[LETHAL],[MOMENTUM]",
         },
         {
           name: "Panoptic Canopy",
@@ -320,12 +320,12 @@ export const CROSSBONE_PRESETS = [
           current: "26",
           max: "26",
           weapon: "",
-          equipment: ["Panoptic Canopy", "Side Verniers", "", ""],
+          equipment: ["Panoptic Canopy", "Side Verniers", ""],
         },
         rightArm: {
           current: "26",
           max: "26",
-          weapon: "Lance (Pile Bunker)",
+          weapon: "Lance",
           equipment: ["HMG (INBUILT)", "Side Verniers", ""],
         },
         leftArm: {
@@ -378,11 +378,11 @@ export const CROSSBONE_PRESETS = [
             "Reduce Beam damage by 10. Regenerate 10 Shield Armor at Step 0 of Status Phase.",
         },
         {
-          name: "Lance (Pile Bunker)",
+          name: "Lance",
           mcuCost: "FREE",
-          fro: "",
+          fro: "1",
           tonnage: "4",
-          notes: "",
+          notes: "[AP(5)],[PRECISE],[LETHAL],[MOMENTUM]",
         },
         {
           name: "Panoptic Canopy",
@@ -408,19 +408,19 @@ export const CROSSBONE_PRESETS = [
         head: {
           current: "26",
           max: "26",
-          weapon: "Lance (Pile Bunker)",
-          equipment: ["HMG (INBUILT)", "Side Verniers", ""],
+          weapon: "",
+          equipment: ["Side Verniers", "", ""],
         },
         torso: {
           current: "26",
           max: "26",
-          weapon: "Beam Shield",
-          equipment: ["Side Verniers", "", "", ""],
+          weapon: "",
+          equipment: ["Side Verniers", "Panoptic Canopy", ""],
         },
         rightArm: {
           current: "26",
           max: "26",
-          weapon: "Lance (Pile Bunker)",
+          weapon: "Lance",
           equipment: ["HMG (INBUILT)", "Side Verniers", ""],
         },
         leftArm: {
@@ -507,7 +507,6 @@ export const CROSSBONE_PRESETS = [
             "Cloak (Anti Beam Coating)",
             "Aim Assist",
             "2x Beam Saber (Stowed)",
-            "",
           ],
         },
         rightArm: {
@@ -602,7 +601,6 @@ export const CROSSBONE_PRESETS = [
             "Panoptic Canopy",
             "Enhanced Ejection",
             "Beam Saber (Stowed)",
-            "",
           ],
         },
         rightArm: {

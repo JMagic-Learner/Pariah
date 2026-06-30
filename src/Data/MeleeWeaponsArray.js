@@ -21,7 +21,7 @@ export const MELEE = [
     ton: 3,
     fro: "–",
     mcu: 35,
-    keywords: "[IMPACT(2)]",
+    keywords: "[IMPACT(2)],[MOMENTUM]",
   },
   {
     name: "Pile Bunker",
@@ -132,7 +132,7 @@ export const MELEE = [
     ton: 3,
     fro: "–",
     mcu: 15,
-    keywords: "[AP(5)],[PRECISE],[LETHAL]",
+    keywords: "[AP(5)],[PRECISE],[LETHAL],[MOMENTUM]",
   },
   {
     name: "Beam Saber",

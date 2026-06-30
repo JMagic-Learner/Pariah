@@ -340,6 +340,10 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
     Array(8).fill(null).map(blankEquip),
   );
   const [soldBase, setSoldBase] = useState(Array(8).fill(false));
+  const [customPreset, setCustomPreset] = useState(() => {
+    try { return JSON.parse(localStorage.getItem("gf_custom_preset")) ?? null; }
+    catch { return null; }
+  });
   const [mechanicChoice, setMechanicChoice] = useState(""); // "tonnage" | "fro" | ""
   const [newtypeChoice1, setNewtypeChoice1] = useState(""); // "gs"|"bs"|"ps"|""
   const [newtypeChoice2, setNewtypeChoice2] = useState("");
@@ -519,6 +523,49 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
         `No available equipment slots in: ${overflow.map((k) => LOC_LABELS[k]).join(", ")}.`,
       );
     }
+  };
+
+  const saveCustomPreset = () => {
+    const snapshot = {
+      msuName, pilotName, mobileSuit, mcu, fro, tonnageLimit, movement, armorValue,
+      gunnery, brawl, piloting, traits,
+      baseEquip, addlEquip, soldBase, locations,
+      mechanicChoice, newtypeChoice1, newtypeChoice2, cyberNewtypeChoice, ramboChoice, grypsVetChoice,
+    };
+    try { localStorage.setItem("gf_custom_preset", JSON.stringify(snapshot)); } catch {}
+    setCustomPreset(snapshot);
+  };
+
+  const loadCustomPreset = () => {
+    if (!customPreset) return;
+    const d = customPreset;
+    setMsuName(d.msuName ?? "");
+    onMsuNameChange?.(d.msuName ?? "");
+    setPilotName(d.pilotName ?? "");
+    setMobileSuit(d.mobileSuit ?? "");
+    setMcu(d.mcu ?? "");
+    setFro(d.fro ?? "");
+    setTonnageLimit(d.tonnageLimit ?? "");
+    setMovement(d.movement ?? "");
+    setArmorValue(d.armorValue ?? "");
+    setGunnery(d.gunnery ?? "");
+    setBrawl(d.brawl ?? "");
+    setPiloting(d.piloting ?? "");
+    setTraits(d.traits ?? ["", "", "", "", ""]);
+    setBaseEquip(d.baseEquip ?? Array(8).fill(null).map(blankEquip));
+    setAddlEquip(d.addlEquip ?? Array(8).fill(null).map(blankEquip));
+    setSoldBase(d.soldBase ?? Array(8).fill(false));
+    setLocations(d.locations ?? {
+      head: blankLoc(3), torso: blankLoc(3),
+      rightArm: blankLoc(3), leftArm: blankLoc(3),
+      rightLeg: blankLoc(3), leftLeg: blankLoc(3),
+    });
+    setMechanicChoice(d.mechanicChoice ?? "");
+    setNewtypeChoice1(d.newtypeChoice1 ?? "");
+    setNewtypeChoice2(d.newtypeChoice2 ?? "");
+    setCyberNewtypeChoice(d.cyberNewtypeChoice ?? "");
+    setRamboChoice(d.ramboChoice ?? "");
+    setGrypsVetChoice(d.grypsVetChoice ?? "");
   };
 
   const applyPreset = (id) => {
@@ -835,6 +882,24 @@ const PilotSheetPanel = ({ onMsuNameChange }) => {
                 </select>
               </div>
             ))}
+            <div className="flex items-center" style={{ gap: "0.25rem" }}>
+              <button
+                className="f8 ph2 pv1 bn br1 pointer bg-white dark-green fw7 dim"
+                onClick={saveCustomPreset}
+                title="Save current sheet as custom preset"
+              >
+                SAVE CUSTOM
+              </button>
+              {customPreset && (
+                <button
+                  className="f8 ph2 pv1 bn br1 pointer bg-yellow dark-green fw7 dim"
+                  onClick={loadCustomPreset}
+                  title="Load saved custom preset"
+                >
+                  LOAD CUSTOM
+                </button>
+              )}
+            </div>
           </div>
         </div>
         <div className="overflow-auto">
