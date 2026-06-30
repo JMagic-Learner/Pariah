@@ -1147,7 +1147,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0123",
         faction: "Crossbone Vanguard",
         equipment:
-          "HMG (INBUILT), Shield, Lance (Pile Bunker), Panoptic Canopy, Missile Pod 3",
+          "HMG (INBUILT), Shield, Lance, Panoptic Canopy, Missile Pod 3",
       },
       {
         msu: "XMS-01 Berga Giros",
@@ -1159,7 +1159,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0123",
         faction: "Crossbone Vanguard",
         equipment:
-          "HMG (INBUILT), Beam Shield, Lance (Pile Bunker), Panoptic Canopy, Side Verniers",
+          "HMG (INBUILT), Beam Shield, Lance, Panoptic Canopy, Side Verniers",
       },
       {
         msu: "XMS-02 Berga Dalas",
@@ -1171,7 +1171,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0123",
         faction: "Crossbone Vanguard",
         equipment:
-          "HMG (INBUILT), Beam Shield, Lance (Pile Bunker), Panoptic Canopy, Side Verniers",
+          "HMG (INBUILT), Beam Shield, Lance, Panoptic Canopy, Side Verniers",
       },
       {
         msu: "XM-X1 Crossbone Gundam X-1",
