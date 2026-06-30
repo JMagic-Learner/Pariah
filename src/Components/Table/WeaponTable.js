@@ -120,7 +120,7 @@ export const RangedWeaponTable = () => {
                 "w-100 mb3": isMobile,
               })}
             >
-              <p className="fw7 ma0 mb1 orange f6 tc"> {weapon.name}</p>
+              <p className="fw7 ma0 mb1 red f6 tc"> {weapon.name}</p>
               <p className="lh-copy ma0 f7 tj">MCU: {weapon.mcu}</p>
               <p className="lh-copy ma0 f7 tj">Tonnage: {weapon.ton}</p>
               <p className="lh-copy ma0 f7 tj">FRO Cost: {weapon.fro}</p>
@@ -262,7 +262,7 @@ export const MeleeWeaponTable = () => {
                 "w-100 mb3": isMobile,
               })}
             >
-              <p className="fw7 ma0 mb1 orange f6 tc"> {weapon.name}</p>
+              <p className="fw7 ma0 mb1 red f6 tc"> {weapon.name}</p>
               <p className="lh-copy ma0 f7 tj">MCU: {weapon.mcu}</p>
               <p className="lh-copy ma0 f7 tj">Tonnage: {weapon.ton}</p>
               <p className="lh-copy ma0 f7 tj">FRO Cost: {weapon.fro}</p>

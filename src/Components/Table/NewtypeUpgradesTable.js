@@ -39,7 +39,7 @@ export const NewtypeUpgradesTable = () => {
                       <td className="pv3 pr3 bb b--black-20 tc">
                         {item.limit}
                       </td>
-                      <td className="pv3 pr3 bb b--black-20 tc orange fw6">
+                      <td className="pv3 pr3 bb b--black-20 tc red fw6">
                         {item.mcu}
                       </td>
                       <td className="pv3 pr3 bb b--black-20 lh-copy">
@@ -56,7 +56,7 @@ export const NewtypeUpgradesTable = () => {
               {NEWTYPE_UPGRADES.map((item, i) => (
                 <div key={i} className="mb2 pa3 ba b--black-10 bg-near-white">
                   <p className="fw7 ma0 mb1">{item.name}</p>
-                  <p className="ma0 f7 orange mb1">
+                  <p className="ma0 f7 red mb1">
                     Limit: {item.limit} · MCU: {item.mcu}
                   </p>
                   <p className="ma0 f7 lh-copy">{item.effect}</p>
@@ -110,7 +110,7 @@ export const NewtypeUpgradesTable = () => {
                       <td className="pv3 pr3 bb b--black-20">{bit.range}</td>
                       <td className="pv3 pr3 bb b--black-20">{bit.mods}</td>
                       <td className="pv3 pr3 bb b--black-20 tc">{bit.dam}</td>
-                      <td className="pv3 pr3 bb b--black-20 tc orange fw6">
+                      <td className="pv3 pr3 bb b--black-20 tc red fw6">
                         {bit.mcu}
                       </td>
                       <td className="pv3 pr3 bb b--black-20 tc">
@@ -127,7 +127,7 @@ export const NewtypeUpgradesTable = () => {
               {BITS.map((bit, i) => (
                 <div key={i} className="mb2 pa3 ba b--black-10 bg-near-white">
                   <p className="fw7 ma0 mb1">{bit.type} Bit</p>
-                  <p className="ma0 f7 orange mb1">
+                  <p className="ma0 f7 red mb1">
                     Armor: {bit.armor} · DAM: {bit.dam} · MCU: {bit.mcu} ·
                     Faction: {bit.faction}
                   </p>

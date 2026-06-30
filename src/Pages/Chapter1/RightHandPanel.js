@@ -3,7 +3,7 @@ export const RightHandPanel = () => {
     <div className="w-40-ns">
       {/* What to ring */}
       <div className="ba b--black-20 pa3 mb4 bg-near-white">
-        <h3 className="f4 fw7 orange mt0 mb3">What to bring</h3>
+        <h3 className="f4 fw7 red mt0 mb3">What to bring</h3>
         <ul className="pl3 lh-copy">
           <li className="pv1">Two D6 (six-sided dice) (at mininum)</li>
           <li className="pv1">
@@ -18,7 +18,7 @@ export const RightHandPanel = () => {
 
       {/* Earth Federation */}
       <div className="ba b--black-20 pa3 mb4">
-        <h3 className="f4 fw7 orange mt0 mb2">Earth Federation</h3>
+        <h3 className="f4 fw7 red mt0 mb2">Earth Federation</h3>
         <p className="lh-copy f6 tj">
           The Earth Federation was formed in the pre-(UC) era when
           overpopulation caused famines, outbreaks of disease, and wars over
@@ -33,7 +33,7 @@ export const RightHandPanel = () => {
 
       {/* ZEON */}
       <div className="ba b--black-20 pa3 mb4">
-        <h3 className="f4 fw7 orange mt0 mb2">Principality of ZEON</h3>
+        <h3 className="f4 fw7 red mt0 mb2">Principality of ZEON</h3>
         <p className="lh-copy f6 tj">
           When Zeon Zum Deikun died in (UC) 0068, Degwin Sodo Zabi seized
           control and pushed for rapid military development. Research by Doctor
@@ -47,7 +47,7 @@ export const RightHandPanel = () => {
 
       {/* Scaling reference */}
       <div className="ba b--black-20 pa3">
-        <h3 className="f4 fw7 orange mt0 mb2">MC Cost Formula</h3>
+        <h3 className="f4 fw7 red mt0 mb2">MC Cost Formula</h3>
         <p className="f6 lh-copy mb2">The MS cost is calculated as follows:</p>
         <code className="f7 db bg-near-black white pa2 br2 lh-copy">
           (Armor × 2) + (Move × 2) + (FRO × 3) + (tonnage ÷ 2) + 10 per Weapon

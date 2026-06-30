@@ -41,7 +41,7 @@ export const ChapterLayout = ({ chapterTitle, sections }) => {
               className={classNames(
                 "db w-100 tl pv3 ph3 bn pointer f6 bb b--black-10 lh-copy",
                 {
-                  "bg-orange white fw7": activeId === section.id,
+                  "bg-red white fw7": activeId === section.id,
                   "bg-near-white dark-gray": activeId !== section.id,
                 },
               )}

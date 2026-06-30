@@ -22,7 +22,7 @@ export const Navigation = () => {
       <div className="bb">
         <nav className="bg-near-white flex flex-wrap pv3 center w-90">
           <div className="w-50">
-            <Link className="link dim orange no-underline fw7 h3" to="/">
+            <Link className="link dim red no-underline fw7 h3" to="/">
               Gundam Flashpoint 0.6.8
             </Link>
           </div>
@@ -43,7 +43,7 @@ export const Navigation = () => {
       {/* Mobile header row */}
       <div className="flex items-center justify-between ph3 pv2">
         <Link
-          className="link dim orange no-underline fw7 f5"
+          className="link dim red no-underline fw7 f5"
           to="/"
           onClick={() => setOpen(false)}
         >

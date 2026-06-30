@@ -239,7 +239,7 @@ export const RulesBook = () => {
                   className={classNames(
                     "db w-100 tl pv2 ph3 bn pointer f6 bb b--black-10 lh-copy",
                     {
-                      "bg-orange white fw7": activeSectionId === s.id,
+                      "bg-red white fw7": activeSectionId === s.id,
                       "bg-near-white dark-gray": activeSectionId !== s.id,
                     },
                   )}

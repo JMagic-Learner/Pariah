@@ -101,7 +101,7 @@ const EquipmentRow = ({
           <button
             className={classNames(
               "f8 ph1 pv0 mr1 bn br1 pointer flex-shrink-0 lh-copy",
-              sold ? "bg-orange white" : "bg-near-white dark-gray",
+              sold ? "bg-red white" : "bg-near-white dark-gray",
             )}
             onClick={onSell}
             title={sold ? "Click to reinstate" : "Click to sell"}
@@ -710,27 +710,21 @@ const PilotSheetPanel = ({ slotIndex }) => {
                 </TD>
                 <TD className="tc">
                   <NumInput value={gunnery} onChange={setGunnery} />
-                  {hasRookie && (
-                    <div className="f8 fw6 mt1 orange">base: 0</div>
-                  )}
+                  {hasRookie && <div className="f8 fw6 mt1 red">base: 0</div>}
                 </TD>
                 <TD className="tc">
                   <NumInput value={gsBonus} onChange={() => {}} />
                 </TD>
                 <TD className="tc">
                   <NumInput value={brawl} onChange={setBrawl} />
-                  {hasRookie && (
-                    <div className="f8 fw6 mt1 orange">base: 0</div>
-                  )}
+                  {hasRookie && <div className="f8 fw6 mt1 red">base: 0</div>}
                 </TD>
                 <TD className="tc">
                   <NumInput value={bsBonus} onChange={() => {}} />
                 </TD>
                 <TD className="tc">
                   <NumInput value={piloting} onChange={setPiloting} />
-                  {hasRookie && (
-                    <div className="f8 fw6 mt1 orange">base: 0</div>
-                  )}
+                  {hasRookie && <div className="f8 fw6 mt1 red">base: 0</div>}
                 </TD>
                 <TD className="tc">
                   <NumInput value={psBonus} onChange={() => {}} />
@@ -908,8 +902,8 @@ const PilotSheetPanel = ({ slotIndex }) => {
                 {/* Rookie — reminder */}
                 {hasRookie && (
                   <div className="flex items-center mb2">
-                    <span className="f7 fw6 orange mr2 nowrap">Rookie:</span>
-                    <span className="f8 orange">
+                    <span className="f7 fw6 red mr2 nowrap">Rookie:</span>
+                    <span className="f8 red">
                       Base GS / BS / PS default to 0
                     </span>
                   </div>
@@ -1057,7 +1051,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                   <NumInput value={mcu} onChange={setMcu} width="4rem" />
                   <div
                     className={classNames("f8 fw6 mt1", {
-                      orange: totalMCU > mcuLimit,
+                      red: totalMCU > mcuLimit,
                       "dark-green": totalMCU > 0 && totalMCU <= mcuLimit,
                       gray: totalMCU === 0,
                     })}
@@ -1077,8 +1071,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                   <NumInput value={tonnageLimit} onChange={setTonnageLimit} />
                   <div
                     className={classNames("f8 fw6 mt1", {
-                      orange:
-                        totalTonnage > Math.ceil(effectiveTonnageLimit / 3),
+                      red: totalTonnage > Math.ceil(effectiveTonnageLimit / 3),
                       "dark-green":
                         totalTonnage > 0 &&
                         totalTonnage <= Math.ceil(effectiveTonnageLimit / 3),
@@ -1152,7 +1145,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                 >
                   <span className="v-mid">Additional Equipment</span>
                   <button
-                    className="ml3 f7 fw6 ph2 pv1 bg-orange white bn br1 pointer ttu tracked v-mid"
+                    className="ml3 f7 fw6 ph2 pv1 bg-red white bn br1 pointer ttu tracked v-mid"
                     onClick={() => {
                       addlEquip.forEach((row) => removeSupportLoc(row.name));
                       setAddlEquip(Array(8).fill(null).map(blankEquip));
@@ -1457,13 +1450,13 @@ const PilotSheetPanel = ({ slotIndex }) => {
             className="pa4"
             onClick={(e) => e.stopPropagation()}
           >
-            <p className="fw7 f5 orange ma0 mb2">Equipment Slots Exceeded</p>
+            <p className="fw7 f5 red ma0 mb2">Equipment Slots Exceeded</p>
             <p className="f6 lh-copy ma0 mb3">
               This MSU configuration exceeds available equipment slots.{" "}
               {slotWarning}
             </p>
             <button
-              className="f7 ph3 pv2 bg-orange white bn br1 pointer dim"
+              className="f7 ph3 pv2 bg-red white bn br1 pointer dim"
               onClick={() => setSlotWarning(null)}
             >
               Dismiss
@@ -1530,7 +1523,7 @@ export const PilotSheet = () => {
                   className={classNames(
                     "f7 bn bg-transparent pointer dim tl pa0 truncate w-70",
                     {
-                      "fw7 orange": team.color === "orange" && activeTab === i,
+                      "fw7 red": team.color === "red" && activeTab === i,
                       "fw7 dark-blue":
                         team.color === "dark-blue" && activeTab === i,
                       "dark-gray": activeTab !== i,

@@ -15,7 +15,7 @@ const DriveLink = ({ label, href, description }) => (
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="ml3 flex-shrink-0 f7 fw6 ph3 pv2 bg-orange white no-underline br2 dim pointer"
+      className="ml3 flex-shrink-0 f7 fw6 ph3 pv2 bg-red white no-underline br2 dim pointer"
     >
       Open ↗
     </a>
@@ -24,7 +24,7 @@ const DriveLink = ({ label, href, description }) => (
 
 export const Links = () => (
   <div className="pa4 center mw7">
-    <h1 className="f2 fw7 orange bb pb2 mb4">Links</h1>
+    <h1 className="f2 fw7 red bb pb2 mb4">Links</h1>
     <p className="lh-copy mb5 f6 dark-gray">
       Legacy Google Drive links for all official Gundam Flashpoint resources.
     </p>

@@ -43,7 +43,7 @@ export const ReZeonExpansion = () => {
           </select>
         ) : (
           <div>
-            <div className="pv3 ph3 bg-dark-orange">
+            <div className="pv3 ph3 bg-dark-red">
               <p className="f6 white fw7 ma0 ttu tracked">ReZeon Expansion</p>
             </div>
             {SECTIONS.map((s) => (
@@ -52,7 +52,7 @@ export const ReZeonExpansion = () => {
                 className={classNames(
                   "db w-100 tl pv2 ph3 bn pointer f6 bb b--black-10 lh-copy",
                   {
-                    "bg-orange white fw7": activeSectionId === s.id,
+                    "bg-red white fw7": activeSectionId === s.id,
                     "bg-near-white dark-gray": activeSectionId !== s.id,
                   },
                 )}
