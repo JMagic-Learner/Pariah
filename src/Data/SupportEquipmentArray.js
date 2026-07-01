@@ -306,12 +306,13 @@ export const SUPPORT = [
   },
   {
     name: "[IMPACT] Upgrade",
-    loc: "Melee Weapon",
+    loc: "Weapon",
     ton: "–",
     pfro: "–",
     qty: 2,
     mcu: 25,
-    effect: "Increase tonnage by 3; weapon gains IMPACT[3].",
+    effect:
+      "A melee weapon gains +3 tonnage and [IMPACT(3)]. A bazooka or cannon type weapon gains [IMPACT(1)]",
   },
   {
     name: "Inertia Redirection System",
@@ -521,14 +522,13 @@ export const SUPPORT = [
     effect: "No movement penalty sideways; can BOOST sideways.",
   },
   {
-    name: "Silver Bullet",
+    name: "[SILVER BULLET] upgrade",
     loc: "Weapon",
     ton: "–",
     pfro: "–",
     qty: "–",
     mcu: 25,
-    effect:
-      "When this [PILOT] declares an attack with a ROF 1 or ROF 2 weapon, the target cannot reroll the Evasion roll or any Evasion dice. The target is also treated as if it was one Evasion tier lower",
+    effect: "A weapon with ROF 2 or less gains the [SILVER BULLET] keyword",
   },
   {
     name: "Spiky Shoulders",

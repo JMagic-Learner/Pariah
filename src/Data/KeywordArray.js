@@ -109,7 +109,7 @@ export const KEYWORDS = [
   },
   {
     name: "[MOMENTUM]",
-    desc: "Whenever the wielder declares a [BLITZ], the wielder may also make a ROF 1 Melee attack with a [MOMENTUM] weapon.",
+    desc: "Whenever the wielder declares a [BLITZ], instead of doing collision damage, the [PILOT] may make a ROF 1 Melee attack with a [MOMENTUM] weapon.",
   },
   {
     name: "[MOUNTABLE]",
@@ -138,6 +138,10 @@ export const KEYWORDS = [
   {
     name: "[SCOPE]",
     desc: "Ranged attacks using this weapon impose a –1 Evasion modifier on the target. Once per attack declaration, reroll one hit location die.",
+  },
+  {
+    name: "[SILVER BULLET]",
+    desc: "Target cannot reroll the Evasion roll or any Evasion dice.",
   },
   {
     name: "[RELOAD]",
