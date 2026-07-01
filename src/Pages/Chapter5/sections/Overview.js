@@ -22,7 +22,7 @@ export const SupportUnitsOverview = () => {
           </li>
           <li className="pv1">
             Each individual unit (indicated by Unit Size) only has{" "}
-            <strong>one hit location</strong>.
+            <strong>one hit location and two actions</strong>.
           </li>
           <li className="pv1">
             Support Units all have <strong>Initiative 0</strong>.
