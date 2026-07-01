@@ -93,6 +93,11 @@ export const TRAITS = [
       "[PILOT] ignores the [KNOCKDOWN] state when the first leg location is destroyed. [CRIPPLED] state reduces base movespeed by 2 instead of half.",
   },
   {
+    name: "Evasive",
+    cost: 3,
+    effect: "[PILOT] rerolls all evasion d3 dice results of 1",
+  },
+  {
     name: "Executioner",
     cost: 2,
     effect:
@@ -137,7 +142,7 @@ export const TRAITS = [
     name: "Guardian Angel",
     cost: 2,
     effect:
-      "All other friendly MSU within 8 inches of this [PILOT]/MSU can reroll one of their evasion dice.",
+      "All other friendly MSU within 8 inches of this [PILOT]/MSU can reroll one of their d3 evasion dice.",
   },
   {
     name: "Guerilla Ops",
@@ -162,7 +167,7 @@ export const TRAITS = [
     name: "Juke",
     cost: 2,
     effect:
-      "Once per battle round, this [PILOT] may perform a Juke reaction to reroll one EVASION dice if you have LOS to the attack.",
+      "Once per battle round, this [PILOT] may perform a Juke reaction to reroll one d3 evasion dice if you have LOS to the attack.",
   },
   {
     name: "Kinetic Force",

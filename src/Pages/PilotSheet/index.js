@@ -538,7 +538,11 @@ const PilotSheetPanel = ({ slotIndex }) => {
       let filled = false;
       for (const key of candidates) {
         const loc = next[key];
-        const emptyIdx = loc.equipment.findIndex((eq) => eq === "");
+        // A stowed weapon occupies the last equipment slot.
+        const availableSlots = loc.weaponStowed
+          ? loc.equipment.slice(0, loc.equipment.length - 1)
+          : loc.equipment;
+        const emptyIdx = availableSlots.findIndex((eq) => eq === "");
         if (emptyIdx !== -1) {
           const eq = [...loc.equipment];
           eq[emptyIdx] = itemName;

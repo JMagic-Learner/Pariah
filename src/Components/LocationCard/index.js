@@ -45,13 +45,27 @@ export const LocationCard = ({ title, data, onChange }) => (
         />
       </div>
       <div className="mb2">
-        <div className="f7 fw6 gray mb1">Weapon</div>
+        <div className="f7 fw6 gray mb1 flex items-center justify-between">
+          <span>Weapon</span>
+          <button
+            className={classNames(
+              "f8 ph1 pv0 bn br1 pointer lh-copy flex-shrink-0",
+              data.weaponStowed ? "bg-orange white fw7" : "bg-near-white dark-gray",
+            )}
+            onClick={() => onChange("weaponStowed", !data.weaponStowed)}
+            title={data.weaponStowed ? "Weapon is stowed (counts as 1 equip slot) — click to unstow" : "Mark weapon as stowed"}
+          >
+            {data.weaponStowed ? "STOWED" : "stow"}
+          </button>
+        </div>
         <TextInput
           value={data.weapon}
           onChange={(v) => onChange("weapon", v)}
         />
       </div>
-      {data.equipment.map((eq, i) => (
+      {data.equipment
+        .slice(0, data.weaponStowed ? data.equipment.length - 1 : data.equipment.length)
+        .map((eq, i) => (
         <div key={i} className="mb2">
           <div className="f7 fw6 gray mb1">Equipment</div>
           <TextInput

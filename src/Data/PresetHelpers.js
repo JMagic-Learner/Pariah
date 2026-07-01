@@ -10,5 +10,6 @@ export const blankLoc = (equipCount) => ({
   current: "",
   max: "",
   weapon: "",
+  weaponStowed: false,
   equipment: Array(equipCount).fill(""),
 });
