@@ -3,7 +3,7 @@ export const NEWTYPE_UPGRADES = [
     name: "Sixth Sense",
     limit: "–",
     mcu: "–",
-    effect: "This [PILOT] may reroll 1 evasion roll per round.",
+    effect: "This [PILOT] may reroll both evasion dice once per round.",
   },
   {
     name: "Adaptable",
@@ -31,6 +31,13 @@ export const NEWTYPE_UPGRADES = [
     mcu: "–",
     effect:
       "Roll 1d6 at Step 0 of the Status Phase. If CYBER-NEWTYPE, the roll can be rerolled. On 5–6: gain Fearless and immediately move base MOVEMENT, then shoot one weapon at a –2 circumstance penalty.",
+  },
+  {
+    name: "Predictive Foresight",
+    limit: 1,
+    mcu: "–",
+    effect:
+      "This [PILOT] may declare [REACTIVE ATTACK] at any point of the enemy's movement phase",
   },
   {
     name: "Projected Animosity",
