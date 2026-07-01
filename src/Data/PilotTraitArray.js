@@ -217,7 +217,7 @@ export const TRAITS = [
     name: "Nemesis",
     cost: 2,
     effect:
-      "Once per round, this [PILOT] can perform a free [REACTIVE ATTACK] action",
+      "Once per round, this [PILOT] can perform a free [REACTIVE ATTACK] action at a -3 penalty (instead of the usual -2)",
   },
   {
     name: "Oldtype Ace",
