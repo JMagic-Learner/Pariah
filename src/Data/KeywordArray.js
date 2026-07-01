@@ -72,6 +72,10 @@ export const KEYWORDS = [
     desc: "Missiles with [GUIDED] can rotate their hex facing by 45° at Status Phase Step 1.2. Missiles with [ENHANCED GUIDED] (a Newtype upgrade) can rotate 90° instead.",
   },
   {
+    name: "[HARDPOINT]",
+    desc: "Usually to represent customized gunpla. Represented by a peg, slot, or ball joint. This physically represents the connection that a [MOUNTABLE] weapon needs to be equiped on the exterior of the suit.",
+  },
+  {
     name: "[HEAVY]",
     desc: "6+ tons in weight. Requires two hands to wield, mounted, or one hand with a [BRACE] weapon",
   },

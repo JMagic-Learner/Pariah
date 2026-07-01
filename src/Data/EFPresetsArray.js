@@ -72,7 +72,6 @@ export const EF_PRESETS = [
             "Command Interface",
             "Beam Saber (Stowed)",
             "Heavy Boosters",
-            "",
           ],
         },
         rightArm: {
@@ -160,7 +159,7 @@ export const EF_PRESETS = [
           current: "21",
           max: "21",
           weapon: "",
-          equipment: ["Beam Saber (Stowed)", "Command Interface", "", ""],
+          equipment: ["Beam Saber (Stowed)", "Command Interface", ""],
         },
         rightArm: {
           current: "21",
@@ -235,7 +234,7 @@ export const EF_PRESETS = [
           current: "22",
           max: "22",
           weapon: "",
-          equipment: ["SMG (Stowed)", "Beam Saber (Stowed)", "", ""],
+          equipment: ["SMG (Stowed)", "Beam Saber (Stowed)", ""],
         },
         rightArm: {
           current: "22",
@@ -316,7 +315,7 @@ export const EF_PRESETS = [
           current: "20",
           max: "20",
           weapon: "",
-          equipment: ["Beam Saber (Stowed)", "", "", ""],
+          equipment: ["Beam Saber (Stowed)", "", ""],
         },
         rightArm: {
           current: "20",
@@ -409,7 +408,7 @@ export const EF_PRESETS = [
           current: "34",
           max: "34",
           weapon: "Beam Cannon x 2 (INBUILT)",
-          equipment: ["Beam Saber (Stowed)", "Extra Armor (10)", "", ""],
+          equipment: ["Beam Saber (Stowed)", "Extra Armor (10)", ""],
         },
         rightArm: {
           current: "34",
@@ -496,7 +495,7 @@ export const EF_PRESETS = [
           current: "22",
           max: "22",
           weapon: "",
-          equipment: ["Beam Saber (Stowed)", "", "", ""],
+          equipment: ["Beam Saber (Stowed)", "", ""],
         },
         rightArm: {
           current: "32",
@@ -590,7 +589,7 @@ export const EF_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["MG (Stowed)", "Beam Saber (Stowed)", "", ""],
+          equipment: ["MG (Stowed)", "Beam Saber (Stowed)", ""],
         },
         rightArm: {
           current: "24",
@@ -677,7 +676,7 @@ export const EF_PRESETS = [
           current: "18",
           max: "18",
           weapon: "",
-          equipment: ["Beam SMG (Stowed)", "Beam Saber (Stowed)", "", ""],
+          equipment: ["Beam SMG (Stowed)", "Beam Saber (Stowed)", ""],
         },
         rightArm: {
           current: "18",
@@ -764,7 +763,7 @@ export const EF_PRESETS = [
           current: "23",
           max: "23",
           weapon: "",
-          equipment: ["Bazooka (Stowed)", "Beam Saber (Stowed)", "", ""],
+          equipment: ["Bazooka (Stowed)", "Beam Saber (Stowed)", ""],
         },
         rightArm: {
           current: "23",
@@ -881,7 +880,7 @@ export const EF_PRESETS = [
           current: "23",
           max: "23",
           weapon: "Smoke Grenades x 2",
-          equipment: ["CAMO", "Grenades (AP) x 3 (Stowed)", "", ""],
+          equipment: ["CAMO", "Grenades (AP) x 3 (Stowed)", ""],
         },
         rightArm: {
           current: "23",
@@ -986,7 +985,7 @@ export const EF_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["Panoptic Canopy", "Beam Saber x 2 (Stowed)", "", ""],
+          equipment: ["Panoptic Canopy", "Beam Saber x 2 (Stowed)", ""],
         },
         rightArm: {
           current: "24",
@@ -1086,7 +1085,7 @@ export const EF_PRESETS = [
           current: "26",
           max: "26",
           weapon: "Beam Cannon (INBUILT) x 2",
-          equipment: ["Beam Saber (Stowed)", "Side Verniers", "", ""],
+          equipment: ["Beam Saber (Stowed)", "Side Verniers", ""],
         },
         rightArm: {
           current: "26",
@@ -1167,7 +1166,7 @@ export const EF_PRESETS = [
           current: "22",
           max: "22",
           weapon: "",
-          equipment: ["Beam Saber (Stowed)", "", "", ""],
+          equipment: ["Beam Saber (Stowed)", "", ""],
         },
         rightArm: {
           current: "22",
@@ -1270,7 +1269,6 @@ export const EF_PRESETS = [
             "A.B.C Kit",
             "Beam Saber x 2 (Stowed)",
             "Bazooka (Stowed)",
-            "",
           ],
         },
         rightArm: {
@@ -1352,7 +1350,7 @@ export const EF_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["Beam Saber (Stowed)", "", "", ""],
+          equipment: ["Beam Saber (Stowed)", "", ""],
         },
         rightArm: {
           current: "24",
@@ -1451,7 +1449,7 @@ export const EF_PRESETS = [
           current: "25",
           max: "25",
           weapon: "",
-          equipment: ["Beam Saber (Stowed)", "Bazooka (Stowed)", "", ""],
+          equipment: ["Beam Saber (Stowed)", "Bazooka (Stowed)", ""],
         },
         rightArm: {
           current: "25",
@@ -1549,7 +1547,6 @@ export const EF_PRESETS = [
             "Side Verniers",
             "Heavy Boosters",
             "Beam Saber x 2 (Stowed)",
-            "",
           ],
         },
         rightArm: {
@@ -1661,7 +1658,7 @@ export const EF_PRESETS = [
           current: "26",
           max: "26",
           weapon: "2x Beam Cannons",
-          equipment: ["2x Beam Saber (Stowed)", "", "", ""],
+          equipment: ["2x Beam Saber (Stowed)", "", ""],
         },
         rightArm: {
           current: "26",
@@ -1761,7 +1758,7 @@ export const EF_PRESETS = [
           current: "27",
           max: "27",
           weapon: "",
-          equipment: ["2x Beam Saber (Stowed)", "", "", ""],
+          equipment: ["2x Beam Saber (Stowed)", "", ""],
         },
         rightArm: {
           current: "27",
@@ -1862,7 +1859,7 @@ export const EF_PRESETS = [
           current: "25",
           max: "25",
           weapon: "",
-          equipment: ["Stealth System", "2x Beam Saber (Stowed)", "", ""],
+          equipment: ["Stealth System", "2x Beam Saber (Stowed)", ""],
         },
         rightArm: {
           current: "25",
@@ -1949,7 +1946,7 @@ export const EF_PRESETS = [
           current: "20",
           max: "20",
           weapon: "Bazooka (Mounted)",
-          equipment: ["Beam Saber (Stowed)", "", "", ""],
+          equipment: ["Beam Saber (Stowed)", "", ""],
         },
         rightArm: {
           current: "20",
@@ -2036,7 +2033,7 @@ export const EF_PRESETS = [
           current: "20",
           max: "20",
           weapon: "",
-          equipment: ["Beam Saber (Stowed)", "Beam Rifle (Stowed)", "", ""],
+          equipment: ["Beam Saber (Stowed)", "Beam Rifle (Stowed)", ""],
         },
         rightArm: {
           current: "20",
@@ -2123,7 +2120,7 @@ export const EF_PRESETS = [
           current: "20",
           max: "20",
           weapon: "Forward Observer",
-          equipment: ["Command Protocol", "ECM/ECCM", "", ""],
+          equipment: ["Command Protocol", "ECM/ECCM", ""],
         },
         rightArm: {
           current: "20",
@@ -2210,7 +2207,7 @@ export const EF_PRESETS = [
           current: "22",
           max: "22",
           weapon: "",
-          equipment: ["Beam Saber (Stowed)", "Bazooka (Stowed)", "", ""],
+          equipment: ["Beam Saber (Stowed)", "Bazooka (Stowed)", ""],
         },
         rightArm: {
           current: "22",
@@ -2326,7 +2323,6 @@ export const EF_PRESETS = [
             "Beam Saber (Stowed)",
             "Side Verniers",
             "Missile Pod 2",
-            "",
           ],
         },
         rightArm: {
@@ -2432,7 +2428,7 @@ export const EF_PRESETS = [
           current: "25",
           max: "25",
           weapon: "",
-          equipment: ["Beam Saber (Stowed)", "Grenades x 6 (Stowed)", "", ""],
+          equipment: ["Beam Saber (Stowed)", "Grenades x 6 (Stowed)", ""],
         },
         rightArm: {
           current: "25",
@@ -2485,7 +2481,7 @@ export const EF_PRESETS = [
           name: "Shield (Missile Pod 4)",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "3",
+          tonnage: "5",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
@@ -2540,7 +2536,7 @@ export const EF_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["3x Grenades (Stowed)", "Beam Saber (Stowed)", "", ""],
+          equipment: ["3x Grenades (Stowed)", "Beam Saber (Stowed)", ""],
         },
         rightArm: {
           current: "24",
@@ -2645,7 +2641,7 @@ export const EF_PRESETS = [
           current: "27",
           max: "27",
           weapon: "",
-          equipment: ["Heavy Boosters", "Beam Saber (Stowed)", "", ""],
+          equipment: ["Heavy Boosters", "Beam Saber (Stowed)", ""],
         },
         rightArm: {
           current: "27",
@@ -2738,7 +2734,7 @@ export const EF_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["Beam Saber (Stowed)", "Panoptic Canopy", "", ""],
+          equipment: ["Beam Saber (Stowed)", "Panoptic Canopy", ""],
         },
         rightArm: {
           current: "24",
@@ -2832,7 +2828,7 @@ export const EF_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["Heavy Boosters", "Beam Saber (Stowed)", "", ""],
+          equipment: ["Heavy Boosters", "Beam Saber (Stowed)", ""],
         },
         rightArm: {
           current: "24",
@@ -2919,7 +2915,7 @@ export const EF_PRESETS = [
           current: "22",
           max: "22",
           weapon: "",
-          equipment: ["Beam Saber (Stowed)", "Side Verniers", "", ""],
+          equipment: ["Beam Saber (Stowed)", "Side Verniers", ""],
         },
         rightArm: {
           current: "22",
@@ -3001,7 +2997,7 @@ export const EF_PRESETS = [
           current: "22",
           max: "22",
           weapon: "",
-          equipment: ["Heat Hawk (Stowed)", "", "", ""],
+          equipment: ["Heat Hawk (Stowed)", "", ""],
         },
         rightArm: {
           current: "22",
@@ -3088,7 +3084,7 @@ export const EF_PRESETS = [
           current: "35",
           max: "35",
           weapon: "",
-          equipment: ["Extra Armor (10)", "Beam Saber (Stowed)", "", ""],
+          equipment: ["Extra Armor (10)", "Beam Saber (Stowed)", ""],
         },
         rightArm: {
           current: "35",
@@ -3200,7 +3196,6 @@ export const EF_PRESETS = [
             "Grenades x 3 (Stowed)",
             "Beam Saber x 2 (Stowed)",
             "",
-            "",
           ],
         },
         rightArm: {
@@ -3283,7 +3278,7 @@ export const EF_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["Flares", "Beam Saber x 2 (Stowed)", "", ""],
+          equipment: ["Flares", "Beam Saber x 2 (Stowed)", ""],
         },
         rightArm: {
           current: "24",
@@ -3370,7 +3365,7 @@ export const EF_PRESETS = [
           current: "22",
           max: "22",
           weapon: "",
-          equipment: ["Beam Saber (Stowed)", "", "", ""],
+          equipment: ["Beam Saber (Stowed)", "", ""],
         },
         rightArm: {
           current: "22",
@@ -3457,7 +3452,7 @@ export const EF_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["Enhanced Fusion Reactor", "Beam Saber (Stowed)", "", ""],
+          equipment: ["Enhanced Fusion Reactor", "Beam Saber (Stowed)", ""],
         },
         rightArm: {
           current: "24",
@@ -3594,7 +3589,6 @@ export const EF_PRESETS = [
             "Enhanced Fusion Reactor",
             "I field Generator",
             "Missile Pod 10",
-            "",
           ],
         },
         rightArm: {
@@ -3702,7 +3696,7 @@ export const EF_PRESETS = [
           current: "26",
           max: "26",
           weapon: "6 Funnels (BITS)",
-          equipment: ["Beam Saber (Stowed)", "Panoptic Canopy", "", ""],
+          equipment: ["Beam Saber (Stowed)", "Panoptic Canopy", ""],
         },
         rightArm: {
           current: "26",
@@ -3807,7 +3801,7 @@ export const EF_PRESETS = [
           current: "27",
           max: "27",
           weapon: "6 Funnels (BITS)",
-          equipment: ["Beam Saber (Stowed)", "Panoptic Canopy", "", ""],
+          equipment: ["Beam Saber (Stowed)", "Panoptic Canopy", ""],
         },
         rightArm: {
           current: "27",
@@ -3915,7 +3909,7 @@ export const EF_PRESETS = [
           current: "28",
           max: "28",
           weapon: "Beam Cannon",
-          equipment: ["Beam Saber (Stowed)", "Heavy Boosters", "", ""],
+          equipment: ["Beam Saber (Stowed)", "Heavy Boosters", ""],
         },
         rightArm: {
           current: "28",
@@ -4002,7 +3996,7 @@ export const EF_PRESETS = [
           current: "26",
           max: "26",
           weapon: "",
-          equipment: ["", "", "", ""],
+          equipment: ["", "", ""],
         },
         rightArm: {
           current: "26",
@@ -4089,7 +4083,7 @@ export const EF_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["Bazooka (Stowed)", "Beam Saber (Stowed)", "", ""],
+          equipment: ["Bazooka (Stowed)", "Beam Saber (Stowed)", ""],
         },
         rightArm: {
           current: "24",

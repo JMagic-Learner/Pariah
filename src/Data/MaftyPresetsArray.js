@@ -67,7 +67,7 @@ export const MAFTY_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["Beam Saber (Stowed)", "", "", ""],
+          equipment: ["Beam Saber (Stowed)", "", ""],
         },
         rightArm: {
           current: "24",
@@ -160,7 +160,7 @@ export const MAFTY_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["Beam Saber (Stowed)", "Heavy Booster", "", ""],
+          equipment: ["Beam Saber (Stowed)", "Heavy Booster", ""],
         },
         rightArm: {
           current: "24",
@@ -260,7 +260,7 @@ export const MAFTY_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["Beam Saber (Stowed)", "Command Interface", "", ""],
+          equipment: ["Beam Saber (Stowed)", "Command Interface", ""],
         },
         rightArm: {
           current: "24",
@@ -354,7 +354,7 @@ export const MAFTY_PRESETS = [
           current: "26",
           max: "26",
           weapon: "",
-          equipment: ["Beam Saber (Stowed)", "", "", ""],
+          equipment: ["Beam Saber (Stowed)", "", ""],
         },
         rightArm: {
           current: "26",

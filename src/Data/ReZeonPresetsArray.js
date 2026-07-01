@@ -65,7 +65,7 @@ export const REZEON_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["Arm Extra (1)", "I Field", "", ""],
+          equipment: ["Arm Extra (1)", "I Field", ""],
         },
         rightArm: {
           current: "24",
@@ -143,7 +143,7 @@ export const REZEON_PRESETS = [
           current: "33",
           max: "33",
           weapon: "Beam SMG (Mounted)",
-          equipment: ["Extra Armor (10)", "", "", ""],
+          equipment: ["Extra Armor (10)", "", ""],
         },
         rightArm: {
           current: "23",
@@ -253,7 +253,7 @@ export const REZEON_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["Heavy Boosters", "Enhanced Reactor", "", ""],
+          equipment: ["Heavy Boosters", "Enhanced Reactor", ""],
         },
         rightArm: {
           current: "24",
@@ -343,7 +343,7 @@ export const REZEON_PRESETS = [
           current: "26",
           max: "26",
           weapon: "",
-          equipment: ["Heavy Boosters", "", "", ""],
+          equipment: ["Heavy Boosters", "", ""],
         },
         rightArm: {
           current: "26",
@@ -436,7 +436,6 @@ export const REZEON_PRESETS = [
             "Missile Pod 3 (MOUNTED)",
             "Missile Pod 3 (MOUNTED)",
             "Heat Hawk (Stowed)",
-            "",
           ],
         },
         rightArm: {
@@ -538,7 +537,7 @@ export const REZEON_PRESETS = [
           current: "24",
           max: "24",
           weapon: "Bazooka (INBUILT)",
-          equipment: ["Flares", "Beam Saber x2 (Stowed)", "Heavy Boosters", ""],
+          equipment: ["Flares", "Beam Saber x2 (Stowed)", "Heavy Boosters"],
         },
         rightArm: {
           current: "24",
@@ -626,7 +625,7 @@ export const REZEON_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["Beam Saber (Stowed)", "Bazooka (Stowed)", "", ""],
+          equipment: ["Beam Saber (Stowed)", "Bazooka (Stowed)", ""],
         },
         rightArm: {
           current: "24",
@@ -714,7 +713,7 @@ export const REZEON_PRESETS = [
           current: "22",
           max: "22",
           weapon: "",
-          equipment: ["", "", "", ""],
+          equipment: ["", "", ""],
         },
         rightArm: {
           current: "22",
@@ -803,7 +802,7 @@ export const REZEON_PRESETS = [
           current: "22",
           max: "22",
           weapon: "",
-          equipment: ["Heavy Boosters", "", "", ""],
+          equipment: ["Heavy Boosters", "", ""],
         },
         rightArm: {
           current: "22",
@@ -893,7 +892,7 @@ export const REZEON_PRESETS = [
           current: "26",
           max: "26",
           weapon: "",
-          equipment: ["", "", "", ""],
+          equipment: ["", "", ""],
         },
         rightArm: {
           current: "26",
@@ -1000,7 +999,7 @@ export const REZEON_PRESETS = [
           current: "26",
           max: "26",
           weapon: "2 x GL (Mounted)",
-          equipment: ["Beam Saber (Stowed)", "", "", ""],
+          equipment: ["Beam Saber (Stowed)", "", ""],
         },
         rightArm: {
           current: "26",
@@ -1098,7 +1097,6 @@ export const REZEON_PRESETS = [
             "Heavy Boosters",
             "Anti-Beam Coating Kit",
             "Beam Saber (Stowed)",
-            "",
           ],
         },
         rightArm: {
@@ -1197,7 +1195,6 @@ export const REZEON_PRESETS = [
             "Heavy Boosters",
             "Marksman Rifle (Stowed)",
             "Beam Saber (Stowed)",
-            "",
           ],
         },
         rightArm: {
@@ -1293,7 +1290,7 @@ export const REZEON_PRESETS = [
           current: "26",
           max: "26",
           weapon: "",
-          equipment: ["Heavy Boosters", "Beam Saber (Stowed)", "", ""],
+          equipment: ["Heavy Boosters", "Beam Saber (Stowed)", ""],
         },
         rightArm: {
           current: "26",
@@ -1399,7 +1396,7 @@ export const REZEON_PRESETS = [
           current: "38",
           max: "38",
           weapon: "",
-          equipment: ["Heavy Boosters", "Extra Armor 10", "", ""],
+          equipment: ["Heavy Boosters", "Extra Armor 10", ""],
         },
         rightArm: {
           current: "38",
@@ -1478,7 +1475,7 @@ export const REZEON_PRESETS = [
           current: "26",
           max: "26",
           weapon: "Hyper Long Range BC",
-          equipment: ["Panoptic Canopy", "I Field", "", ""],
+          equipment: ["Panoptic Canopy", "I Field", ""],
         },
         rightArm: {
           current: "26",
@@ -1574,7 +1571,7 @@ export const REZEON_PRESETS = [
           current: "27",
           max: "27",
           weapon: "Beam Cannon x2",
-          equipment: ["Heavy Boosters", "Panoptic Canopy", "", ""],
+          equipment: ["Heavy Boosters", "Panoptic Canopy", ""],
         },
         rightArm: {
           current: "27",
@@ -1657,7 +1654,7 @@ export const REZEON_PRESETS = [
           current: "27",
           max: "27",
           weapon: "Beam Cannon x2",
-          equipment: ["Heavy Boosters", "Panoptic Canopy", "", ""],
+          equipment: ["Heavy Boosters", "Panoptic Canopy", ""],
         },
         rightArm: {
           current: "27",
@@ -1734,7 +1731,7 @@ export const REZEON_PRESETS = [
           current: "27",
           max: "27",
           weapon: "",
-          equipment: ["Heavy Boosters", "", "", ""],
+          equipment: ["Heavy Boosters", "", ""],
         },
         rightArm: {
           current: "27",
@@ -1840,7 +1837,6 @@ export const REZEON_PRESETS = [
             "Heavy Boosters",
             "Panoptic Canopy",
             "Weapon Cargo Unit",
-            "",
           ],
         },
         rightArm: {
@@ -1926,7 +1922,7 @@ export const REZEON_PRESETS = [
           current: "28",
           max: "28",
           weapon: "",
-          equipment: ["Panoptic Canopy", "", "", ""],
+          equipment: ["Panoptic Canopy", "", ""],
         },
         rightArm: {
           current: "28",
@@ -2010,7 +2006,7 @@ export const REZEON_PRESETS = [
           current: "27",
           max: "27",
           weapon: "2x Beam Cannon",
-          equipment: ["Panoptic Canopy", "", "", ""],
+          equipment: ["Panoptic Canopy", "", ""],
         },
         rightArm: {
           current: "27",
@@ -2125,7 +2121,7 @@ export const REZEON_PRESETS = [
           current: "30",
           max: "30",
           weapon: "2x Beam Cannon",
-          equipment: ["Panoptic Canopy", "Heavy Boosters", "I Field", ""],
+          equipment: ["Panoptic Canopy", "Heavy Boosters", "I Field"],
         },
         rightArm: {
           current: "30",
@@ -2226,7 +2222,6 @@ export const REZEON_PRESETS = [
             "Heavy Boosters",
             "Extra Arm (1)",
             "Enhanced Fusion Reactor",
-            "",
           ],
         },
         rightArm: {
@@ -2323,7 +2318,7 @@ export const REZEON_PRESETS = [
           current: "27",
           max: "27",
           weapon: "",
-          equipment: ["Heavy Boosters", "ECM/ECCM", "Enhanced Reactor", ""],
+          equipment: ["Heavy Boosters", "ECM/ECCM", "Enhanced Reactor"],
         },
         rightArm: {
           current: "27",
@@ -2411,7 +2406,7 @@ export const REZEON_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["Panoptic Canopy", "", "", ""],
+          equipment: ["Panoptic Canopy", "", ""],
         },
         rightArm: {
           current: "24",

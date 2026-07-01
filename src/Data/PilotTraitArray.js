@@ -93,11 +93,6 @@ export const TRAITS = [
       "[PILOT] ignores the [KNOCKDOWN] state when the first leg location is destroyed. [CRIPPLED] state reduces base movespeed by 2 instead of half.",
   },
   {
-    name: "Evasive",
-    cost: 3,
-    effect: "[PILOT] rerolls all evasion d3 dice results of 1",
-  },
-  {
     name: "Executioner",
     cost: 2,
     effect:

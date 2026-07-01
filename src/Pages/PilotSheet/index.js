@@ -189,18 +189,31 @@ const parseLocInstructions = (loc) => {
   const slots = [];
   if (l.includes("head")) slots.push(["head"]);
   if (l.includes("torso")) slots.push(["torso"]);
-  if (l.includes("arms")) {
+
+  // Specific directional arm locations take priority over generic "arm"
+  if (l.startsWith("right") && l.includes("arm")) {
+    slots.push(["rightArm"]);
+  } else if (l.startsWith("left") && l.includes("arm")) {
+    slots.push(["leftArm"]);
+  } else if (l.includes("arms")) {
     slots.push(["rightArm"]);
     slots.push(["leftArm"]);
   } else if (l.includes("arm") || l.includes("shoulder")) {
     slots.push(["rightArm", "leftArm"]); // try right first, then left
   }
-  if (l.includes("legs") || l.includes("both leg")) {
+
+  // Specific directional leg locations take priority over generic "leg"
+  if (l.startsWith("right") && l.includes("leg")) {
+    slots.push(["rightLeg"]);
+  } else if (l.startsWith("left") && l.includes("leg")) {
+    slots.push(["leftLeg"]);
+  } else if (l.includes("legs") || l.includes("both leg")) {
     slots.push(["rightLeg"]);
     slots.push(["leftLeg"]);
   } else if (l.includes("leg")) {
     slots.push(["rightLeg", "leftLeg"]);
   }
+
   return slots;
 };
 
@@ -507,6 +520,12 @@ const PilotSheetPanel = ({ slotIndex }) => {
     const instructions = parseLocInstructions(supportItem.loc);
     if (instructions.length === 0) return;
 
+    const armorMatch = itemName.match(/Extra Armor.*\[(\d+)\]/i);
+    const armorDelta = armorMatch ? parseInt(armorMatch[1]) : 0;
+
+    const isShield = /shield/i.test(itemName);
+    const ARM_KEYS = new Set(["rightArm", "leftArm"]);
+
     setLocations((prev) => {
       const next = { ...prev };
       for (const candidates of instructions) {
@@ -516,7 +535,18 @@ const PilotSheetPanel = ({ slotIndex }) => {
           if (idx !== -1) {
             const eq = [...loc.equipment];
             eq[idx] = "";
-            next[key] = { ...loc, equipment: eq };
+            const updated = { ...loc, equipment: eq };
+            if (armorDelta > 0) {
+              const curNum = parseInt(updated.current) || 0;
+              const maxNum = parseInt(updated.max) || 0;
+              updated.current = String(Math.max(0, curNum - armorDelta));
+              updated.max = String(Math.max(0, maxNum - armorDelta));
+            }
+            if (isShield && ARM_KEYS.has(key)) {
+              updated.shieldCurrent = "";
+              updated.shieldMax = "";
+            }
+            next[key] = updated;
             break;
           }
         }
@@ -530,6 +560,14 @@ const PilotSheetPanel = ({ slotIndex }) => {
     if (!supportItem) return;
     const instructions = parseLocInstructions(supportItem.loc);
     if (instructions.length === 0) return;
+
+    const armorMatch = itemName.match(/Extra Armor.*\[(\d+)\]/i);
+    const armorDelta = armorMatch ? parseInt(armorMatch[1]) : 0;
+
+    const isShield = /shield/i.test(itemName);
+    const shieldHpMatch = itemName.match(/\[(\d+)/) || itemName.match(/\((\d+)\s*armor\)/i);
+    const shieldHp = isShield && shieldHpMatch ? parseInt(shieldHpMatch[1]) : 0;
+    const ARM_KEYS = new Set(["rightArm", "leftArm"]);
 
     const overflow = [];
     const next = { ...locations };
@@ -546,7 +584,18 @@ const PilotSheetPanel = ({ slotIndex }) => {
         if (emptyIdx !== -1) {
           const eq = [...loc.equipment];
           eq[emptyIdx] = itemName;
-          next[key] = { ...loc, equipment: eq };
+          const updated = { ...loc, equipment: eq };
+          if (armorDelta > 0) {
+            const curNum = parseInt(updated.current) || 0;
+            const maxNum = parseInt(updated.max) || 0;
+            updated.current = String(curNum + armorDelta);
+            updated.max = String(maxNum + armorDelta);
+          }
+          if (shieldHp > 0 && ARM_KEYS.has(key)) {
+            updated.shieldCurrent = String(shieldHp);
+            updated.shieldMax = String(shieldHp);
+          }
+          next[key] = updated;
           filled = true;
           break;
         }
@@ -1333,16 +1382,17 @@ const PilotSheetPanel = ({ slotIndex }) => {
         {/* Hit location 2-column grid */}
         <div className={classNames({ "w-75 pr3": !isMobile, mb3: isMobile })}>
           {[
-            ["head", "HEAD", "torso", "TORSO"],
-            ["rightArm", "RIGHT ARM", "leftArm", "LEFT ARM"],
-            ["rightLeg", "RIGHT LEG", "leftLeg", "LEFT LEG"],
-          ].map(([locA, titleA, locB, titleB]) => (
+            ["head", "HEAD", "torso", "TORSO", false],
+            ["rightArm", "RIGHT ARM", "leftArm", "LEFT ARM", true],
+            ["rightLeg", "RIGHT LEG", "leftLeg", "LEFT LEG", false],
+          ].map(([locA, titleA, locB, titleB, isArmRow]) => (
             <div key={locA} className="flex mb2">
               <div className="w-50 pr1">
                 <LocationCard
                   title={titleA}
                   data={locations[locA]}
                   onChange={(f, v) => updateLoc(locA, f, v)}
+                  showShield={isArmRow}
                 />
               </div>
               <div className="w-50 pl1">
@@ -1350,6 +1400,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                   title={titleB}
                   data={locations[locB]}
                   onChange={(f, v) => updateLoc(locB, f, v)}
+                  showShield={isArmRow}
                 />
               </div>
             </div>

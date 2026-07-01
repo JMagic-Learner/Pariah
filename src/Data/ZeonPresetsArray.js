@@ -50,7 +50,7 @@ export const ZEON_PRESETS = [
           current: "18",
           max: "18",
           weapon: "",
-          equipment: ["", "", "", ""],
+          equipment: ["", "", ""],
         },
         rightArm: {
           current: "18",
@@ -132,7 +132,7 @@ export const ZEON_PRESETS = [
           current: "19",
           max: "19",
           weapon: "",
-          equipment: ["Heat Hawk (Stowed)", "", "", ""],
+          equipment: ["Heat Hawk (Stowed)", "", ""],
         },
         rightArm: {
           current: "19",
@@ -231,7 +231,7 @@ export const ZEON_PRESETS = [
           current: "18",
           max: "18",
           weapon: "",
-          equipment: ["Stealth System", "Forward Observer", "ECM/ECCM", ""],
+          equipment: ["Stealth System", "Forward Observer", "ECM/ECCM"],
         },
         rightArm: {
           current: "18",
@@ -313,7 +313,7 @@ export const ZEON_PRESETS = [
           current: "20",
           max: "20",
           weapon: "",
-          equipment: ["", "", "", ""],
+          equipment: ["", "", ""],
         },
         rightArm: {
           current: "20",
@@ -401,7 +401,7 @@ export const ZEON_PRESETS = [
           current: "22",
           max: "22",
           weapon: "",
-          equipment: ["Heat Hawk (Stowed)", "", "", ""],
+          equipment: ["Heat Hawk (Stowed)", "", ""],
         },
         rightArm: {
           current: "22",
@@ -495,7 +495,7 @@ export const ZEON_PRESETS = [
           current: "22",
           max: "22",
           weapon: "Cannon [INBUILT]",
-          equipment: ["", "", "", ""],
+          equipment: ["", "", ""],
         },
         rightArm: {
           current: "22",
@@ -588,7 +588,7 @@ export const ZEON_PRESETS = [
           current: "22",
           max: "22",
           weapon: "Missile Pod 2 x 2 (MOUNTED)",
-          equipment: ["", "", "", ""],
+          equipment: ["", "", ""],
         },
         rightArm: {
           current: "22",
@@ -682,7 +682,7 @@ export const ZEON_PRESETS = [
           current: "22",
           max: "22",
           weapon: "",
-          equipment: ["Heavy Booster", "Heat Hawk (Stowed)", "", ""],
+          equipment: ["Heavy Booster", "Heat Hawk (Stowed)", ""],
         },
         rightArm: {
           current: "22",
@@ -781,7 +781,7 @@ export const ZEON_PRESETS = [
           current: "25",
           max: "25",
           weapon: "",
-          equipment: ["Heavy Booster", "", "", ""],
+          equipment: ["Heavy Booster", "", ""],
         },
         rightArm: {
           current: "25",
@@ -875,7 +875,7 @@ export const ZEON_PRESETS = [
           current: "21",
           max: "21",
           weapon: "",
-          equipment: ["Command Interface", "", "", ""],
+          equipment: ["Command Interface", "", ""],
         },
         rightArm: {
           current: "21",
@@ -963,7 +963,7 @@ export const ZEON_PRESETS = [
           current: "22",
           max: "22",
           weapon: "",
-          equipment: ["", "", "", ""],
+          equipment: ["", "", ""],
         },
         rightArm: {
           current: "22",
@@ -1057,7 +1057,7 @@ export const ZEON_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["Heavy Booster", "EXAM SYSTEM", "", ""],
+          equipment: ["Heavy Booster", "EXAM SYSTEM", ""],
         },
         rightArm: {
           current: "24",
@@ -1155,7 +1155,6 @@ export const ZEON_PRESETS = [
             "Heavy Booster",
             "Kunai x 2 (Stored)",
             "MG (ZEON) (Stored)",
-            "",
           ],
         },
         rightArm: {
@@ -1223,7 +1222,7 @@ export const ZEON_PRESETS = [
           name: "Shotgun (Kinetic)",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "2",
+          tonnage: "1",
           notes: "",
         },
         {
@@ -1232,13 +1231,6 @@ export const ZEON_PRESETS = [
           fro: "",
           tonnage: "2",
           notes: "[BOOST(1)] becomes [BOOST(2)]",
-        },
-        {
-          name: "Smoke Grenades (MOUNTED)",
-          mcuCost: "FREE",
-          fro: "",
-          tonnage: "1",
-          notes: "[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
         },
         {
           name: "Smoke Grenades (MOUNTED)",
@@ -1273,8 +1265,8 @@ export const ZEON_PRESETS = [
         torso: {
           current: "23",
           max: "23",
-          weapon: "Smoke Grenades x 4",
-          equipment: ["Heavy Booster", "Shotgun (Stored)", "", ""],
+          weapon: "Smoke Grenades x 3",
+          equipment: ["Heavy Booster", "Shotgun (Stored)", ""],
         },
         rightArm: {
           current: "23",
@@ -1362,7 +1354,7 @@ export const ZEON_PRESETS = [
           current: "24",
           max: "24",
           weapon: "Beam SMG (MOUNTED)",
-          equipment: ["Side Verniers", "Heavy Booster", "", ""],
+          equipment: ["Side Verniers", "Heavy Booster", ""],
         },
         rightArm: {
           current: "24",
@@ -1450,7 +1442,7 @@ export const ZEON_PRESETS = [
           current: "24",
           max: "24",
           weapon: "Flash Grenade (MOUNTED)",
-          equipment: ["Side Verniers", "Heavy Booster", "", ""],
+          equipment: ["Side Verniers", "Heavy Booster", ""],
         },
         rightArm: {
           current: "24",
@@ -1527,7 +1519,7 @@ export const ZEON_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["Bazooka (Stowed)", "Beam Naginata (Stowed)", "", ""],
+          equipment: ["Bazooka (Stowed)", "Beam Naginata (Stowed)", ""],
         },
         rightArm: {
           current: "24",
@@ -1646,12 +1638,7 @@ export const ZEON_PRESETS = [
           current: "20",
           max: "20",
           weapon: "",
-          equipment: [
-            "Side Verniers",
-            "Bazooka (Stowed)",
-            "Shotgun (Stowed)",
-            "",
-          ],
+          equipment: ["Side Verniers", "Bazooka (Stowed)", "Shotgun (Stowed)"],
         },
         rightArm: {
           current: "20",
@@ -1738,7 +1725,7 @@ export const ZEON_PRESETS = [
           current: "25",
           max: "25",
           weapon: "MG (ZEON) (MOUNTED)",
-          equipment: ["", "", "", ""],
+          equipment: ["", "", ""],
         },
         rightArm: {
           current: "25",
@@ -1819,7 +1806,7 @@ export const ZEON_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["", "", "", ""],
+          equipment: ["", "", ""],
         },
         rightArm: {
           current: "24",
@@ -1894,7 +1881,7 @@ export const ZEON_PRESETS = [
           current: "25",
           max: "25",
           weapon: "",
-          equipment: ["", "", "", ""],
+          equipment: ["", "", ""],
         },
         rightArm: {
           current: "25",
@@ -1970,7 +1957,7 @@ export const ZEON_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["Heavy Booster", "Enhanced Fusion Reactor", "", ""],
+          equipment: ["Heavy Booster", "Enhanced Fusion Reactor", ""],
         },
         rightArm: {
           current: "22",
@@ -2079,7 +2066,7 @@ export const ZEON_PRESETS = [
           current: "23",
           max: "23",
           weapon: "",
-          equipment: ["Sturm Booster", "", "", ""],
+          equipment: ["Sturm Booster", "", ""],
         },
         rightArm: {
           current: "23",
@@ -2167,7 +2154,7 @@ export const ZEON_PRESETS = [
           current: "25",
           max: "25",
           weapon: "",
-          equipment: ["Beam Hawk (Stowed)", "", "", ""],
+          equipment: ["Beam Hawk (Stowed)", "", ""],
         },
         rightArm: {
           current: "25",
@@ -2250,7 +2237,7 @@ export const ZEON_PRESETS = [
           current: "27",
           max: "27",
           weapon: "",
-          equipment: ["Beam Hawk (Stowed)", "", "", ""],
+          equipment: ["Beam Hawk (Stowed)", "", ""],
         },
         rightArm: {
           current: "27",
@@ -2333,12 +2320,7 @@ export const ZEON_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: [
-            "Psycommu",
-            "Psycommu Funnel System",
-            "Beam Bits x 4",
-            "",
-          ],
+          equipment: ["Psycommu", "Psycommu Funnel System", "Beam Bits x 4"],
         },
         rightArm: {
           current: "24",
@@ -2432,7 +2414,7 @@ export const ZEON_PRESETS = [
           current: "25",
           max: "25",
           weapon: "",
-          equipment: ["Heavy Booster", "2x Beam Saber (Stowed)", "", ""],
+          equipment: ["Heavy Booster", "2x Beam Saber (Stowed)", ""],
         },
         rightArm: {
           current: "25",
@@ -2533,7 +2515,7 @@ export const ZEON_PRESETS = [
           current: "23",
           max: "23",
           weapon: "",
-          equipment: ["Beam Saber x 2 (Stowed)", "", "", ""],
+          equipment: ["Beam Saber x 2 (Stowed)", "", ""],
         },
         rightArm: {
           current: "23",
@@ -2622,7 +2604,7 @@ export const ZEON_PRESETS = [
           current: "27",
           max: "27",
           weapon: "",
-          equipment: ["Panoptic Canopy", "", "", ""],
+          equipment: ["Panoptic Canopy", "", ""],
         },
         rightArm: {
           current: "27",
@@ -2732,7 +2714,6 @@ export const ZEON_PRESETS = [
             "3x Grenades (Stowed)",
             "Panoptic Canopy",
             "Heavy Boosters",
-            "",
           ],
         },
         rightArm: {
@@ -2842,7 +2823,6 @@ export const ZEON_PRESETS = [
             "2x Missile Pod 10",
             "Enhanced Fusion Reactor",
             "Heavy Boosters",
-            "",
           ],
         },
         rightArm: {
@@ -3310,7 +3290,7 @@ export const ZEON_PRESETS = [
           current: "21",
           max: "21",
           weapon: "",
-          equipment: ["Heavy Booster", "Enhanced Fusion Reactor", "", ""],
+          equipment: ["Heavy Booster", "Enhanced Fusion Reactor", ""],
         },
         rightArm: {
           current: "21",
@@ -3405,7 +3385,7 @@ export const ZEON_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["Beam Naginata (Stowed)", "", "", ""],
+          equipment: ["Beam Naginata (Stowed)", "", ""],
         },
         rightArm: {
           current: "24",
@@ -3597,7 +3577,7 @@ export const ZEON_PRESETS = [
           current: "29",
           max: "29",
           weapon: "",
-          equipment: ["External Propellent", "", "", ""],
+          equipment: ["External Propellent", "", ""],
         },
         rightArm: {
           current: "29",
@@ -3690,7 +3670,7 @@ export const ZEON_PRESETS = [
           current: "28",
           max: "28",
           weapon: "",
-          equipment: ["Enhanced Fusion Reactor", "Beam Saber (Stowed)", "", ""],
+          equipment: ["Enhanced Fusion Reactor", "Beam Saber (Stowed)", ""],
         },
         rightArm: {
           current: "28",

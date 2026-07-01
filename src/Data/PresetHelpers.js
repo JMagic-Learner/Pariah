@@ -12,4 +12,6 @@ export const blankLoc = (equipCount) => ({
   weapon: "",
   weaponStowed: false,
   equipment: Array(equipCount).fill(""),
+  shieldCurrent: "",
+  shieldMax: "",
 });
