@@ -261,6 +261,20 @@ export const Movement = () => {
           <span className="fw6 red">4 inches of movement</span>.
         </p>
       </div>
+
+      {/* AIM */}
+      <div className="bg-near-white ba b--black-10 br2 pa3 mb3">
+        <h3 className="f4 fw7 red mt0 mb2">
+          [AIM]{" "}
+          <span className="fw4 f5">
+            <span className="fw6 red"> [MOVEMENT] </span> [ACTION]
+          </span>
+        </h3>
+        <p className="lh-copy f6 ma0">
+          The pilot gains the
+          <span className="fw6 red"> [AIMING]</span> state..
+        </p>
+      </div>
     </div>
   );
 };

@@ -80,11 +80,14 @@ export const States = () => {
           [AIMING] <span className="fw4 f5">[STATE]</span>
         </h3>
         <p className="lh-copy f6 mb0">
-          The MSU receives a{" "}
-          <span className="fw6 red">
-            +1 circumstance bonus to all GS checks
-          </span>
-          .
+          The aim state is a special status to denote a MSU lying in wait / or
+          carefully tracking a enemy. The{" "}
+          <span className="fw6 red"> [PILOT]</span>/MSU remains in this state
+          until it moves forward, backwards, sideways. Rotating in place does
+          not remove <span className="fw6 red"> [AIMING] </span>. When declaring{" "}
+          <span className="fw6 red"> [REACTIVE ATTACK]</span> with a ranged
+          weapon, the <span className="fw6 red"> [PILOT]</span>/MSU treats enemy
+          evasion as if it was standing still.
         </p>
       </div>
 
@@ -122,9 +125,9 @@ export const States = () => {
           [SUPPRESSED] <span className="fw4 f5">[STATE]</span>
         </h3>
         <p className="lh-copy f6 mb2">
-          When a [SUPPRESSIVE] weapon hits an enemy more than twice — rolling
-          two hit locations and dealing damage to both — that enemy enters the
-          Suppressed state.
+          When a <span className="fw6 red"> [SUPPRESSIVE] </span> weapon hits an
+          enemy more than twice — rolling two hit locations and dealing damage
+          to both — that enemy enters the Suppressed state.
         </p>
         <ul className="lh-copy pl3 f6 ma0">
           <li className="pv1">
@@ -135,14 +138,18 @@ export const States = () => {
             Suppressed MSUs can only move sideways or backwards.
           </li>
           <li className="pv1">
-            Suppressed MSUs cannot move closer to the wielder of the
-            [SUPPRESSIVE] weapon.
+            Suppressed MSUs cannot move closer to the wielder of the When a{" "}
+            <span className="fw6 red"> [SUPPRESSIVE] </span> weapon.
           </li>
           <li className="pv1">
             [SUPPRESSED] state is removed when: the Suppressed MSU spends an
             action in the Status Phase; the wielder breaks LOS with the target;
-            the wielder moves (Boost / Blitz / Move Action / Pushed); or the
-            wielder is beyond max rangebands.
+            the wielder moves with a{" "}
+            <span className="fw6 red">
+              {" "}
+              [BOOST / BLITZ / ADVANCE / IMPACT]{" "}
+            </span>
+            ; or the wielder is beyond max rangebands.
           </li>
         </ul>
       </div>

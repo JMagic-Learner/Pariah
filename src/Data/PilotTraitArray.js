@@ -137,7 +137,7 @@ export const TRAITS = [
     name: "Guardian Angel",
     cost: 2,
     effect:
-      "All friendly MSU within 8 inches of this [PILOT]/MSU can reroll one of their evasion dice.",
+      "All other friendly MSU within 8 inches of this [PILOT]/MSU can reroll one of their evasion dice.",
   },
   {
     name: "Guerilla Ops",
@@ -254,7 +254,7 @@ export const TRAITS = [
     name: "Predictive Fire",
     cost: 1,
     effect:
-      "[AOE(x)] weapons gain [INDIRECT] in [REACTIVE FIRE] actions. [INDIRECT] weapons no longer receive the -2 penalty for targeting a point on the battlefield.",
+      "[AOE(x)] weapons gain [INDIRECT] in [REACTIVE ATTACK] actions. When firing via [INDIRECT] in [REACTIVE ATTACK], ignore the [INDIRECT] penalty",
   },
   {
     name: "Quick Hands",
