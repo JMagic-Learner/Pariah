@@ -4,6 +4,63 @@ const B = blankEquip;
 export const EF_PRESETS = [
   // ─── Earth Federation ───────────────────────────────────────────────────────
   {
+    id: "rx-78-2-gundam",
+    name: "RX-78-2 Gundam",
+    faction: "EF",
+    data: {
+      msuName: "RX-78-2 Gundam",
+      mobileSuit: "RX-78-2 Gundam",
+      mcu: "125",
+      fro: "6",
+      tonnageLimit: "48",
+      movement: '7"',
+      armorValue: "23",
+      baseEquip: [
+        { name: "Beam Rifle",      mcuCost: "FREE", fro: "3", tonnage: "3", notes: "" },
+        { name: "Beam Saber",      mcuCost: "FREE", fro: "1", tonnage: "1", notes: "" },
+        { name: "Beam Saber",      mcuCost: "FREE", fro: "1", tonnage: "1", notes: "" },
+        { name: "Shield",          mcuCost: "FREE", fro: "",  tonnage: "2", notes: "" },
+        { name: "Vulcan Cannons",  mcuCost: "FREE", fro: "",  tonnage: "",  notes: "[FULL AUTO],[INBUILT]" },
+        B(),
+        B(),
+        B(),
+      ],
+      addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
+      locations: {
+        head: {
+          current: "23", max: "23",
+          weapon: "Vulcan Cannons",
+          equipment: ["", "", ""],
+        },
+        torso: {
+          current: "23", max: "23",
+          weapon: "",
+          equipment: ["Beam Saber x 2 (Stowed)", "", ""],
+        },
+        rightArm: {
+          current: "23", max: "23",
+          weapon: "Beam Saber",
+          equipment: ["", "", ""],
+        },
+        leftArm: {
+          current: "23", max: "23",
+          weapon: "Shield",
+          equipment: ["", "", ""],
+        },
+        rightLeg: {
+          current: "23", max: "23",
+          weapon: "",
+          equipment: ["", "", ""],
+        },
+        leftLeg: {
+          current: "23", max: "23",
+          weapon: "",
+          equipment: ["", "", ""],
+        },
+      },
+    },
+  },
+  {
     id: "rgm79-gm-command-space",
     name: "RGM-79 GM Command Space",
     faction: "EF",
@@ -1578,11 +1635,11 @@ export const EF_PRESETS = [
   },
   {
     id: "pmx000-messala",
-    name: "PMX-000 MESSALA",
+    name: "PMX-000 Messala (MA)",
     faction: "EF",
     data: {
-      msuName: "PMX-000 MESSALA",
-      mobileSuit: "PMX-000 MESSALA",
+      msuName: "PMX-000 Messala (MA)",
+      mobileSuit: "PMX-000 Messala (MA)",
       mcu: "170",
       fro: "9",
       tonnageLimit: "75",
@@ -3483,11 +3540,11 @@ export const EF_PRESETS = [
   },
   {
     id: "rx78gp03-dendrobium",
-    name: "RX-78GP03 DENDROBIUM",
+    name: "RX-78 GP03 Dendrobium (MA)",
     faction: "EF",
     data: {
-      msuName: "RX-78GP03 DENDROBIUM",
-      mobileSuit: "RX-78GP03 DENDROBIUM",
+      msuName: "RX-78 GP03 Dendrobium (MA)",
+      mobileSuit: "RX-78 GP03 Dendrobium (MA)",
       mcu: "750",
       fro: "9",
       tonnageLimit: "900",

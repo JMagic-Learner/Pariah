@@ -29,7 +29,7 @@ export const SUPPORT = [
   },
   {
     name: "Anti Missile System (AMS)",
-    loc: "Head/Torso",
+    loc: "Torso",
     ton: 2,
     pfro: "–",
     qty: 1,
