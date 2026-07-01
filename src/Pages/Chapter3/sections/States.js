@@ -87,7 +87,9 @@ export const States = () => {
           not remove <span className="fw6 red"> [AIMING] </span>. When declaring{" "}
           <span className="fw6 red"> [REACTIVE ATTACK]</span> with a ranged
           weapon, the <span className="fw6 red"> [PILOT]</span>/MSU treats enemy
-          evasion as if it was standing still.
+          evasion as if it was standing still. In addition, this [PILOT]/MSU may
+          declare <span className="fw6 red"> [REACTIVE ATTACK]</span> during ANY
+          point of the enemy's movement phase
         </p>
       </div>
 
