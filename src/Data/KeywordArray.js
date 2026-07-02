@@ -104,6 +104,10 @@ export const KEYWORDS = [
     desc: "This weapon is 1-2 tons in weight, and can be wielded in either hand",
   },
   {
+    name: "[LINEAR]",
+    desc: "Draw a line to the intended target. This line extends to the max range rangeband on this weapon. This weapon's attack roll result and damage is used for all enemy MSU, [HARD COVER], tokens/missiles",
+  },
+  {
     name: "[MEDIUM]",
     desc: "This weapon is 3-5 tons in weight, and can be wielded in either hand",
   },

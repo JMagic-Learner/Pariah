@@ -102,7 +102,7 @@ export const RANGED = [
     fro: 4,
     mcu: 55,
     faction: "EF",
-    keywords: "[SCOPE]",
+    keywords: "[SCOPE],[LINEAR]",
   },
   {
     name: "Cannon",
@@ -375,7 +375,7 @@ export const RANGED = [
     fro: 2,
     mcu: 100,
     faction: "–",
-    keywords: "[AP(10)],[BRACE]",
+    keywords: "[AP(10)],[BRACE],[LINEAR]",
   },
   {
     name: "Rifle (Anti-Mat)",
