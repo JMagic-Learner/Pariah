@@ -118,7 +118,7 @@ export const FACTIONS = [
           },
           {
             title: "GUERILLA FIGHTERS",
-            text: "Once per turn, a ZEON REMNANT FIRETEAM may nominate one MSU to be an ambusher. The [AMBUSHER] may move off the board edge when it conducts a [MOVEMENT] action. They are redployed at the step 1.1 of the Status Phase, on any board edge. There can only be one AMBUSHER per round. AMBUSHER MSU cannot declare a MOVE,BLITZ, or BOOST action on the round that they enter the battlefield, but otherwise act normally.",
+            text: "When building a Zeon Remnants [FIRETEAM], one MSU can be nominated to be `In Ambush`. This MSU is not deployed alongside the rest of their squadron during deployment, but is instead held in reserve. At the beginning of any Status Phase, the ambushing MSU can be deployed along any board edge, and cannot conduct a [MOVEMENT] action, counting as having moved up to its full base movement value. If the other MSU's in the Zeon Remnants list have been destroyed, and the ambushing MSU has not yet been deployed in the manner described above, then the ambushing MSU also counts as having been destroyed. If at any point the Zeon Remnants player has no MSU's on the board, then they have been defeated.",
           },
         ],
       },

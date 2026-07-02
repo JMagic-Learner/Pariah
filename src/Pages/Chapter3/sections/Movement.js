@@ -172,6 +172,11 @@ export const Movement = () => {
             <span className="fw6 red"> [BOOST(2)]</span>.
           </li>
           <li className="pv1">
+            If an MSU consumes three FRO to{" "}
+            <span className="fw6 red"> [BOOST(X)]</span>, that MSU gains +1
+            Evasion mod .
+          </li>
+          <li className="pv1">
             An MSU may <span className="fw6 red"> [BOOST] </span> more than once
             per activation, as long as it can pay the [FRO] cost for each{" "}
             <span className="fw6 red"> [BOOST] </span>.
