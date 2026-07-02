@@ -478,6 +478,30 @@ export const FORCE_LIST_FACTIONS = [
           "Beam Rifle, GL, Shield, Beam Saber, 6 Funnels, Panoptic Canopy, Bazooka, Vulcans",
       },
       {
+        msu: "RX-0 Unicorn Gundam",
+        mcu: 210,
+        move: '7"',
+        armor: 28,
+        fro: 8,
+        tonnage: 42,
+        year: "0096",
+        faction: "EF",
+        equipment:
+          "Beam Magnum, Beam Saber x 4, Shield, Command Interface, Vulcans [PSYCOMMU]",
+      },
+      {
+        msu: "RX-0 Banshee Gundam",
+        mcu: 210,
+        move: '7"',
+        armor: 28,
+        fro: 8,
+        tonnage: 42,
+        year: "0096",
+        faction: "EF",
+        equipment:
+          "Beam Magnum, Beam Saber x 4, Shield, Command Interface, Vulcans [PSYCOMMU]",
+      },
+      {
         msu: "RMS-108 Marasai Karl Gustav",
         mcu: 180,
         move: '6"',
@@ -641,7 +665,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MSN-03C Hygogg",
-        mcu: 150,
+        mcu: 170,
         move: '7"',
         armor: 25,
         fro: 6,
@@ -677,7 +701,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MSM-08 Zogok",
-        mcu: 135,
+        mcu: 155,
         move: '7"',
         armor: 25,
         fro: 6,
@@ -736,7 +760,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MSn-07 Z'Gok-E",
-        mcu: 145,
+        mcu: 165,
         move: '8"',
         armor: 24,
         fro: 6,
@@ -1026,6 +1050,18 @@ export const FORCE_LIST_FACTIONS = [
         faction: "Zeon, Neo Zeon",
         equipment:
           "Beam Rifle, Beam Hawk, Heavy Booster, Vulcans, Shield + GL (ZEON)",
+      },
+      {
+        msu: "NZ-666 Kshatriya (MA)",
+        mcu: 400,
+        move: '6"',
+        armor: 27,
+        fro: 10,
+        tonnage: 72,
+        year: "0096",
+        faction: "Zeon, Neo Zeon",
+        equipment:
+          "I Field Generator, [PSYCOFRAME], 24 Beam Bits, 2x Beam Sabers, Beam Cannon x 2 (Mounted), Extra Arms x2 (Pair), 4x Shields [20]",
       },
     ],
   },

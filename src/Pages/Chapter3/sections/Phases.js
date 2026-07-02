@@ -115,8 +115,11 @@ export const Phases = () => {
         <ul className="lh-copy pl3 f6 ma0">
           <li className="pv1">
             <span className="fw6 red">Step 1:</span> The MSU may declare an
-            <span className="fw6 red"> [ATTACK] </span> action using a melee
-            weapon.
+            <span className="fw6 red">
+              {" "}
+              [ATTACK] or [REACTIVE ATTACK]{" "}
+            </span>{" "}
+            action using a melee weapon.
           </li>
           <li className="pv1">
             <span className="fw6 red">Step 2:</span> Once resolved, return to
