@@ -3436,7 +3436,7 @@ export const ZEON_PRESETS = [
   {
     id: "msk008-dijeh",
     name: "MSK-008 DIJEH",
-    faction: "ZEON",
+    faction: "ZEON,EF,AEUG",
     data: {
       msuName: "MSK-008 DIJEH",
       mobileSuit: "MSK-008 DIJEH",
@@ -3729,7 +3729,7 @@ export const ZEON_PRESETS = [
       mobileSuit: "NZ-666 KSHATRIYA",
       mcu: "400",
       fro: "10",
-      tonnageLimit: "72",
+      tonnageLimit: "60",
       movement: '6"',
       armorValue: "27",
       baseEquip: [

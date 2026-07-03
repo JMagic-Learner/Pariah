@@ -28,6 +28,17 @@ export const FORCE_LIST_FACTIONS = [
         equipment: "Beam Rifle, Shield, Beam Saber, Vulcans",
       },
       {
+        msu: "RX-78-2 Gundam",
+        mcu: 125,
+        move: '7"',
+        armor: 23,
+        fro: 6,
+        tonnage: 48,
+        year: "0079",
+        faction: "EF",
+        equipment: "Beam Rifle, Beam Saber x 2, Shield",
+      },
+      {
         msu: "RGM-79 GM Ground",
         mcu: 120,
         move: '5"',
@@ -438,7 +449,7 @@ export const FORCE_LIST_FACTIONS = [
         fro: 8,
         tonnage: 47,
         year: "0088",
-        faction: "EF",
+        faction: "EF, TITANS, AEUG",
         equipment: "Beam Rifle, Shield, Beam Saber, Bazooka, Vulcans",
       },
       {
@@ -836,7 +847,8 @@ export const FORCE_LIST_FACTIONS = [
         tonnage: 66,
         year: "0080",
         faction: "Zeon",
-        equipment: "2x Shotgun, 2x Bazooka, Side Verniers",
+        equipment:
+          "2x Shotgun, 2x Bazooka, Side Verniers, PanzerFaust x 2, Spiky Shoulders",
       },
       {
         msu: "MS-06F-2 Zaku II F2",
@@ -881,7 +893,7 @@ export const FORCE_LIST_FACTIONS = [
         fro: 7,
         tonnage: 41,
         year: "0088",
-        faction: "Zeo, Neo, Karaba",
+        faction: "Zeo, Neo, AEUG, EF",
         equipment:
           "Beam Saber, Clay Bazooka, Beam Naginata, Vulcan Cannons, Shield (Shoulder)",
       },
@@ -895,7 +907,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0088",
         faction: "Zeon, Neo Zeon",
         equipment:
-          "Combo Weapons (BR + BS), Psycommu Funnel System, Beam Bits x 4",
+          "Combo Weapons (BR + Beam Saber), Psycommu Funnel System, Beam Bits x 4",
       },
       {
         msu: "AMX-007 Bawoo",
@@ -1040,6 +1052,18 @@ export const FORCE_LIST_FACTIONS = [
         equipment: "Beam SMG, Beam Hawk, Shield Shoulder, Bazooka",
       },
       {
+        msu: "NZ-666 Kshatriya (MA)",
+        mcu: 400,
+        move: '6"',
+        armor: 27,
+        fro: 10,
+        tonnage: 60,
+        year: "0096",
+        faction: "Zeon, Neo Zeon",
+        equipment:
+          "I Field Generator, [PSYCOFRAME], 24 Beam Bits, 2x Beam Sabers, Beam Cannon x 2 (Mounted), Extra Arms x2 (Pair), 4x Shields [20]",
+      },
+      {
         msu: "MSN-06S Sinanju",
         mcu: 200,
         move: '8"',
@@ -1050,18 +1074,6 @@ export const FORCE_LIST_FACTIONS = [
         faction: "Zeon, Neo Zeon",
         equipment:
           "Beam Rifle, Beam Hawk, Heavy Booster, Vulcans, Shield + GL (ZEON)",
-      },
-      {
-        msu: "NZ-666 Kshatriya (MA)",
-        mcu: 400,
-        move: '6"',
-        armor: 27,
-        fro: 10,
-        tonnage: 72,
-        year: "0096",
-        faction: "Zeon, Neo Zeon",
-        equipment:
-          "I Field Generator, [PSYCOFRAME], 24 Beam Bits, 2x Beam Sabers, Beam Cannon x 2 (Mounted), Extra Arms x2 (Pair), 4x Shields [20]",
       },
     ],
   },
@@ -1344,7 +1356,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0086",
         faction: "ReZeon, TITANS",
         equipment:
-          "Combo Weapons (BR + BS), Psycommu Funnel System, Beam Bits x 4",
+          "Combo Weapons (BR + Beam Saber), Psycommu Funnel System, Beam Bits x 4",
       },
       {
         msu: "RX-121-1 Gundam TR-1 Icarus",

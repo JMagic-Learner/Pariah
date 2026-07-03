@@ -283,7 +283,7 @@ export const TRAITS = [
     name: "Saboteur",
     cost: 1,
     effect:
-      "At game start, choose an enemy [PILOT] to roll a PS 5 check. If failed, choose one penalty: Increase all Passive FRO cost by 1; Remove a support equipment with Weapon location; Reduce movespeed by 1 and FRO Limit by 1.",
+      "At game start, choose an enemy [PILOT] to roll a PS 5 check. If failed, choose one penalty: Increase all Passive FRO cost by 1; Remove a support equipment with Weapon location; Reduce movespeed by 1 and FRO Limit by 1. A Enemy [PILOT] cannot be targeted by this Saboteur trait more than once",
   },
   {
     name: "Scavenger",
@@ -322,7 +322,7 @@ export const TRAITS = [
     name: "Trash Talker",
     cost: 1,
     effect:
-      'At Step 1.4 of Status Phase, the [PILOT] can spend an action to trash talk. ALL enemy [PILOT]s within 24" must make a PS 5 check or suffer -1 penalty to Gunnery and Brawl.',
+      'At Step 1.4 of Status Phase, the [PILOT] can spend 1 FRO to trash talk. ALL enemy [PILOT]s within 24" must make a PS 5 check or suffer -1 penalty to Gunnery and Brawl.',
   },
   {
     name: "Tricky",

@@ -19,7 +19,7 @@ export const Pilots = () => {
         Gunnery (GS) - Used to make ranged attacks. Begins at base value 1
       </p>
       <p className="lh-copy tj">
-        Brawl (BS)- Used to make melee attacks. Begins at base value 1
+        Brawl (BR)- Used to make melee attacks. Begins at base value 1
       </p>
       <p className="lh-copy tj">
         Piloting (PS) - Used to roll initiatve, use certain equipment, and to
@@ -68,7 +68,7 @@ export const Pilots = () => {
       </p>
       <p className="lh-copy tj red">
         {" "}
-        Attack Rolls: 1d6 + [GS/BS] + [ Weapon Mods] + [Situational
+        Attack Rolls: 1d6 + [GS/BR] + [ Weapon Mods] + [Situational
         Modifiers]{" "}
       </p>
       <p className="lh-copy tj red">Initiative Rolls: 1d6 + [PS] + [Mods]</p>
@@ -77,7 +77,7 @@ export const Pilots = () => {
       </p>
       <p className="lh-copy tj red ">
         {" "}
-        Skill Check Rolls: 1d6 + [GS/BS/PS] + [Situational Mods]{" "}
+        Skill Check Rolls: 1d6 + [GS/BR/PS] + [Situational Mods]{" "}
       </p>
       <p className="lh-copy tj red">Evasion Rolls: 2d3 + [PS] + [EVA Mods]</p>
 

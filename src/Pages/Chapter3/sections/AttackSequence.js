@@ -53,7 +53,7 @@ export const AttackSequence = () => {
             <span className="fw6 red">+4 after all penalties and bonuses.</span>
           </li>
           <li className="pv1">
-            1d6 + [GS/BS] + [Weapon Mods] + [Situational Modifiers]
+            1d6 + [GS/BR] + [Weapon Mods] + [Situational Modifiers]
           </li>
 
           <li className="pv1">

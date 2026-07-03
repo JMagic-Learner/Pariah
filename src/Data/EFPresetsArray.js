@@ -1204,7 +1204,7 @@ export const EF_PRESETS = [
   {
     id: "msa003-nemo",
     name: "MSA-003 NEMO",
-    faction: "EF",
+    faction: "EF,AEUG",
     data: {
       msuName: "MSA-003 NEMO",
       mobileSuit: "MSA-003 NEMO",
@@ -1285,7 +1285,7 @@ export const EF_PRESETS = [
   {
     id: "msn00100-hyaku-shiki",
     name: "MSN-00100 HYAKU SHIKI",
-    faction: "EF",
+    faction: "EF,AEUG",
     data: {
       msuName: "MSN-00100 HYAKU SHIKI",
       mobileSuit: "MSN-00100 HYAKU SHIKI",
@@ -1469,7 +1469,7 @@ export const EF_PRESETS = [
   {
     id: "msz006-zeta-gundam",
     name: "MSZ-006 ZETA GUNDAM",
-    faction: "EF",
+    faction: "EF,AEUG",
     data: {
       msuName: "MSZ-006 ZETA GUNDAM",
       mobileSuit: "MSZ-006 ZETA GUNDAM",
@@ -4351,7 +4351,7 @@ export const EF_PRESETS = [
   {
     id: "rx178-mk-ii-gundam",
     name: "RX-178 MK II GUNDAM",
-    faction: "EF",
+    faction: "EF,TITANS,AEUG",
     data: {
       msuName: "RX 178 MK II GUNDAM",
       mobileSuit: "RX 178 MK II GUNDAM",

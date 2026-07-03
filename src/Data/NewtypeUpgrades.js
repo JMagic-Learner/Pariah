@@ -10,7 +10,7 @@ export const NEWTYPE_UPGRADES = [
     limit: 1,
     mcu: "–",
     effect:
-      "Once per round after initiative has been rolled, this [PILOT] can add +1 GS or +1 BS.",
+      "Once per round after initiative has been rolled, this [PILOT] can add +1 GS or +1 BR.",
   },
   {
     name: "Beam Bits",

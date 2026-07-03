@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx --yes prettier src/Data/SupportEquipmentArray.js)",
+      "Read(//tmp/**)",
+      "Bash(node sort_support.mjs)",
+      "Bash(npx --yes prettier --write __TRACKED_VAR__/support_sorted_raw.js)",
+      "Bash(SCRATCH=\"/c/Users/majas/AppData/Local/Temp/claude/c--Users-majas-Desktop-Pariah/cab06655-1bdb-46fc-8c83-d95c9b42e202/scratchpad\" && grep -n \"name:\" \"$SCRATCH/support_sorted_raw.js\")",
+      "Read(//c/Users/majas/AppData/Local/Temp/claude/c--Users-majas-Desktop-Pariah/cab06655-1bdb-46fc-8c83-d95c9b42e202/scratchpad/**)",
+      "Bash(SCRATCH=\"/c/Users/majas/AppData/Local/Temp/claude/c--Users-majas-Desktop-Pariah/cab06655-1bdb-46fc-8c83-d95c9b42e202/scratchpad\" && sed -n '425,442p' \"$SCRATCH/support_sorted_raw.js\")",
+      "Bash(SCRATCH=\"/c/Users/majas/AppData/Local/Temp/claude/c--Users-majas-Desktop-Pariah/cab06655-1bdb-46fc-8c83-d95c9b42e202/scratchpad\" && cd \"c:\\\\Users\\\\majas\\\\Desktop\\\\Pariah\" && sed 's/$/\\\\r/' \"$SCRATCH/support_sorted_raw.js\" > src/Data/SupportEquipmentArray.js && file src/Data/SupportEquipmentArray.js)",
+      "Bash(npx --no-install eslint src/Data/SupportEquipmentArray.js)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\majas\\AppData\\Local\\Temp\\claude\\c--Users-majas-Desktop-Pariah\\cab06655-1bdb-46fc-8c83-d95c9b42e202\\scratchpad"
+    ]
+  }
+}

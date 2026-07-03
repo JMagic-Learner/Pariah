@@ -93,6 +93,7 @@ const EquipmentRow = ({
   sold,
   onSell,
   onClear,
+  scavengerToggle,
 }) => (
   <tr className={sold ? "o-40" : ""}>
     <TD>
@@ -132,6 +133,20 @@ const EquipmentRow = ({
         onChange={(v) => onChange("mcuCost", v)}
         className={classNames("tc", { strike: sold })}
       />
+      {scavengerToggle && (
+        <button
+          className={classNames(
+            "f8 ph1 pv0 mt1 bn br1 pointer lh-copy w-100",
+            scavengerToggle.active
+              ? "bg-dark-green white fw7"
+              : "bg-near-white dark-gray",
+          )}
+          onClick={scavengerToggle.onClick}
+          title="Scavenger: halve this Support Equipment's MCU cost"
+        >
+          {scavengerToggle.active ? "−50% ✓" : "Scavenge ½"}
+        </button>
+      )}
     </TD>
     <TD className="tc">
       <TextInput
@@ -371,6 +386,8 @@ const PilotSheetPanel = ({ slotIndex }) => {
     setSoldBase,
     mechanicChoice,
     setMechanicChoice,
+    scavengerChoice,
+    setScavengerChoice,
     newtypeChoice1,
     setNewtypeChoice1,
     newtypeChoice2,
@@ -406,6 +423,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
   const hasCyberNewtype = traits.some((t) => t === "Cyber-Newtype (TITANS)");
   const hasRambo = traits.some((t) => t === "Rambo");
   const hasRookie = traits.some((t) => t === "Rookie");
+  const hasScavenger = traits.some((t) => t === "Scavenger");
   const hasGrypsVet = traits.some((t) => t === "Gryps War Veteran (REZEON)");
   const gunneryTraitCount = traits.filter((t) => t === "Gunnery").length;
   const brawlerTraitCount = traits.filter((t) => t === "Brawler").length;
@@ -449,7 +467,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
   const mcuLimit =
     250 +
     (traits.some((t) => t === "One Year War Veteran") ? 75 : 0) +
-    (traits.some((t) => t === "CORRUPT GOVERNEMENT (EF GENERAL)") ? 50 : 0);
+    (traits.some((t) => t === "CORRUPT GOVERNMENT (EF GENERAL)") ? 50 : 0);
 
   const hasMerchantOfDeath = traits.some((t) => t === "Merchant of Death");
 
@@ -463,7 +481,14 @@ const PilotSheetPanel = ({ slotIndex }) => {
       const freeWeaponRefund = hasMerchantOfDeath ? 35 : 10;
       return supportMCU !== null ? sum - supportMCU : sum - freeWeaponRefund;
     }, 0) +
-    addlEquip.reduce((sum, row) => sum + parseMCU(row.mcuCost), 0);
+    addlEquip.reduce((sum, row, i) => {
+      const cost = parseMCU(row.mcuCost);
+      const isDiscounted =
+        hasScavenger &&
+        scavengerChoice === String(i) &&
+        SUPPORT.some((s) => s.name === row.name);
+      return sum + (isDiscounted ? Math.floor(cost / 2) : cost);
+    }, 0);
 
   const totalTonnage =
     baseEquip.reduce(
@@ -565,7 +590,8 @@ const PilotSheetPanel = ({ slotIndex }) => {
     const armorDelta = armorMatch ? parseInt(armorMatch[1]) : 0;
 
     const isShield = /shield/i.test(itemName);
-    const shieldHpMatch = itemName.match(/\[(\d+)/) || itemName.match(/\((\d+)\s*armor\)/i);
+    const shieldHpMatch =
+      itemName.match(/\[(\d+)/) || itemName.match(/\((\d+)\s*armor\)/i);
     const shieldHp = isShield && shieldHpMatch ? parseInt(shieldHpMatch[1]) : 0;
     const ARM_KEYS = new Set(["rightArm", "leftArm"]);
 
@@ -852,7 +878,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                     )}
                     {brawlerTraitCount > 0 && (
                       <span className="f8 mr3 dark-green fw6">
-                        Brawler ×{brawlerTraitCount} → +{brawlerTraitCount} BS
+                        Brawler ×{brawlerTraitCount} → +{brawlerTraitCount} BR
                       </span>
                     )}
                     {pilotingTraitCount > 0 && (
@@ -916,7 +942,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                   </div>
                 )}
 
-                {/* Rambo — choose GS or BS */}
+                {/* Rambo — choose GS or BR */}
                 {hasRambo && (
                   <div className="flex items-center mb2">
                     <span className="f7 fw6 mr2 nowrap">Rambo:</span>
@@ -957,7 +983,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                   <div className="flex items-center mb2">
                     <span className="f7 fw6 red mr2 nowrap">Rookie:</span>
                     <span className="f8 red">
-                      Base GS / BS / PS default to 0
+                      Base GS / BR / PS default to 0
                     </span>
                   </div>
                 )}
@@ -1231,8 +1257,20 @@ const PilotSheetPanel = ({ slotIndex }) => {
                   onClear={() => {
                     removeSupportLoc(row.name);
                     applyAddlEquip(i, blankEquip());
+                    if (scavengerChoice === String(i)) setScavengerChoice("");
                   }}
                   lastCellColSpan={2}
+                  scavengerToggle={
+                    hasScavenger && SUPPORT.some((s) => s.name === row.name)
+                      ? {
+                          active: scavengerChoice === String(i),
+                          onClick: () =>
+                            setScavengerChoice((p) =>
+                              p === String(i) ? "" : String(i),
+                            ),
+                        }
+                      : null
+                  }
                 />
               ))}
             </tbody>
