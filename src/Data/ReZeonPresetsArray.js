@@ -111,7 +111,7 @@ export const REZEON_PRESETS = [
         {
           name: "Beam SMG (Mounted)",
           mcuCost: "FREE",
-          fro: "2",
+          fro: "1",
           tonnage: "1",
           notes:
             "Shield Binders are a beam cannon, shield, and thruster unit. They grant the Gaplant high maneuverability and the ability to change direction during flight without needing to change the direction of its nose. These Shield Binders are also Iframe Generators.",
@@ -671,7 +671,7 @@ export const REZEON_PRESETS = [
         {
           name: "Beam SMG (MOUNTED)",
           mcuCost: "FREE",
-          fro: "2",
+          fro: "1",
           tonnage: "1",
           notes: "[FULL AUTO],[AKIMBO],[BURST(2)]",
         },

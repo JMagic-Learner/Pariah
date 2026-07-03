@@ -551,9 +551,9 @@ export const SUPPORT = [
     name: "Recoil Counterbalance",
     loc: "Any",
     ton: 1,
-    pfro: "1 PFRO",
+    pfro: "-",
     qty: 1,
-    mcu: 35,
+    mcu: 30,
     effect:
       "[FULL AUTO] weapons do not incur the -2 hit modifier if Recoil Counterbalance is in the same hit location.",
   },

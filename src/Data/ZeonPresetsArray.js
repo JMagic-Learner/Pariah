@@ -729,14 +729,14 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "1",
-          notes: "",
+          notes: "[FULL AUTO], [MOUNTABLE]",
         },
         {
           name: "Heat Hawk (MOUNTED)",
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "",
+          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE(X)],[THROW]",
         },
         {
           name: "Heavy Boosters",
@@ -749,8 +749,8 @@ export const ZEON_PRESETS = [
           name: "Spiky Shoulder",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "1",
-          notes: "",
+          tonnage: "",
+          notes: "[BLITZ] collision: 15 damage + 1 per 3 inches traveled",
         },
         {
           name: "Shield (Shoulder)",
@@ -1315,11 +1315,11 @@ export const ZEON_PRESETS = [
       armorValue: "24",
       baseEquip: [
         {
-          name: "Beam SMG (MOUNTED)",
+          name: "SMG (Beam) (MOUNTED)",
           mcuCost: "FREE",
           fro: "2",
           tonnage: "1",
-          notes: "",
+          notes: "[FULL AUTO],[AKIMBO],[BURST(2)]",
         },
         {
           name: "Bazooka",
@@ -1359,7 +1359,7 @@ export const ZEON_PRESETS = [
         torso: {
           current: "24",
           max: "24",
-          weapon: "Beam SMG (MOUNTED)",
+          weapon: "SMG (BEAM) (MOUNTED)",
           equipment: ["Side Verniers", "Heavy Booster", ""],
         },
         rightArm: {
@@ -2201,7 +2201,7 @@ export const ZEON_PRESETS = [
       armorValue: "25",
       baseEquip: [
         {
-          name: "Beam SMG",
+          name: "SMG (Beam)",
           mcuCost: "FREE",
           fro: "2",
           tonnage: "1",
@@ -2251,7 +2251,7 @@ export const ZEON_PRESETS = [
         rightArm: {
           current: "25",
           max: "25",
-          weapon: "Beam SMG",
+          weapon: "SMG (Beam)",
           equipment: ["Shield (Shoulder)", "", ""],
         },
         leftArm: {
@@ -2289,19 +2289,18 @@ export const ZEON_PRESETS = [
       armorValue: "27",
       baseEquip: [
         {
-          name: "Beam SMG",
+          name: "SMG (Beam) ",
           mcuCost: "FREE",
-          fro: "2",
+          fro: "1",
           tonnage: "1",
-          notes:
-            "Geara Zulu may purchase a JEGAN's Shield + Missile 2 equipment for 30 MCU",
+          notes: "[FULL AUTO],[AKIMBO],[BURST(2)]",
         },
         {
           name: "Beam Hawk",
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "",
+          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE(X)]",
         },
         {
           name: "Shield (Shoulder)",
@@ -2322,7 +2321,22 @@ export const ZEON_PRESETS = [
         B(),
         B(),
       ],
-      addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
+      addlEquip: [
+        {
+          name: "Optional: Jegan's Shield + Missile Pod 4",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "5",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
+        },
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+      ],
       locations: {
         head: { current: "27", max: "27", weapon: "", equipment: ["", "", ""] },
         torso: {
@@ -2372,26 +2386,28 @@ export const ZEON_PRESETS = [
       armorValue: "24",
       baseEquip: [
         {
-          name: "Beam Rifle x 2",
+          name: "Beam Rifle + Beam Saber",
           mcuCost: "FREE",
-          fro: "3",
-          tonnage: "6",
+          fro: "3/1",
+          tonnage: "4",
           notes:
             "The Beam Rifles and Beam Sabers are actually the same weapon. They are considered active at the same time. Psycommu",
         },
         {
-          name: "Beam Saber x 2",
+          name: "Beam Rifle + Beam Saber",
           mcuCost: "FREE",
-          fro: "1",
-          tonnage: "2",
-          notes: "",
+          fro: "3/1",
+          tonnage: "4",
+          notes:
+            "The Beam Rifles and Beam Sabers are actually the same weapon. They are considered active at the same time. Psycommu",
         },
         {
-          name: "Psycommu Funnel System",
+          name: "Psycommu Funnel/Bit",
           mcuCost: "FREE",
-          fro: "2",
+          fro: "2 PFRO",
           tonnage: "3",
-          notes: "",
+          notes:
+            "Requires [NEWTYPE]/[CYBER-NEWTYPE] trait; deploy 2 bits as weapons.",
         },
         {
           name: "Beam Bits x 4",
@@ -2553,21 +2569,21 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "4",
-          notes: "",
+          notes: "[MOUNTABLE]",
         },
         {
           name: "Missile Pod 10 (MOUNTED)",
           mcuCost: "FREE",
           fro: "",
           tonnage: "5",
-          notes: "",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
           name: "Missile Pod 10 (MOUNTED)",
           mcuCost: "FREE",
           fro: "",
           tonnage: "5",
-          notes: "",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
           name: "Beam Saber",
@@ -2860,19 +2876,12 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "+2",
           tonnage: "2",
-          notes: "",
-        },
-        {
-          name: "2x Missile Pod 10",
-          mcuCost: "FREE",
-          fro: "",
-          tonnage: "10",
-          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
+          notes: "Increase FRO Limit by 2",
         },
         {
           name: "2x Beam Cannon",
           mcuCost: "FREE",
-          fro: "3/1",
+          fro: "3",
           tonnage: "8",
           notes: "",
         },
@@ -2897,7 +2906,20 @@ export const ZEON_PRESETS = [
           tonnage: "1",
           notes: "[CLEAVE(X)]",
         },
-        B(),
+        {
+          name: "Missile Pod 10",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "5",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
+        },
+        {
+          name: "Missile Pod 10",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "5",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
+        },
       ],
       addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
       locations: {
@@ -3074,21 +3096,21 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "3",
-          notes: "",
+          notes: "The AMX-101E can stow the shields on it's shoulders",
         },
         {
           name: "Chain Mine",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "",
+          notes: "[AP(5)],[LIMITED USE(3)]",
         },
         {
           name: "Restraint Cables [INBUILT]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[INBUILT]",
+          notes: `[INBUILT], Enemy or Friendly MSU pulled 6" closer`,
         },
         B(),
         B(),

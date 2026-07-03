@@ -743,7 +743,7 @@ export const EF_PRESETS = [
         {
           name: "SMG (Beam)",
           mcuCost: "FREE",
-          fro: "2",
+          fro: "1",
           tonnage: "1",
           notes: "[FULL AUTO],[AKIMBO],[BURST(2)]",
         },
@@ -1890,15 +1890,15 @@ export const EF_PRESETS = [
         {
           name: "Beam SMG / Tomahawk / Saber",
           mcuCost: "FREE",
-          fro: "2/1/1",
-          tonnage: "4",
+          fro: "1/1/1",
+          tonnage: "3",
           notes: "Combined weapon — declare mode on activation",
         },
         {
           name: "Beam SMG / Tomahawk / Saber",
           mcuCost: "FREE",
-          fro: "2/1/1",
-          tonnage: "4",
+          fro: "1/1/1",
+          tonnage: "3",
           notes: "Combined weapon — declare mode on activation",
         },
         {

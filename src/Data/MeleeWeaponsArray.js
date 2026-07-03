@@ -205,6 +205,6 @@ export const MELEE = [
     ton: 1,
     fro: "–",
     mcu: 10,
-    keywords: '[INBUILT]; MSU pulled 6" closer',
+    keywords: '[INBUILT]; Enemy or Friendly MSU pulled 6" closer',
   },
 ];

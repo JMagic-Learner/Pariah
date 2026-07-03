@@ -129,13 +129,12 @@ export const CROSSBONE_PRESETS = [
           tonnage: "2",
           notes: "360° LOS but still fires from front arc only.",
         },
-
         {
           name: "Missile Pod 3",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "3",
-          notes: "",
+          tonnage: "2",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         B(),
         B(),
@@ -193,9 +192,9 @@ export const CROSSBONE_PRESETS = [
         {
           name: "Heavy Machine Gun (INBUILT)",
           mcuCost: "FREE",
-          fro: "3",
+          fro: "",
           tonnage: "3",
-          notes: "",
+          notes: "[FULL AUTO],[INBUILT]",
         },
         { name: "Shield", mcuCost: "FREE", fro: "", tonnage: "2", notes: "" },
         {
@@ -212,13 +211,12 @@ export const CROSSBONE_PRESETS = [
           tonnage: "2",
           notes: "360° LOS but still fires from front arc only.",
         },
-
         {
           name: "Missile Pod 3",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "3",
-          notes: "",
+          tonnage: "2",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         B(),
         B(),
@@ -278,7 +276,7 @@ export const CROSSBONE_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "6",
-          notes: "",
+          notes: "[FULL AUTO],[INBUILT]",
         },
         {
           name: "Beam Shield",
@@ -367,7 +365,7 @@ export const CROSSBONE_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "6",
-          notes: "",
+          notes: "[FULL AUTO],[INBUILT]",
         },
         {
           name: "Beam Shield",
@@ -391,7 +389,6 @@ export const CROSSBONE_PRESETS = [
           tonnage: "2",
           notes: "360° LOS but still fires from front arc only.",
         },
-
         {
           name: "Side Verniers",
           mcuCost: "FREE",
@@ -470,7 +467,7 @@ export const CROSSBONE_PRESETS = [
           mcuCost: "FREE",
           fro: "1 (PASSIVE)",
           tonnage: "2",
-          notes: "",
+          notes: "Aim is a free action but costs 1 additional FRO.",
         },
         {
           name: "Beam Saber",
@@ -585,9 +582,9 @@ export const CROSSBONE_PRESETS = [
         {
           name: "Beam Saber",
           mcuCost: "FREE",
-          fro: "2",
+          fro: "1",
           tonnage: "1",
-          notes: "",
+          notes: "[CLEAVE(X)]",
         },
         {
           name: "Panoptic Canopy",
@@ -596,13 +593,13 @@ export const CROSSBONE_PRESETS = [
           tonnage: "2",
           notes: "360° LOS but still fires from front arc only.",
         },
-
         {
           name: "Enhanced Ejection",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "",
+          notes:
+            "When destroyed, nearby friendly MSUs do not roll for [FEAR/SHAKEN].",
         },
         B(),
         B(),
