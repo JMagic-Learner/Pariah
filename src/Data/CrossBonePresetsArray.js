@@ -196,7 +196,14 @@ export const CROSSBONE_PRESETS = [
           tonnage: "3",
           notes: "[FULL AUTO],[INBUILT]",
         },
-        { name: "Shield", mcuCost: "FREE", fro: "", tonnage: "2", notes: "" },
+        {
+          name: "Shield",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "2",
+          notes:
+            "When damage is assigned to the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
+        },
         {
           name: "Lance",
           mcuCost: "FREE",

@@ -1497,7 +1497,14 @@ export const ZEON_PRESETS = [
           tonnage: "3",
           notes: "",
         },
-        { name: "Shield", mcuCost: "FREE", fro: "", tonnage: "2", notes: "" },
+        {
+          name: "Shield",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "2",
+          notes:
+            "When damage is assigned to the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
+        },
         {
           name: "Beam Naginata",
           mcuCost: "FREE",
@@ -2201,11 +2208,11 @@ export const ZEON_PRESETS = [
       armorValue: "25",
       baseEquip: [
         {
-          name: "SMG (Beam)",
+          name: "(Beam) Machine Gun",
           mcuCost: "FREE",
           fro: "2",
-          tonnage: "1",
-          notes: "[FULL AUTO],[AKIMBO],[BURST(2)]",
+          tonnage: "2",
+          notes: "[FULL AUTO]",
         },
         {
           name: "Shield (Shoulder)",
@@ -2229,15 +2236,34 @@ export const ZEON_PRESETS = [
           notes: "[AKIMBO],[QUICK SWAP],[CLEAVE(X)]",
         },
         {
-          name: "Shield + Panzerfaust x4",
+          name: "Shield + Panzerfaust",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "6",
-          notes: "",
+          tonnage: "3",
+          notes:
+            "When damage is assigned to the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
         },
-        B(),
-        B(),
-        B(),
+        {
+          name: "PanzerFausts + [HARDPOINT]",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "1",
+          notes: "MISSILE[18], [AP(5)], [MOUNTABLE], [LIMITED USE(1)]",
+        },
+        {
+          name: "PanzerFausts + [HARDPOINT]",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "1",
+          notes: "MISSILE[18], [AP(5)], [MOUNTABLE], [LIMITED USE(1)]",
+        },
+        {
+          name: "PanzerFausts + [HARDPOINT]",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "1",
+          notes: "MISSILE[18], [AP(5)], [MOUNTABLE], [LIMITED USE(1)]",
+        },
       ],
       addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
       locations: {
@@ -2251,7 +2277,7 @@ export const ZEON_PRESETS = [
         rightArm: {
           current: "25",
           max: "25",
-          weapon: "SMG (Beam)",
+          weapon: "(Beam) Machine Gun",
           equipment: ["Shield (Shoulder)", "", ""],
         },
         leftArm: {
@@ -2477,7 +2503,14 @@ export const ZEON_PRESETS = [
           tonnage: "3",
           notes: "",
         },
-        { name: "Shield", mcuCost: "FREE", fro: "", tonnage: "2", notes: "" },
+        {
+          name: "Shield",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "2",
+          notes:
+            "When damage is assigned to the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
+        },
         {
           name: "Heavy Boosters",
           mcuCost: "FREE",
