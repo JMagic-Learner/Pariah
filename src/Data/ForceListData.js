@@ -1026,7 +1026,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0093",
         faction: "Zeon, Neo Zeon",
         equipment:
-          "Beam SMG, Shield (Shoulder), Spiky Shoulder, Beam Hawk, Shield + Panzerfaust x4",
+          "(Beam) Machine Gun, Shield (Shoulder), Spiky Shoulder, Beam Hawk, Shield + Panzerfaust x4",
       },
       {
         msu: "MSN-04 Sazabi",
