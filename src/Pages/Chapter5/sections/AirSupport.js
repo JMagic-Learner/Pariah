@@ -19,8 +19,9 @@ export const AirSupport = () => {
       <div className="pa3 bg-near-white ba b--black-10 mb4">
         <h3 className="f5 fw7 mb2">Variable Altitude</h3>
         <p className="lh-copy ma0">
-          Fighter jets before they declare their movement, must choose to be{" "}
-          <strong> HIGH ALTITUDE </strong> or enter{" "}
+          Fighter jets before they declare their{" "}
+          <span className="fw6 red"> [MOVEMENT] </span> action, must choose to
+          be <strong> HIGH ALTITUDE </strong> or enter{" "}
           <strong> ATTACK RUN </strong>. In <strong> HIGH ALTITUDE </strong>{" "}
           mode, Fighter Jets ignore terrain elevation, and can simply move over
           any terrain without movement penalty. In <strong> ATTACK RUN </strong>{" "}
