@@ -2208,10 +2208,10 @@ export const ZEON_PRESETS = [
       armorValue: "25",
       baseEquip: [
         {
-          name: "(Beam) Machine Gun",
+          name: "(Beam) Machine Gun (ZEON)",
           mcuCost: "FREE",
           fro: "2",
-          tonnage: "2",
+          tonnage: "1",
           notes: "[FULL AUTO]",
         },
         {
@@ -2277,7 +2277,7 @@ export const ZEON_PRESETS = [
         rightArm: {
           current: "25",
           max: "25",
-          weapon: "(Beam) Machine Gun",
+          weapon: "(Beam) Machine Gun (ZEON)",
           equipment: ["Shield (Shoulder)", "", ""],
         },
         leftArm: {

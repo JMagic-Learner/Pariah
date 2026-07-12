@@ -14,7 +14,8 @@ export const SupportUnitsOverview = () => {
         <h3 className="f4 fw7 mb2">General Rules</h3>
         <ul className="lh-copy pl3 mb0">
           <li className="pv1">
-            Support units are represented by <strong>28mm hex bases</strong>.
+            Support units are represented by <strong>28mm hex bases</strong> and
+            have 2 actions each.
           </li>
           <li className="pv1">
             Infantry can move in any direction. Tanks, transports, and jets

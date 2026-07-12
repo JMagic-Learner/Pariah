@@ -17,11 +17,36 @@ export const AirSupport = () => {
       </p>
 
       <div className="pa3 bg-near-white ba b--black-10 mb4">
+        <h3 className="f5 fw7 mb2">Variable Altitude</h3>
+        <p className="lh-copy ma0">
+          Fighter jets before they declare their movement, must choose to be{" "}
+          <strong> HIGH ALTITUDE </strong> or enter{" "}
+          <strong> ATTACK RUN </strong>. In <strong> HIGH ALTITUDE </strong>{" "}
+          mode, Fighter Jets ignore terrain elevation, and can simply move over
+          any terrain without movement penalty. In <strong> ATTACK RUN </strong>{" "}
+          mode, Fighter Jets no longer ignore vertical terrain height, increase
+          base movement to 20", and gain +2 evasion.
+        </p>
+      </div>
+
+      <div className="pa3 bg-near-white ba b--black-10 mb4">
         <h3 className="f5 fw7 mb2">Mandatory Movement</h3>
         <p className="lh-copy ma0">
           Fighter Jets <strong>must</strong> move their full mandatory movement
           distance each time they activate. If terrain or board edges would
           prevent this, the jet is removed from play.
+        </p>
+      </div>
+
+      <div className="pa3 bg-near-white ba b--black-10 mb4">
+        <h3 className="f5 fw7 mb2">Tailspin Risk</h3>
+        <p className="lh-copy ma0">
+          Fighter Jets that have been hit by any attack <strong>must</strong>{" "}
+          make a PS 4+ check or risk entering a tailspin. Pilots that fail will
+          move their mandatory movement next round in a random direction and
+          rotate up 2 hexes doing so. The jet no longer ignores terrain
+          elevation and it collides with any <strong> [HARD COVER] </strong> it
+          is immediately destroyed.
         </p>
       </div>
 

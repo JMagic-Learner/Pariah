@@ -18,6 +18,17 @@ export const Infantry = () => {
         — AOE and Napalm Munitions eliminate one hex base per successful hit.
       </p>
 
+      <p className="lh-copy mb4">
+        MSU's have a -1 to hit against Infantry Squads.
+      </p>
+
+      <p className="lh-copy mb4">
+        Infantry squads can occupy any{" "}
+        <span className="fw6 red"> [HARD COVER] </span> or building. By doing
+        so, the infantry squad cannot be targeted directly by attacks, and do
+        not suffer damage from AOE or Napalm attacks.
+      </p>
+
       <h3 className="f4 fw7 mb2">Infantry Units</h3>
       <div className={classNames("", { "flex mt3": !isMobile, mt2: isMobile })}>
         <div className="center w-100">
