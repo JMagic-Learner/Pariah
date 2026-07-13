@@ -651,7 +651,7 @@ export const SUPPORT = [
     pfro: "–",
     qty: 1,
     mcu: 30,
-    effect: "[MISSILE(X)] becomes MISSILE[X+6].",
+    effect: "[MISSILE(X)] becomes [MISSILE(X+6)].",
   },
   {
     name: "Upgrade:Missle Arming",

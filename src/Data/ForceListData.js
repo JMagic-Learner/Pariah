@@ -106,7 +106,19 @@ export const FORCE_LIST_FACTIONS = [
         year: "0079",
         faction: "EF",
         equipment:
-          "Machine Gun, Shield, Beam Saber, Extra Armor 10 x 4, Vulcans",
+          "Anti Material Rifle, Machine Gun, Deployable Shield, Beam Saber, Vulcans",
+      },
+      {
+        msu: "RX-79[G] EZ-08",
+        mcu: 140,
+        move: '6"',
+        armor: 24,
+        fro: 6,
+        tonnage: 58,
+        year: "0079",
+        faction: "EF",
+        equipment:
+          "Cannon or Anti Material Rifle, Machine Gun, Deployable Shield, Beam Saber, Vulcans",
       },
       {
         msu: "RGM-79l GM Light Armor",

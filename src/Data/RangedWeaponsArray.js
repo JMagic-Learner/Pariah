@@ -206,7 +206,7 @@ export const RANGED = [
     fro: "–",
     mcu: "–",
     faction: "–",
-    keywords: "MISSILE[12],[GUIDED],[MOUNTABLE]",
+    keywords: "[MISSILE(12)],[GUIDED],[MOUNTABLE]",
   },
   {
     name: "Hypersonic Missiles",
@@ -219,7 +219,7 @@ export const RANGED = [
     fro: "–",
     mcu: 55,
     faction: "–",
-    keywords: "MISSILE[24],[MOUNTABLE],[INDIRECT]",
+    keywords: "[MISSILE(24)],[MOUNTABLE],[INDIRECT]",
   },
   {
     name: "Machine Gun",
@@ -336,7 +336,7 @@ export const RANGED = [
     fro: 1,
     mcu: 10,
     faction: "ZEON",
-    keywords: "MISSILE[18],[AP(5)],[MOUNTABLE],[LIMITED USE(1)]",
+    keywords: "[MISSILE(18)],[AP(5)],[MOUNTABLE],[LIMITED USE(1)]",
   },
   {
     name: "Pistol (Kinetic)",
