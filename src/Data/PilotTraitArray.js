@@ -23,6 +23,11 @@ export const TRAITS = [
       "Melee attacks against an MSU's rear arc inflict one additional hit location.",
   },
   {
+    name: "Berzerker",
+    cost: 1,
+    effect: "All melee attacks suffer a -1 penalty to hit, but gain +1 ROF",
+  },
+  {
     name: "Beam Specialist",
     cost: 1,
     effect:
@@ -166,6 +171,12 @@ export const TRAITS = [
       "[HEAVY] weapons gain [AKIMBO]. [HEAVY] ranged weapons gain the [PRECISION] keyword if the MSU stood still and did not rotate.",
   },
   {
+    name: "Honorable",
+    cost: 1,
+    effect:
+      "This [PILOT] cannot declare attacks in the rear arcs of enemy MSU. This [PILOT] gains +1 GS and +1 BR",
+  },
+  {
     name: "Juke",
     cost: 2,
     effect:
@@ -295,12 +306,13 @@ export const TRAITS = [
   {
     name: "Scavenger",
     cost: 1,
-    effect: "Reduce one Support Equipment's cost by 50% MSU Credits.",
+    effect: "Reduce one Support Equipment's or Weapon's cost by 50% MCU.",
   },
   {
     name: "Serial Killer",
     cost: 1,
-    effect: "For each MSU destroyed by this [PILOT], gain +1 Gunnery or Brawl.",
+    effect:
+      "For each enemy unit destroyed by this [PILOT], gain +1 Gunnery or Brawl.",
   },
   {
     name: "Sharpshooter",

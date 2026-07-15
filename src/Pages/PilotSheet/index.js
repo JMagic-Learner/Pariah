@@ -425,6 +425,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
   const hasRookie = traits.some((t) => t === "Rookie");
   const hasScavenger = traits.some((t) => t === "Scavenger");
   const hasGrypsVet = traits.some((t) => t === "Gryps War Veteran (REZEON)");
+  const hasHonorable = traits.some((t) => t === "Honorable");
   const gunneryTraitCount = traits.filter((t) => t === "Gunnery").length;
   const brawlerTraitCount = traits.filter((t) => t === "Brawler").length;
   const pilotingTraitCount = traits.filter((t) => t === "Piloting").length;
@@ -436,7 +437,8 @@ const PilotSheetPanel = ({ slotIndex }) => {
       : 0) +
     (hasCyberNewtype && cyberNewtypeChoice === "gs" ? 1 : 0) +
     (hasRambo && ramboChoice === "gs" ? 1 : 0) +
-    (hasGrypsVet && grypsVetChoice === "gs" ? 1 : 0);
+    (hasGrypsVet && grypsVetChoice === "gs" ? 1 : 0) +
+    (hasHonorable ? 1 : 0);
   const bsBonus =
     brawlerTraitCount +
     (hasNewtype
@@ -444,7 +446,8 @@ const PilotSheetPanel = ({ slotIndex }) => {
       : 0) +
     (hasCyberNewtype && cyberNewtypeChoice === "bs" ? 1 : 0) +
     (hasRambo && ramboChoice === "bs" ? 1 : 0) +
-    (hasGrypsVet && grypsVetChoice === "bs" ? 1 : 0);
+    (hasGrypsVet && grypsVetChoice === "bs" ? 1 : 0) +
+    (hasHonorable ? 1 : 0);
   const psBonus =
     pilotingTraitCount +
     (hasNewtype
@@ -845,7 +848,8 @@ const PilotSheetPanel = ({ slotIndex }) => {
           hasCyberNewtype ||
           hasRambo ||
           hasRookie ||
-          hasGrypsVet) &&
+          hasGrypsVet ||
+          hasHonorable) &&
           (() => {
             const StatBtn = ({ label, active, onClick }) => (
               <button
@@ -869,7 +873,8 @@ const PilotSheetPanel = ({ slotIndex }) => {
                 {/* Stackable stat traits — auto-applied, no toggle needed */}
                 {(gunneryTraitCount > 0 ||
                   brawlerTraitCount > 0 ||
-                  pilotingTraitCount > 0) && (
+                  pilotingTraitCount > 0 ||
+                  hasHonorable) && (
                   <div className="flex items-center mb2 flex-wrap">
                     {gunneryTraitCount > 0 && (
                       <span className="f8 mr3 dark-green fw6">
@@ -882,9 +887,14 @@ const PilotSheetPanel = ({ slotIndex }) => {
                       </span>
                     )}
                     {pilotingTraitCount > 0 && (
-                      <span className="f8 dark-green fw6">
+                      <span className="f8 mr3 dark-green fw6">
                         Piloting ×{pilotingTraitCount} → +{pilotingTraitCount}{" "}
                         PS
+                      </span>
+                    )}
+                    {hasHonorable && (
+                      <span className="f8 dark-green fw6">
+                        Honorable → +1 GS, +1 BR
                       </span>
                     )}
                   </div>
