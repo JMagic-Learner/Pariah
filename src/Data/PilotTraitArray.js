@@ -69,8 +69,15 @@ export const TRAITS = [
       "THe [PILOT] may not exchange for a faction bonus that gives a free trait.",
   },
   {
+    name: "Cyber-Newtype",
+    cost: 3,
+    effect:
+      "Increase one of the [PILOTS] stats by one. This [PILOT] now gains access to [NEWTYPE] traits",
+    restrictions: "",
+  },
+  {
     name: "Cyber-Newtype (TITANS)",
-    cost: 1,
+    cost: 2,
     effect:
       "Increase one of the [PILOTS] stats by one. This [PILOT] now gains access to [NEWTYPE] traits",
     restrictions: "TITANS ONLY",

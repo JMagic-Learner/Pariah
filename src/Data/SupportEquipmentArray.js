@@ -368,7 +368,8 @@ export const SUPPORT = [
     pfro: "–",
     qty: 1,
     mcu: 50,
-    effect: "360° LOS but still fires from front arc only.",
+    effect:
+      "360° LOS but still fires from front arc only. Pilots do not suffer a -2 penalty to evasion rolls when being attacked in the rear arc.",
   },
   {
     name: "Predictive Fire Control",
