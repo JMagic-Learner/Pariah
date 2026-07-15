@@ -329,7 +329,7 @@ export const TRAITS = [
     name: "Six Shooter",
     cost: 1,
     effect:
-      "Whenever this [PILOT] performs a [SWAP] action, to switch to a pistol, that pistol gains +1 ROF and +1 trait mod.",
+      "Whenever this [PILOT] performs a [SWAP] action, to switch to a pistol, that pistol gains +1 ROF, +1 Base Damage, and +1 hit modifier.",
   },
   {
     name: "Suppressive Tactics",
