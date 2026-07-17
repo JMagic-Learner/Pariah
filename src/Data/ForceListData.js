@@ -358,6 +358,42 @@ export const FORCE_LIST_FACTIONS = [
           "Beam Rifle, Shield + Missile Pod 2, Beam Saber, Vulcans, 3x Grenades",
       },
       {
+        msu: "RGM-89De Jegan [ECOAS Type]",
+        mcu: 185,
+        move: '7"',
+        armor: 25,
+        fro: 7,
+        tonnage: 50,
+        year: "0093",
+        faction: "EF",
+        equipment:
+          "Bazooka, Beam Rifle or Beam Pistol, Beam Saber or Combat Knife, Napalm Grenades x 3, Shield + Missile Pod 4, Enhanced Visors, Vulcan Cannons",
+      },
+      {
+        msu: "RGM-89D Jegan [Type D]",
+        mcu: 145,
+        move: '7"',
+        armor: 25,
+        fro: 7,
+        tonnage: 48,
+        year: "0093",
+        faction: "EF",
+        equipment:
+          "Vulcan Cannons, Beam Rifle, Beam Saber, Grenades x 3, Shield + Missile Pod 4",
+      },
+      {
+        msu: "RGM-89R Jegan [Type A]",
+        mcu: 200,
+        move: '7"',
+        armor: 25,
+        fro: "7(9)",
+        tonnage: 47,
+        year: "0093",
+        faction: "EF",
+        equipment:
+          "Vulcan Cannons, Beam Rifle, Beam Saber, Grenades x 3, Shield + Missile Pod 4, Enhanced Reactor, Grenade Launcher + [CYCLIC]",
+      },
+      {
         msu: "RGM-89 Stark Jegan",
         mcu: 180,
         move: '7"',
@@ -466,7 +502,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RGM-88X Jedah",
-        mcu: 200,
+        mcu: 175,
         move: '7"',
         armor: 25,
         fro: 7,
@@ -547,6 +583,18 @@ export const FORCE_LIST_FACTIONS = [
         faction: "EF",
         equipment:
           "Beam Rifle, Beam Cannon, Beam Saber, Vulcan Cannons, Missile Pod 8 x 2, Heavy Boosters",
+      },
+      {
+        msu: "RGM-89M Jegan [Type B]",
+        mcu: 150,
+        move: '7"',
+        armor: 25,
+        fro: 7,
+        tonnage: 47,
+        year: "0123",
+        faction: "EF",
+        equipment:
+          "Vulcan Cannons, Beam Rifle, Beam Saber x 2, Shield + Missile Pod 4, 2x Missile Pod 4 (Mounted)",
       },
       {
         msu: "F91 Gundam",
@@ -1034,11 +1082,23 @@ export const FORCE_LIST_FACTIONS = [
         move: '7"',
         armor: 25,
         fro: 6,
-        tonnage: 72,
+        tonnage: 50,
         year: "0093",
         faction: "Zeon, Neo Zeon",
         equipment:
           "(Beam) Machine Gun, Shield (Shoulder), Spiky Shoulder, Beam Hawk, Shield + Panzerfaust x4",
+      },
+      {
+        msu: "AMS-119 Geara Doga Heavy Armed Type",
+        mcu: 170,
+        move: '7"',
+        armor: 25,
+        fro: 6,
+        tonnage: 50,
+        year: "0093",
+        faction: "Zeon, Neo Zeon",
+        equipment:
+          "Cannon, Shield (Shoulder), Spiky Shoulder, Beam Hawk, Heavy Boosters",
       },
       {
         msu: "MSN-04 Sazabi",
@@ -1058,7 +1118,7 @@ export const FORCE_LIST_FACTIONS = [
         move: '7"',
         armor: 27,
         fro: 7,
-        tonnage: 76,
+        tonnage: 56,
         year: "0096",
         faction: "Zeon, Neo Zeon",
         equipment: "Beam SMG, Beam Hawk, Shield Shoulder, Bazooka",

@@ -36,7 +36,7 @@ export const CROSSBONE_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[CLEAVE(X)]",
+          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
         },
         {
           name: "Panoptic Canopy",
@@ -120,7 +120,7 @@ export const CROSSBONE_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[CLEAVE(X)]",
+          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
         },
         {
           name: "Panoptic Canopy",
@@ -481,14 +481,14 @@ export const CROSSBONE_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[CLEAVE(X)]",
+          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
         },
         {
           name: "Beam Saber",
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[CLEAVE(X)]",
+          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
         },
         {
           name: "Cloak (Anti Beam Coating)",
@@ -591,7 +591,7 @@ export const CROSSBONE_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[CLEAVE(X)]",
+          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
         },
         {
           name: "Panoptic Canopy",

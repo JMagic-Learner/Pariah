@@ -191,7 +191,7 @@ export const SUPPORT = [
     ton: 2,
     pfro: "1 PFRO",
     qty: 1,
-    mcu: 50,
+    mcu: 25,
     effect: "All ranged weapons are treated as having [SCOPE] keyword.",
   },
   {
@@ -350,6 +350,56 @@ export const SUPPORT = [
     qty: 1,
     mcu: 25,
     effect: 'Turn base facing costs 1" instead of 2" during [MOVEMENT].',
+  },
+  {
+    name: "Lightweight Frame Improvements (Torso)",
+    loc: "Torso",
+    ton: -1,
+    pfro: "–",
+    qty: 1,
+    mcu: 20,
+    effect:
+      "Reduce the total tonnage of equipped weapons and support equipment by 1 ton.",
+  },
+  {
+    name: "Lightweight Frame Improvements (Left Leg)",
+    loc: "Left Leg",
+    ton: -1,
+    pfro: "–",
+    qty: 1,
+    mcu: 20,
+    effect:
+      "Reduce the total tonnage of equipped weapons and support equipment by 1 ton.",
+  },
+  {
+    name: "Lightweight Frame Improvements (Left Arm)",
+    loc: "Left Arm",
+    ton: -1,
+    pfro: "–",
+    qty: 1,
+    mcu: 20,
+    effect:
+      "Reduce the total tonnage of equipped weapons and support equipment by 1 ton.",
+  },
+  {
+    name: "Lightweight Frame Improvements (Right Leg)",
+    loc: "Right Leg",
+    ton: -1,
+    pfro: "–",
+    qty: 1,
+    mcu: 20,
+    effect:
+      "Reduce the total tonnage of equipped weapons and support equipment by 1 ton.",
+  },
+  {
+    name: "Lightweight Frame Improvements (Right Arm)",
+    loc: "Right Arm",
+    ton: -1,
+    pfro: "–",
+    qty: 1,
+    mcu: 20,
+    effect:
+      "Reduce the total tonnage of equipped weapons and support equipment by 1 ton.",
   },
   {
     name: "Nanolaminate Chaff",

@@ -31,6 +31,18 @@ import { SheetHeader } from "../../Components/SheetHeader";
 import { TextInput } from "../../Components/TextInput";
 import { NumInput } from "../../Components/NumImput";
 import { LocationCard } from "../../Components/LocationCard";
+
+// Shared across the MSU stats table and the two equipment tables so their
+// columns stay visually aligned even though they're now separate <table>s.
+const MSU_COL_WIDTHS = ["40%", "5rem", "5rem", "5.5rem", "6rem", "5rem"];
+const MsuColgroup = () => (
+  <colgroup>
+    {MSU_COL_WIDTHS.map((w, i) => (
+      <col key={i} style={{ width: w }} />
+    ))}
+  </colgroup>
+);
+
 // ─── Shared primitives ────────────────────────────────────────────────────────
 
 const TH = ({ children, className = "" }) => (
@@ -168,6 +180,189 @@ const EquipmentRow = ({
   </tr>
 );
 
+// ─── Equipment details modal (mobile) ─────────────────────────────────────────
+
+const EquipmentDetailsModal = ({
+  row,
+  detailsLabel,
+  onChange,
+  onClose,
+  sold,
+  onSell,
+  onClear,
+  scavengerToggle,
+}) => (
+  <div
+    style={{
+      position: "fixed",
+      inset: 0,
+      zIndex: 1000,
+      background: "rgba(0,0,0,0.55)",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    }}
+    onClick={onClose}
+  >
+    <div
+      style={{
+        width: "90vw",
+        maxWidth: "26rem",
+        maxHeight: "85vh",
+        overflowY: "auto",
+        background: "white",
+        borderRadius: "4px",
+      }}
+      className="pa3"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <div className="flex items-center justify-between mb3">
+        <span className="fw7 f5 truncate pr2">
+          {row.name || "Equipment Details"}
+        </span>
+        <button
+          onClick={onClose}
+          className="bn bg-transparent fw7 f4 pointer dim lh-solid flex-shrink-0"
+        >
+          ✕
+        </button>
+      </div>
+
+      <label className="db f7 fw6 gray mb1">Name</label>
+      <TextInput
+        value={row.name}
+        onChange={(v) => onChange("name", v)}
+        className="w-100 mb3"
+      />
+
+      <div className="flex mb3" style={{ gap: "0.5rem" }}>
+        <div className="flex-auto">
+          <label className="db f7 fw6 gray mb1">MCU Cost</label>
+          <TextInput
+            value={row.mcuCost}
+            onChange={(v) => onChange("mcuCost", v)}
+            className="tc w-100"
+          />
+        </div>
+        <div className="flex-auto">
+          <label className="db f7 fw6 gray mb1 nowrap">Passive/Active FRO</label>
+          <TextInput
+            value={row.fro}
+            onChange={(v) => onChange("fro", v)}
+            className="tc w-100"
+          />
+        </div>
+        <div className="flex-auto">
+          <label className="db f7 fw6 gray mb1">Tonnage</label>
+          <TextInput
+            value={row.tonnage}
+            onChange={(v) => onChange("tonnage", v)}
+            className="tc w-100"
+          />
+        </div>
+      </div>
+
+      <label className="db f7 fw6 gray mb1">{detailsLabel}</label>
+      <TextInput
+        value={row.notes}
+        onChange={(v) => onChange("notes", v)}
+        className="w-100 mb3"
+      />
+
+      {scavengerToggle && (
+        <button
+          className={classNames("f7 ph2 pv2 mb3 bn br1 pointer lh-copy w-100", {
+            "bg-dark-green white fw7": scavengerToggle.active,
+            "bg-near-white dark-gray": !scavengerToggle.active,
+          })}
+          onClick={scavengerToggle.onClick}
+        >
+          {scavengerToggle.active ? "−50% MCU ✓" : "Scavenge ½ MCU"}
+        </button>
+      )}
+
+      {(onSell || onClear) && (
+        <div className="flex" style={{ gap: "0.5rem" }}>
+          {onSell && (
+            <button
+              className={classNames("f7 ph3 pv2 bn br1 pointer flex-auto", {
+                "bg-red white": sold,
+                "bg-near-white dark-gray": !sold,
+              })}
+              onClick={onSell}
+            >
+              {sold ? "Reinstate" : "Sell"}
+            </button>
+          )}
+          {onClear && (
+            <button
+              className="f7 ph3 pv2 bn br1 pointer flex-auto bg-near-white dark-gray"
+              onClick={() => {
+                onClear();
+                onClose();
+              }}
+            >
+              Clear
+            </button>
+          )}
+        </div>
+      )}
+    </div>
+  </div>
+);
+
+// ─── Mobile equipment row (compact — name + a Details toggle) ────────────────
+
+const MobileEquipRow = ({
+  row,
+  onChange,
+  onNameClick,
+  sold,
+  onSell,
+  onClear,
+  scavengerToggle,
+  detailsLabel = "Notes",
+}) => {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <div
+        className={classNames("flex items-center pa2 bb b--black-10", {
+          "o-40": sold,
+        })}
+      >
+        <div className="flex-auto mr2" style={{ minWidth: 0 }}>
+          <TextInput
+            value={row.name}
+            onChange={(v) => onChange("name", v)}
+            onClick={!sold ? onNameClick : undefined}
+            className={sold ? "strike" : ""}
+            placeholder="— Empty —"
+          />
+        </div>
+        <button
+          className="f7 ph2 pv1 bn br1 pointer bg-dark-green white fw6 flex-shrink-0"
+          onClick={() => setOpen(true)}
+        >
+          Details
+        </button>
+      </div>
+      {open && (
+        <EquipmentDetailsModal
+          row={row}
+          detailsLabel={detailsLabel}
+          onChange={onChange}
+          onClose={() => setOpen(false)}
+          sold={sold}
+          onSell={onSell}
+          onClear={onClear}
+          scavengerToggle={scavengerToggle}
+        />
+      )}
+    </>
+  );
+};
+
 // ─── Reference toggle button ──────────────────────────────────────────────────
 
 const RefToggle = ({ open, onToggle, label }) => (
@@ -176,6 +371,17 @@ const RefToggle = ({ open, onToggle, label }) => (
     onClick={onToggle}
   >
     {open ? `▲ Hide ${label}` : `▼ View ${label}`}
+  </button>
+);
+
+// ─── Panel collapse toggle (for dark-green section headers) ──────────────────
+
+const PanelToggle = ({ open, onToggle }) => (
+  <button
+    className="f8 ph2 pv1 bn br1 pointer bg-white dark-green fw7 dim v-mid"
+    onClick={onToggle}
+  >
+    {open ? "▲ Collapse" : "▼ Expand"}
   </button>
 );
 
@@ -412,6 +618,12 @@ const PilotSheetPanel = ({ slotIndex }) => {
     setShowKeywords,
     showNewtype,
     setShowNewtype,
+    showPilotPanel,
+    setShowPilotPanel,
+    showBaseEquip,
+    setShowBaseEquip,
+    showAddlEquip,
+    setShowAddlEquip,
     customPreset,
     setCustomPreset,
     setTabNames,
@@ -764,8 +976,19 @@ const PilotSheetPanel = ({ slotIndex }) => {
 
       {/* ── Pilot ── */}
       <div className="ba b--black-20 mb3">
-        <SheetHeader>Pilot</SheetHeader>
+        <SheetHeader
+          right={
+            <PanelToggle
+              open={showPilotPanel}
+              onToggle={() => setShowPilotPanel((v) => !v)}
+            />
+          }
+        >
+          Pilot
+        </SheetHeader>
 
+        {showPilotPanel && (
+          <>
         {/* Stats row */}
         <div className="overflow-auto">
           <table className="w-100 f7" cellSpacing="0">
@@ -1051,6 +1274,8 @@ const PilotSheetPanel = ({ slotIndex }) => {
             </table>
           </div>
         )}
+          </>
+        )}
       </div>
 
       {/* ── Mobile Suit + Equipment (single table so columns align) ── */}
@@ -1108,14 +1333,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
         </div>
         <div className="overflow-auto">
           <table className="w-100 f7" cellSpacing="0">
-            <colgroup>
-              <col style={{ width: "40%" }} />
-              <col style={{ width: "5rem" }} />
-              <col style={{ width: "5rem" }} />
-              <col style={{ width: "5.5rem" }} />
-              <col style={{ width: "6rem" }} />
-              <col style={{ width: "5rem" }} />
-            </colgroup>
+            <MsuColgroup />
             <thead>
               <tr>
                 <TH className="tc">Mobile Suit</TH>
@@ -1186,29 +1404,26 @@ const PilotSheetPanel = ({ slotIndex }) => {
                   />
                 </TD>
               </tr>
+            </tbody>
+          </table>
+        </div>
 
-              {/* ── Equipment (Base) section ── */}
-              <tr>
-                <td
-                  colSpan={6}
-                  className="bg-dark-green white fw7 f7 pa2 ttu tracked"
-                >
-                  Equipment (Base)
-                </td>
-              </tr>
-              <tr>
-                <TH className="tc">Name</TH>
-                <TH className="tc">MCU Cost</TH>
-                <TH className="tc">Passive / Active FRO</TH>
-                <TH className="tc">Tonnage</TH>
-                <TH className="tc" colSpan={2}>
-                  Notes
-                </TH>
-              </tr>
+        {/* ── Equipment (Base) section ── */}
+        <div className="bg-dark-green white fw7 f7 pa2 ttu tracked flex items-center justify-between bt b--black-20">
+          <span className="v-mid">Equipment (Base)</span>
+          <PanelToggle
+            open={showBaseEquip}
+            onToggle={() => setShowBaseEquip((v) => !v)}
+          />
+        </div>
+        {showBaseEquip &&
+          (isMobile ? (
+            <div>
               {baseEquip.map((row, i) => (
-                <EquipmentRow
+                <MobileEquipRow
                   key={i}
                   row={row}
+                  detailsLabel="Notes"
                   onChange={(f, v) => updateBaseEquip(i, f, v)}
                   onNameClick={() =>
                     openEquipPopup((fields) => {
@@ -1216,7 +1431,6 @@ const PilotSheetPanel = ({ slotIndex }) => {
                       autoFillSupportLoc(fields.name);
                     })
                   }
-                  lastCellColSpan={2}
                   sold={soldBase[i]}
                   onSell={() =>
                     setSoldBase((prev) =>
@@ -1225,38 +1439,75 @@ const PilotSheetPanel = ({ slotIndex }) => {
                   }
                 />
               ))}
+            </div>
+          ) : (
+            <div className="overflow-auto">
+              <table className="w-100 f7" cellSpacing="0">
+                <MsuColgroup />
+                <thead>
+                  <tr>
+                    <TH className="tc">Name</TH>
+                    <TH className="tc">MCU Cost</TH>
+                    <TH className="tc">Passive / Active FRO</TH>
+                    <TH className="tc">Tonnage</TH>
+                    <TH className="tc" colSpan={2}>
+                      Notes
+                    </TH>
+                  </tr>
+                </thead>
+                <tbody>
+                  {baseEquip.map((row, i) => (
+                    <EquipmentRow
+                      key={i}
+                      row={row}
+                      onChange={(f, v) => updateBaseEquip(i, f, v)}
+                      onNameClick={() =>
+                        openEquipPopup((fields) => {
+                          applyBaseEquip(i, fields);
+                          autoFillSupportLoc(fields.name);
+                        })
+                      }
+                      lastCellColSpan={2}
+                      sold={soldBase[i]}
+                      onSell={() =>
+                        setSoldBase((prev) =>
+                          prev.map((s, idx) => (idx === i ? !s : s)),
+                        )
+                      }
+                    />
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ))}
 
-              {/* ── Additional Equipment section ── */}
-              <tr>
-                <td
-                  colSpan={6}
-                  className="bg-dark-green white fw7 f7 pa2 ttu tracked"
-                >
-                  <span className="v-mid">Additional Equipment</span>
-                  <button
-                    className="ml3 f7 fw6 ph2 pv1 bg-red white bn br1 pointer ttu tracked v-mid"
-                    onClick={() => {
-                      addlEquip.forEach((row) => removeSupportLoc(row.name));
-                      setAddlEquip(Array(8).fill(null).map(blankEquip));
-                    }}
-                  >
-                    Clear All
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <TH className="tc">Name</TH>
-                <TH className="tc">MCU Cost</TH>
-                <TH className="tc">Passive / Active FRO</TH>
-                <TH className="tc">Tonnage</TH>
-                <TH className="tc" colSpan={2}>
-                  Effects
-                </TH>
-              </tr>
+        {/* ── Additional Equipment section ── */}
+        <div className="bg-dark-green white fw7 f7 pa2 ttu tracked flex items-center justify-between bt b--black-20">
+          <span className="flex items-center" style={{ gap: "0.75rem" }}>
+            <span className="v-mid">Additional Equipment</span>
+            <PanelToggle
+              open={showAddlEquip}
+              onToggle={() => setShowAddlEquip((v) => !v)}
+            />
+          </span>
+          <button
+            className="f7 fw6 ph2 pv1 bg-red white bn br1 pointer ttu tracked v-mid"
+            onClick={() => {
+              addlEquip.forEach((row) => removeSupportLoc(row.name));
+              setAddlEquip(Array(8).fill(null).map(blankEquip));
+            }}
+          >
+            Clear All
+          </button>
+        </div>
+        {showAddlEquip &&
+          (isMobile ? (
+            <div>
               {addlEquip.map((row, i) => (
-                <EquipmentRow
+                <MobileEquipRow
                   key={i}
                   row={row}
+                  detailsLabel="Effects"
                   onChange={(f, v) => updateAddlEquip(i, f, v)}
                   onNameClick={() =>
                     openEquipPopup((fields) => {
@@ -1269,7 +1520,6 @@ const PilotSheetPanel = ({ slotIndex }) => {
                     applyAddlEquip(i, blankEquip());
                     if (scavengerChoice === String(i)) setScavengerChoice("");
                   }}
-                  lastCellColSpan={2}
                   scavengerToggle={
                     hasScavenger && SUPPORT.some((s) => s.name === row.name)
                       ? {
@@ -1283,9 +1533,59 @@ const PilotSheetPanel = ({ slotIndex }) => {
                   }
                 />
               ))}
-            </tbody>
-          </table>
-        </div>
+            </div>
+          ) : (
+            <div className="overflow-auto">
+              <table className="w-100 f7" cellSpacing="0">
+                <MsuColgroup />
+                <thead>
+                  <tr>
+                    <TH className="tc">Name</TH>
+                    <TH className="tc">MCU Cost</TH>
+                    <TH className="tc">Passive / Active FRO</TH>
+                    <TH className="tc">Tonnage</TH>
+                    <TH className="tc" colSpan={2}>
+                      Effects
+                    </TH>
+                  </tr>
+                </thead>
+                <tbody>
+                  {addlEquip.map((row, i) => (
+                    <EquipmentRow
+                      key={i}
+                      row={row}
+                      onChange={(f, v) => updateAddlEquip(i, f, v)}
+                      onNameClick={() =>
+                        openEquipPopup((fields) => {
+                          applyAddlEquip(i, fields);
+                          autoFillSupportLoc(fields.name);
+                        })
+                      }
+                      onClear={() => {
+                        removeSupportLoc(row.name);
+                        applyAddlEquip(i, blankEquip());
+                        if (scavengerChoice === String(i))
+                          setScavengerChoice("");
+                      }}
+                      lastCellColSpan={2}
+                      scavengerToggle={
+                        hasScavenger &&
+                        SUPPORT.some((s) => s.name === row.name)
+                          ? {
+                              active: scavengerChoice === String(i),
+                              onClick: () =>
+                                setScavengerChoice((p) =>
+                                  p === String(i) ? "" : String(i),
+                                ),
+                            }
+                          : null
+                      }
+                    />
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ))}
 
         {/* Reference toggles */}
         <div className="ph2 pb2 flex">
@@ -1441,6 +1741,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                   data={locations[locA]}
                   onChange={(f, v) => updateLoc(locA, f, v)}
                   showShield={isArmRow}
+                  isMobile={isMobile}
                 />
               </div>
               <div className="w-50 pl1">
@@ -1449,6 +1750,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                   data={locations[locB]}
                   onChange={(f, v) => updateLoc(locB, f, v)}
                   showShield={isArmRow}
+                  isMobile={isMobile}
                 />
               </div>
             </div>
@@ -1574,83 +1876,104 @@ const PilotSheetPanel = ({ slotIndex }) => {
 export const PilotSheet = () => {
   const { activeTab, setActiveTab, tabNames, initiatives, setInitiatives } =
     usePilotSheet();
+  const [showTeamNav, setShowTeamNav] = useState(true);
+  const [showInitiative, setShowInitiative] = useState(true);
 
   const updateInitiative = (i, v) =>
     setInitiatives((prev) => prev.map((val, idx) => (idx === i ? v : val)));
 
   return (
     <div>
-      {/* ── Tab bar ── */}
-      <div className="flex flex-wrap bb b--black-20 bg-near-white items-stretch">
-        {TEAMS.map((team) => (
-          <div key={team.label} className="flex items-center br b--black-20">
-            <span className={`f7 fw7 ph2 nowrap ${team.color}`}>
-              {team.label}
-            </span>
-            {team.pilots.map((i) => (
-              <button
-                key={i}
-                onClick={() => setActiveTab(i)}
-                className={classNames(
-                  "f6 pv2 ph3 pointer bn lh-solid bl b--black-20",
-                  {
-                    [`bg-${team.color} white fw7`]: activeTab === i,
-                    "bg-near-white dark-gray dim": activeTab !== i,
-                  },
-                )}
-              >
-                {tabNames[i]}
-                {initiatives[i] !== "" && (
-                  <span className="ml1 f7 o-60">·{initiatives[i]}</span>
-                )}
-              </button>
-            ))}
-          </div>
-        ))}
+      {/* ── Collapse controls ── */}
+      <div className="flex bb b--black-20 bg-near-white ph2 pv2">
+        <RefToggle
+          open={showTeamNav}
+          onToggle={() => setShowTeamNav((v) => !v)}
+          label="Team Navigation"
+        />
+        <span className="mr2" />
+        <RefToggle
+          open={showInitiative}
+          onToggle={() => setShowInitiative((v) => !v)}
+          label="Initiative Tracker"
+        />
       </div>
 
-      {/* ── Initiative tracker ── */}
-      <div className="flex bb b--black-20 bg-white">
-        {TEAMS.map((team) => (
-          <div key={team.label} className="w-50 br b--black-20">
-            <div className={`f7 fw7 pa1 ph2 bb b--black-20 ${team.color}`}>
-              {team.label} — Initiative
-            </div>
-            {team.pilots.map((i) => (
-              <div
-                key={i}
-                className="flex items-center justify-between ph2 pv1 bb b--black-10"
-              >
+      {/* ── Tab bar ── */}
+      {showTeamNav && (
+        <div className="flex flex-wrap bb b--black-20 bg-near-white items-stretch">
+          {TEAMS.map((team) => (
+            <div key={team.label} className="flex items-center br b--black-20">
+              <span className={`f7 fw7 ph2 nowrap ${team.color}`}>
+                {team.label}
+              </span>
+              {team.pilots.map((i) => (
                 <button
+                  key={i}
                   onClick={() => setActiveTab(i)}
                   className={classNames(
-                    "f7 bn bg-transparent pointer dim tl pa0 truncate w-70",
+                    "f6 pv2 ph3 pointer bn lh-solid bl b--black-20",
                     {
-                      "fw7 red": team.color === "red" && activeTab === i,
-                      "fw7 dark-blue":
-                        team.color === "dark-blue" && activeTab === i,
-                      "dark-gray": activeTab !== i,
+                      [`bg-${team.color} white fw7`]: activeTab === i,
+                      "bg-near-white dark-gray dim": activeTab !== i,
                     },
                   )}
                 >
                   {tabNames[i]}
+                  {initiatives[i] !== "" && (
+                    <span className="ml1 f7 o-60">·{initiatives[i]}</span>
+                  )}
                 </button>
-                <div className="flex items-center">
-                  <span className="f7 gray mr1">Init</span>
-                  <input
-                    type="number"
-                    className="input-reset ba b--black-20 pa1 bg-white f7 tc"
-                    style={{ width: "3rem" }}
-                    value={initiatives[i]}
-                    onChange={(e) => updateInitiative(i, e.target.value)}
-                    placeholder="—"
-                  />
-                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* ── Initiative tracker ── */}
+      {showInitiative && (
+        <div className="flex bb b--black-20 bg-white">
+          {TEAMS.map((team) => (
+            <div key={team.label} className="w-50 br b--black-20">
+              <div className={`f7 fw7 pa1 ph2 bb b--black-20 ${team.color}`}>
+                {team.label} — Initiative
               </div>
-            ))}
-          </div>
-        ))}
-      </div>
+              {team.pilots.map((i) => (
+                <div
+                  key={i}
+                  className="flex items-center justify-between ph2 pv1 bb b--black-10"
+                >
+                  <button
+                    onClick={() => setActiveTab(i)}
+                    className={classNames(
+                      "f7 bn bg-transparent pointer dim tl pa0 truncate w-70",
+                      {
+                        "fw7 red": team.color === "red" && activeTab === i,
+                        "fw7 dark-blue":
+                          team.color === "dark-blue" && activeTab === i,
+                        "dark-gray": activeTab !== i,
+                      },
+                    )}
+                  >
+                    {tabNames[i]}
+                  </button>
+                  <div className="flex items-center">
+                    <span className="f7 gray mr1">Init</span>
+                    <input
+                      type="number"
+                      className="input-reset ba b--black-20 pa1 bg-white f7 tc"
+                      style={{ width: "3rem" }}
+                      value={initiatives[i]}
+                      onChange={(e) => updateInitiative(i, e.target.value)}
+                      placeholder="—"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* All six sheets kept mounted — only active one is visible */}
       {[0, 1, 2, 3, 4, 5].map((i) => (

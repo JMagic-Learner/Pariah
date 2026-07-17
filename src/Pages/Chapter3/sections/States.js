@@ -51,6 +51,12 @@ export const States = () => {
           state also applies a{" "}
           <span className="fw6 red">−2 penalty to all skill checks</span>.
         </p>
+        <p className="lh-copy f6 mb0">
+          MSUs that are in [KNOCKDOWN] state due to the Kinetic Force pilot
+          trait may spend half movement to stand up and remove [KNOCKDOWN]
+          state.
+          <span className="fw6 red">−2 penalty to all skill checks</span>.
+        </p>
       </div>
 
       {/* Fear / Shaken */}

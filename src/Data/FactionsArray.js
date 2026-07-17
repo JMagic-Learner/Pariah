@@ -9,8 +9,8 @@ export const FACTIONS = [
         text: "For each unspent pilot Trait, gain +50 MCU.",
       },
       {
-        title: "HEAD MOUNTED VULCANS",
-        text: "All EFF MSUS may come equipped with Vulcan Cannons. These Vulcan Cannons occupy the weapon slot in the Head hit location. In addition, these Vulcan Cannons do not incur tonnage and do not cost MCU. Furthermore, these head mounted weapons do not factor into base cost calcualtions of the MSU",
+        title: "WARTIME INNOVATIONS",
+        text: "All EFF MSUS may come equipped with Vulcan Cannons. These Vulcan Cannons occupy the weapon slot in the Head hit location. In addition, these Vulcan Cannons do not incur tonnage and do not cost MCU. Furthermore, these head mounted weapons do not factor into base cost calcualtions of the MSU. Beam Rifles gain +1 ROF.",
       },
     ],
     subfactions: [
@@ -62,7 +62,7 @@ export const FACTIONS = [
           },
           {
             title: "NAVAL BOMBARDMENT",
-            text: "After the deployment phase, the [COMMANDER] signals for NAVAL BOMBARDMENT. The [COMMANDER] immediately nominates a point on the battlefield and places a 25mm AIRSTRIKE! marker outside 16 inches of the enemy deployment zone.",
+            text: "After the deployment phase, the [COMMANDER] signals for NAVAL BOMBARDMENT. The [COMMANDER] immediately nominates a point on the battlefield and places a 25mm AIRSTRIKE! marker outside 10 inches of the enemy deployment edge.",
           },
         ],
       },
@@ -71,7 +71,7 @@ export const FACTIONS = [
         bonuses: [
           {
             title: "ADVANCED FUSION REACTORS",
-            text: "Increase base MCU cost of MSU by 10%. All MCU gain +1 FRO",
+            text: "All MCU gain +1 FRO",
           },
           {
             title: "BLACK BOX RESEARCH",

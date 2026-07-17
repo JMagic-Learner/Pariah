@@ -9,10 +9,22 @@
       "Read(//c/Users/majas/AppData/Local/Temp/claude/c--Users-majas-Desktop-Pariah/cab06655-1bdb-46fc-8c83-d95c9b42e202/scratchpad/**)",
       "Bash(SCRATCH=\"/c/Users/majas/AppData/Local/Temp/claude/c--Users-majas-Desktop-Pariah/cab06655-1bdb-46fc-8c83-d95c9b42e202/scratchpad\" && sed -n '425,442p' \"$SCRATCH/support_sorted_raw.js\")",
       "Bash(SCRATCH=\"/c/Users/majas/AppData/Local/Temp/claude/c--Users-majas-Desktop-Pariah/cab06655-1bdb-46fc-8c83-d95c9b42e202/scratchpad\" && cd \"c:\\\\Users\\\\majas\\\\Desktop\\\\Pariah\" && sed 's/$/\\\\r/' \"$SCRATCH/support_sorted_raw.js\" > src/Data/SupportEquipmentArray.js && file src/Data/SupportEquipmentArray.js)",
-      "Bash(npx --no-install eslint src/Data/SupportEquipmentArray.js)"
+      "Bash(npx --no-install eslint src/Data/SupportEquipmentArray.js)",
+      "Bash(node --check src/Data/ZeonPresetsArray.js)",
+      "Bash(cp src/Data/ZeonPresetsArray.js /tmp_check.mjs)",
+      "Bash(node --input-type=module --check)",
+      "Bash(chromium-cli --help)",
+      "Bash(npx --yes playwright --version)",
+      "Bash(npx --yes playwright install chromium)",
+      "Bash(npm init *)",
+      "Bash(npm install *)",
+      "Bash(node verify_collapse.js)",
+      "Bash(rm -f \"C:/Users/majas/AppData/Local/Temp/claude/c--Users-majas-Desktop-Pariah/24e4fc52-b460-4a43-892f-b87408cad9a3/scratchpad\"/shot_*.png)",
+      "Bash(rm -f \"C:/Users/majas/AppData/Local/Temp/claude/c--Users-majas-Desktop-Pariah/24e4fc52-b460-4a43-892f-b87408cad9a3/scratchpad\"/*.png \"C:/Users/majas/AppData/Local/Temp/claude/c--Users-majas-Desktop-Pariah/24e4fc52-b460-4a43-892f-b87408cad9a3/scratchpad\"/verify_*.js)"
     ],
     "additionalDirectories": [
-      "C:\\Users\\majas\\AppData\\Local\\Temp\\claude\\c--Users-majas-Desktop-Pariah\\cab06655-1bdb-46fc-8c83-d95c9b42e202\\scratchpad"
+      "C:\\Users\\majas\\AppData\\Local\\Temp\\claude\\c--Users-majas-Desktop-Pariah\\cab06655-1bdb-46fc-8c83-d95c9b42e202\\scratchpad",
+      "C:\\Users\\majas\\AppData\\Local\\Temp\\claude\\c--Users-majas-Desktop-Pariah\\24e4fc52-b460-4a43-892f-b87408cad9a3\\scratchpad"
     ]
   }
 }

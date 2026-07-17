@@ -4,7 +4,13 @@ import classNames from "classnames";
 
 // ─── Hit location card ────────────────────────────────────────────────────────
 
-export const LocationCard = ({ title, data, onChange, showShield = false }) => (
+export const LocationCard = ({
+  title,
+  data,
+  onChange,
+  showShield = false,
+  isMobile = false,
+}) => (
   <div
     className={classNames(
       "ba h-100",
@@ -30,7 +36,12 @@ export const LocationCard = ({ title, data, onChange, showShield = false }) => (
       </button>
     </div>
     <div className={classNames("pa2", { "o-40": data.destroyed })}>
-      <div className="flex items-center mb2">
+      <div
+        className={classNames("flex mb2", {
+          "flex-column": isMobile,
+          "items-center": !isMobile,
+        })}
+      >
         <div className="flex items-center flex-auto">
           <span className="f7 fw6 mr2 nowrap">Armor:</span>
           <NumInput
@@ -46,7 +57,12 @@ export const LocationCard = ({ title, data, onChange, showShield = false }) => (
           />
         </div>
         {showShield && (
-          <div className="flex items-center ml2">
+          <div
+            className={classNames("flex items-center", {
+              mt2: isMobile,
+              ml2: !isMobile,
+            })}
+          >
             <span className="f7 fw6 mr2 nowrap dark-blue">Shield:</span>
             <NumInput
               value={data.shieldCurrent}

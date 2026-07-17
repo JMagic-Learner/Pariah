@@ -41,6 +41,9 @@ const defaultPilotState = () => ({
   showSupport: false,
   showKeywords: false,
   showNewtype: false,
+  showPilotPanel: true,
+  showBaseEquip: true,
+  showAddlEquip: true,
 });
 
 const PilotSheetContext = createContext(null);
@@ -157,6 +160,9 @@ export const usePilotSlot = (slotIndex) => {
     setShowSupport: makeSet("showSupport"),
     setShowKeywords: makeSet("showKeywords"),
     setShowNewtype: makeSet("showNewtype"),
+    setShowPilotPanel: makeSet("showPilotPanel"),
+    setShowBaseEquip: makeSet("showBaseEquip"),
+    setShowAddlEquip: makeSet("showAddlEquip"),
     setAll,
     customPreset,
     setCustomPreset,

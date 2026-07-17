@@ -134,6 +134,12 @@ export const TRAITS = [
       "This [PILOT] can purchase a MSU from any [FACTION], but does not receive the any [FACTION] bonuses.",
   },
   {
+    name: "Frontliner",
+    cost: 2,
+    effect:
+      "If this [PILOT]'s MSU is within 12 inches of the center of the battlefield, it may automatically choose to fail/succeed [TAKE COVER] reactions. In addition, if this [PILOT]/MSU is in base contact with [HARD COVER], once per round it may reassign an incoming hit location to a location covered by [HARD COVER]",
+  },
+  {
     name: "Generous",
     cost: 1,
     effect:
@@ -174,7 +180,7 @@ export const TRAITS = [
     name: "Honorable",
     cost: 1,
     effect:
-      "This [PILOT] cannot declare attacks in the rear arcs of enemy MSU. This [PILOT] gains +1 GS and +1 BR",
+      "This [PILOT] cannot declare attacks in the rear arcs of enemy MSU. This [PILOT] gains +1 GS and +1 BR. This [PILOT] loses this trait whenever he/she or a [FIRETEAM] member destroys [CIVILIANS]",
   },
   {
     name: "Juke",
@@ -186,7 +192,7 @@ export const TRAITS = [
     name: "Kinetic Force",
     cost: 1,
     effect:
-      "When this MSU moves over 21 inches, all non-beam melee attacks gain +2 base damage.",
+      "When this MSU moves over 21 inches, all non-beam melee attacks gain +2 base damage. Enemy MSU's that are hit by this [PILOT]'s [BLITZ] actions now causes [KNOCKDOWN] state",
   },
   {
     name: "Lucky Cat",
@@ -338,6 +344,12 @@ export const TRAITS = [
       "Enemy MSUs suppressed by this [PILOT] reduce their base movespeed by 2.",
   },
   {
+    name: "Theme Song",
+    cost: 2,
+    effect:
+      "All other friendly [PILOT]/MSUS within 8 inches may reroll 1 attack dice per round",
+  },
+  {
     name: "Trash Talker",
     cost: 1,
     effect:
@@ -359,7 +371,7 @@ export const TRAITS = [
     name: "Wolf Pack",
     cost: 2,
     effect:
-      'If 1 friendly MSU within 8": reroll 1 attack dice per round. If 2 friendly MSUs within 8": reroll 1 evasion roll per round. If 3+ friendly MSUs within 8": gain +1 Piloting, +1 Brawl, +1 Gunnery.',
+      'If 1 friendly MSU within 8": This [PILOT] mayreroll 1 attack dice per round. If 2 friendly MSUs within 8": This [PILOT] may reroll 1 evasion roll per round. If 3+ friendly MSUs within 8": This [PILOT] gain +1 Piloting, +1 Brawl, +1 Gunnery.',
   },
   {
     name: "War Criminal",

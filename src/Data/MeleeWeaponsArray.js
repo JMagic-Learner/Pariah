@@ -46,7 +46,7 @@ export const MELEE = [
     ton: 1,
     fro: 1,
     mcu: 20,
-    keywords: "[CLEAVE(X)]",
+    keywords: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
   },
   {
     name: "Beam Whip",

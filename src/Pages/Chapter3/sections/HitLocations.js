@@ -53,7 +53,7 @@ const HIT_TABLE = [
     roll: "11",
     location: "Head",
     effect:
-      "Damage applied to Head. At 0 HP, lose weapons and equipment. MSU suffers from -1 Penalty to all Skill Checks",
+      "Double all base damage applied to Head. At 0 HP, lose weapons and equipment. MSU suffers from -2 Penalty to all Skill Checks",
   },
   {
     roll: "12",

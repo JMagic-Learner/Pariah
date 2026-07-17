@@ -21,12 +21,22 @@ export const Navigation = () => {
     return (
       <div className="bb">
         <nav className="bg-near-white flex flex-wrap pv3 center w-90">
-          <div className="w-50">
+          <div
+            className={classNames({
+              "w-100 center": !isMobile,
+              "w-50": isMobile,
+            })}
+          >
             <Link className="link dim red no-underline fw7 h3" to="/">
               Gundam Flashpoint 0.6.8
             </Link>
           </div>
-          <div className="flex w-50 items-center">
+          <div
+            className={classNames({
+              "w-100 items-center": !isMobile,
+              "flex w-50 items-center ": isMobile,
+            })}
+          >
             {NAV_LINKS.map(({ to, label }) => (
               <Link key={to} className={desktopLinkClass} to={to}>
                 {label}
