@@ -2243,9 +2243,27 @@ export const ZEON_PRESETS = [
           notes:
             "When damage is assigned to the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
         },
-        B(),
-        B(),
-        B(),
+        {
+          name: "PanzerFausts",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "1",
+          notes: "[MISSILE(18)], [AP(5)], [MOUNTABLE], [LIMITED USE(1)]",
+        },
+        {
+          name: "PanzerFausts",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "1",
+          notes: "[MISSILE(18)], [AP(5)], [MOUNTABLE], [LIMITED USE(1)]",
+        },
+        {
+          name: "PanzerFausts",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "1",
+          notes: "[MISSILE(18)], [AP(5)], [MOUNTABLE], [LIMITED USE(1)]",
+        },
       ],
       addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
       locations: {
