@@ -444,9 +444,9 @@ export const FORCE_LIST_FACTIONS = [
       {
         msu: "PMX-000 Messala",
         mcu: 170,
-        move: '9"',
+        move: '7"',
         armor: 26,
-        fro: 9,
+        fro: 8,
         tonnage: 75,
         year: "0088",
         faction: "EF, TITANS",
@@ -535,6 +535,18 @@ export const FORCE_LIST_FACTIONS = [
         faction: "EF",
         equipment:
           "Beam Rifle, GL, Shield, Beam Saber, 6 Funnels, Panoptic Canopy, Bazooka, Vulcans",
+      },
+      {
+        msu: "FA-93HWS ν GUNDAM Heavy Weapons System Type",
+        mcu: 250,
+        move: '6"',
+        armor: 30,
+        fro: 7,
+        tonnage: 70,
+        year: "0093",
+        faction: "EF",
+        equipment:
+          "Beam Rifle, Beam Saber x 2, Beam Cannon x 2, Missile Pod 4 x 2, Vulcan, Shield, Dummy Balloons",
       },
       {
         msu: "RX-0 Unicorn Gundam",
