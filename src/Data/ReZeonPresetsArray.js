@@ -13,7 +13,7 @@ export const REZEON_PRESETS = [
       mobileSuit: "ARZ-125 Re-Haze",
       mcu: "205",
       fro: "7",
-      tonnageLimit: "60",
+      tonnageLimit: "42",
       movement: '8"',
       armorValue: "24",
       baseEquip: [
