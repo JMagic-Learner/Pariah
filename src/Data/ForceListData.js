@@ -1105,7 +1105,7 @@ export const FORCE_LIST_FACTIONS = [
         move: '7"',
         armor: 28,
         fro: 6,
-        tonnage: 34,
+        tonnage: 28,
         year: "0093",
         faction: "Zeon, Neo Zeon",
         equipment:

@@ -2366,7 +2366,7 @@ export const ZEON_PRESETS = [
       mobileSuit: "AMS-119 Geara Doga Heavy Armed Type",
       mcu: "170",
       fro: "6",
-      tonnageLimit: "34",
+      tonnageLimit: "28",
       movement: '7"',
       armorValue: "28",
       baseEquip: [
@@ -2402,7 +2402,7 @@ export const ZEON_PRESETS = [
           name: "Heavy Boosters",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "9",
+          tonnage: "7",
           notes: "[BOOST(1)] becomes [BOOST(2)]",
         },
         B(),
