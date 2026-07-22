@@ -2276,10 +2276,10 @@ export const ZEON_PRESETS = [
           notes: "[AKIMBO],[QUICK SWAP],[CLEAVE(X)]",
         },
         {
-          name: "Shield + Panzerfaust",
+          name: "Shield",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "3",
+          tonnage: "6",
           notes:
             "When damage is assigned to the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
         },
@@ -2305,7 +2305,23 @@ export const ZEON_PRESETS = [
           notes: "[MISSILE(18)], [AP(5)], [MOUNTABLE], [LIMITED USE(1)]",
         },
       ],
-      addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
+      addlEquip: [
+        {
+          name: "PanzerFausts",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "1",
+          notes: "[MISSILE(18)], [AP(5)], [MOUNTABLE], [LIMITED USE(1)]",
+        },
+        ,
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+      ],
       locations: {
         head: { current: "25", max: "25", weapon: "", equipment: ["", "", ""] },
         torso: {
