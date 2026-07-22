@@ -1986,11 +1986,11 @@ export const EF_PRESETS = [
       ],
       addlEquip: [
         {
-          name: "Vulcan Cannon (INBUILT)",
+          name: "Vulcan Cannons (INBUILT)",
           mcuCost: "FREE",
           fro: "",
           tonnage: "",
-          notes: "[INBUILT]",
+          notes: "[FULL AUTO],[INBUILT],[AKIMBO]",
         },
         B(),
         B(),
