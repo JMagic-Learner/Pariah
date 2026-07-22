@@ -75,7 +75,7 @@ export const FACTIONS = [
           },
           {
             title: "BLACK BOX RESEARCH",
-            text: "All passive FRO cost of Support Equipment is reduced by 1, to a mininum of 1. All active FRO costs of Ranged Weapons are reduced by 1 to a mininum of 1",
+            text: "All passive FRO cost of Support Equipment is reduced by 1, to a mininum of 0. All active FRO costs of Ranged Weapons are reduced by 1 to a mininum of 0",
           },
         ],
       },

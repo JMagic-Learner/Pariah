@@ -118,8 +118,8 @@ export const WeaponsEquipment = () => {
           [HEAVY] Weapons
           <span className="fw4 black">
             {" "}
-            6+ tons. Requires two hands to wield, unless it is mounted on a
-            [HARDPOINT], or has the [BRACE] keyword
+            6+ tons. Requires two hands to wield, unless it is mounted on a MSU,
+            or has the [BRACE] keyword
           </span>
         </li>
       </ul>

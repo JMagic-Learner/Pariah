@@ -20,10 +20,10 @@ export const SUPPORT = [
   {
     name: "ALICE System",
     loc: "Torso",
-    ton: 2,
+    ton: 4,
     pfro: "1 PFRO",
     qty: 1,
-    mcu: 75,
+    mcu: 50,
     effect:
       "+1 Gunnery and Brawl if [PILOT] did not purchase Brawl/Gunnery/Newtype traits.",
   },
@@ -100,7 +100,7 @@ export const SUPPORT = [
   {
     name: "Beam Shields (20 Armor)",
     loc: "Arm",
-    ton: 2,
+    ton: 4,
     pfro: "2 PFRO",
     qty: 1,
     mcu: 50,
@@ -179,7 +179,7 @@ export const SUPPORT = [
   {
     name: "Enhanced Fusion Reactors",
     loc: "Torso",
-    ton: 2,
+    ton: "Starting FRO / 2",
     pfro: "–",
     qty: 1,
     mcu: 35,
@@ -206,7 +206,7 @@ export const SUPPORT = [
   {
     name: "Extendable Arms",
     loc: "Both Arms",
-    ton: 2,
+    ton: 4,
     pfro: "–",
     qty: 1,
     mcu: 20,
@@ -307,7 +307,7 @@ export const SUPPORT = [
   {
     name: "Front Facing Thrusters",
     loc: "Torso",
-    ton: 2,
+    ton: `Equipment Tonnage /4`,
     pfro: "–",
     qty: 1,
     mcu: 25,
@@ -316,7 +316,7 @@ export const SUPPORT = [
   {
     name: "Heavy Boosters",
     loc: "Legs/Torso",
-    ton: 2,
+    ton: `Equipment Tonnage /4`,
     pfro: "–",
     qty: 1,
     mcu: 25,
@@ -334,18 +334,18 @@ export const SUPPORT = [
   },
   {
     name: "I-Field",
-    loc: "Shoulder/Torso",
+    loc: "Torso",
     ton: 2,
-    pfro: "3 PFRO",
+    pfro: "3",
     qty: 1,
-    mcu: 75,
+    mcu: 50,
     effect:
       "Deploy I-Field at any phase: nullifies all beam attacks for one round. [LIMITED USE(1)].",
   },
   {
     name: "Inertia Redirection System",
     loc: "Legs (Both)",
-    ton: 3,
+    ton: 4,
     pfro: "–",
     qty: 1,
     mcu: 25,
@@ -417,9 +417,19 @@ export const SUPPORT = [
     ton: 2,
     pfro: "–",
     qty: 1,
-    mcu: 50,
+    mcu: 25,
     effect:
-      "360° LOS but still fires from front arc only. Pilots do not suffer a -2 penalty to evasion rolls when being attacked in the rear arc.",
+      "360° LOS but still fires from front arc only. This [PILOT] does not suffer a -2 penalty to evasion rolls when being attacked in the rear arc.",
+  },
+  {
+    name: "Purgable Armor",
+    loc: "All Locations",
+    ton: "-",
+    pfro: "–",
+    qty: 1,
+    mcu: 30,
+    effect:
+      "Allows the [PILOT] to trigger the PURGE ARMOR toggle in Pilot Sheet. Once triggered, 2 equipment tonnage is subtracted for each remaining hit location with the exception of the Head hit Location. Armor hit points are adjusted by 10 to a mininum of 1 for each hit location except head",
   },
   {
     name: "Predictive Fire Control",
@@ -443,10 +453,10 @@ export const SUPPORT = [
   {
     name: "Psycommu Funnel/Bit",
     loc: "Torso",
-    ton: 3,
+    ton: 2,
     pfro: "2 PFRO",
     qty: 1,
-    mcu: 75,
+    mcu: 15,
     effect:
       "Requires [NEWTYPE]/[CYBER-NEWTYPE] trait; deploy 2 bits as weapons.",
   },
@@ -456,7 +466,7 @@ export const SUPPORT = [
     ton: 3,
     pfro: "3 PFRO",
     qty: 1,
-    mcu: 120,
+    mcu: 50,
     effect: "Access to [INCOMS] Beam/Shield Bits without Newtype trait.",
   },
   {
@@ -481,7 +491,7 @@ export const SUPPORT = [
   {
     name: "Shields (HEAVY) [30]",
     loc: "Arm",
-    ton: 5,
+    ton: 15,
     pfro: "–",
     qty: 1,
     mcu: 25,
@@ -492,7 +502,7 @@ export const SUPPORT = [
   {
     name: "Shields [20, [DEPLOYABLE]]",
     loc: "Arms",
-    ton: 2,
+    ton: 6,
     pfro: "–",
     qty: 2,
     mcu: 20,
@@ -502,7 +512,7 @@ export const SUPPORT = [
   {
     name: "Shields [20]",
     loc: "Arm",
-    ton: 2,
+    ton: 6,
     pfro: "–",
     qty: 2,
     mcu: 15,
@@ -510,9 +520,9 @@ export const SUPPORT = [
       "When damage is assigned to the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
   },
   {
-    name: "Shields {Hit Location) [20]",
+    name: "Shields {Hit Location) [15]",
     loc: "Arm",
-    ton: 2,
+    ton: 4,
     pfro: "–",
     qty: 2,
     mcu: 15,
@@ -522,7 +532,7 @@ export const SUPPORT = [
   {
     name: "Side Verniers",
     loc: "Arms/Legs/Torso",
-    ton: 2,
+    ton: "Equipment Tonnage / 4",
     pfro: "1 PFRO",
     qty: 1,
     mcu: 40,
@@ -531,7 +541,7 @@ export const SUPPORT = [
   {
     name: "Spiky Shoulders",
     loc: "Arm",
-    ton: 1,
+    ton: 2,
     pfro: "–",
     qty: 1,
     mcu: 25,
@@ -755,10 +765,10 @@ export const SUPPORT = [
   {
     name: "Vertical Jump Jets",
     loc: "Both Legs",
-    ton: 2,
+    ton: 4,
     pfro: "–",
     qty: 1,
-    mcu: 35,
+    mcu: 30,
     effect:
       "The MSU may [BOOST(8)] vertically without movement penalty. The MSU can move in this manner twice per turn",
   },

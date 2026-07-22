@@ -27,6 +27,12 @@ import { KEYWORDS } from "../../Data/KeywordArray";
 import { NEWTYPE_UPGRADES, BITS } from "../../Data/NewtypeUpgrades";
 import { renderKeywords } from "../../utils/renderKeywords";
 import { KeywordDialog } from "../../Components/KeywordDialog";
+import { lookupWeaponInfo } from "./utilities/lookupWeaponInfo";
+import {
+  isDynamicTonnageItem,
+  computeDynamicTonnage,
+} from "../../utils/dynamicTonnage";
+import { isLimitedUseItem } from "../../utils/limitedUseEquipment";
 import { SheetHeader } from "../../Components/SheetHeader";
 import { TextInput } from "../../Components/TextInput";
 import { NumInput } from "../../Components/NumImput";
@@ -106,79 +112,112 @@ const EquipmentRow = ({
   onSell,
   onClear,
   scavengerToggle,
-}) => (
-  <tr className={sold ? "o-40" : ""}>
-    <TD>
-      <div className={onSell || onClear ? "flex items-center" : ""}>
-        {onSell && (
+  detailsLabel = "Notes",
+  used,
+  onToggleUsed,
+}) => {
+  const [detailsOpen, setDetailsOpen] = useState(false);
+  const limitedUse = isLimitedUseItem(row.name);
+  return (
+    <tr className={sold ? "o-40" : ""}>
+      <TD>
+        <div className={onSell || onClear ? "flex items-center" : ""}>
+          {onSell && (
+            <button
+              className={classNames(
+                "f8 ph1 pv0 mr1 bn br1 pointer flex-shrink-0 lh-copy",
+                sold ? "bg-red white" : "bg-near-white dark-gray",
+              )}
+              onClick={onSell}
+              title={sold ? "Click to reinstate" : "Click to sell"}
+            >
+              {sold ? "SOLD" : "SELL"}
+            </button>
+          )}
+          {onClear && (
+            <button
+              className="f8 ph1 pv0 mr1 bn br1 pointer flex-shrink-0 lh-copy bg-near-white dark-gray"
+              onClick={onClear}
+              title="Clear row"
+            >
+              ×
+            </button>
+          )}
+          <TextInput
+            value={row.name}
+            onChange={(v) => onChange("name", v)}
+            onClick={!sold ? onNameClick : undefined}
+            className={sold ? "strike" : ""}
+          />
+          {limitedUse && used && (
+            <span className="f8 fw6 orange ml1 flex-shrink-0">(USED)</span>
+          )}
+          {row.name && (
+            <button
+              className="f8 ph1 pv0 ml1 bn br1 pointer flex-shrink-0 lh-copy bg-near-white dark-gray"
+              onClick={() => setDetailsOpen(true)}
+              title="View Details"
+            >
+              View
+            </button>
+          )}
+        </div>
+        {detailsOpen && (
+          <EquipmentDetailsModal
+            row={row}
+            detailsLabel={detailsLabel}
+            onChange={onChange}
+            onClose={() => setDetailsOpen(false)}
+            sold={sold}
+            onSell={onSell}
+            onClear={onClear}
+            scavengerToggle={scavengerToggle}
+            used={used}
+            onToggleUsed={onToggleUsed}
+          />
+        )}
+      </TD>
+      <TD className="tc">
+        <TextInput
+          value={row.mcuCost}
+          onChange={(v) => onChange("mcuCost", v)}
+          className={classNames("tc", { strike: sold })}
+        />
+        {scavengerToggle && (
           <button
             className={classNames(
-              "f8 ph1 pv0 mr1 bn br1 pointer flex-shrink-0 lh-copy",
-              sold ? "bg-red white" : "bg-near-white dark-gray",
+              "f8 ph1 pv0 mt1 bn br1 pointer lh-copy w-100",
+              scavengerToggle.active
+                ? "bg-dark-green white fw7"
+                : "bg-near-white dark-gray",
             )}
-            onClick={onSell}
-            title={sold ? "Click to reinstate" : "Click to sell"}
+            onClick={scavengerToggle.onClick}
+            title="Scavenger: halve this Support Equipment's MCU cost"
           >
-            {sold ? "SOLD" : "SELL"}
+            {scavengerToggle.active ? "−50% ✓" : "Scavenge ½"}
           </button>
         )}
-        {onClear && (
-          <button
-            className="f8 ph1 pv0 mr1 bn br1 pointer flex-shrink-0 lh-copy bg-near-white dark-gray"
-            onClick={onClear}
-            title="Clear row"
-          >
-            ×
-          </button>
-        )}
+      </TD>
+      <TD className="tc">
         <TextInput
-          value={row.name}
-          onChange={(v) => onChange("name", v)}
-          onClick={!sold ? onNameClick : undefined}
-          className={sold ? "strike" : ""}
+          value={row.fro}
+          onChange={(v) => onChange("fro", v)}
+          className="tc"
         />
-      </div>
-    </TD>
-    <TD className="tc">
-      <TextInput
-        value={row.mcuCost}
-        onChange={(v) => onChange("mcuCost", v)}
-        className={classNames("tc", { strike: sold })}
-      />
-      {scavengerToggle && (
-        <button
-          className={classNames(
-            "f8 ph1 pv0 mt1 bn br1 pointer lh-copy w-100",
-            scavengerToggle.active
-              ? "bg-dark-green white fw7"
-              : "bg-near-white dark-gray",
-          )}
-          onClick={scavengerToggle.onClick}
-          title="Scavenger: halve this Support Equipment's MCU cost"
-        >
-          {scavengerToggle.active ? "−50% ✓" : "Scavenge ½"}
-        </button>
-      )}
-    </TD>
-    <TD className="tc">
-      <TextInput
-        value={row.fro}
-        onChange={(v) => onChange("fro", v)}
-        className="tc"
-      />
-    </TD>
-    <TD className="tc">
-      <TextInput
-        value={row.tonnage}
-        onChange={(v) => onChange("tonnage", v)}
-        className="tc"
-      />
-    </TD>
-    <TD colSpan={lastCellColSpan}>
-      <TextInput value={row.notes} onChange={(v) => onChange("notes", v)} />
-    </TD>
-  </tr>
-);
+      </TD>
+      <TD className="tc">
+        <TextInput
+          value={row.tonnage}
+          onChange={(v) => onChange("tonnage", v)}
+          className="tc"
+        />
+      </TD>
+      <TD colSpan={lastCellColSpan}>
+        <TextInput value={row.notes} onChange={(v) => onChange("notes", v)} />
+      </TD>
+    </tr>
+  );
+};
 
 // ─── Equipment details modal (mobile) ─────────────────────────────────────────
 
@@ -191,125 +230,191 @@ const EquipmentDetailsModal = ({
   onSell,
   onClear,
   scavengerToggle,
-}) => (
-  <div
-    style={{
-      position: "fixed",
-      inset: 0,
-      zIndex: 1000,
-      background: "rgba(0,0,0,0.55)",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-    }}
-    onClick={onClose}
-  >
+  used,
+  onToggleUsed,
+}) => {
+  const [kwDialog, setKwDialog] = useState(null);
+  const weaponInfo = lookupWeaponInfo(row.name);
+  const limitedUse = isLimitedUseItem(row.name);
+  return (
     <div
       style={{
-        width: "90vw",
-        maxWidth: "26rem",
-        maxHeight: "85vh",
-        overflowY: "auto",
-        background: "white",
-        borderRadius: "4px",
+        position: "fixed",
+        inset: 0,
+        zIndex: 1000,
+        background: "rgba(0,0,0,0.55)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
       }}
-      className="pa3"
-      onClick={(e) => e.stopPropagation()}
+      onClick={onClose}
     >
-      <div className="flex items-center justify-between mb3">
-        <span className="fw7 f5 truncate pr2">
-          {row.name || "Equipment Details"}
-        </span>
-        <button
-          onClick={onClose}
-          className="bn bg-transparent fw7 f4 pointer dim lh-solid flex-shrink-0"
-        >
-          ✕
-        </button>
-      </div>
-
-      <label className="db f7 fw6 gray mb1">Name</label>
-      <TextInput
-        value={row.name}
-        onChange={(v) => onChange("name", v)}
-        className="w-100 mb3"
-      />
-
-      <div className="flex mb3" style={{ gap: "0.5rem" }}>
-        <div className="flex-auto">
-          <label className="db f7 fw6 gray mb1">MCU Cost</label>
-          <TextInput
-            value={row.mcuCost}
-            onChange={(v) => onChange("mcuCost", v)}
-            className="tc w-100"
-          />
+      <KeywordDialog kw={kwDialog} onClose={() => setKwDialog(null)} />
+      <div
+        style={{
+          width: "90vw",
+          maxWidth: "26rem",
+          maxHeight: "85vh",
+          overflowY: "auto",
+          background: "white",
+          borderRadius: "4px",
+        }}
+        className="pa3"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="flex items-center justify-between mb3">
+          <span className="fw7 f5 truncate pr2">
+            {row.name || "Equipment Details"}
+          </span>
+          <button
+            onClick={onClose}
+            className="bn bg-transparent fw7 f4 pointer dim lh-solid flex-shrink-0"
+          >
+            ✕
+          </button>
         </div>
-        <div className="flex-auto">
-          <label className="db f7 fw6 gray mb1 nowrap">Passive/Active FRO</label>
-          <TextInput
-            value={row.fro}
-            onChange={(v) => onChange("fro", v)}
-            className="tc w-100"
-          />
-        </div>
-        <div className="flex-auto">
-          <label className="db f7 fw6 gray mb1">Tonnage</label>
-          <TextInput
-            value={row.tonnage}
-            onChange={(v) => onChange("tonnage", v)}
-            className="tc w-100"
-          />
-        </div>
-      </div>
 
-      <label className="db f7 fw6 gray mb1">{detailsLabel}</label>
-      <TextInput
-        value={row.notes}
-        onChange={(v) => onChange("notes", v)}
-        className="w-100 mb3"
-      />
+        <label className="db f7 fw6 gray mb1">Name</label>
+        <TextInput
+          value={row.name}
+          onChange={(v) => onChange("name", v)}
+          className="w-100 mb3"
+        />
 
-      {scavengerToggle && (
-        <button
-          className={classNames("f7 ph2 pv2 mb3 bn br1 pointer lh-copy w-100", {
-            "bg-dark-green white fw7": scavengerToggle.active,
-            "bg-near-white dark-gray": !scavengerToggle.active,
-          })}
-          onClick={scavengerToggle.onClick}
-        >
-          {scavengerToggle.active ? "−50% MCU ✓" : "Scavenge ½ MCU"}
-        </button>
-      )}
+        {limitedUse && onToggleUsed && (
+          <button
+            className={classNames(
+              "f7 ph2 pv2 mb3 bn br1 pointer lh-copy w-100",
+              {
+                "bg-orange white fw7": used,
+                "bg-near-white dark-gray": !used,
+              },
+            )}
+            onClick={onToggleUsed}
+            title="[LIMITED USE(1)] — track whether this has been deployed"
+          >
+            {used ? "Used this scenario ✓ (click to reset)" : "Mark as Used"}
+          </button>
+        )}
 
-      {(onSell || onClear) && (
-        <div className="flex" style={{ gap: "0.5rem" }}>
-          {onSell && (
-            <button
-              className={classNames("f7 ph3 pv2 bn br1 pointer flex-auto", {
-                "bg-red white": sold,
-                "bg-near-white dark-gray": !sold,
-              })}
-              onClick={onSell}
+        {weaponInfo && (
+          <div className="mb3 pa2 bg-near-white br1">
+            <p className="f7 fw6 dark-green ttu tracked mb2">
+              {weaponInfo.kind} Weapon Reference
+            </p>
+            <div
+              className="flex flex-wrap mb2 w-100"
+              style={{ gap: "0.75rem" }}
             >
-              {sold ? "Reinstate" : "Sell"}
-            </button>
-          )}
-          {onClear && (
-            <button
-              className="f7 ph3 pv2 bn br1 pointer flex-auto bg-near-white dark-gray"
-              onClick={() => {
-                onClear();
-                onClose();
-              }}
-            >
-              Clear
-            </button>
-          )}
+              <div className=" w-20">
+                <label className="db f7 fw6 gray mb1">ROF</label>
+                <span className="f6">{weaponInfo.rof || "—"}</span>
+              </div>
+              <div className=" w-20">
+                <label className="db f7 fw6 gray mb1">Rangebands</label>
+                <span className="f6">{weaponInfo.range || "—"}</span>
+              </div>
+              <div className=" w-20">
+                <label className="db f7 fw6 gray mb1">Damage</label>
+                <span className="f6">{weaponInfo.dam || "—"}</span>
+              </div>
+              <div className=" w-20">
+                <label className="db f7 fw6 gray mb1">Mods</label>
+                <span className="f6">{weaponInfo.mod || "—"}</span>
+              </div>
+            </div>
+            {weaponInfo.keywords && (
+              <div>
+                <label className="db f7 fw6 gray mb1">Keywords</label>
+                <span className="f6 lh-copy">
+                  {renderKeywords(weaponInfo.keywords, setKwDialog)}
+                </span>
+              </div>
+            )}
+          </div>
+        )}
+
+        <div className="flex mb3" style={{ gap: "0.5rem" }}>
+          <div className="flex-auto">
+            <label className="db f7 fw6 gray mb1">MCU Cost</label>
+            <TextInput
+              value={row.mcuCost}
+              onChange={(v) => onChange("mcuCost", v)}
+              className="tc w-100"
+            />
+          </div>
+          <div className="flex-auto">
+            <label className="db f7 fw6 gray mb1 nowrap">
+              Passive/Active FRO
+            </label>
+            <TextInput
+              value={row.fro}
+              onChange={(v) => onChange("fro", v)}
+              className="tc w-100"
+            />
+          </div>
+          <div className="flex-auto">
+            <label className="db f7 fw6 gray mb1">Tonnage</label>
+            <TextInput
+              value={row.tonnage}
+              onChange={(v) => onChange("tonnage", v)}
+              className="tc w-100"
+            />
+          </div>
         </div>
-      )}
+
+        <label className="db f7 fw6 gray mb1">{detailsLabel}</label>
+        <TextInput
+          value={row.notes}
+          onChange={(v) => onChange("notes", v)}
+          className="w-100 mb3"
+        />
+
+        {scavengerToggle && (
+          <button
+            className={classNames(
+              "f7 ph2 pv2 mb3 bn br1 pointer lh-copy w-100",
+              {
+                "bg-dark-green white fw7": scavengerToggle.active,
+                "bg-near-white dark-gray": !scavengerToggle.active,
+              },
+            )}
+            onClick={scavengerToggle.onClick}
+          >
+            {scavengerToggle.active ? "−50% MCU ✓" : "Scavenge ½ MCU"}
+          </button>
+        )}
+
+        {(onSell || onClear) && (
+          <div className="flex" style={{ gap: "0.5rem" }}>
+            {onSell && (
+              <button
+                className={classNames("f7 ph3 pv2 bn br1 pointer flex-auto", {
+                  "bg-red white": sold,
+                  "bg-near-white dark-gray": !sold,
+                })}
+                onClick={onSell}
+              >
+                {sold ? "Reinstate" : "Sell"}
+              </button>
+            )}
+            {onClear && (
+              <button
+                className="f7 ph3 pv2 bn br1 pointer flex-auto bg-near-white dark-gray"
+                onClick={() => {
+                  onClear();
+                  onClose();
+                }}
+              >
+                Clear
+              </button>
+            )}
+          </div>
+        )}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 // ─── Mobile equipment row (compact — name + a Details toggle) ────────────────
 
@@ -322,8 +427,11 @@ const MobileEquipRow = ({
   onClear,
   scavengerToggle,
   detailsLabel = "Notes",
+  used,
+  onToggleUsed,
 }) => {
   const [open, setOpen] = useState(false);
+  const limitedUse = isLimitedUseItem(row.name);
   return (
     <>
       <div
@@ -339,6 +447,7 @@ const MobileEquipRow = ({
             className={sold ? "strike" : ""}
             placeholder="— Empty —"
           />
+          {limitedUse && used && <span className="f8 fw6 orange">(USED)</span>}
         </div>
         <button
           className="f7 ph2 pv1 bn br1 pointer bg-dark-green white fw6 flex-shrink-0"
@@ -357,6 +466,8 @@ const MobileEquipRow = ({
           onSell={onSell}
           onClear={onClear}
           scavengerToggle={scavengerToggle}
+          used={used}
+          onToggleUsed={onToggleUsed}
         />
       )}
     </>
@@ -447,9 +558,13 @@ const LOC_LABELS = {
   leftLeg: "Left Leg",
 };
 
-const EquipmentPickerModal = ({ onClose, onSelect }) => {
+const EquipmentPickerModal = ({ onClose, onSelect, tonnageLimit, fro }) => {
   const [tab, setTab] = useState(0);
   const current = PICKER_TABS[tab];
+  const tonCol = current.headers.indexOf("Ton");
+  const nameCol = current.headers.indexOf("Name");
+  const dynamicTonFor = (name) =>
+    computeDynamicTonnage(name, { tonnageLimit, fro });
   return (
     <div
       style={{
@@ -507,6 +622,14 @@ const EquipmentPickerModal = ({ onClose, onSelect }) => {
 
         {/* Scrollable table */}
         <div style={{ flex: 1, overflowY: "auto" }} className="pa1">
+          {current.label === "Support" && (
+            <p className="f8 i mid-gray mv1">
+              * Tonnage is calculated dynamically from this suit's own stats —
+              Tonnage Limit ÷ 4 (Heavy Boosters, Side Verniers, Front Facing
+              Thrusters) or Starting FRO ÷ 2 (Enhanced Fusion Reactors),
+              rounded.
+            </p>
+          )}
           <table className="w-100 f7" cellSpacing="0">
             <thead>
               <tr>
@@ -531,7 +654,15 @@ const EquipmentPickerModal = ({ onClose, onSelect }) => {
                   })}
                   style={{ cursor: "pointer" }}
                   onClick={() => {
-                    onSelect(current.getFields(item));
+                    const fields = current.getFields(item);
+                    const dynamicTon =
+                      current.label === "Support"
+                        ? dynamicTonFor(item.name)
+                        : null;
+                    if (dynamicTon != null) {
+                      fields.tonnage = String(dynamicTon);
+                    }
+                    onSelect(fields);
                     onClose();
                   }}
                   onMouseEnter={(e) =>
@@ -539,11 +670,27 @@ const EquipmentPickerModal = ({ onClose, onSelect }) => {
                   }
                   onMouseLeave={(e) => (e.currentTarget.style.background = "")}
                 >
-                  {current.getCells(item).map((cell, j) => (
-                    <td key={j} className="pv2 pr2 bb b--black-20 lh-copy">
-                      {cell}
-                    </td>
-                  ))}
+                  {current.getCells(item).map((cell, j) => {
+                    const dynamicTon =
+                      current.label === "Support"
+                        ? dynamicTonFor(item.name)
+                        : null;
+                    let display = cell;
+                    if (dynamicTon != null && j === tonCol) {
+                      display = dynamicTon;
+                    } else if (
+                      current.label === "Support" &&
+                      j === nameCol &&
+                      isDynamicTonnageItem(item.name)
+                    ) {
+                      display = `${cell}*`;
+                    }
+                    return (
+                      <td key={j} className="pv2 pr2 bb b--black-20 lh-copy">
+                        {display}
+                      </td>
+                    );
+                  })}
                 </tr>
               ))}
             </tbody>
@@ -590,6 +737,12 @@ const PilotSheetPanel = ({ slotIndex }) => {
     setAddlEquip,
     soldBase,
     setSoldBase,
+    usedBase,
+    setUsedBase,
+    usedAddl,
+    setUsedAddl,
+    purgeArmor,
+    setPurgeArmor,
     mechanicChoice,
     setMechanicChoice,
     scavengerChoice,
@@ -636,6 +789,9 @@ const PilotSheetPanel = ({ slotIndex }) => {
   const hasRambo = traits.some((t) => t === "Rambo");
   const hasRookie = traits.some((t) => t === "Rookie");
   const hasScavenger = traits.some((t) => t === "Scavenger");
+  const hasPurgableArmor =
+    baseEquip.some((row, i) => row.name === "Purgable Armor" && !soldBase[i]) ||
+    addlEquip.some((row) => row.name === "Purgable Armor");
   const hasGrypsVet = traits.some((t) => t === "Gryps War Veteran (REZEON)");
   const hasHonorable = traits.some((t) => t === "Honorable");
   const gunneryTraitCount = traits.filter((t) => t === "Gunnery").length;
@@ -677,7 +833,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
     (hasMechanic && mechanicChoice === "fro" ? 2 : 0) + efrCount * 2;
   const effectiveTonnageLimit =
     Number(tonnageLimit) +
-    (hasMechanic && mechanicChoice === "tonnage" ? 12 : 0);
+    (hasMechanic && mechanicChoice === "tonnage" ? 6 : 0);
 
   const mcuLimit =
     250 +
@@ -705,11 +861,38 @@ const PilotSheetPanel = ({ slotIndex }) => {
       return sum + (isDiscounted ? Math.floor(cost / 2) : cost);
     }, 0);
 
-  const totalTonnage =
+  const NON_HEAD_LOCATION_KEYS = [
+    "torso",
+    "rightArm",
+    "leftArm",
+    "rightLeg",
+    "leftLeg",
+  ];
+  const purgeArmorTonnageSavings =
+    hasPurgableArmor && purgeArmor
+      ? NON_HEAD_LOCATION_KEYS.filter((k) => !locations[k]?.destroyed).length *
+        2
+      : 0;
+  const purgedArmorFor = (key) => {
+    if (!hasPurgableArmor || !purgeArmor) return null;
+    if (key === "head") return null;
+    const loc = locations[key];
+    if (!loc || loc.destroyed) return null;
+    return {
+      current: Math.max(1, Number(loc.current || 0) - 10),
+      max: Math.max(1, Number(loc.max || 0) - 10),
+    };
+  };
+
+  const totalTonnage = Math.max(
+    0,
     baseEquip.reduce(
       (sum, row, i) => sum + (soldBase[i] ? 0 : parseMCU(row.tonnage)),
       0,
-    ) + addlEquip.reduce((sum, row) => sum + parseMCU(row.tonnage), 0);
+    ) +
+      addlEquip.reduce((sum, row) => sum + parseMCU(row.tonnage), 0) -
+      purgeArmorTonnageSavings,
+  );
 
   // Ephemeral UI-only state (dialogs/popups — not persisted)
   const [equipPopup, setEquipPopup] = useState(null);
@@ -869,6 +1052,9 @@ const PilotSheetPanel = ({ slotIndex }) => {
       baseEquip,
       addlEquip,
       soldBase,
+      usedBase,
+      usedAddl,
+      purgeArmor,
       locations,
       mechanicChoice,
       newtypeChoice1,
@@ -902,6 +1088,9 @@ const PilotSheetPanel = ({ slotIndex }) => {
       baseEquip: d.baseEquip ?? Array(8).fill(null).map(blankEquip),
       addlEquip: d.addlEquip ?? Array(8).fill(null).map(blankEquip),
       soldBase: d.soldBase ?? Array(8).fill(false),
+      usedBase: d.usedBase ?? Array(8).fill(false),
+      usedAddl: d.usedAddl ?? Array(8).fill(false),
+      purgeArmor: d.purgeArmor ?? false,
       locations: d.locations ?? {
         head: blankLoc(3),
         torso: blankLoc(3),
@@ -989,291 +1178,303 @@ const PilotSheetPanel = ({ slotIndex }) => {
 
         {showPilotPanel && (
           <>
-        {/* Stats row */}
-        <div className="overflow-auto">
-          <table className="w-100 f7" cellSpacing="0">
-            <thead>
-              <tr>
-                <TH className="w-30 tc">Pilot Name</TH>
-                <TH className="tc">Gunnery</TH>
-                <TH className="tc">+Mod</TH>
-                <TH className="tc">Brawl</TH>
-                <TH className="tc">+Mod</TH>
-                <TH className="tc">Piloting</TH>
-                <TH className="tc">+Mod</TH>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <TD>
-                  <TextInput
-                    value={pilotName}
-                    onChange={setPilotName}
-                    placeholder="Pilot name"
-                    className="tc"
-                  />
-                </TD>
-                <TD className="tc">
-                  <NumInput value={gunnery} onChange={setGunnery} />
-                  {hasRookie && <div className="f8 fw6 mt1 red">base: 0</div>}
-                </TD>
-                <TD className="tc">
-                  <NumInput value={gsBonus} onChange={() => {}} />
-                </TD>
-                <TD className="tc">
-                  <NumInput value={brawl} onChange={setBrawl} />
-                  {hasRookie && <div className="f8 fw6 mt1 red">base: 0</div>}
-                </TD>
-                <TD className="tc">
-                  <NumInput value={bsBonus} onChange={() => {}} />
-                </TD>
-                <TD className="tc">
-                  <NumInput value={piloting} onChange={setPiloting} />
-                  {hasRookie && <div className="f8 fw6 mt1 red">base: 0</div>}
-                </TD>
-                <TD className="tc">
-                  <NumInput value={psBonus} onChange={() => {}} />
-                </TD>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+            {/* Stats row */}
+            <div className="overflow-auto">
+              <table className="w-100 f7" cellSpacing="0">
+                <thead>
+                  <tr>
+                    <TH className="w-30 tc">Pilot Name</TH>
+                    <TH className="tc">Gunnery</TH>
+                    <TH className="tc">+Mod</TH>
+                    <TH className="tc">Brawl</TH>
+                    <TH className="tc">+Mod</TH>
+                    <TH className="tc">Piloting</TH>
+                    <TH className="tc">+Mod</TH>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <TD>
+                      <TextInput
+                        value={pilotName}
+                        onChange={setPilotName}
+                        placeholder="Pilot name"
+                        className="tc"
+                      />
+                    </TD>
+                    <TD className="tc">
+                      <NumInput value={gunnery} onChange={setGunnery} />
+                      {hasRookie && (
+                        <div className="f8 fw6 mt1 red">base: 0</div>
+                      )}
+                    </TD>
+                    <TD className="tc">
+                      <NumInput value={gsBonus} onChange={() => {}} />
+                    </TD>
+                    <TD className="tc">
+                      <NumInput value={brawl} onChange={setBrawl} />
+                      {hasRookie && (
+                        <div className="f8 fw6 mt1 red">base: 0</div>
+                      )}
+                    </TD>
+                    <TD className="tc">
+                      <NumInput value={bsBonus} onChange={() => {}} />
+                    </TD>
+                    <TD className="tc">
+                      <NumInput value={piloting} onChange={setPiloting} />
+                      {hasRookie && (
+                        <div className="f8 fw6 mt1 red">base: 0</div>
+                      )}
+                    </TD>
+                    <TD className="tc">
+                      <NumInput value={psBonus} onChange={() => {}} />
+                    </TD>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
-        {/* Pilot Traits */}
-        <div className="bt b--black-10 overflow-auto">
-          <table className="w-100 f7" cellSpacing="0">
-            <thead>
-              <tr>
-                <TH className="w-30 tc">Pilot Trait</TH>
-                <TH className="tc w-10">Cost</TH>
-                <TH className="tc">Effect</TH>
-              </tr>
-            </thead>
-            <tbody>
-              {traits.map((t, i) => (
-                <TraitRow
-                  key={i}
-                  value={t}
-                  onChange={(v) => updateTrait(i, v)}
-                  onKeywordClick={setKwDialog}
-                />
-              ))}
-            </tbody>
-          </table>
-        </div>
+            {/* Pilot Traits */}
+            <div className="bt b--black-10 overflow-auto">
+              <table className="w-100 f7" cellSpacing="0">
+                <thead>
+                  <tr>
+                    <TH className="w-30 tc">Pilot Trait</TH>
+                    <TH className="tc w-10">Cost</TH>
+                    <TH className="tc">Effect</TH>
+                  </tr>
+                </thead>
+                <tbody>
+                  {traits.map((t, i) => (
+                    <TraitRow
+                      key={i}
+                      value={t}
+                      onChange={(v) => updateTrait(i, v)}
+                      onKeywordClick={setKwDialog}
+                    />
+                  ))}
+                </tbody>
+              </table>
+            </div>
 
-        {/* Trait modifiers */}
-        {(hasMechanic ||
-          gunneryTraitCount > 0 ||
-          brawlerTraitCount > 0 ||
-          pilotingTraitCount > 0 ||
-          hasNewtype ||
-          hasCyberNewtype ||
-          hasRambo ||
-          hasRookie ||
-          hasGrypsVet ||
-          hasHonorable) &&
-          (() => {
-            const StatBtn = ({ label, active, onClick }) => (
-              <button
-                className={classNames(
-                  "f8 ph2 pv1 mr1 bn br1 pointer lh-copy",
-                  active
-                    ? "bg-dark-green white fw7"
-                    : "bg-near-white dark-gray",
-                )}
-                onClick={onClick}
-              >
-                {label}
-              </button>
-            );
-            return (
-              <div className="ph3 pv2 bt b--black-10 bg-washed-green">
-                <p className="f8 fw7 ttu tracked mb2 dark-green">
-                  Active Trait Modifiers
-                </p>
+            {/* Trait modifiers */}
+            {(hasMechanic ||
+              gunneryTraitCount > 0 ||
+              brawlerTraitCount > 0 ||
+              pilotingTraitCount > 0 ||
+              hasNewtype ||
+              hasCyberNewtype ||
+              hasRambo ||
+              hasRookie ||
+              hasGrypsVet ||
+              hasHonorable) &&
+              (() => {
+                const StatBtn = ({ label, active, onClick }) => (
+                  <button
+                    className={classNames(
+                      "f8 ph2 pv1 mr1 bn br1 pointer lh-copy",
+                      active
+                        ? "bg-dark-green white fw7"
+                        : "bg-near-white dark-gray",
+                    )}
+                    onClick={onClick}
+                  >
+                    {label}
+                  </button>
+                );
+                return (
+                  <div className="ph3 pv2 bt b--black-10 bg-washed-green">
+                    <p className="f8 fw7 ttu tracked mb2 dark-green">
+                      Active Trait Modifiers
+                    </p>
 
-                {/* Stackable stat traits — auto-applied, no toggle needed */}
-                {(gunneryTraitCount > 0 ||
-                  brawlerTraitCount > 0 ||
-                  pilotingTraitCount > 0 ||
-                  hasHonorable) && (
-                  <div className="flex items-center mb2 flex-wrap">
-                    {gunneryTraitCount > 0 && (
-                      <span className="f8 mr3 dark-green fw6">
-                        Gunnery ×{gunneryTraitCount} → +{gunneryTraitCount} GS
-                      </span>
+                    {/* Stackable stat traits — auto-applied, no toggle needed */}
+                    {(gunneryTraitCount > 0 ||
+                      brawlerTraitCount > 0 ||
+                      pilotingTraitCount > 0 ||
+                      hasHonorable) && (
+                      <div className="flex items-center mb2 flex-wrap">
+                        {gunneryTraitCount > 0 && (
+                          <span className="f8 mr3 dark-green fw6">
+                            Gunnery ×{gunneryTraitCount} → +{gunneryTraitCount}{" "}
+                            GS
+                          </span>
+                        )}
+                        {brawlerTraitCount > 0 && (
+                          <span className="f8 mr3 dark-green fw6">
+                            Brawler ×{brawlerTraitCount} → +{brawlerTraitCount}{" "}
+                            BR
+                          </span>
+                        )}
+                        {pilotingTraitCount > 0 && (
+                          <span className="f8 mr3 dark-green fw6">
+                            Piloting ×{pilotingTraitCount} → +
+                            {pilotingTraitCount} PS
+                          </span>
+                        )}
+                        {hasHonorable && (
+                          <span className="f8 dark-green fw6">
+                            Honorable → +1 GS, +1 BR
+                          </span>
+                        )}
+                      </div>
                     )}
-                    {brawlerTraitCount > 0 && (
-                      <span className="f8 mr3 dark-green fw6">
-                        Brawler ×{brawlerTraitCount} → +{brawlerTraitCount} BR
-                      </span>
-                    )}
-                    {pilotingTraitCount > 0 && (
-                      <span className="f8 mr3 dark-green fw6">
-                        Piloting ×{pilotingTraitCount} → +{pilotingTraitCount}{" "}
-                        PS
-                      </span>
-                    )}
-                    {hasHonorable && (
-                      <span className="f8 dark-green fw6">
-                        Honorable → +1 GS, +1 BR
-                      </span>
-                    )}
-                  </div>
-                )}
 
-                {/* Newtype — choose 2 different stats */}
-                {hasNewtype && (
-                  <div className="mb2">
-                    <span className="f7 fw6 mr2">
-                      Newtype (choose 2 stats):
-                    </span>
-                    <div className="flex items-center mt1 flex-wrap">
-                      <span className="f8 mr2 gray">Choice 1:</span>
-                      {["gs", "bs", "ps"].map((s) => (
-                        <StatBtn
-                          key={s}
-                          label={`+1 ${s.toUpperCase()}`}
-                          active={newtypeChoice1 === s}
-                          onClick={() =>
-                            setNewtypeChoice1((p) => (p === s ? "" : s))
-                          }
-                        />
-                      ))}
-                      <span className="f8 mh2 gray">Choice 2:</span>
-                      {["gs", "bs", "ps"]
-                        .filter((s) => s !== newtypeChoice1)
-                        .map((s) => (
+                    {/* Newtype — choose 2 different stats */}
+                    {hasNewtype && (
+                      <div className="mb2">
+                        <span className="f7 fw6 mr2">
+                          Newtype (choose 2 stats):
+                        </span>
+                        <div className="flex items-center mt1 flex-wrap">
+                          <span className="f8 mr2 gray">Choice 1:</span>
+                          {["gs", "bs", "ps"].map((s) => (
+                            <StatBtn
+                              key={s}
+                              label={`+1 ${s.toUpperCase()}`}
+                              active={newtypeChoice1 === s}
+                              onClick={() =>
+                                setNewtypeChoice1((p) => (p === s ? "" : s))
+                              }
+                            />
+                          ))}
+                          <span className="f8 mh2 gray">Choice 2:</span>
+                          {["gs", "bs", "ps"]
+                            .filter((s) => s !== newtypeChoice1)
+                            .map((s) => (
+                              <StatBtn
+                                key={s}
+                                label={`+1 ${s.toUpperCase()}`}
+                                active={newtypeChoice2 === s}
+                                onClick={() =>
+                                  setNewtypeChoice2((p) => (p === s ? "" : s))
+                                }
+                              />
+                            ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Cyber-Newtype — choose 1 stat */}
+                    {hasCyberNewtype && (
+                      <div className="flex items-center mb2 flex-wrap">
+                        <span className="f7 fw6 mr2 nowrap">
+                          Cyber-Newtype:
+                        </span>
+                        {["gs", "bs", "ps"].map((s) => (
                           <StatBtn
                             key={s}
                             label={`+1 ${s.toUpperCase()}`}
-                            active={newtypeChoice2 === s}
+                            active={cyberNewtypeChoice === s}
                             onClick={() =>
-                              setNewtypeChoice2((p) => (p === s ? "" : s))
+                              setCyberNewtypeChoice((p) => (p === s ? "" : s))
                             }
                           />
                         ))}
-                    </div>
-                  </div>
-                )}
+                      </div>
+                    )}
 
-                {/* Cyber-Newtype — choose 1 stat */}
-                {hasCyberNewtype && (
-                  <div className="flex items-center mb2 flex-wrap">
-                    <span className="f7 fw6 mr2 nowrap">Cyber-Newtype:</span>
-                    {["gs", "bs", "ps"].map((s) => (
-                      <StatBtn
-                        key={s}
-                        label={`+1 ${s.toUpperCase()}`}
-                        active={cyberNewtypeChoice === s}
-                        onClick={() =>
-                          setCyberNewtypeChoice((p) => (p === s ? "" : s))
-                        }
-                      />
+                    {/* Rambo — choose GS or BR */}
+                    {hasRambo && (
+                      <div className="flex items-center mb2">
+                        <span className="f7 fw6 mr2 nowrap">Rambo:</span>
+                        {["gs", "bs"].map((s) => (
+                          <StatBtn
+                            key={s}
+                            label={`+1 ${s.toUpperCase()}`}
+                            active={ramboChoice === s}
+                            onClick={() =>
+                              setRamboChoice((p) => (p === s ? "" : s))
+                            }
+                          />
+                        ))}
+                      </div>
+                    )}
+
+                    {/* Gryps War Veteran (REZEON) — choose 1 stat */}
+                    {hasGrypsVet && (
+                      <div className="flex items-center mb2 flex-wrap">
+                        <span className="f7 fw6 mr2 nowrap">
+                          Gryps War Veteran:
+                        </span>
+                        {["gs", "bs", "ps"].map((s) => (
+                          <StatBtn
+                            key={s}
+                            label={`+1 ${s.toUpperCase()}`}
+                            active={grypsVetChoice === s}
+                            onClick={() =>
+                              setGrypsVetChoice((p) => (p === s ? "" : s))
+                            }
+                          />
+                        ))}
+                      </div>
+                    )}
+
+                    {/* Rookie — reminder */}
+                    {hasRookie && (
+                      <div className="flex items-center mb2">
+                        <span className="f7 fw6 red mr2 nowrap">Rookie:</span>
+                        <span className="f8 red">
+                          Base GS / BR / PS default to 0
+                        </span>
+                      </div>
+                    )}
+
+                    {/* Mechanic */}
+                    {hasMechanic && (
+                      <div className="flex items-center mb2">
+                        <span className="f7 fw6 mr2 nowrap">Mechanic:</span>
+                        {[
+                          { label: "+6 Tonnage", value: "tonnage" },
+                          { label: "+2 FRO", value: "fro" },
+                        ].map(({ label, value }) => (
+                          <StatBtn
+                            key={value}
+                            label={label}
+                            active={mechanicChoice === value}
+                            onClick={() =>
+                              setMechanicChoice((p) =>
+                                p === value ? "" : value,
+                              )
+                            }
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              })()}
+
+            {/* Trait reference */}
+            <div className="ph2 pb2 bt b--black-10">
+              <RefToggle
+                open={showTraits}
+                onToggle={() => setShowTraits((v) => !v)}
+                label="Trait Reference"
+              />
+            </div>
+            {showTraits && (
+              <div className="bt b--black-10 overflow-auto">
+                <table className="w-100 f7" cellSpacing="0">
+                  <thead>
+                    <tr>
+                      <TH className="w-25">Trait</TH>
+                      <TH className="tc w-10">Cost</TH>
+                      <TH>Effect</TH>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {TRAITS.map((t) => (
+                      <tr key={t.name} className="stripe-light">
+                        <TD className="fw6">{t.name}</TD>
+                        <TD className="tc fw6 dark-green">{t.cost}</TD>
+                        <TD className="lh-copy">{t.effect}</TD>
+                      </tr>
                     ))}
-                  </div>
-                )}
-
-                {/* Rambo — choose GS or BR */}
-                {hasRambo && (
-                  <div className="flex items-center mb2">
-                    <span className="f7 fw6 mr2 nowrap">Rambo:</span>
-                    {["gs", "bs"].map((s) => (
-                      <StatBtn
-                        key={s}
-                        label={`+1 ${s.toUpperCase()}`}
-                        active={ramboChoice === s}
-                        onClick={() =>
-                          setRamboChoice((p) => (p === s ? "" : s))
-                        }
-                      />
-                    ))}
-                  </div>
-                )}
-
-                {/* Gryps War Veteran (REZEON) — choose 1 stat */}
-                {hasGrypsVet && (
-                  <div className="flex items-center mb2 flex-wrap">
-                    <span className="f7 fw6 mr2 nowrap">
-                      Gryps War Veteran:
-                    </span>
-                    {["gs", "bs", "ps"].map((s) => (
-                      <StatBtn
-                        key={s}
-                        label={`+1 ${s.toUpperCase()}`}
-                        active={grypsVetChoice === s}
-                        onClick={() =>
-                          setGrypsVetChoice((p) => (p === s ? "" : s))
-                        }
-                      />
-                    ))}
-                  </div>
-                )}
-
-                {/* Rookie — reminder */}
-                {hasRookie && (
-                  <div className="flex items-center mb2">
-                    <span className="f7 fw6 red mr2 nowrap">Rookie:</span>
-                    <span className="f8 red">
-                      Base GS / BR / PS default to 0
-                    </span>
-                  </div>
-                )}
-
-                {/* Mechanic */}
-                {hasMechanic && (
-                  <div className="flex items-center mb2">
-                    <span className="f7 fw6 mr2 nowrap">Mechanic:</span>
-                    {[
-                      { label: "+12 Tonnage", value: "tonnage" },
-                      { label: "+2 FRO", value: "fro" },
-                    ].map(({ label, value }) => (
-                      <StatBtn
-                        key={value}
-                        label={label}
-                        active={mechanicChoice === value}
-                        onClick={() =>
-                          setMechanicChoice((p) => (p === value ? "" : value))
-                        }
-                      />
-                    ))}
-                  </div>
-                )}
+                  </tbody>
+                </table>
               </div>
-            );
-          })()}
-
-        {/* Trait reference */}
-        <div className="ph2 pb2 bt b--black-10">
-          <RefToggle
-            open={showTraits}
-            onToggle={() => setShowTraits((v) => !v)}
-            label="Trait Reference"
-          />
-        </div>
-        {showTraits && (
-          <div className="bt b--black-10 overflow-auto">
-            <table className="w-100 f7" cellSpacing="0">
-              <thead>
-                <tr>
-                  <TH className="w-25">Trait</TH>
-                  <TH className="tc w-10">Cost</TH>
-                  <TH>Effect</TH>
-                </tr>
-              </thead>
-              <tbody>
-                {TRAITS.map((t) => (
-                  <tr key={t.name} className="stripe-light">
-                    <TD className="fw6">{t.name}</TD>
-                    <TD className="tc fw6 dark-green">{t.cost}</TD>
-                    <TD className="lh-copy">{t.effect}</TD>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
+            )}
           </>
         )}
       </div>
@@ -1378,14 +1579,14 @@ const PilotSheetPanel = ({ slotIndex }) => {
                   <NumInput value={tonnageLimit} onChange={setTonnageLimit} />
                   <div
                     className={classNames("f8 fw6 mt1", {
-                      red: totalTonnage > Math.ceil(effectiveTonnageLimit / 3),
+                      red: totalTonnage > effectiveTonnageLimit,
                       "dark-green":
                         totalTonnage > 0 &&
-                        totalTonnage <= Math.ceil(effectiveTonnageLimit / 3),
+                        totalTonnage <= effectiveTonnageLimit,
                       gray: totalTonnage === 0,
                     })}
                   >
-                    {totalTonnage} / {Math.ceil(effectiveTonnageLimit / 3) || 0}
+                    {totalTonnage} / {effectiveTonnageLimit || 0}
                   </div>
                 </TD>
                 <TD className="tc">
@@ -1437,6 +1638,12 @@ const PilotSheetPanel = ({ slotIndex }) => {
                       prev.map((s, idx) => (idx === i ? !s : s)),
                     )
                   }
+                  used={usedBase[i]}
+                  onToggleUsed={() =>
+                    setUsedBase((prev) =>
+                      prev.map((u, idx) => (idx === i ? !u : u)),
+                    )
+                  }
                 />
               ))}
             </div>
@@ -1474,6 +1681,13 @@ const PilotSheetPanel = ({ slotIndex }) => {
                           prev.map((s, idx) => (idx === i ? !s : s)),
                         )
                       }
+                      used={usedBase[i]}
+                      onToggleUsed={() =>
+                        setUsedBase((prev) =>
+                          prev.map((u, idx) => (idx === i ? !u : u)),
+                        )
+                      }
+                      detailsLabel="Notes"
                     />
                   ))}
                 </tbody>
@@ -1531,6 +1745,12 @@ const PilotSheetPanel = ({ slotIndex }) => {
                         }
                       : null
                   }
+                  used={usedAddl[i]}
+                  onToggleUsed={() =>
+                    setUsedAddl((prev) =>
+                      prev.map((u, idx) => (idx === i ? !u : u)),
+                    )
+                  }
                 />
               ))}
             </div>
@@ -1569,8 +1789,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                       }}
                       lastCellColSpan={2}
                       scavengerToggle={
-                        hasScavenger &&
-                        SUPPORT.some((s) => s.name === row.name)
+                        hasScavenger && SUPPORT.some((s) => s.name === row.name)
                           ? {
                               active: scavengerChoice === String(i),
                               onClick: () =>
@@ -1580,6 +1799,13 @@ const PilotSheetPanel = ({ slotIndex }) => {
                             }
                           : null
                       }
+                      used={usedAddl[i]}
+                      onToggleUsed={() =>
+                        setUsedAddl((prev) =>
+                          prev.map((u, idx) => (idx === i ? !u : u)),
+                        )
+                      }
+                      detailsLabel="Effects"
                     />
                   ))}
                 </tbody>
@@ -1631,7 +1857,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
         )}
         {showSupport && (
           <div className="bt b--black-10 ph2 pb2">
-            <SupportEquipmentTable />
+            <SupportEquipmentTable tonnageLimit={tonnageLimit} fro={fro} />
           </div>
         )}
         {showNewtype && (
@@ -1729,6 +1955,29 @@ const PilotSheetPanel = ({ slotIndex }) => {
       <div className={classNames({ flex: !isMobile })}>
         {/* Hit location 2-column grid */}
         <div className={classNames({ "w-75 pr3": !isMobile, mb3: isMobile })}>
+          {hasPurgableArmor && (
+            <div
+              className="mb2 flex items-center flex-wrap"
+              style={{ gap: "0.5rem" }}
+            >
+              <button
+                className={classNames(
+                  "f7 fw6 ph2 pv1 bn br1 pointer ttu tracked",
+                  purgeArmor ? "bg-orange white" : "bg-near-white dark-gray",
+                )}
+                onClick={() => setPurgeArmor((v) => !v)}
+                title="Purgable Armor: jettison armor plating for extra tonnage capacity"
+              >
+                {purgeArmor ? "Armor Purged ✓" : "Purge Armor"}
+              </button>
+              {purgeArmor && (
+                <span className="f8 i mid-gray">
+                  −2 tonnage per remaining non-Head location; each non-Head
+                  location's armor shown reduced by 10 (min 1).
+                </span>
+              )}
+            </div>
+          )}
           {[
             ["head", "HEAD", "torso", "TORSO", false],
             ["rightArm", "RIGHT ARM", "leftArm", "LEFT ARM", true],
@@ -1742,6 +1991,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                   onChange={(f, v) => updateLoc(locA, f, v)}
                   showShield={isArmRow}
                   isMobile={isMobile}
+                  purgedArmor={purgedArmorFor(locA)}
                 />
               </div>
               <div className="w-50 pl1">
@@ -1751,6 +2001,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                   onChange={(f, v) => updateLoc(locB, f, v)}
                   showShield={isArmRow}
                   isMobile={isMobile}
+                  purgedArmor={purgedArmorFor(locB)}
                 />
               </div>
             </div>
@@ -1829,6 +2080,8 @@ const PilotSheetPanel = ({ slotIndex }) => {
         <EquipmentPickerModal
           onClose={closeEquipPopup}
           onSelect={equipPopup.onSelect}
+          tonnageLimit={tonnageLimit}
+          fro={fro}
         />
       )}
 

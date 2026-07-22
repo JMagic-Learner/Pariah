@@ -209,13 +209,13 @@ export const TRAITS = [
     name: "Mechanic",
     cost: 1,
     effect:
-      "Increase the total tonnage by 12 (+4 Equipment Tonnage) OR increase FRO by 2.",
+      "Increase the total tonnage by 6 (+6 Equipment Tonnage) OR increase FRO by 2.",
   },
   {
     name: "Mechanic Pro (EFGF)",
     cost: 2,
     effect:
-      "Reduce the FRO requirement of one weapon by 2 and obtain one Hardpoint equipment slot. The [PILOT]'s MSU may purchase Extra Armor at 5 MCU per.",
+      "Reduce the FRO requirement of one weapon by 2 and one weapon gains the [INBUILT] trait.",
     restrictions: "EARTH FEDERATION GROUND FORCES ONLY",
   },
   {

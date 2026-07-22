@@ -33,6 +33,15 @@ export const ReZeonFactionBonuses = () => {
               cannot exceed the mission deployment zones.
             </p>
           </div>
+          <div className="mb3 pa3 bg-near-white ba b--black-10">
+            <p className="fw7 ma0 mb1 red">I-Field Research</p>
+            <p className="lh-copy ma0 f6">
+              REZEON MSUs have access to advanced I-Field technology, allowing
+              them to field more sophisticated shielding systems. I-Field
+              Generators that come as base equipment no longer count towards the
+              base MCU cost calcuations.
+            </p>
+          </div>
           <div className="pa3 bg-near-white ba b--black-10">
             <p className="fw7 ma0 mb1 red">Tristellar Plan (TR Plan)</p>
             <p className="lh-copy ma0 f6">

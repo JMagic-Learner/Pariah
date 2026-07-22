@@ -20,7 +20,15 @@
       "Bash(npm install *)",
       "Bash(node verify_collapse.js)",
       "Bash(rm -f \"C:/Users/majas/AppData/Local/Temp/claude/c--Users-majas-Desktop-Pariah/24e4fc52-b460-4a43-892f-b87408cad9a3/scratchpad\"/shot_*.png)",
-      "Bash(rm -f \"C:/Users/majas/AppData/Local/Temp/claude/c--Users-majas-Desktop-Pariah/24e4fc52-b460-4a43-892f-b87408cad9a3/scratchpad\"/*.png \"C:/Users/majas/AppData/Local/Temp/claude/c--Users-majas-Desktop-Pariah/24e4fc52-b460-4a43-892f-b87408cad9a3/scratchpad\"/verify_*.js)"
+      "Bash(rm -f \"C:/Users/majas/AppData/Local/Temp/claude/c--Users-majas-Desktop-Pariah/24e4fc52-b460-4a43-892f-b87408cad9a3/scratchpad\"/*.png \"C:/Users/majas/AppData/Local/Temp/claude/c--Users-majas-Desktop-Pariah/24e4fc52-b460-4a43-892f-b87408cad9a3/scratchpad\"/verify_*.js)",
+      "WebFetch(domain:gundam.fandom.com)",
+      "WebSearch",
+      "WebFetch(domain:www.mahq.net)",
+      "WebFetch(domain:mechabay.com)",
+      "WebFetch(domain:breezewiki.com)",
+      "WebFetch(domain:web.archive.org)",
+      "WebFetch(domain:gundam.miraheze.org)",
+      "WebFetch(domain:r.jina.ai)"
     ],
     "additionalDirectories": [
       "C:\\Users\\majas\\AppData\\Local\\Temp\\claude\\c--Users-majas-Desktop-Pariah\\cab06655-1bdb-46fc-8c83-d95c9b42e202\\scratchpad",

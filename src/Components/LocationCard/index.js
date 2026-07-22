@@ -10,6 +10,7 @@ export const LocationCard = ({
   onChange,
   showShield = false,
   isMobile = false,
+  purgedArmor = null,
 }) => (
   <div
     className={classNames(
@@ -78,6 +79,11 @@ export const LocationCard = ({
           </div>
         )}
       </div>
+      {purgedArmor && (
+        <div className="f7 fw6 orange mb2">
+          Purged: {purgedArmor.current} / {purgedArmor.max}
+        </div>
+      )}
       <div className="mb2">
         <div className="f7 fw6 gray mb1 flex items-center justify-between">
           <span>Weapon</span>

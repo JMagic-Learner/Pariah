@@ -67,11 +67,11 @@ export const MELEE = [
     range: '0–8"',
     mod: "+0",
     dam: 15,
-    ton: 1,
+    ton: 2,
     fro: "–",
     mcu: 40,
     faction: "ZEON",
-    keywords: "[AP(5)],[LIMITED USE(3)]",
+    keywords: "[DEPLOYABLE],[AP(5)],[LIMITED USE(8)]",
   },
   {
     name: "Combat Knife",
