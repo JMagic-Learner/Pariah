@@ -1942,17 +1942,17 @@ export const EF_PRESETS = [
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
-          name: "Vulcan Cannon (INBUILT)",
-          mcuCost: "FREE",
-          fro: "",
-          tonnage: "",
-          notes: "[INBUILT]",
-        },
-        {
-          name: "Beam Cannon (INBUILT) x 2",
+          name: "Beam Cannon (INBUILT)",
           mcuCost: "FREE",
           fro: "3",
-          tonnage: "8",
+          tonnage: "2",
+          notes: "[INBUILT],[MOUNTABLE]",
+        },
+        {
+          name: "Beam Cannon (INBUILT)",
+          mcuCost: "FREE",
+          fro: "3",
+          tonnage: "2",
           notes: "[INBUILT],[MOUNTABLE]",
         },
         {
@@ -1984,7 +1984,22 @@ export const EF_PRESETS = [
           notes: "[AKIMBO],[AP(5)]",
         },
       ],
-      addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
+      addlEquip: [
+        {
+          name: "Vulcan Cannon (INBUILT)",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "",
+          notes: "[INBUILT]",
+        },
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+      ],
       locations: {
         head: {
           current: "26",
