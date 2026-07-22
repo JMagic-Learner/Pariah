@@ -3635,7 +3635,6 @@ export const ZEON_PRESETS = [
           tonnage: "1",
           notes: "[CLEAVE(X)]",
         },
-
         {
           name: "Shield (Shoulder)",
           mcuCost: "FREE",

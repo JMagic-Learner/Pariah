@@ -601,7 +601,7 @@ export const EF_PRESETS = [
       mobileSuit: "RGM-79FP GM Striker",
       mcu: "160",
       fro: "6",
-      tonnageLimit: "32",
+      tonnageLimit: "26",
       movement: '6"',
       armorValue: "22",
       baseEquip: [

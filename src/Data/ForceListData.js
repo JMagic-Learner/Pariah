@@ -90,7 +90,7 @@ export const FORCE_LIST_FACTIONS = [
         move: '6"',
         armor: 22,
         fro: 6,
-        tonnage: 32,
+        tonnage: 26,
         year: "0079",
         faction: "EF",
         equipment:
