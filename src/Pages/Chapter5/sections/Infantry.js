@@ -26,7 +26,11 @@ export const Infantry = () => {
         Infantry squads can occupy any{" "}
         <span className="fw6 red"> [HARD COVER] </span> or building. By doing
         so, the infantry squad cannot be targeted directly by attacks, and do
-        not suffer damage from AOE or Napalm attacks.
+        not suffer damage from AOE or Napalm attacks. The number of Infantry
+        squads that can occupy a <span className="fw6 red"> [HARD COVER] </span>{" "}
+        is 1 squad per 2 inches of height. If{" "}
+        <span className="fw6 red"> [HARD COVER] </span> is destroyed, all
+        Infantry units occupying that building are destoyed as well".
       </p>
 
       <h3 className="f4 fw7 mb2">Infantry Units</h3>
