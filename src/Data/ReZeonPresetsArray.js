@@ -406,7 +406,7 @@ export const REZEON_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
         },
         {
           name: "Bazooka (INBUILT)",
@@ -621,7 +621,7 @@ export const REZEON_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
         },
         B(),
         B(),
@@ -1189,7 +1189,7 @@ export const REZEON_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
         },
         {
           name: "Beam Saber",
@@ -2326,7 +2326,7 @@ export const REZEON_PRESETS = [
           fro: "3",
           tonnage: "7",
           notes:
-            "When damage is assigned to the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
         },
         {
           name: "Panoptic Canopy",

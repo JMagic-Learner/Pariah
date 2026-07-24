@@ -4,711 +4,51 @@ import { useMediaQuery } from "@custom-react-hooks/all";
 import classNames from "classnames";
 import { TRAITS } from "../../Data/PilotTraitArray";
 import { TEAMS } from "../../Data/TeamArray";
-import { PICKER_TABS } from "../../Data/EquipmentPickerArray";
 import {
   RangedWeaponTable,
   MeleeWeaponTable,
 } from "../../Components/Table/WeaponTable";
 import { SupportEquipmentTable } from "../../Components/Table/SupportEquipmentTable";
+import { blankEquip } from "../../Data/PresetsArray";
+import { SUPPORT } from "../../Data/SupportEquipmentArray";
+import { KEYWORDS } from "../../Data/KeywordArray";
+import { NEWTYPE_UPGRADES, BITS } from "../../Data/NewtypeUpgrades";
+import { renderKeywords } from "../../utils/renderKeywords";
+import { KeywordDialog } from "../../Components/KeywordDialog";
+import { SheetHeader } from "../../Components/SheetHeader";
+import { TextInput } from "../../Components/TextInput";
+import { NumInput } from "../../Components/NumImput";
+import { LocationCard } from "../../Components/LocationCard";
 import {
-  PRESETS,
-  blankEquip,
-  blankLoc,
   EF_PRESETS,
   ZEON_PRESETS,
   CROSSBONE_PRESETS,
   MAFTY_PRESETS,
   REZEON_PRESETS,
 } from "../../Data/PresetsArray";
-import { SUPPORT } from "../../Data/SupportEquipmentArray";
-import { parseMCU } from "./utilities/parseMCU";
-import { lookupSupportMCU } from "./utilities/lookupMCU";
-import { KEYWORDS } from "../../Data/KeywordArray";
-import { NEWTYPE_UPGRADES, BITS } from "../../Data/NewtypeUpgrades";
-import { renderKeywords } from "../../utils/renderKeywords";
-import { KeywordDialog } from "../../Components/KeywordDialog";
-import { lookupWeaponInfo } from "./utilities/lookupWeaponInfo";
-import {
-  isDynamicTonnageItem,
-  computeDynamicTonnage,
-} from "../../utils/dynamicTonnage";
-import { isLimitedUseItem } from "../../utils/limitedUseEquipment";
-import { SheetHeader } from "../../Components/SheetHeader";
-import { TextInput } from "../../Components/TextInput";
-import { NumInput } from "../../Components/NumImput";
-import { LocationCard } from "../../Components/LocationCard";
 
-// Shared across the MSU stats table and the two equipment tables so their
-// columns stay visually aligned even though they're now separate <table>s.
-const MSU_COL_WIDTHS = ["40%", "5rem", "5rem", "5.5rem", "6rem", "5rem"];
-const MsuColgroup = () => (
-  <colgroup>
-    {MSU_COL_WIDTHS.map((w, i) => (
-      <col key={i} style={{ width: w }} />
-    ))}
-  </colgroup>
-);
+import { TH, TD } from "./components/TableCells";
+import { MsuColgroup } from "./components/MsuColgroup";
+import { TraitRow } from "./components/TraitRow";
+import { EquipmentRow } from "./components/EquipmentRow";
+import { MobileEquipRow } from "./components/MobileEquipRow";
+import { RefToggle } from "./components/RefToggle";
+import { PanelToggle } from "./components/PanelToggle";
+import { EquipmentPickerModal } from "./components/EquipmentPickerModal";
 
-// ─── Shared primitives ────────────────────────────────────────────────────────
-
-const TH = ({ children, className = "" }) => (
-  <th
-    className={classNames(
-      "fw6 bb b--black-20 pb2 pr2 bg-white f7 tl nowrap",
-      className,
-    )}
-  >
-    {children}
-  </th>
-);
-
-const TD = ({ children, className = "", colSpan }) => (
-  <td
-    className={classNames("pv2 pr2 bb b--black-20 f7", className)}
-    colSpan={colSpan}
-  >
-    {children}
-  </td>
-);
-
-// ─── Pilot trait row ──────────────────────────────────────────────────────────
-
-const TraitRow = ({ value, onChange, onKeywordClick }) => {
-  const selected = TRAITS.find((t) => t.name === value);
-  return (
-    <tr>
-      <TD className="w-30">
-        <select
-          className="w-100 f7 ba b--black-20 pa1 bg-white"
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-        >
-          <option value="">— Select Trait —</option>
-          {TRAITS.map((t) => (
-            <option key={t.name} value={t.name}>
-              {t.name}
-            </option>
-          ))}
-        </select>
-      </TD>
-      <TD className="tc w-10 fw6 dark-green">{selected?.cost ?? ""}</TD>
-      <TD className="lh-copy">
-        {selected?.effect
-          ? renderKeywords(selected.effect, onKeywordClick)
-          : ""}
-      </TD>
-    </tr>
-  );
-};
-
-// ─── Equipment row ────────────────────────────────────────────────────────────
-
-const EquipmentRow = ({
-  row,
-  onChange,
-  onNameClick,
-  lastCellColSpan = 1,
-  sold,
-  onSell,
-  onClear,
-  scavengerToggle,
-  detailsLabel = "Notes",
-  used,
-  onToggleUsed,
-}) => {
-  const [detailsOpen, setDetailsOpen] = useState(false);
-  const limitedUse = isLimitedUseItem(row.name);
-  return (
-    <tr className={sold ? "o-40" : ""}>
-      <TD>
-        <div className={onSell || onClear ? "flex items-center" : ""}>
-          {onSell && (
-            <button
-              className={classNames(
-                "f8 ph1 pv0 mr1 bn br1 pointer flex-shrink-0 lh-copy",
-                sold ? "bg-red white" : "bg-near-white dark-gray",
-              )}
-              onClick={onSell}
-              title={sold ? "Click to reinstate" : "Click to sell"}
-            >
-              {sold ? "SOLD" : "SELL"}
-            </button>
-          )}
-          {onClear && (
-            <button
-              className="f8 ph1 pv0 mr1 bn br1 pointer flex-shrink-0 lh-copy bg-near-white dark-gray"
-              onClick={onClear}
-              title="Clear row"
-            >
-              ×
-            </button>
-          )}
-          <TextInput
-            value={row.name}
-            onChange={(v) => onChange("name", v)}
-            onClick={!sold ? onNameClick : undefined}
-            className={sold ? "strike" : ""}
-          />
-          {limitedUse && used && (
-            <span className="f8 fw6 orange ml1 flex-shrink-0">(USED)</span>
-          )}
-          {row.name && (
-            <button
-              className="f8 ph1 pv0 ml1 bn br1 pointer flex-shrink-0 lh-copy bg-near-white dark-gray"
-              onClick={() => setDetailsOpen(true)}
-              title="View Details"
-            >
-              View
-            </button>
-          )}
-        </div>
-        {detailsOpen && (
-          <EquipmentDetailsModal
-            row={row}
-            detailsLabel={detailsLabel}
-            onChange={onChange}
-            onClose={() => setDetailsOpen(false)}
-            sold={sold}
-            onSell={onSell}
-            onClear={onClear}
-            scavengerToggle={scavengerToggle}
-            used={used}
-            onToggleUsed={onToggleUsed}
-          />
-        )}
-      </TD>
-      <TD className="tc">
-        <TextInput
-          value={row.mcuCost}
-          onChange={(v) => onChange("mcuCost", v)}
-          className={classNames("tc", { strike: sold })}
-        />
-        {scavengerToggle && (
-          <button
-            className={classNames(
-              "f8 ph1 pv0 mt1 bn br1 pointer lh-copy w-100",
-              scavengerToggle.active
-                ? "bg-dark-green white fw7"
-                : "bg-near-white dark-gray",
-            )}
-            onClick={scavengerToggle.onClick}
-            title="Scavenger: halve this Support Equipment's MCU cost"
-          >
-            {scavengerToggle.active ? "−50% ✓" : "Scavenge ½"}
-          </button>
-        )}
-      </TD>
-      <TD className="tc">
-        <TextInput
-          value={row.fro}
-          onChange={(v) => onChange("fro", v)}
-          className="tc"
-        />
-      </TD>
-      <TD className="tc">
-        <TextInput
-          value={row.tonnage}
-          onChange={(v) => onChange("tonnage", v)}
-          className="tc"
-        />
-      </TD>
-      <TD colSpan={lastCellColSpan}>
-        <TextInput value={row.notes} onChange={(v) => onChange("notes", v)} />
-      </TD>
-    </tr>
-  );
-};
-
-// ─── Equipment details modal (mobile) ─────────────────────────────────────────
-
-const EquipmentDetailsModal = ({
-  row,
-  detailsLabel,
-  onChange,
-  onClose,
-  sold,
-  onSell,
-  onClear,
-  scavengerToggle,
-  used,
-  onToggleUsed,
-}) => {
-  const [kwDialog, setKwDialog] = useState(null);
-  const weaponInfo = lookupWeaponInfo(row.name);
-  const limitedUse = isLimitedUseItem(row.name);
-  return (
-    <div
-      style={{
-        position: "fixed",
-        inset: 0,
-        zIndex: 1000,
-        background: "rgba(0,0,0,0.55)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-      onClick={onClose}
-    >
-      <KeywordDialog kw={kwDialog} onClose={() => setKwDialog(null)} />
-      <div
-        style={{
-          width: "90vw",
-          maxWidth: "26rem",
-          maxHeight: "85vh",
-          overflowY: "auto",
-          background: "white",
-          borderRadius: "4px",
-        }}
-        className="pa3"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className="flex items-center justify-between mb3">
-          <span className="fw7 f5 truncate pr2">
-            {row.name || "Equipment Details"}
-          </span>
-          <button
-            onClick={onClose}
-            className="bn bg-transparent fw7 f4 pointer dim lh-solid flex-shrink-0"
-          >
-            ✕
-          </button>
-        </div>
-
-        <label className="db f7 fw6 gray mb1">Name</label>
-        <TextInput
-          value={row.name}
-          onChange={(v) => onChange("name", v)}
-          className="w-100 mb3"
-        />
-
-        {limitedUse && onToggleUsed && (
-          <button
-            className={classNames(
-              "f7 ph2 pv2 mb3 bn br1 pointer lh-copy w-100",
-              {
-                "bg-orange white fw7": used,
-                "bg-near-white dark-gray": !used,
-              },
-            )}
-            onClick={onToggleUsed}
-            title="[LIMITED USE(1)] — track whether this has been deployed"
-          >
-            {used ? "Used this scenario ✓ (click to reset)" : "Mark as Used"}
-          </button>
-        )}
-
-        {weaponInfo && (
-          <div className="mb3 pa2 bg-near-white br1">
-            <p className="f7 fw6 dark-green ttu tracked mb2">
-              {weaponInfo.kind} Weapon Reference
-            </p>
-            <div
-              className="flex flex-wrap mb2 w-100"
-              style={{ gap: "0.75rem" }}
-            >
-              <div className=" w-20">
-                <label className="db f7 fw6 gray mb1">ROF</label>
-                <span className="f6">{weaponInfo.rof || "—"}</span>
-              </div>
-              <div className=" w-20">
-                <label className="db f7 fw6 gray mb1">Rangebands</label>
-                <span className="f6">{weaponInfo.range || "—"}</span>
-              </div>
-              <div className=" w-20">
-                <label className="db f7 fw6 gray mb1">Damage</label>
-                <span className="f6">{weaponInfo.dam || "—"}</span>
-              </div>
-              <div className=" w-20">
-                <label className="db f7 fw6 gray mb1">Mods</label>
-                <span className="f6">{weaponInfo.mod || "—"}</span>
-              </div>
-            </div>
-            {weaponInfo.keywords && (
-              <div>
-                <label className="db f7 fw6 gray mb1">Keywords</label>
-                <span className="f6 lh-copy">
-                  {renderKeywords(weaponInfo.keywords, setKwDialog)}
-                </span>
-              </div>
-            )}
-          </div>
-        )}
-
-        <div className="flex mb3" style={{ gap: "0.5rem" }}>
-          <div className="flex-auto">
-            <label className="db f7 fw6 gray mb1">MCU Cost</label>
-            <TextInput
-              value={row.mcuCost}
-              onChange={(v) => onChange("mcuCost", v)}
-              className="tc w-100"
-            />
-          </div>
-          <div className="flex-auto">
-            <label className="db f7 fw6 gray mb1 nowrap">
-              Passive/Active FRO
-            </label>
-            <TextInput
-              value={row.fro}
-              onChange={(v) => onChange("fro", v)}
-              className="tc w-100"
-            />
-          </div>
-          <div className="flex-auto">
-            <label className="db f7 fw6 gray mb1">Tonnage</label>
-            <TextInput
-              value={row.tonnage}
-              onChange={(v) => onChange("tonnage", v)}
-              className="tc w-100"
-            />
-          </div>
-        </div>
-
-        <label className="db f7 fw6 gray mb1">{detailsLabel}</label>
-        <TextInput
-          value={row.notes}
-          onChange={(v) => onChange("notes", v)}
-          className="w-100 mb3"
-        />
-
-        {scavengerToggle && (
-          <button
-            className={classNames(
-              "f7 ph2 pv2 mb3 bn br1 pointer lh-copy w-100",
-              {
-                "bg-dark-green white fw7": scavengerToggle.active,
-                "bg-near-white dark-gray": !scavengerToggle.active,
-              },
-            )}
-            onClick={scavengerToggle.onClick}
-          >
-            {scavengerToggle.active ? "−50% MCU ✓" : "Scavenge ½ MCU"}
-          </button>
-        )}
-
-        {(onSell || onClear) && (
-          <div className="flex" style={{ gap: "0.5rem" }}>
-            {onSell && (
-              <button
-                className={classNames("f7 ph3 pv2 bn br1 pointer flex-auto", {
-                  "bg-red white": sold,
-                  "bg-near-white dark-gray": !sold,
-                })}
-                onClick={onSell}
-              >
-                {sold ? "Reinstate" : "Sell"}
-              </button>
-            )}
-            {onClear && (
-              <button
-                className="f7 ph3 pv2 bn br1 pointer flex-auto bg-near-white dark-gray"
-                onClick={() => {
-                  onClear();
-                  onClose();
-                }}
-              >
-                Clear
-              </button>
-            )}
-          </div>
-        )}
-      </div>
-    </div>
-  );
-};
-
-// ─── Mobile equipment row (compact — name + a Details toggle) ────────────────
-
-const MobileEquipRow = ({
-  row,
-  onChange,
-  onNameClick,
-  sold,
-  onSell,
-  onClear,
-  scavengerToggle,
-  detailsLabel = "Notes",
-  used,
-  onToggleUsed,
-}) => {
-  const [open, setOpen] = useState(false);
-  const limitedUse = isLimitedUseItem(row.name);
-  return (
-    <>
-      <div
-        className={classNames("flex items-center pa2 bb b--black-10", {
-          "o-40": sold,
-        })}
-      >
-        <div className="flex-auto mr2" style={{ minWidth: 0 }}>
-          <TextInput
-            value={row.name}
-            onChange={(v) => onChange("name", v)}
-            onClick={!sold ? onNameClick : undefined}
-            className={sold ? "strike" : ""}
-            placeholder="— Empty —"
-          />
-          {limitedUse && used && <span className="f8 fw6 orange">(USED)</span>}
-        </div>
-        <button
-          className="f7 ph2 pv1 bn br1 pointer bg-dark-green white fw6 flex-shrink-0"
-          onClick={() => setOpen(true)}
-        >
-          Details
-        </button>
-      </div>
-      {open && (
-        <EquipmentDetailsModal
-          row={row}
-          detailsLabel={detailsLabel}
-          onChange={onChange}
-          onClose={() => setOpen(false)}
-          sold={sold}
-          onSell={onSell}
-          onClear={onClear}
-          scavengerToggle={scavengerToggle}
-          used={used}
-          onToggleUsed={onToggleUsed}
-        />
-      )}
-    </>
-  );
-};
-
-// ─── Reference toggle button ──────────────────────────────────────────────────
-
-const RefToggle = ({ open, onToggle, label }) => (
-  <button
-    className="f7 pa1 ph2 ba b--dark-green dark-green bg-white pointer dim br1 mt2"
-    onClick={onToggle}
-  >
-    {open ? `▲ Hide ${label}` : `▼ View ${label}`}
-  </button>
-);
-
-// ─── Panel collapse toggle (for dark-green section headers) ──────────────────
-
-const PanelToggle = ({ open, onToggle }) => (
-  <button
-    className="f8 ph2 pv1 bn br1 pointer bg-white dark-green fw7 dim v-mid"
-    onClick={onToggle}
-  >
-    {open ? "▲ Collapse" : "▼ Expand"}
-  </button>
-);
-
-// ─── Support equipment location auto-fill ─────────────────────────────────────
-// Returns an array of candidate arrays. Each entry represents one required slot;
-// candidates are tried in order — the first with an empty equipment row wins.
-const parseLocInstructions = (loc) => {
-  if (!loc) return [];
-  const l = loc.toLowerCase().trim();
-  if (l === "–" || l === "-" || l === "any") return [];
-  // Weapon/upgrade attachments live in weapon slots, not equipment slots
-  if (/^(weapon|weapons|melee weapon)$/.test(l) || l.startsWith("weapon"))
-    return [];
-
-  if (l.includes("all location")) {
-    return [
-      ["head"],
-      ["torso"],
-      ["rightArm"],
-      ["leftArm"],
-      ["rightLeg"],
-      ["leftLeg"],
-    ];
-  }
-
-  const slots = [];
-  if (l.includes("head")) slots.push(["head"]);
-  if (l.includes("torso")) slots.push(["torso"]);
-
-  // Specific directional arm locations take priority over generic "arm"
-  if (l.startsWith("right") && l.includes("arm")) {
-    slots.push(["rightArm"]);
-  } else if (l.startsWith("left") && l.includes("arm")) {
-    slots.push(["leftArm"]);
-  } else if (l.includes("arms")) {
-    slots.push(["rightArm"]);
-    slots.push(["leftArm"]);
-  } else if (l.includes("arm") || l.includes("shoulder")) {
-    slots.push(["rightArm", "leftArm"]); // try right first, then left
-  }
-
-  // Specific directional leg locations take priority over generic "leg"
-  if (l.startsWith("right") && l.includes("leg")) {
-    slots.push(["rightLeg"]);
-  } else if (l.startsWith("left") && l.includes("leg")) {
-    slots.push(["leftLeg"]);
-  } else if (l.includes("legs") || l.includes("both leg")) {
-    slots.push(["rightLeg"]);
-    slots.push(["leftLeg"]);
-  } else if (l.includes("leg")) {
-    slots.push(["rightLeg", "leftLeg"]);
-  }
-
-  return slots;
-};
-
-const LOC_LABELS = {
-  head: "Head",
-  torso: "Torso",
-  rightArm: "Right Arm",
-  leftArm: "Left Arm",
-  rightLeg: "Right Leg",
-  leftLeg: "Left Leg",
-};
-
-const EquipmentPickerModal = ({ onClose, onSelect, tonnageLimit, fro }) => {
-  const [tab, setTab] = useState(0);
-  const current = PICKER_TABS[tab];
-  const tonCol = current.headers.indexOf("Ton");
-  const nameCol = current.headers.indexOf("Name");
-  const dynamicTonFor = (name) =>
-    computeDynamicTonnage(name, { tonnageLimit, fro });
-  return (
-    <div
-      style={{
-        position: "fixed",
-        inset: 0,
-        zIndex: 1000,
-        background: "rgba(0,0,0,0.55)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-      onClick={onClose}
-    >
-      <div
-        style={{
-          width: "92vw",
-          height: "86vh",
-          display: "flex",
-          flexDirection: "column",
-          background: "white",
-        }}
-        onClick={(e) => e.stopPropagation()}
-      >
-        {/* Header */}
-        <div className="flex items-center justify-between bg-dark-green white pa2 flex-shrink-0">
-          <span className="fw7 f6 ttu tracked">
-            Equipment Browser — click a row to select
-          </span>
-          <button
-            onClick={onClose}
-            className="bn bg-transparent white fw7 f4 pointer dim lh-solid"
-          >
-            ✕
-          </button>
-        </div>
-
-        {/* Tab bar */}
-        <div className="flex bb b--black-20 bg-near-white flex-shrink-0 flex-wrap">
-          {PICKER_TABS.map((t, i) => (
-            <button
-              key={i}
-              onClick={() => setTab(i)}
-              className={classNames(
-                "f7 pv2 ph3 pointer bn br b--black-20 lh-solid tc",
-                {
-                  "bg-dark-green white fw7": tab === i,
-                  "bg-near-white dark-gray dim": tab !== i,
-                },
-              )}
-            >
-              {t.label}
-            </button>
-          ))}
-        </div>
-
-        {/* Scrollable table */}
-        <div style={{ flex: 1, overflowY: "auto" }} className="pa1">
-          {current.label === "Support" && (
-            <p className="f8 i mid-gray mv1">
-              * Tonnage is calculated dynamically from this suit's own stats —
-              Tonnage Limit ÷ 4 (Heavy Boosters, Side Verniers, Front Facing
-              Thrusters) or Starting FRO ÷ 2 (Enhanced Fusion Reactors),
-              rounded.
-            </p>
-          )}
-          <table className="w-100 f7" cellSpacing="0">
-            <thead>
-              <tr>
-                {current.headers.map((h, i) => (
-                  <th
-                    key={i}
-                    className="fw6 bb b--black-20 pb2 pr2 bg-white tc nowrap "
-                    style={{ position: "sticky", top: 0 }}
-                  >
-                    {h}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {current.data.map((item, i) => (
-                <tr
-                  key={i}
-                  className={classNames("pointer", {
-                    "bg-near-white": i % 2 === 0,
-                    "bg-white": i % 2 !== 0,
-                  })}
-                  style={{ cursor: "pointer" }}
-                  onClick={() => {
-                    const fields = current.getFields(item);
-                    const dynamicTon =
-                      current.label === "Support"
-                        ? dynamicTonFor(item.name)
-                        : null;
-                    if (dynamicTon != null) {
-                      fields.tonnage = String(dynamicTon);
-                    }
-                    onSelect(fields);
-                    onClose();
-                  }}
-                  onMouseEnter={(e) =>
-                    (e.currentTarget.style.background = "#d5f5e3")
-                  }
-                  onMouseLeave={(e) => (e.currentTarget.style.background = "")}
-                >
-                  {current.getCells(item).map((cell, j) => {
-                    const dynamicTon =
-                      current.label === "Support"
-                        ? dynamicTonFor(item.name)
-                        : null;
-                    let display = cell;
-                    if (dynamicTon != null && j === tonCol) {
-                      display = dynamicTon;
-                    } else if (
-                      current.label === "Support" &&
-                      j === nameCol &&
-                      isDynamicTonnageItem(item.name)
-                    ) {
-                      display = `${cell}*`;
-                    }
-                    return (
-                      <td key={j} className="pv2 pr2 bb b--black-20 lh-copy">
-                        {display}
-                      </td>
-                    );
-                  })}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  );
-};
+import { usePilotDerivedStats } from "./hooks/usePilotDerivedStats";
+import { useSupportLocations } from "./hooks/useSupportLocations";
+import { useEquipmentUpdaters } from "./hooks/useEquipmentUpdaters";
+import { usePilotSlotActions } from "./hooks/usePilotSlotActions";
 
 // ─── Single sheet panel ───────────────────────────────────────────────────────
 
 const PilotSheetPanel = ({ slotIndex }) => {
   const isMobile = useMediaQuery("(max-width: 600px)");
 
+  const pilotSlot = usePilotSlot(slotIndex);
   const {
     msuName,
-    setMsuName,
     pilotName,
     setPilotName,
     gunnery,
@@ -778,121 +118,47 @@ const PilotSheetPanel = ({ slotIndex }) => {
     showAddlEquip,
     setShowAddlEquip,
     customPreset,
-    setCustomPreset,
-    setTabNames,
-    setAll,
-  } = usePilotSlot(slotIndex);
+  } = pilotSlot;
 
-  const hasMechanic = traits.some((t) => t === "Mechanic");
-  const hasNewtype = traits.some((t) => t === "Newtype");
-  const hasCyberNewtype = traits.some((t) => t === "Cyber-Newtype (TITANS)");
-  const hasRambo = traits.some((t) => t === "Rambo");
-  const hasRookie = traits.some((t) => t === "Rookie");
-  const hasScavenger = traits.some((t) => t === "Scavenger");
-  const hasPurgableArmor =
-    baseEquip.some((row, i) => row.name === "Purgable Armor" && !soldBase[i]) ||
-    addlEquip.some((row) => row.name === "Purgable Armor");
-  const hasGrypsVet = traits.some((t) => t === "Gryps War Veteran (REZEON)");
-  const hasHonorable = traits.some((t) => t === "Honorable");
-  const gunneryTraitCount = traits.filter((t) => t === "Gunnery").length;
-  const brawlerTraitCount = traits.filter((t) => t === "Brawler").length;
-  const pilotingTraitCount = traits.filter((t) => t === "Piloting").length;
-
-  const gsBonus =
-    gunneryTraitCount +
-    (hasNewtype
-      ? (newtypeChoice1 === "gs" ? 1 : 0) + (newtypeChoice2 === "gs" ? 1 : 0)
-      : 0) +
-    (hasCyberNewtype && cyberNewtypeChoice === "gs" ? 1 : 0) +
-    (hasRambo && ramboChoice === "gs" ? 1 : 0) +
-    (hasGrypsVet && grypsVetChoice === "gs" ? 1 : 0) +
-    (hasHonorable ? 1 : 0);
-  const bsBonus =
-    brawlerTraitCount +
-    (hasNewtype
-      ? (newtypeChoice1 === "bs" ? 1 : 0) + (newtypeChoice2 === "bs" ? 1 : 0)
-      : 0) +
-    (hasCyberNewtype && cyberNewtypeChoice === "bs" ? 1 : 0) +
-    (hasRambo && ramboChoice === "bs" ? 1 : 0) +
-    (hasGrypsVet && grypsVetChoice === "bs" ? 1 : 0) +
-    (hasHonorable ? 1 : 0);
-  const psBonus =
-    pilotingTraitCount +
-    (hasNewtype
-      ? (newtypeChoice1 === "ps" ? 1 : 0) + (newtypeChoice2 === "ps" ? 1 : 0)
-      : 0) +
-    (hasCyberNewtype && cyberNewtypeChoice === "ps" ? 1 : 0) +
-    (hasGrypsVet && grypsVetChoice === "ps" ? 1 : 0);
-
-  const efrCount =
-    baseEquip.filter(
-      (row, i) => row.name === "Enhanced Fusion Reactors" && !soldBase[i],
-    ).length +
-    addlEquip.filter((row) => row.name === "Enhanced Fusion Reactors").length;
-  const froBonus =
-    (hasMechanic && mechanicChoice === "fro" ? 2 : 0) + efrCount * 2;
-  const effectiveTonnageLimit =
-    Number(tonnageLimit) +
-    (hasMechanic && mechanicChoice === "tonnage" ? 6 : 0);
-
-  const mcuLimit =
-    250 +
-    (traits.some((t) => t === "One Year War Veteran") ? 75 : 0) +
-    (traits.some((t) => t === "CORRUPT GOVERNMENT (EF GENERAL)") ? 50 : 0);
-
-  const hasMerchantOfDeath = traits.some((t) => t === "Merchant of Death");
-
-  const totalMCU =
-    parseMCU(mcu) +
-    baseEquip.reduce((sum, row, i) => {
-      if (!soldBase[i]) return sum + parseMCU(row.mcuCost);
-      const isFree = String(row.mcuCost).trim().toUpperCase() === "FREE";
-      if (!isFree) return sum - parseMCU(row.mcuCost);
-      const supportMCU = lookupSupportMCU(row.name);
-      const freeWeaponRefund = hasMerchantOfDeath ? 35 : 10;
-      return supportMCU !== null ? sum - supportMCU : sum - freeWeaponRefund;
-    }, 0) +
-    addlEquip.reduce((sum, row, i) => {
-      const cost = parseMCU(row.mcuCost);
-      const isDiscounted =
-        hasScavenger &&
-        scavengerChoice === String(i) &&
-        SUPPORT.some((s) => s.name === row.name);
-      return sum + (isDiscounted ? Math.floor(cost / 2) : cost);
-    }, 0);
-
-  const NON_HEAD_LOCATION_KEYS = [
-    "torso",
-    "rightArm",
-    "leftArm",
-    "rightLeg",
-    "leftLeg",
-  ];
-  const purgeArmorTonnageSavings =
-    hasPurgableArmor && purgeArmor
-      ? NON_HEAD_LOCATION_KEYS.filter((k) => !locations[k]?.destroyed).length *
-        2
-      : 0;
-  const purgedArmorFor = (key) => {
-    if (!hasPurgableArmor || !purgeArmor) return null;
-    if (key === "head") return null;
-    const loc = locations[key];
-    if (!loc || loc.destroyed) return null;
-    return {
-      current: Math.max(1, Number(loc.current || 0) - 10),
-      max: Math.max(1, Number(loc.max || 0) - 10),
-    };
-  };
-
-  const totalTonnage = Math.max(
-    0,
-    baseEquip.reduce(
-      (sum, row, i) => sum + (soldBase[i] ? 0 : parseMCU(row.tonnage)),
-      0,
-    ) +
-      addlEquip.reduce((sum, row) => sum + parseMCU(row.tonnage), 0) -
-      purgeArmorTonnageSavings,
-  );
+  const {
+    hasMechanic,
+    hasNewtype,
+    hasCyberNewtype,
+    hasRambo,
+    hasRookie,
+    hasScavenger,
+    hasPurgableArmor,
+    hasGrypsVet,
+    hasHonorable,
+    gunneryTraitCount,
+    brawlerTraitCount,
+    pilotingTraitCount,
+    gsBonus,
+    bsBonus,
+    psBonus,
+    froBonus,
+    effectiveTonnageLimit,
+    mcuLimit,
+    totalMCU,
+    purgedArmorFor,
+    totalTonnage,
+  } = usePilotDerivedStats({
+    traits,
+    baseEquip,
+    soldBase,
+    addlEquip,
+    scavengerChoice,
+    mcu,
+    tonnageLimit,
+    locations,
+    purgeArmor,
+    mechanicChoice,
+    newtypeChoice1,
+    newtypeChoice2,
+    cyberNewtypeChoice,
+    ramboChoice,
+    grypsVetChoice,
+  });
 
   // Ephemeral UI-only state (dialogs/popups — not persisted)
   const [equipPopup, setEquipPopup] = useState(null);
@@ -901,250 +167,23 @@ const PilotSheetPanel = ({ slotIndex }) => {
   const openEquipPopup = (onSelect) => setEquipPopup({ onSelect });
   const closeEquipPopup = () => setEquipPopup(null);
 
-  // Updaters
-  const handleMsuName = (v) => {
-    setMsuName(v);
-    setTabNames((prev) =>
-      prev.map((label, i) =>
-        i === slotIndex ? (v.trim() ? v : `Pilot ${slotIndex + 1}`) : label,
-      ),
-    );
-  };
+  const { removeSupportLoc, autoFillSupportLoc } = useSupportLocations({
+    locations,
+    setLocations,
+    setSlotWarning,
+  });
+
+  const { updateBaseEquip, applyBaseEquip, updateAddlEquip, applyAddlEquip } =
+    useEquipmentUpdaters({ setBaseEquip, setAddlEquip });
+
+  const { handleMsuName, saveCustomPreset, loadCustomPreset, applyPreset } =
+    usePilotSlotActions(slotIndex, pilotSlot);
 
   const updateTrait = (i, v) =>
     setTraits((prev) => prev.map((t, idx) => (idx === i ? v : t)));
 
-  const updateBaseEquip = (i, field, v) =>
-    setBaseEquip((prev) =>
-      prev.map((e, idx) => (idx === i ? { ...e, [field]: v } : e)),
-    );
-
-  const applyBaseEquip = (i, fields) =>
-    setBaseEquip((prev) =>
-      prev.map((e, idx) => (idx === i ? { ...e, ...fields } : e)),
-    );
-
-  const updateAddlEquip = (i, field, v) =>
-    setAddlEquip((prev) =>
-      prev.map((e, idx) => (idx === i ? { ...e, [field]: v } : e)),
-    );
-
-  const applyAddlEquip = (i, fields) =>
-    setAddlEquip((prev) =>
-      prev.map((e, idx) => (idx === i ? { ...e, ...fields } : e)),
-    );
-
   const updateLoc = (loc, field, v) =>
     setLocations((prev) => ({ ...prev, [loc]: { ...prev[loc], [field]: v } }));
-
-  const removeSupportLoc = (itemName) => {
-    const supportItem = SUPPORT.find((s) => s.name === itemName);
-    if (!supportItem) return;
-    const instructions = parseLocInstructions(supportItem.loc);
-    if (instructions.length === 0) return;
-
-    const armorMatch = itemName.match(/Extra Armor.*\[(\d+)\]/i);
-    const armorDelta = armorMatch ? parseInt(armorMatch[1]) : 0;
-
-    const isShield = /shield/i.test(itemName);
-    const ARM_KEYS = new Set(["rightArm", "leftArm"]);
-
-    setLocations((prev) => {
-      const next = { ...prev };
-      for (const candidates of instructions) {
-        for (const key of candidates) {
-          const loc = next[key];
-          const idx = loc.equipment.indexOf(itemName);
-          if (idx !== -1) {
-            const eq = [...loc.equipment];
-            eq[idx] = "";
-            const updated = { ...loc, equipment: eq };
-            if (armorDelta > 0) {
-              const curNum = parseInt(updated.current) || 0;
-              const maxNum = parseInt(updated.max) || 0;
-              updated.current = String(Math.max(0, curNum - armorDelta));
-              updated.max = String(Math.max(0, maxNum - armorDelta));
-            }
-            if (isShield && ARM_KEYS.has(key)) {
-              updated.shieldCurrent = "";
-              updated.shieldMax = "";
-            }
-            next[key] = updated;
-            break;
-          }
-        }
-      }
-      return next;
-    });
-  };
-
-  const autoFillSupportLoc = (itemName) => {
-    const supportItem = SUPPORT.find((s) => s.name === itemName);
-    if (!supportItem) return;
-    const instructions = parseLocInstructions(supportItem.loc);
-    if (instructions.length === 0) return;
-
-    const armorMatch = itemName.match(/Extra Armor.*\[(\d+)\]/i);
-    const armorDelta = armorMatch ? parseInt(armorMatch[1]) : 0;
-
-    const isShield = /shield/i.test(itemName);
-    const shieldHpMatch =
-      itemName.match(/\[(\d+)/) || itemName.match(/\((\d+)\s*armor\)/i);
-    const shieldHp = isShield && shieldHpMatch ? parseInt(shieldHpMatch[1]) : 0;
-    const ARM_KEYS = new Set(["rightArm", "leftArm"]);
-
-    const overflow = [];
-    const next = { ...locations };
-
-    for (const candidates of instructions) {
-      let filled = false;
-      for (const key of candidates) {
-        const loc = next[key];
-        // A stowed weapon occupies the last equipment slot.
-        const availableSlots = loc.weaponStowed
-          ? loc.equipment.slice(0, loc.equipment.length - 1)
-          : loc.equipment;
-        const emptyIdx = availableSlots.findIndex((eq) => eq === "");
-        if (emptyIdx !== -1) {
-          const eq = [...loc.equipment];
-          eq[emptyIdx] = itemName;
-          const updated = { ...loc, equipment: eq };
-          if (armorDelta > 0) {
-            const curNum = parseInt(updated.current) || 0;
-            const maxNum = parseInt(updated.max) || 0;
-            updated.current = String(curNum + armorDelta);
-            updated.max = String(maxNum + armorDelta);
-          }
-          if (shieldHp > 0 && ARM_KEYS.has(key)) {
-            updated.shieldCurrent = String(shieldHp);
-            updated.shieldMax = String(shieldHp);
-          }
-          next[key] = updated;
-          filled = true;
-          break;
-        }
-      }
-      if (!filled) overflow.push(candidates[0]);
-    }
-
-    setLocations(next);
-    if (overflow.length > 0) {
-      setSlotWarning(
-        `No available equipment slots in: ${overflow.map((k) => LOC_LABELS[k]).join(", ")}.`,
-      );
-    }
-  };
-
-  const saveCustomPreset = () => {
-    const snapshot = {
-      msuName,
-      pilotName,
-      mobileSuit,
-      mcu,
-      fro,
-      tonnageLimit,
-      movement,
-      armorValue,
-      gunnery,
-      brawl,
-      piloting,
-      traits,
-      baseEquip,
-      addlEquip,
-      soldBase,
-      usedBase,
-      usedAddl,
-      purgeArmor,
-      locations,
-      mechanicChoice,
-      newtypeChoice1,
-      newtypeChoice2,
-      cyberNewtypeChoice,
-      ramboChoice,
-      grypsVetChoice,
-    };
-    try {
-      localStorage.setItem("gf_custom_preset", JSON.stringify(snapshot));
-    } catch {}
-    setCustomPreset(snapshot);
-  };
-
-  const loadCustomPreset = () => {
-    if (!customPreset) return;
-    const d = customPreset;
-    setAll({
-      msuName: d.msuName ?? "",
-      pilotName: d.pilotName ?? "",
-      mobileSuit: d.mobileSuit ?? "",
-      mcu: d.mcu ?? "",
-      fro: d.fro ?? "",
-      tonnageLimit: d.tonnageLimit ?? "",
-      movement: d.movement ?? "",
-      armorValue: d.armorValue ?? "",
-      gunnery: d.gunnery ?? "",
-      brawl: d.brawl ?? "",
-      piloting: d.piloting ?? "",
-      traits: d.traits ?? ["", "", "", "", ""],
-      baseEquip: d.baseEquip ?? Array(8).fill(null).map(blankEquip),
-      addlEquip: d.addlEquip ?? Array(8).fill(null).map(blankEquip),
-      soldBase: d.soldBase ?? Array(8).fill(false),
-      usedBase: d.usedBase ?? Array(8).fill(false),
-      usedAddl: d.usedAddl ?? Array(8).fill(false),
-      purgeArmor: d.purgeArmor ?? false,
-      locations: d.locations ?? {
-        head: blankLoc(3),
-        torso: blankLoc(3),
-        rightArm: blankLoc(3),
-        leftArm: blankLoc(3),
-        rightLeg: blankLoc(3),
-        leftLeg: blankLoc(3),
-      },
-      mechanicChoice: d.mechanicChoice ?? "",
-      newtypeChoice1: d.newtypeChoice1 ?? "",
-      newtypeChoice2: d.newtypeChoice2 ?? "",
-      cyberNewtypeChoice: d.cyberNewtypeChoice ?? "",
-      ramboChoice: d.ramboChoice ?? "",
-      grypsVetChoice: d.grypsVetChoice ?? "",
-    });
-    const name = d.msuName ?? "";
-    setTabNames((prev) =>
-      prev.map((label, i) =>
-        i === slotIndex
-          ? name.trim()
-            ? name
-            : `Pilot ${slotIndex + 1}`
-          : label,
-      ),
-    );
-  };
-
-  const applyPreset = (id) => {
-    const preset = PRESETS.find((p) => p.id === id);
-    if (!preset) return;
-    const d = preset.data;
-    setAll({
-      msuName: d.msuName,
-      mobileSuit: d.mobileSuit,
-      mcu: d.mcu,
-      fro: d.fro,
-      tonnageLimit: d.tonnageLimit,
-      movement: d.movement,
-      armorValue: d.armorValue,
-      baseEquip: d.baseEquip,
-      addlEquip: d.addlEquip,
-      soldBase: Array(8).fill(false),
-      locations: d.locations,
-    });
-    setTabNames((prev) =>
-      prev.map((label, i) =>
-        i === slotIndex
-          ? d.msuName.trim()
-            ? d.msuName
-            : `Pilot ${slotIndex + 1}`
-          : label,
-      ),
-    );
-  };
 
   // ─── Render ──────────────────────────────────────────────────────────────────
 

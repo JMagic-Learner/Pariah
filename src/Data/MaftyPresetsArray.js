@@ -34,8 +34,9 @@ export const MAFTY_PRESETS = [
           name: "Heavy Shield (30 ARM)",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "5",
-          notes: "",
+          tonnage: "12",
+          notes:
+            "When damage is assigned to the Torso, or to the attached arm's respective side (meaning a shield can cover left leg and left arm simulatenously), assign all damage dealt. Cleave and AOE damage is assigned to the shield in this case",
         },
         {
           name: "Beam Saber",
@@ -220,8 +221,9 @@ export const MAFTY_PRESETS = [
           name: "Heavy Shield",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "5",
-          notes: "",
+          tonnage: "12",
+          notes:
+            "When damage is assigned to the Torso, or to the attached arm's respective side (meaning a shield can cover left leg and left arm simulatenously), assign all damage dealt. Cleave and AOE damage is assigned to the shield in this case",
         },
         {
           name: "Beam Saber",
@@ -322,7 +324,7 @@ export const MAFTY_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
         },
         {
           name: "Beam Saber",

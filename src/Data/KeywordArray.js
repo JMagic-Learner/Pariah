@@ -1,7 +1,7 @@
 export const KEYWORDS = [
   {
     name: "[AP(X)]",
-    desc: "Declare Anti-Armor or Anti-Material mode when attacking. Anti-Armor: After rolling hit locations and assigning damage to hit locations, assign X damage to the Torso. If a shield intercepted the direct damage, deal X damage to the assigned arm instead. Direct TORSO hits also remove one randomly chosen equipment (roll 1d3). Anti-Material: enemy MSU cannot nullify hit locations with HARD COVER.",
+    desc: "After rolling hit locations and assigning damage to hit locations, assign X damage to the Torso. If a shield intercepted the direct damage, deal X damage to the assigned arm instead. Direct TORSO hits also remove one randomly chosen equipment (roll 1d3).",
   },
   {
     name: "[AOE(X)]",
@@ -14,6 +14,10 @@ export const KEYWORDS = [
   {
     name: "[AMBPHIBIOUS]",
     desc: "No movement penalties in water terrain. Gain [BOOST(X+1)] while moving through water.",
+  },
+  {
+    name: "[ANTI-MATERIAL]",
+    desc: "Anti-Material: enemy MSU cannot nullify hit locations with HARD COVER.",
   },
   {
     name: "[BRACE]",

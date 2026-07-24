@@ -202,7 +202,7 @@ export const CROSSBONE_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
         },
         {
           name: "Lance",

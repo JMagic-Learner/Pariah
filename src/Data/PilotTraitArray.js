@@ -219,10 +219,9 @@ export const TRAITS = [
     restrictions: "EARTH FEDERATION GROUND FORCES ONLY",
   },
   {
-    name: "Merchant of Death",
+    name: "Mentor",
     cost: 1,
-    effect:
-      "All base weapons can be sold for 35 MCU each instead of 10 MCU each.",
+    effect: `At step 1.4 of the Status Phase, all [FIRETEAM] members within 8" of this [PILOT] may substitute their base Gunnery, Brawl, and Piloting skills with this [PILOT]'s respective statistics. (i.e if this [PILOT] has Gunnery, Rambo traits, the total statistic will be shared and replace the original statistics of other friendly [FIRETEAM] members). [FIRETEAM] members that choose to do so must subsitute every stat, they cannot choose to selectively replace only some of their statistics.`,
     restrictions: "",
   },
   {

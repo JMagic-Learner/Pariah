@@ -79,6 +79,19 @@ export const RANGED = [
     keywords: "[AP(5)],[BRACE]",
   },
   {
+    name: "Hyper Beam Cannon",
+    type: "Cannon",
+    rof: 2,
+    range: "20|40|60|80",
+    mod: "-2|+0|+2|+1",
+    dam: 23,
+    ton: 5,
+    fro: 5,
+    mcu: 75,
+    faction: "–",
+    keywords: "[AP(5)] or [ANTI-MATERIAL],[LINEAR],[BRACE]",
+  },
+  {
     name: "Beam Cannon",
     type: "Cannon",
     rof: 1,
@@ -89,7 +102,7 @@ export const RANGED = [
     fro: 3,
     mcu: 50,
     faction: "–",
-    keywords: "[MOUNTABLE]",
+    keywords: "[BRACE],[MOUNTABLE]",
   },
   {
     name: "Beam Magnum",
@@ -401,7 +414,7 @@ export const RANGED = [
     fro: "–",
     mcu: 50,
     faction: "–",
-    keywords: "[GRIP],[AP(5)] OR [AOE(6)]",
+    keywords: "[GRIP],[AP(5)] OR [AOE(6)] or [ANTI-MATERIAL]",
   },
   {
     name: "Rifle (Beam)",
@@ -505,7 +518,7 @@ export const RANGED = [
     fro: "–",
     mcu: 125,
     faction: "–",
-    keywords: "[AP(5)],[RELOAD],[SCOPE],[MOUNTABLE]",
+    keywords: "[AP(5)] or [ANTI-MATERIAL],[RELOAD],[SCOPE],[MOUNTABLE]",
   },
   {
     name: "Sniper Rifle (Beam)",

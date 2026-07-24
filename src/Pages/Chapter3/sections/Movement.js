@@ -14,8 +14,10 @@ export const Movement = () => {
             of the base.
           </li>
           <li className="pv1">
-            <span className="fw6 red">Line of Sight</span> is measured from any
-            part of the Front Facing arc and to [HEAD] level.
+            <span className="fw6 red">Line of Sight</span> is measured the head
+            of the MSU. Players should get to eye level with the MSU's head and
+            ascertain from the MSU's head if the enemy hit locations can be
+            seen".
           </li>
           <li className="pv1">
             Firing arcs, [BOOST(X)] paths, and rear arc vulnerability are all
@@ -190,6 +192,10 @@ export const Movement = () => {
             <span className="fw6 red"> [BOOST] </span> movement is counted when
             calculating Evasion modifiers from the Evasion Tier Table.
           </li>
+          <li className="pv1">
+            <span className="fw6 red"> [BOOST] </span> movement does not consume
+            an action, therefore is not eligible for Reactive Attack action.
+          </li>
         </ul>
       </div>
 
@@ -240,6 +246,11 @@ export const Movement = () => {
                 Blitzing MSU:{" "}
                 <span className="fw6 red">5 damage + 1 per 3 inches</span> of
                 movement.
+              </li>
+              <li className="pv1">
+                The Blitzing MSU may choose to assign damage it's equipped
+                Shield first. IF it does so, it may not benefit from Spiky
+                Shoulder supprot equipment.
               </li>
             </ul>
           </li>

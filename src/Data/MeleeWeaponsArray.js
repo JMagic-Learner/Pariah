@@ -100,7 +100,7 @@ export const MELEE = [
   {
     name: "Gauntlets",
     type: "Hands",
-    rof: 2,
+    rof: 1,
     range: '0–2"',
     mod: "+1",
     dam: 10,
