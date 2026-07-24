@@ -61,7 +61,9 @@ export const MobileSuits = () => {
         <li className="pv1 red fw6">
           Equipment Tonnage (TONNAGE/3):{" "}
           <span className="fw4 black">
-            How much weight a MSU can incur for equipment and weapons.
+            How much weight a MSU can incur for equipment and weapons. Equipment
+            Tonnage is equal to the MSU's Max Weight minus its Empty Weight.
+            This value can be sourced from Gundam Wiki
           </span>
         </li>
         <li className="pv1 red fw6">
