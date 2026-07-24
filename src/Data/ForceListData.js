@@ -771,6 +771,18 @@ export const FORCE_LIST_FACTIONS = [
           "Shield + Gatling Heat Blade, Restraint Cables, Spiky Shoulders (ZEON), Arm Cannon",
       },
       {
+        msu: "MS-07H-8 Gouf Flight Type",
+        mcu: 185,
+        move: '8"',
+        armor: 22,
+        fro: 4,
+        tonnage: 17,
+        year: "0079",
+        faction: "Zeon",
+        equipment:
+          "Shield + Gatling, Heat Blade, Arm Rotary Cannon, Vertical Jump Jets",
+      },
+      {
         msu: "MS-09 Dom",
         mcu: 200,
         move: '7"',
