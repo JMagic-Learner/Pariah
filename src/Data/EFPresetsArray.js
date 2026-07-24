@@ -43,7 +43,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Vulcan Cannons",
@@ -123,7 +123,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Beam Saber",
@@ -228,7 +228,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Beam Saber",
@@ -316,7 +316,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Beam Saber",
@@ -404,7 +404,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Beam Saber",
@@ -618,7 +618,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Beam Saber",
@@ -920,7 +920,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Beam Saber",
@@ -1014,7 +1014,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Beam Saber",
@@ -1225,7 +1225,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Vulcan Cannons",
@@ -1359,7 +1359,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Vulcan Cannons",
@@ -1444,7 +1444,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Beam Saber",
@@ -1538,7 +1538,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Beam Saber",
@@ -1648,7 +1648,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Beam Saber",
@@ -1736,7 +1736,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Beam Saber",
@@ -2080,7 +2080,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Missile Pod 8 (Shield)",
@@ -2295,7 +2295,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         B(),
         B(),
@@ -2477,7 +2477,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         B(),
         B(),
@@ -2557,7 +2557,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Vulcan Cannons",
@@ -2784,7 +2784,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Beam Saber",
@@ -3561,7 +3561,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Beam Saber",
@@ -3661,7 +3661,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Beam Saber",
@@ -3776,7 +3776,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Side Verniers",
@@ -3938,7 +3938,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Beam Saber",
@@ -4065,7 +4065,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Vulcan Cannon (INBUILT)",
@@ -4349,7 +4349,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Beam Saber",
@@ -4631,7 +4631,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Beam Saber",
@@ -4737,7 +4737,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Beam Saber",
@@ -4849,7 +4849,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Beam Saber",
@@ -4978,7 +4978,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Beam Saber",
@@ -5300,7 +5300,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Beam Saber",

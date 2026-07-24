@@ -831,7 +831,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MS-09R Rick Dom",
-        mcu: 200,
+        mcu: 180,
         move: '7"',
         armor: 24,
         fro: 4,
@@ -840,6 +840,18 @@ export const FORCE_LIST_FACTIONS = [
         faction: "Zeon",
         equipment:
           "MG (ZEON), Bazooka, Side Verniers, Flash Grenade (Mounted), Heavy Booster",
+      },
+      {
+        msu: "MS-09RS Rick Dom",
+        mcu: 190,
+        move: '7"',
+        armor: 24,
+        fro: 7,
+        tonnage: 35,
+        year: "0079",
+        faction: "Zeon",
+        equipment:
+          "Beam Cannon, Bazooka, Side Verniers, Flash Grenade (Mounted), Heat Blade, Heavy Booster",
       },
       {
         msu: "MSN-07 Z'Gok-E",
@@ -1121,7 +1133,19 @@ export const FORCE_LIST_FACTIONS = [
         year: "0093",
         faction: "Zeon, Neo Zeon",
         equipment:
-          "Beam Rifle, Beam Saber x2, Psycommu Funnel System, Funnel x 4, Heavy Booster",
+          "Beam Rifle, Beam Saber x2, Psycommu Funnel System, Funnel x 6, Heavy Booster, Shield",
+      },
+      {
+        msu: "MSN-04 II-Nightingale",
+        mcu: 325,
+        move: '6"',
+        armor: 32,
+        fro: 9,
+        tonnage: 40,
+        year: "0093",
+        faction: "Zeon, Neo Zeon",
+        equipment:
+          "Hyper Beam Cannon, Beam Saber x2,Funnel x 10, Heavy Booster, Extra Arms x 2, Shield",
       },
       {
         msu: "AMS-129 Geara Zulu Guard",
@@ -1179,7 +1203,7 @@ export const FORCE_LIST_FACTIONS = [
     units: [
       {
         msu: "Me02R-F01 Messer Type F01",
-        mcu: 180,
+        mcu: 170,
         move: '7"',
         armor: 26,
         fro: 7,
@@ -1191,7 +1215,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "Me02R-F02 Messer Type F02",
-        mcu: 205,
+        mcu: 190,
         move: '7"',
         armor: 26,
         fro: 7,
@@ -1203,7 +1227,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "Me02R-F02c Messer Type F02c",
-        mcu: 235,
+        mcu: 225,
         move: '7"',
         armor: 26,
         fro: 7,

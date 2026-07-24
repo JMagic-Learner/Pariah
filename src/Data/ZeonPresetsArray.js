@@ -759,7 +759,7 @@ export const ZEON_PRESETS = [
           fro: "",
           tonnage: "4",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Missile Pod 3 (MOUNTED)",
@@ -1330,7 +1330,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MS-09 DOM",
       mobileSuit: "MS-09 DOM",
-      mcu: "200",
+      mcu: "180",
       fro: "5",
       tonnageLimit: "19",
       movement: '7"',
@@ -1500,6 +1500,94 @@ export const ZEON_PRESETS = [
     },
   },
   {
+    id: "ms09rs-rick-dom",
+    name: "MS-09RS RICK DOM",
+    faction: "ZEON",
+    data: {
+      msuName: "MS-09RS RICK DOM",
+      mobileSuit: "MS-09RS RICK DOM",
+      mcu: "190",
+      fro: "7",
+      tonnageLimit: "35",
+      movement: '7"',
+      armorValue: "24",
+      baseEquip: [
+        {
+          name: "Flash Grenade (MOUNTED)",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "1",
+          notes: "",
+        },
+        {
+          name: "Beam Cannon",
+          mcuCost: "FREE",
+          fro: "3",
+          tonnage: "4",
+          notes: "[MOUNTABLE]",
+        },
+        {
+          name: "Side Verniers",
+          mcuCost: "FREE",
+          fro: "1 (PASSIVE)",
+          tonnage: "8",
+          notes: "No movement penalty sideways; can BOOST sideways.",
+        },
+        {
+          name: "Heat Blade",
+          mcuCost: "FREE",
+          fro: "1",
+          tonnage: "3",
+          notes: "[CLEAVE(X)],[LETHAL]",
+        },
+        {
+          name: "Heavy Boosters",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "8",
+          notes: "[BOOST(1)] becomes [BOOST(2)]",
+        },
+        B(),
+        B(),
+        B(),
+      ],
+      addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
+      locations: {
+        head: { current: "24", max: "24", weapon: "", equipment: ["", "", ""] },
+        torso: {
+          current: "24",
+          max: "24",
+          weapon: "Flash Grenade (MOUNTED)",
+          equipment: ["Side Verniers", "Heavy Booster", ""],
+        },
+        rightArm: {
+          current: "24",
+          max: "24",
+          weapon: "Bazooka",
+          equipment: ["Side Verniers", "Heavy Booster", ""],
+        },
+        leftArm: {
+          current: "24",
+          max: "24",
+          weapon: "Machine Gun (ZEON)",
+          equipment: ["Side Verniers", "Heavy Booster", ""],
+        },
+        rightLeg: {
+          current: "24",
+          max: "24",
+          weapon: "",
+          equipment: ["Side Verniers", "Heavy Booster", ""],
+        },
+        leftLeg: {
+          current: "24",
+          max: "24",
+          weapon: "",
+          equipment: ["Side Verniers", "Heavy Booster", ""],
+        },
+      },
+    },
+  },
+  {
     id: "ms14a-gelgoog",
     name: "MS-14A GELGOOG",
     faction: "ZEON",
@@ -1525,7 +1613,7 @@ export const ZEON_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Beam Naginata",
@@ -2281,7 +2369,7 @@ export const ZEON_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "PanzerFausts",
@@ -2653,7 +2741,7 @@ export const ZEON_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Heavy Boosters",
@@ -3739,14 +3827,7 @@ export const ZEON_PRESETS = [
           notes: "",
         },
         {
-          name: "Psycommu Funnel System",
-          mcuCost: "FREE",
-          fro: "2 (PASSIVE)",
-          tonnage: "3",
-          notes: "",
-        },
-        {
-          name: "Funnel x 4",
+          name: "Funnel x 6",
           mcuCost: "FREE",
           fro: "",
           tonnage: "",
@@ -3759,7 +3840,22 @@ export const ZEON_PRESETS = [
           tonnage: "10",
           notes: "",
         },
-        B(),
+        {
+          name: "[PSYCOMMU]",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "",
+          notes:
+            "Newtype and Cyber-Newtype pilots gain 1 extra [NEWTYPE] trait",
+        },
+        {
+          name: "Shield",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "6",
+          notes:
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
+        },
         B(),
         B(),
       ],
@@ -3773,7 +3869,7 @@ export const ZEON_PRESETS = [
           equipment: [
             "External Propellent",
             "2x Beam Saber (Stowed)",
-            "Funnel System, 6 B.Bits",
+            "6 B.Bits",
             "",
           ],
         },
@@ -3798,6 +3894,139 @@ export const ZEON_PRESETS = [
         leftLeg: {
           current: "30",
           max: "30",
+          weapon: "",
+          equipment: ["Heavy Booster", "", ""],
+        },
+      },
+    },
+  },
+  {
+    id: "MSN-04-II-Nightingale",
+    name: "MSN-04 II-Nightingale",
+    faction: "ZEON",
+    data: {
+      msuName: "MSN-04 II-Nightingale",
+      mobileSuit: "MSN-04 II-Nightingale",
+      mcu: "325",
+      fro: "9",
+      tonnageLimit: "40",
+      movement: '6"',
+      armorValue: "32",
+      baseEquip: [
+        {
+          name: "Hyper Beam Cannon",
+          mcuCost: "FREE",
+          fro: "5",
+          tonnage: "5",
+          notes: "[AP(5)] or [ANTI-MATERIAL],[LINEAR],[BRACE]",
+        },
+        {
+          name: "Beam Saber",
+          mcuCost: "FREE",
+          fro: "1",
+          tonnage: "1",
+          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+        },
+        {
+          name: "Beam Saber",
+          mcuCost: "FREE",
+          fro: "1",
+          tonnage: "1",
+          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+        },
+        {
+          name: "Funnel x 10",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "",
+          notes: "",
+        },
+        {
+          name: "Heavy Booster",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "10",
+          notes: "[BOOST(1)] becomes [BOOST(2)]",
+        },
+        {
+          name: "[PSYCOMMU]",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "",
+          notes:
+            "Newtype and Cyber-Newtype pilots gain 1 extra [NEWTYPE] trait",
+        },
+        {
+          name: "Vulcan Cannons",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "1",
+          notes: "[FULL AUTO],[INBUILT],[AKIMBO]",
+        },
+        {
+          name: "Shield",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "6",
+          notes:
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
+        },
+      ],
+      addlEquip: [
+        {
+          name: "Extra Arms (Pair)",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "2",
+          notes: "Add a pair of arms; each can hold one weapon.",
+        },
+        {
+          name: "Extra Arms (Pair)",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "2",
+          notes: "Add a pair of arms; each can hold one weapon.",
+        },
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+      ],
+      locations: {
+        head: { current: "32", max: "32", weapon: "", equipment: ["", "", ""] },
+        torso: {
+          current: "32",
+          max: "32",
+          weapon: "Vulcan Cannons",
+          equipment: [
+            "Heavy Booster",
+            "2x Beam Saber (Stowed)",
+            "2x Extra Arms (Pair)",
+          ],
+        },
+        rightArm: {
+          current: "32",
+          max: "32",
+          weapon: "Hyper Beam Cannon",
+          equipment: ["", "", ""],
+        },
+        leftArm: {
+          current: "32",
+          max: "32",
+          weapon: "Shield",
+          equipment: ["", "", ""],
+        },
+        rightLeg: {
+          current: "32",
+          max: "32",
+          weapon: "",
+          equipment: ["Heavy Booster", "", ""],
+        },
+        leftLeg: {
+          current: "32",
+          max: "32",
           weapon: "",
           equipment: ["Heavy Booster", "", ""],
         },

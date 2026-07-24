@@ -10,7 +10,7 @@ export const MAFTY_PRESETS = [
     data: {
       msuName: "Me02R-F01 MESSER TYPE-F01",
       mobileSuit: "Me02R-F01 Messer Type-F01",
-      mcu: "180",
+      mcu: "170",
       fro: "7",
       tonnageLimit: "26",
       movement: '7"',
@@ -104,7 +104,7 @@ export const MAFTY_PRESETS = [
     data: {
       msuName: "Me02R-F02 MESSER TYPE-F02",
       mobileSuit: "Me02R-F02 Messer Type-F02",
-      mcu: "205",
+      mcu: "190",
       fro: "7",
       tonnageLimit: "38",
       movement: '7"',
@@ -197,7 +197,7 @@ export const MAFTY_PRESETS = [
     data: {
       msuName: "Me02R-F02c MESSER TYPE-F02c",
       mobileSuit: "Me02R-F02c Messer Type-F02c",
-      mcu: "235",
+      mcu: "225",
       fro: "7",
       tonnageLimit: "29",
       movement: '7"',
@@ -324,7 +324,7 @@ export const MAFTY_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot".,
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Beam Saber",

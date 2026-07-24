@@ -102,7 +102,7 @@ export const RANGED = [
     fro: 3,
     mcu: 50,
     faction: "–",
-    keywords: "[BRACE],[MOUNTABLE]",
+    keywords: "[MOUNTABLE]",
   },
   {
     name: "Beam Magnum",
