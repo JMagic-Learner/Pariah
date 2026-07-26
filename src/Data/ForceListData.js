@@ -29,7 +29,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RX-78-2 Gundam",
-        mcu: 125,
+        mcu: 120,
         move: '7"',
         armor: 23,
         fro: 6,
@@ -40,7 +40,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RGM-79 GM Ground",
-        mcu: 120,
+        mcu: 115,
         move: '5"',
         armor: 22,
         fro: 5,
@@ -86,7 +86,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RGM-79FP GM Striker",
-        mcu: 160,
+        mcu: 165,
         move: '6"',
         armor: 22,
         fro: 6,
@@ -110,7 +110,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RX-79[G] EZ-08",
-        mcu: 140,
+        mcu: 150,
         move: '6"',
         armor: 24,
         fro: 6,
@@ -144,7 +144,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RGM-79S Spartan",
-        mcu: 155,
+        mcu: 160,
         move: '6"',
         armor: 23,
         fro: 6,
@@ -179,7 +179,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RX-78 GP01",
-        mcu: 160,
+        mcu: 165,
         move: '7"',
         armor: 24,
         fro: "6 (8)",
@@ -213,7 +213,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MSW-004 Gundam Kestral",
-        mcu: 140,
+        mcu: 135,
         move: '8"',
         armor: 24,
         fro: 7,
@@ -224,7 +224,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RGM-79 SR SNIPER III",
-        mcu: 125,
+        mcu: 115,
         move: '6"',
         armor: 20,
         fro: 5,
@@ -235,7 +235,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RGM-79 SR SNIPER III Medium",
-        mcu: 125,
+        mcu: 120,
         move: '6"',
         armor: 20,
         fro: 5,
@@ -246,11 +246,11 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RGM-79 EW EWAC GM",
-        mcu: 215,
+        mcu: 200,
         move: '6"',
         armor: 20,
         fro: 5,
-        tonnage: 42,
+        tonnage: 18,
         year: "0084",
         faction: "EF, TITANS",
         equipment:
@@ -258,7 +258,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RMS-106 Hizack",
-        mcu: 130,
+        mcu: 135,
         move: '6"',
         armor: 22,
         fro: 7,
@@ -291,19 +291,19 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RX-110 Gabthley",
-        mcu: 150,
+        mcu: 165,
         move: '8"',
         armor: 26,
         fro: 8,
-        tonnage: 24,
+        tonnage: 34,
         year: "0087",
         faction: "EF, TITANS",
         equipment: "Feydayeen Rifle, Gauntlets x 2, Beam Rifle x 2 (Mounted)",
       },
       {
         msu: "RMS-154 Barzam",
-        mcu: 135,
-        move: '6"',
+        mcu: 150,
+        move: '7"',
         armor: 22,
         fro: 6,
         tonnage: 43,
@@ -313,7 +313,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MSA-003 NEMO",
-        mcu: 120,
+        mcu: 135,
         move: '8"',
         armor: 22,
         fro: 7,
@@ -324,7 +324,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MSN-00100 Hyaku Shiki",
-        mcu: 170,
+        mcu: 155,
         move: '7"',
         armor: 24,
         fro: 8,
@@ -335,7 +335,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MSZ-006 Zeta Gundam",
-        mcu: 160,
+        mcu: 170,
         move: '9"',
         armor: 25,
         fro: 8,
@@ -347,7 +347,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RGM-89 Jegan",
-        mcu: 140,
+        mcu: 145,
         move: '7"',
         armor: 24,
         fro: 7,
@@ -359,7 +359,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RGM-89De Jegan [ECOAS Type]",
-        mcu: 185,
+        mcu: 190,
         move: '7"',
         armor: 25,
         fro: 7,
@@ -371,7 +371,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RGM-89D Jegan [Type D]",
-        mcu: 145,
+        mcu: 155,
         move: '7"',
         armor: 25,
         fro: 7,
@@ -395,7 +395,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RGM-89 Stark Jegan",
-        mcu: 180,
+        mcu: 185,
         move: '7"',
         armor: 27,
         fro: 7,
@@ -407,7 +407,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RGM-96X Jesta",
-        mcu: 175,
+        mcu: 165,
         move: '7"',
         armor: 24,
         fro: 7,
@@ -431,7 +431,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "ORX-005 Gaplant",
-        mcu: 205,
+        mcu: 230,
         move: '9"',
         armor: 24,
         fro: 8,
@@ -455,7 +455,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "PMX-001 Palace Athene",
-        mcu: 170,
+        mcu: 155,
         move: '7"',
         armor: 27,
         fro: 8,
@@ -467,7 +467,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "PMX-002 Bolinoak Sammahn",
-        mcu: 195,
+        mcu: 180,
         move: '6"',
         armor: 25,
         fro: 6,
@@ -479,7 +479,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RGM-86R GM III",
-        mcu: 180,
+        mcu: 185,
         move: '7"',
         armor: 24,
         fro: 6,
@@ -502,7 +502,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RGM-88X Jedah",
-        mcu: 175,
+        mcu: 185,
         move: '7"',
         armor: 25,
         fro: 7,
@@ -514,7 +514,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RX-93 NU Gundam",
-        mcu: 250,
+        mcu: 255,
         move: '8"',
         armor: 26,
         fro: 8,
@@ -538,7 +538,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "FA-93HWS ν GUNDAM Heavy Weapons System Type",
-        mcu: 250,
+        mcu: 265,
         move: '6"',
         armor: 30,
         fro: 7,
@@ -550,8 +550,8 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RX-0 Unicorn Gundam",
-        mcu: 210,
-        move: '7"',
+        mcu: 215,
+        move: '8"',
         armor: 28,
         fro: 8,
         tonnage: 42,
@@ -586,7 +586,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RX-104FF Penelope",
-        mcu: 200,
+        mcu: 235,
         move: '8"',
         armor: 28,
         fro: 7,
@@ -598,11 +598,11 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RGM-89M Jegan [Type B]",
-        mcu: 150,
+        mcu: 155,
         move: '7"',
         armor: 25,
         fro: 7,
-        tonnage: 47,
+        tonnage: 26,
         year: "0123",
         faction: "EF",
         equipment:
@@ -610,7 +610,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "F91 Gundam",
-        mcu: 175,
+        mcu: 180,
         move: '9"',
         armor: 26,
         fro: 8,
@@ -652,7 +652,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MS-06C Zaku II Early Type",
-        mcu: 115,
+        mcu: 150,
         move: '6"',
         armor: 21,
         fro: 4,
@@ -664,7 +664,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MS-06F Zaku II",
-        mcu: 115,
+        mcu: 105,
         move: '6"',
         armor: 20,
         fro: 4,
@@ -676,7 +676,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MS-06M Zaku Marine",
-        mcu: 130,
+        mcu: 120,
         move: '6"',
         armor: 22,
         fro: 4,
@@ -688,7 +688,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MS-06K Zaku Cannon",
-        mcu: 140,
+        mcu: 135,
         move: '5"',
         armor: 22,
         fro: 4,
@@ -700,7 +700,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MS-06J Zaku II Ground",
-        mcu: 130,
+        mcu: 120,
         move: '6"',
         armor: 22,
         fro: 4,
@@ -712,7 +712,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MS-06R-1A Zaku High Mobility",
-        mcu: 150,
+        mcu: 135,
         move: '6"',
         armor: 22,
         fro: 4,
@@ -736,7 +736,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MS-06S Zaku II Commander",
-        mcu: 170,
+        mcu: 160,
         move: '6"',
         armor: 21,
         fro: 4,
@@ -760,7 +760,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MS-07B Gouf",
-        mcu: 150,
+        mcu: 130,
         move: '5"',
         armor: 22,
         fro: 4,
@@ -772,7 +772,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MS-07H-8 Gouf Flight Type",
-        mcu: 185,
+        mcu: 155,
         move: '8"',
         armor: 22,
         fro: 4,
@@ -784,7 +784,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MS-09 Dom",
-        mcu: 200,
+        mcu: 190,
         move: '7"',
         armor: 24,
         fro: 5,
@@ -796,7 +796,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MSM-08 Zogok",
-        mcu: 155,
+        mcu: 150,
         move: '7"',
         armor: 25,
         fro: 6,
@@ -807,7 +807,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MS-08TX Efreet",
-        mcu: 170,
+        mcu: 175,
         move: '7"',
         armor: 23,
         fro: 5,
@@ -831,7 +831,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MS-08TX Efreet Nacht",
-        mcu: 175,
+        mcu: 180,
         move: `8"`,
         armor: 23,
         fro: 6,
@@ -843,7 +843,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MS-09R Rick Dom",
-        mcu: 180,
+        mcu: 205,
         move: '7"',
         armor: 24,
         fro: 4,
@@ -855,7 +855,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MS-09RS Rick Dom",
-        mcu: 190,
+        mcu: 215,
         move: '7"',
         armor: 24,
         fro: 7,
@@ -879,7 +879,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MSN-01 Psycommu Zaku",
-        mcu: 123,
+        mcu: 180,
         move: '8"',
         armor: 22,
         fro: "7 (9)",
@@ -890,7 +890,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MS-14A Gelgoog",
-        mcu: 170,
+        mcu: 130,
         move: '7"',
         armor: 24,
         fro: 5,
@@ -924,7 +924,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MS-06E Zaku Recon",
-        mcu: 215,
+        mcu: 210,
         move: '6"',
         armor: 20,
         fro: 4,
@@ -936,7 +936,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MS-18E Kampfer",
-        mcu: 165,
+        mcu: 200,
         move: '8"',
         armor: 20,
         fro: 6,
@@ -948,7 +948,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MS-06F-2 Zaku II F2",
-        mcu: 170,
+        mcu: 180,
         move: '7"',
         armor: 22,
         fro: "5 (7)",
@@ -960,7 +960,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "AGX-04 Gerbera Tetra",
-        mcu: 185,
+        mcu: 175,
         move: '7"',
         armor: 23,
         fro: 6,
@@ -971,7 +971,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RX-78GP02A Physilis",
-        mcu: 215,
+        mcu: 210,
         move: '8"',
         armor: 26,
         fro: "7 (9)",
@@ -983,7 +983,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MSK-008 Dijeh",
-        mcu: 140,
+        mcu: 145,
         move: '7"',
         armor: 24,
         fro: 7,
@@ -995,7 +995,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "AMX-004 Qubeley",
-        mcu: 250,
+        mcu: 185,
         move: '8"',
         armor: 24,
         fro: 8,
@@ -1019,7 +1019,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "AMX-008 Ga Zowmn",
-        mcu: 155,
+        mcu: 145,
         move: '8"',
         armor: 23,
         fro: 6,
@@ -1031,7 +1031,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "AMX-009 Dreissen",
-        mcu: 200,
+        mcu: 175,
         move: '7"',
         armor: 27,
         fro: 7,
@@ -1043,7 +1043,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "AMX-011 Zaku III",
-        mcu: 225,
+        mcu: 205,
         move: '7"',
         armor: 26,
         fro: 7,
@@ -1067,7 +1067,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "AMX-101 Gallus J",
-        mcu: 185,
+        mcu: 195,
         move: '7"',
         armor: 26,
         fro: 7,
@@ -1102,7 +1102,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "AMX-102 Zssa",
-        mcu: 160,
+        mcu: 165,
         move: '8"',
         armor: 26,
         fro: 6,
@@ -1113,7 +1113,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "AMS-119 Geara Doga",
-        mcu: 170,
+        mcu: 155,
         move: '7"',
         armor: 25,
         fro: 7,
@@ -1125,7 +1125,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "AMS-119 Geara Doga Heavy Armed Type",
-        mcu: 170,
+        mcu: 165,
         move: '7"',
         armor: 28,
         fro: 6,
@@ -1137,7 +1137,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MSN-04 Sazabi",
-        mcu: 315,
+        mcu: 255,
         move: '8"',
         armor: 30,
         fro: 9,
@@ -1149,7 +1149,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MSN-04 II-Nightingale",
-        mcu: 325,
+        mcu: 365,
         move: '6"',
         armor: 32,
         fro: 9,
@@ -1161,7 +1161,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "AMS-129 Geara Zulu Guard",
-        mcu: 160,
+        mcu: 175,
         move: '7"',
         armor: 27,
         fro: 7,
@@ -1184,7 +1184,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MSN-06S Sinanju",
-        mcu: 200,
+        mcu: 205,
         move: '8"',
         armor: 29,
         fro: 9,
@@ -1215,7 +1215,7 @@ export const FORCE_LIST_FACTIONS = [
     units: [
       {
         msu: "Me02R-F01 Messer Type F01",
-        mcu: 170,
+        mcu: 195,
         move: '7"',
         armor: 26,
         fro: 7,
@@ -1227,7 +1227,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "Me02R-F02 Messer Type F02",
-        mcu: 190,
+        mcu: 205,
         move: '7"',
         armor: 26,
         fro: 7,
@@ -1239,7 +1239,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "Me02R-F02c Messer Type F02c",
-        mcu: 225,
+        mcu: 245,
         move: '7"',
         armor: 26,
         fro: 7,
@@ -1251,7 +1251,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RX-105 Ξ Gundam",
-        mcu: 215,
+        mcu: 190,
         move: '8"',
         armor: 26,
         fro: 9,
@@ -1282,7 +1282,7 @@ export const FORCE_LIST_FACTIONS = [
     units: [
       {
         msu: "XM-01 Den'an Zon",
-        mcu: 215,
+        mcu: 195,
         move: '8"',
         armor: 26,
         fro: 7,
@@ -1294,7 +1294,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "XM-02 Den'an Gei",
-        mcu: 225,
+        mcu: 205,
         move: '9"',
         armor: 25,
         fro: 7,
@@ -1306,7 +1306,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "XM-03 Ebirhu-S",
-        mcu: 220,
+        mcu: 155,
         move: '7"',
         armor: 24,
         fro: 7,
@@ -1318,7 +1318,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "XMS-01 Berga Giros",
-        mcu: 225,
+        mcu: 245,
         move: '9"',
         armor: 26,
         fro: 8,
@@ -1330,7 +1330,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "XMS-02 Berga Dalas",
-        mcu: 230,
+        mcu: 240,
         move: '9"',
         armor: 26,
         fro: 8,
@@ -1342,7 +1342,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "XM-X1 Crossbone Gundam X-1",
-        mcu: 180,
+        mcu: 200,
         move: '9"',
         armor: 23,
         fro: 8,
@@ -1354,7 +1354,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "ZMT-S12G Shokew",
-        mcu: 200,
+        mcu: 225,
         move: '7"',
         armor: 25,
         fro: 8,
@@ -1384,7 +1384,7 @@ export const FORCE_LIST_FACTIONS = [
     units: [
       {
         msu: "NRX-044[R] Prototype Asshimar",
-        mcu: 140,
+        mcu: 135,
         move: '7"',
         armor: 23,
         fro: 7,
@@ -1395,10 +1395,10 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "ORX-005 Gaplant TR",
-        mcu: 230,
+        mcu: 225,
         move: '8"',
         armor: 24,
-        fro: 8,
+        fro: 9,
         tonnage: 44,
         year: "0085",
         faction: "ReZeon, TITANS",
@@ -1419,7 +1419,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RMS-106C Hizack Cannon",
-        mcu: 150,
+        mcu: 135,
         move: '6"',
         armor: 24,
         fro: 5,
@@ -1431,7 +1431,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RX-121 Gundam TR-1 Hazel",
-        mcu: 160,
+        mcu: 205,
         move: '8"',
         armor: 24,
         fro: 7,
@@ -1455,7 +1455,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RX-107 Rosette",
-        mcu: 125,
+        mcu: 165,
         move: '7"',
         armor: 22,
         fro: "6 (8)",
@@ -1467,11 +1467,11 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RX-107 TR-4 Dandelion",
-        mcu: 220,
+        mcu: 195,
         move: '8"',
         armor: 25,
         fro: 7,
-        tonnage: 63,
+        tonnage: 53,
         year: "0086",
         faction: "ReZeon, TITANS",
         equipment:
@@ -1515,7 +1515,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RX-124 TR-6 Woundwort",
-        mcu: 150,
+        mcu: 155,
         move: '8"',
         armor: 24,
         fro: 8,
@@ -1537,7 +1537,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RX-110C Gabthley [HUGIN]",
-        mcu: 150,
+        mcu: 195,
         move: '8"',
         armor: 26,
         fro: 8,
@@ -1548,7 +1548,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RX-121-3C Haze'n-thley-Rah II",
-        mcu: 210,
+        mcu: 230,
         move: '8"',
         armor: 28,
         fro: 8,
@@ -1560,9 +1560,9 @@ export const FORCE_LIST_FACTIONS = [
       {
         msu: "RX-124 TR-6 Haze'n'thley Rah II",
         mcu: 260,
-        move: '9"',
+        move: '8"',
         armor: 30,
-        fro: 8,
+        fro: 9,
         tonnage: 60,
         year: "0087",
         faction: "ReZeon, TITANS",
@@ -1571,7 +1571,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RX-124 Gundam TR-6 Gaplant II",
-        mcu: 225,
+        mcu: 230,
         move: '9"',
         armor: 24,
         fro: 8,
@@ -1583,7 +1583,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RX-124 Gundam TR-6 Fiver II",
-        mcu: 150,
+        mcu: 155,
         move: '9"',
         armor: 26,
         fro: 8,
@@ -1606,7 +1606,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RX-124 Gundam TR-6 Hazel II",
-        mcu: 200,
+        mcu: 210,
         move: '8"',
         armor: 27,
         fro: 8,
@@ -1618,7 +1618,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RX-124 Gundam TR-6 Dandelion",
-        mcu: 250,
+        mcu: 265,
         move: '8"',
         armor: 28,
         fro: 8,
@@ -1642,7 +1642,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RX-124 Gundam TR-6 Kehaar II",
-        mcu: 230,
+        mcu: 250,
         move: '9"',
         armor: 27,
         fro: "8 (10)",
@@ -1666,11 +1666,11 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "ARZ-125 RE HAZE",
-        mcu: 205,
+        mcu: 215,
         move: '8"',
         armor: 24,
         fro: 7,
-        tonnage: 60,
+        tonnage: 42,
         year: "0087",
         faction: "ReZeon",
         equipment:
@@ -1678,7 +1678,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RMS-154 Refined Barzam",
-        mcu: 145,
+        mcu: 155,
         move: '7"',
         armor: 24,
         fro: 6,

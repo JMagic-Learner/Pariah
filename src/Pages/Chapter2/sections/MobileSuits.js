@@ -86,8 +86,10 @@ export const MobileSuits = () => {
       </p>
       <div className="pa3 bg-near-white ba b--black-20 br2 mv3">
         <code className="f6 db lh-copy">
-          MCU = (Armor × 2) + (Move × 2) + (FRO × 3) + (Tonnage ÷ 2) + (10 per
-          distinct weapon type) + total Support Equipment cost
+          MCU = (Armor x 2 MCU) + (Move × 2 MCU) + (FRO × 3 MCU) + (Tonnage x 1
+          MCU) + (10 per distinct weapon type) + (5 MCU per Shield support
+          equipment) + (Entire Support Equipment Cost) +(Full Newtype Upgrade
+          Costs)
         </code>
       </div>
 

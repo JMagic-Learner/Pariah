@@ -11,7 +11,7 @@ export const REZEON_PRESETS = [
     data: {
       msuName: "ARZ-125 RE-HAZE",
       mobileSuit: "ARZ-125 Re-Haze",
-      mcu: "205",
+      mcu: "215",
       fro: "7",
       tonnageLimit: "42",
       movement: '8"',
@@ -102,7 +102,7 @@ export const REZEON_PRESETS = [
     data: {
       msuName: "NRX-044[R] PROTOTYPE ASSHIMAR",
       mobileSuit: "NRX-044[R] Prototype Asshimar",
-      mcu: "140",
+      mcu: "135",
       fro: "7",
       tonnageLimit: "23",
       movement: '7"',
@@ -180,7 +180,7 @@ export const REZEON_PRESETS = [
     data: {
       msuName: "ORX-005 GAPLANT TR",
       mobileSuit: "ORX-005 GAPLANT TR",
-      mcu: "230",
+      mcu: "225",
       fro: "9",
       tonnageLimit: "44",
       movement: '8"',
@@ -290,7 +290,7 @@ export const REZEON_PRESETS = [
     data: {
       msuName: "ORX-005 GAPLANT TR-5 HAIROO",
       mobileSuit: "ORX-005 GAPLANT TR-5 Hairoo",
-      mcu: "210",
+      mcu: "230",
       fro: "8",
       tonnageLimit: "44",
       movement: '9"',
@@ -380,7 +380,7 @@ export const REZEON_PRESETS = [
     data: {
       msuName: "RMS-106C HIZACK CANNON",
       mobileSuit: "RMS-106C Hizack Cannon",
-      mcu: "150",
+      mcu: "135",
       fro: "5",
       tonnageLimit: "21",
       movement: '6"',
@@ -480,7 +480,7 @@ export const REZEON_PRESETS = [
     data: {
       msuName: "RMS-117 GALBALDY β HIGH MOBILITY",
       mobileSuit: "RMS-117 Galbaldy β High Mobility",
-      mcu: "190",
+      mcu: "215",
       fro: "6",
       tonnageLimit: "40",
       movement: '8"',
@@ -581,7 +581,7 @@ export const REZEON_PRESETS = [
     data: {
       msuName: "RMS-154 REFINED BARZAM",
       mobileSuit: "RMS-154 Refined Barzam",
-      mcu: "145",
+      mcu: "155",
       fro: "6",
       tonnageLimit: "22",
       movement: '7"',
@@ -676,7 +676,7 @@ export const REZEON_PRESETS = [
     data: {
       msuName: "RX-107 ROSETTE",
       mobileSuit: "RX-107 Rosette",
-      mcu: "125",
+      mcu: "165",
       fro: "6",
       tonnageLimit: "54",
       movement: '7"',
@@ -764,7 +764,7 @@ export const REZEON_PRESETS = [
     data: {
       msuName: "RX-107 TR-4 DANDELION",
       mobileSuit: "RX-107 TR-4 Dandelion",
-      mcu: "125",
+      mcu: "195",
       fro: "7",
       tonnageLimit: "53",
       movement: '8"',
@@ -853,7 +853,7 @@ export const REZEON_PRESETS = [
     data: {
       msuName: "RX-110C GABTHLEY (HUGIN)",
       mobileSuit: "RX-110C Gabthley (Hugin)",
-      mcu: "150",
+      mcu: "195",
       fro: "8",
       tonnageLimit: "62",
       movement: '8"',
@@ -944,7 +944,7 @@ export const REZEON_PRESETS = [
     data: {
       msuName: "RX-121 GUNDAM TR-1 HAZEL",
       mobileSuit: "RX-121 Gundam TR-1 Hazel",
-      mcu: "160",
+      mcu: "205",
       fro: "7",
       tonnageLimit: "22",
       movement: '8"',
@@ -1051,7 +1051,7 @@ export const REZEON_PRESETS = [
     data: {
       msuName: "RX-121 TR-1 ICARUS",
       mobileSuit: "RX-121-1 Gundam TR-1 Icarus",
-      mcu: "160",
+      mcu: "185",
       fro: "7",
       tonnageLimit: "22",
       movement: '9"',
@@ -1254,7 +1254,7 @@ export const REZEON_PRESETS = [
     data: {
       msuName: "RX-121-2A GUNDAM TR-1 HAZEL II ADVANCE",
       mobileSuit: "RX-121-2A Gundam TR-1 Hazel II Advance",
-      mcu: "200",
+      mcu: "190",
       fro: "5",
       tonnageLimit: "39",
       movement: '8"',
@@ -1349,7 +1349,7 @@ export const REZEON_PRESETS = [
     data: {
       msuName: "RX-121-3C HAZE'N-THLEY-RAH II",
       mobileSuit: "RX-121-3C Haze'n-thley-Rah II",
-      mcu: "210",
+      mcu: "230",
       fro: "8",
       tonnageLimit: "70",
       movement: '8"',
@@ -1455,7 +1455,7 @@ export const REZEON_PRESETS = [
     data: {
       msuName: "RX-124 GUNDAM TR-6 FIVER II",
       mobileSuit: "RX-124 Gundam TR-6 Fiver II",
-      mcu: "150",
+      mcu: "155",
       fro: "8",
       tonnageLimit: "25",
       movement: '9"',
@@ -1534,7 +1534,7 @@ export const REZEON_PRESETS = [
     data: {
       msuName: "RX-124 GUNDAM TR-6 GAPLANT II",
       mobileSuit: "RX-124 Gundam TR-6 Gaplant II",
-      mcu: "225",
+      mcu: "230",
       fro: "8",
       tonnageLimit: "44",
       movement: '9"',
@@ -1631,7 +1631,7 @@ export const REZEON_PRESETS = [
     data: {
       msuName: "RX-124 GUNDAM TR-6 HAZEL II",
       mobileSuit: "RX-124 Gundam TR-6 Hazel II",
-      mcu: "200",
+      mcu: "210",
       fro: "8",
       tonnageLimit: "40",
       movement: '8"',
@@ -1899,7 +1899,7 @@ export const REZEON_PRESETS = [
     data: {
       msuName: "RX-124 GUNDAM TR-6 DANDELION",
       mobileSuit: "RX-124 Gundam TR-6 Dandelion",
-      mcu: "250",
+      mcu: "265",
       fro: "8",
       tonnageLimit: "74",
       movement: '8"',
@@ -2111,7 +2111,7 @@ export const REZEON_PRESETS = [
     data: {
       msuName: "RX-124 GUNDAM TR-6 KEHAAR II ADVANCED",
       mobileSuit: "RX-124 Gundam TR-6 Kehaar II Advanced",
-      mcu: "250",
+      mcu: "280",
       fro: "9",
       tonnageLimit: "50",
       movement: '9"',
@@ -2212,7 +2212,7 @@ export const REZEON_PRESETS = [
     data: {
       msuName: "RX-124 GUNDAM TR-6 KEHAAR II",
       mobileSuit: "RX-124 Gundam TR-6 Kehaar II",
-      mcu: "230",
+      mcu: "250",
       fro: "8",
       tonnageLimit: "40",
       movement: '9"',
@@ -2307,7 +2307,7 @@ export const REZEON_PRESETS = [
     data: {
       msuName: "RX-124 TR-6 WOUNDWORT",
       mobileSuit: "RX-124 TR-6 Woundwort",
-      mcu: "150",
+      mcu: "155",
       fro: "8",
       tonnageLimit: "15",
       movement: '8"',

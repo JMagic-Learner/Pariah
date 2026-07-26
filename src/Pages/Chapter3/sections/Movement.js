@@ -98,7 +98,9 @@ export const Movement = () => {
         </h3>
         <p className="lh-copy f6 mb2">
           An MSU can move forward up to its{" "}
-          <span className="fw6 red"> [MOVEMENT] </span> value in inches.
+          <span className="fw6 red"> [MOVEMENT] </span> value in inches. It may
+          not pass through enemy MSU, and may move over terrain freely as long
+          as terrain features are below 3 inches in height.
         </p>
         <ul className="lh-copy pl3 f6 ma0">
           <li className="pv1">

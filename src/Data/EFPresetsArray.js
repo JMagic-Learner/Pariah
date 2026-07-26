@@ -10,7 +10,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RX-78-2 Gundam",
       mobileSuit: "RX-78-2 Gundam",
-      mcu: "125",
+      mcu: "120",
       fro: "6",
       tonnageLimit: "17",
       movement: '7"',
@@ -104,7 +104,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RGM-79 GM Command Space",
       mobileSuit: "RGM-79 GM Command Space",
-      mcu: "175",
+      mcu: "200",
       fro: "5",
       tonnageLimit: "30",
       movement: '7"',
@@ -209,7 +209,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RGM-79 GM Command",
       mobileSuit: "RGM-79 GM Command",
-      mcu: "150",
+      mcu: "155",
       fro: "5",
       tonnageLimit: "13",
       movement: '6"',
@@ -303,7 +303,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RGM-79 GM Ground",
       mobileSuit: "RGM-79 GM Ground",
-      mcu: "120",
+      mcu: "115",
       fro: "5",
       tonnageLimit: "12",
       movement: '5"',
@@ -473,7 +473,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RGM-79C GM Cannon II",
       mobileSuit: "RGM-79C GM Cannon II",
-      mcu: "160",
+      mcu: "170",
       fro: "6",
       tonnageLimit: "20",
       movement: '6"',
@@ -599,7 +599,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RGM-79FP GM Striker",
       mobileSuit: "RGM-79FP GM Striker",
-      mcu: "160",
+      mcu: "165",
       fro: "6",
       tonnageLimit: "26",
       movement: '6"',
@@ -807,7 +807,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RX-79 [G] EZ-08",
       mobileSuit: "RX-79 [G] EZ-08",
-      mcu: "140",
+      mcu: "150",
       fro: "6",
       tonnageLimit: "20",
       movement: '6"',
@@ -1089,7 +1089,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RGM-79S Spartan",
       mobileSuit: "RGM-79S Spartan",
-      mcu: "155",
+      mcu: "160",
       fro: "6",
       tonnageLimit: "18",
       movement: '6"',
@@ -1206,7 +1206,7 @@ export const EF_PRESETS = [
     data: {
       msuName: 'RXT-78NT "ALEX"',
       mobileSuit: 'RXT-78NT "ALEX"',
-      mcu: "185",
+      mcu: "175",
       fro: "7",
       tonnageLimit: "32",
       movement: '8"',
@@ -1319,7 +1319,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "F91 GUNDAM",
       mobileSuit: "F91 GUNDAM",
-      mcu: "175",
+      mcu: "180",
       fro: "8",
       tonnageLimit: "12",
       movement: '9"',
@@ -1425,7 +1425,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "MSA-003 NEMO",
       mobileSuit: "MSA-003 NEMO",
-      mcu: "120",
+      mcu: "135",
       fro: "7",
       tonnageLimit: "19",
       movement: '8"',
@@ -1519,7 +1519,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "MSN-00100 HYAKU SHIKI",
       mobileSuit: "MSN-00100 HYAKU SHIKI",
-      mcu: "170",
+      mcu: "155",
       fro: "8",
       tonnageLimit: "23",
       movement: '7"',
@@ -1629,7 +1629,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "MSW-004 Gundam Kestral",
       mobileSuit: "MSW-004 Gundam Kestral",
-      mcu: "140",
+      mcu: "135",
       fro: "7",
       tonnageLimit: "25",
       movement: '8"',
@@ -1717,7 +1717,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "MSZ-006 ZETA GUNDAM",
       mobileSuit: "MSZ-006 ZETA GUNDAM",
-      mcu: "160",
+      mcu: "170",
       fro: "8",
       tonnageLimit: "34",
       movement: '9"',
@@ -1823,7 +1823,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "ORX-005 GAPLANT",
       mobileSuit: "ORX-005 GAPLANT",
-      mcu: "205",
+      mcu: "230",
       fro: "8",
       tonnageLimit: "44",
       movement: '9"',
@@ -1921,7 +1921,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "PMX-000 Messala (MA)",
       mobileSuit: "PMX-000 Messala (MA)",
-      mcu: "170",
+      mcu: "180",
       fro: "8",
       tonnageLimit: "52",
       movement: '7"',
@@ -2047,7 +2047,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "PMX-001 PALACE ATHENE",
       mobileSuit: "PMX-001 PALACE ATHENE",
-      mcu: "170",
+      mcu: "155",
       fro: "8",
       tonnageLimit: "15",
       movement: '7"',
@@ -2154,7 +2154,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "PMX-002 BOLINOAK SAMMAHN",
       mobileSuit: "PMX-002 BOLINOAK SAMMAHN",
-      mcu: "195",
+      mcu: "180",
       fro: "6",
       tonnageLimit: "25",
       movement: '6"',
@@ -2255,7 +2255,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RGM-79 SR Sniper III Medium",
       mobileSuit: "RGM-79 SR Sniper III Medium",
-      mcu: "125",
+      mcu: "120",
       fro: "5",
       tonnageLimit: "19",
       movement: '6"',
@@ -2349,7 +2349,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RGM-79 SR Sniper III",
       mobileSuit: "RGM-79 SR Sniper III",
-      mcu: "125",
+      mcu: "115",
       fro: "5",
       tonnageLimit: "19",
       movement: '6"',
@@ -2436,7 +2436,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RGM-79 EW EWAC GM",
       mobileSuit: "RGM-79 EW EWAC GM",
-      mcu: "215",
+      mcu: "200",
       fro: "5",
       tonnageLimit: "18",
       movement: '6"',
@@ -2625,7 +2625,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RGM-86R GM III",
       mobileSuit: "RGM-86R GM III",
-      mcu: "180",
+      mcu: "185",
       fro: "6",
       tonnageLimit: "18",
       movement: '7"',
@@ -2737,7 +2737,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RGM-88X JEDAH",
       mobileSuit: "RGM-88X JEDAH",
-      mcu: "200",
+      mcu: "185",
       fro: "7",
       tonnageLimit: "30",
       movement: '7"',
@@ -2849,7 +2849,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RGM-89 JEGAN",
       mobileSuit: "RGM-89 JEGAN",
-      mcu: "140",
+      mcu: "145",
       fro: "7",
       tonnageLimit: "26",
       movement: '7"',
@@ -2957,7 +2957,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RGM-89 Stark Jegan",
       mobileSuit: "RGM-89 Stark Jegan",
-      mcu: "180",
+      mcu: "185",
       fro: "7",
       tonnageLimit: "33",
       movement: '7"',
@@ -3062,7 +3062,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RGM-89D Jegan [Type D]",
       mobileSuit: "RGM-89D Jegan [Type D]",
-      mcu: "145",
+      mcu: "155",
       fro: "7",
       tonnageLimit: "26",
       movement: '7"',
@@ -3304,7 +3304,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RGM-89M Jegan [Type B]",
       mobileSuit: "RGM-89M Jegan [Type B]",
-      mcu: "150",
+      mcu: "155",
       fro: "7",
       tonnageLimit: "26",
       movement: '7"',
@@ -3409,7 +3409,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RGM-89De Jegan [ECOAS Type]",
       mobileSuit: "RGM-89De Jegan [ECOAS Type]",
-      mcu: "185",
+      mcu: "190",
       fro: "7",
       tonnageLimit: "26",
       movement: '7"',
@@ -3542,7 +3542,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RGM 96X JESTA",
       mobileSuit: "RGM 96X JESTA",
-      mcu: "175",
+      mcu: "165",
       fro: "7",
       tonnageLimit: "32",
       movement: '7"',
@@ -3743,7 +3743,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RMS-79 GM II",
       mobileSuit: "RMS-79 GM II",
-      mcu: "160",
+      mcu: "155",
       fro: "5",
       tonnageLimit: "18",
       movement: '7"',
@@ -3837,7 +3837,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RMS-106 HIZACK",
       mobileSuit: "RMS-106 HIZACK",
-      mcu: "130",
+      mcu: "135",
       fro: "7",
       tonnageLimit: "21",
       movement: '6"',
@@ -4161,7 +4161,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RMS-117 GALBALDY β",
       mobileSuit: "RMS-117 GALBALDY β",
-      mcu: "155",
+      mcu: "160",
       fro: "5",
       tonnageLimit: "21",
       movement: '8"',
@@ -4243,7 +4243,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RMS-154 BARZAM",
       mobileSuit: "RMS-154 BARZAM",
-      mcu: "135",
+      mcu: "150",
       fro: "6",
       tonnageLimit: "43",
       movement: '7"',
@@ -4330,7 +4330,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RX-78-GP01",
       mobileSuit: "RX-78-GP01",
-      mcu: "160",
+      mcu: "165",
       fro: "6",
       tonnageLimit: "25",
       movement: '7"',
@@ -4431,7 +4431,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RX-78 GP03 Dendrobium (MA)",
       mobileSuit: "RX-78 GP03 Dendrobium (MA)",
-      mcu: "750",
+      mcu: "1170",
       fro: "9",
       tonnageLimit: "900",
       movement: '9"',
@@ -4612,7 +4612,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RX 93 NU Gundam",
       mobileSuit: "RX 93 NU Gundam",
-      mcu: "250",
+      mcu: "255",
       fro: "8",
       tonnageLimit: "35",
       movement: '8"',
@@ -4718,7 +4718,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RX 93 V2 Hi Nu Gundam",
       mobileSuit: "RX 93 V2 Hi Nu Gundam",
-      mcu: "250",
+      mcu: "280",
       fro: "8",
       tonnageLimit: "54",
       movement: '8"',
@@ -4830,7 +4830,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RX-0 Unicorn Gundam",
       mobileSuit: "RX-0 Unicorn Gundam",
-      mcu: "210",
+      mcu: "215",
       fro: "8",
       tonnageLimit: "42",
       movement: '8"',
@@ -5088,7 +5088,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RX-104FF PENELOPE",
       mobileSuit: "RX-104FF PENELOPE",
-      mcu: "200",
+      mcu: "235",
       fro: "7",
       tonnageLimit: "76",
       movement: '8"',
@@ -5193,7 +5193,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "RX-110C GABTHLEY (HUGIN)",
       mobileSuit: "RX-110C GABTHLEY (HUGIN)",
-      mcu: "150",
+      mcu: "165",
       fro: "8",
       tonnageLimit: "34",
       movement: '8"',
@@ -5375,7 +5375,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "FA-93HWS ν Gundam Heavy Weapons System Type",
       mobileSuit: "FA-93HWS ν Gundam Heavy Weapons System Type",
-      mcu: "250",
+      mcu: "265",
       fro: "7",
       tonnageLimit: "54",
       movement: '6"',

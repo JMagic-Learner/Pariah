@@ -10,7 +10,7 @@ export const MAFTY_PRESETS = [
     data: {
       msuName: "Me02R-F01 MESSER TYPE-F01",
       mobileSuit: "Me02R-F01 Messer Type-F01",
-      mcu: "170",
+      mcu: "195",
       fro: "7",
       tonnageLimit: "26",
       movement: '7"',
@@ -104,7 +104,7 @@ export const MAFTY_PRESETS = [
     data: {
       msuName: "Me02R-F02 MESSER TYPE-F02",
       mobileSuit: "Me02R-F02 Messer Type-F02",
-      mcu: "190",
+      mcu: "205",
       fro: "7",
       tonnageLimit: "38",
       movement: '7"',
@@ -197,7 +197,7 @@ export const MAFTY_PRESETS = [
     data: {
       msuName: "Me02R-F02c MESSER TYPE-F02c",
       mobileSuit: "Me02R-F02c Messer Type-F02c",
-      mcu: "225",
+      mcu: "245",
       fro: "7",
       tonnageLimit: "29",
       movement: '7"',
@@ -298,7 +298,7 @@ export const MAFTY_PRESETS = [
     data: {
       msuName: "RX-105 Ξ GUNDAM",
       mobileSuit: "RX-105 Ξ Gundam",
-      mcu: "215",
+      mcu: "190",
       fro: "9",
       tonnageLimit: "48",
       movement: '8"',

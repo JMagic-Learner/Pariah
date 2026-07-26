@@ -10,7 +10,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MS-05 ZAKU 1",
       mobileSuit: "MS-05 ZAKU 1",
-      mcu: "110",
+      mcu: "95",
       fro: "3",
       tonnageLimit: "15",
       movement: '6"',
@@ -87,7 +87,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MS-06C ZAKU II EARLY TYPE",
       mobileSuit: "MS-06C ZAKU II EARLY TYPE",
-      mcu: "115",
+      mcu: "150",
       fro: "4",
       tonnageLimit: "57",
       movement: '6"',
@@ -170,7 +170,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MS-06E Zaku Recon",
       mobileSuit: "MS-06E Zaku Recon",
-      mcu: "215",
+      mcu: "210",
       fro: "4",
       tonnageLimit: "16",
       movement: '6"',
@@ -269,7 +269,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MS-06F ZAKU II",
       mobileSuit: "MS-06F ZAKU II",
-      mcu: "115",
+      mcu: "105",
       fro: "4",
       tonnageLimit: "18",
       movement: '6"',
@@ -352,7 +352,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MS-06J ZAKU II GROUND",
       mobileSuit: "MS-06J ZAKU II GROUND",
-      mcu: "130",
+      mcu: "120",
       fro: "4",
       tonnageLimit: "18",
       movement: '6"',
@@ -441,7 +441,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MS-06K ZAKU CANNON",
       mobileSuit: "MS-06K ZAKU CANNON",
-      mcu: "140",
+      mcu: "135",
       fro: "4",
       tonnageLimit: "24",
       movement: '5"',
@@ -535,7 +535,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MS-06M Zaku Marine",
       mobileSuit: "MS-06M Zaku Marine",
-      mcu: "130",
+      mcu: "120",
       fro: "4",
       tonnageLimit: "18",
       movement: '6"',
@@ -629,7 +629,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MS-06R-1A Zaku High Mobility",
       mobileSuit: "MS-06R-1A Zaku High Mobility",
-      mcu: "150",
+      mcu: "135",
       fro: "4",
       tonnageLimit: "15",
       movement: '6"',
@@ -719,7 +719,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: 'MS-06R-2 Zaku "Full Bullet" Johnny Ridden',
       mobileSuit: "MS-06R-2 Zaku Johnny Ridden",
-      mcu: "180",
+      mcu: "170",
       fro: "5",
       tonnageLimit: "26",
       movement: '7"',
@@ -825,7 +825,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MS-06S Zaku II Commander",
       mobileSuit: "MS-06S Zaku II Commander",
-      mcu: "170",
+      mcu: "160",
       fro: "4",
       tonnageLimit: "19",
       movement: '6"',
@@ -920,7 +920,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MS-07B GOUF",
       mobileSuit: "MS-07B GOUF",
-      mcu: "150",
+      mcu: "130",
       fro: "4",
       tonnageLimit: "17",
       movement: '5"',
@@ -1009,7 +1009,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MS-07H-8 Gouf Flight Type",
       mobileSuit: "MS-07H-8 Gouf Flight Type",
-      mcu: "185",
+      mcu: "155",
       fro: "4",
       tonnageLimit: "17",
       movement: '8"',
@@ -1092,7 +1092,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MS-08TX EFREET CUSTOM",
       mobileSuit: "MS-08TX EFREET CUSTOM",
-      mcu: "170",
+      mcu: "210",
       fro: "6",
       tonnageLimit: "48",
       movement: '8"',
@@ -1198,7 +1198,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MS-08TX EFREET NACHT",
       mobileSuit: "MS-08TX EFREET NACHT",
-      mcu: "175",
+      mcu: "180",
       fro: "6",
       tonnageLimit: "35",
       movement: '8"',
@@ -1302,7 +1302,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MS-08TX EFREET",
       mobileSuit: "MS-08TX EFREET",
-      mcu: "170",
+      mcu: "175",
       fro: "5",
       tonnageLimit: "35",
       movement: '7"',
@@ -1413,7 +1413,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MS-09 DOM",
       mobileSuit: "MS-09 DOM",
-      mcu: "180",
+      mcu: "190",
       fro: "5",
       tonnageLimit: "19",
       movement: '7"',
@@ -1501,7 +1501,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MS-09R RICK DOM",
       mobileSuit: "MS-09R RICK DOM",
-      mcu: "200",
+      mcu: "205",
       fro: "4",
       tonnageLimit: "35",
       movement: '7"',
@@ -1589,7 +1589,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MS-09RS RICK DOM",
       mobileSuit: "MS-09RS RICK DOM",
-      mcu: "190",
+      mcu: "215",
       fro: "7",
       tonnageLimit: "35",
       movement: '7"',
@@ -1677,7 +1677,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MS-14A GELGOOG",
       mobileSuit: "MS-14A GELGOOG",
-      mcu: "170",
+      mcu: "130",
       fro: "5",
       tonnageLimit: "20",
       movement: '7"',
@@ -1761,7 +1761,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MS-18E KAMPFER",
       mobileSuit: "MS-18E KAMPFER",
-      mcu: "165",
+      mcu: "200",
       fro: "6",
       tonnageLimit: "35",
       movement: '8"',
@@ -1900,7 +1900,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MSM-03C HYGOGG",
       mobileSuit: "MSM-03C HYGOGG",
-      mcu: "170",
+      mcu: "165",
       fro: "7",
       tonnageLimit: "25",
       movement: '7"',
@@ -2028,7 +2028,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MSM-07E Z'GOK-E",
       mobileSuit: "MSM-07E Z'GOK-E",
-      mcu: "165",
+      mcu: "155",
       fro: "7",
       tonnageLimit: "19",
       movement: '8"',
@@ -2141,7 +2141,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MSM-08 ZOGOK",
       mobileSuit: "MSM-08 ZOGOK",
-      mcu: "155",
+      mcu: "150",
       fro: "6",
       tonnageLimit: "30",
       movement: '7"',
@@ -2229,7 +2229,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MSN-01 Psycommu Zaku",
       mobileSuit: "MSN-01 Psycommu Zaku",
-      mcu: "185",
+      mcu: "180",
       fro: "7",
       tonnageLimit: "30",
       movement: '8"',
@@ -2311,7 +2311,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "AGX-04 GERBERA TETRA",
       mobileSuit: "AGX-04 GERBERA TETRA",
-      mcu: "185",
+      mcu: "175",
       fro: "6",
       tonnageLimit: "27",
       movement: '7"',
@@ -2412,7 +2412,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "AMS-119 Geara Doga",
       mobileSuit: "AMS-119 Geara Doga",
-      mcu: "170",
+      mcu: "155",
       fro: "7",
       tonnageLimit: "28",
       movement: '7"',
@@ -2535,7 +2535,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "AMS-119 Geara Doga Heavy Armed Type",
       mobileSuit: "AMS-119 Geara Doga Heavy Armed Type",
-      mcu: "170",
+      mcu: "165",
       fro: "6",
       tonnageLimit: "28",
       movement: '7"',
@@ -2623,7 +2623,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "AMS-129 GEARA ZULU Guard",
       mobileSuit: "AMS-129 GEARA ZULU Guard",
-      mcu: "160",
+      mcu: "175",
       fro: "7",
       tonnageLimit: "34",
       movement: '7"',
@@ -2720,7 +2720,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "AMX-004 QUBELEY",
       mobileSuit: "AMX-004 QUBELEY",
-      mcu: "250",
+      mcu: "185",
       fro: "8",
       tonnageLimit: "22",
       movement: '8"',
@@ -2906,7 +2906,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "AMX-008 GA ZOWMN",
       mobileSuit: "AMX-008 GA ZOWMN",
-      mcu: "155",
+      mcu: "145",
       fro: "6",
       tonnageLimit: "27",
       movement: '8"',
@@ -3007,7 +3007,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "AMX-009 DREISSEN",
       mobileSuit: "AMX-009 DREISSEN",
-      mcu: "200",
+      mcu: "175",
       fro: "7",
       tonnageLimit: "30",
       movement: '7"',
@@ -3096,7 +3096,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "AMX-011 ZAKU III",
       mobileSuit: "AMX-011 ZAKU III",
-      mcu: "225",
+      mcu: "205",
       fro: "7",
       tonnageLimit: "24",
       movement: '7"',
@@ -3321,7 +3321,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "AMX-101 GALLUS J",
       mobileSuit: "AMX-101 GALLUS J",
-      mcu: "185",
+      mcu: "195",
       fro: "7",
       tonnageLimit: "26",
       movement: '7"',
@@ -3426,7 +3426,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "AMX-101E SCHUZRUM GALLUS",
       mobileSuit: "AMX-101E SCHUZRUM GALLUS",
-      mcu: "155",
+      mcu: "135",
       fro: "7",
       tonnageLimit: "15",
       movement: '8"',
@@ -3513,7 +3513,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "AMX-101K GALLUSS K",
       mobileSuit: "AMX-101K GALLUSS K",
-      mcu: "160",
+      mcu: "150",
       fro: "7",
       tonnageLimit: "27",
       movement: '6"',
@@ -3607,7 +3607,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "AMX-102 ZSSA",
       mobileSuit: "AMX-102 ZSSA",
-      mcu: "160",
+      mcu: "165",
       fro: "6",
       tonnageLimit: "50",
       movement: '8"',
@@ -3701,7 +3701,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MS-06F-2 Zaku II F2",
       mobileSuit: "MS-06F-2 Zaku II F2",
-      mcu: "170",
+      mcu: "180",
       fro: "5",
       tonnageLimit: "20",
       movement: '7"',
@@ -3795,7 +3795,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MSK-008 DIJEH",
       mobileSuit: "MSK-008 DIJEH",
-      mcu: "140",
+      mcu: "145",
       fro: "7",
       tonnageLimit: "18",
       movement: '7"',
@@ -3889,7 +3889,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MSN-04 SAZABI",
       mobileSuit: "MSN-04 SAZABI",
-      mcu: "315",
+      mcu: "255",
       fro: "9",
       tonnageLimit: "41",
       movement: '8"',
@@ -3990,7 +3990,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MSN-04 II-Nightingale",
       mobileSuit: "MSN-04 II-Nightingale",
-      mcu: "325",
+      mcu: "365",
       fro: "9",
       tonnageLimit: "40",
       movement: '6"',
@@ -4123,7 +4123,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "MSN-06S SINANJU",
       mobileSuit: "MSN-06S SINANJU",
-      mcu: "200",
+      mcu: "205",
       fro: "9",
       tonnageLimit: "32",
       movement: '8"',
@@ -4222,7 +4222,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "NZ-666 KSHATRIYA",
       mobileSuit: "NZ-666 KSHATRIYA",
-      mcu: "400",
+      mcu: "570",
       fro: "10",
       tonnageLimit: "44",
       movement: '6"',
@@ -4385,7 +4385,7 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "RX-78GP02A PHYSILIS",
       mobileSuit: "RX-78GP02A PHYSILIS",
-      mcu: "215",
+      mcu: "210",
       fro: "7",
       tonnageLimit: "29",
       movement: '8"',

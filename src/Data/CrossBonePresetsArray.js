@@ -10,7 +10,7 @@ export const CROSSBONE_PRESETS = [
     data: {
       msuName: "XM-01 DEN'AN ZON",
       mobileSuit: "XM-01 DEN'AN ZON",
-      mcu: "215",
+      mcu: "195",
       fro: "7",
       tonnageLimit: "10",
       movement: '8"',
@@ -94,7 +94,7 @@ export const CROSSBONE_PRESETS = [
     data: {
       msuName: "XM-02 DEN'AN GEI",
       mobileSuit: "XM-02 DEN'AN GEI",
-      mcu: "225",
+      mcu: "205",
       fro: "7",
       tonnageLimit: "12",
       movement: '9"',
@@ -183,7 +183,7 @@ export const CROSSBONE_PRESETS = [
     data: {
       msuName: "XM-03 EBIRHU-S",
       mobileSuit: "XM-03 EBIRHU-S",
-      mcu: "220",
+      mcu: "155",
       fro: "7",
       tonnageLimit: "10",
       movement: '7"',
@@ -272,7 +272,7 @@ export const CROSSBONE_PRESETS = [
     data: {
       msuName: "XMS-01 BERGA GIROS",
       mobileSuit: "XMS-01 BERGA GIROS",
-      mcu: "225",
+      mcu: "245",
       fro: "8",
       tonnageLimit: "14",
       movement: '9"',
@@ -361,7 +361,7 @@ export const CROSSBONE_PRESETS = [
     data: {
       msuName: "XMS-02 BERGA DALAS",
       mobileSuit: "XMS-02 BERGA DALAS",
-      mcu: "230",
+      mcu: "240",
       fro: "8",
       tonnageLimit: "13",
       movement: '9"',
@@ -455,7 +455,7 @@ export const CROSSBONE_PRESETS = [
     data: {
       msuName: "XM-X1 CROSSBONE GUNDAM X-1",
       mobileSuit: "XM-X1 CROSSBONE GUNDAM X-1",
-      mcu: "180",
+      mcu: "200",
       fro: "8",
       tonnageLimit: "15",
       movement: '9"',
@@ -565,7 +565,7 @@ export const CROSSBONE_PRESETS = [
     data: {
       msuName: "ZMT-S12G SHOKEW",
       mobileSuit: "ZMT-S12G SHOKEW",
-      mcu: "200",
+      mcu: "225",
       fro: "8",
       tonnageLimit: "11",
       movement: '7"',
