@@ -3,7 +3,7 @@ export const TRAITS = [
     name: "Aura Farmer",
     cost: 1,
     effect:
-      "At Step 1.4 of Status Phase, spend an action to repose MSU in epic fashion. Enemy MSUs with LOS suffer -1 to GS, BR, and PS. This MSU cannot use a [MOVEMENT] action.",
+      "At Step 1.4 of Status Phase, spend an action to repose this MSU in epic fashion. Enemy MSUs with LOS suffer -1 to GS, BR, and PS. This MSU cannot use a [MOVEMENT] action.",
   },
   {
     name: "Avalanche",
@@ -14,13 +14,26 @@ export const TRAITS = [
     name: "Aggressive",
     cost: 1,
     effect:
-      "After declaring an [ATTACK] or [REACTIVE ATTACK] action, the [PILOT]/MSU may move 4 inches forward. This movement cannot be used to rotate facing",
+      "After declaring an [ATTACK] or [REACTIVE ATTACK] action, the [UNIT] may move 4 inches forward. This movement cannot be used to rotate facing",
   },
   {
     name: "Back Stabber",
     cost: 1,
     effect:
       "Melee attacks against an MSU's rear arc inflict one additional hit location.",
+  },
+  {
+    name: "Battle Group Commander",
+    cost: 4,
+    effect:
+      "Increase total FRO limit of the entire force by 150. This additional FRO can only be spent on Support Units. This [PILOT] gains the [COMMANDER] keyword and one extra [COMMANDER] Action at the start of the game. This [PILOT] may also purchase the Command Interface support equipment for free. If the Battle Group Commander is destroyed, all friendly units are [FEAR/SHAKEN]",
+    restrictions: "Limited 1 per [FIRETEAM]",
+  },
+  {
+    name: "Ballistic Afficionado",
+    cost: 1,
+    effect:
+      "All Non-Beam, Non-Grenade ranged type weapons reduce respective weapon tonnage by 1 to a minimum of 1. This [PILOT] may only equip Non-Beam, Non-Grenade type ranged weapons",
   },
   {
     name: "Berzerker",
@@ -54,6 +67,13 @@ export const TRAITS = [
     restrictions: "Limited 1 per [FIRETEAM]",
   },
   {
+    name: "Child Soldier",
+    cost: 0,
+    effect:
+      "Base Gunnery, Brawl, Piloting defaulted 0. This [PILOT] takes a -1 penalty to [FEAR/SHAKEN] checks. This [PILOT] cannot use the [COMMANDER] keyword. For each of this [PILOT]'s MSU hit location destroyed, gain +2 to all stats.",
+    restrictions: "Limited 1 per [FIRETEAM]",
+  },
+  {
     name: "CORRUPT GOVERNMENT (EF GENERAL)",
     cost: 0,
     effect: "Represents an unspent Trait point. Gain +50 MCU",
@@ -63,7 +83,7 @@ export const TRAITS = [
     name: "CQ Specialist",
     cost: 2,
     effect:
-      'When this [PILOT] targets a MSU within 12", you may reroll 1 attack dice per turn.',
+      'When this [PILOT] targets a [UNIT] within 12", you may reroll 1 attack dice per turn.',
   },
   {
     name: "Cross Discipline",
@@ -124,7 +144,7 @@ export const TRAITS = [
   },
   {
     name: "Fearless",
-    cost: 2,
+    cost: 1,
     effect: "This [PILOT] can never be affected by [FEAR/SHAKEN].",
   },
   {
@@ -137,7 +157,7 @@ export const TRAITS = [
     name: "Frontliner",
     cost: 2,
     effect:
-      "If this [PILOT]'s MSU is within 12 inches of the center of the battlefield, it may automatically choose to fail/succeed [TAKE COVER] reactions. In addition, if this [PILOT]/MSU is in base contact with [HARD COVER], once per round it may reassign an incoming hit location to a location covered by [HARD COVER]",
+      "If this [PILOT]'s MSU is within 12 inches of the center of the battlefield, it may automatically choose to fail/succeed [TAKE COVER] reactions. In addition, if this [UNIT] is in base contact with [HARD COVER], once per round it may reassign an incoming hit location to a location covered by [HARD COVER]",
   },
   {
     name: "Generous",
@@ -155,7 +175,7 @@ export const TRAITS = [
     name: "Guardian Angel",
     cost: 2,
     effect:
-      "All other friendly MSU within 8 inches of this [PILOT]/MSU can reroll one of their d3 evasion dice.",
+      "All other friendly [UNIT]s within 8 inches of this [UNIT] can reroll one of their d3 evasion dice.",
   },
   {
     name: "Guerilla Ops",
@@ -177,6 +197,12 @@ export const TRAITS = [
       "[HEAVY] weapons gain [AKIMBO]. [HEAVY] ranged weapons gain the [PRECISION] keyword if the MSU stood still and did not rotate.",
   },
   {
+    name: "Hawkeye",
+    cost: 1,
+    effect:
+      "This [PILOT] may perform the Forward Observer action once per battle round by spending 2 FRO.",
+  },
+  {
     name: "Honorable",
     cost: 1,
     effect:
@@ -195,10 +221,22 @@ export const TRAITS = [
       "When this MSU moves over 21 inches, all non-beam melee attacks gain +2 base damage. Enemy MSU's that are hit by this [PILOT]'s [BLITZ] actions now causes [KNOCKDOWN] state",
   },
   {
+    name: "Leapfrog",
+    cost: 2,
+    effect:
+      "This [PILOT] may immediately perform an Attack action at a -2 penalty after moving vertically, such as making an Advance action vertically or boosting vertically or using Vertical Jump Jets",
+  },
+  {
     name: "Lucky Cat",
     cost: 3,
     effect:
       "This [PILOT] has a pet cat. Pet the cat before sortie. Roll 3d3. The result is how many dice this [PILOT] can reroll once per game.",
+  },
+  {
+    name: "Martyr",
+    cost: 1,
+    effect:
+      "This [PILOT] rolls a PS 5+ skill check to summon the courage to sacrifice oneself for his/her nation. If succesfull, the PILOT's MSU immediately enters a [REACTOR CRITICAL] state and suffers an automatic success on the explosion roll.",
   },
   {
     name: "Measured Trigger",
@@ -229,6 +267,12 @@ export const TRAITS = [
     cost: 1,
     effect:
       "When this MSU consumes 3 FRO to [BOOST(X)], increase melee attack dice from 1d6 to 2d3 + 1 Trait Mod.",
+  },
+  {
+    name: "Mozambique Training",
+    cost: 2,
+    effect:
+      "When firing a ROF 3 or greater ranged weapon, the third hit location rolled automatically hits the Head Location",
   },
   {
     name: "Newtype",
@@ -280,6 +324,12 @@ export const TRAITS = [
       "[AOE(x)] weapons gain [INDIRECT] in [REACTIVE ATTACK] actions. When firing via [INDIRECT] in [REACTIVE ATTACK], ignore the [INDIRECT] penalty",
   },
   {
+    name: "Prowler",
+    cost: 1,
+    effect:
+      "As long as this [UNIT] is touching the edge of the battlefield, it cannot be declared as a target of ranged REACTIVE ATTACKS at the start of it's movement action",
+  },
+  {
     name: "Quick Hands",
     cost: 1,
     effect: "All [LIGHT] or [MEDIUM] weapons gain [QUICK SWAP] trait.",
@@ -288,17 +338,17 @@ export const TRAITS = [
     name: "Rambo",
     cost: 1,
     effect:
-      "When wielding two weapons (one in each MSU hand), increase Gunnery or Brawl by 1.",
+      "When wielding two weapons (one in each [UNIT]s hands), increase Gunnery or Brawl by 1.",
   },
   {
     name: "Reactive",
     cost: 2,
     effect:
-      "During Reactive Attack actions, the [PILOT] may reroll up to X Attack dice equal to PS mod.",
+      "During Reactive Attack actions, the [UNIT] may reroll up to X Attack dice equal to PS mod.",
   },
   {
     name: "Rookie",
-    cost: 1,
+    cost: 0,
     effect:
       "Base Gunnery, Brawl, Piloting defaulted 0. Limited Use [1]: Ignore hit location of one enemy attack.",
   },
@@ -307,6 +357,12 @@ export const TRAITS = [
     cost: 1,
     effect:
       "At game start, choose an enemy [PILOT] to roll a PS 5 check. If failed, choose one penalty: Increase all Passive FRO cost by 1; Remove a support equipment with Weapon location; Reduce movespeed by 1 and FRO Limit by 1. A Enemy [PILOT] cannot be targeted by this Saboteur trait more than once",
+  },
+  {
+    name: "Samurai",
+    cost: 1,
+    effect:
+      "When wielding a Sword, Mace, or Axe type weapon or CQC or Heavy Weapon with two hands, that melee weapon gains [GRIP],[PRECISE] and [COUNTERSTRIKE] keywords",
   },
   {
     name: "Scavenger",
@@ -346,7 +402,7 @@ export const TRAITS = [
     name: "Theme Song",
     cost: 2,
     effect:
-      "All other friendly [PILOT]/MSUS within 8 inches may reroll 1 attack dice per round",
+      "All other friendly [UNIT]S within 8 inches may reroll 1 attack dice per round",
   },
   {
     name: "Trash Talker",
@@ -364,7 +420,7 @@ export const TRAITS = [
     name: "Vindictive",
     cost: 1,
     effect:
-      "This [PILOT] gains +1 Brawl and +1 Gunnery against the enemy MSU who last damaged this [PILOT]'s MSU.",
+      "This [PILOT] gains +1 Brawl and +1 Gunnery against the enemy [UNIT] who last damaged this [PILOT]'s MSU.",
   },
   {
     name: "Wolf Pack",
@@ -382,14 +438,14 @@ export const TRAITS = [
     name: "Black Ops (REZEON)",
     cost: 2,
     effect:
-      "When this Pilot's MSU moves less than 8 inches, you may reroll [X] hit locations per round equal to this pilot's Piloting.",
+      "When this [UNIT] moves less than 8 inches, you may reroll [X] hit locations per round equal to this pilot's Piloting.",
     restrictions: "REZEON ONLY",
   },
   {
     name: "Body Guard (REZEON)",
     cost: 2,
     effect:
-      "When another friendly MSU is targeted within 8 inches, you may spend an action and 1 FRO to move into base contact with the friendly MSU. If base contact is established, any damage inflicted onto the friendly MSU is halved rounding up, with the remainder attributed to a random hit location on this Pilot's MSU.",
+      "When another friendly [UNIT] is targeted within 8 inches, you may spend an action and 1 FRO to move into base contact with the friendly [UNIT]. If base contact is established, any damage inflicted onto the friendly [UNIT] is halved rounding up, with the remainder attributed to a random hit location on this Pilot's MSU.",
     restrictions: "REZEON ONLY",
   },
   {

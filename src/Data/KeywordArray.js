@@ -16,6 +16,10 @@ export const KEYWORDS = [
     desc: "No movement penalties in water terrain. Gain [BOOST(X+1)] while moving through water.",
   },
   {
+    name: "[ANTI-AIRCRAFT]",
+    desc: "Anti-Aircraft: A weapon with this keyworld can only target and attack aircraft. This weapon also ignores [HIGH-ALTITUDE] targeting restrictions and also ignores vertical distance for measuring weapon rangebands",
+  },
+  {
     name: "[ANTI-MATERIAL]",
     desc: "Anti-Material: enemy MSU cannot nullify hit locations with HARD COVER.",
   },
@@ -53,7 +57,7 @@ export const KEYWORDS = [
   },
   {
     name: "[DEPLOYABLE]",
-    desc: "This equipment can be physically placed on the battlefield. Usually specifies a base size. Deployed equipment auto-hits when targeted and has 10 HP with one hit location. MSUs spend one action during the MOVEMENT phase to deploy equipment within 8 inches. Equipment can be deployed as a reaction",
+    desc: "This equipment can be physically placed on the battlefield. Usually specifies a base size. Deployed equipment auto-hits when targeted and has 10 HP with one hit location. Units spend one action during the MOVEMENT phase to deploy equipment within 8 inches. Equipment can be deployed as a reaction",
   },
   {
     name: "[EXTRA ARMOR(X)]",
@@ -85,7 +89,7 @@ export const KEYWORDS = [
   },
   {
     name: "[IMPACT(X)]",
-    desc: "On a successful hit, push the target directly away from the attacker. LIGHT weapon: (X) inches. MEDIUM: [X+1] inches. HEAVY: [X+2] inches. If the target's base contacts HARD COVER or another MSU, both take 5 damage to one hit location. The push occurs once per attack declaration, after all dice are resolved.",
+    desc: "On a successful hit, push the target directly away from the attacker. LIGHT weapon: (X) inches. MEDIUM: [X+1] inches. HEAVY: [X+2] inches. If the target's base contacts HARD COVER or another MSU, both take 5 damage to one hit location. The push occurs once per attack declaration, after all dice are resolved. If this push is a result of the MOMENTUM + BLITZ action, double the X value.",
   },
   {
     name: "[INBUILT]",
@@ -170,5 +174,9 @@ export const KEYWORDS = [
   {
     name: "[THROW]",
     desc: "This weapon can be thrown as a ranged attack. Thrown range band is listed in parentheses next to the normal range band. Whenever a [PILOT] declares a throwing [ATTACK], use PS instead of GS.",
+  },
+  {
+    name: "[TRANSPORT(X)]",
+    desc: "This unit may carry up to X Infantry bases/stands. Infantry can embark and disembark at will within 2 inches of this [TRANSPORT UNIT] at the start or end of their movement action. Infantry may be deployed inside a [TRANSPORT UNIT] at the start of the game.",
   },
 ];

@@ -469,7 +469,7 @@ export const ZEON_PRESETS = [
           notes: "[AKIMBO],[QUICK SWAP],[CLEAVE(X)],[THROW]",
         },
         {
-          name: "Smoke Grenades x 3 (MOUNTED)",
+          name: "Smoke Grenades x3 (MOUNTED)",
           mcuCost: "FREE",
           fro: "",
           tonnage: "3",
@@ -505,7 +505,7 @@ export const ZEON_PRESETS = [
           current: "22",
           max: "22",
           weapon: "MG (ZEON)",
-          equipment: ["Shield (Shoulder)", "Smoke Grenades x 3", ""],
+          equipment: ["Shield (Shoulder)", "Smoke Grenades x3", ""],
         },
         leftArm: {
           current: "22",
@@ -549,7 +549,7 @@ export const ZEON_PRESETS = [
           notes: "[FULL AUTO],[MILITANT INNOVATION]",
         },
         {
-          name: "Missile Pod 2 x 2 (MOUNTED)",
+          name: "Missile Pod 2 x2 (MOUNTED)",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
@@ -592,7 +592,7 @@ export const ZEON_PRESETS = [
         torso: {
           current: "22",
           max: "22",
-          weapon: "Missile Pod 2 x 2 (MOUNTED)",
+          weapon: "Missile Pod 2 x2 (MOUNTED)",
           equipment: ["", "", ""],
         },
         rightArm: {
@@ -1212,18 +1212,18 @@ export const ZEON_PRESETS = [
           notes: "[FULL AUTO],[SUPPRESSIVE],[GRIP],[MOUNTABLE]",
         },
         {
-          name: "Heavy Weapon",
+          name: "CQC Weapon",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "3",
-          notes: "[IMPACT(2)],[MOMENTUM]",
+          tonnage: "6",
+          notes: "[CLEAVE(X)]",
         },
         {
-          name: "Heavy Weapon",
+          name: "CQC Weapon",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "3",
-          notes: "[IMPACT(2)],[MOMENTUM]",
+          tonnage: "6",
+          notes: "[CLEAVE(X)]",
         },
         {
           name: "Machine Gun (ZEON)",
@@ -1240,14 +1240,14 @@ export const ZEON_PRESETS = [
           notes: "[BOOST(1)] becomes [BOOST(2)]",
         },
         {
-          name: "Kunai (Combat Knives) x 2",
+          name: "Kunai (Combat Knives) x2",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
           notes: "[AKIMBO],[QUICK SWAP],[THROW],[PRECISE],[COUNTERSTRIKE]",
         },
         {
-          name: "Kunai (Combat Knives) x 2",
+          name: "Kunai (Combat Knives) x2",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
@@ -1264,20 +1264,20 @@ export const ZEON_PRESETS = [
           weapon: "",
           equipment: [
             "Heavy Booster",
-            "Kunai x 2 (Stored)",
+            "Kunai x2 (Stored)",
             "MG (ZEON) (Stored)",
           ],
         },
         rightArm: {
           current: "23",
           max: "23",
-          weapon: "Heavy CQC",
+          weapon: "CQC Weapon",
           equipment: ["", "", ""],
         },
         leftArm: {
           current: "23",
           max: "23",
-          weapon: "Heavy CQC",
+          weapon: "CQC Weapon",
           equipment: ["Gatling (MOUNTED)", "", ""],
         },
         rightLeg: {
@@ -1376,7 +1376,7 @@ export const ZEON_PRESETS = [
         torso: {
           current: "23",
           max: "23",
-          weapon: "Smoke Grenades x 3",
+          weapon: "Smoke Grenades x3",
           equipment: ["Heavy Booster", "Shotgun (Stored)", ""],
         },
         rightArm: {
@@ -1441,7 +1441,7 @@ export const ZEON_PRESETS = [
           notes: "No movement penalty sideways; can BOOST sideways.",
         },
         {
-          name: "Grenades x 2",
+          name: "Grenades x2",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
@@ -1894,6 +1894,137 @@ export const ZEON_PRESETS = [
     },
   },
   {
+    id: "ms18e-kampfer PROTOTYPE (GQX)",
+    name: "MS-18E KAMPFER PROTOTYPE (GQX)",
+    faction: "ZEON",
+    data: {
+      msuName: "MS-18E KAMPFER PROTOTYPE (GQX)",
+      mobileSuit: "MS-18E KAMPFER PROTOTYPE (GQX)",
+      mcu: "215",
+      fro: "6",
+      tonnageLimit: "35",
+      movement: '8"',
+      armorValue: "20",
+      baseEquip: [
+        {
+          name: "Beam Machine Gun",
+          mcuCost: "FREE",
+          fro: "2",
+          tonnage: "1",
+          notes: "[MILITANT INNOVATION],[FULL AUTO]",
+        },
+        {
+          name: "Cannon",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "8",
+          notes: "[AP(5)],[MOUNTABLE]",
+        },
+        {
+          name: "Side Verniers",
+          mcuCost: "FREE",
+          fro: "1 (PASSIVE)",
+          tonnage: "9",
+          notes: "No movement penalty sideways; can BOOST sideways.",
+        },
+        {
+          name: "Heavy Boosters",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "9",
+          notes: "[BOOST(1)] becomes [BOOST(2)]",
+        },
+        {
+          name: "Beam Saber",
+          mcuCost: "FREE",
+          fro: "1",
+          tonnage: "1",
+          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+        },
+        {
+          name: "Beam Saber",
+          mcuCost: "FREE",
+          fro: "1",
+          tonnage: "1",
+          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+        },
+        {
+          name: "Arm Cannon",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "2",
+          notes: "[AOE(6)] or [AP(5)],[INBUILT],[QUICK SWAP],[LIMITED USE(1)]",
+        },
+        {
+          name: "Arm Cannon",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "2",
+          notes: "[AOE(6)] or [AP(5)],[INBUILT],[QUICK SWAP],[LIMITED USE(1)]",
+        },
+      ],
+      addlEquip: [
+        {
+          name: "Spiky Shoulders (ZEON)",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "-",
+          notes:
+            "[MILITANT INNOVATION], [BLITZ] collision: 15 damage + 1 per 3 inches traveled.",
+        },
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+      ],
+      locations: {
+        head: {
+          current: "20",
+          max: "20",
+          weapon: "",
+          equipment: ["", "", ""],
+        },
+        torso: {
+          current: "20",
+          max: "20",
+          weapon: "Cannon",
+          equipment: [
+            "Side Verniers",
+            "Heavy Boosters",
+            "Beam Saber x2 (Stowed)",
+          ],
+        },
+        rightArm: {
+          current: "20",
+          max: "20",
+          weapon: "Beam Machine Gun",
+          equipment: ["Side Verniers", "Arm Cannon", ""],
+        },
+        leftArm: {
+          current: "20",
+          max: "20",
+          weapon: "",
+          equipment: ["Side Verniers", "Arm Cannon", "Spiky Shoulder (ZEON)"],
+        },
+        rightLeg: {
+          current: "20",
+          max: "20",
+          weapon: "",
+          equipment: ["Side Verniers", "Heavy Boosters", ""],
+        },
+        leftLeg: {
+          current: "20",
+          max: "20",
+          weapon: "",
+          equipment: ["Side Verniers", "Heavy Boosters", ""],
+        },
+      },
+    },
+  },
+  {
     id: "msm03c-hygogg",
     name: "MSM-03C HYGOGG",
     faction: "ZEON",
@@ -1985,7 +2116,7 @@ export const ZEON_PRESETS = [
         head: {
           current: "25",
           max: "25",
-          weapon: "Missile Pod 2 x 2 [INBUILT]",
+          weapon: "Missile Pod 2 x2 [INBUILT]",
           equipment: ["", "", ""],
         },
         torso: {
@@ -2098,7 +2229,7 @@ export const ZEON_PRESETS = [
         head: {
           current: "24",
           max: "24",
-          weapon: "Missile Pod 3 x 2 [INBUILT]",
+          weapon: "Missile Pod 3 x2 [INBUILT]",
           equipment: ["", "", ""],
         },
         torso: {
@@ -2148,7 +2279,7 @@ export const ZEON_PRESETS = [
       armorValue: "25",
       baseEquip: [
         {
-          name: "Gauntlet x 2",
+          name: "Gauntlet x2",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
@@ -2250,7 +2381,7 @@ export const ZEON_PRESETS = [
           notes: "PSYCOMMU",
         },
         {
-          name: "Enhanced Fusion Reactor",
+          name: "Enhanced Fusion Reactors",
           mcuCost: "FREE",
           fro: "+2 FRO LIMIT",
           tonnage: "4",
@@ -2275,7 +2406,7 @@ export const ZEON_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["Heavy Booster", "Enhanced Fusion Reactor", ""],
+          equipment: ["Heavy Booster", "Enhanced Fusion Reactors", ""],
         },
         rightArm: {
           current: "22",
@@ -2382,13 +2513,13 @@ export const ZEON_PRESETS = [
           current: "23",
           max: "23",
           weapon: "Beam Rifle (Cyclic)",
-          equipment: ["MG x 2 [INBUILT]", "", ""],
+          equipment: ["MG x2 [INBUILT]", "", ""],
         },
         leftArm: {
           current: "23",
           max: "23",
           weapon: "",
-          equipment: ["MG x 2 [INBUILT]", "", ""],
+          equipment: ["MG x2 [INBUILT]", "", ""],
         },
         rightLeg: {
           current: "23",
@@ -2751,7 +2882,7 @@ export const ZEON_PRESETS = [
             "Requires [NEWTYPE]/[CYBER-NEWTYPE] trait; deploy 2 bits as weapons.",
         },
         {
-          name: "Beam Bits x 4",
+          name: "Beam Bits x4",
           mcuCost: "FREE",
           fro: "",
           tonnage: "",
@@ -2769,7 +2900,7 @@ export const ZEON_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["Psycommu", "Psycommu Funnel System", "Beam Bits x 4"],
+          equipment: ["Psycommu", "Psycommu Funnel System", "Beam Bits x4"],
         },
         rightArm: {
           current: "24",
@@ -2870,7 +3001,7 @@ export const ZEON_PRESETS = [
           current: "25",
           max: "25",
           weapon: "",
-          equipment: ["Heavy Booster", "2x Beam Saber (Stowed)", ""],
+          equipment: ["Heavy Booster", "Beam Saber x2 (Stowed)", ""],
         },
         rightArm: {
           current: "25",
@@ -2971,7 +3102,7 @@ export const ZEON_PRESETS = [
           current: "23",
           max: "23",
           weapon: "",
-          equipment: ["Beam Saber x 2 (Stowed)", "", ""],
+          equipment: ["Beam Saber x2 (Stowed)", "", ""],
         },
         rightArm: {
           current: "23",
@@ -3220,7 +3351,7 @@ export const ZEON_PRESETS = [
           notes: "Quasi Psycommu",
         },
         {
-          name: "Enhanced Fusion Reactor",
+          name: "Enhanced Fusion Reactors",
           mcuCost: "FREE",
           fro: "+2",
           tonnage: "4",
@@ -3283,7 +3414,7 @@ export const ZEON_PRESETS = [
           weapon: "2x Beam Cannon",
           equipment: [
             "2x Missile Pod 10",
-            "Enhanced Fusion Reactor",
+            "Enhanced Fusion Reactors",
             "Heavy Boosters",
           ],
         },
@@ -3387,8 +3518,8 @@ export const ZEON_PRESETS = [
           weapon: "",
           equipment: [
             "Side Verniers",
-            "2x Beam Saber (Stowed)",
-            "2x Missile Pod 2 [INBUILT]",
+            "Beam Saber x2 (Stowed)",
+            "Missile Pod 2 x2 [INBUILT]",
             "",
           ],
         },
@@ -3715,7 +3846,7 @@ export const ZEON_PRESETS = [
           notes: "[FULL AUTO],[MILITANT INNOVATION]",
         },
         {
-          name: "Enhanced Fusion Reactor",
+          name: "Enhanced Fusion Reactors",
           mcuCost: "FREE",
           fro: "+2 FRO Limit",
           tonnage: "3",
@@ -3759,7 +3890,7 @@ export const ZEON_PRESETS = [
           current: "21",
           max: "21",
           weapon: "",
-          equipment: ["Heavy Booster", "Enhanced Fusion Reactor", ""],
+          equipment: ["Heavy Booster", "Enhanced Fusion Reactors", ""],
         },
         rightArm: {
           current: "21",
@@ -3789,100 +3920,6 @@ export const ZEON_PRESETS = [
     },
   },
   {
-    id: "msk008-dijeh",
-    name: "MSK-008 DIJEH",
-    faction: "ZEON,EF,AEUG",
-    data: {
-      msuName: "MSK-008 DIJEH",
-      mobileSuit: "MSK-008 DIJEH",
-      mcu: "145",
-      fro: "7",
-      tonnageLimit: "18",
-      movement: '7"',
-      armorValue: "24",
-      baseEquip: [
-        {
-          name: "Vulcan Cannons",
-          mcuCost: "FREE",
-          fro: "",
-          tonnage: "1",
-          notes: "[FULL AUTO],[INBUILT],[AKIMBO]",
-        },
-        {
-          name: "Beam Rifle",
-          mcuCost: "FREE",
-          fro: "3",
-          tonnage: "3",
-          notes: "",
-        },
-        {
-          name: "Beam Naginata",
-          mcuCost: "FREE",
-          fro: "2",
-          tonnage: "1",
-          notes: "[CLEAVE(X)]",
-        },
-        {
-          name: "Shield (Shoulder)",
-          mcuCost: "FREE",
-          fro: "",
-          tonnage: "4",
-          notes: "20 Additional Armor, only protects the Limb Attached",
-        },
-        {
-          name: "Clay Bazooka",
-          mcuCost: "FREE",
-          fro: "",
-          tonnage: "8",
-          notes:
-            "Clay Bazookas have the statline of a Bazooka, but instead of doing damage to enemy MSU, direct hits instead reduce 2 movespeed per hit.",
-        },
-        B(),
-        B(),
-        B(),
-      ],
-      addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
-      locations: {
-        head: {
-          current: "24",
-          max: "24",
-          weapon: "Vulcan Cannons",
-          equipment: ["", "", ""],
-        },
-        torso: {
-          current: "24",
-          max: "24",
-          weapon: "",
-          equipment: ["Beam Naginata (Stowed)", "", ""],
-        },
-        rightArm: {
-          current: "24",
-          max: "24",
-          weapon: "Beam Rifle",
-          equipment: ["Shield (Shoulder)", "", ""],
-        },
-        leftArm: {
-          current: "24",
-          max: "24",
-          weapon: "",
-          equipment: ["Clay Bazooka (Stowed)", "", ""],
-        },
-        rightLeg: {
-          current: "24",
-          max: "24",
-          weapon: "",
-          equipment: ["", "", ""],
-        },
-        leftLeg: {
-          current: "24",
-          max: "24",
-          weapon: "",
-          equipment: ["", "", ""],
-        },
-      },
-    },
-  },
-  {
     id: "msn04-sazabi",
     name: "MSN-04 SAZABI",
     faction: "ZEON",
@@ -3903,14 +3940,14 @@ export const ZEON_PRESETS = [
           notes: "Psycommu",
         },
         {
-          name: "Beam Saber x 2",
+          name: "Beam Saber x2",
           mcuCost: "FREE",
           fro: "1",
           tonnage: "2",
           notes: "",
         },
         {
-          name: "Funnel x 6",
+          name: "Funnel x6",
           mcuCost: "FREE",
           fro: "",
           tonnage: "",
@@ -3951,7 +3988,7 @@ export const ZEON_PRESETS = [
           weapon: "",
           equipment: [
             "External Propellent",
-            "2x Beam Saber (Stowed)",
+            "Beam Saber x2 (Stowed)",
             "6 B.Bits",
             "",
           ],
@@ -4018,7 +4055,7 @@ export const ZEON_PRESETS = [
           notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
         },
         {
-          name: "Funnel x 10",
+          name: "Funnel x10",
           mcuCost: "FREE",
           fro: "",
           tonnage: "",
@@ -4085,7 +4122,7 @@ export const ZEON_PRESETS = [
           weapon: "Vulcan Cannons",
           equipment: [
             "Heavy Booster",
-            "2x Beam Saber (Stowed)",
+            "Beam Saber x2 (Stowed)",
             "2x Extra Arms (Pair)",
           ],
         },
@@ -4421,7 +4458,7 @@ export const ZEON_PRESETS = [
             "When damage is assigned to the Torso, or to the attached arm's respective side (meaning a shield can cover left leg and left arm simulatenously), assign all damage dealt. Cleave and AOE damage is assigned to the shield in this case.",
         },
         {
-          name: "Enhanced Fusion Reactor",
+          name: "Enhanced Fusion Reactors",
           mcuCost: "FREE",
           fro: "+2 FRO LIMIT",
           tonnage: "4",
@@ -4443,7 +4480,7 @@ export const ZEON_PRESETS = [
           current: "28",
           max: "28",
           weapon: "",
-          equipment: ["Enhanced Fusion Reactor", "Beam Saber (Stowed)", ""],
+          equipment: ["Enhanced Fusion Reactors", "Beam Saber (Stowed)", ""],
         },
         rightArm: {
           current: "28",

@@ -117,6 +117,8 @@ const PilotSheetPanel = ({ slotIndex }) => {
     setShowBaseEquip,
     showAddlEquip,
     setShowAddlEquip,
+    showPresets,
+    setShowPresets,
     customPreset,
   } = pilotSlot;
 
@@ -134,7 +136,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
     brawlerTraitCount,
     pilotingTraitCount,
     gsBonus,
-    bsBonus,
+    brBonus,
     psBonus,
     froBonus,
     effectiveTonnageLimit,
@@ -257,7 +259,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                       )}
                     </TD>
                     <TD className="tc">
-                      <NumInput value={bsBonus} onChange={() => {}} />
+                      <NumInput value={brBonus} onChange={() => {}} />
                     </TD>
                     <TD className="tc">
                       <NumInput value={piloting} onChange={setPiloting} />
@@ -367,7 +369,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                         </span>
                         <div className="flex items-center mt1 flex-wrap">
                           <span className="f8 mr2 gray">Choice 1:</span>
-                          {["gs", "bs", "ps"].map((s) => (
+                          {["gs", "br", "ps"].map((s) => (
                             <StatBtn
                               key={s}
                               label={`+1 ${s.toUpperCase()}`}
@@ -378,7 +380,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                             />
                           ))}
                           <span className="f8 mh2 gray">Choice 2:</span>
-                          {["gs", "bs", "ps"]
+                          {["gs", "br", "ps"]
                             .filter((s) => s !== newtypeChoice1)
                             .map((s) => (
                               <StatBtn
@@ -400,7 +402,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                         <span className="f7 fw6 mr2 nowrap">
                           Cyber-Newtype:
                         </span>
-                        {["gs", "bs", "ps"].map((s) => (
+                        {["gs", "br", "ps"].map((s) => (
                           <StatBtn
                             key={s}
                             label={`+1 ${s.toUpperCase()}`}
@@ -417,7 +419,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                     {hasRambo && (
                       <div className="flex items-center mb2">
                         <span className="f7 fw6 mr2 nowrap">Rambo:</span>
-                        {["gs", "bs"].map((s) => (
+                        {["gs", "br"].map((s) => (
                           <StatBtn
                             key={s}
                             label={`+1 ${s.toUpperCase()}`}
@@ -436,7 +438,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                         <span className="f7 fw6 mr2 nowrap">
                           Gryps War Veteran:
                         </span>
-                        {["gs", "bs", "ps"].map((s) => (
+                        {["gs", "br", "ps"].map((s) => (
                           <StatBtn
                             key={s}
                             label={`+1 ${s.toUpperCase()}`}
@@ -522,8 +524,19 @@ const PilotSheetPanel = ({ slotIndex }) => {
       <div className="ba b--black-20 mb3">
         <div className="flex items-center justify-between flex-wrap bg-dark-green white fw7 f7 pa2 ttu tracked">
           <span>Mobile Suit Unit</span>
+        </div>
+
+        {/* ── Presets section ── */}
+        <div className="bg-dark-green white fw7 f7 pa2 ttu tracked flex items-center justify-between bt b--black-20">
+          <span className="v-mid">Presets</span>
+          <PanelToggle
+            open={showPresets}
+            onToggle={() => setShowPresets((v) => !v)}
+          />
+        </div>
+        {showPresets && (
           <div
-            className="flex items-center flex-wrap"
+            className="pa2 flex flex-wrap items-center bt b--black-10"
             style={{ gap: "0.5rem" }}
           >
             {[
@@ -533,10 +546,14 @@ const PilotSheetPanel = ({ slotIndex }) => {
               { label: "MAFTY", presets: MAFTY_PRESETS },
               { label: "REZEON", presets: REZEON_PRESETS },
             ].map(({ label, presets }) => (
-              <div key={label} className="flex items-center">
+              <div
+                key={label}
+                className="flex items-center"
+                style={{ flex: "1 1 10rem" }}
+              >
                 <span className="f8 mr1 nowrap">{label}:</span>
                 <select
-                  className="f7 ba b--white pa1 bg-dark-green white pointer normal"
+                  className="f7 ba b--black-20 pa1 bg-white pointer normal w-100"
                   value=""
                   onChange={(e) => {
                     if (e.target.value) applyPreset(e.target.value);
@@ -551,9 +568,12 @@ const PilotSheetPanel = ({ slotIndex }) => {
                 </select>
               </div>
             ))}
-            <div className="flex items-center" style={{ gap: "0.25rem" }}>
+            <div
+              className="flex items-center"
+              style={{ flex: "1 1 10rem", gap: "0.25rem" }}
+            >
               <button
-                className="f8 ph2 pv1 bn br1 pointer bg-white dark-green fw7 dim"
+                className="f8 ph2 pv1 bn br1 pointer bg-white dark-green fw7 dim w-100"
                 onClick={saveCustomPreset}
                 title="Save current sheet as custom preset"
               >
@@ -561,7 +581,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
               </button>
               {customPreset && (
                 <button
-                  className="f8 ph2 pv1 bn br1 pointer bg-yellow dark-green fw7 dim"
+                  className="f8 ph2 pv1 bn br1 pointer bg-yellow dark-green fw7 dim w-100"
                   onClick={loadCustomPreset}
                   title="Load saved custom preset"
                 >
@@ -570,7 +590,8 @@ const PilotSheetPanel = ({ slotIndex }) => {
               )}
             </div>
           </div>
-        </div>
+        )}
+
         <div className="overflow-auto">
           <table className="w-100 f7" cellSpacing="0">
             <MsuColgroup />
@@ -853,37 +874,64 @@ const PilotSheetPanel = ({ slotIndex }) => {
           ))}
 
         {/* Reference toggles */}
-        <div className="ph2 pb2 flex">
-          <RefToggle
-            open={showWeapons}
-            onToggle={() => setShowWeapons((v) => !v)}
-            label="Ranged Weapons Reference"
-          />
-          <span className="mr2" />
-          <RefToggle
-            open={showMelee}
-            onToggle={() => setShowMelee((v) => !v)}
-            label="Melee Weapons Reference"
-          />
-          <span className="mr2" />
-          <RefToggle
-            open={showSupport}
-            onToggle={() => setShowSupport((v) => !v)}
-            label="Support Equipment Reference"
-          />
-          <span className="mr2" />
-          <RefToggle
-            open={showKeywords}
-            onToggle={() => setShowKeywords((v) => !v)}
-            label="Keyword Reference"
-          />
-          <span className="mr2" />
-          <RefToggle
-            open={showNewtype}
-            onToggle={() => setShowNewtype((v) => !v)}
-            label="Newtype Upgrades"
-          />
-        </div>
+
+        {!isMobile && (
+          <div className="ph2 pb2 flex">
+            <RefToggle
+              open={showWeapons}
+              onToggle={() => setShowWeapons((v) => !v)}
+              label="Ranged Weapons Reference"
+            />
+            <span className="mr2" />
+            <RefToggle
+              open={showMelee}
+              onToggle={() => setShowMelee((v) => !v)}
+              label="Melee Weapons Reference"
+            />
+            <span className="mr2" />
+            <RefToggle
+              open={showSupport}
+              onToggle={() => setShowSupport((v) => !v)}
+              label="Support Equipment Reference"
+            />
+            <span className="mr2" />
+            <RefToggle
+              open={showKeywords}
+              onToggle={() => setShowKeywords((v) => !v)}
+              label="Keyword Reference"
+            />
+            <span className="mr2" />
+            <RefToggle
+              open={showNewtype}
+              onToggle={() => setShowNewtype((v) => !v)}
+              label="Newtype Upgrades"
+            />
+          </div>
+        )}
+
+        {isMobile && (
+          <div className="ph2 pb2 flex">
+            <span className="mr2" />
+            <RefToggle
+              open={showSupport}
+              onToggle={() => setShowSupport((v) => !v)}
+              label="Support Equipment"
+            />
+            <span className="mr2" />
+            <RefToggle
+              open={showKeywords}
+              onToggle={() => setShowKeywords((v) => !v)}
+              label="Keyword"
+            />
+            <span className="mr2" />
+            <RefToggle
+              open={showNewtype}
+              onToggle={() => setShowNewtype((v) => !v)}
+              label="Newtype"
+            />
+          </div>
+        )}
+
         {showWeapons && (
           <div className="bt b--black-10 ph2 pb2">
             <RangedWeaponTable />

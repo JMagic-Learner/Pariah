@@ -68,7 +68,7 @@ export const EF_PRESETS = [
           current: "23",
           max: "23",
           weapon: "",
-          equipment: ["Beam Saber x 2 (Stowed)", "", ""],
+          equipment: ["Beam Saber x2 (Stowed)", "", ""],
         },
         rightArm: {
           current: "23",
@@ -562,7 +562,7 @@ export const EF_PRESETS = [
         torso: {
           current: "34",
           max: "34",
-          weapon: "Beam Cannon x 2 (INBUILT)",
+          weapon: "Beam Cannon x2 (INBUILT)",
           equipment: ["Beam Saber (Stowed)", "Extra Armor (10)", ""],
         },
         rightArm: {
@@ -1169,8 +1169,8 @@ export const EF_PRESETS = [
         torso: {
           current: "23",
           max: "23",
-          weapon: "Smoke Grenades x 2",
-          equipment: ["CAMO", "Grenades (AP) x 3 (Stowed)", ""],
+          weapon: "Smoke Grenades x2",
+          equipment: ["CAMO", "Grenades (AP) x3 (Stowed)", ""],
         },
         rightArm: {
           current: "23",
@@ -1282,7 +1282,7 @@ export const EF_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["Panoptic Canopy", "Beam Saber x 2 (Stowed)", ""],
+          equipment: ["Panoptic Canopy", "Beam Saber x2 (Stowed)", ""],
         },
         rightArm: {
           current: "24",
@@ -1388,7 +1388,7 @@ export const EF_PRESETS = [
         torso: {
           current: "26",
           max: "26",
-          weapon: "Beam Cannon (INBUILT) x 2",
+          weapon: "Beam Cannon (INBUILT) x2",
           equipment: ["Beam Saber (Stowed)", "Side Verniers", ""],
         },
         rightArm: {
@@ -1562,7 +1562,7 @@ export const EF_PRESETS = [
           notes: "[WARTIME INNOVATIONS],[FULL AUTO],[INBUILT],[AKIMBO]",
         },
         {
-          name: "Anti-Beam Coating Kit x 5",
+          name: "Anti-Beam Coating Kit x5",
           mcuCost: "FREE",
           fro: "",
           tonnage: "",
@@ -1591,7 +1591,7 @@ export const EF_PRESETS = [
           weapon: "",
           equipment: [
             "A.B.C Kit",
-            "Beam Saber x 2 (Stowed)",
+            "Beam Saber x2 (Stowed)",
             "Bazooka (Stowed)",
           ],
         },
@@ -1884,7 +1884,7 @@ export const EF_PRESETS = [
           equipment: [
             "Side Verniers",
             "Heavy Boosters",
-            "Beam Saber x 2 (Stowed)",
+            "Beam Saber x2 (Stowed)",
           ],
         },
         rightArm: {
@@ -2011,7 +2011,7 @@ export const EF_PRESETS = [
           current: "26",
           max: "26",
           weapon: "2x Beam Cannons",
-          equipment: ["2x Beam Saber (Stowed)", "", ""],
+          equipment: ["Beam Saber x2 (Stowed)", "", ""],
         },
         rightArm: {
           current: "26",
@@ -2118,12 +2118,12 @@ export const EF_PRESETS = [
           current: "27",
           max: "27",
           weapon: "",
-          equipment: ["2x Beam Saber (Stowed)", "", ""],
+          equipment: ["Beam Saber x2 (Stowed)", "", ""],
         },
         rightArm: {
           current: "27",
           max: "27",
-          weapon: "Beam Rifle + GL x 2",
+          weapon: "Beam Rifle + GL x2",
           equipment: ["Beam Cannons (Mounted)", "", ""],
         },
         leftArm: {
@@ -2219,7 +2219,7 @@ export const EF_PRESETS = [
           current: "25",
           max: "25",
           weapon: "",
-          equipment: ["Stealth System", "2x Beam Saber (Stowed)", ""],
+          equipment: ["Stealth System", "Beam Saber x2 (Stowed)", ""],
         },
         rightArm: {
           current: "25",
@@ -2682,7 +2682,7 @@ export const EF_PRESETS = [
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
-          name: "Missile Pod 2 x 2 (MOUNTED)",
+          name: "Missile Pod 2 x2 (MOUNTED)",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
@@ -2751,7 +2751,7 @@ export const EF_PRESETS = [
           notes: "[FULL AUTO]",
         },
         {
-          name: "Grenades x 6",
+          name: "Grenades x6",
           mcuCost: "FREE",
           fro: "",
           tonnage: "6",
@@ -2813,7 +2813,7 @@ export const EF_PRESETS = [
           current: "25",
           max: "25",
           weapon: "",
-          equipment: ["Beam Saber (Stowed)", "Grenades x 6 (Stowed)", ""],
+          equipment: ["Beam Saber (Stowed)", "Grenades x6 (Stowed)", ""],
         },
         rightArm: {
           current: "25",
@@ -2843,6 +2843,100 @@ export const EF_PRESETS = [
     },
   },
   {
+    id: "msk008-dijeh",
+    name: "MSK-008 DIJEH",
+    faction: "ZEON,EF,AEUG",
+    data: {
+      msuName: "MSK-008 DIJEH",
+      mobileSuit: "MSK-008 DIJEH",
+      mcu: "145",
+      fro: "7",
+      tonnageLimit: "18",
+      movement: '7"',
+      armorValue: "24",
+      baseEquip: [
+        {
+          name: "Vulcan Cannons",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "1",
+          notes: "[FULL AUTO],[INBUILT],[AKIMBO]",
+        },
+        {
+          name: "Beam Rifle",
+          mcuCost: "FREE",
+          fro: "3",
+          tonnage: "3",
+          notes: "",
+        },
+        {
+          name: "Beam Naginata",
+          mcuCost: "FREE",
+          fro: "2",
+          tonnage: "1",
+          notes: "[CLEAVE(X)]",
+        },
+        {
+          name: "Shield (Shoulder)",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "4",
+          notes: "20 Additional Armor, only protects the Limb Attached",
+        },
+        {
+          name: "Clay Bazooka",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "8",
+          notes:
+            "Clay Bazookas have the statline of a Bazooka, but instead of doing damage to enemy MSU, direct hits instead reduce 2 movespeed per hit.",
+        },
+        B(),
+        B(),
+        B(),
+      ],
+      addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
+      locations: {
+        head: {
+          current: "24",
+          max: "24",
+          weapon: "Vulcan Cannons",
+          equipment: ["", "", ""],
+        },
+        torso: {
+          current: "24",
+          max: "24",
+          weapon: "",
+          equipment: ["Beam Naginata (Stowed)", "", ""],
+        },
+        rightArm: {
+          current: "24",
+          max: "24",
+          weapon: "Beam Rifle",
+          equipment: ["Shield (Shoulder)", "", ""],
+        },
+        leftArm: {
+          current: "24",
+          max: "24",
+          weapon: "",
+          equipment: ["Clay Bazooka (Stowed)", "", ""],
+        },
+        rightLeg: {
+          current: "24",
+          max: "24",
+          weapon: "",
+          equipment: ["", "", ""],
+        },
+        leftLeg: {
+          current: "24",
+          max: "24",
+          weapon: "",
+          equipment: ["", "", ""],
+        },
+      },
+    },
+  },
+  {
     id: "rgm89-jegan",
     name: "RGM-89 JEGAN",
     faction: "EF",
@@ -2863,10 +2957,10 @@ export const EF_PRESETS = [
           notes: "",
         },
         {
-          name: "Shield (Missile Pod 4)",
+          name: "Shield + Missile Pod 2",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "5",
+          tonnage: "10",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
@@ -2932,7 +3026,7 @@ export const EF_PRESETS = [
         leftArm: {
           current: "24",
           max: "24",
-          weapon: "Shield (Missile Pod 4)",
+          weapon: "Shield + Missile Pod 2",
           equipment: ["", "", ""],
         },
         rightLeg: {
@@ -3134,7 +3228,7 @@ export const EF_PRESETS = [
           current: "25",
           max: "25",
           weapon: "",
-          equipment: ["Grenades x 3", "Beam Saber (Stowed)", ""],
+          equipment: ["Grenades x3", "Beam Saber (Stowed)", ""],
         },
         rightArm: {
           current: "25",
@@ -3145,7 +3239,7 @@ export const EF_PRESETS = [
         leftArm: {
           current: "25",
           max: "25",
-          weapon: "Shield + Missile Pod 4",
+          weapon: "Shield + Missile Pod 2",
           equipment: ["", "", ""],
         },
         rightLeg: {
@@ -3229,7 +3323,7 @@ export const EF_PRESETS = [
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
-          name: "Enhanced Reactor",
+          name: "Enhanced Fusion Reactors",
           mcuCost: "FREE",
           fro: "+2 FRO",
           tonnage: "2",
@@ -3264,11 +3358,7 @@ export const EF_PRESETS = [
           current: "25",
           max: "25",
           weapon: "",
-          equipment: [
-            "Grenades x 3",
-            "Beam Saber (Stowed)",
-            "Enhanced Reactor",
-          ],
+          equipment: ["Grenades x3", "Beam Saber (Stowed)", "Enhanced Fusion Reactors"],
         },
         rightArm: {
           current: "25",
@@ -3279,7 +3369,7 @@ export const EF_PRESETS = [
         leftArm: {
           current: "25",
           max: "25",
-          weapon: "Shield + Missile Pod 4",
+          weapon: "Shield + Missile Pod 2",
           equipment: ["Grenade Launcher [CYCLIC]", "", ""],
         },
         rightLeg: {
@@ -3372,7 +3462,7 @@ export const EF_PRESETS = [
         torso: {
           current: "25",
           max: "25",
-          weapon: "Missile Pod 4 x 2",
+          weapon: "Missile Pod 4 x2",
           equipment: ["", "", ""],
         },
         rightArm: {
@@ -3503,7 +3593,7 @@ export const EF_PRESETS = [
           max: "25",
           weapon: "",
           equipment: [
-            "Napalm Grenades x 3",
+            "Napalm Grenades x3",
             "Beam Saber (Stowed)",
             "Beam Pistol",
           ],
@@ -4125,7 +4215,7 @@ export const EF_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["Grenades x 3 (Stowed)", "Beam Saber x 2 (Stowed)", ""],
+          equipment: ["Grenades x3 (Stowed)", "Beam Saber x2 (Stowed)", ""],
         },
         rightArm: {
           current: "24",
@@ -4207,7 +4297,7 @@ export const EF_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["Flares", "Beam Saber x 2 (Stowed)", ""],
+          equipment: ["Flares", "Beam Saber x2 (Stowed)", ""],
         },
         rightArm: {
           current: "24",
@@ -4373,7 +4463,7 @@ export const EF_PRESETS = [
           notes: "[WARTIME INNOVATIONS],[FULL AUTO],[INBUILT],[AKIMBO]",
         },
         {
-          name: "Enhanced Fusion Reactor",
+          name: "Enhanced Fusion Reactors",
           mcuCost: "FREE",
           fro: "+2 Limit",
           tonnage: "3",
@@ -4395,7 +4485,7 @@ export const EF_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["Enhanced Fusion Reactor", "Beam Saber (Stowed)", ""],
+          equipment: ["Enhanced Fusion Reactors", "Beam Saber (Stowed)", ""],
         },
         rightArm: {
           current: "24",
@@ -4452,7 +4542,7 @@ export const EF_PRESETS = [
           notes: "[BOOST(1)] becomes [BOOST(2)]",
         },
         {
-          name: "Enhanced Fusion Reactor",
+          name: "Enhanced Fusion Reactors",
           mcuCost: "FREE",
           fro: "+2 Limit",
           tonnage: "5",
@@ -4511,21 +4601,21 @@ export const EF_PRESETS = [
           notes: "[INBUILT],[CLEAVE(X)],[AKIMBO],[MOMENTUM]",
         },
         {
-          name: "Missile Pod 10 x 2",
+          name: "Missile Pod 10 x2",
           mcuCost: "FREE",
           fro: "",
           tonnage: "20",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
-          name: "Missile Pod 10 x 2",
+          name: "Missile Pod 10 x2",
           mcuCost: "FREE",
           fro: "",
           tonnage: "20",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
-          name: "Missile Pod 10 x 2",
+          name: "Missile Pod 10 x2",
           mcuCost: "FREE",
           fro: "",
           tonnage: "20",
@@ -4565,7 +4655,7 @@ export const EF_PRESETS = [
           max: "32",
           weapon: "Beam Cannon",
           equipment: [
-            "Enhanced Fusion Reactor",
+            "Enhanced Fusion Reactors",
             "I field Generator",
             "Missile Pod 10",
           ],
@@ -4923,7 +5013,7 @@ export const EF_PRESETS = [
           current: "28",
           max: "28",
           weapon: "",
-          equipment: ["Command Interface", "Beam Saber x 2 (Stowed)", ""],
+          equipment: ["Command Interface", "Beam Saber x2 (Stowed)", ""],
         },
         rightArm: {
           current: "28",
@@ -5052,7 +5142,7 @@ export const EF_PRESETS = [
           current: "28",
           max: "28",
           weapon: "",
-          equipment: ["Command Interface", "Beam Saber x 2 (Stowed)", ""],
+          equipment: ["Command Interface", "Beam Saber x2 (Stowed)", ""],
         },
         rightArm: {
           current: "28",
@@ -5419,16 +5509,16 @@ export const EF_PRESETS = [
         {
           name: "Beam Cannon",
           mcuCost: "FREE",
-          fro: "",
-          tonnage: "3",
-          notes: "",
+          fro: "3",
+          tonnage: "4",
+          notes: "[MOUNTABLE]",
         },
         {
           name: "Beam Cannon",
           mcuCost: "FREE",
-          fro: "",
-          tonnage: "3",
-          notes: "",
+          fro: "3",
+          tonnage: "4",
+          notes: "[MOUNTABLE]",
         },
         {
           name: "Hyper Bazooka",
@@ -5440,28 +5530,29 @@ export const EF_PRESETS = [
       ],
       addlEquip: [
         {
-          name: "Shield + ",
+          name: "Heavy Shield",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "6",
-          notes: "",
+          tonnage: "12",
+          notes:
+            "When damage is assigned to the Torso, or to the attached arm's respective side (meaning a shield can cover left leg and left arm simulatenously), assign all damage dealt. Cleave and AOE damage is assigned to the shield in this case.",
         },
         {
           name: "Missile Pod 4",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "3",
+          tonnage: "8",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
           name: "Missile Pod 4",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "3",
+          tonnage: "8",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
-          name: "Beam Bits x 5",
+          name: "Beam Bits x5",
           mcuCost: "FREE",
           fro: "",
           tonnage: "",
@@ -5488,7 +5579,7 @@ export const EF_PRESETS = [
         torso: {
           current: "30",
           max: "30",
-          weapon: "Missile Pod 4 x 2",
+          weapon: "Missile Pod 4 x2",
           equipment: [
             "Dummy Balloons",
             "Beam Saber (Stowed)",
@@ -5504,7 +5595,7 @@ export const EF_PRESETS = [
         leftArm: {
           current: "30",
           max: "30",
-          weapon: "Shield + Beam Cannon x 2",
+          weapon: "Heavy Shield + Beam Cannon x2",
           equipment: ["Beam Saber (Stowed)", "", ""],
         },
         rightLeg: {
@@ -5518,6 +5609,159 @@ export const EF_PRESETS = [
           max: "30",
           weapon: "",
           equipment: ["", "", ""],
+        },
+      },
+    },
+  },
+  {
+    id: "fa-78 Full Armor Gundam (THUNDERBOLT)",
+    name: "FA-78 Full Armor Gundam (THUNDERBOLT)",
+    faction: "EF",
+    data: {
+      msuName: "FA-78 Full Armor Gundam (THUNDERBOLT)",
+      mobileSuit: "FA-78 Full Armor Gundam (THUNDERBOLT)",
+      mcu: "250",
+      fro: "6",
+      tonnageLimit: "52",
+      movement: '6"',
+      armorValue: "27",
+      baseEquip: [
+        {
+          name: "Vulcan Cannon",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "",
+          notes: "[FULL AUTO],[INBUILT]",
+        },
+        {
+          name: "Beam Saber",
+          mcuCost: "FREE",
+          fro: "1",
+          tonnage: "1",
+          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+        },
+        {
+          name: "Beam Saber",
+          mcuCost: "FREE",
+          fro: "1",
+          tonnage: "1",
+          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+        },
+        {
+          name: "Beam Saber",
+          mcuCost: "FREE",
+          fro: "1",
+          tonnage: "1",
+          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+        },
+        {
+          name: "Twin Beam Rifle",
+          mcuCost: "FREE",
+          fro: "3",
+          tonnage: "6",
+          notes: "You may choose to shoot one or both Beam Rifles",
+        },
+        {
+          name: "Beam Cannon",
+          mcuCost: "FREE",
+          fro: "3",
+          tonnage: "4",
+          notes: "[MOUNTABLE]",
+        },
+        {
+          name: "Heavy Boosters",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "13",
+          notes: "[BOOST(1) becomes [BOOST(2)]",
+        },
+        {
+          name: "Extra Arms (2)",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "2",
+          notes:
+            "Add a pair of arms; each can hold one weapon or support equipment.",
+        },
+      ],
+      addlEquip: [
+        {
+          name: "Shield",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "6",
+          notes:
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
+        },
+        {
+          name: "Shield",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "6",
+          notes:
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
+        },
+        {
+          name: "Shield",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "6",
+          notes:
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
+        },
+        {
+          name: "Shield",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "6",
+          notes:
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
+        },
+        B(),
+        B(),
+        B(),
+        B(),
+      ],
+      locations: {
+        head: {
+          current: "27",
+          max: "27",
+          weapon: "Vulcan Cannon",
+          equipment: ["", "", ""],
+        },
+        torso: {
+          current: "27",
+          max: "27",
+          weapon: "Beam Cannon",
+          equipment: [
+            "Heavy Boosters",
+            "Beam Saber (Stowed) x3",
+            "Extra Arms x2 (Shields)",
+          ],
+        },
+        rightArm: {
+          current: "27",
+          max: "27",
+          weapon: "Shield + Twin Beam Rifles",
+          equipment: ["", "", ""],
+        },
+        leftArm: {
+          current: "27",
+          max: "27",
+          weapon: "Shield",
+          equipment: ["", "", ""],
+        },
+        rightLeg: {
+          current: "27",
+          max: "27",
+          weapon: "",
+          equipment: ["Heavy Boosters", "", ""],
+        },
+        leftLeg: {
+          current: "27",
+          max: "27",
+          weapon: "",
+          equipment: ["Heavy Boosters", "", ""],
         },
       },
     },

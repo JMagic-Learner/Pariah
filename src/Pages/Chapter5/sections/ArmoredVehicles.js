@@ -127,11 +127,8 @@ export const ArmoredVehicles = () => {
         </div>
       </div>
 
-      <h3 className="f4 fw7 mt4 mb2">Tank Weapons</h3>
+      <h3 className="f4 fw7 mt4 mb2">Ground Vehicle Weapons</h3>
       <WeaponTable weapons={TANK_WEAPONS} isMobile={isMobile} />
-
-      <h3 className="f4 fw7 mt4 mb2">APC Weapons</h3>
-      <WeaponTable weapons={APC_WEAPONS} isMobile={isMobile} />
     </div>
   );
 };

@@ -239,7 +239,7 @@ export const REZEON_PRESETS = [
           notes: "",
         },
         {
-          name: "Enhanced Fusion Reactor",
+          name: "Enhanced Fusion Reactors",
           mcuCost: "FREE",
           fro: "+2 FRO Limit",
           tonnage: "5",
@@ -253,7 +253,7 @@ export const REZEON_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["Heavy Boosters", "Enhanced Reactor", ""],
+          equipment: ["Heavy Boosters", "Enhanced Fusion Reactors", ""],
         },
         rightArm: {
           current: "24",
@@ -2147,7 +2147,7 @@ export const REZEON_PRESETS = [
           notes: "",
         },
         {
-          name: "Enhanced Fusion Reactor",
+          name: "Enhanced Fusion Reactors",
           mcuCost: "FREE",
           fro: "+2 FRO Limit",
           tonnage: "5",
@@ -2174,7 +2174,7 @@ export const REZEON_PRESETS = [
           equipment: [
             "Heavy Boosters",
             "Extra Arm (1)",
-            "Enhanced Fusion Reactor",
+            "Enhanced Fusion Reactors",
           ],
         },
         rightArm: {
@@ -2247,7 +2247,7 @@ export const REZEON_PRESETS = [
           notes: "",
         },
         {
-          name: "Enhanced Fusion Reactor",
+          name: "Enhanced Fusion Reactors",
           mcuCost: "FREE",
           fro: "+2 FRO Limit",
           tonnage: "4",
@@ -2270,7 +2270,7 @@ export const REZEON_PRESETS = [
           current: "27",
           max: "27",
           weapon: "",
-          equipment: ["Heavy Boosters", "ECM/ECCM", "Enhanced Reactor"],
+          equipment: ["Heavy Boosters", "ECM/ECCM", "Enhanced Fusion Reactors"],
         },
         rightArm: {
           current: "27",

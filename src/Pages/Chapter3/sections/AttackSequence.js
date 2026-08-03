@@ -6,7 +6,7 @@ export const AttackSequence = () => {
       <p className="lh-copy mb4 tj">
         All attacks — whether in the Combat Phase or Shooting Phase — follow the
         same sequence. Each step must be resolved in order before proceeding.
-        The defending <span className="fw6 red"> [PILOT]</span> rolls Evasion
+        The defending <span className="fw6 red"> [UNIT]</span> rolls Evasion
         dice as a single pool compared against the attacker's full batch of
         attack dice.
       </p>

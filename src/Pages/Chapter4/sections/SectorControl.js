@@ -52,10 +52,10 @@ export const SectorControl = () => {
       </div>
 
       <h3 className="f4 fw7 mb2">Controlling a Sector</h3>
-      <p className="lh-copy mb2">
+      <p className="lh-copy mb2 pl3 tj">
         A sector is controlled by a player if, at the end of a round:
       </p>
-      <ul className="lh-copy pl3 mb3 tj">
+      <ul className="lh-copy pl3 tj">
         <li className="pv1">
           That player has at least one MSU within the sector boundaries, AND
         </li>
@@ -63,13 +63,13 @@ export const SectorControl = () => {
           The opposing player has no MSUs within the same sector.
         </li>
       </ul>
-      <p className="lh-copy mb2">
+      <p className="lh-copy mb2 pl3 tj">
         A sector is contested if both players have MSUs within it — neither
         player scores VP for it that round.
       </p>
 
       <h3 className="f4 fw7 mb2">Mission Rules</h3>
-      <ul className="lh-copy pl3">
+      <ul className="lh-copy pl3 tj">
         <li className="pv1">
           <strong>Sector Denial:</strong> Destroying an enemy MSU that was
           scoring a sector immediately removes that player's control of the

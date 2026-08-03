@@ -23,6 +23,13 @@ export const Infantry = () => {
       </p>
 
       <p className="lh-copy mb4">
+        Each Infantry Squad has 5 members, each equipped with all weapons listed
+        in the Infantry Weapons table below. A player moves all squads within
+        one unit activation, and shoot at the same time in the
+        <span className="fw6 red"> [SHOOTING PHASE] </span>.
+      </p>
+
+      <p className="lh-copy mb4">
         Infantry squads can occupy any{" "}
         <span className="fw6 red"> [HARD COVER] </span> or building. By doing
         so, the infantry squad cannot be targeted directly by attacks, and do

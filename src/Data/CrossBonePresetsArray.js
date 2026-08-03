@@ -528,7 +528,7 @@ export const CROSSBONE_PRESETS = [
           equipment: [
             "Cloak (Anti Beam Coating)",
             "Aim Assist",
-            "2x Beam Saber (Stowed)",
+            "Beam Saber x2 (Stowed)",
           ],
         },
         rightArm: {

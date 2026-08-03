@@ -58,10 +58,10 @@ export const States = () => {
         </p>
       </div>
 
-      {/* Fear / Shaken */}
+      {/* Fear/Shaken */}
       <div className="bg-near-white ba b--black-10 br2 pa3 mb3">
         <h3 className="f4 fw7 red mt0 mb1">
-          [FEAR / SHAKEN] <span className="fw4 f5">[AUTOMATIC]</span>
+          [FEAR/SHAKEN] <span className="fw4 f5">[AUTOMATIC]</span>
         </h3>
         <p className="lh-copy f6 mb2 fw6">
           When a friendly MSU is destroyed nearby, Pilots may experience fear.
@@ -75,7 +75,11 @@ export const States = () => {
             permanent −1 penalty to all skill checks
           </span>{" "}
           for the rest of the game. This penalty is not stackable with multiple
-          instances of Fear / Shaken.
+          instances of [FEAR/SHAKEN].
+        </p>
+        <p className="lh-copy f6 mb0">
+          Units in [FEAR/SHAKEN] state must first make use a action to conduct a
+          mandatory movement action if possible toward the nearest board edge.
         </p>
       </div>
 
@@ -92,7 +96,7 @@ export const States = () => {
           not remove <span className="fw6 red"> [AIMING] </span>. When declaring{" "}
           <span className="fw6 red"> [REACTIVE ATTACK]</span> with a ranged
           weapon, the <span className="fw6 red"> [PILOT]</span>/MSU treats enemy
-          evasion as if it was standing still. In addition, this [PILOT]/MSU may
+          evasion as if it was standing still. In addition, this [UNIT] may
           declare <span className="fw6 red"> [REACTIVE ATTACK]</span> during ANY
           point of the enemy's movement phase
         </p>

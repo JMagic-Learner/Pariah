@@ -32,9 +32,11 @@ export const usePilotDerivedStats = ({
 }) => {
   const hasMechanic = traits.some((t) => t === "Mechanic");
   const hasNewtype = traits.some((t) => t === "Newtype");
-  const hasCyberNewtype = traits.some((t) => t === "Cyber-Newtype (TITANS)");
+  const hasCyberNewtype = traits.some(
+    (t) => t === "Cyber-Newtype" || t === "Cyber-Newtype (TITANS)",
+  );
   const hasRambo = traits.some((t) => t === "Rambo");
-  const hasRookie = traits.some((t) => t === "Rookie");
+  const hasRookie = traits.some((t) => t === "Rookie" || t === "Child Soldier");
   const hasScavenger = traits.some((t) => t === "Scavenger");
   const hasPurgableArmor =
     baseEquip.some((row, i) => row.name === "Purgable Armor" && !soldBase[i]) ||
@@ -54,14 +56,14 @@ export const usePilotDerivedStats = ({
     (hasRambo && ramboChoice === "gs" ? 1 : 0) +
     (hasGrypsVet && grypsVetChoice === "gs" ? 1 : 0) +
     (hasHonorable ? 1 : 0);
-  const bsBonus =
+  const brBonus =
     brawlerTraitCount +
     (hasNewtype
       ? (newtypeChoice1 === "br" ? 1 : 0) + (newtypeChoice2 === "br" ? 1 : 0)
       : 0) +
-    (hasCyberNewtype && cyberNewtypeChoice === "bs" ? 1 : 0) +
-    (hasRambo && ramboChoice === "bs" ? 1 : 0) +
-    (hasGrypsVet && grypsVetChoice === "bs" ? 1 : 0) +
+    (hasCyberNewtype && cyberNewtypeChoice === "br" ? 1 : 0) +
+    (hasRambo && ramboChoice === "br" ? 1 : 0) +
+    (hasGrypsVet && grypsVetChoice === "br" ? 1 : 0) +
     (hasHonorable ? 1 : 0);
   const psBonus =
     pilotingTraitCount +
@@ -148,7 +150,7 @@ export const usePilotDerivedStats = ({
     brawlerTraitCount,
     pilotingTraitCount,
     gsBonus,
-    bsBonus,
+    brBonus,
     psBonus,
     froBonus,
     effectiveTonnageLimit,

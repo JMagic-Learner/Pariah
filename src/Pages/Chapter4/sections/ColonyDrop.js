@@ -15,7 +15,7 @@ export const ColonyDrop = () => {
           <h3 className="f4 fw7 mb2">Setup</h3>
           <ul className="lh-copy pl3 tj">
             <li className="pv1">
-              <strong>Table:</strong> 48"×48" recommended (large engagement)
+              <strong>Table:</strong> 48"×72" recommended (large engagement)
             </li>
             <li className="pv1">
               <strong>Defender (ZEON or Neutral):</strong> Deploys within 8" of
@@ -27,7 +27,7 @@ export const ColonyDrop = () => {
             </li>
             <li className="pv1">
               <strong>Colony Drop Core:</strong> A large marker placed at the
-              center of the table. Has 80 HP and 10 Armor.
+              center of the table. Has 140 Armor.
             </li>
             <li className="pv1">
               <strong>Rounds:</strong> 8
@@ -71,17 +71,25 @@ export const ColonyDrop = () => {
           (reactive mechanic, costs their Reaction).
         </li>
         <li className="pv1">
-          <strong>Colony Impact:</strong> At the end of Round 4, if the Core
-          still has HP, it crashes into one corner of the table (decided by a d4
-          roll). All MSUs within 12" of that corner take 30 damage distributed
-          across two random hit locations. That corner becomes Difficult Terrain
-          for the rest of the game.
+          <strong>Light Debris:</strong> At the end of Round 4, if the Core
+          still has HP, it crashes into one quarter of the table (decided by a
+          d4 roll). All MSUs within that quarter take 15 damage to two hit
+          locations. All [HARD COVER] and [OBSCURING COVER] terrain features
+          within that quarter are removed from the table.
         </li>
         <li className="pv1">
-          <strong>Structural Collapse:</strong> At the end of Round 6, if the
-          Core still has HP, the impact worsens. All MSUs within 18" of the
-          crash corner take 20 damage to the Torso (no Armor reduction). The
-          crash zone expands to 18" Difficult Terrain.
+          <strong>Skyfall:</strong> At the end of Round 6, if the Core still has
+          HP, it crashes into one quarter of the table (decided by a d4 roll).
+          All MSUs within that quarter take 20 damage to two hit locations. All
+          [HARD COVER] and [OBSCURING COVER] terrain features within that
+          quarter are removed from the table.
+        </li>
+        <li className="pv1">
+          <strong>Colony Impact:</strong> At the end of Round 8, if the Core
+          still has HP, it crashes into one quarter of the table (decided by a
+          d4 roll). All MSUs within that quarter take 25 damage to two hit
+          locations. All [HARD COVER] and [OBSCURING COVER] terrain features
+          within that quarter are removed from the table.
         </li>
       </ul>
 
@@ -101,14 +109,6 @@ export const ColonyDrop = () => {
           <strong>ZEON Axis Doctrine:</strong> If playing as ZEON Defender with
           the Neo Zeon subfaction, the Colony Drop Core gains +10 HP (total 90
           HP).
-        </li>
-        <li className="pv1">
-          <strong>RETRIEVE CHARGES:</strong> BLUE Team must control as many
-          Yellow Objectives as possible. These objectives are deployed down the
-          center vertical line — one in each deployment zone and one directly in
-          the middle of the field. Once a BLUE TEAM MSU controls a yellow
-          objective, add three Grenades with Munition (AP) onto that respective
-          BLUE TEAM MSU.
         </li>
       </ul>
 

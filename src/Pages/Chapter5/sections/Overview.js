@@ -18,15 +18,22 @@ export const SupportUnitsOverview = () => {
             have 2 actions each.
           </li>
           <li className="pv1">
-            Infantry can move in any direction. Tanks, transports, and jets
+            Infantry can move in any direction. Ground Vehicles and Aircraft
             follow the same movement restrictions as MSU.
           </li>
           <li className="pv1">
             Each individual unit (indicated by Unit Size) only has{" "}
-            <strong>one hit location and two actions</strong>.
+            <strong>
+              one hit location and two actions. Support Units may make Advance
+              actions, Melee Attacks, and Ranged Attacks, Simultaneous Attacks,
+              but may not have any BOOST interaction or make Reactive Attacks
+            </strong>
+            .
           </li>
           <li className="pv1">
-            Support Units all have <strong>Initiative 0</strong>.
+            Support Units all have <strong>Initiative 0</strong>. If both
+            players have Support Units, players alternate activations starting
+            with the player with the most Support Units.
           </li>
           <li className="pv1">
             Their Gunnery, Piloting, and Brawl skills are all at{" "}

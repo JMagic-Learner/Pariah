@@ -72,20 +72,23 @@ export const Overview = () => {
       </div>
 
       <h3 className="f4 fw7 mt4 mb2">Capturing Objectives</h3>
-      <p className="lh-copy mb2">
+      <p className="lh-copy mb2 tj">
         Many missions use Objective Markers. Unless stated otherwise, capturing
         rules are:
       </p>
-      <ol className="lh-copy pl3">
-        <li className="pv1">
-          Move into base contact with the objective marker.
-        </li>
+      <ol className="lh-copy pl3 tj">
+        <li className="pv1">Move within 3" of the objective marker.</li>
         <li className="pv1">
           Spend one full action to begin capturing (CAPTURE action).
         </li>
         <li className="pv1">
-          At the end of the round, if no enemy MSU is within 3" of the marker,
-          it is captured.
+          At the end of the round, if no there is no enemy unit of type MSU,
+          Vehicle, or Infantry is within 3" of the marker, it is captured.
+        </li>
+        <li className="pv1">
+          A player having more eligible friendly units (MSU, Vehicle, or
+          Infantry) within 3" of the marker gives capture priority to that
+          player.
         </li>
         <li className="pv1">
           Captured markers score VP as defined by the mission rules.

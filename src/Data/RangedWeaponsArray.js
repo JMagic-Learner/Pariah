@@ -85,7 +85,7 @@ export const RANGED = [
     range: "20|40|60|80",
     mod: "-2|+0|+2|+1",
     dam: 23,
-    ton: 5,
+    ton: 6,
     fro: 5,
     mcu: 75,
     faction: "–",
@@ -133,9 +133,9 @@ export const RANGED = [
   {
     name: "Artillery Cannon",
     type: "Cannon",
-    rof: 2,
+    rof: 1,
     range: "24|48|72|96",
-    mod: "-2|+1|+2|+0",
+    mod: "-2|-1|+0|+0",
     dam: 10,
     ton: 8,
     fro: "–",
@@ -219,7 +219,7 @@ export const RANGED = [
     fro: "–",
     mcu: "–",
     faction: "–",
-    keywords: "[MISSILE(12)],[GUIDED],[MOUNTABLE]",
+    keywords: "[MISSILE(12)],[MOUNTABLE],[INDIRECT],[LIMITED USE(1)]",
   },
   {
     name: "Hypersonic Missiles",
@@ -232,7 +232,7 @@ export const RANGED = [
     fro: "–",
     mcu: 55,
     faction: "–",
-    keywords: "[MISSILE(24)],[MOUNTABLE],[INDIRECT]",
+    keywords: "[MISSILE(24)],[MOUNTABLE],[INDIRECT],[LIMITED USE(1)]",
   },
   {
     name: "Machine Gun",

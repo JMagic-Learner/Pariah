@@ -115,7 +115,7 @@ export const SUPPORT = [
     qty: 1,
     mcu: 35,
     effect:
-      "In the deployment phase, MSU equipped with the CAMO Cloak may deploy after the opponent has finished deploying their entire force",
+      "In the deployment phase, a [UNIT] equipped with the CAMO Cloak may deploy after the opponent has finished deploying their entire force",
   },
   {
     name: "Command Interface",
@@ -125,7 +125,7 @@ export const SUPPORT = [
     qty: 1,
     mcu: 50,
     effect:
-      "All friendly MSU (including itself) within 8 inches receives a +1 modifier to PS",
+      "All friendly units (including this MSU) within 8 inches receives a +1 modifier to PS",
   },
   {
     name: "Command Protocol",
@@ -155,7 +155,7 @@ export const SUPPORT = [
     qty: 1,
     mcu: 25,
     effect:
-      'End of Status Phase: roll PS 5+; all friendlies within 8" gain +1 EVA mod vs ranged weapons this round.',
+      'End of Status Phase: roll PS 5+; all friendly [UNITS] within 8" gain +1 EVA mod vs ranged weapons this round.',
   },
   {
     name: "Emergency Proximity System",
@@ -273,7 +273,8 @@ export const SUPPORT = [
     pfro: "–",
     qty: 1,
     mcu: 30,
-    effect: "Add a pair of arms; each can hold one weapon.",
+    effect:
+      "Add a pair of arms; each can hold one weapon or support equipment.",
   },
   {
     name: "Firing Drills",
@@ -293,7 +294,7 @@ export const SUPPORT = [
     qty: 2,
     mcu: 25,
     effect:
-      'Deploy Flare token within 8"; enemy missiles can rotate 45* if possible and move toward it. [LIMITED USE(1)].',
+      'Spend one action during any phase to deploy a Flare token within 8"; enemy missiles during step 1.2 must rotate 45* if possible and move toward the Flare token. [LIMITED USE(1)].',
   },
   {
     name: "Forward Observer",
@@ -409,7 +410,7 @@ export const SUPPORT = [
     qty: 2,
     mcu: 15,
     effect:
-      'Deploy 8" chaff cloud blocking LOS and detonating missiles. [LIMITED USE(1)].',
+      'During any phase, deploy AOE(8) chaff cloud blocking LOS and detonating all missiles entering or within the 8" cloud. [LIMITED USE(1)].',
   },
   {
     name: "Panoptic Canopy",
@@ -448,7 +449,7 @@ export const SUPPORT = [
     qty: 3,
     mcu: 20,
     effect:
-      'MSU moving within 4" takes 15 damage to both LEG locations. [LIMITED USE(1)], [AOE(4)]. [DEPLOYABLE]',
+      'Enemy [UNITS] entering, starting, or stopping within 4" of a Proximity Mine location takes 15 damage to both LEG locations. MSU may hover vertically or move vertically without triggering the mine. [LIMITED USE(1)]. [AOE(4)], [DEPLOYABLE].',
   },
   {
     name: "Psycommu Funnel/Bit",
@@ -495,7 +496,7 @@ export const SUPPORT = [
     pfro: "–",
     qty: 1,
     mcu: 25,
-    faction: "AU BU QU ROYAL GUARD",
+    faction: "",
     effect:
       "When damage is assigned to the Torso, or to the attached arm's respective side (meaning a shield can cover left leg and left arm simulatenously), assign all damage dealt. Cleave and AOE damage is assigned to the shield in this case.",
   },
@@ -574,7 +575,8 @@ export const SUPPORT = [
     pfro: "1 PFRO",
     qty: 1,
     mcu: 50,
-    effect: "Determine rangebands from any friendly MSU with LOS.",
+    effect:
+      "Determine rangebands from any friendly [UNIT] not in [HIGH ALTITUDE] with LOS.",
   },
   {
     name: "Target Designator",
@@ -586,7 +588,26 @@ export const SUPPORT = [
     effect: "Allows Airstrike action. [LIMITED USE(1)].",
   },
   {
-    name: "Upgrade:[COUNTERSTRIKE] ",
+    name: "Upgrade:[ANTI-AIRCRAFT]",
+    loc: "Weapon",
+    ton: "–",
+    pfro: "–",
+    qty: 2,
+    mcu: 15,
+    effect: "One ranged weapon gains the [ANTI-AIRCRAFT] keyword.",
+  },
+  {
+    name: "Upgrade:Bipod",
+    loc: "Weapon",
+    ton: "–",
+    pfro: "–",
+    qty: 1,
+    mcu: 20,
+    effect:
+      "If this MSU did not move this turn and is base to base with [HARD COVER], or a deployable equipment that provides [BRACE], that is tall enough to cover one or both of the MSU Leg hit locations, the upgraded weapon may reroll all hit rolls.",
+  },
+  {
+    name: "Upgrade:[COUNTERSTRIKE]",
     loc: "Weapon",
     ton: "–",
     pfro: "–",
@@ -699,15 +720,6 @@ export const SUPPORT = [
       "Add [AP(2)] to one non-beam melee weapon. If this weapon already has [AP(x)], instead add [AP(x+2)]",
   },
   {
-    name: "Upgrade:Hardpoint",
-    loc: "Weapon",
-    ton: 0,
-    pfro: "–",
-    qty: 6,
-    mcu: 10,
-    effect: "Add one hardpoint slot for a [MOUNTABLE] weapon.",
-  },
-  {
     name: "Upgrade:Missile Proximity",
     loc: "Weapon",
     ton: 2,
@@ -751,7 +763,7 @@ export const SUPPORT = [
     qty: 2,
     mcu: 15,
     effect:
-      "All Pistols gain [PRECISE] and [LETHAL]. Pistols also gain +4 base damage.",
+      "One Pistol gain [PRECISE] and [LETHAL]. This Pistol also gains +4 base damage.",
   },
   {
     name: "Upgrade:Slugger",
@@ -761,7 +773,7 @@ export const SUPPORT = [
     qty: 2,
     mcu: 25,
     effect:
-      "Shotguns lose [CLUSTER], gain ROF 2; Arm Cannons/Shotguns gain [AP(10)].",
+      "One Shotgun loses [CLUSTER], gain ROF 2. Arm Cannons/Shotguns gain [AP(10)]. Pistols gain [AP(5)].",
   },
   {
     name: "Upgrade:Underslung",

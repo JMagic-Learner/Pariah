@@ -28,6 +28,7 @@ const TERRAIN_TYPES = [
       "Gas Clouds",
       "Smoke from Equipment and Munitions",
       "Blizzards",
+      "High Altitude Clouds",
     ],
     note: null,
   },

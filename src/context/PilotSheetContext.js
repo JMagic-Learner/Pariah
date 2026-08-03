@@ -4,11 +4,11 @@ import { blankEquip, blankLoc } from "../Data/PresetsArray";
 const defaultPilotState = () => ({
   msuName: "",
   pilotName: "",
-  gunnery: "",
+  gunnery: "1",
   gunneryMod: "",
-  brawl: "",
+  brawl: "1",
   brawlMod: "",
-  piloting: "",
+  piloting: "1",
   pilotingMod: "",
   traits: ["", "", "", "", ""],
   mobileSuit: "",
@@ -47,6 +47,7 @@ const defaultPilotState = () => ({
   showPilotPanel: true,
   showBaseEquip: true,
   showAddlEquip: true,
+  showPresets: true,
 });
 
 const PilotSheetContext = createContext(null);
@@ -169,6 +170,7 @@ export const usePilotSlot = (slotIndex) => {
     setShowPilotPanel: makeSet("showPilotPanel"),
     setShowBaseEquip: makeSet("showBaseEquip"),
     setShowAddlEquip: makeSet("showAddlEquip"),
+    setShowPresets: makeSet("showPresets"),
     setAll,
     customPreset,
     setCustomPreset,

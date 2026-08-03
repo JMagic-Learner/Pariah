@@ -53,9 +53,8 @@ export const OtherActions = () => {
           <span className="fw6 red"> [FIRETEAM] </span> members at{" "}
           <span className="fw6 red">Step 1.4 of the Status Phase</span>. This is
           a <span className="fw6 red">PS Skill Check of 5+</span>. If
-          successful, remove any{" "}
-          <span className="fw6 red">[FEAR / SHAKEN]</span> and{" "}
-          <span className="fw6 red">[SUPPRESSED]</span> status on all{" "}
+          successful, remove any <span className="fw6 red">[Fear/Shaken]</span>{" "}
+          and <span className="fw6 red">[SUPPRESSED]</span> status on all{" "}
           <span className="fw6 red"> [FIRETEAM] </span>
           members within <span className="fw6 red">18 inches</span>.
         </p>
@@ -144,13 +143,13 @@ export const OtherActions = () => {
       <div className="bg-light-gray pa3 mb3 br2">
         <p className="fw7 red f5 ma0 mb1">FORWARD OBSERVE [ACTION]</p>
         <p className="lh-copy f6 mb2 i">
-          MSU pinpoints an MSU for target tracing and pinpoint attacks.
+          Pinpoints an enemy for target tracing and pinpoint attacks.
         </p>
         <p className="lh-copy f6 mb2 tj">
-          A MSU with the Forward Observer Support Equipment spends an Action in{" "}
+          A unit with the Forward Observer Support Equipment spends an Action in{" "}
           <span className="fw6 red">Step 4 of the Status Phase</span>, nominates
-          an enemy MSU within LOS. Mark that MSU with a Forward Observe token /
-          marker. Roll a{" "}
+          an enemy unit within LOS. Mark that unit with a Forward Observe token
+          / marker. Roll a{" "}
           <span className="fw6 red">PS 5+ skill check three times</span>.
         </p>
         <ul className="lh-copy pl3 f6 ma0">
@@ -166,7 +165,7 @@ export const OtherActions = () => {
           <li className="pv1">
             <span className="fw6 red">Three Successes:</span> All ranged attacks
             made against the enemy MSU now roll{" "}
-            <span className="fw6 red">2d3 instead of 1d6</span> until end of
+            <span className="fw6 red">3d3 instead of 1d6</span> until end of
             round.
           </li>
         </ul>

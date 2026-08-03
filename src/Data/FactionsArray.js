@@ -246,11 +246,11 @@ export const FACTIONS = [
           },
           {
             title: "CONTRACT KILLERS",
-            text: "Nominate one enemy [PILOT]/MSU. All MERCENARY Pilots gain +1 Gunnery and +1 Brawl when declaring ATTACK actions against that nominated [PILOT]/MSU",
+            text: "Nominate one enemy [UNIT]. All MERCENARY Pilots gain +1 Gunnery and +1 Brawl when declaring ATTACK actions against that nominated [UNIT]",
           },
           {
             title: "AFTERMARKET EQUIPMENT",
-            text: "Pilots can only purchase weapons and support equipment that cost 70 MCU or less ",
+            text: "Pilots can only purchase weapons and support equipment that cost 50 MCU or less ",
           },
         ],
       },
