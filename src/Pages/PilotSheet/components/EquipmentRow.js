@@ -94,7 +94,7 @@ export const EquipmentRow = ({
                 : "bg-near-white dark-gray",
             )}
             onClick={scavengerToggle.onClick}
-            title="Scavenger: halve this Support Equipment's MCU cost"
+            title="Scavenger: halve this item's MCU cost"
           >
             {scavengerToggle.active ? "−50% ✓" : "Scavenge ½"}
           </button>

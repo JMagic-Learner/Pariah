@@ -2615,7 +2615,6 @@ export const ZEON_PRESETS = [
           tonnage: "1",
           notes: "[MISSILE(18)], [AP(5)], [MOUNTABLE], [LIMITED USE(1)]",
         },
-        ,
         B(),
         B(),
         B(),
@@ -2795,7 +2794,7 @@ export const ZEON_PRESETS = [
       ],
       addlEquip: [
         {
-          name: "Optional: Jegan's Shield + Missile Pod 4",
+          name: "Optional: Jegan's Shield + Missile Pod 2",
           mcuCost: "FREE",
           fro: "",
           tonnage: "5",

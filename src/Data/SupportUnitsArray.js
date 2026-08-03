@@ -99,7 +99,7 @@ export const VEHICLE_UNITS = [
     unitSize: "1 Light Assault Vehicle",
     maxQty: "3",
     mcuCost: "20",
-    equipment: "LMG(Anti Infantry),Forward Observer,Deployable Mines,",
+    equipment: "LMG(Anti Infantry),Forward Observer,Deployable Mines",
   },
   {
     name: "SAM Platform",

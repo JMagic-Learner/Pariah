@@ -26,6 +26,7 @@ export const usePilotSlotActions = (slotIndex, slot) => {
     baseEquip,
     addlEquip,
     soldBase,
+    soldAddl,
     usedBase,
     usedAddl,
     purgeArmor,
@@ -68,6 +69,7 @@ export const usePilotSlotActions = (slotIndex, slot) => {
       baseEquip,
       addlEquip,
       soldBase,
+      soldAddl,
       usedBase,
       usedAddl,
       purgeArmor,
@@ -104,6 +106,7 @@ export const usePilotSlotActions = (slotIndex, slot) => {
       baseEquip: d.baseEquip ?? Array(8).fill(null).map(blankEquip),
       addlEquip: d.addlEquip ?? Array(8).fill(null).map(blankEquip),
       soldBase: d.soldBase ?? Array(8).fill(false),
+      soldAddl: d.soldAddl ?? Array(8).fill(false),
       usedBase: d.usedBase ?? Array(8).fill(false),
       usedAddl: d.usedAddl ?? Array(8).fill(false),
       purgeArmor: d.purgeArmor ?? false,
@@ -149,6 +152,7 @@ export const usePilotSlotActions = (slotIndex, slot) => {
       baseEquip: d.baseEquip,
       addlEquip: d.addlEquip,
       soldBase: Array(8).fill(false),
+      soldAddl: Array(8).fill(false),
       locations: d.locations,
     });
     setTabNames((prev) =>

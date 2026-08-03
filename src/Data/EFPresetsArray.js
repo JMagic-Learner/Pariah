@@ -3329,7 +3329,6 @@ export const EF_PRESETS = [
           tonnage: "2",
           notes: "Increase FRO limit by 2",
         },
-        ,
       ],
       addlEquip: [
         {
@@ -3358,7 +3357,11 @@ export const EF_PRESETS = [
           current: "25",
           max: "25",
           weapon: "",
-          equipment: ["Grenades x3", "Beam Saber (Stowed)", "Enhanced Fusion Reactors"],
+          equipment: [
+            "Grenades x3",
+            "Beam Saber (Stowed)",
+            "Enhanced Fusion Reactors",
+          ],
         },
         rightArm: {
           current: "25",
@@ -3474,7 +3477,7 @@ export const EF_PRESETS = [
         leftArm: {
           current: "25",
           max: "25",
-          weapon: "Shield + Missile Pod 4",
+          weapon: "Shield + Missile Pod 2",
           equipment: ["Beam Saber (Stowed)", "", ""],
         },
         rightLeg: {
@@ -3607,7 +3610,7 @@ export const EF_PRESETS = [
         leftArm: {
           current: "25",
           max: "25",
-          weapon: "Shield + Missile Pod 4",
+          weapon: "Shield + Missile Pod 2",
           equipment: ["", "", ""],
         },
         rightLeg: {

@@ -11,6 +11,8 @@ import {
 import { SupportEquipmentTable } from "../../Components/Table/SupportEquipmentTable";
 import { blankEquip } from "../../Data/PresetsArray";
 import { SUPPORT } from "../../Data/SupportEquipmentArray";
+import { RANGED } from "../../Data/RangedWeaponsArray";
+import { MELEE } from "../../Data/MeleeWeaponsArray";
 import { KEYWORDS } from "../../Data/KeywordArray";
 import { NEWTYPE_UPGRADES, BITS } from "../../Data/NewtypeUpgrades";
 import { renderKeywords } from "../../utils/renderKeywords";
@@ -77,6 +79,8 @@ const PilotSheetPanel = ({ slotIndex }) => {
     setAddlEquip,
     soldBase,
     setSoldBase,
+    soldAddl,
+    setSoldAddl,
     usedBase,
     setUsedBase,
     usedAddl,
@@ -149,6 +153,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
     baseEquip,
     soldBase,
     addlEquip,
+    soldAddl,
     scavengerChoice,
     mcu,
     tonnageLimit,
@@ -793,9 +798,25 @@ const PilotSheetPanel = ({ slotIndex }) => {
                     removeSupportLoc(row.name);
                     applyAddlEquip(i, blankEquip());
                     if (scavengerChoice === String(i)) setScavengerChoice("");
+                    if (soldAddl[i])
+                      setSoldAddl((prev) =>
+                        prev.map((s, idx) => (idx === i ? false : s)),
+                      );
                   }}
+                  sold={soldAddl[i]}
+                  onSell={
+                    String(row.mcuCost).trim().toUpperCase() === "FREE"
+                      ? () =>
+                          setSoldAddl((prev) =>
+                            prev.map((s, idx) => (idx === i ? !s : s)),
+                          )
+                      : undefined
+                  }
                   scavengerToggle={
-                    hasScavenger && SUPPORT.some((s) => s.name === row.name)
+                    hasScavenger &&
+                    (SUPPORT.some((s) => s.name === row.name) ||
+                      RANGED.some((w) => w.name === row.name) ||
+                      MELEE.some((w) => w.name === row.name))
                       ? {
                           active: scavengerChoice === String(i),
                           onClick: () =>
@@ -846,10 +867,26 @@ const PilotSheetPanel = ({ slotIndex }) => {
                         applyAddlEquip(i, blankEquip());
                         if (scavengerChoice === String(i))
                           setScavengerChoice("");
+                        if (soldAddl[i])
+                          setSoldAddl((prev) =>
+                            prev.map((s, idx) => (idx === i ? false : s)),
+                          );
                       }}
+                      sold={soldAddl[i]}
+                      onSell={
+                        String(row.mcuCost).trim().toUpperCase() === "FREE"
+                          ? () =>
+                              setSoldAddl((prev) =>
+                                prev.map((s, idx) => (idx === i ? !s : s)),
+                              )
+                          : undefined
+                      }
                       lastCellColSpan={2}
                       scavengerToggle={
-                        hasScavenger && SUPPORT.some((s) => s.name === row.name)
+                        hasScavenger &&
+                        (SUPPORT.some((s) => s.name === row.name) ||
+                          RANGED.some((w) => w.name === row.name) ||
+                          MELEE.some((w) => w.name === row.name))
                           ? {
                               active: scavengerChoice === String(i),
                               onClick: () =>

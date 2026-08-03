@@ -1,6 +1,8 @@
 import { parseMCU } from "../utilities/parseMCU";
 import { lookupSupportMCU } from "../utilities/lookupMCU";
 import { SUPPORT } from "../../../Data/SupportEquipmentArray";
+import { RANGED } from "../../../Data/RangedWeaponsArray";
+import { MELEE } from "../../../Data/MeleeWeaponsArray";
 
 const NON_HEAD_LOCATION_KEYS = [
   "torso",
@@ -10,6 +12,26 @@ const NON_HEAD_LOCATION_KEYS = [
   "leftLeg",
 ];
 
+// A shield with a weapon fused onto it ("Shield + Missile Pod 2", "Shield
+// Binders (Shield + B.Cannon)", "Composite Shields (Beam SMG)", "Shield
+// Boosters (Beam Cannon) x2") — anything shield-named that also carries a
+// weapon component. A shield fused with a non-weapon system instead (e.g.
+// "Shield Booster (Heavy Boosters)", just a shield + thruster unit) doesn't
+// match this and falls through to the normal support-equipment lookup.
+const WEAPON_HINT_RE =
+  /\+|binder|gatling|cannon|rifle|\bsmg\b|bits|gauntlet|missile pod|composite|cqc weapon/i;
+const isShieldWeaponCombo = (name) =>
+  /\bshields?\b/i.test(name) && WEAPON_HINT_RE.test(name);
+
+// Matches any plain defensive shield ("Shield", "Heavy Shield", "Beam
+// Shield", "Shield (Shoulder)", "Shields {Extra Arm Left) [20]", ...) but
+// not a shield combo (see above) or a mislabeled booster/binder — those
+// keep going through their own refund logic below.
+const NON_SHIELD_RE =
+  /\+|booster|binder|gatling|cannon|rifle|\bsmg\b|bits|gauntlet|missile pod|composite/i;
+const isPureShield = (name) =>
+  /\bshields?\b/i.test(name) && !NON_SHIELD_RE.test(name);
+
 // Centralizes every stat/limit that's *derived* from a pilot slot's raw
 // state (traits, equipment, choices) rather than stored directly, so the
 // panel component only has to read the results.
@@ -18,6 +40,7 @@ export const usePilotDerivedStats = ({
   baseEquip,
   soldBase,
   addlEquip,
+  soldAddl,
   scavengerChoice,
   mcu,
   tonnageLimit,
@@ -40,7 +63,7 @@ export const usePilotDerivedStats = ({
   const hasScavenger = traits.some((t) => t === "Scavenger");
   const hasPurgableArmor =
     baseEquip.some((row, i) => row.name === "Purgable Armor" && !soldBase[i]) ||
-    addlEquip.some((row) => row.name === "Purgable Armor");
+    addlEquip.some((row, i) => row.name === "Purgable Armor" && !soldAddl[i]);
   const hasGrypsVet = traits.some((t) => t === "Gryps War Veteran (REZEON)");
   const hasHonorable = traits.some((t) => t === "Honorable");
   const gunneryTraitCount = traits.filter((t) => t === "Gunnery").length;
@@ -77,7 +100,9 @@ export const usePilotDerivedStats = ({
     baseEquip.filter(
       (row, i) => row.name === "Enhanced Fusion Reactors" && !soldBase[i],
     ).length +
-    addlEquip.filter((row) => row.name === "Enhanced Fusion Reactors").length;
+    addlEquip.filter(
+      (row, i) => row.name === "Enhanced Fusion Reactors" && !soldAddl[i],
+    ).length;
   const froBonus =
     (hasMechanic && mechanicChoice === "fro" ? 2 : 0) + efrCount * 2;
   const effectiveTonnageLimit =
@@ -91,22 +116,35 @@ export const usePilotDerivedStats = ({
 
   const hasMerchantOfDeath = traits.some((t) => t === "Merchant of Death");
 
+  // Selling a stock (FREE) item refunds MCU: plain shields are a flat 5,
+  // shield/weapon combos are a flat 15, support equipment refunds its full
+  // catalog cost, weapons only refund a flat amount. A non-FREE item
+  // (already paid for) refunds its own listed cost.
+  const sellRefund = (row) => {
+    const isFree = String(row.mcuCost).trim().toUpperCase() === "FREE";
+    if (!isFree) return parseMCU(row.mcuCost);
+    if (isPureShield(row.name)) return 5;
+    if (isShieldWeaponCombo(row.name)) return 15;
+    const supportMCU = lookupSupportMCU(row.name);
+    const freeWeaponRefund = hasMerchantOfDeath ? 35 : 10;
+    return supportMCU !== null ? supportMCU : freeWeaponRefund;
+  };
+
   const totalMCU =
     parseMCU(mcu) +
     baseEquip.reduce((sum, row, i) => {
       if (!soldBase[i]) return sum + parseMCU(row.mcuCost);
-      const isFree = String(row.mcuCost).trim().toUpperCase() === "FREE";
-      if (!isFree) return sum - parseMCU(row.mcuCost);
-      const supportMCU = lookupSupportMCU(row.name);
-      const freeWeaponRefund = hasMerchantOfDeath ? 35 : 10;
-      return supportMCU !== null ? sum - supportMCU : sum - freeWeaponRefund;
+      return sum - sellRefund(row);
     }, 0) +
     addlEquip.reduce((sum, row, i) => {
+      if (soldAddl[i]) return sum - sellRefund(row);
       const cost = parseMCU(row.mcuCost);
       const isDiscounted =
         hasScavenger &&
         scavengerChoice === String(i) &&
-        SUPPORT.some((s) => s.name === row.name);
+        (SUPPORT.some((s) => s.name === row.name) ||
+          RANGED.some((w) => w.name === row.name) ||
+          MELEE.some((w) => w.name === row.name));
       return sum + (isDiscounted ? Math.floor(cost / 2) : cost);
     }, 0);
 
@@ -132,7 +170,10 @@ export const usePilotDerivedStats = ({
       (sum, row, i) => sum + (soldBase[i] ? 0 : parseMCU(row.tonnage)),
       0,
     ) +
-      addlEquip.reduce((sum, row) => sum + parseMCU(row.tonnage), 0) -
+      addlEquip.reduce(
+        (sum, row, i) => sum + (soldAddl[i] ? 0 : parseMCU(row.tonnage)),
+        0,
+      ) -
       purgeArmorTonnageSavings,
   );
 
