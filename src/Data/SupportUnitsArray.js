@@ -112,6 +112,16 @@ export const VEHICLE_UNITS = [
     equipment: "SAM Missile (Can only attack and track aircraft units)",
   },
   {
+    name: "Scout Tank",
+    type: "Vehicle",
+    armor: "12",
+    move: '11"',
+    unitSize: "Scout Tank",
+    maxQty: "4",
+    mcuCost: "20",
+    equipment: "Autocannon,LMG(Anti Infantry),Smoke Launchers",
+  },
+  {
     name: "Flak Platform",
     type: "Vehicle",
     armor: "8",
@@ -134,6 +144,15 @@ export const TANK_WEAPONS = [
     keywords: "[AOE(6)],[INDIRECT],[MOUNTABLE]",
   },
   {
+    name: "Autocannon",
+    type: "Cannon",
+    rof: "3",
+    range: "30 | 40 | 50 | 60",
+    mod: "+2 | +1 | +0 | -1",
+    dam: "5",
+    keywords: "[PRECISE],[MOUNTABLE]",
+  },
+  {
     name: "Flak Cannon",
     type: "Cannon",
     rof: "2",
@@ -149,7 +168,7 @@ export const TANK_WEAPONS = [
     range: "20 | 40 | 60 | 80",
     mod: "-1 | +1 | +0 | -2",
     dam: "8",
-    keywords: "[AP(4)] or [AOE(6)]",
+    keywords: "[AP(4)] or [AOE(6)],[MOUNTABLE]",
   },
   {
     name: "LMG(Anti Infantry)",
@@ -170,17 +189,14 @@ export const TANK_WEAPONS = [
     keywords:
       "[MISSILE(24)],[ENHANCED GUIDED],[LIMITED USE(2)],[ANTI-AIRCRAFT]",
   },
-];
-
-export const APC_WEAPONS = [
   {
-    name: "MG (Anti Infantry)",
-    type: "MG",
-    rof: "4",
-    range: "15 | 35 | 55 | 75",
-    mod: "+1 | +2 | +0 | -1",
-    dam: "1",
-    keywords: "[FULL AUTO],[MOUNTED]",
+    name: "Smoke Launcher",
+    type: "Grenade",
+    rof: "1",
+    range: "8",
+    mod: "+1",
+    dam: "-",
+    keywords: "[INDIRECT],[LIMITED USE(1)],[MUNITIONS:SMOKE]",
   },
 ];
 
