@@ -99,8 +99,12 @@ export const Movement = () => {
         <p className="lh-copy f6 mb2">
           An MSU can move forward up to its{" "}
           <span className="fw6 red"> [MOVEMENT] </span> value in inches. It may
-          not pass through enemy MSU, and may move over terrain freely as long
-          as terrain features are below 3 inches in height.
+          not pass through enemy MSU. If the moving MSU does not have the{" "}
+          <span className="fw6 red"> [HOVER PLATFORM] </span> support equipment,
+          it automatically destroys any enemy ground Support Units as it moves
+          over or through (it crushes the Support Unit underneath) and may move
+          over terrain freely as long as terrain features are below 3 inches in
+          height.
         </p>
         <ul className="lh-copy pl3 f6 ma0">
           <li className="pv1">
