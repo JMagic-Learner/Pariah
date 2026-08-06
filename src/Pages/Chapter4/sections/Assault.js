@@ -51,7 +51,7 @@ export const Assault = () => {
             </li>
             <li className="pv1">
               <strong className="red">+1 VP</strong> — Destroy each additional
-              enemy non-Commander MSU
+              enemy non-Commander [UNIT]
             </li>
             <li className="pv1">
               <strong className="red">+3 VP</strong> — Defender: Prevent

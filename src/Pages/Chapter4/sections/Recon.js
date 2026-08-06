@@ -47,8 +47,8 @@ export const Recon = () => {
               of game
             </li>
             <li className="pv1">
-              <strong className="red">+2 VP</strong> — MSU returns to friendly
-              deployment edge from opponent's half
+              <strong className="red">+2 VP</strong> — A [UNIT] returns to
+              friendly deployment edge from opponent's half
             </li>
           </ul>
         </div>
@@ -67,9 +67,9 @@ export const Recon = () => {
           repositioning.
         </li>
         <li className="pv1">
-          <strong>Deep Recon:</strong> If an MSU reaches the enemy's deployment
-          zone and returns to its own deployment zone within the same game,
-          award +2 VP (once per MSU).
+          <strong>Deep Recon:</strong> If an [UNIT] reaches the enemy's
+          deployment zone and returns to its own deployment zone within the same
+          game, award +2 VP (once per [UNIT]).
         </li>
         <li className="pv1">
           <strong>Early End:</strong> If one player controls all 5 Recon Points

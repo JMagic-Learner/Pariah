@@ -42,8 +42,8 @@ export const TorringtonBase = () => {
               round end
             </li>
             <li className="pv1">
-              <strong className="red">+3 VP</strong> — Attacker: any MSU reaches
-              Defender's deployment zone
+              <strong className="red">+3 VP</strong> — Attacker: any [UNIT]
+              reaches Defender's deployment zone
             </li>
           </ul>
         </div>

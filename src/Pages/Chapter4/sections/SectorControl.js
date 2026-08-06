@@ -57,31 +57,31 @@ export const SectorControl = () => {
       </p>
       <ul className="lh-copy pl3 tj">
         <li className="pv1">
-          That player has at least one MSU within the sector boundaries, AND
+          That player has at least one [UNIT]s within the sector boundaries, AND
         </li>
         <li className="pv1">
-          The opposing player has no MSUs within the same sector.
+          The opposing player has no [UNIT]s within the same sector.
         </li>
       </ul>
       <p className="lh-copy mb2 pl3 tj">
-        A sector is contested if both players have MSUs within it — neither
+        A sector is contested if both players have [UNIT]s within it — neither
         player scores VP for it that round.
       </p>
 
       <h3 className="f4 fw7 mb2">Mission Rules</h3>
       <ul className="lh-copy pl3 tj">
         <li className="pv1">
-          <strong>Sector Denial:</strong> Destroying an enemy MSU that was
+          <strong>Sector Denial:</strong> Destroying an enemy [UNIT] that was
           scoring a sector immediately removes that player's control of the
           sector for this round.
         </li>
         <li className="pv1">
-          <strong>Attrition:</strong> If one player loses all MSUs before round
-          6, the game ends immediately. The surviving player controls all
+          <strong>Attrition:</strong> If one player loses all [UNIT]s before
+          round 6, the game ends immediately. The surviving player controls all
           uncontested sectors.
         </li>
         <li className="pv1">
-          <strong>Flanking:</strong> MSUs that begin a round inside the
+          <strong>Flanking:</strong> [UNIT]s that begin a round inside the
           opponent's deployment zone (the back 6" edge) automatically contest
           any sector adjacent to that zone, regardless of position within it.
         </li>
