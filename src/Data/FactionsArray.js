@@ -105,7 +105,7 @@ export const FACTIONS = [
           },
           {
             title: "PSYCOMMU PIONEERS",
-            text: "Pilots may purchase Quasi Psycommu Systems for 75 MCU.",
+            text: "Pilots may purchase Quasi Psycommu Systems for 35 MCU.",
           },
         ],
       },
@@ -140,7 +140,7 @@ export const FACTIONS = [
         bonuses: [
           {
             title: "ROYAL GUARD",
-            text: "Pilots may purchase [HEAVY SHIELDS]",
+            text: "Pilots have access to and may purchase Shields (HEAVY) [30]",
           },
           {
             title: "AVALANCE OF AGGRESSION",

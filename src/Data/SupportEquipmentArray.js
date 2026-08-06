@@ -496,7 +496,7 @@ export const SUPPORT = [
     pfro: "–",
     qty: 1,
     mcu: 25,
-    faction: "",
+    faction: "AU BAO QU ROYAL GUARD",
     effect:
       "When damage is assigned to the Torso, or to the attached arm's respective side (meaning a shield can cover left leg and left arm simulatenously), assign all damage dealt. Cleave and AOE damage is assigned to the shield in this case.",
   },
