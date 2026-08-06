@@ -115,6 +115,16 @@ export const Overview = () => {
               ["Sector Control", "Control more sectors at game end", "6"],
               ["Extraction", "Extract a VIP unit off the board", "5"],
               ["Colony Drop", "Destroy the Colony Drop Core or defend it", "8"],
+              [
+                "Civilian Evacuation",
+                "Save Civilians in the midst of battle",
+                "6",
+              ],
+              [
+                "Final Stand",
+                "A one man army against the world. Survive 5 rounds.",
+                "5",
+              ],
             ].map((row, i) => (
               <tr
                 key={i}

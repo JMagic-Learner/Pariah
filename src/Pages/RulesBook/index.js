@@ -31,6 +31,8 @@ import { Assault } from "../Chapter4/sections/Assault";
 import { SectorControl } from "../Chapter4/sections/SectorControl";
 import { Extraction } from "../Chapter4/sections/Extraction";
 import { ColonyDrop } from "../Chapter4/sections/ColonyDrop";
+import { CivilianEvac } from "../Chapter4/sections/CivilianEvac";
+import { FinalStand } from "../Chapter4/sections/FinalStand";
 import { NewtypeUpgrades } from "../Chapter2/sections/NewtypeUpgrades";
 
 import { SupportUnitsOverview } from "../Chapter5/sections/Overview";
@@ -154,6 +156,16 @@ const CHAPTERS = [
         id: "colonydrop",
         title: "Mission 6: Colony Drop",
         Component: ColonyDrop,
+      },
+      {
+        id: "civilianEvac",
+        title: "Mission 7: Civilian Evacuation",
+        Component: CivilianEvac,
+      },
+      {
+        id: "finalestand",
+        title: "Mission 8: Final Stand",
+        Component: FinalStand,
       },
     ],
   },
