@@ -4,7 +4,7 @@ export const MUNITIONS = [
     name: "[MUNITIONS]: Adhesive",
     dam: "-",
     effect:
-      "Enemy MSU that are directly hit by [MUNITIONS]:ADHESIVE reduce base movement by 1 inch until end of round. This effect stacks with multiple hits.",
+      "Enemy MSU that are directly hit by [MUNITIONS]:ADHESIVE reduce base movement by 2 inches until end of round. This effect stacks with multiple hits.",
   },
   {
     name: "[MUNITIONS]: Buckshot",
@@ -23,7 +23,7 @@ export const MUNITIONS = [
     name: "[MUNITIONS]: Napalm",
     dam: 2,
     effect:
-      "AOE[3], ignites terrain, critical damage to Infantry and Civilians, MSU hit by Incendiary expend 1 FRO immediately. This effect stacks with multiple hits.",
+      "AOE[3], ignites terrain, critical damage to Infantry and Civilians, MSU hit by Incendiary expend 2 FRO immediately. This effect stacks with multiple hits.",
   },
   {
     name: "[MUNITIONS]: Tagging Smoke",

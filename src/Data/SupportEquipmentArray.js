@@ -24,6 +24,7 @@ export const SUPPORT = [
     pfro: "1 PFRO",
     qty: 1,
     mcu: 50,
+    faction: "EARTH FEDERATION",
     effect:
       "+1 Gunnery and Brawl if [PILOT] did not purchase Brawl/Gunnery/Newtype traits.",
   },
@@ -108,12 +109,13 @@ export const SUPPORT = [
       "Reduce Beam damage by 10. Regenerate 10 Shield Armor at Step 0 of Status Phase.",
   },
   {
-    name: "CAMO Cloak (ECOA only)",
+    name: "CAMO Cloak",
     loc: "All Locations",
     ton: "-",
     pfro: "",
     qty: 1,
     mcu: 35,
+    faction: "ECOA",
     effect:
       "In the deployment phase, a [UNIT] equipped with the CAMO Cloak may deploy after the opponent has finished deploying their entire force",
   },
@@ -507,7 +509,6 @@ export const SUPPORT = [
     pfro: "–",
     qty: 1,
     mcu: 15,
-    faction: "",
     effect:
       "When damage is assigned to the Torso, or to the attached arm's respective side (meaning a shield can cover left leg and left arm simulatenously), assign all damage dealt. Cleave and AOE damage is assigned to the shield in this case.",
   },

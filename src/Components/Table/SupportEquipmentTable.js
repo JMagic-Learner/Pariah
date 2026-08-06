@@ -51,6 +51,9 @@ export const SupportEquipmentTable = ({ tonnageLimit, fro } = {}) => {
                       MCU
                     </th>
                     <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">
+                      Faction
+                    </th>
+                    <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">
                       Effect
                     </th>
                   </tr>
@@ -74,6 +77,9 @@ export const SupportEquipmentTable = ({ tonnageLimit, fro } = {}) => {
                       </td>
                       <td className="pv3 pr3 bb b--black-20 tc">{item.qty}</td>
                       <td className="pv3 pr3 bb b--black-20 tc">{item.mcu}</td>
+                      <td className="pv3 pr3 bb b--black-20 tc">
+                        {item.faction || "NA"}
+                      </td>
                       <td className="pv3 pr3 bb b--black-20 lh-copy">
                         {renderKeywords(item.effect, setKwDialog)}
                       </td>

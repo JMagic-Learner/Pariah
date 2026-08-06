@@ -19,6 +19,7 @@ export const PICKER_TABS = [
       "Ton",
       "FRO",
       "MCU",
+      "Faction",
       "Keywords",
     ],
     data: RANGED,
@@ -32,6 +33,7 @@ export const PICKER_TABS = [
       w.ton,
       w.fro,
       w.mcu,
+      w.faction || "NA",
       w.keywords || "—",
     ],
     getFields: (w) => ({
@@ -54,6 +56,7 @@ export const PICKER_TABS = [
       "Ton",
       "FRO",
       "MCU",
+      "Faction",
       "Keywords",
     ],
     data: MELEE,
@@ -67,6 +70,7 @@ export const PICKER_TABS = [
       w.ton,
       w.fro,
       w.mcu,
+      w.faction || "NA",
       w.keywords || "—",
     ],
     getFields: (w) => ({
@@ -79,9 +83,18 @@ export const PICKER_TABS = [
   },
   {
     label: "Support",
-    headers: ["Name", "Loc", "Ton", "PFRO", "Qty", "MCU", "Effect"],
+    headers: ["Name", "Loc", "Ton", "PFRO", "Qty", "MCU", "Faction", "Effect"],
     data: SUPPORT,
-    getCells: (s) => [s.name, s.loc, s.ton, s.pfro, s.qty, s.mcu, s.effect],
+    getCells: (s) => [
+      s.name,
+      s.loc,
+      s.ton,
+      s.pfro,
+      s.qty,
+      s.mcu,
+      s.faction || "NA",
+      s.effect,
+    ],
     getFields: (s) => ({
       name: s.name,
       mcuCost: String(s.mcu ?? ""),

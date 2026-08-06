@@ -4,6 +4,7 @@ import { renderKeywords } from "../../../utils/renderKeywords";
 import { KeywordDialog } from "../../../Components/KeywordDialog";
 import { TextInput } from "../../../Components/TextInput";
 import { lookupWeaponInfo } from "../utilities/lookupWeaponInfo";
+import { lookupSupportInfo } from "../utilities/lookupSupportInfo";
 import { isLimitedUseItem } from "../../../utils/limitedUseEquipment";
 
 export const EquipmentDetailsModal = ({
@@ -20,6 +21,7 @@ export const EquipmentDetailsModal = ({
 }) => {
   const [kwDialog, setKwDialog] = useState(null);
   const weaponInfo = lookupWeaponInfo(row.name);
+  const supportInfo = !weaponInfo ? lookupSupportInfo(row.name) : null;
   const limitedUse = isLimitedUseItem(row.name);
   return (
     <div
@@ -107,12 +109,57 @@ export const EquipmentDetailsModal = ({
                 <label className="db f7 fw6 gray mb1">Mods</label>
                 <span className="f6">{weaponInfo.mod || "—"}</span>
               </div>
+              <div className=" w-20">
+                <label className="db f7 fw6 gray mb1">Faction</label>
+                <span className="f6">{weaponInfo.faction || "NA"}</span>
+              </div>
             </div>
             {weaponInfo.keywords && (
               <div>
                 <label className="db f7 fw6 gray mb1">Keywords</label>
                 <span className="f6 lh-copy">
                   {renderKeywords(weaponInfo.keywords, setKwDialog)}
+                </span>
+              </div>
+            )}
+          </div>
+        )}
+
+        {supportInfo && (
+          <div className="mb3 pa2 bg-near-white br1">
+            <p className="f7 fw6 dark-green ttu tracked mb2">
+              Support Equipment Reference
+            </p>
+            <div
+              className="flex flex-wrap mb2 w-100"
+              style={{ gap: "0.75rem" }}
+            >
+              <div className=" w-20">
+                <label className="db f7 fw6 gray mb1">Location</label>
+                <span className="f6">{supportInfo.loc || "—"}</span>
+              </div>
+              <div className=" w-20">
+                <label className="db f7 fw6 gray mb1">Ton</label>
+                <span className="f6">{supportInfo.ton ?? "—"}</span>
+              </div>
+              <div className=" w-20">
+                <label className="db f7 fw6 gray mb1">Passive FRO</label>
+                <span className="f6">{supportInfo.pfro || "—"}</span>
+              </div>
+              <div className=" w-20">
+                <label className="db f7 fw6 gray mb1">Qty</label>
+                <span className="f6">{supportInfo.qty ?? "—"}</span>
+              </div>
+              <div className=" w-20">
+                <label className="db f7 fw6 gray mb1">Faction</label>
+                <span className="f6">{supportInfo.faction || "NA"}</span>
+              </div>
+            </div>
+            {supportInfo.effect && (
+              <div>
+                <label className="db f7 fw6 gray mb1">Effect</label>
+                <span className="f6 lh-copy">
+                  {renderKeywords(supportInfo.effect, setKwDialog)}
                 </span>
               </div>
             )}
