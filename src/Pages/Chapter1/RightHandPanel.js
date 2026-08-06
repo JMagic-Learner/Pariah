@@ -15,7 +15,6 @@ export const RightHandPanel = () => {
           <li className="pv1">Pen and Paper (or print an MS sheet)</li>
         </ul>
       </div>
-
       {/* Earth Federation */}
       <div className="ba b--black-20 pa3 mb4">
         <h3 className="f4 fw7 red mt0 mb2">Earth Federation</h3>
@@ -30,7 +29,6 @@ export const RightHandPanel = () => {
           to live in space — giving rise to the image of the "Earth-born Elite."
         </p>
       </div>
-
       {/* ZEON */}
       <div className="ba b--black-20 pa3 mb4">
         <h3 className="f4 fw7 red mt0 mb2">Principality of ZEON</h3>
@@ -44,8 +42,7 @@ export const RightHandPanel = () => {
           the Antarctic reaty forbade weapons of mass destruction.
         </p>
       </div>
-
-      {/* Scaling reference */}
+      {/* Scaling reference
       <div className="ba b--black-20 pa3">
         <h3 className="f4 fw7 red mt0 mb2">MC Cost Formula</h3>
         <p className="f6 lh-copy mb2">The MS cost is calculated as follows:</p>
@@ -57,7 +54,7 @@ export const RightHandPanel = () => {
           Example: RGM-79 GM = (20×2)+(6×2)+(5×3)+(42/2)+10 = 98 → rounds to 100
           MC
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };

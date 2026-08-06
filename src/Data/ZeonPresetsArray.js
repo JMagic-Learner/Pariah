@@ -195,7 +195,8 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "1 (PASSIVE)",
           tonnage: "3",
-          notes: "",
+          notes:
+            'End of Status Phase: roll PS 5+; all friendlies within 8" gain +1 EVA mod vs ranged weapons until end of round.',
         },
         {
           name: "Forward Observer",
@@ -560,7 +561,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[INBUILT]",
+          notes: "[FULL AUTO],[INBUILT],[AKIMBO]",
         },
         {
           name: "Spiky Shoulders (ZEON)",
@@ -1334,7 +1335,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "",
+          notes: "[GRIP],[AKIMBO],[CLUSTER]",
         },
         {
           name: "Heavy Boosters",
@@ -1512,7 +1513,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "",
+          notes: "[MOUNTED],[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
         },
         {
           name: "Bazooka",
@@ -1600,7 +1601,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "",
+          notes: "[MOUNTED],[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
         },
         {
           name: "Beam Cannon",
@@ -1684,11 +1685,11 @@ export const ZEON_PRESETS = [
       armorValue: "24",
       baseEquip: [
         {
-          name: "Beam Rifle (Cyclic)",
+          name: "Beam Rifle [CYCLIC]",
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[CYCLIC]",
         },
         {
           name: "Shield",
@@ -1705,7 +1706,6 @@ export const ZEON_PRESETS = [
           tonnage: "1",
           notes: "[CLEAVE(X)]",
         },
-
         {
           name: "Bazooka",
           mcuCost: "FREE",
@@ -2055,14 +2055,14 @@ export const ZEON_PRESETS = [
           name: "Missile Pod 2 [INBUILT]",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "1",
+          tonnage: "2",
           notes: "[INBUILT],[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
           name: "Missile Pod 2 [INBUILT]",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "1",
+          tonnage: "2",
           notes: "[INBUILT],[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
@@ -2543,18 +2543,18 @@ export const ZEON_PRESETS = [
     data: {
       msuName: "AMS-119 Geara Doga",
       mobileSuit: "AMS-119 Geara Doga",
-      mcu: "155",
+      mcu: "165",
       fro: "7",
       tonnageLimit: "28",
       movement: '7"',
       armorValue: "25",
       baseEquip: [
         {
-          name: "(Beam) Machine Gun (ZEON)",
+          name: "(Beam) Machine Gun [GRIP] (ZEON)",
           mcuCost: "FREE",
           fro: "2",
           tonnage: "1",
-          notes: "[FULL AUTO]",
+          notes: "[MILITANT INNOVATION],[FULL AUTO],[GRIP]",
         },
         {
           name: "Shield (Shoulder)",
@@ -2590,21 +2590,21 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[MISSILE(18)], [AP(5)], [MOUNTABLE], [LIMITED USE(1)]",
+          notes: "[MISSILE(18)],[AP(5)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
           name: "PanzerFausts",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[MISSILE(18)], [AP(5)], [MOUNTABLE], [LIMITED USE(1)]",
+          notes: "[MISSILE(18)],[AP(5)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
           name: "PanzerFausts",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[MISSILE(18)], [AP(5)], [MOUNTABLE], [LIMITED USE(1)]",
+          notes: "[MISSILE(18)],[AP(5)],[MOUNTABLE],[LIMITED USE(1)]",
         },
       ],
       addlEquip: [
@@ -2613,7 +2613,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[MISSILE(18)], [AP(5)], [MOUNTABLE], [LIMITED USE(1)]",
+          notes: "[MISSILE(18)],[AP(5)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         B(),
         B(),
@@ -2676,7 +2676,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "8",
-          notes: "[AP(5)], [MOUNTABLE]",
+          notes: "[AP(5)],[MOUNTABLE]",
         },
         {
           name: "Shield (Shoulder)",
@@ -3747,8 +3747,8 @@ export const ZEON_PRESETS = [
           name: "Vulcan Cannon",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "",
-          notes: "",
+          tonnage: "1",
+          notes: "[FULL AUTO],[INBUILT],[AKIMBO]",
         },
         {
           name: "Missile Pod 3 [INBUILT]",

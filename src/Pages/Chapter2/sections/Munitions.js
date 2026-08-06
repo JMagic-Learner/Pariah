@@ -12,8 +12,8 @@ export const Munitions = () => {
         loaded at the time of firing.
       </p>
       <p className="lh-copy tj red">
-        Incendiary, Flash, and Tagging Smoke do not stack effects when multiple
-        missile type or grenade type weapons hit the same MSU
+        Flash, and Tagging Smoke do not stack effects when multiple missile type
+        or grenade type weapons hit the same MSU
       </p>
       <p>
         {" "}

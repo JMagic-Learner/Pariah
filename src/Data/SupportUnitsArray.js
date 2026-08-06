@@ -220,7 +220,7 @@ export const AIR_UNITS = [
     unitSize: "1 Fighter Jet",
     maxQty: "6",
     mcuCost: "25",
-    equipment: "Vulcan Cannons (AKIMBO) ×2,Missile Pod 2 x2,Flares",
+    equipment: "Vulcan Cannons ×2,Missile Pod 2 x2,Flares",
   },
   {
     name: "Interceptor Jet",
@@ -241,7 +241,7 @@ export const AIR_UNITS = [
     unitSize: "1 Bomber",
     maxQty: "3",
     mcuCost: "35",
-    equipment: "Flares, Carpet Bombing ([LIMITED USE(3)])",
+    equipment: "Flares,Carpet Bombing ([LIMITED USE(3)])",
   },
   {
     name: "Attack Helicopter",
@@ -252,7 +252,7 @@ export const AIR_UNITS = [
     maxQty: "3",
     mcuCost: "25",
     equipment:
-      "Flares, Gatling (Anti Infantry), Missile Pod 6 x2 [LIMITED USE(1)], Hover Platform",
+      "Flares,Gatling (Anti Infantry),Missile Pod 6 x2 [LIMITED USE(1)],Hover Platform",
   },
   {
     name: "Transport Helicopter",
@@ -262,7 +262,7 @@ export const AIR_UNITS = [
     unitSize: "1 Transport Helicopter",
     maxQty: "3",
     mcuCost: "10",
-    equipment: "Flares, Hover Platform, [TRANSPORT(1)]",
+    equipment: "Flares,Hover Platform,[TRANSPORT(1)]",
   },
 ];
 

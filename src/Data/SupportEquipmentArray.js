@@ -155,7 +155,7 @@ export const SUPPORT = [
     qty: 1,
     mcu: 25,
     effect:
-      'End of Status Phase: roll PS 5+; all friendly [UNITS] within 8" gain +1 EVA mod vs ranged weapons this round.',
+      'End of Status Phase: roll PS 5+; all friendly [UNITS] within 8" gain +1 EVA mod vs ranged weapons until end of round.',
   },
   {
     name: "Emergency Proximity System",
@@ -294,7 +294,7 @@ export const SUPPORT = [
     qty: 2,
     mcu: 25,
     effect:
-      'Spend one action during any phase to deploy a Flare token within 8"; enemy missiles during step 1.2 must rotate 45* if possible and move toward the Flare token. [LIMITED USE(1)].',
+      'Spend one action during any phase to deploy a Flare token within 8". This Flare token lasts until end of round. Enemy missiles within 9" of this Flare token during step 1.2 of the Status Phase must rotate 45* if possible and move toward the Flare token. [LIMITED USE(1)].',
   },
   {
     name: "Forward Observer",

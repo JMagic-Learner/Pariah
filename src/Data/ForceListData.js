@@ -1136,7 +1136,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "AMS-119 Geara Doga",
-        mcu: 155,
+        mcu: 165,
         move: '7"',
         armor: 25,
         fro: 7,
@@ -1144,7 +1144,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0093",
         faction: "Zeon, Neo Zeon",
         equipment:
-          "(Beam) Machine Gun, Shield (Shoulder), Spiky Shoulder, Beam Hawk, Shield + Panzerfaust x4",
+          "(Beam) Machine Gun [GRIP], Shield (Shoulder), Spiky Shoulder, Beam Hawk, Shield + Panzerfaust x4",
       },
       {
         msu: "AMS-119 Geara Doga Heavy Armed Type",

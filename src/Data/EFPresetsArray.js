@@ -662,7 +662,6 @@ export const EF_PRESETS = [
           tonnage: "2",
           notes: "Add 10 Armor to one hit location.",
         },
-        ,
       ],
       addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
       locations: {
@@ -1156,7 +1155,6 @@ export const EF_PRESETS = [
           tonnage: "3",
           notes: "[FULL AUTO]",
         },
-        ,
       ],
       addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
       locations: {
@@ -3326,7 +3324,7 @@ export const EF_PRESETS = [
           name: "Enhanced Fusion Reactors",
           mcuCost: "FREE",
           fro: "+2 FRO",
-          tonnage: "2",
+          tonnage: "4",
           notes: "Increase FRO limit by 2",
         },
       ],
@@ -3784,7 +3782,6 @@ export const EF_PRESETS = [
           tonnage: "8",
           notes: "[BOOST(1)] becomes [BOOST(2)]",
         },
-        ,
         B(),
         B(),
       ],
