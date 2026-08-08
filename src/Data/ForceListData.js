@@ -358,6 +358,17 @@ export const FORCE_LIST_FACTIONS = [
           "Beam Rifle, Beam Saber, Shield, Vulcans,Grenade Launchers (INBUILT) x2, Bazooka",
       },
       {
+        msu: "MSZ-007 Mass Production Type Z",
+        mcu: 130,
+        move: '7"',
+        armor: 23,
+        fro: 8,
+        tonnage: 18,
+        year: "0088",
+        faction: "EF, AEUG",
+        equipment: "Beam Rifle, Beam Saber,Beam Saber, Shield, Vulcans",
+      },
+      {
         msu: "MSK-008 Dijeh",
         mcu: 145,
         move: '7"',
