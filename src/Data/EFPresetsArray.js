@@ -1815,12 +1815,12 @@ export const EF_PRESETS = [
     },
   },
   {
-    id: "msz007-Mass-Production-Zeta-Gundam",
-    name: "MSZ-007 MASS PRODUCTION ZETA GUNDAM",
+    id: "msz007-Mass-Production-Type-Z",
+    name: "MSZ-007 MASS PRODUCTION Type Z",
     faction: "EF,AEUG",
     data: {
-      msuName: "MSZ-007 MASS PRODUCTION ZETA GUNDAM",
-      mobileSuit: "MSZ-007 MASS PRODUCTION ZETA GUNDAM",
+      msuName: "MSZ-007 MASS PRODUCTION Type Z",
+      mobileSuit: "MSZ-007 MASS PRODUCTION Type Z",
       mcu: "130",
       fro: "8",
       tonnageLimit: "18",
