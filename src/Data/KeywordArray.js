@@ -36,8 +36,8 @@ export const KEYWORDS = [
     desc: "[PILOTS] cannot directly target [CIVILIANS]. [CIVILIANS] are represented by 25mm tokens on the battlefield. [CIVILIANS] have one armor and one hit location. [CIVILANS] deduct 1 victory point per token eliminated. CIVILIANS move 6 inches away from the nearest MSU within 16 inches.",
   },
   {
-    name: "[CLEAVE(X)]",
-    desc: "On a successful melee attack, roll 1 additional hit locations. That additional hit location does an additional X damage equal to [PILOT] Brawl skill.",
+    name: "[CLEAVE]",
+    desc: "On a successful attack, roll 1 additional hit location.",
   },
   {
     name: "[CLUSTER]",

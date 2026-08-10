@@ -10,7 +10,9 @@ import {
 } from "../../Components/Table/WeaponTable";
 import { SupportEquipmentTable } from "../../Components/Table/SupportEquipmentTable";
 import { blankEquip } from "../../Data/PresetsArray";
-import { SUPPORT } from "../../Data/SupportEquipmentArray";
+import { SUPPORT_POOL } from "../../Data/SupportPool";
+import { UPGRADES } from "../../Data/UpgradeArray";
+import { FRAME_IMPROVEMENTS } from "../../Data/FrameImprovements";
 import { RANGED } from "../../Data/RangedWeaponsArray";
 import { MELEE } from "../../Data/MeleeWeaponsArray";
 import { KEYWORDS } from "../../Data/KeywordArray";
@@ -111,6 +113,10 @@ const PilotSheetPanel = ({ slotIndex }) => {
     setShowMelee,
     showSupport,
     setShowSupport,
+    showUpgrades,
+    setShowUpgrades,
+    showFrameImprovements,
+    setShowFrameImprovements,
     showKeywords,
     setShowKeywords,
     showNewtype,
@@ -720,7 +726,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                   <tr>
                     <TH className="tc">Name</TH>
                     <TH className="tc">MCU Cost</TH>
-                    <TH className="tc">Passive / Active FRO</TH>
+                    <TH className="tc">FRO</TH>
                     <TH className="tc">Tonnage</TH>
                     <TH className="tc" colSpan={2}>
                       Notes
@@ -814,7 +820,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                   }
                   scavengerToggle={
                     hasScavenger &&
-                    (SUPPORT.some((s) => s.name === row.name) ||
+                    (SUPPORT_POOL.some((s) => s.name === row.name) ||
                       RANGED.some((w) => w.name === row.name) ||
                       MELEE.some((w) => w.name === row.name))
                       ? {
@@ -843,7 +849,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                   <tr>
                     <TH className="tc">Name</TH>
                     <TH className="tc">MCU Cost</TH>
-                    <TH className="tc">Passive / Active FRO</TH>
+                    <TH className="tc">FRO</TH>
                     <TH className="tc">Tonnage</TH>
                     <TH className="tc" colSpan={2}>
                       Effects
@@ -884,7 +890,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                       lastCellColSpan={2}
                       scavengerToggle={
                         hasScavenger &&
-                        (SUPPORT.some((s) => s.name === row.name) ||
+                        (SUPPORT_POOL.some((s) => s.name === row.name) ||
                           RANGED.some((w) => w.name === row.name) ||
                           MELEE.some((w) => w.name === row.name))
                           ? {
@@ -933,6 +939,18 @@ const PilotSheetPanel = ({ slotIndex }) => {
             />
             <span className="mr2" />
             <RefToggle
+              open={showUpgrades}
+              onToggle={() => setShowUpgrades((v) => !v)}
+              label="Upgrades Reference"
+            />
+            <span className="mr2" />
+            <RefToggle
+              open={showFrameImprovements}
+              onToggle={() => setShowFrameImprovements((v) => !v)}
+              label="Frame Improvements Reference"
+            />
+            <span className="mr2" />
+            <RefToggle
               open={showKeywords}
               onToggle={() => setShowKeywords((v) => !v)}
               label="Keyword Reference"
@@ -953,6 +971,18 @@ const PilotSheetPanel = ({ slotIndex }) => {
               open={showSupport}
               onToggle={() => setShowSupport((v) => !v)}
               label="Support Equipment"
+            />
+            <span className="mr2" />
+            <RefToggle
+              open={showUpgrades}
+              onToggle={() => setShowUpgrades((v) => !v)}
+              label="Upgrades"
+            />
+            <span className="mr2" />
+            <RefToggle
+              open={showFrameImprovements}
+              onToggle={() => setShowFrameImprovements((v) => !v)}
+              label="Frame Improvements"
             />
             <span className="mr2" />
             <RefToggle
@@ -982,6 +1012,19 @@ const PilotSheetPanel = ({ slotIndex }) => {
         {showSupport && (
           <div className="bt b--black-10 ph2 pb2">
             <SupportEquipmentTable tonnageLimit={tonnageLimit} fro={fro} />
+          </div>
+        )}
+        {showUpgrades && (
+          <div className="bt b--black-10 ph2 pb2">
+            <SupportEquipmentTable items={UPGRADES} mobileTitle="Upgrades" />
+          </div>
+        )}
+        {showFrameImprovements && (
+          <div className="bt b--black-10 ph2 pb2">
+            <SupportEquipmentTable
+              items={FRAME_IMPROVEMENTS}
+              mobileTitle="Frame Improvements"
+            />
           </div>
         )}
         {showNewtype && (
@@ -1021,6 +1064,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                   <TH>Type</TH>
                   <TH className="tc">Category</TH>
                   <TH className="tc">Armor</TH>
+                  <TH className="tc">ROF</TH>
                   <TH className="tc">Range</TH>
                   <TH className="tc">Mods</TH>
                   <TH className="tc">Dam</TH>
@@ -1037,6 +1081,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                     <TD className="fw6">{b.type}</TD>
                     <TD className="tc">{b.cat}</TD>
                     <TD className="tc">{b.armor}</TD>
+                    <TD className="tc">{b.rof}</TD>
                     <TD className="tc">{b.range}</TD>
                     <TD className="tc">{b.mods}</TD>
                     <TD className="tc">{b.dam}</TD>

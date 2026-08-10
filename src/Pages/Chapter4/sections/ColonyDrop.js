@@ -30,7 +30,7 @@ export const ColonyDrop = () => {
               center of the table. Has 140 Armor.
             </li>
             <li className="pv1">
-              <strong>Rounds:</strong> 8
+              <strong>Rounds:</strong> 5
             </li>
           </ul>
         </div>
@@ -71,21 +71,21 @@ export const ColonyDrop = () => {
           (reactive mechanic, costs their Reaction).
         </li>
         <li className="pv1">
-          <strong>Light Debris:</strong> At the end of Round 4, if the Core
+          <strong>Light Debris:</strong> At the start of Round 3, if the Core
           still has HP, it crashes into one quarter of the table (decided by a
           d4 roll). All MSUs within that quarter take 15 damage to two hit
           locations. All [HARD COVER] and [OBSCURING COVER] terrain features
           within that quarter are removed from the table.
         </li>
         <li className="pv1">
-          <strong>Skyfall:</strong> At the end of Round 6, if the Core still has
-          HP, it crashes into one quarter of the table (decided by a d4 roll).
-          All MSUs within that quarter take 20 damage to two hit locations. All
-          [HARD COVER] and [OBSCURING COVER] terrain features within that
-          quarter are removed from the table.
+          <strong>Skyfall:</strong> At the start of Round 4, if the Core still
+          has HP, it crashes into one quarter of the table (decided by a d4
+          roll). All MSUs within that quarter take 20 damage to two hit
+          locations. All [HARD COVER] and [OBSCURING COVER] terrain features
+          within that quarter are removed from the table.
         </li>
         <li className="pv1">
-          <strong>Colony Impact:</strong> At the end of Round 8, if the Core
+          <strong>Colony Impact:</strong> At the start of Round 5, if the Core
           still has HP, it crashes into one quarter of the table (decided by a
           d4 roll). All MSUs within that quarter take 25 damage to two hit
           locations. All [HARD COVER] and [OBSCURING COVER] terrain features

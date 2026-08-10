@@ -82,6 +82,9 @@ export const NewtypeUpgradesTable = () => {
                       Armor
                     </th>
                     <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">
+                      ROF
+                    </th>
+                    <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">
                       Range Band
                     </th>
                     <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">
@@ -107,6 +110,7 @@ export const NewtypeUpgradesTable = () => {
                       <td className="pv3 pr3 bb b--black-20 fw6">{bit.type}</td>
                       <td className="pv3 pr3 bb b--black-20 tc">{bit.cat}</td>
                       <td className="pv3 pr3 bb b--black-20 tc">{bit.armor}</td>
+                      <td className="pv3 pr3 bb b--black-20 tc">{bit.rof}</td>
                       <td className="pv3 pr3 bb b--black-20">{bit.range}</td>
                       <td className="pv3 pr3 bb b--black-20">{bit.mods}</td>
                       <td className="pv3 pr3 bb b--black-20 tc">{bit.dam}</td>
@@ -128,8 +132,8 @@ export const NewtypeUpgradesTable = () => {
                 <div key={i} className="mb2 pa3 ba b--black-10 bg-near-white">
                   <p className="fw7 ma0 mb1">{bit.type} Bit</p>
                   <p className="ma0 f7 red mb1">
-                    Armor: {bit.armor} · DAM: {bit.dam} · MCU: {bit.mcu} ·
-                    Faction: {bit.faction}
+                    Armor: {bit.armor} · ROF: {bit.rof} · DAM: {bit.dam} · MCU:{" "}
+                    {bit.mcu} · Faction: {bit.faction}
                   </p>
                   <p className="ma0 f7 lh-copy">
                     Range: {bit.range} | Mods: {bit.mods}

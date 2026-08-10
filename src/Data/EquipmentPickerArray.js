@@ -2,6 +2,8 @@ import { RANGED } from "./RangedWeaponsArray";
 import { MELEE } from "./MeleeWeaponsArray";
 import { MUNITIONS } from "./MunitionsArray";
 import { SUPPORT } from "./SupportEquipmentArray";
+import { UPGRADES } from "./UpgradeArray";
+import { FRAME_IMPROVEMENTS } from "./FrameImprovements";
 import { NEWTYPE_UPGRADES } from "./NewtypeUpgrades";
 import { BITS } from "./NewtypeUpgrades";
 // ─── Equipment picker modal ───────────────────────────────────────────────────
@@ -104,6 +106,32 @@ export const PICKER_TABS = [
     }),
   },
   {
+    label: "Upgrades",
+    headers: ["Name", "Loc", "Ton", "PFRO", "Qty", "MCU", "Effect"],
+    data: UPGRADES,
+    getCells: (u) => [u.name, u.loc, u.ton, u.pfro, u.qty, u.mcu, u.effect],
+    getFields: (u) => ({
+      name: u.name,
+      mcuCost: String(u.mcu ?? ""),
+      fro: String(u.pfro ?? ""),
+      tonnage: String(u.ton ?? ""),
+      notes: u.effect || "",
+    }),
+  },
+  {
+    label: "Frame Improvements",
+    headers: ["Name", "Loc", "Ton", "PFRO", "Qty", "MCU", "Effect"],
+    data: FRAME_IMPROVEMENTS,
+    getCells: (f) => [f.name, f.loc, f.ton, f.pfro, f.qty, f.mcu, f.effect],
+    getFields: (f) => ({
+      name: f.name,
+      mcuCost: String(f.mcu ?? ""),
+      fro: String(f.pfro ?? ""),
+      tonnage: String(f.ton ?? ""),
+      notes: f.effect || "",
+    }),
+  },
+  {
     label: "Munitions",
     headers: ["Name", "DAM", "Effect"],
     data: MUNITIONS,
@@ -131,12 +159,23 @@ export const PICKER_TABS = [
   },
   {
     label: "Bits / Funnels",
-    headers: ["Type", "Cat", "Armor", "Range", "Mods", "DAM", "MCU", "Faction"],
+    headers: [
+      "Type",
+      "Cat",
+      "Armor",
+      "ROF",
+      "Range",
+      "Mods",
+      "DAM",
+      "MCU",
+      "Faction",
+    ],
     data: BITS,
     getCells: (b) => [
       b.type,
       b.cat,
       b.armor,
+      b.rof,
       b.range,
       b.mods,
       b.dam,

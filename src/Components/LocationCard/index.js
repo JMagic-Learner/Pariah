@@ -90,10 +90,16 @@ export const LocationCard = ({
           <button
             className={classNames(
               "f8 ph1 pv0 bn br1 pointer lh-copy flex-shrink-0",
-              data.weaponStowed ? "bg-orange white fw7" : "bg-near-white dark-gray",
+              data.weaponStowed
+                ? "bg-orange white fw7"
+                : "bg-near-white dark-gray",
             )}
             onClick={() => onChange("weaponStowed", !data.weaponStowed)}
-            title={data.weaponStowed ? "Weapon is stowed (counts as 1 equip slot) — click to unstow" : "Mark weapon as stowed"}
+            title={
+              data.weaponStowed
+                ? "Weapon is stowed (counts as 1 equip slot) — click to unstow"
+                : "Mark weapon as stowed"
+            }
           >
             {data.weaponStowed ? "STOWED" : "stow"}
           </button>
@@ -104,20 +110,23 @@ export const LocationCard = ({
         />
       </div>
       {data.equipment
-        .slice(0, data.weaponStowed ? data.equipment.length - 1 : data.equipment.length)
+        .slice(
+          0,
+          data.weaponStowed ? data.equipment.length - 1 : data.equipment.length,
+        )
         .map((eq, i) => (
-        <div key={i} className="mb2">
-          <div className="f7 fw6 gray mb1">Equipment</div>
-          <TextInput
-            value={eq}
-            onChange={(v) => {
-              const next = [...data.equipment];
-              next[i] = v;
-              onChange("equipment", next);
-            }}
-          />
-        </div>
-      ))}
+          <div key={i} className="mb2">
+            <div className="f7 fw6 gray mb1">Equipment</div>
+            <TextInput
+              value={eq}
+              onChange={(v) => {
+                const next = [...data.equipment];
+                next[i] = v;
+                onChange("equipment", next);
+              }}
+            />
+          </div>
+        ))}
     </div>
   </div>
 );

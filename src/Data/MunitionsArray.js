@@ -9,8 +9,7 @@ export const MUNITIONS = [
   {
     name: "[MUNITIONS]: Buckshot",
     dam: "3",
-    effect:
-      "[LETHAL],Enemy MSU that are directly hit by [MUNITIONS]:Buckshot suffer 1d6 hit location rolls.",
+    effect: "[LETHAL],[CLEAVE]",
   },
   {
     name: "[MUNITIONS]: Flash",
@@ -19,6 +18,12 @@ export const MUNITIONS = [
       "AOE[3], hit MSU's suffer -2 penalty to all GS,BR, PS,and EVA rolls until end of round. This effect does not stack with multiple hits from [MUNITIONS]:Flash.",
   },
   { name: "[MUNITIONS]: Frag", dam: 6, effect: "AOE[6]" },
+  {
+    name: "[MUNITIONS]: MICLIC",
+    dam: 5,
+    effect:
+      "Missile type weapons only.[LINEAR],Autodetonates immediately after placing Missile Token. Auto destroys any deployed equipment hit.",
+  },
   {
     name: "[MUNITIONS]: Napalm",
     dam: 2,

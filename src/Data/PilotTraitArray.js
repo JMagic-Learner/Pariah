@@ -30,6 +30,12 @@ export const TRAITS = [
     restrictions: "Limited 1 per [FIRETEAM]",
   },
   {
+    name: "Bandit",
+    cost: 1,
+    effect:
+      "After declaring an [ATTACK] or [REACTIVE ATTACK] action, the [UNIT] may move 4 inches backward without penalty. This movement cannot be used to rotate facing",
+  },
+  {
     name: "Ballistic Afficionado",
     cost: 1,
     effect:
@@ -59,6 +65,12 @@ export const TRAITS = [
       "When this MSU consumes 3 FRO to [BOOST(X)], this [PILOT] gains +1 Gunnery and Piloting.",
   },
   { name: "Brawler", cost: 2, effect: "Gain +1 to Brawl (Stackable)." },
+  {
+    name: "Buzz Saw",
+    cost: 2,
+    effect:
+      "Whenver this [PILOT] declares an [FULL AUTO] ranged weapon, if the target enemy MSU is in [OBSCURING COVER], the [OBSCURING COVER] is destroyed after the attack is resolved. [FULL AUTO] attacks do an extra 5 damage to [HARD COVER] terrain.",
+  },
   {
     name: "Captain",
     cost: 1,
@@ -111,7 +123,7 @@ export const TRAITS = [
     name: "Duelist",
     cost: 2,
     effect:
-      'If no friendly MSU within 12" of this MSU, you may reroll 1 attack dice per turn.',
+      'If no friendly MSU within 8" of this MSU, you may reroll 1 attack dice per turn.',
   },
   {
     name: "Efficiency Engineer",
@@ -123,6 +135,12 @@ export const TRAITS = [
     cost: 1,
     effect:
       "[PILOT] ignores the [KNOCKDOWN] state when the first leg location is destroyed. [CRIPPLED] state reduces base movespeed by 2 instead of half.",
+  },
+  {
+    name: "Evasive",
+    cost: 2,
+    effect:
+      "This [PILOT]'s evasion max bonus is now 5 instead of 4. Moving less than 8 inches no longer incurs a -1 penalty to evasion rolls (see Evasion Tier Table)",
   },
   {
     name: "Executioner",
@@ -160,6 +178,13 @@ export const TRAITS = [
       "If this [PILOT]'s MSU is within 12 inches of the center of the battlefield, it may automatically choose to fail/succeed [TAKE COVER] reactions. In addition, if this [UNIT] is in base contact with [HARD COVER], once per round it may reassign an incoming hit location to a location covered by [HARD COVER]",
   },
   {
+    name: "Formation Specialist",
+    cost: 1,
+    effect:
+      "Whenver this [PILOT] declares an [MOVEMENT] action, all friendly MSU's within 8 inches may perform immediatly perform a [MOVEMENT] action at a -2 penalty to their movement distance.",
+    restrictions: "Limited 1 per [FIRETEAM]",
+  },
+  {
     name: "Generous",
     cost: 1,
     effect:
@@ -185,11 +210,17 @@ export const TRAITS = [
   },
   {
     name: "Guns Blazing",
-    cost: 3,
+    cost: 2,
     effect:
-      "When declaring [SIMULTANEOUS ATTACK], the [PILOT] may now nominate one additional ranged weapon to fire at a -1 trait mod (such that three weapons fire per [SIMULTANEOUS ATTACK], with the third weapon suffering a -3 mod total). In addition, [MOUNTED] weapons are now eligible for [REACTIVE ATTACKS]",
+      "When declaring [SIMULTANEOUS ATTACK], the [PILOT] may now nominate three ranged weapon to fire instead of two. In addition, [MOUNTED] weapons are now eligible for [REACTIVE ATTACKS]",
   },
   { name: "Gunnery", cost: 2, effect: "Increase Gunnery by 1 (Stackable)." },
+  {
+    name: "Hawkeye",
+    cost: 1,
+    effect:
+      "This [PILOT] may perform the Forward Observer action once per battle round by spending 2 FRO.",
+  },
   {
     name: "Heavy Weapons Specialist",
     cost: 1,
@@ -197,10 +228,10 @@ export const TRAITS = [
       "[HEAVY] weapons gain [AKIMBO]. [HEAVY] ranged weapons gain the [PRECISION] keyword if the MSU stood still and did not rotate.",
   },
   {
-    name: "Hawkeye",
+    name: "Hipfire Specialist",
     cost: 1,
     effect:
-      "This [PILOT] may perform the Forward Observer action once per battle round by spending 2 FRO.",
+      "This [PILOT] may declare an [ATTACK] action with a ranged weapon during a [MOVEMENT] action at a -2 penalty to hit.",
   },
   {
     name: "Honorable",
@@ -330,6 +361,12 @@ export const TRAITS = [
       "As long as this [UNIT] is touching the edge of the battlefield, it cannot be declared as a target of ranged REACTIVE ATTACKS at the start of it's movement action",
   },
   {
+    name: "Pyromaniac",
+    cost: 1,
+    effect:
+      "All [AOE(X)] ranged weapons now also have [MUNITIONS]: Napalm effect in addition to base damage. Use the greatest [AOE(X)] value for determining area of effect radius.",
+  },
+  {
     name: "Quick Hands",
     cost: 1,
     effect: "All [LIGHT] or [MEDIUM] weapons gain [QUICK SWAP] trait.",
@@ -338,13 +375,19 @@ export const TRAITS = [
     name: "Rambo",
     cost: 1,
     effect:
-      "When wielding two weapons (one in each [UNIT]s hands), increase Gunnery or Brawl by 1.",
+      "When wielding two weapons (one in each [UNIT]s hands) or using a pair of Psycommu Hands, increase Gunnery or Brawl by 1.",
   },
   {
     name: "Reactive",
     cost: 2,
     effect:
-      "During Reactive Attack actions, the [UNIT] may reroll up to X Attack dice equal to PS mod.",
+      "During Reactive Attack actions, the [UNIT] may reroll up to 1 + X Attack dice equal to PS mod.",
+  },
+  {
+    name: "Recon Operative",
+    cost: 2,
+    effect:
+      "A [PILOT] may purchase one ECM/ECCM and Forward Observer support equipment for free.",
   },
   {
     name: "Rookie",
@@ -387,6 +430,18 @@ export const TRAITS = [
       "Shields gain +5 Armor. Shields reduce tonnage by 1. Shields gain: ROF 1, Range 0–4(12), MOD +2, DAM 10, Keywords: [IMPACT(2)].",
   },
   {
+    name: "Shrug it off",
+    cost: 1,
+    effect:
+      "When this [PILOT] is affected by an area affect of an [AOE(X)] attack, this [PILOT] may roll a PS 5+ check to ignore the [AOE] effect.",
+  },
+  {
+    name: "Shotcaller",
+    cost: 2,
+    effect:
+      "When this [PILOT] declares a [REACTIVE] attack with a ranged weapon, choose a hit location. Whenever a ranged attack hits that hit location, this [PILOT] can choose to remove an weapon or an support equipment assigned to that hit location",
+  },
+  {
     name: "Six Shooter",
     cost: 1,
     effect:
@@ -398,6 +453,7 @@ export const TRAITS = [
     effect:
       "Enemy MSUs suppressed by this [PILOT] reduce their base movespeed by 2.",
   },
+
   {
     name: "Theme Song",
     cost: 2,
@@ -415,6 +471,12 @@ export const TRAITS = [
     cost: 1,
     effect:
       "After rolling initiative but before rerolling ties, adjust [PILOT] initiative result by +2 or -2.",
+  },
+  {
+    name: "Unorthodox Training",
+    cost: 1,
+    effect:
+      "Inverse the rangeband mods of all ranged weapons. For example a rangeband spread of -2 | 0 | +1 | +2 would become +2 | 0 | -1 | -2",
   },
   {
     name: "Vindictive",

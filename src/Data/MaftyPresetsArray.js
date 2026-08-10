@@ -43,7 +43,7 @@ export const MAFTY_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+          notes: "[CLEAVE],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
         },
         {
           name: "Spiky Shoulder",
@@ -136,7 +136,7 @@ export const MAFTY_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+          notes: "[CLEAVE],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
         },
         {
           name: "Spiky Shoulder",
@@ -230,7 +230,7 @@ export const MAFTY_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+          notes: "[CLEAVE],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
         },
         {
           name: "Spiky Shoulder",
@@ -331,7 +331,7 @@ export const MAFTY_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+          notes: "[CLEAVE],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
         },
         {
           name: "Missile Pod 10 (Guided + INBUILT)",

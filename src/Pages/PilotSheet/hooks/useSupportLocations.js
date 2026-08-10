@@ -1,4 +1,4 @@
-import { SUPPORT } from "../../../Data/SupportEquipmentArray";
+import { SUPPORT_POOL } from "../../../Data/SupportPool";
 import {
   parseLocInstructions,
   LOC_LABELS,
@@ -13,7 +13,7 @@ export const useSupportLocations = ({
   setSlotWarning,
 }) => {
   const removeSupportLoc = (itemName) => {
-    const supportItem = SUPPORT.find((s) => s.name === itemName);
+    const supportItem = SUPPORT_POOL.find((s) => s.name === itemName);
     if (!supportItem) return;
     const instructions = parseLocInstructions(supportItem.loc);
     if (instructions.length === 0) return;
@@ -54,7 +54,7 @@ export const useSupportLocations = ({
   };
 
   const autoFillSupportLoc = (itemName) => {
-    const supportItem = SUPPORT.find((s) => s.name === itemName);
+    const supportItem = SUPPORT_POOL.find((s) => s.name === itemName);
     if (!supportItem) return;
     const instructions = parseLocInstructions(supportItem.loc);
     if (instructions.length === 0) return;

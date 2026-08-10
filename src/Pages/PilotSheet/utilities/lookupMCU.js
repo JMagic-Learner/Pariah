@@ -1,4 +1,4 @@
-import { SUPPORT } from "../../../Data/SupportEquipmentArray";
+import { SUPPORT_POOL } from "../../../Data/SupportPool";
 
 export const lookupSupportMCU = (name) => {
   const norm = (s) =>
@@ -23,7 +23,7 @@ export const lookupSupportMCU = (name) => {
   // specific catalog entry (fewest words) so a short name doesn't grab an
   // unrelated item.
   let best = null;
-  for (const item of SUPPORT) {
+  for (const item of SUPPORT_POOL) {
     const itemWords = words(item.name);
     if (itemWords.length === 0) continue;
     const matches = itemWords.filter((w) => nameWords.has(w)).length;

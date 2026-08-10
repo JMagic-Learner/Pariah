@@ -139,7 +139,12 @@ export const EquipmentPickerModal = ({
                       display = `${cell}*`;
                     }
                     return (
-                      <td key={j} className="pv2 pr2 bb b--black-20 lh-copy">
+                      <td
+                        key={j}
+                        className={classNames("pv2 pr2 bb b--black-20 tc", {
+                          "fw6 w-20": j === nameCol,
+                        })}
+                      >
                         {display}
                       </td>
                     );

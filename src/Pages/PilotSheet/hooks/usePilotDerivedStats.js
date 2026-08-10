@@ -1,6 +1,6 @@
 import { parseMCU } from "../utilities/parseMCU";
 import { lookupSupportMCU } from "../utilities/lookupMCU";
-import { SUPPORT } from "../../../Data/SupportEquipmentArray";
+import { SUPPORT_POOL } from "../../../Data/SupportPool";
 import { RANGED } from "../../../Data/RangedWeaponsArray";
 import { MELEE } from "../../../Data/MeleeWeaponsArray";
 
@@ -142,7 +142,7 @@ export const usePilotDerivedStats = ({
       const isDiscounted =
         hasScavenger &&
         scavengerChoice === String(i) &&
-        (SUPPORT.some((s) => s.name === row.name) ||
+        (SUPPORT_POOL.some((s) => s.name === row.name) ||
           RANGED.some((w) => w.name === row.name) ||
           MELEE.some((w) => w.name === row.name));
       return sum + (isDiscounted ? Math.floor(cost / 2) : cost);

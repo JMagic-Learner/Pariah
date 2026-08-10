@@ -28,7 +28,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE(X)],[THROW]",
+          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE],[THROW]",
         },
         {
           name: "Spiky Shoulders (ZEON)",
@@ -36,7 +36,7 @@ export const ZEON_PRESETS = [
           fro: "",
           tonnage: "-",
           notes:
-            "[MILITANT INNOVATION], [BLITZ] collision: 15 damage + 1 per 3 inches traveled.",
+            "[MILITANT INNOVATION],[BLITZ] collision: 15 damage + 1 per 3 inches traveled.",
         },
         B(),
         B(),
@@ -105,7 +105,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE(X)],[THROW]",
+          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE],[THROW]",
         },
         {
           name: "Shield (Shoulder)",
@@ -120,7 +120,7 @@ export const ZEON_PRESETS = [
           fro: "",
           tonnage: "-",
           notes:
-            "[MILITANT INNOVATION], [BLITZ] collision: 15 damage + 1 per 3 inches traveled.",
+            "[MILITANT INNOVATION],[BLITZ] collision: 15 damage + 1 per 3 inches traveled.",
         },
         B(),
         B(),
@@ -288,7 +288,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE(X)],[THROW]",
+          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE],[THROW]",
         },
         {
           name: "Spiky Shoulders (ZEON)",
@@ -296,7 +296,7 @@ export const ZEON_PRESETS = [
           fro: "",
           tonnage: "-",
           notes:
-            "[MILITANT INNOVATION], [BLITZ] collision: 15 damage + 1 per 3 inches traveled.",
+            "[MILITANT INNOVATION],[BLITZ] collision: 15 damage + 1 per 3 inches traveled.",
         },
         {
           name: "Shield (Shoulder)",
@@ -371,7 +371,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE(X)],[THROW]",
+          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE],[THROW]",
         },
         {
           name: "Spiky Shoulders (ZEON)",
@@ -379,7 +379,7 @@ export const ZEON_PRESETS = [
           fro: "",
           tonnage: "-",
           notes:
-            "[MILITANT INNOVATION], [BLITZ] collision: 15 damage + 1 per 3 inches traveled.",
+            "[MILITANT INNOVATION],[BLITZ] collision: 15 damage + 1 per 3 inches traveled.",
         },
         {
           name: "Shield (Shoulder)",
@@ -389,11 +389,12 @@ export const ZEON_PRESETS = [
           notes: "20 Additional Armor, only protects the Limb Attached",
         },
         {
-          name: "Bazooka",
+          name: "Light Bazooka",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "8",
-          notes: "[AOE(6)], [BRACE]",
+          tonnage: "4",
+          notes:
+            "[AOE(6)],[BRACE],[SCOPE][AOE(6)],[QUICK SWAP],[SCOPE],[LIMITED USE(2)]",
         },
         B(),
         B(),
@@ -411,7 +412,7 @@ export const ZEON_PRESETS = [
         rightArm: {
           current: "22",
           max: "22",
-          weapon: "Bazooka",
+          weapon: "Light Bazooka",
           equipment: ["Shield (Shoulder)", "", ""],
         },
         leftArm: {
@@ -467,7 +468,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE(X)],[THROW]",
+          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE],[THROW]",
         },
         {
           name: "Smoke Grenades x3 (MOUNTED)",
@@ -569,7 +570,7 @@ export const ZEON_PRESETS = [
           fro: "",
           tonnage: "-",
           notes:
-            "[MILITANT INNOVATION], [BLITZ] collision: 15 damage + 1 per 3 inches traveled.",
+            "[MILITANT INNOVATION],[BLITZ] collision: 15 damage + 1 per 3 inches traveled.",
         },
         {
           name: "Shield (Shoulder)",
@@ -648,7 +649,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE(X)],[THROW]",
+          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE],[THROW]",
         },
         {
           name: "Heavy Boosters",
@@ -663,7 +664,7 @@ export const ZEON_PRESETS = [
           fro: "",
           tonnage: "-",
           notes:
-            "[MILITANT INNOVATION], [BLITZ] collision: 15 damage + 1 per 3 inches traveled.",
+            "[MILITANT INNOVATION],[BLITZ] collision: 15 damage + 1 per 3 inches traveled.",
         },
         {
           name: "Shield (Shoulder)",
@@ -673,7 +674,6 @@ export const ZEON_PRESETS = [
           notes: "20 Additional Armor, only protects the Limb Attached",
         },
         B(),
-
         B(),
         B(),
       ],
@@ -731,14 +731,14 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "1",
-          notes: "[FULL AUTO], [MOUNTABLE]",
+          notes: "[FULL AUTO],[MOUNTABLE]",
         },
         {
           name: "Heat Hawk (MOUNTED)",
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE(X)],[THROW]",
+          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE],[THROW]",
         },
         {
           name: "Heavy Boosters",
@@ -774,7 +774,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "8",
-          notes: "[AP(5)], [MOUNTABLE]",
+          notes: "[AP(5)],[MOUNTABLE]",
         },
         B(),
       ],
@@ -844,7 +844,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE(X)],[THROW]",
+          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE],[THROW]",
         },
         {
           name: "Spiky Shoulders (ZEON)",
@@ -852,7 +852,7 @@ export const ZEON_PRESETS = [
           fro: "",
           tonnage: "-",
           notes:
-            "[MILITANT INNOVATION], [BLITZ] collision: 15 damage + 1 per 3 inches traveled.",
+            "[MILITANT INNOVATION],[BLITZ] collision: 15 damage + 1 per 3 inches traveled.",
         },
         {
           name: "Shield (Shoulder)",
@@ -939,7 +939,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "3",
-          notes: "[CLEAVE(X)],[LETHAL]",
+          notes: "[CLEAVE],[LETHAL]",
         },
         {
           name: "Restraint Cables",
@@ -954,7 +954,7 @@ export const ZEON_PRESETS = [
           fro: "",
           tonnage: "-",
           notes:
-            "[MILITANT INNOVATION], [BLITZ] collision: 15 damage + 1 per 3 inches traveled.",
+            "[MILITANT INNOVATION],[BLITZ] collision: 15 damage + 1 per 3 inches traveled.",
         },
         {
           name: "Arm Cannon",
@@ -1028,7 +1028,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "3",
-          notes: "[CLEAVE(X)],[LETHAL]",
+          notes: "[CLEAVE],[LETHAL]",
         },
         {
           name: "Vertical Jump Jets",
@@ -1146,14 +1146,14 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "3",
-          notes: "[CLEAVE(X)],[LETHAL]",
+          notes: "[CLEAVE],[LETHAL]",
         },
         {
           name: "Heat Blade",
           mcuCost: "FREE",
           fro: "1",
           tonnage: "3",
-          notes: "[CLEAVE(X)],[LETHAL]",
+          notes: "[CLEAVE],[LETHAL]",
         },
       ],
       addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
@@ -1217,14 +1217,14 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "6",
-          notes: "[CLEAVE(X)]",
+          notes: "[CLEAVE]",
         },
         {
           name: "CQC Weapon",
           mcuCost: "FREE",
           fro: "",
           tonnage: "6",
-          notes: "[CLEAVE(X)]",
+          notes: "[CLEAVE]",
         },
         {
           name: "Machine Gun (ZEON)",
@@ -1321,14 +1321,14 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "3",
-          notes: "[CLEAVE(X)],[LETHAL]",
+          notes: "[CLEAVE],[LETHAL]",
         },
         {
           name: "Heat Blade",
           mcuCost: "FREE",
           fro: "1",
           tonnage: "3",
-          notes: "[CLEAVE(X)],[LETHAL]",
+          notes: "[CLEAVE],[LETHAL]",
         },
         {
           name: "Shotgun (Kinetic)",
@@ -1428,11 +1428,11 @@ export const ZEON_PRESETS = [
           notes: "[FULL AUTO],[AKIMBO],[BURST(2)]",
         },
         {
-          name: "Bazooka",
+          name: "Heavy Bazooka",
           mcuCost: "FREE",
           fro: "",
           tonnage: "8",
-          notes: "[AOE(6)], [BRACE]",
+          notes: "[AOE(6)] or [MUNITIONS],[BRACE],[SCOPE]",
         },
         {
           name: "Side Verniers",
@@ -1471,7 +1471,7 @@ export const ZEON_PRESETS = [
         rightArm: {
           current: "24",
           max: "24",
-          weapon: "Bazooka",
+          weapon: "Heavy Bazooka",
           equipment: ["Side Verniers", "", ""],
         },
         leftArm: {
@@ -1516,11 +1516,11 @@ export const ZEON_PRESETS = [
           notes: "[MOUNTED],[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
         },
         {
-          name: "Bazooka",
+          name: "Heavy Bazooka",
           mcuCost: "FREE",
           fro: "",
           tonnage: "8",
-          notes: "[AOE(6)], [BRACE]",
+          notes: "[AOE(6)] or [MUNITIONS],[BRACE],[SCOPE]",
         },
         {
           name: "Side Verniers",
@@ -1559,7 +1559,7 @@ export const ZEON_PRESETS = [
         rightArm: {
           current: "24",
           max: "24",
-          weapon: "Bazooka",
+          weapon: "Heavy Bazooka",
           equipment: ["Side Verniers", "Heavy Booster", ""],
         },
         leftArm: {
@@ -1622,7 +1622,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "3",
-          notes: "[CLEAVE(X)],[LETHAL]",
+          notes: "[CLEAVE],[LETHAL]",
         },
         {
           name: "Heavy Boosters",
@@ -1647,7 +1647,7 @@ export const ZEON_PRESETS = [
         rightArm: {
           current: "24",
           max: "24",
-          weapon: "Bazooka",
+          weapon: "Heavy Bazooka",
           equipment: ["Side Verniers", "Heavy Booster", ""],
         },
         leftArm: {
@@ -1704,14 +1704,14 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "2",
           tonnage: "1",
-          notes: "[CLEAVE(X)]",
+          notes: "[CLEAVE]",
         },
         {
-          name: "Bazooka",
+          name: "Heavy Bazooka",
           mcuCost: "FREE",
           fro: "",
           tonnage: "8",
-          notes: "[AOE(6)], [BRACE]",
+          notes: "[AOE(6)] or [MUNITIONS],[BRACE],[SCOPE]",
         },
         B(),
         B(),
@@ -1725,7 +1725,7 @@ export const ZEON_PRESETS = [
           current: "24",
           max: "24",
           weapon: "",
-          equipment: ["Bazooka (Stowed)", "Beam Naginata (Stowed)", ""],
+          equipment: ["Heavy Bazooka (Stowed)", "Beam Naginata (Stowed)", ""],
         },
         rightArm: {
           current: "24",
@@ -1768,18 +1768,18 @@ export const ZEON_PRESETS = [
       armorValue: "20",
       baseEquip: [
         {
-          name: "Bazooka",
+          name: "Heavy Bazooka",
           mcuCost: "FREE",
           fro: "",
           tonnage: "8",
-          notes: "[AOE(6)], [BRACE]",
+          notes: "[AOE(6)] or [MUNITIONS],[BRACE],[SCOPE]",
         },
         {
-          name: "Bazooka",
+          name: "Heavy Bazooka",
           mcuCost: "FREE",
           fro: "",
           tonnage: "8",
-          notes: "[AOE(6)], [BRACE]",
+          notes: "[AOE(6)] or [MUNITIONS],[BRACE],[SCOPE]",
         },
         {
           name: "Side Verniers",
@@ -1793,28 +1793,28 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[GRIP], [AKIMBO], [CLUSTER]",
+          notes: "[GRIP],[AKIMBO],[CLUSTER]",
         },
         {
           name: "Shotgun (Kinetic)",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[GRIP], [AKIMBO], [CLUSTER]",
+          notes: "[GRIP],[AKIMBO],[CLUSTER]",
         },
         {
           name: "PanzerFausts",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[MISSILE(18)], [AP(5)], [MOUNTABLE], [LIMITED USE(1)]",
+          notes: "[MISSILE(18)],[AP(5)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
           name: "PanzerFausts",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[MISSILE(18)], [AP(5)], [MOUNTABLE], [LIMITED USE(1)]",
+          notes: "[MISSILE(18)],[AP(5)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
           name: "Chain Mines",
@@ -1831,21 +1831,21 @@ export const ZEON_PRESETS = [
           fro: "",
           tonnage: "-",
           notes:
-            "[MILITANT INNOVATION], [BLITZ] collision: 15 damage + 1 per 3 inches traveled.",
+            "[MILITANT INNOVATION],[BLITZ] collision: 15 damage + 1 per 3 inches traveled.",
         },
         {
           name: "Beam Saber",
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+          notes: "[CLEAVE],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
         },
         {
           name: "Beam Saber",
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+          notes: "[CLEAVE],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
         },
         B(),
         B(),
@@ -1864,7 +1864,11 @@ export const ZEON_PRESETS = [
           current: "20",
           max: "20",
           weapon: "",
-          equipment: ["Side Verniers", "Bazooka (Stowed)", "Shotgun (Stowed)"],
+          equipment: [
+            "Side Verniers",
+            "Heavy Bazooka (Stowed)",
+            "Shotgun (Stowed)",
+          ],
         },
         rightArm: {
           current: "20",
@@ -1875,7 +1879,7 @@ export const ZEON_PRESETS = [
         leftArm: {
           current: "20",
           max: "20",
-          weapon: "Bazooka",
+          weapon: "Heavy Bazooka",
           equipment: ["Side Verniers", "Spiky Shoulder (ZEON)", ""],
         },
         rightLeg: {
@@ -1939,14 +1943,14 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+          notes: "[CLEAVE],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
         },
         {
           name: "Beam Saber",
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+          notes: "[CLEAVE],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
         },
         {
           name: "Arm Cannon",
@@ -1970,7 +1974,7 @@ export const ZEON_PRESETS = [
           fro: "",
           tonnage: "-",
           notes:
-            "[MILITANT INNOVATION], [BLITZ] collision: 15 damage + 1 per 3 inches traveled.",
+            "[MILITANT INNOVATION],[BLITZ] collision: 15 damage + 1 per 3 inches traveled.",
         },
         B(),
         B(),
@@ -2367,18 +2371,18 @@ export const ZEON_PRESETS = [
       armorValue: "22",
       baseEquip: [
         {
-          name: "Psycommu Hands",
+          name: "Psycommu Hand",
           mcuCost: "FREE",
-          fro: "4",
-          tonnage: "5",
-          notes: "PSYCOMMU",
+          fro: "3",
+          tonnage: "3",
+          notes: "15||30|45|NA | +0|+2|+0|– | DAM 5",
         },
         {
-          name: "Psycommu Hands",
+          name: "Psycommu Hand",
           mcuCost: "FREE",
-          fro: "4",
-          tonnage: "5",
-          notes: "PSYCOMMU",
+          fro: "3",
+          tonnage: "3",
+          notes: "15||30|45|NA | +0|+2|+0|– | DAM 5",
         },
         {
           name: "Enhanced Fusion Reactors",
@@ -2411,13 +2415,13 @@ export const ZEON_PRESETS = [
         rightArm: {
           current: "22",
           max: "22",
-          weapon: "Psycommu Hands",
+          weapon: "Psycommu Hand",
           equipment: ["", "", ""],
         },
         leftArm: {
           current: "22",
           max: "22",
-          weapon: "Psycommu Hands",
+          weapon: "Psycommu Hand",
           equipment: ["", "", ""],
         },
         rightLeg: {
@@ -2575,7 +2579,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE(X)]",
+          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE]",
         },
         {
           name: "Shield",
@@ -2697,7 +2701,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE(X)]",
+          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE]",
         },
         {
           name: "Heavy Boosters",
@@ -2771,7 +2775,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE(X)]",
+          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE]",
         },
         {
           name: "Shield (Shoulder)",
@@ -2781,11 +2785,11 @@ export const ZEON_PRESETS = [
           notes: "20 Additional Armor, only protects the Limb Attached",
         },
         {
-          name: "Bazooka",
+          name: "Light Bazooka",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "8",
-          notes: "[AOE(6)], [BRACE]",
+          tonnage: "4",
+          notes: "[BRACE],[AOE(6)],[QUICK SWAP],[SCOPE],[LIMITED USE(2)]",
         },
         B(),
         B(),
@@ -2825,7 +2829,7 @@ export const ZEON_PRESETS = [
         leftArm: {
           current: "27",
           max: "27",
-          weapon: "Bazooka",
+          weapon: "Light Bazooka",
           equipment: ["", "", ""],
         },
         rightLeg: {
@@ -2968,14 +2972,14 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+          notes: "[CLEAVE],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
         },
         {
           name: "Beam Saber",
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+          notes: "[CLEAVE],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
         },
         {
           name: "2x Grenade Launcher (ZEON)",
@@ -3068,14 +3072,14 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+          notes: "[CLEAVE],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
         },
         {
           name: "Beam Saber",
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+          notes: "[CLEAVE],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
         },
         {
           name: "Vulcan Cannons",
@@ -3162,14 +3166,14 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "2",
-          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE(X)]",
+          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE]",
         },
         {
-          name: "Bazooka",
+          name: "Heavy Bazooka",
           mcuCost: "FREE",
           fro: "",
           tonnage: "8",
-          notes: "[AOE(6)], [BRACE]",
+          notes: "[AOE(6)] or [MUNITIONS],[BRACE],[SCOPE]",
         },
         {
           name: "Panoptic Canopy",
@@ -3195,7 +3199,7 @@ export const ZEON_PRESETS = [
         rightArm: {
           current: "27",
           max: "27",
-          weapon: "Bazooka",
+          weapon: "Heavy Bazooka",
           equipment: ["Arm Cannon", "", ""],
         },
         leftArm: {
@@ -3279,14 +3283,14 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "3/1",
           tonnage: "2",
-          notes: "Beam Cannons are [INBUILT],[CLEAVE(X)]",
+          notes: "Beam Cannons are [INBUILT],[CLEAVE]",
         },
         {
           name: "Beam Cannon/Beam Sabers",
           mcuCost: "FREE",
           fro: "3/1",
           tonnage: "2",
-          notes: "Beam Cannons are [INBUILT],[CLEAVE(X)]",
+          notes: "Beam Cannons are [INBUILT],[CLEAVE]",
         },
       ],
       addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
@@ -3382,7 +3386,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+          notes: "[CLEAVE],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
         },
         {
           name: "Missile Pod 10",
@@ -3469,7 +3473,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "1",
-          notes: "Left Hand, [FULL AUTO]",
+          notes: "Left Hand,[FULL AUTO]",
         },
         {
           name: "Side Verniers",
@@ -3497,14 +3501,14 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+          notes: "[CLEAVE],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
         },
         {
           name: "Beam Saber",
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+          notes: "[CLEAVE],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
         },
         B(),
       ],
@@ -3650,11 +3654,11 @@ export const ZEON_PRESETS = [
       armorValue: "26",
       baseEquip: [
         {
-          name: "Bazooka",
+          name: "Heavy Bazooka",
           mcuCost: "FREE",
           fro: "",
           tonnage: "8",
-          notes: "[AOE(6)], [BRACE]",
+          notes: "[AOE(6)] or [MUNITIONS],[BRACE],[SCOPE]",
         },
         {
           name: "Missile Pod 2 (MOUNTED)",
@@ -3706,7 +3710,7 @@ export const ZEON_PRESETS = [
         rightArm: {
           current: "26",
           max: "26",
-          weapon: "Bazooka",
+          weapon: "Heavy Bazooka",
           equipment: ["Missile Pod 2 (MOUNTED)", "", ""],
         },
         leftArm: {
@@ -3863,7 +3867,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE(X)],[THROW]",
+          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE],[THROW]",
         },
         {
           name: "Shield (Shoulder)",
@@ -4044,14 +4048,14 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+          notes: "[CLEAVE],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
         },
         {
           name: "Beam Saber",
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+          notes: "[CLEAVE],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
         },
         {
           name: "Funnel x10",
@@ -4177,14 +4181,14 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE(X)]",
+          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE]",
         },
         {
           name: "Beam Hawk",
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE(X)]",
+          notes: "[AKIMBO],[QUICK SWAP],[CLEAVE]",
         },
         {
           name: "External Propellent (Heavy Booster)",
@@ -4292,14 +4296,14 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[CLEAVE(X)]",
+          notes: "[CLEAVE]",
         },
         {
           name: "Beam Sabers",
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[CLEAVE(X)]",
+          notes: "[CLEAVE]",
         },
         {
           name: "Beam Cannon [MOUNTED]",
@@ -4435,18 +4439,18 @@ export const ZEON_PRESETS = [
           notes: "[FULL AUTO],[INBUILT],[AKIMBO]",
         },
         {
-          name: "ATOMIC Bazooka",
+          name: "Atomic Bazooka",
           mcuCost: "FREE",
           fro: "8",
           tonnage: "12",
-          notes: "",
+          notes: "[AOE(25)],[BRACE],[LIMITED USE(2)]",
         },
         {
           name: "Beam Saber",
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
-          notes: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+          notes: "[CLEAVE],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
         },
         {
           name: "Heavy Shield (30)",
@@ -4484,7 +4488,7 @@ export const ZEON_PRESETS = [
         rightArm: {
           current: "28",
           max: "28",
-          weapon: "ATOMIC Bazooka",
+          weapon: "Atomic Bazooka",
           equipment: ["", "", ""],
         },
         leftArm: {

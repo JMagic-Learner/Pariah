@@ -6,6 +6,7 @@ import { TextInput } from "../../../Components/TextInput";
 import { lookupWeaponInfo } from "../utilities/lookupWeaponInfo";
 import { lookupSupportInfo } from "../utilities/lookupSupportInfo";
 import { isLimitedUseItem } from "../../../utils/limitedUseEquipment";
+import { useMediaQuery } from "@custom-react-hooks/all";
 
 export const EquipmentDetailsModal = ({
   row,
@@ -19,6 +20,7 @@ export const EquipmentDetailsModal = ({
   used,
   onToggleUsed,
 }) => {
+  const isMobile = useMediaQuery("(max-width: 768px)");
   const [kwDialog, setKwDialog] = useState(null);
   const weaponInfo = lookupWeaponInfo(row.name);
   const supportInfo = !weaponInfo ? lookupSupportInfo(row.name) : null;
@@ -66,6 +68,7 @@ export const EquipmentDetailsModal = ({
           value={row.name}
           onChange={(v) => onChange("name", v)}
           className="w-100 mb3"
+          isMobile={isMobile}
         />
 
         {limitedUse && onToggleUsed && (

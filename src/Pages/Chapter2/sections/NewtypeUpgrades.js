@@ -28,8 +28,12 @@ export const NewtypeUpgrades = () => {
         <h3 className="f3 fw7 mb3 bb pb2">Psycommu Bits — Rules</h3>
         <ul className="lh-copy pl4">
           <li className="lh-copy tj">
-            Bits are deployed at the start of the game, in base contact with the
-            controlling MSU.
+            Bits and Psycommu Hands may be deployed or retracted at Step 1.4 of
+            the Status Phase, If they are deployed, they are deployed 12 inches
+            from the controlling MSU, in any direction. Both equipment are
+            considered not to be part of the MSU when deployed. When retracted,
+            they are considered part of the MSU and then take up one single
+            equipment slot (or one in each arm in the case of Psycommu Hands).
           </li>
           <li className="lh-copy tj">
             Bits are repositioned at the end of the controller's movement,
@@ -41,9 +45,11 @@ export const NewtypeUpgrades = () => {
             –1 hit penalty (small target).
           </li>
           <li className="lh-copy tj">
-            <strong>Beam Bits:</strong> During the Shooting Phase, the
-            controlling pilot may direct Beam Bits to attack an enemy MSU, using{" "}
-            <strong>PS instead of GS</strong>. These attacks do not count as
+            <strong>Beam Bits and Psycommu Hands (Pair):</strong> During the
+            Shooting Phase, the controlling pilot may direct Beam Bits/Psycommu
+            Hands to attack an enemy MSU, using LOS and facing from the Beam
+            Bits/Psycommu Hands, using <strong>PS instead of GS</strong>. These
+            attacks do not count as
             <span className="fw6 red"> [SIMULTANEOUS ATTACK] </span>.
           </li>
           <li className="lh-copy tj">

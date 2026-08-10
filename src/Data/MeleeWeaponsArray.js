@@ -10,7 +10,7 @@ export const MELEE = [
     fro: 1,
     mcu: 25,
     faction: "ZEON",
-    keywords: "[AKIMBO],[QUICK SWAP],[CLEAVE(X)]",
+    keywords: "[AKIMBO],[QUICK SWAP],[CLEAVE]",
   },
   {
     name: "Beam Javelin/Spear",
@@ -46,7 +46,7 @@ export const MELEE = [
     ton: 1,
     fro: 2,
     mcu: 30,
-    keywords: "[CLEAVE(X)]",
+    keywords: "[CLEAVE]",
   },
   {
     name: "Beam Saber",
@@ -58,7 +58,7 @@ export const MELEE = [
     ton: 1,
     fro: 1,
     mcu: 20,
-    keywords: "[CLEAVE(X)],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+    keywords: "[CLEAVE],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
   },
   {
     name: "Beam Whip",
@@ -107,7 +107,7 @@ export const MELEE = [
     ton: 2,
     fro: "–",
     mcu: 10,
-    keywords: "[CLEAVE(X)]",
+    keywords: "[CLEAVE]",
   },
   {
     name: "Gauntlets",
@@ -144,7 +144,7 @@ export const MELEE = [
     fro: 1,
     mcu: 20,
     faction: "ZEON",
-    keywords: "[CLEAVE(X)],[LETHAL]",
+    keywords: "[CLEAVE],[LETHAL]",
   },
   {
     name: "Heat Hawk",
@@ -157,7 +157,7 @@ export const MELEE = [
     fro: 1,
     mcu: 10,
     faction: "ZEON",
-    keywords: "[AKIMBO],[QUICK SWAP],[CLEAVE(X)],[THROW]",
+    keywords: "[AKIMBO],[QUICK SWAP],[CLEAVE],[THROW]",
   },
   {
     name: "Heavy Weapon",
@@ -227,8 +227,9 @@ export const MELEE = [
     mod: "+1",
     dam: "" - "",
     ton: 1,
-    fro: "–",
+    fro: "-",
     mcu: 10,
-    keywords: '[INBUILT]; Enemy or Friendly MSU pulled 6" closer',
+    keywords:
+      '[INBUILT]; Enemy or Friendly MSU pulled 6" closer. Enemy MSU expends 2 FRO immediately.',
   },
 ];
