@@ -21,7 +21,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Beam Saber",
@@ -115,7 +115,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Shield",
@@ -220,7 +220,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Shield",
@@ -396,7 +396,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Shield",
@@ -911,7 +911,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Shield",
@@ -1005,7 +1005,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Shield",
@@ -1215,7 +1215,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Shield",
@@ -1328,7 +1328,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Beam Cannon (INBUILT)",
@@ -1434,7 +1434,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Shield",
@@ -1528,7 +1528,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Shield",
@@ -1726,7 +1726,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Shield",
@@ -1832,7 +1832,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Shield",
@@ -2358,7 +2358,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Light Bazooka (Mounted)",
@@ -2452,7 +2452,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Sniper Rifle (Beam)",
@@ -2728,7 +2728,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Beam Saber",
@@ -2959,7 +2959,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Beam Naginata",
@@ -3046,7 +3046,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Shield + Missile Pod 2",
@@ -3151,7 +3151,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Hyper Bazooka",
@@ -3263,7 +3263,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Beam Saber",
@@ -3368,7 +3368,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Beam Saber",
@@ -3498,7 +3498,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Beam Saber",
@@ -3729,7 +3729,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Shield",
@@ -3829,7 +3829,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Shield",
@@ -3929,7 +3929,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Beam Saber",
@@ -4023,7 +4023,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Shield (Shoulder)",
@@ -4105,7 +4105,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Shield",
@@ -4232,7 +4232,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Shield",
@@ -4344,7 +4344,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Shield + Missile Pod 2",
@@ -4426,7 +4426,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Grenade Launcher",
@@ -4513,7 +4513,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Shield",
@@ -5271,7 +5271,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Beam Cannon",
@@ -5464,7 +5464,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Shield",
@@ -5579,7 +5579,7 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[WARTIME INNOVATIONS]",
         },
         {
           name: "Dummy Balloons",
