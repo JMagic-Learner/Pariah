@@ -39,7 +39,7 @@ export const TRAITS = [
     name: "Ballistic Afficionado",
     cost: 1,
     effect:
-      "All Non-Beam, Non-Grenade ranged type weapons reduce respective weapon tonnage by 1 to a minimum of 1. This [PILOT] may only equip Non-Beam, Non-Grenade type ranged weapons",
+      "All Non-Beam, Non-Grenade ranged type weapons reduce respective weapon tonnage by 2 to a minimum of 1. This [PILOT] may only equip Non-Beam, Non-Grenade type ranged weapons",
   },
   {
     name: "Berzerker",
