@@ -69,7 +69,7 @@ export const TRAITS = [
     name: "Buzz Saw",
     cost: 2,
     effect:
-      "Whenver this [PILOT] declares an [FULL AUTO] ranged weapon, if the target enemy MSU is in [OBSCURING COVER], the [OBSCURING COVER] is destroyed after the attack is resolved. [FULL AUTO] attacks do an extra 5 damage to [HARD COVER] terrain.",
+      "Whenver this [PILOT] declares an [FULL AUTO] with a ranged weapon, if the target enemy MSU is in [OBSCURING COVER], the [OBSCURING COVER] is destroyed after the attack is resolved.",
   },
   {
     name: "Captain",
