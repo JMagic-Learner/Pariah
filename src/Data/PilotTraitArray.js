@@ -439,7 +439,7 @@ export const TRAITS = [
     name: "Shotcaller",
     cost: 2,
     effect:
-      "When this [PILOT] declares a [REACTIVE] attack with a ranged weapon, choose a hit location. Whenever a ranged attack hits that hit location, this [PILOT] can choose to remove an weapon or an support equipment assigned to that hit location",
+      "Declare a enemy MSU. If all members of this [PILOT]'s [FIRETEAM] declare ranged attacks against this target MSU, all [FIRETEAM] members gain +1 GS permanently. (Once per game).",
   },
   {
     name: "Six Shooter",
@@ -474,7 +474,7 @@ export const TRAITS = [
   },
   {
     name: "Unorthodox Training",
-    cost: 1,
+    cost: 2,
     effect:
       "Inverse the rangeband mods of all ranged weapons. For example a rangeband spread of -2 | 0 | +1 | +2 would become +2 | 0 | -1 | -2",
   },
