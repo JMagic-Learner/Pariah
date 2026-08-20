@@ -256,4 +256,55 @@ export const FACTIONS = [
       },
     ],
   },
+  {
+    name: "ReZeon",
+    color: "bg-purple",
+    lore: "ReZeon is an altogether separate faction from ZEON, blending TITAN doctrine with Zeon-derived engineering. Its [PILOT]s favor misdirection and advanced I-Field research over brute force, deploying under Unknown IFFs before revealing their true strength.",
+    generalBonuses: [
+      {
+        title: "DEVELOPMENTAL SPLIT",
+        text: "ReZeon forces can purchase MSUs with the [TITAN] faction keyword. ReZeon forces cannot purchase MSUs with the Zeon keyword.",
+      },
+      {
+        title: "UNKNOWN IFFS",
+        text: "Instead of deploying MSU units as normal, ReZeon MSUs may deploy as 25mm markers inside their deployment zone. Before initiative is rolled, the player controlling these markers will deploy their MSU in base contact with these markers. The deployment of these MSUs cannot exceed the mission deployment zones.",
+      },
+      {
+        title: "I-FIELD RESEARCH",
+        text: "REZEON MSUs have access to advanced I-Field technology, allowing them to field more sophisticated shielding systems. I-Field Generators that come as base equipment no longer count towards the base MCU cost calcuations.",
+      },
+      {
+        title: "TRISTELLAR PLAN (TR PLAN)",
+        text: "Units on the force list with the [TR PROJECT] keyword are considered to be Mobile Armors. Use octagon bases.",
+      },
+    ],
+    subfactions: [
+      {
+        name: "Tristellar",
+        bonuses: [
+          {
+            title: "Titans Black Ops",
+            text: "Pilots can purchase the Cyber Newtype trait upgrade (see Core Rules), and MSUs with the [TITAN] Faction Keyword for 35 MCU less.",
+          },
+          {
+            title: "TR Project Deployment",
+            text: "An additional 100 MCU can be spent on a single weapon and any associated support equipment upgrades. This weapon is not equipped on any [FIRETEAM] MSUs at the beginning of the game. The [FIRETEAM] [COMMANDER] may spend an action in Step 1.4 of the Status Phase to deploy a TR weapons cache capsule within 8 inches of the [FIRETEAM] [COMMANDER]. In the movement phase, ReZeon MSUs in base contact with the TR marker can pick up the new weapon without spending an action, provided the MSU can drop weapons to offset any additional equipment tonnage.",
+          },
+        ],
+      },
+      {
+        name: "Alice Guards",
+        bonuses: [
+          {
+            title: "Cloning Project",
+            text: 'Pilots other than the [COMMANDER] may take the same pilot traits as the [FIRETEAM] [COMMANDER], but for one less trait point (to a minimum of 1). These "cloned" pilots have a limit of 4 traits instead of the usual 5 pilot trait limit.',
+          },
+          {
+            title: "Resolute Till the End",
+            text: "A ReZeon MSU with a destroyed Hit Location may spend a free reaction once per round to: spend 2 FRO to BOOST[6]; spend 2 FRO and an Action to declare a Reactive Attack action without the -2 reactive penalty; or spend 2 FRO to reroll a hit location inflicted against it.",
+          },
+        ],
+      },
+    ],
+  },
 ];

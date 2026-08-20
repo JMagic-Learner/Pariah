@@ -40,8 +40,12 @@ import { Infantry } from "../Chapter5/sections/Infantry";
 import { ArmoredVehicles } from "../Chapter5/sections/ArmoredVehicles";
 import { AirSupport } from "../Chapter5/sections/AirSupport";
 
-import { ReZeonFactionBonuses } from "../ReZeonExpansion/sections/FactionBonuses";
-import { ReZeonPilotTraits } from "../ReZeonExpansion/sections/PilotTraits";
+import { CampaignOverview } from "../Chapter6/sections/Overview";
+import { Timeline } from "../Chapter6/sections/Timeline";
+import { CampaignPilots } from "../Chapter6/sections/CampaignPilots";
+import { PilotDeath } from "../Chapter6/sections/PilotDeath";
+import { PilotAccolades } from "../Chapter6/sections/PilotAccolades";
+import { OperationOdessa } from "../Chapter6/sections/OperationOdessa";
 
 const CHAPTERS = [
   {
@@ -189,17 +193,25 @@ const CHAPTERS = [
   },
   {
     id: "ch6",
-    title: "Ch.6 — Expanded Content",
+    title: "Ch.6 — Campaign",
     sections: [
+      { id: "campaign-overview", title: "6.0 — Overview", Component: CampaignOverview },
+      { id: "campaign-timeline", title: "6.1 — Timeline", Component: Timeline },
       {
-        id: "rezeon-faction-bonuses",
-        title: "6.1 — ReZeon Faction Bonuses",
-        Component: ReZeonFactionBonuses,
+        id: "campaign-pilots",
+        title: "6.2 — Campaign Pilots",
+        Component: CampaignPilots,
+      },
+      { id: "pilot-death", title: "6.3 — Pilot Death", Component: PilotDeath },
+      {
+        id: "pilot-accolades",
+        title: "6.4 — Pilot Accolades",
+        Component: PilotAccolades,
       },
       {
-        id: "rezeon-pilot-traits",
-        title: "6.2 — ReZeon Pilot Traits",
-        Component: ReZeonPilotTraits,
+        id: "operation-odessa",
+        title: "6.5 — Operation Odessa",
+        Component: OperationOdessa,
       },
     ],
   },
