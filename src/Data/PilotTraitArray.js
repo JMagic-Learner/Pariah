@@ -134,7 +134,7 @@ export const TRAITS = [
     name: "Enduring Will",
     cost: 1,
     effect:
-      "[PILOT] ignores the [KNOCKDOWN] state when the first leg location is destroyed. [CRIPPLED] state reduces base movespeed by 2 instead of half.",
+      "[PILOT] ignores the [KNOCKDOWN] state when the first leg location is destroyed. This [PILOT] also ignores any [KNOCKDOWN] effects from [REACTOR CRITICALS] explosions. [CRIPPLED] state reduces base movespeed by 2 instead of half.",
   },
   {
     name: "Evasive",
