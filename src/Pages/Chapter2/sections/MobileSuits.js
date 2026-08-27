@@ -160,12 +160,16 @@ export const MobileSuits = () => {
 
       <h4 className="f4 fw7 mt4 mb2 tj red"> REACTOR CRITICAL </h4>
       <p className="lh-copy tj">
-        If the MSU is ever destroyed via a direct [TORSO] hit (hit location roll
-        of a 2 or a 12), the enemy <span className="fw6 red"> [PILOT]</span>{" "}
-        rolls 1d6 + [1 per each FRO that exceeds the FRO Limit]. On a 6+, the
-        MSU explodes spectacularly. The MSU emits a [AOE(X)] explosion from it's
-        basing, where X is the FRO value. Each MSU (friend or foe) takes 10
-        damage to three hit location
+        If the MSU is ever destroyed via a direct [TORSO] hit or a hit location
+        spillover from a hit roll of doubles (double 1s, double 2s, double 3s,
+        double 6s etc), the enemy <span className="fw6 red"> [PILOT]</span>{" "}
+        rolls 1d6 + [1 per each FRO expended]. On a 6+, the MSU explodes
+        spectacularly. The MSU emits a{" "}
+        <span className="fw6 red"> [AOX(X)]</span> explosion from it's base,
+        where X is double the FRO limit of that suit. Each MSU (friend or foe)
+        takes 15 damage to three hit location. Each MSU unit hit receives an
+        <span className="fw6 red"> [IMPACT(3)]</span> effect, and must roll a 4+
+        PS skill check or be knocked down.
       </p>
 
       <h3 className="f4 fw7 mt4 mb2 tj">MOVEMENT</h3>

@@ -14,33 +14,12 @@ export const Keywords = () => {
         numeric value that scales the effect — the specific value is listed on
         the item that grants it.
       </p>
-      {/* <div className="overflow-auto">
-        <table className="f6 w-100 collapse ba b--black-10">
-          <thead>
-            <tr className="bg-near-black white tl">
-              <th className="pa2 fw6 w-20 nowrap">Keyword</th>
-              <th className="pa2 fw6">Effect</th>
-            </tr>
-          </thead>
-          <tbody>
-            {KEYWORDS.map((kw, i) => (
-              <tr
-                key={i}
-                className={i % 2 === 0 ? "bg-near-white" : "bg-white"}
-              >
-                <td className="pa2 fw7 red v-top nowrap">{kw.name}</td>
-                <td className="pa2 lh-copy">{kw.desc}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div> */}
       <div className="w-100 h-100">
         {KEYWORDS.map((keyword, index) => (
           <div
             key={index}
             className={classNames(" bg-light-gray fl mh2 ph1", {
-              "w-30 h5 mb2": !isMobile,
+              "w-30 h6 mb2": !isMobile,
               "w-100 mb3": isMobile,
             })}
           >
