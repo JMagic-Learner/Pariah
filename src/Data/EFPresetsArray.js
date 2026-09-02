@@ -601,7 +601,7 @@ export const EF_PRESETS = [
       mobileSuit: "RGM-79C Light Type Guncannon II",
       mcu: "130",
       fro: "6",
-      tonnageLimit: "24",
+      tonnageLimit: "18",
       movement: '7"',
       armorValue: "22",
       baseEquip: [
