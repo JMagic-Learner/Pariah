@@ -79,6 +79,10 @@ export const KEYWORDS = [
     name: "[GUIDED]",
     desc: "Missiles with [GUIDED] can rotate their hex facing by 45° at Status Phase Step 1.2. Missiles with [ENHANCED GUIDED] (a Newtype upgrade) can rotate 90° instead.",
   },
+  {
+    name: "[GRAPPLE]",
+    desc: "Instead of attacking with this weapon, the PILOT may also declare a [GRAPPLE] action.",
+  },
   // {
   //   name: "[HARDPOINT]",
   //   desc: "Usually to represent customized gunpla. Represented by a peg, slot, or ball joint. This physically represents the connection that a [MOUNTABLE] weapon needs to be equiped on the exterior of the suit.",
@@ -164,7 +168,7 @@ export const KEYWORDS = [
     desc: "See the [RELOAD] action (Section 3.2). The weapon must be reloaded before it can be fired again.",
   },
   {
-    name: "[STOWAGE] / [STORED] / [STOWED]",
+    name: "[STOWAGE]/[STORED]/[STOWED]",
     desc: "Equipment that is holstered, attached to a rack, or otherwise [STORED]. Weapons in [STOWAGE] cannot be used for [ATTACK] or [REACTIVE ATTACK] until readied by a SWAP action.",
   },
   {
@@ -173,7 +177,11 @@ export const KEYWORDS = [
   },
   {
     name: "[THROW]",
-    desc: "This weapon can be thrown as a ranged attack. Thrown range band is listed in parentheses next to the normal range band. Whenever a [PILOT] declares a throwing [ATTACK], use PS instead of GS.",
+    desc: "This weapon can be used as a ranged attack. Thrown range band is listed in parentheses next to the normal range band. Whenever a [PILOT] declares a throwing [ATTACK], use PS instead of GS. When a weapon is thrown, it is considered expended and disposed of.",
+  },
+  {
+    name: "[TRANSFORMABLE]",
+    desc: "MSU with this keyword may be deployed in TRANSFORMED state. At step 1.4 of the status phase, the [PILOT] may spend 2 FRO to declare transformation. While in [FLIGHT MODE], The MSU is treated as flying 15 inches vertically, the MSU increases speed by 1/2 of its base movespeed (rounded up), gains +1 Evasion, and may ignore terrain penalties. The MSU may only declare attacks with [INBUILT] or [MOUNTED] ranged weapons. The MSU may not declare [BLITZ] or perform any melee attacks. When a Transformed MSU in [FLIGHT MODE] suffers 30 or more damage in one attack declaration, the [PILOT] must make a 5+ PS Skill Check or fall down and suffer [KNOCKDOWN]",
   },
   {
     name: "[TRANSPORT(X)]",

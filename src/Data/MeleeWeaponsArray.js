@@ -119,7 +119,7 @@ export const MELEE = [
     ton: 1,
     fro: "–",
     mcu: 15,
-    keywords: "[AKIMBO],[AP(5)]",
+    keywords: "[AKIMBO],[AP(5)],[GRAPPLE]",
   },
   {
     name: "Hand(s)",
@@ -131,7 +131,7 @@ export const MELEE = [
     ton: 0,
     fro: 0,
     mcu: 0,
-    keywords: "[QUICK SWAP],[AKIMBO]",
+    keywords: "[QUICK SWAP],[AKIMBO],[GRAPPLE]",
   },
   {
     name: "Heat Blade",
@@ -230,6 +230,18 @@ export const MELEE = [
     fro: "-",
     mcu: 10,
     keywords:
-      '[INBUILT]; Enemy or Friendly MSU pulled 6" closer. Enemy MSU expends 2 FRO immediately.',
+      '[INBUILT],[GRAPPLE]; Enemy or Friendly MSU pulled 6" closer. Enemy MSU expends 2 FRO immediately.',
+  },
+  {
+    name: "Rocket Arm (Wired)",
+    type: "Hands",
+    rof: 1,
+    range: '0–2(See Keywords)"',
+    mod: "+0",
+    dam: 10,
+    ton: 2,
+    fro: 1,
+    mcu: 15,
+    keywords: "[MISSILE(12)],[IMPACT(2)],[AKIMBO],[GRAPPLE],",
   },
 ];

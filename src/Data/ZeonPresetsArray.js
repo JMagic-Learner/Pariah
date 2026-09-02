@@ -3098,7 +3098,22 @@ export const ZEON_PRESETS = [
         B(),
         B(),
       ],
-      addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
+      addlEquip: [
+        {
+          name: "[TRANSFORMABLE]",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "",
+          notes: "See Keywords",
+        },
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+      ],
       locations: {
         head: { current: "23", max: "23", weapon: "", equipment: ["", "", ""] },
         torso: {

@@ -58,7 +58,22 @@ export const REZEON_PRESETS = [
         B(),
         B(),
       ],
-      addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
+      addlEquip: [
+        {
+          name: "[TRANSFORMABLE]",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "",
+          notes: "See Keywords",
+        },
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+      ],
       locations: {
         head: { current: "24", max: "24", weapon: "", equipment: ["", "", ""] },
         torso: {
@@ -136,7 +151,22 @@ export const REZEON_PRESETS = [
         B(),
         B(),
       ],
-      addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
+      addlEquip: [
+        {
+          name: "[TRANSFORMABLE]",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "",
+          notes: "See Keywords",
+        },
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+      ],
       locations: {
         head: { current: "23", max: "23", weapon: "", equipment: ["", "", ""] },
         torso: {
@@ -246,7 +276,22 @@ export const REZEON_PRESETS = [
           notes: "Increases +2 FRO LIMIT",
         },
       ],
-      addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
+      addlEquip: [
+        {
+          name: "[TRANSFORMABLE]",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "",
+          notes: "See Keywords",
+        },
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+      ],
       locations: {
         head: { current: "24", max: "24", weapon: "", equipment: ["", "", ""] },
         torso: {
@@ -336,7 +381,22 @@ export const REZEON_PRESETS = [
         B(),
         B(),
       ],
-      addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
+      addlEquip: [
+        {
+          name: "[TRANSFORMABLE]",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "",
+          notes: "See Keywords",
+        },
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+      ],
       locations: {
         head: { current: "26", max: "26", weapon: "", equipment: ["", "", ""] },
         torso: {
@@ -899,7 +959,22 @@ export const REZEON_PRESETS = [
         B(),
         B(),
       ],
-      addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
+      addlEquip: [
+        {
+          name: "[TRANSFORMABLE]",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "",
+          notes: "See Keywords",
+        },
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+      ],
       locations: {
         head: { current: "26", max: "26", weapon: "", equipment: ["", "", ""] },
         torso: {
@@ -1405,7 +1480,22 @@ export const REZEON_PRESETS = [
         },
         B(),
       ],
-      addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
+      addlEquip: [
+        {
+          name: "[TRANSFORMABLE]",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "",
+          notes: "See Keywords",
+        },
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+      ],
       locations: {
         head: {
           current: "28",
@@ -1489,7 +1579,22 @@ export const REZEON_PRESETS = [
         B(),
         B(),
       ],
-      addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
+      addlEquip: [
+        {
+          name: "[TRANSFORMABLE]",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "",
+          notes: "See Keywords",
+        },
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+      ],
       locations: {
         head: { current: "26", max: "26", weapon: "", equipment: ["", "", ""] },
         torso: {
@@ -1586,7 +1691,22 @@ export const REZEON_PRESETS = [
         B(),
         B(),
       ],
-      addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
+      addlEquip: [
+        {
+          name: "[TRANSFORMABLE]",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "",
+          notes: "See Keywords",
+        },
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+      ],
       locations: {
         head: { current: "27", max: "27", weapon: "", equipment: ["", "", ""] },
         torso: {
@@ -1675,7 +1795,22 @@ export const REZEON_PRESETS = [
         B(),
         B(),
       ],
-      addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
+      addlEquip: [
+        {
+          name: "[TRANSFORMABLE]",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "",
+          notes: "See Keywords",
+        },
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+      ],
       locations: {
         head: { current: "27", max: "27", weapon: "", equipment: ["", "", ""] },
         torso: {
@@ -2054,7 +2189,13 @@ export const REZEON_PRESETS = [
           tonnage: "9",
           notes: "This is a combination equipment item.",
         },
-        B(),
+        {
+          name: "[TRANSFORMABLE]",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "",
+          notes: "See Keywords",
+        },
         B(),
         B(),
         B(),
@@ -2162,7 +2303,22 @@ export const REZEON_PRESETS = [
         B(),
         B(),
       ],
-      addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
+      addlEquip: [
+        {
+          name: "[TRANSFORMABLE]",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "",
+          notes: "See Keywords",
+        },
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+      ],
       locations: {
         head: { current: "28", max: "28", weapon: "", equipment: ["", "", ""] },
         torso: {
@@ -2261,7 +2417,22 @@ export const REZEON_PRESETS = [
         B(),
         B(),
       ],
-      addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
+      addlEquip: [
+        {
+          name: "[TRANSFORMABLE]",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "",
+          notes: "See Keywords",
+        },
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+      ],
       locations: {
         head: { current: "27", max: "27", weapon: "", equipment: ["", "", ""] },
         torso: {
@@ -2345,7 +2516,22 @@ export const REZEON_PRESETS = [
         B(),
         B(),
       ],
-      addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
+      addlEquip: [
+        {
+          name: "[TRANSFORMABLE]",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "",
+          notes: "See Keywords",
+        },
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+      ],
       locations: {
         head: {
           current: "24",

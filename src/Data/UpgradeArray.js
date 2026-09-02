@@ -73,7 +73,7 @@ export const UPGRADES = [
     qty: 2,
     mcu: 15,
     effect:
-      "Choose one rifle, sniper rifle, sub machine gun, bazooka, or pistol. Reduce ROF by 1 to a mininum of 1. Increase the positive range bands by 1. Decrease negative range bands by 1. For example, an rangeband mod of +2 | 0 | -1 | -2 would become +3 | +0 | -2 | -3",
+      "Choose one rifle, sniper rifle, sub machine gun, bazooka, or pistol. Reduce ROF by 1 to a mininum of 1. Increase the positive range bands by 1. Double negative range bands mod penalties. For example, an rangeband mod of +2 | 0 | -1 | -2 would become +3 | +0 | -2 | -4",
   },
   {
     name: "Upgrade:[IMPACT] ",

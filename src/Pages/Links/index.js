@@ -65,6 +65,14 @@ export const Links = () => (
 
     <Section title="Templates">
       <DriveLink
+        label="Revamped Pilots Sheets Ft RIN (DOCX)"
+        href="https://docs.google.com/document/d/1rPfrCE-QjSFJi8Kc42i2KsBy8NrOILr-/edit?usp=sharing&ouid=108438249253722752462&rtpof=true&sd=true"
+      />
+      <DriveLink
+        label="Revamped Pilots Sheets Ft RIN PDF"
+        href="https://drive.google.com/file/d/1XRzTErVmaYgXC9--bucOJRBsXYkxwrQH/view?usp=sharing"
+      />
+      <DriveLink
         label="Blank Pilot Sheets (DOCX)"
         href="https://docs.google.com/document/d/1173IIVD8y6VxDQQvZSt4qVrf1uUW5YnK/edit?usp=drive_link&ouid=108438249253722752462&rtpof=true&sd=true"
       />

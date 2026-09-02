@@ -148,8 +148,8 @@ export const Reactions = () => {
           </h3>
           <p className="lh-copy f6 mb2">
             A <span className="fw6 red"> [UNIT]</span> with the [JUKE] trait
-            may, once per Battle Round, declare a [JUKE] Reaction when their MSU
-            is targeted by an attack and the reacting{" "}
+            may, once per attack declaration, declare a [JUKE] Reaction when
+            their MSU is targeted by an attack and the reacting{" "}
             <span className="fw6 red"> [UNIT]</span> has LOS to the attacker.
           </p>
           <ul className="lh-copy pl3 f6 ma0">

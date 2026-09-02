@@ -118,6 +118,23 @@ export const AttackSequence = () => {
         </p>
       </div>
 
+      {/* GRAPPLE */}
+      <div className="bg-light-gray pa3 mb3 br2">
+        <p className="fw7 red f5 ma0 mb1">
+          GRAPPLE [ACTION][REACTION][ATTACK PHASE / COMBAT PHASE]
+        </p>
+        <p className="lh-copy f6 mb2 i">
+          Some weapons marked with [GRAPPLE] allow the pilot to restrain the
+          enemy. A [PILOT] may declare a [GRAPPLE] action with free hand(s) or
+          gauntlets, both [PILOTS] roll off against each other with a 1d6 + BR
+          skill check. If the [PILOT] with a [GRAPPLE] weapon wins, both
+          [PILOT]'s MSU' is restrained and cannot move , [BOOST(X)], or [BLITZ]
+          away from the grappling MSU. The grappled MSU can only rotate 2
+          facings. An enemy may break free from a [GRAPPLE] by declaring a melee
+          attack and sucessfully hitting any hit location.
+        </p>
+      </div>
+
       {/* Worked Example */}
       <div className="bg-near-white ba b--black-10 br2 pa3 mb3 tj">
         <h3 className="f4 fw7 red mt0 mb2">Worked Example</h3>

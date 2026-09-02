@@ -243,7 +243,7 @@ export const TRAITS = [
     name: "Juke",
     cost: 2,
     effect:
-      "Once per battle round, this [PILOT] may perform a Juke reaction to reroll one d3 evasion dice if you have LOS to the attack.",
+      "Once per enemy attack declaration, this [PILOT] may perform a Juke reaction to reroll one d3 evasion dice if you have LOS to the attack.",
   },
   {
     name: "Kinetic Force",
@@ -421,7 +421,8 @@ export const TRAITS = [
   {
     name: "Sharpshooter",
     cost: 2,
-    effect: "You may reduce negative range mod penalties to a minimum of 0.",
+    effect:
+      "You may reduce negative range band mod penalties by 2 to a minimum of 0. (i.e if the total negative range band penalties penalties are -3, the rangeband mod penalty is redued to -1)",
   },
   {
     name: "Shield Specialist",
@@ -476,7 +477,7 @@ export const TRAITS = [
     name: "Unorthodox Training",
     cost: 2,
     effect:
-      "Inverse the rangeband mods of all ranged weapons. For example a rangeband spread of -2 | 0 | +1 | +2 would become +2 | 0 | -1 | -2",
+      "Inverse the rangeband mods of all ranged weapons. Apply this inversion before any support equipment UPGRADES. For example a rangeband spread of -2 | 0 | +1 | +2 would become +2 | 0 | -1 | -2",
   },
   {
     name: "Vindictive",

@@ -18,13 +18,31 @@ export const Keywords = () => {
         {KEYWORDS.map((keyword, index) => (
           <div
             key={index}
-            className={classNames(" bg-light-gray fl mh2 ph1", {
-              "w-30 h6 mb2": !isMobile,
-              "w-100 mb3": isMobile,
+            className={classNames("fl mh2 ph1 w-100", {
+              "h6 mb2": !isMobile,
+              mb3: isMobile,
             })}
           >
-            <p className="fw7 ma0 mb1 red f6 tc">{keyword.name}</p>
-            <p className="lh-copy ma0 f7 tj">{keyword.desc}</p>
+            <div className="flex pa1">
+              <div className="w-25 bg-dark-gray v-mid">
+                <p
+                  className={classNames("fw7 red tc", {
+                    f7: isMobile,
+                    f5: !isMobile,
+                  })}
+                >
+                  {keyword.name}
+                </p>
+              </div>
+              <div
+                className={classNames("bg-light-gray", {
+                  "w-50": !isMobile,
+                  "w-75": isMobile,
+                })}
+              >
+                <p className="lh-copy f7 tj ml3">DESCRIPTION: {keyword.desc}</p>
+              </div>
+            </div>
           </div>
         ))}
       </div>
