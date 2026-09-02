@@ -90,7 +90,7 @@ export const FORCE_LIST_FACTIONS = [
         move: '7"',
         armor: 22,
         fro: 6,
-        tonnage: 24,
+        tonnage: 18,
         year: "0079",
         faction: "EF",
         equipment: "Beam Cannon (Inbuilt), Beam Rifle, Beam Saber, Vulcans",
