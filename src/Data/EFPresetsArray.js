@@ -593,6 +593,94 @@ export const EF_PRESETS = [
     },
   },
   {
+    id: "rgm79c-gm-cannon-ii",
+    name: "RGM-79C Light Type Guncannon II",
+    faction: "EF",
+    data: {
+      msuName: "RGM-79C Light Type Guncannon II",
+      mobileSuit: "RGM-79C Light Type Guncannon II",
+      mcu: "130",
+      fro: "6",
+      tonnageLimit: "24",
+      movement: '7"',
+      armorValue: "22",
+      baseEquip: [
+        {
+          name: "Beam Cannon (INBUILT)",
+          mcuCost: "FREE",
+          fro: "3",
+          tonnage: "2",
+          notes: "[INBUILT],[MOUNTABLE]",
+        },
+        {
+          name: "Beam Saber",
+          mcuCost: "FREE",
+          fro: "1",
+          tonnage: "1",
+          notes: "[CLEAVE],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+        },
+        {
+          name: "Vulcan Cannons",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "-",
+          notes: "[WARTIME INNOVATIONS],[FULL AUTO],[INBUILT],[AKIMBO]",
+        },
+        {
+          name: "Beam Rifle",
+          mcuCost: "FREE",
+          fro: "3",
+          tonnage: "3",
+          notes: "[WARTIME INNOVATIONS]",
+        },
+        ,
+        B(),
+        B(),
+        B(),
+        B(),
+      ],
+      addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
+      locations: {
+        head: {
+          current: "24",
+          max: "24",
+          weapon: "Vulcan Cannons",
+          equipment: ["", "", ""],
+        },
+        torso: {
+          current: "34",
+          max: "34",
+          weapon: "Beam Cannon x2 (INBUILT)",
+          equipment: ["Beam Saber (Stowed)", "Extra Armor (10)", ""],
+        },
+        rightArm: {
+          current: "34",
+          max: "34",
+          weapon: "",
+          equipment: ["Extra Armor (10)", "", ""],
+        },
+        leftArm: {
+          current: "34",
+          max: "34",
+          weapon: "",
+          equipment: ["Extra Armor (10)", "", ""],
+        },
+        rightLeg: {
+          current: "34",
+          max: "34",
+          weapon: "",
+          equipment: ["Extra Armor (10)", "", ""],
+        },
+        leftLeg: {
+          current: "34",
+          max: "34",
+          weapon: "",
+          equipment: ["Extra Armor (10)", "", ""],
+        },
+      },
+    },
+  },
+  {
     id: "rgm79fp-gm-striker",
     name: "RGM-79FP GM Striker",
     faction: "EF",
@@ -3968,17 +4056,10 @@ export const EF_PRESETS = [
           notes: "[WARTIME INNOVATIONS]",
         },
         {
-          name: "Beam Cannon",
+          name: "Shield + Beam Cannon (INBUILT)",
           mcuCost: "FREE",
           fro: "3",
-          tonnage: "4",
-          notes: "[MOUNTABLE]",
-        },
-        {
-          name: "Shield",
-          mcuCost: "FREE",
-          fro: "",
-          tonnage: "6",
+          tonnage: "8",
           notes:
             "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
@@ -4017,8 +4098,6 @@ export const EF_PRESETS = [
           tonnage: "2",
           notes: "[INDIRECT],[LIMITED USE(3)]",
         },
-      ],
-      addlEquip: [
         {
           name: "Heavy Boosters",
           mcuCost: "FREE",
@@ -4026,6 +4105,8 @@ export const EF_PRESETS = [
           tonnage: "8",
           notes: "[BOOST(1)] becomes [BOOST(2)]",
         },
+      ],
+      addlEquip: [
         {
           name: "[TRANSFORMABLE]",
           mcuCost: "FREE",
@@ -4033,6 +4114,7 @@ export const EF_PRESETS = [
           tonnage: "",
           notes: "See Keywords",
         },
+        B(),
         B(),
         B(),
         B(),
@@ -4066,12 +4148,8 @@ export const EF_PRESETS = [
         leftArm: {
           current: "24",
           max: "24",
-          weapon: "Shield",
-          equipment: [
-            "Beam Cannon (Mounted)",
-            "Beam Saber (Stowed)",
-            "Beam Saber (Stowed)",
-          ],
+          weapon: "Shield + Beam Cannon (INBUILT)",
+          equipment: ["Beam Saber (Stowed)", "Beam Saber (Stowed)", ""],
         },
         rightLeg: {
           current: "24",
@@ -4117,10 +4195,10 @@ export const EF_PRESETS = [
             "[COMMANDER] can perform the RALLY action for free at Step 1.1 of the Status Phase.",
         },
         {
-          name: "Shield",
+          name: "Shield + Beam Cannon (INBUILT)",
           mcuCost: "FREE",
-          fro: "",
-          tonnage: "6",
+          fro: "3",
+          tonnage: "8",
           notes:
             "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
@@ -4208,7 +4286,7 @@ export const EF_PRESETS = [
         leftArm: {
           current: "26",
           max: "26",
-          weapon: "Shield",
+          weapon: "Shield + Beam Cannon (INBUILT)",
           equipment: ["Beam Saber (Stowed)", "Beam Saber (Stowed)", ""],
         },
         rightLeg: {

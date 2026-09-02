@@ -74,7 +74,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RGM-79C Guncannon II",
-        mcu: 160,
+        mcu: 170,
         move: '6"',
         armor: 24,
         fro: 6,
@@ -83,6 +83,17 @@ export const FORCE_LIST_FACTIONS = [
         faction: "EF",
         equipment:
           "Beam Cannon x2 (Inbuilt), Extra Armor 10 x5, Beam Saber, Vulcans",
+      },
+      {
+        msu: "RGM-79C Light Type Guncannon II",
+        mcu: 130,
+        move: '7"',
+        armor: 22,
+        fro: 6,
+        tonnage: 24,
+        year: "0079",
+        faction: "EF",
+        equipment: "Beam Cannon (Inbuilt), Beam Rifle, Beam Saber, Vulcans",
       },
       {
         msu: "RGM-79FP GM Striker",
@@ -464,6 +475,30 @@ export const FORCE_LIST_FACTIONS = [
         faction: "EF",
         equipment:
           "Beam Rifle, Beam Saber, Shield, Vulcans, Arm Cannon, Heavy Booster",
+      },
+      {
+        msu: "RGZ-95 REZEL",
+        mcu: 190,
+        move: '8"',
+        armor: 24,
+        fro: 7,
+        tonnage: 32,
+        year: "0095",
+        faction: "EF",
+        equipment:
+          "Beam Rifle, Beam Saber x2, Shield + Beam Cannon, Vulcans, Grenade Launcher x2, Heavy Booster",
+      },
+      {
+        msu: "RGZ-95 REZEL",
+        mcu: 220,
+        move: '8"',
+        armor: 26,
+        fro: 8,
+        tonnage: 35,
+        year: "0095",
+        faction: "EF",
+        equipment:
+          "Hyper Beam Cannon, Beam Saber x2, Shield + Beam Cannon, Vulcans, Grenade Launcher x2, Heavy Booster,Command Protocl",
       },
       {
         msu: "ORX-005 Gaplant",
