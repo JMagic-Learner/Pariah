@@ -633,7 +633,6 @@ export const EF_PRESETS = [
           tonnage: "3",
           notes: "[WARTIME INNOVATIONS]",
         },
-        ,
         B(),
         B(),
         B(),
