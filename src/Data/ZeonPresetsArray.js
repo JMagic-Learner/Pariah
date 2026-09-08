@@ -2081,14 +2081,14 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[AKIMBO],[AP(5)]",
+          notes: "[AKIMBO],[AP(5)],[GRAPPLE]",
         },
         {
           name: "Gauntlets",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[AKIMBO],[AP(5)]",
+          notes: "[AKIMBO],[AP(5)],[GRAPPLE]",
         },
         {
           name: "[AMPHIBIOUS]",
@@ -2202,14 +2202,14 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[AKIMBO],[AP(5)]",
+          notes: "[AKIMBO],[AP(5)],[GRAPPLE]",
         },
         {
           name: "Gauntlets",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[AKIMBO],[AP(5)]",
+          notes: "[AKIMBO],[AP(5)],[GRAPPLE]",
         },
         {
           name: "[AMPHIBIOUS]",

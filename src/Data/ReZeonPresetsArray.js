@@ -842,14 +842,14 @@ export const REZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[AKIMBO],[AP(5)]",
+          notes: "[AKIMBO],[AP(5)],[GRAPPLE]",
         },
         {
           name: "Gauntlets",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[AKIMBO],[AP(5)]",
+          notes: "[AKIMBO],[AP(5)],[GRAPPLE]",
         },
         {
           name: "Extra Armor 10 x2 (Legs)",
@@ -932,14 +932,14 @@ export const REZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[AKIMBO],[AP(5)]",
+          notes: "[AKIMBO],[AP(5)],[GRAPPLE]",
         },
         {
           name: "Gauntlets",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes: "[AKIMBO],[AP(5)]",
+          notes: "[AKIMBO],[AP(5)],[GRAPPLE]",
         },
         {
           name: "Beam Rifle (Mounted)",
