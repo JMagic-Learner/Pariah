@@ -489,7 +489,7 @@ export const FORCE_LIST_FACTIONS = [
           "Beam Rifle, Beam Saber x2, Shield + Beam Cannon, Vulcans, Grenade Launcher x2, Heavy Booster",
       },
       {
-        msu: "RGZ-95 REZEL",
+        msu: "RGZ-95 REZEL COMMANDER",
         mcu: 220,
         move: '8"',
         armor: 26,
