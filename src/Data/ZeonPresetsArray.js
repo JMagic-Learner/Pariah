@@ -659,7 +659,7 @@ export const ZEON_PRESETS = [
           notes: "[BOOST(1)] becomes [BOOST(2)]",
         },
         {
-          name: "Spiky Shoulders (ZEON)",
+          name: "Spiky Shoulder (ZEON)",
           mcuCost: "FREE",
           fro: "",
           tonnage: "-",
@@ -696,7 +696,7 @@ export const ZEON_PRESETS = [
           current: "22",
           max: "22",
           weapon: "",
-          equipment: ["", "", ""],
+          equipment: ["Spiky Shoulder", "", ""],
         },
         rightLeg: {
           current: "22",
