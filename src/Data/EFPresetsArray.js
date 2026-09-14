@@ -3074,8 +3074,8 @@ export const EF_PRESETS = [
           name: "Vulcan Cannons",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "1",
-          notes: "[FULL AUTO],[INBUILT],[AKIMBO]",
+          tonnage: "",
+          notes: "[WARTIME INNOVATIONS],[FULL AUTO],[INBUILT],[AKIMBO]",
         },
         {
           name: "Beam Rifle",
