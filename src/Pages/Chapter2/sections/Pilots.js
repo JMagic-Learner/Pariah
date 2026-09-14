@@ -10,7 +10,7 @@ export const Pilots = () => {
         <span className="fw6 red"> [PILOT]</span>. Pilots have three base
         statistics, 250 MCU (Monetary Credit Units) and a pool of 5 Trait Points
         used to customize their skills and abilities. This section goes over the
-        base stats and trait rules. MCU will be overviewed in Section 2.2 and
+        base stats and trait rules. MCU will be overviewed in Section 2.2.2 and
         Section 2.3
       </p>
 

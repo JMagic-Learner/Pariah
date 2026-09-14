@@ -5,14 +5,28 @@ import classNames from "classnames";
 import { Chapter1 } from "../Chapter1";
 
 import { Pilots } from "../Chapter2/sections/Pilots";
-import { MobileSuits } from "../Chapter2/sections/MobileSuits";
+import { MobileSuitsAndArmors } from "../Chapter2/sections/MobileSuitsAndArmors";
+import { MSUCharacteristics } from "../Chapter2/sections/MSUCharacteristics";
+import { OverloadedReactors } from "../Chapter2/sections/OverloadedReactors";
+import { CustomSuitCreation } from "../Chapter2/sections/CustomSuitCreation";
 import { FireteamCreation } from "../Chapter2/sections/FireteamCreation";
 import { RangedWeapons } from "../Chapter2/sections/RangedWeapons";
 import { MeleeWeapons } from "../Chapter2/sections/MeleeWeapons";
-import { WeaponsEquipment } from "../Chapter2/sections/WeaponsEquipment";
+import { WeaponCharacteristics } from "../Chapter2/sections/WeaponCharacteristics";
+import { SellingWeaponsEquipment } from "../Chapter2/sections/SellingWeaponsEquipment";
+import { WeaponWeightClasses } from "../Chapter2/sections/WeaponWeightClasses";
+import { EquippingWeapons } from "../Chapter2/sections/EquippingWeapons";
+import { AddingSupportEquipment } from "../Chapter2/sections/AddingSupportEquipment";
 import { Keywords } from "../Chapter2/sections/Keywords";
-import { FactionBonuses } from "../Chapter2/sections/FactionBonuses";
+import { FactionEarthFederation } from "../Chapter2/sections/FactionEarthFederation";
+import { FactionZeon } from "../Chapter2/sections/FactionZeon";
+import { FactionMafty } from "../Chapter2/sections/FactionMafty";
+import { FactionCrossbone } from "../Chapter2/sections/FactionCrossbone";
+import { FactionReZeon } from "../Chapter2/sections/FactionReZeon";
+import { FactionNeutral } from "../Chapter2/sections/FactionNeutral";
 import { Munitions } from "../Chapter2/sections/Munitions";
+import { Upgrades } from "../Chapter2/sections/Upgrades";
+import { FrameImprovements } from "../Chapter2/sections/FrameImprovements";
 import { SupportEquipment } from "../Chapter2/sections/SupportEquipment";
 
 import { Phases } from "../Chapter3/sections/Phases";
@@ -61,9 +75,24 @@ const CHAPTERS = [
     sections: [
       { id: "pilots", title: "2.1 — Pilots", Component: Pilots },
       {
-        id: "mobilesuits",
-        title: "2.2 — Mobile Suits",
-        Component: MobileSuits,
+        id: "mobilesuits-armors",
+        title: "2.2.1 — Mobile Suits and Mobile Armor",
+        Component: MobileSuitsAndArmors,
+      },
+      {
+        id: "mobilesuits-characteristics",
+        title: "2.2.2 — Universal Characteristics",
+        Component: MSUCharacteristics,
+      },
+      {
+        id: "mobilesuits-reactors",
+        title: "2.2.3 — Overloaded Reactors & Reactor Critical",
+        Component: OverloadedReactors,
+      },
+      {
+        id: "mobilesuits-custom",
+        title: "2.2.4 — Custom Suit Creation",
+        Component: CustomSuitCreation,
       },
       {
         id: "force",
@@ -71,9 +100,29 @@ const CHAPTERS = [
         Component: FireteamCreation,
       },
       {
-        id: "weaponsequip",
-        title: "2.4 — Weapons and Equipment",
-        Component: WeaponsEquipment,
+        id: "weaponcharacteristics",
+        title: "2.4.1 — Weapon Characteristics",
+        Component: WeaponCharacteristics,
+      },
+      {
+        id: "sellingweaponsequip",
+        title: "2.4.2 — Selling Weapons and Equipment",
+        Component: SellingWeaponsEquipment,
+      },
+      {
+        id: "weaponweightclasses",
+        title: "2.4.3 — Weapon Weight Classes",
+        Component: WeaponWeightClasses,
+      },
+      {
+        id: "equippingweapons",
+        title: "2.4.4 — Equipping Weapons",
+        Component: EquippingWeapons,
+      },
+      {
+        id: "addingsupportequip",
+        title: "2.4.5 — Adding Support Equipment",
+        Component: AddingSupportEquipment,
       },
       {
         id: "ranged",
@@ -91,21 +140,56 @@ const CHAPTERS = [
         Component: Munitions,
       },
       {
+        id: "upgrades",
+        title: "2.8 — Upgrades",
+        Component: Upgrades,
+      },
+      {
+        id: "frameimprovements",
+        title: "2.9 — Frame Improvements",
+        Component: FrameImprovements,
+      },
+      {
         id: "supportequip",
-        title: "2.8 — Support Equipment",
+        title: "2.10 — Support Equipment",
         Component: SupportEquipment,
       },
       {
         id: "newtypeUpgrades",
-        title: "2.9 — Newtype Upgrades",
+        title: "2.11 — Newtype Upgrades",
         Component: NewtypeUpgrades,
       },
       {
-        id: "factions",
-        title: "2.10 — Faction Bonuses",
-        Component: FactionBonuses,
+        id: "factions-ef",
+        title: "2.12.1 — Faction Bonuses: Earth Federation",
+        Component: FactionEarthFederation,
       },
-      { id: "keywords", title: "2.11 — Keywords", Component: Keywords },
+      {
+        id: "factions-zeon",
+        title: "2.12.2 — Faction Bonuses: ZEON",
+        Component: FactionZeon,
+      },
+      {
+        id: "factions-mafty",
+        title: "2.12.3 — Faction Bonuses: MAFTY",
+        Component: FactionMafty,
+      },
+      {
+        id: "factions-crossbone",
+        title: "2.12.4 — Faction Bonuses: Crossbone Vanguard",
+        Component: FactionCrossbone,
+      },
+      {
+        id: "factions-rezeon",
+        title: "2.12.5 — Faction Bonuses: ReZeon",
+        Component: FactionReZeon,
+      },
+      {
+        id: "factions-neutral",
+        title: "2.12.6 — Faction Bonuses: Neutral",
+        Component: FactionNeutral,
+      },
+      { id: "keywords", title: "2.13 — Keywords", Component: Keywords },
     ],
   },
   {

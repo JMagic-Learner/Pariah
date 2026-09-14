@@ -15,11 +15,6 @@ import { Links } from "./Pages/Links/index.js";
 function App() {
   return (
     <div className="App">
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link
-        rel="stylesheet"
-        href="https://unpkg.com/tachyons/css/tachyons.min.css"
-      ></link>
       <header className="bg-near-white">
         <BrowserRouter>
           <PilotSheetProvider>

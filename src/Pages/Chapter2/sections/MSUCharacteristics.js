@@ -1,48 +1,9 @@
-export const MobileSuits = () => {
+export const MSUCharacteristics = () => {
   return (
     <div>
       <h2 className="f2 fw7 red bb pb2 mb3">
-        2.2 — Mobile Suits and Mobile Armor
+        2.2.2 — Mobile Suits and Universal Characteristics
       </h2>
-
-      <p className="lh-copy tj">
-        {" "}
-        Mobile Suits - The new standard of warfare in the UUniversal Century. In
-        Gundam Flashpoint, Mobile Suits or MSU (Mobile Suit Units) as
-        abbreviated, are the main focus.
-      </p>
-
-      <h3 className="f4 fw7 mt4 mb2 tj">Mobile Suits and Mobile Armors</h3>
-      <p className="lh-copy tj">
-        Mobile Suits refer to all MSUS within Gundam Flashpoint. But certain MSU
-        are also classified as Mobile Armors. Mobile armors are huge, gargantuan
-        war machines that are significantly bulkier than conventional mobile
-        suits.
-      </p>
-      <p className="lh-copy tj">The distinction is as follows:</p>
-      <ul className="lh-copy pl3 tj red fw6">
-        <li className="pv1">
-          Mobile Suits have a hexagon action base to represent their field of
-          view and the space they take up on the battlefield.
-        </li>
-        <li className="pv1">
-          Mobile Armors have an octagonal action base to represent their field
-          of view and the space they take up on the battlefield.
-        </li>
-      </ul>
-      <p className="lh-copy tj">
-        While this seems like a small distinction, the increased facings of
-        Mobile Armors means that it is harder to move around, and to also turn
-        to face. Mobile Armors on MSU sheets will be marked with the M.A
-        denotation.
-      </p>
-      <p className="lh-copy tj">
-        {" "}
-        MSU are typically represented by a MSU sheet. These MSU sheets can be
-        found in the FORCELIST tab of this website.
-      </p>
-
-      <h3 className="f4 fw7 mt4 mb2 tj">MSU Universal Characteristics</h3>
       <p className="lh-copy tj">
         All MSU have a number of characteristics to denote individual values.
       </p>
@@ -152,26 +113,6 @@ export const MobileSuits = () => {
         is no longer incurred.
       </p>
 
-      <h5 className="f4 fw7 mt4 mb2 tj red"> OVERLOADED REACTORS </h5>
-      <p className="lh-copy tj">
-        If FRO expenditure ever exceeds the FRO Limit/Total, the{" "}
-        <span className="fw6 red"> [PILOT]</span> suffers a -3 PS penalty.
-      </p>
-
-      <h4 className="f4 fw7 mt4 mb2 tj red"> REACTOR CRITICAL </h4>
-      <p className="lh-copy tj">
-        If the MSU is ever destroyed via a direct [TORSO] hit or a hit location
-        spillover from a hit roll of doubles (double 1s, double 2s, double 3s,
-        double 6s etc), the enemy <span className="fw6 red"> [PILOT]</span>{" "}
-        rolls 1d6 + [1 per each FRO expended]. On a 6+, the MSU explodes
-        spectacularly. The MSU emits a{" "}
-        <span className="fw6 red"> [AOX(X)]</span> explosion from it's base,
-        where X is double the FRO limit of that suit. Each MSU (friend or foe)
-        takes 15 damage to three hit location. Each MSU unit hit receives an
-        <span className="fw6 red"> [IMPACT(3)]</span> effect, and must roll a 4+
-        PS skill check or be knocked down.
-      </p>
-
       <h3 className="f4 fw7 mt4 mb2 tj">MOVEMENT</h3>
       <p className="tj lh-copy">
         A MSU's base movespeed. Used in{" "}
@@ -192,51 +133,6 @@ export const MobileSuits = () => {
       <p className="tj lh-copy">
         The Armor value attributed to every hit location of a MSU
       </p>
-
-      <h2 className="f2 fw7 red bb pb2 mb3">
-        2.2 Extra — QUICK/EASY or CUSTOM MSU
-      </h2>
-      <p className="lh-copy tj">
-        {" "}
-        Sometimes players wish to incorporate mobile suits from other Gundam
-        timelines and settings. This is perfectly fine with Gundam Flashpoint's
-        framework.
-      </p>
-
-      <p className="lh-copy tj">
-        {" "}
-        Players who wish to port over thier AU suits can use the following
-        Custom MSU baseline stats.
-      </p>
-
-      <p className="lh-copy tj">
-        {" "}
-        Players who wish to port over thier AU suits can use the following
-        Custom MSU baseline stats.
-      </p>
-
-      <ul className="lh-copy pl3 tj">
-        <li className="pv1 red fw6">
-          MCU (MONETARY CREDIT UNITS) Cost:{" "}
-          <span className="fw4 black">
-            {" "}
-            Custom suits do not cost any baseline MCU
-          </span>
-        </li>
-        <li className="pv1 red fw6">
-          FRO (FUSION REACTOR OUTPUT): <span className="fw4 black">6</span>
-        </li>
-        <li className="pv1 red fw6">
-          Equipment Tonnage (TONNAGE/3):{" "}
-          <span className="fw4 black">Equipment Tonnage of 16</span>
-        </li>
-        <li className="pv1 red fw6">
-          Movement (Inches): <span className="fw4 black">8 inches</span>
-        </li>
-        <li className="pv1 red fw6">
-          Armor: <span className="fw4 black">25</span>
-        </li>
-      </ul>
     </div>
   );
 };

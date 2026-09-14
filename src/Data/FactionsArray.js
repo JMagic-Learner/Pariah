@@ -164,97 +164,44 @@ export const FACTIONS = [
     ],
   },
   {
-    name: "Neutral",
-    color: "bg-dark-gray",
-    lore: "Not all mobile suits fight for a unified cause. Mercenaries, rogue units, and independent operators occupy the battlefield with flexibility as their greatest weapon — no allegiance, no restrictions.",
-    generalBonuses: [],
-    subfactions: [
+    name: "MAFTY",
+    color: "bg-black",
+    lore: "MAFTY is a clandestine anti-Federation insurgency operating from the shadows, striking corrupt EFF officials and assets before vanishing back into the depths of space. Their [PILOT]s favor coordinated ambushes and rapid extraction over prolonged engagements.",
+    generalBonuses: [
       {
-        name: "CROSSBONE VANGUARD",
-        bonuses: [
-          {
-            title: "SPACE PIRACY",
-            text: "Pilots may purchase MSU from either EFF or ZEON force lists.",
-          },
-          {
-            title: "VANGUARD AMBUSH",
-            text: "You may select three terrain pieces 24 inches outside the enemy deployment edge. These terrain pieces are considered to be trapped with explosives. Whenever an enemy MSU moves or enters within 6 inches of a trapped terrain piece, that MSU must make a PS 6 skill check. If failed, that MSU receives 10 points of damage to one hit location",
-          },
-          {
-            title: "CAPTAIN'S ORDERS",
-            text: "Whenever a [COMMANDER] performs a REPOSITION action, all friendly MSU may move an additional 4 inches without penalty. (To a max total of 10 inches of movement during REPOSITION)",
-          },
-        ],
+        title: "COORDINATED INSURGENCY",
+        text: "Once per round, after two MAFTY units hit the same enemy target, both MAFTY units may [BOOST(6)] immediately after hit locations have been rolled.",
       },
       {
-        name: "CIVILIAN MILITIA",
-        bonuses: [
-          {
-            title: "ENTRENCHED POSITIONS",
-            text: "MSU gain +1 Evasion mod while inside [OBSCURING] terrain",
-          },
-          {
-            title: "JURY RIGGED",
-            text: "Militia MSUs may reduce the MCU cost of one Support System by 25 points (minimum 10 MCU).",
-          },
-          {
-            title: "CIVILIAN CASUALTIES",
-            text: "Enemy [PILOT]s who destroy an Infantry unit for the first time, must make a [FEAR/SHAKEN] state test at a -1 penalty",
-          },
-        ],
+        title: "PREPARED CELLS",
+        text: "Once per game, MAFTY forces may redeploy one MSU after Round 1 Initiative phase. Redeployed units come in on Round 2, Step 1.4 of the Status Phase. That MSU comes in on either side of the board edge, outside 6 inches of the enemy deployment zone",
       },
       {
-        name: "AEUG",
-        bonuses: [
-          {
-            title: "ANAHEIM SUPPLIER",
-            text: "Pilots may purchase MSU from either EFF or ZEON force lists.",
-          },
-          {
-            title: "NEMO ORIGINS",
-            text: "Pilots may purchase the MSA-003 NEMO for 100 MCU",
-          },
-          {
-            title: "COALITION FORCE",
-            text: "Pilots may purchase the Cross Discipline trait for 0 trait cost, and obtain faction bonuses from any EFF or ZEON subfaction (still subject to the Cross Discipline free trait restriction)",
-          },
-        ],
-      },
-      {
-        name: "MAFTY",
-        bonuses: [
-          {
-            title: "COORDINATED INSURGENCY",
-            text: "Once per round, after two MAFTY units hit the same enemy target, both MAFTY units may [BOOST(6)] immediately after hit locations have been rolled.",
-          },
-          {
-            title: "PREPARED CELLS",
-            text: "Once per game, MAFTY forces may redeploy one MSU after Round 1 Initiative phase. Redeployed units come in on Round 2, Step 1.4 of the Status Phase. That MSU comes in on either side of the board edge, outside 6 inches of the enemy deployment zone",
-          },
-          {
-            title: "HIGH EFFICIENCY LOGISTICS",
-            text: "MAFTY MSUS may ignore the first FRO overload increment",
-          },
-        ],
-      },
-      {
-        name: "MERCENARIES",
-        bonuses: [
-          {
-            title: "BY THE BUCK",
-            text: "All MSU dated 0080 or earlier reduce base MCU costs by 20%. MERCENARY Pilots must reduce one of thier base pilot traits (Gunnery, Brawl, Piloting) to 0",
-          },
-          {
-            title: "CONTRACT KILLERS",
-            text: "Nominate one enemy [UNIT]. All MERCENARY Pilots gain +1 Gunnery and +1 Brawl when declaring ATTACK actions against that nominated [UNIT]",
-          },
-          {
-            title: "AFTERMARKET EQUIPMENT",
-            text: "Pilots can only purchase weapons and support equipment that cost 50 MCU or less ",
-          },
-        ],
+        title: "HIGH EFFICIENCY LOGISTICS",
+        text: "MAFTY MSUS may ignore the first FRO overload increment",
       },
     ],
+    subfactions: [],
+  },
+  {
+    name: "CROSSBONE VANGUARD",
+    color: "bg-orange",
+    lore: "The Crossbone Vanguard sails under no single banner, striking as opportunistic raiders against both EFF and ZEON convoys alike. Their [PILOT]s blend piracy with battlefield cunning, rigging terrain and issuing bold commands to keep the enemy off balance.",
+    generalBonuses: [
+      {
+        title: "SPACE PIRACY",
+        text: "Pilots may purchase MSU from either EFF or ZEON force lists.",
+      },
+      {
+        title: "VANGUARD AMBUSH",
+        text: "You may select three terrain pieces 24 inches outside the enemy deployment edge. These terrain pieces are considered to be trapped with explosives. Whenever an enemy MSU moves or enters within 6 inches of a trapped terrain piece, that MSU must make a PS 6 skill check. If failed, that MSU receives 10 points of damage to one hit location",
+      },
+      {
+        title: "CAPTAIN'S ORDERS",
+        text: "Whenever a [COMMANDER] performs a REPOSITION action, all friendly MSU may move an additional 4 inches without penalty. (To a max total of 10 inches of movement during REPOSITION)",
+      },
+    ],
+    subfactions: [],
   },
   {
     name: "ReZeon",
@@ -302,6 +249,65 @@ export const FACTIONS = [
           {
             title: "Resolute Till the End",
             text: "A ReZeon MSU with a destroyed Hit Location may spend a free reaction once per round to: spend 2 FRO to BOOST[6]; spend 2 FRO and an Action to declare a Reactive Attack action without the -2 reactive penalty; or spend 2 FRO to reroll a hit location inflicted against it.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: "Neutral",
+    color: "bg-dark-gray",
+    lore: "Not all mobile suits fight for a unified cause. Mercenaries, rogue units, and independent operators occupy the battlefield with flexibility as their greatest weapon — no allegiance, no restrictions.",
+    generalBonuses: [],
+    subfactions: [
+      {
+        name: "CIVILIAN MILITIA",
+        bonuses: [
+          {
+            title: "ENTRENCHED POSITIONS",
+            text: "MSU gain +1 Evasion mod while inside [OBSCURING] terrain",
+          },
+          {
+            title: "JURY RIGGED",
+            text: "Militia MSUs may reduce the MCU cost of one Support System by 25 points (minimum 10 MCU).",
+          },
+          {
+            title: "CIVILIAN CASUALTIES",
+            text: "Enemy [PILOT]s who destroy an Infantry unit for the first time, must make a [FEAR/SHAKEN] state test at a -1 penalty",
+          },
+        ],
+      },
+      {
+        name: "AEUG",
+        bonuses: [
+          {
+            title: "ANAHEIM SUPPLIER",
+            text: "Pilots may purchase MSU from either EFF or ZEON force lists.",
+          },
+          {
+            title: "NEMO ORIGINS",
+            text: "Pilots may purchase the MSA-003 NEMO for 100 MCU",
+          },
+          {
+            title: "COALITION FORCE",
+            text: "Pilots may purchase the Cross Discipline trait for 0 trait cost, and obtain faction bonuses from any EFF or ZEON subfaction (still subject to the Cross Discipline free trait restriction)",
+          },
+        ],
+      },
+      {
+        name: "MERCENARIES",
+        bonuses: [
+          {
+            title: "BY THE BUCK",
+            text: "All MSU dated 0080 or earlier reduce base MCU costs by 20%. MERCENARY Pilots must reduce one of thier base pilot traits (Gunnery, Brawl, Piloting) to 0",
+          },
+          {
+            title: "CONTRACT KILLERS",
+            text: "Nominate one enemy [UNIT]. All MERCENARY Pilots gain +1 Gunnery and +1 Brawl when declaring ATTACK actions against that nominated [UNIT]",
+          },
+          {
+            title: "AFTERMARKET EQUIPMENT",
+            text: "Pilots can only purchase weapons and support equipment that cost 50 MCU or less ",
           },
         ],
       },

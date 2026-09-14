@@ -63,7 +63,7 @@ export const FireteamCreation = () => {
       <p className="lh-copy tj">
         {" "}
         Each <span className="fw6 red"> [FIRETEAM] </span> can belong to a
-        [FACTION], see Section 2.10 for Faction bonuses
+        [FACTION], see Section 2.12 for Faction bonuses
       </p>
     </div>
   );

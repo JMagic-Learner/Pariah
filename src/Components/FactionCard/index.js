@@ -1,22 +1,14 @@
-import { FACTIONS } from "../../../Data/FactionsArray";
-
-export const FactionBonuses = () => {
+export const FactionCard = ({ faction }) => {
+  if (!faction) return null;
   return (
-    <div>
-      <h2 className="f2 fw7 red bb pb2 mb3">2.10 — Faction Bonuses</h2>
-      <p className="lh-copy mb4">
-        Each Fireteam can belong to an overarching faction; Earth Federation,
-        Principality of ZEON, etc. Within each faction, players may select a
-        subfaction that grants additional bonuses. All general faction bonuses
-        apply regardless of subfaction choice.
-      </p>
-      {FACTIONS.map((faction, fi) => (
-        <div key={fi} className="mb5 ba b--black-20">
-          <div className={`${faction.color} pv3 ph4`}>
-            <h3 className="f3 fw7 white ma0">{faction.name}</h3>
-          </div>
-          <div className="pa4">
-            <p className="lh-copy tj mb3">{faction.lore}</p>
+    <div className="mb5 ba b--black-20">
+      <div className={`${faction.color} pv3 ph4`}>
+        <h3 className="f3 fw7 white ma0">{faction.name}</h3>
+      </div>
+      <div className="pa4">
+        <p className="lh-copy tj mb3">{faction.lore}</p>
+        {faction.generalBonuses.length > 0 && (
+          <>
             <h4 className="f5 fw7 mb2 mt3">General Bonuses</h4>
             <div className="pl3">
               {faction.generalBonuses.map((b, bi) => (
@@ -26,6 +18,10 @@ export const FactionBonuses = () => {
                 </div>
               ))}
             </div>
+          </>
+        )}
+        {faction.subfactions.length > 0 && (
+          <>
             <h4 className="f5 fw7 mt4 mb2">Subfactions</h4>
             <div className="flex-ns flex-wrap">
               {faction.subfactions.map((sub, si) => (
@@ -46,9 +42,9 @@ export const FactionBonuses = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      ))}
+          </>
+        )}
+      </div>
     </div>
   );
 };

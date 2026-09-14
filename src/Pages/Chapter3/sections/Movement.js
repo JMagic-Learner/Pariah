@@ -263,7 +263,7 @@ export const Movement = () => {
         </ul>
         <p className="lh-copy f7 mt2 mb0">
           Any movement during the Movement Phase appends to the Evasion modifier
-          from Section 2.2.
+          from Section 2.2.2.
         </p>
       </div>
 

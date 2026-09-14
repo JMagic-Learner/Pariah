@@ -6,7 +6,7 @@ export const Keywords = () => {
   console.log(isMobile);
   return (
     <div>
-      <h2 className="f2 fw7 red bb pb2 mb3">2.11 — Keywords</h2>
+      <h2 className="f2 fw7 red bb pb2 mb3">2.13 — Keywords</h2>
       <p className="lh-copy mb4">
         Keywords appear on weapons, support systems, and abilities to define
         special rules. When a keyword conflicts with a general rule, the keyword

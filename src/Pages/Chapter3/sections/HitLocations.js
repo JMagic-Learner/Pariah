@@ -3,7 +3,7 @@ const HIT_TABLE = [
     roll: "2",
     location: "Torso",
     effect:
-      "If Torso HP reaches 0, MSU is destroyed. See REACTOR CRITICAL rules in Section 2.2",
+      "If Torso HP reaches 0, MSU is destroyed. See REACTOR CRITICAL rules in Section 2.2.3",
   },
   {
     roll: "3",
@@ -59,7 +59,7 @@ const HIT_TABLE = [
     roll: "12",
     location: "Torso",
     effect:
-      "If Torso HP reaches 0, MSU is destroyed. See REACTOR CRITICAL rules in Section 2.2",
+      "If Torso HP reaches 0, MSU is destroyed. See REACTOR CRITICAL rules in Section 2.2.3",
   },
 ];
 
@@ -131,7 +131,7 @@ export const HitLocations = () => {
       <h3 className="f4 fw7 mt4 mb2">Shields</h3>
       <p className="lh-copy">
         If an MSU has a Shield equipped, it may intercept hits (See Shield rules
-        in Section 2.8 under Equipment effects). Declare the shield interception
+        in Section 2.10 under Equipment effects). Declare the shield interception
         before rolling damage. The shield's Armor pool absorbs damage instead of
         the body location. If the shield's HP reaches 0, remaining damage
         carries over to the intended location.
