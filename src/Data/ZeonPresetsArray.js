@@ -931,8 +931,9 @@ export const ZEON_PRESETS = [
           name: "Shield + Gatling (INBUILT)",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "9",
-          notes: "[INBUILT],[FULL AUTO],[SUPPRESSIVE],[GRIP],[MOUNTABLE]",
+          tonnage: "8",
+          notes:
+            "[MILITANT INNOVATION],[INBUILT],[FULL AUTO],[SUPPRESSIVE],[GRIP],[MOUNTABLE]",
         },
         {
           name: "Heat Blade",
@@ -1020,8 +1021,9 @@ export const ZEON_PRESETS = [
           name: "Shield + Gatling (INBUILT)",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "9",
-          notes: "[INBUILT],[FULL AUTO],[SUPPRESSIVE],[GRIP],[MOUNTABLE]",
+          tonnage: "8",
+          notes:
+            "[MILITANT INNOVATION],[INBUILT],[FULL AUTO],[SUPPRESSIVE],[GRIP],[MOUNTABLE]",
         },
         {
           name: "Heat Blade",
@@ -1209,8 +1211,9 @@ export const ZEON_PRESETS = [
           name: "Gatling Kinetic (MOUNTED)",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "6",
-          notes: "[FULL AUTO],[SUPPRESSIVE],[GRIP],[MOUNTABLE]",
+          tonnage: "5",
+          notes:
+            "[MILITANT INNOVATION],[INBUILT],[FULL AUTO],[SUPPRESSIVE],[GRIP],[MOUNTABLE]",
         },
         {
           name: "CQC Weapon",
