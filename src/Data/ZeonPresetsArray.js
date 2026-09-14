@@ -1059,7 +1059,7 @@ export const ZEON_PRESETS = [
           current: "22",
           max: "22",
           weapon: "",
-          equipment: ["Heavy Boooster", "", ""],
+          equipment: ["Vertical Jump Jets", "", ""],
         },
         rightArm: {
           current: "22",
