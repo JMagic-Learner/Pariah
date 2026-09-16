@@ -1,9 +1,11 @@
 import { UpgradeInput } from "../../../Components/TextInput";
 import { UPGRADES } from "../../../Data/UpgradeArray";
+import { useMediaQuery } from "@custom-react-hooks/use-media-query";
 
 const findUpgrade = (name) => UPGRADES.find((u) => u.name === name);
 
 const UpgradeSlot = ({ label, value, onClick, onClear }) => {
+  const isMobile = useMediaQuery();
   const info = value ? findUpgrade(value) : null;
   return (
     <div className="flex items-center" style={{ gap: "0.5rem" }}>
@@ -30,7 +32,9 @@ const UpgradeSlot = ({ label, value, onClick, onClear }) => {
             ✕
           </button>
         )}
-        <div className="f8 tc flex-shrink-0">{info ? info.effect : ""}</div>
+        {!isMobile && (
+          <div className="f8 tc flex-shrink-0">{info ? info.effect : ""}</div>
+        )}
       </div>
     </div>
   );

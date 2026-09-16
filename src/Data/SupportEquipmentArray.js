@@ -134,7 +134,8 @@ export const SUPPORT = [
     pfro: "1 PFRO",
     qty: 1,
     mcu: 25,
-    effect: "All ranged weapons are treated as having [SCOPE] keyword.",
+    effect:
+      "All ranged weapons are treated as having the Thermal Scope upgrade and [PRECISE] keyword",
   },
   {
     name: "EXAM System",

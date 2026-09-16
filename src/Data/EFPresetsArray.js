@@ -3779,7 +3779,8 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "1 PFRO",
           tonnage: "2",
-          notes: "All ranged weapons have [SCOPE] keyword.",
+          notes:
+            "All ranged weapons are treated as having the Thermal Scope upgrade and [PRECISE] keyword",
         },
         B(),
         B(),

@@ -15,7 +15,8 @@ export const WeaponWeightClasses = () => {
           [LIGHT] Weapons
           <span className="fw4 black">
             {" "}
-            1 - 2 tons. Can be held in one hand.
+            1 - 2 tons. Can be held in one hand. Ignores movement penalties to
+            GS when moving over 3"
           </span>
         </li>
         <li className="pv1 red fw6">
