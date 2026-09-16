@@ -753,7 +753,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0079",
         faction: "Zeon",
         equipment:
-          "MG (ZEON), Spiky Shoulders (ZEON), Shield (Shoulder), Missile Pod 4 (Mounted), Amphibious",
+          "Machine Gun, Spiky Shoulders (ZEON), Shield (Shoulder), Missile Pod 4 (Mounted), Amphibious",
       },
       {
         msu: "MS-06K Zaku Cannon",
@@ -777,7 +777,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0079",
         faction: "Zeon",
         equipment:
-          "MG (ZEON), Heat Hawk, Spiky Shoulders (ZEON), Shield (Shoulder), Light Bazooka",
+          "Machine Gun, Heat Hawk, Spiky Shoulders (ZEON), Shield (Shoulder), Light Bazooka",
       },
       {
         msu: "MS-06R-1A Zaku High Mobility",
@@ -789,7 +789,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0079",
         faction: "Zeon",
         equipment:
-          "MG (ZEON), Heat Hawk, Spiky Shoulders (ZEON), Shield (Shoulder), Heavy Booster",
+          "Machine Gun, Heat Hawk, Spiky Shoulders (ZEON), Shield (Shoulder), Heavy Booster",
       },
       {
         msu: 'MS-06-2 "Full Bullet" Zaku J.Rid',
@@ -801,7 +801,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0079",
         faction: "Zeon",
         equipment:
-          "Cannon, MG (ZEON), Heat Hawk (Mounted), Missile Pod 3 (Mounted), Shield (Shoulder) etc",
+          "Cannon, Machine Gun, Heat Hawk (Mounted), Missile Pod 3 (Mounted), Shield (Shoulder) etc",
       },
       {
         msu: "MS-06S Zaku II Commander",
@@ -813,7 +813,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0079",
         faction: "Zeon",
         equipment:
-          "MG (ZEON), Heat Hawk, Spiky Shoulders (ZEON), Shield (Shoulder), Command Interface",
+          "Machine Gun, Heat Hawk, Spiky Shoulders (ZEON), Shield (Shoulder), Command Interface",
       },
       {
         msu: "MSN-03C Hygogg",
@@ -825,7 +825,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0079",
         faction: "Zeon",
         equipment:
-          "Beam Cannon x2 (Inbuilt), Missile Pod 2 x2 (Inbuilt), Gauntlet x2, MG (ZEON) Mounted",
+          "Beam Cannon x2 (Inbuilt), Missile Pod 2 x2 (Inbuilt), Gauntlet x2, Machine Gun Mounted",
       },
       {
         msu: "MS-07B Gouf",
@@ -908,7 +908,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0080",
         faction: "Zeon",
         equipment:
-          "CQC Weapon x2, Heavy Booster, Kunai Knives x4, MG (ZEON), Gatling (Mounted)",
+          "CQC Weapon x2, Heavy Booster, Kunai Knives x4, Machine Gun, Gatling (Mounted)",
       },
       {
         msu: "MS-09R Rick Dom",
@@ -920,7 +920,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0079",
         faction: "Zeon",
         equipment:
-          "MG (ZEON), Heavy Bazooka, Side Verniers, Flash Grenade (Mounted), Heavy Booster",
+          "Machine Gun, Heavy Bazooka, Side Verniers, Flash Grenade (Mounted), Heavy Booster",
       },
       {
         msu: "MS-09RS Rick Dom",
@@ -1001,7 +1001,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0079",
         faction: "Zeon",
         equipment:
-          "MG (ZEON), Shield (Shoulder), Spiky Shoulder, Stealth System, Forward Observer, ECM…",
+          "Machine Gun, Shield (Shoulder), Spiky Shoulder, Stealth System, Forward Observer, ECM…",
       },
       {
         msu: "MS-18E Kampfer",
@@ -1037,7 +1037,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0083",
         faction: "Zeon",
         equipment:
-          "MG (ZEON), Heat Hawk, Shield (Shoulder), Spiky Shoulder, Enhanced Fusion Reactor, Heavy Booster",
+          "Machine Gun, Heat Hawk, Shield (Shoulder), Spiky Shoulder, Enhanced Fusion Reactor, Heavy Booster",
       },
       {
         msu: "AGX-04 Gerbera Tetra",

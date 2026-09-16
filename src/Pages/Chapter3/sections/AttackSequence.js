@@ -27,9 +27,9 @@ export const AttackSequence = () => {
         <ul className="lh-copy pl3 f6 ma0 tj">
           <li className="pv1">
             <span className="fw6 red">Step 1:</span> Check [LOS] to the enemy
-            MSU and measure range from base to base. If LOS and eligible ranges
-            are confirmed, proceed to Step 3. Otherwise the attack is invalid —
-            do not continue.
+            MSU or [HARD COVER] and measure range from base to base. If LOS and
+            eligible ranges are confirmed, proceed to Step 3. Otherwise the
+            attack is invalid — do not continue.
           </li>
           <li className="pv1 ">
             <span className="fw6 red">Step 2:</span> If firing an [INDIRECT]

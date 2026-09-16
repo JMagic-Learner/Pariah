@@ -18,3 +18,22 @@ export const TextInput = ({
     onClick={onClick}
   />
 );
+
+export const UpgradeInput = ({
+  value,
+  onChange,
+  placeholder = "",
+  className = "",
+  onClick,
+}) => (
+  <input
+    className={classNames(
+      "input-reset ba b--black-20 pa1 bg-white f7",
+      className,
+    )}
+    value={value}
+    onChange={(e) => onChange(e.target.value)}
+    placeholder={placeholder}
+    onClick={onClick}
+  />
+);

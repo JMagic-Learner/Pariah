@@ -239,7 +239,7 @@ export const ZEON_PRESETS = [
         rightArm: {
           current: "18",
           max: "18",
-          weapon: "MG (ZEON)",
+          weapon: "Machine Gun",
           equipment: ["Shield (Shoulder)", "", ""],
         },
         leftArm: {
@@ -506,7 +506,7 @@ export const ZEON_PRESETS = [
         rightArm: {
           current: "22",
           max: "22",
-          weapon: "MG (ZEON)",
+          weapon: "Machine Gun",
           equipment: ["Shield (Shoulder)", "Smoke Grenades x3", ""],
         },
         leftArm: {
@@ -600,7 +600,7 @@ export const ZEON_PRESETS = [
         rightArm: {
           current: "22",
           max: "22",
-          weapon: "MG (ZEON)",
+          weapon: "Machine Gun",
           equipment: ["Shield (Shoulder)", "", ""],
         },
         leftArm: {
@@ -689,7 +689,7 @@ export const ZEON_PRESETS = [
         rightArm: {
           current: "22",
           max: "22",
-          weapon: "MG (ZEON)",
+          weapon: "Machine Gun",
           equipment: ["Shield (Shoulder)", "", ""],
         },
         leftArm: {
@@ -727,7 +727,7 @@ export const ZEON_PRESETS = [
       armorValue: "22",
       baseEquip: [
         {
-          name: "MG (ZEON) (MOUNTED)",
+          name: "Machine Gun (MOUNTED)",
           mcuCost: "FREE",
           fro: "3",
           tonnage: "1",
@@ -801,7 +801,7 @@ export const ZEON_PRESETS = [
         leftArm: {
           current: "25",
           max: "25",
-          weapon: "MG (ZEON) (MOUNTED)",
+          weapon: "Machine Gun (MOUNTED)",
           equipment: ["Spiky Shoulder", "", ""],
         },
         rightLeg: {
@@ -962,7 +962,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
-          notes: "[AOE(6)] or [AP(5)],[INBUILT],[QUICK SWAP],[LIMITED USE(1)]",
+          notes: "[AOE(6)] or [AP(5)],[INBUILT],[LIMITED USE(1)]",
         },
         B(),
         B(),
@@ -1269,7 +1269,7 @@ export const ZEON_PRESETS = [
           equipment: [
             "Heavy Booster",
             "Kunai x2 (Stored)",
-            "MG (ZEON) (Stored)",
+            "Machine Gun (Stored)",
           ],
         },
         rightArm: {
@@ -1611,7 +1611,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "4",
-          notes: "[MOUNTABLE]",
+          notes: "[MOUNTABLE],[BEAM FOCUS]",
         },
         {
           name: "Side Verniers",
@@ -1960,14 +1960,14 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
-          notes: "[AOE(6)] or [AP(5)],[INBUILT],[QUICK SWAP],[LIMITED USE(1)]",
+          notes: "[AOE(6)] or [AP(5)],[INBUILT],[LIMITED USE(1)]",
         },
         {
           name: "Arm Cannon",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
-          notes: "[AOE(6)] or [AP(5)],[INBUILT],[QUICK SWAP],[LIMITED USE(1)]",
+          notes: "[AOE(6)] or [AP(5)],[INBUILT],[LIMITED USE(1)]",
         },
       ],
       addlEquip: [
@@ -2073,7 +2073,7 @@ export const ZEON_PRESETS = [
           notes: "[INBUILT],[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
-          name: "MG (ZEON) (MOUNTED)",
+          name: "Machine Gun (MOUNTED)",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
@@ -2129,7 +2129,7 @@ export const ZEON_PRESETS = [
         torso: {
           current: "25",
           max: "25",
-          weapon: "MG (ZEON) (MOUNTED)",
+          weapon: "Machine Gun (MOUNTED)",
           equipment: ["", "", ""],
         },
         rightArm: {
@@ -2557,7 +2557,7 @@ export const ZEON_PRESETS = [
       armorValue: "25",
       baseEquip: [
         {
-          name: "(Beam) Machine Gun [GRIP] (ZEON)",
+          name: "(Beam) Machine Gun [GRIP]",
           mcuCost: "FREE",
           fro: "2",
           tonnage: "1",
@@ -2641,7 +2641,7 @@ export const ZEON_PRESETS = [
         rightArm: {
           current: "25",
           max: "25",
-          weapon: "(Beam) Machine Gun (ZEON)",
+          weapon: "(Beam) Machine Gun",
           equipment: ["Shield (Shoulder)", "", ""],
         },
         leftArm: {
@@ -3169,15 +3169,15 @@ export const ZEON_PRESETS = [
           name: "Arm Cannon",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "4",
-          notes: "[AOE(6)] or [AP(5)],[INBUILT],[QUICK SWAP],[LIMITED USE(1)]",
+          tonnage: "2",
+          notes: "[AOE(6)] or [AP(5)],[INBUILT],[LIMITED USE(1)]",
         },
         {
           name: "Arm Cannon",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
-          notes: "[AOE(6)] or [AP(5)],[INBUILT],[QUICK SWAP],[LIMITED USE(1)]",
+          notes: "[AOE(6)] or [AP(5)],[INBUILT],[LIMITED USE(1)]",
         },
         {
           name: "Beam Hawk",
@@ -3487,7 +3487,7 @@ export const ZEON_PRESETS = [
           notes: "Beam Rifle + Missile Pod 4",
         },
         {
-          name: "MG (ZEON)",
+          name: "Machine Gun",
           mcuCost: "FREE",
           fro: "3",
           tonnage: "1",
@@ -3553,7 +3553,7 @@ export const ZEON_PRESETS = [
         leftArm: {
           current: "26",
           max: "26",
-          weapon: "MG (ZEON)",
+          weapon: "Machine Gun",
           equipment: ["Side Verniers", "", ""],
         },
         rightLeg: {
@@ -3916,7 +3916,7 @@ export const ZEON_PRESETS = [
         rightArm: {
           current: "21",
           max: "21",
-          weapon: "MG (ZEON)",
+          weapon: "Machine Gun",
           equipment: ["Shield (Shoulder)", "", ""],
         },
         leftArm: {
@@ -4058,7 +4058,7 @@ export const ZEON_PRESETS = [
           name: "Hyper Beam Cannon",
           mcuCost: "FREE",
           fro: "5",
-          tonnage: "5",
+          tonnage: "6",
           notes: "[AP(5)] or [ANTI-MATERIAL],[LINEAR],[BRACE]",
         },
         {

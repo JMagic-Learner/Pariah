@@ -3,6 +3,13 @@ import { lookupSupportMCU } from "../utilities/lookupMCU";
 import { SUPPORT_POOL } from "../../../Data/SupportPool";
 import { RANGED } from "../../../Data/RangedWeaponsArray";
 import { MELEE } from "../../../Data/MeleeWeaponsArray";
+import { UPGRADES } from "../../../Data/UpgradeArray";
+
+const upgradeStatFor = (row, key) =>
+  [row.upgrade1, row.upgrade2].reduce((sum, name) => {
+    const upgrade = UPGRADES.find((u) => u.name === name);
+    return sum + (upgrade ? parseMCU(upgrade[key]) : 0);
+  }, 0);
 
 const NON_HEAD_LOCATION_KEYS = [
   "torso",
@@ -133,7 +140,7 @@ export const usePilotDerivedStats = ({
   const totalMCU =
     parseMCU(mcu) +
     baseEquip.reduce((sum, row, i) => {
-      if (!soldBase[i]) return sum + parseMCU(row.mcuCost);
+      if (!soldBase[i]) return sum + parseMCU(row.mcuCost) + upgradeStatFor(row, "mcu");
       return sum - sellRefund(row);
     }, 0) +
     addlEquip.reduce((sum, row, i) => {
@@ -145,7 +152,11 @@ export const usePilotDerivedStats = ({
         (SUPPORT_POOL.some((s) => s.name === row.name) ||
           RANGED.some((w) => w.name === row.name) ||
           MELEE.some((w) => w.name === row.name));
-      return sum + (isDiscounted ? Math.floor(cost / 2) : cost);
+      return (
+        sum +
+        (isDiscounted ? Math.floor(cost / 2) : cost) +
+        upgradeStatFor(row, "mcu")
+      );
     }, 0);
 
   const purgeArmorTonnageSavings =
@@ -167,11 +178,17 @@ export const usePilotDerivedStats = ({
   const totalTonnage = Math.max(
     0,
     baseEquip.reduce(
-      (sum, row, i) => sum + (soldBase[i] ? 0 : parseMCU(row.tonnage)),
+      (sum, row, i) =>
+        sum +
+        (soldBase[i] ? 0 : parseMCU(row.tonnage) + upgradeStatFor(row, "ton")),
       0,
     ) +
       addlEquip.reduce(
-        (sum, row, i) => sum + (soldAddl[i] ? 0 : parseMCU(row.tonnage)),
+        (sum, row, i) =>
+          sum +
+          (soldAddl[i]
+            ? 0
+            : parseMCU(row.tonnage) + upgradeStatFor(row, "ton")),
         0,
       ) -
       purgeArmorTonnageSavings,

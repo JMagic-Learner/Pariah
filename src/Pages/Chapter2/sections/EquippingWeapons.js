@@ -9,7 +9,11 @@ export const EquippingWeapons = () => {
       </h2>
       <p className="lh-copy tj">
         Gunpla have numerous ways to equip weapons. The way a weapon is
-        held/readied determines how it interacts with certain ACTIONS.
+        held/readied determines how it interacts with certain ACTIONS. On the
+        Pilot Sheet, weapons equipped to a Gunpla may occupy the same slot as
+        long as the weapon's hit location is the same. For example, two Kinetic
+        Gatlings mounted on the torso may be clubbed together in one equipment
+        or weapon slot.
       </p>
 
       <h5 className="f5 fw7 mt3 mb1 lh-copy tj">[READIED] Weapons</h5>

@@ -115,12 +115,14 @@ export const States = () => {
           .
         </p>
         <p className="lh-copy f6 mb2">
-          When this MSU is outside line of sight of all enemy MSUs, replace this
-          MSU with a <span className="fw6 red">60mm token</span> centered on the
-          original base. Enemy units that later come into Line of Sight with
-          this unit "reveal" it — replace the 60mm token with the MSU's base,
-          centered on the token. This MSU can face in any direction once
-          revealed.
+          When this MSU is outside line of sight of all enemy [UNITS], replace
+          this MSU with a <span className="fw6 red">60mm token</span> centered
+          on the original base. Enemy [UNITS] that later come into Line of Sight
+          with this unit "reveal" it — enemy [UNITS] must roll 5+ to replace the
+          60mm token with the MSU's base, centered on the token. This MSU can
+          face in any direction once revealed. Once revealed, this MSU loses the
+          ability to be renter [STEALTH] state until it moves out of line of
+          sight of all enemy [UNITS] again.
         </p>
         <p className="lh-copy f6 mb0">
           If attacks are declared while in Token form, the enemy MSU suffers a{" "}

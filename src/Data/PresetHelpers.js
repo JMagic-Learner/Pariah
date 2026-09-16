@@ -4,6 +4,8 @@ export const blankEquip = () => ({
   fro: "",
   tonnage: "",
   notes: "",
+  upgrade1: "",
+  upgrade2: "",
 });
 
 export const blankLoc = (equipCount) => ({

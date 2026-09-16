@@ -18,6 +18,7 @@ import { MELEE } from "../../Data/MeleeWeaponsArray";
 import { KEYWORDS } from "../../Data/KeywordArray";
 import { NEWTYPE_UPGRADES, BITS } from "../../Data/NewtypeUpgrades";
 import { renderKeywords } from "../../utils/renderKeywords";
+import { lookupWeaponInfo } from "./utilities/lookupWeaponInfo";
 import { KeywordDialog } from "../../Components/KeywordDialog";
 import { SheetHeader } from "../../Components/SheetHeader";
 import { TextInput } from "../../Components/TextInput";
@@ -177,7 +178,8 @@ const PilotSheetPanel = ({ slotIndex }) => {
   const [equipPopup, setEquipPopup] = useState(null);
   const [slotWarning, setSlotWarning] = useState(null);
   const [kwDialog, setKwDialog] = useState(null);
-  const openEquipPopup = (onSelect) => setEquipPopup({ onSelect });
+  const openEquipPopup = (onSelect, restrictTab) =>
+    setEquipPopup({ onSelect, restrictTab });
   const closeEquipPopup = () => setEquipPopup(null);
 
   const { removeSupportLoc, autoFillSupportLoc } = useSupportLocations({
@@ -188,6 +190,12 @@ const PilotSheetPanel = ({ slotIndex }) => {
 
   const { updateBaseEquip, applyBaseEquip, updateAddlEquip, applyAddlEquip } =
     useEquipmentUpdaters({ setBaseEquip, setAddlEquip });
+
+  const pickUpgrade = (applyFn, i, slot) =>
+    openEquipPopup(
+      (fields) => applyFn(i, { [`upgrade${slot}`]: fields.name }),
+      "Upgrades",
+    );
 
   const { handleMsuName, saveCustomPreset, loadCustomPreset, applyPreset } =
     usePilotSlotActions(slotIndex, pilotSlot);
@@ -695,6 +703,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                 <MobileEquipRow
                   key={i}
                   row={row}
+                  isWeapon={!!lookupWeaponInfo(row.name)}
                   detailsLabel="Notes"
                   onChange={(f, v) => updateBaseEquip(i, f, v)}
                   onNameClick={() =>
@@ -703,6 +712,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                       autoFillSupportLoc(fields.name);
                     })
                   }
+                  onPickUpgrade={(slot) => pickUpgrade(applyBaseEquip, i, slot)}
                   sold={soldBase[i]}
                   onSell={() =>
                     setSoldBase((prev) =>
@@ -738,12 +748,16 @@ const PilotSheetPanel = ({ slotIndex }) => {
                     <EquipmentRow
                       key={i}
                       row={row}
+                      isWeapon={!!lookupWeaponInfo(row.name)}
                       onChange={(f, v) => updateBaseEquip(i, f, v)}
                       onNameClick={() =>
                         openEquipPopup((fields) => {
                           applyBaseEquip(i, fields);
                           autoFillSupportLoc(fields.name);
                         })
+                      }
+                      onPickUpgrade={(slot) =>
+                        pickUpgrade(applyBaseEquip, i, slot)
                       }
                       lastCellColSpan={2}
                       sold={soldBase[i]}
@@ -792,6 +806,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                 <MobileEquipRow
                   key={i}
                   row={row}
+                  isWeapon={!!lookupWeaponInfo(row.name)}
                   detailsLabel="Effects"
                   onChange={(f, v) => updateAddlEquip(i, f, v)}
                   onNameClick={() =>
@@ -800,6 +815,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                       autoFillSupportLoc(fields.name);
                     })
                   }
+                  onPickUpgrade={(slot) => pickUpgrade(applyAddlEquip, i, slot)}
                   onClear={() => {
                     removeSupportLoc(row.name);
                     applyAddlEquip(i, blankEquip());
@@ -861,12 +877,16 @@ const PilotSheetPanel = ({ slotIndex }) => {
                     <EquipmentRow
                       key={i}
                       row={row}
+                      isWeapon={!!lookupWeaponInfo(row.name)}
                       onChange={(f, v) => updateAddlEquip(i, f, v)}
                       onNameClick={() =>
                         openEquipPopup((fields) => {
                           applyAddlEquip(i, fields);
                           autoFillSupportLoc(fields.name);
                         })
+                      }
+                      onPickUpgrade={(slot) =>
+                        pickUpgrade(applyAddlEquip, i, slot)
                       }
                       onClear={() => {
                         removeSupportLoc(row.name);
@@ -1190,9 +1210,9 @@ const PilotSheetPanel = ({ slotIndex }) => {
             </thead>
             <tbody>
               {[
-                ['0–8"', "2d3 + PS −1", "+1 GS"],
-                ['9–20"', "2d3 + PS", "+0 GS"],
-                ['21+"', "2d3 + PS +1", "−1 GS"],
+                ['0"-3"', "2d3 + PS −1", "+1 GS"],
+                ["4″ – 13″", "2d3 + PS", "-1 GS"],
+                ["13+", "2d3 + PS +1", "−2 GS"],
               ].map((row, i) => (
                 <tr
                   key={i}
@@ -1249,6 +1269,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
         <EquipmentPickerModal
           onClose={closeEquipPopup}
           onSelect={equipPopup.onSelect}
+          restrictTab={equipPopup.restrictTab}
           tonnageLimit={tonnageLimit}
           fro={fro}
         />

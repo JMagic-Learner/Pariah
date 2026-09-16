@@ -4,11 +4,15 @@ import { TextInput } from "../../../Components/TextInput";
 import { isLimitedUseItem } from "../../../utils/limitedUseEquipment";
 import { TD } from "./TableCells";
 import { EquipmentDetailsModal } from "./EquipmentDetailsModal";
+import { WeaponUpgradeSelects } from "./WeaponUpgradeSelects";
+import { getWeaponWeightClass } from "../utilities/weaponWeightClass";
 
 export const EquipmentRow = ({
   row,
   onChange,
   onNameClick,
+  onPickUpgrade,
+  isWeapon,
   lastCellColSpan = 1,
   sold,
   onSell,
@@ -20,8 +24,12 @@ export const EquipmentRow = ({
 }) => {
   const [detailsOpen, setDetailsOpen] = useState(false);
   const limitedUse = isLimitedUseItem(row.name);
+  const [showUpgrades, setShowUpgrades] = useState(
+    () => !!(row.upgrade1 || row.upgrade2),
+  );
   return (
-    <tr className={sold ? "o-40" : ""}>
+    <>
+      <tr className={sold ? "o-40" : ""}>
       <TD>
         <div className={onSell || onClear ? "flex items-center" : ""}>
           {onSell && (
@@ -62,6 +70,25 @@ export const EquipmentRow = ({
             >
               View
             </button>
+          )}
+          {isWeapon && !sold && (
+            <button
+              className={classNames(
+                "f8 ph1 pv0 ml1 bn br1 pointer flex-shrink-0 lh-copy",
+                showUpgrades
+                  ? "bg-dark-green white fw7"
+                  : "bg-near-white dark-gray",
+              )}
+              onClick={() => setShowUpgrades((v) => !v)}
+              title="Show/hide weapon upgrades"
+            >
+              Upgrades {showUpgrades ? "▲" : "▼"}
+            </button>
+          )}
+          {isWeapon && !sold && (
+            <span className="f8 fw7 dark-green ml1 flex-shrink-0">
+              {getWeaponWeightClass(row)}
+            </span>
           )}
         </div>
         {detailsOpen && (
@@ -118,5 +145,17 @@ export const EquipmentRow = ({
         <TextInput value={row.notes} onChange={(v) => onChange("notes", v)} />
       </TD>
     </tr>
+    {isWeapon && !sold && showUpgrades && (
+      <tr>
+        <TD colSpan={4 + lastCellColSpan} className="bg-washed-green">
+          <WeaponUpgradeSelects
+            row={row}
+            onChange={onChange}
+            onPickUpgrade={onPickUpgrade}
+          />
+        </TD>
+      </tr>
+    )}
+    </>
   );
 };

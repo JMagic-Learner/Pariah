@@ -43,15 +43,15 @@ export const Reactions = () => {
           <span className="fw4 f5">[REACTION] [1 Action]</span>
         </h3>
         <p className="lh-copy f6 mb2">
-          When an enemy unit within your LOS and within your weapon's range band
-          declares or ends a<span className="fw6 red"> [MOVEMENT] </span> action
-          (including <span className="fw6 red"> [ADVANCE] </span>,
-          <span className="fw6 red"> [BOOST] </span>, or{" "}
-          <span className="fw6 red"> [BLITZ] </span> or when an enemy{" "}
-          <span className="fw6 red"> [UNIT]</span> declares a melee attack), you
+          When an enemy unit moves more than 3" and ends within LOS of this
+          [UNIT]. Qualifying movement:{" "}
+          <span className="fw6 red"> [MOVEMENT] </span> actions (including{" "}
+          <span className="fw6 red"> [ADVANCE] </span>, or{" "}
+          <span className="fw6 red"> [BLITZ] </span>) or when an enemy{" "}
+          <span className="fw6 red"> [UNIT]</span> declares a melee attack, you
           may immediately declare a{" "}
           <span className="fw6 red"> [REACTIVE ATTACK] </span>
-          before or after the enemy resolves their respective action.
+          before the enemy resolves their respective action.
         </p>
         <ul className="lh-copy pl3 f6 ma0">
           <li className="pv1 tj">

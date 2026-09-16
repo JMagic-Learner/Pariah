@@ -37,17 +37,7 @@ export const Phases = () => {
       <h3 className="f4 fw7 red mt0 mb2">0. START OF ROUND</h3>
 
       <div className="bg-near-white ba b--black-10 br2 pa3 mb3 tj">
-        <h3 className="f4 fw7 red mt0 mb2">1. Initiative Phase</h3>
-        <p className="lh-copy f6 ma0">
-          Both players roll 2d6 + <span className="fw6 red"> [PILOT]</span> PS
-          for each MSU. Each MSU is then ranked from highest to lowest to
-          determine the activation order for the round. Players activate their
-          MSUs according to this order. If initiative is tied, reroll.
-        </p>
-      </div>
-
-      <div className="bg-near-white ba b--black-10 br2 pa3 mb3 tj">
-        <h3 className="f4 fw7 red mt0 mb2">2. Status Phase</h3>
+        <h3 className="f4 fw7 red mt0 mb2">1. Status Phase</h3>
         <ul className="lh-copy pl3 f6 ma0">
           <li className="pv1">
             <span className="fw6 red">Step 1:</span> All MSU reset their FRO to
@@ -67,6 +57,20 @@ export const Phases = () => {
             to 2. [COMMANDERS] can now spend a command action point for specific
             actions (See Other Actions Section 3.7)
           </li>
+
+          <div className="bg-near-white ba b--black-10 br2 pa3 mb3 tj">
+            <h3 className="f4 fw7 red mt0 mb2">Step 1.5 Initiative Phase</h3>
+            <p className="lh-copy f6 ma0">
+              Both players will bid on initiative order. [PILOT]s will spend X
+              FRO, and add it to their PILOTING skill. Both players hide this
+              bid for each of thier MSUs, until it is simultaneously revealed.
+              The revealed bids are then added to the{" "}
+              <span className="fw6 red"> [PILOT]</span> PS for each MSU. Each
+              MSU is then ranked from highest to lowest to determine the
+              activation order for the round. Players activate their MSUs
+              according to this order. If initiative is tied, roll off.
+            </p>
+          </div>
         </ul>
       </div>
 
@@ -133,7 +137,7 @@ export const Phases = () => {
         <ul className="lh-copy pl3 f6 ma0">
           <li className="pv1">
             <span className="fw6 red">Step 1:</span> Starting with the MSU with
-            the lowest initiative, that MSU may declare an{" "}
+            the highest initiative, that MSU may declare an{" "}
             <span className="fw6 red"> [ATTACK] </span> action. An MSU may also
             perform <span className="fw6 red"> [SIMULTANEOUS ATTACK] </span>{" "}
             actions

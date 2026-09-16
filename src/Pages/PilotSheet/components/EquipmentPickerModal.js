@@ -11,9 +11,13 @@ export const EquipmentPickerModal = ({
   onSelect,
   tonnageLimit,
   fro,
+  restrictTab,
 }) => {
+  const tabs = restrictTab
+    ? PICKER_TABS.filter((t) => t.label === restrictTab)
+    : PICKER_TABS.filter((t) => t.label !== "Upgrades");
   const [tab, setTab] = useState(0);
-  const current = PICKER_TABS[tab];
+  const current = tabs[tab];
   const tonCol = current.headers.indexOf("Ton");
   const nameCol = current.headers.indexOf("Name");
   const dynamicTonFor = (name) =>
@@ -55,23 +59,25 @@ export const EquipmentPickerModal = ({
         </div>
 
         {/* Tab bar */}
-        <div className="flex bb b--black-20 bg-near-white flex-shrink-0 flex-wrap">
-          {PICKER_TABS.map((t, i) => (
-            <button
-              key={i}
-              onClick={() => setTab(i)}
-              className={classNames(
-                "f7 pv2 ph3 pointer bn br b--black-20 lh-solid tc",
-                {
-                  "bg-dark-green white fw7": tab === i,
-                  "bg-near-white dark-gray dim": tab !== i,
-                },
-              )}
-            >
-              {t.label}
-            </button>
-          ))}
-        </div>
+        {tabs.length > 1 && (
+          <div className="flex bb b--black-20 bg-near-white flex-shrink-0 flex-wrap">
+            {tabs.map((t, i) => (
+              <button
+                key={i}
+                onClick={() => setTab(i)}
+                className={classNames(
+                  "f7 pv2 ph3 pointer bn br b--black-20 lh-solid tc",
+                  {
+                    "bg-dark-green white fw7": tab === i,
+                    "bg-near-white dark-gray dim": tab !== i,
+                  },
+                )}
+              >
+                {t.label}
+              </button>
+            ))}
+          </div>
+        )}
 
         {/* Scrollable table */}
         <div style={{ flex: 1, overflowY: "auto" }} className="pa1">

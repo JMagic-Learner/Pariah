@@ -1,5 +1,24 @@
 export const UPGRADES = [
   {
+    name: "Upgrade:[AP(x)]",
+    loc: "Weapon",
+    ton: "–",
+    pfro: "–",
+    qty: 1,
+    mcu: 30,
+    effect:
+      "Add [AP(2)] to one ranged weapon. Add [AP(5)] to one melee weapon. This weapon upgrade cannot be given to a weapon that already has this keyword",
+  },
+  {
+    name: "Upgrade:[AKIMBO]",
+    loc: "Weapon",
+    ton: "–",
+    pfro: "–",
+    qty: 2,
+    mcu: 25,
+    effect: "One [LIGHT] or [MEDIUM] weapon gains the [AKIMBO] keyword.",
+  },
+  {
     name: "Upgrade:[ANTI-AIRCRAFT]",
     loc: "Weapon",
     ton: "–",
@@ -19,6 +38,16 @@ export const UPGRADES = [
       "If this MSU did not move this turn and is base to base with [HARD COVER], or a deployable equipment that provides [BRACE], that is tall enough to cover one or both of the MSU Leg hit locations, the upgraded weapon may reroll all hit rolls.",
   },
   {
+    name: "Upgrade:Bayonet",
+    loc: "Weapon",
+    ton: 1,
+    pfro: "–",
+    qty: 1,
+    mcu: 10,
+    effect:
+      "Choose one [LIGHT] or [MEDIUM] Rifle/MG/Pistol type weapon. This weapon now has a combat knife attached to the barrel. This Combat Knife occupies no slots, and also gains [MOMENTUM].",
+  },
+  {
     name: "Upgrade:[COUNTERSTRIKE]",
     loc: "Weapon",
     ton: "–",
@@ -33,28 +62,28 @@ export const UPGRADES = [
     ton: "–",
     pfro: "–",
     qty: 2,
-    mcu: 25,
+    mcu: 35,
     effect:
-      "+1 ROF to Rifle/MG/SMG/Pistol/Grenade Launcher type weapons. If two [CYCLIC] upgrades are given to a beam rifle, increase active FRO cost by 1 ",
+      "+1 ROF to Sniper Rifle,Rifle/MG/Pistol/Grenade Launcher type weapons. If two [CYCLIC] upgrades are given to a beam rifle, increase active FRO cost by 1. You may only purchase one [CYCLIC] upgrade on a Sniper Rifle.",
   },
   {
     name: "Upgrade:Dual Barrel",
     loc: "Weapon",
-    ton: "4",
+    ton: 4,
     pfro: "–",
     qty: 1,
     mcu: 45,
     effect:
-      "Choose one cannon, bazooka, or shotgun. Double the ROF of that weapon. That weapon gains [SLOW RELOAD].",
+      "Choose one cannon,bazooka,or shotgun type ranged weapon. Double the base/original ROF of that weapon. That weapon gains [SLOW RELOAD].",
   },
   {
     name: "Upgrade:Extended Barrel",
     loc: "Weapon",
-    ton: "2",
+    ton: 2,
     pfro: "–",
     qty: 1,
-    mcu: 10,
-    effect: "Choose one rifle, cannon, bazooka. Extend all range bands by 5",
+    mcu: 15,
+    effect: "Extend all range bands brackets by 5",
   },
   {
     name: "Upgrade:[GRIP]",
@@ -68,17 +97,17 @@ export const UPGRADES = [
   {
     name: "Upgrade:Heavy Barrel",
     loc: "Weapon",
-    ton: 2,
+    ton: 4,
     pfro: "–",
     qty: 2,
     mcu: 15,
     effect:
-      "Choose one rifle, sniper rifle, sub machine gun, bazooka, or pistol. Reduce ROF by 1 to a mininum of 1. Increase the positive range bands by 1. Double negative range bands mod penalties. For example, an rangeband mod of +2 | 0 | -1 | -2 would become +3 | +0 | -2 | -4",
+      "Reduce ROF by 1 to a mininum of 1. Increase the positive range bands bonuses by 2. Decrease negative range bands penalities by 2. For example, an rangeband mod of +2 | 0 | -1 | -2 would become +4 | +0 | -3 | -4",
   },
   {
     name: "Upgrade:[IMPACT] ",
     loc: "Weapon",
-    ton: "3",
+    ton: 3,
     pfro: "–",
     qty: 2,
     mcu: 20,
@@ -93,6 +122,16 @@ export const UPGRADES = [
     qty: 2,
     mcu: 20,
     effect: "Add [LETHAL] keyword to one melee weapon.",
+  },
+  {
+    name: "Upgrade:Lightweight Barrel",
+    loc: "Weapon",
+    ton: -2,
+    pfro: "–",
+    qty: 2,
+    mcu: 25,
+    effect:
+      "Reduce all negative range penalties by 1 to a mininum of 0. For example, an rangeband mod of +2 | 0 | -1 | -2 would become +2 | +0 | -0 | -1",
   },
   {
     name: "Upgrade:[PRECISE] ",
@@ -120,6 +159,36 @@ export const UPGRADES = [
     qty: 2,
     mcu: 15,
     effect: "Add [SCOPE] to one ranged weapon.",
+  },
+  {
+    name: "Upgrade: Pinpoint Scope",
+    loc: "Weapon",
+    ton: "–",
+    pfro: "–",
+    qty: 2,
+    mcu: 25,
+    effect:
+      "Requires [SCOPE] Keyword. Reroll one hit location die once per attack declaration.",
+  },
+  {
+    name: "Upgrade: Thermal Scope",
+    loc: "Weapon",
+    ton: "–",
+    pfro: "–",
+    qty: 2,
+    mcu: 45,
+    effect:
+      "Requires [SCOPE] Keyword.This [PILOT] may draw LOS through [OBSCURING COVER] and ignores all negative range penalties from [OBSCURING COVER] when declaring an attack with this weapon.",
+  },
+  {
+    name: "Upgrade: Reflex Scope",
+    loc: "Weapon",
+    ton: "–",
+    pfro: "–",
+    qty: 2,
+    mcu: 15,
+    effect:
+      "Requires [SCOPE] Keyword. This [PILOT] may rotate two base facings after attack declaration.",
   },
   {
     name: "Upgrade:[SILVER BULLET]",
@@ -151,16 +220,6 @@ export const UPGRADES = [
       'Choose one beam weapon. A [PILOT] may now spend up to 2 FRO when declaring [ATTACK],[REACTIVE ATTACK], or [SIMULTANEOUS ATTACK]. Each FRO spent on a upgraded melee weapon adds 3" to rangebands. Each FRO spent on a upgraded ranged weapon adds +1 to base damage.',
   },
   {
-    name: "Upgrade:Brutal",
-    loc: "Weapon",
-    ton: "–",
-    pfro: "–",
-    qty: 2,
-    mcu: 15,
-    effect:
-      "Add [AP(2)] to one non-beam melee weapon. If this weapon already has [AP(x)], instead add [AP(x+2)]",
-  },
-  {
     name: "Upgrade:Missile Proximity",
     loc: "Weapon",
     ton: 2,
@@ -190,11 +249,11 @@ export const UPGRADES = [
   {
     name: "Upgrade:Munitions Rack",
     loc: "Weapon",
-    ton: 2,
+    ton: 1,
     pfro: "–",
-    qty: 2,
+    qty: 4,
     mcu: 25,
-    effect: "Increase [LIMITED USE(X)] of two weapons by 1.",
+    effect: "Increase [LIMITED USE(X)] of a weapon by 1.",
   },
   {
     name: "Upgrade:Pistol Caliber",
@@ -205,6 +264,24 @@ export const UPGRADES = [
     mcu: 15,
     effect:
       "One Pistol gain [PRECISE] and [LETHAL]. This Pistol also gains +4 base damage.",
+  },
+  {
+    name: "Upgrade:Recoil Counterbalance",
+    loc: "Weapon",
+    ton: 2,
+    pfro: "–",
+    qty: 2,
+    mcu: 30,
+    effect: "This weapon ignores [FULL AUTO] negative range penalties",
+  },
+  {
+    name: "Upgrade:[STABLE]",
+    loc: "Weapon",
+    ton: "–",
+    pfro: "–",
+    qty: 2,
+    mcu: 25,
+    effect: "One ranged weapon gains the [STABLE] keyword. ",
   },
   {
     name: "Upgrade:Slugger",

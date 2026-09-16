@@ -11,6 +11,12 @@ export const Upgrades = () => {
         Each upgrade lists its install location, tonnage cost, passive FRO
         drain, maximum quantity, MCU cost, and effect.
       </p>
+
+      <p className="lh-copy tj">
+        When an Upgrade has a install location of "Weapon", the tonnage cost is
+        added to the weapon itself. Meaning that a weapon can change weight
+        classification from [LIGHT] to [MEDIUM] or [HEAVY ].
+      </p>
       <SupportEquipmentTable items={UPGRADES} mobileTitle="Upgrades" />
     </div>
   );

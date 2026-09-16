@@ -14,7 +14,7 @@ export const TRAITS = [
     name: "Aggressive",
     cost: 1,
     effect:
-      "After declaring an [ATTACK] or [REACTIVE ATTACK] action, the [UNIT] may move 4 inches forward. This movement cannot be used to rotate facing",
+      "After declaring an [ATTACK] or [REACTIVE ATTACK] action, the [UNIT] may move 4 inches forward. This movement cannot be used to rotate facing. When succeeding '[TAKE COVER]' checks, this [PILOT] may move 4 inches toward the MSU that declared an attack at it, instead of moving toward nearest cover.",
   },
   {
     name: "Back Stabber",
@@ -24,7 +24,7 @@ export const TRAITS = [
   },
   {
     name: "Battle Group Commander",
-    cost: 4,
+    cost: 3,
     effect:
       "Increase total FRO limit of the entire force by 150. This additional FRO can only be spent on Support Units. This [PILOT] gains the [COMMANDER] keyword and one extra [COMMANDER] Action at the start of the game. This [PILOT] may also purchase the Command Interface support equipment for free. If the Battle Group Commander is destroyed, all friendly units are [FEAR/SHAKEN]",
     restrictions: "Limited 1 per [FIRETEAM]",
@@ -33,7 +33,7 @@ export const TRAITS = [
     name: "Bandit",
     cost: 1,
     effect:
-      "After declaring an [ATTACK] or [REACTIVE ATTACK] action, the [UNIT] may move 4 inches backward without penalty. This movement cannot be used to rotate facing",
+      "After declaring an [ATTACK] or [REACTIVE ATTACK] action, the [UNIT] may move 4 inches backward without penalty. This movement cannot be used to rotate facing. When declared as a target of an ranged attack, this PILOT may move 4 inches backward without penalty. This movement cannot be used to rotate facing.",
   },
   {
     name: "Ballistic Afficionado",
@@ -69,7 +69,7 @@ export const TRAITS = [
     name: "Buzz Saw",
     cost: 2,
     effect:
-      "Whenver this [PILOT] declares an [FULL AUTO] with a ranged weapon, if the target enemy MSU is in [OBSCURING COVER], the [OBSCURING COVER] is destroyed after the attack is resolved.",
+      "Whenver this [PILOT] declares an [FULL AUTO] with a ranged weapon, if the target enemy MSU is within [OBSCURING COVER], the [OBSCURING COVER] is removed from the battlefield after the attack is resolved. This [PILOT] may also declare [ATTACK]/[SIMULTANEOUS ATTACK] against [OBSCURING COVER], in addition to the usual enemy MSU and [HARD COVER] ",
   },
   {
     name: "Captain",
@@ -82,7 +82,7 @@ export const TRAITS = [
     name: "Child Soldier",
     cost: 0,
     effect:
-      "Base Gunnery, Brawl, Piloting defaulted 0. This [PILOT] takes a -1 penalty to [FEAR/SHAKEN] checks. This [PILOT] cannot use the [COMMANDER] keyword. For each of this [PILOT]'s MSU hit location destroyed, gain +2 to all stats.",
+      "Decrease two of the [PILOTS] stats by one. This [PILOT] takes a -1 penalty to [FEAR/SHAKEN] checks. This [PILOT] cannot use the [COMMANDER] keyword. For each of this [PILOT]'s MSU hit location destroyed, gain +2 to all stats.",
     restrictions: "Limited 1 per [FIRETEAM]",
   },
   {
@@ -93,9 +93,9 @@ export const TRAITS = [
   },
   {
     name: "CQ Specialist",
-    cost: 2,
+    cost: 1,
     effect:
-      'When this [PILOT] targets a [UNIT] within 12", you may reroll 1 attack dice per turn.',
+      'When this [PILOT] targets a [UNIT] within 15", you may reroll all hit dice of 1.',
   },
   {
     name: "Cross Discipline",
@@ -121,14 +121,14 @@ export const TRAITS = [
   },
   {
     name: "Duelist",
-    cost: 2,
+    cost: 1,
     effect:
-      'If no friendly MSU within 8" of this MSU, you may reroll 1 attack dice per turn.',
+      'If no friendly MSU within 8" of this MSU, all attacks made by this [PILOT] gain [PRECISE]',
   },
   {
     name: "Efficiency Engineer",
     cost: 1,
-    effect: "All passive FRO costs are reduced to a minimum of 1.",
+    effect: "All passive FRO costs are reduced by 2 to a minimum of 1.",
   },
   {
     name: "Enduring Will",
@@ -138,7 +138,7 @@ export const TRAITS = [
   },
   {
     name: "Evasive",
-    cost: 2,
+    cost: 1,
     effect:
       "This [PILOT]'s evasion max bonus is now 5 instead of 4. Moving less than 8 inches no longer incurs a -1 penalty to evasion rolls (see Evasion Tier Table)",
   },
@@ -164,6 +164,12 @@ export const TRAITS = [
     name: "Fearless",
     cost: 1,
     effect: "This [PILOT] can never be affected by [FEAR/SHAKEN].",
+  },
+  {
+    name: "Framework Specialist (EFGF)",
+    cost: 1,
+    effect: "A [PILOT]'s weapon gains the [INBUILT] trait.",
+    restrictions: "EFGF ONLY",
   },
   {
     name: "Freelancer",
@@ -210,7 +216,7 @@ export const TRAITS = [
   },
   {
     name: "Guns Blazing",
-    cost: 2,
+    cost: 1,
     effect:
       "When declaring [SIMULTANEOUS ATTACK], the [PILOT] may now nominate three ranged weapon to fire instead of two. In addition, [MOUNTED] weapons are now eligible for [REACTIVE ATTACKS]",
   },
@@ -225,7 +231,7 @@ export const TRAITS = [
     name: "Heavy Weapons Specialist",
     cost: 1,
     effect:
-      "[HEAVY] weapons gain [AKIMBO]. [HEAVY] ranged weapons gain the [PRECISION] keyword if the MSU stood still and did not rotate.",
+      "[HEAVY] weapons gain [AKIMBO]. [HEAVY] ranged weapons gain the [PRECISE] keyword if the MSU stood still and did not rotate.",
   },
   {
     name: "Hipfire Specialist",
@@ -241,7 +247,7 @@ export const TRAITS = [
   },
   {
     name: "Juke",
-    cost: 2,
+    cost: 1,
     effect:
       "Once per enemy attack declaration, this [PILOT] may perform a Juke reaction to reroll one d3 evasion dice if you have LOS to the attack.",
   },
@@ -253,13 +259,13 @@ export const TRAITS = [
   },
   {
     name: "Leapfrog",
-    cost: 2,
+    cost: 1,
     effect:
       "This [PILOT] may immediately perform an Attack action at a -2 penalty after moving vertically, such as making an Advance action vertically or boosting vertically or using Vertical Jump Jets",
   },
   {
     name: "Lucky Cat",
-    cost: 3,
+    cost: 2,
     effect:
       "This [PILOT] has a pet cat. Pet the cat before sortie. Roll 3d3. The result is how many dice this [PILOT] can reroll once per game.",
   },
@@ -283,8 +289,7 @@ export const TRAITS = [
   {
     name: "Mechanic Pro (EFGF)",
     cost: 2,
-    effect:
-      "Reduce the FRO requirement of one weapon by 2 and one weapon gains the [INBUILT] trait.",
+    effect: "Reduce the FRO requirement of one weapon by 2 to a minimum of 1.",
     restrictions: "EARTH FEDERATION GROUND FORCES ONLY",
   },
   {
@@ -313,13 +318,13 @@ export const TRAITS = [
   },
   {
     name: "Nemesis",
-    cost: 2,
+    cost: 1,
     effect:
       "Once per round, this [PILOT] can perform a free [REACTIVE ATTACK] action at a -3 penalty (instead of the usual -2)",
   },
   {
     name: "Oldtype Ace",
-    cost: 2,
+    cost: 1,
     effect:
       "This [PILOT] cannot take the [CYBER NEWTYPE] or [NEWTYPE] pilot traits. Once per turn, this [PILOT] may reroll an Evasion Check",
   },
@@ -327,7 +332,7 @@ export const TRAITS = [
     name: "Opportunistic",
     cost: 1,
     effect:
-      "Attacks made by this [PILOT] against enemy MSUs with lower initiative may reroll 1 attack dice.",
+      "Attacks made by this [PILOT] against enemy MSUs with lower initiative gain [LETHAL] keyword.",
   },
   {
     name: "One Year War Veteran",
@@ -358,7 +363,7 @@ export const TRAITS = [
     name: "Prowler",
     cost: 1,
     effect:
-      "As long as this [UNIT] is touching the edge of the battlefield, it cannot be declared as a target of ranged REACTIVE ATTACKS at the start of it's movement action",
+      "As long as this [UNIT] is touching the edge of the battlefield, it cannot be declared as a target of ranged REACTIVE ATTACKS if it moves more than 5 inches.",
   },
   {
     name: "Pyromaniac",
@@ -379,13 +384,13 @@ export const TRAITS = [
   },
   {
     name: "Reactive",
-    cost: 2,
+    cost: 1,
     effect:
       "During Reactive Attack actions, the [UNIT] may reroll up to 1 + X Attack dice equal to PS mod.",
   },
   {
     name: "Recon Operative",
-    cost: 2,
+    cost: 1,
     effect:
       "A [PILOT] may purchase one ECM/ECCM and Forward Observer support equipment for free.",
   },
@@ -393,7 +398,7 @@ export const TRAITS = [
     name: "Rookie",
     cost: 0,
     effect:
-      "Base Gunnery, Brawl, Piloting defaulted 0. Limited Use [1]: Ignore hit location of one enemy attack.",
+      "Decrease one of the [PILOTS] stats by one. Limited Use [1]: Ignore hit location of one enemy attack.",
   },
   {
     name: "Saboteur",
@@ -416,7 +421,7 @@ export const TRAITS = [
     name: "Serial Killer",
     cost: 1,
     effect:
-      "For each enemy unit destroyed by this [PILOT], gain +1 Gunnery or Brawl.",
+      "For each enemy [UNIT] destroyed by this [PILOT], gain +1 Gunnery or Brawl.",
   },
   {
     name: "Sharpshooter",
@@ -454,10 +459,9 @@ export const TRAITS = [
     effect:
       "Enemy MSUs suppressed by this [PILOT] reduce their base movespeed by 2.",
   },
-
   {
     name: "Theme Song",
-    cost: 2,
+    cost: 1,
     effect:
       "All other friendly [UNIT]S within 8 inches may reroll 1 attack dice per round",
   },

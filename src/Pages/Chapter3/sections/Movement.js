@@ -31,7 +31,7 @@ export const Movement = () => {
         <h3 className="f4 fw7 red mt0 mb2">Evasion Tier Table</h3>
         <p className="lh-copy f6 mb3">
           Total movement made during the Movement Phase determines how many
-          evasion dice a <span className="fw6 red"> [PILOT]</span> rolls when
+          evasion mods a <span className="fw6 red"> [PILOT]</span> adds when
           defending against attacks. Distance moved from all{" "}
           <span className="fw6 red"> [MOVEMENT] </span> actions (ADVANCE, BLITZ,
           BOOST) and <span className="fw6 red"> [FALL] </span> counts toward
@@ -59,26 +59,22 @@ export const Movement = () => {
             </thead>
             <tbody className="lh-copy">
               <tr>
-                <td className="pv2 pr3 bb b--black-20 fw6 red">
-                  Tier 1 — Slow
-                </td>
-                <td className="pv2 pr3 bb b--black-20">0″ – 8″</td>
+                <td className="pv2 pr3 bb b--black-20 fw6 red">Tier 1</td>
+                <td className="pv2 pr3 bb b--black-20">0-3″</td>
                 <td className="pv2 pr3 bb b--black-20 fw6">2d3 + PS − 1</td>
                 <td className="pv2 pr3 bb b--black-20 fw6">+ 1 GS</td>
               </tr>
               <tr>
-                <td className="pv2 pr3 bb b--black-20 fw6 red">
-                  Tier 2 — Moving
-                </td>
-                <td className="pv2 pr3 bb b--black-20">9″ – 20″</td>
+                <td className="pv2 pr3 bb b--black-20 fw6 red">Tier 2</td>
+                <td className="pv2 pr3 bb b--black-20">4″ – 13″</td>
                 <td className="pv2 pr3 bb b--black-20 fw6">2d3 + PS</td>
-                <td className="pv2 pr3 bb b--black-20 fw6"> N/A </td>
+                <td className="pv2 pr3 bb b--black-20 fw6"> -1 GS </td>
               </tr>
               <tr>
                 <td className="pv2 pr3 fw6 red">Tier 3 — Fast</td>
-                <td className="pv2 pr3">21″ +</td>
+                <td className="pv2 pr3">13″ +</td>
                 <td className="pv2 pr3 fw6">2d3 + PS + 1</td>
-                <td className="pv2 pr3 bb b--black-20 fw6"> -1 GS </td>
+                <td className="pv2 pr3 bb b--black-20 fw6"> -2 GS </td>
               </tr>
             </tbody>
           </table>
@@ -93,7 +89,7 @@ export const Movement = () => {
         <h3 className="f4 fw7 red mt0 mb1">
           [ADVANCE]
           <span className="fw4 f5">
-            <span className="fw6 red"> [MOVEMENT] </span> [1 FRO] [1 ACTION]
+            <span className="fw6 red"> [MOVEMENT] </span> [1 ACTION]
           </span>
         </h3>
         <p className="lh-copy f6 mb2">

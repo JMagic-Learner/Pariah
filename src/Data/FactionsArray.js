@@ -45,11 +45,11 @@ export const FACTIONS = [
         bonuses: [
           {
             title: "LOCKED AND LOADED",
-            text: "All [HEAVY] ranged weapons come with the [MOUNTABLE trait. Pilots may reroll X D6 attack dice equal to their PS when declaring an attack with a [FULL AUTO] weapon ",
+            text: "All [HEAVY] ranged weapons come with the [MOUNTABLE] trait. Pilots may reroll X D6 attack dice equal to their PS when declaring an attack with a [FULL AUTO] weapon ",
           },
           {
             title: "IMPROMPTU MECHANICS",
-            text: "Pilots may purchase the [MECHANIC PRO] trait",
+            text: "Pilots gain access to the [MECHANIC PRO] and [FRAMEWORK] pilot traits.",
           },
         ],
       },
@@ -144,7 +144,7 @@ export const FACTIONS = [
           },
           {
             title: "AVALANCE OF AGGRESSION",
-            text: "Whenever a MSU in this force is targeted by a ranged weapon, and the attacker is in LOS, this MSU may immediately [BOOST(6)]",
+            text: "Whenever a MSU in this force is targeted by a ranged weapon for the firs time in the round, and the attacker is in LOS, this MSU may immediately [BOOST(6)]",
           },
         ],
       },

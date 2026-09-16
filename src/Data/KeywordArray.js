@@ -29,7 +29,7 @@ export const KEYWORDS = [
   },
   {
     name: "[BURST(X)]",
-    desc: "When declaring an attack, reduce the weapon's ROF by 2 to reroll (X) attack dice. Cannot be used simultaneously with [FULL AUTO].",
+    desc: "When declaring an attack, reduce the weapon's ROF TO (X) attack dice. Reroll all hits. Cannot be used simultaneously with [FULL AUTO].",
   },
   {
     name: "[CIVILIANS]",
@@ -156,20 +156,28 @@ export const KEYWORDS = [
     desc: "Swap actions from [STOWAGE] to this weapon are free. Can swap this weapon between hands. Can declare SWAP in the Attack Phase and as a Reaction.",
   },
   {
+    name: "[RELOAD]",
+    desc: "See the [RELOAD] action (Section 3.2). The weapon must be reloaded before it can be fired again.",
+  },
+  {
     name: "[SCOPE]",
-    desc: "Ranged attacks using this weapon impose a –1 Evasion modifier on the target. Once per attack declaration, reroll one hit location die.",
+    desc: "Ranged attacks using this weapon impose a –1 Evasion modifier on the target.",
   },
   {
     name: "[SILVER BULLET]",
     desc: "Target cannot reroll the Evasion roll or any Evasion dice.",
   },
   {
-    name: "[RELOAD]",
-    desc: "See the [RELOAD] action (Section 3.2). The weapon must be reloaded before it can be fired again.",
+    name: "[SILVER BULLET]",
+    desc: "Target cannot reroll the Evasion roll or any Evasion dice.",
   },
   {
     name: "[STOWAGE]/[STORED]/[STOWED]",
     desc: "Equipment that is holstered, attached to a rack, or otherwise [STORED]. Weapons in [STOWAGE] cannot be used for [ATTACK] or [REACTIVE ATTACK] until readied by a SWAP action.",
+  },
+  {
+    name: "[STABLE]",
+    desc: "Weapons with [STABLE] ignore all movement modifiers when moving over 3 inches (see Evasion Tier Table)",
   },
   {
     name: "[SUPPRESSIVE]",
