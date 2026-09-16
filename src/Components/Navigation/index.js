@@ -29,7 +29,7 @@ export const Navigation = () => {
             })}
           >
             <Link className="link dim red no-underline fw7 h3" to="/">
-              Gundam Flashpoint 0.7.3
+              Gundam Flashpoint 0.7.5
             </Link>
           </div>
           <div
@@ -58,7 +58,7 @@ export const Navigation = () => {
           to="/"
           onClick={() => setOpen(false)}
         >
-          Gundam Flashpoint 0.7.3
+          Gundam Flashpoint 0.7.5
         </Link>
         <button
           className="bn bg-transparent pointer pa1 f5 dark-gray"
