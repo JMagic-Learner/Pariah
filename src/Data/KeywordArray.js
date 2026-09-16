@@ -177,7 +177,7 @@ export const KEYWORDS = [
   },
   {
     name: "[STABLE]",
-    desc: "Weapons with [STABLE] ignore all movement modifiers when moving over 3 inches (see Evasion Tier Table)",
+    desc: "Weapons with [STABLE] ignore -1 GS movement penalty (see Evasion Tier Table)",
   },
   {
     name: "[SUPPRESSIVE]",
