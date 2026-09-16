@@ -113,7 +113,7 @@ export const KEYWORDS = [
   },
   {
     name: "[LIGHT]",
-    desc: "This weapon is 1-2 tons in weight, and can be wielded in either hand",
+    desc: "This weapon is 1-2 tons in weight, and can be wielded in either hand. Ignores movement penalties to GS when moving over 3",
   },
   {
     name: "[LINEAR]",
