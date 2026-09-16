@@ -11,6 +11,7 @@ import { ForceLists } from "./Pages/ForceLists/index.js";
 import { Contact } from "./Pages/Contact/index.js";
 import { Gallery } from "./Pages/Gallery/index.js";
 import { Links } from "./Pages/Links/index.js";
+import { PrintCards } from "./Pages/PrintCards/index.js";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
               <Route exact path="/Gallery" element={<Gallery />} />
               <Route exact path="/Contact" element={<Contact />} />
               <Route exact path="/Links" element={<Links />} />
+              <Route exact path="/PrintCards" element={<PrintCards />} />
             </Routes>
             <Footer />
           </PilotSheetProvider>

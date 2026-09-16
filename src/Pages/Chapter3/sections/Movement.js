@@ -194,10 +194,6 @@ export const Movement = () => {
             <span className="fw6 red"> [BOOST] </span> movement is counted when
             calculating Evasion modifiers from the Evasion Tier Table.
           </li>
-          <li className="pv1">
-            <span className="fw6 red"> [BOOST] </span> movement does not consume
-            an action, therefore is not eligible for Reactive Attack action.
-          </li>
         </ul>
       </div>
 

@@ -6,6 +6,7 @@ import classNames from "classnames";
 const NAV_LINKS = [
   { to: "/PilotSheet", label: "Pilot Sheet" },
   { to: "/ForceLists", label: "Force Lists" },
+  { to: "/PrintCards", label: "Print Cards" },
   { to: "/Gallery", label: "Gallery" },
   { to: "/Contact", label: "Contact" },
   { to: "/Links", label: "Links" },

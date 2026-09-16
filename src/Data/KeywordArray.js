@@ -97,7 +97,7 @@ export const KEYWORDS = [
   },
   {
     name: "[INBUILT]",
-    desc: "Integrated into the MSU frame. Can be fired in Reaction and Shooting phases without a SWAP action. Occupies either the WEAPON slot or an Equipment slot at its hit location. Cannot be the target of Swap actions. Reduces Tonnage by half as it is part of the MSU frame.",
+    desc: "Integrated into the MSU frame. Can be fired in Reaction and Shooting phases without a SWAP action. Occupies either the WEAPON slot or an Equipment slot at its hit location. Cannot be the target of Swap actions. Reduces Tonnage by half as it is part of the MSU frame. Ignores [HEAVY] two handed restrictions",
   },
   {
     name: "[INDIRECT]",

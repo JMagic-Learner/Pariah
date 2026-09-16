@@ -5,7 +5,7 @@ export const UPGRADES = [
     ton: "–",
     pfro: "–",
     qty: 1,
-    mcu: 30,
+    mcu: 35,
     effect:
       "Add [AP(2)] to one ranged weapon. Add [AP(5)] to one melee weapon. This weapon upgrade cannot be given to a weapon that already has this keyword",
   },
@@ -107,12 +107,11 @@ export const UPGRADES = [
   {
     name: "Upgrade:[IMPACT] ",
     loc: "Weapon",
-    ton: 3,
+    ton: 2,
     pfro: "–",
     qty: 2,
     mcu: 20,
-    effect:
-      "A melee weapon gains [IMPACT(3)]. A bazooka or cannon type weapon gains [IMPACT(1)]",
+    effect: "This weapon gains [IMPACT(3)]",
   },
   {
     name: "Upgrade:[LETHAL]",
@@ -178,7 +177,7 @@ export const UPGRADES = [
     qty: 2,
     mcu: 45,
     effect:
-      "Requires [SCOPE] Keyword.This [PILOT] may draw LOS through [OBSCURING COVER] and ignores all negative range penalties from [OBSCURING COVER] when declaring an attack with this weapon.",
+      "Requires [SCOPE] Keyword.This [PILOT] may draw LOS through [OBSCURING COVER] and ignores all negative range penalties from [OBSCURING COVER] when declaring an attack with this weapon. A [PILOT] with this weapon gains a +1 circumstance mod to PS Checks to discover [STEALTH] state enemies",
   },
   {
     name: "Upgrade: Reflex Scope",

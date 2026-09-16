@@ -326,7 +326,7 @@ export const TRAITS = [
     name: "Oldtype Ace",
     cost: 1,
     effect:
-      "This [PILOT] cannot take the [CYBER NEWTYPE] or [NEWTYPE] pilot traits. Once per turn, this [PILOT] may reroll an Evasion Check",
+      "This [PILOT] cannot take the [CYBER NEWTYPE] or [NEWTYPE] pilot traits. Once per round, this [PILOT] may reroll an Evasion Check",
   },
   {
     name: "Opportunistic",
@@ -363,7 +363,7 @@ export const TRAITS = [
     name: "Prowler",
     cost: 1,
     effect:
-      "As long as this [UNIT] is touching the edge of the battlefield, it cannot be declared as a target of ranged REACTIVE ATTACKS if it moves more than 5 inches.",
+      'This unit cannot be declared as a target of ranged REACTIVE ATTACKS if it moves 5" or less and ends movement touching the edge of the battlefield',
   },
   {
     name: "Pyromaniac",
