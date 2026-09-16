@@ -37,7 +37,7 @@ export const RANGED = [
     fro: "–",
     mcu: 25,
     faction: "–",
-    keywords: "[AOE(6)] or [AP(5)],[INBUILT],[LIMITED USE(1)]",
+    keywords: "[AOE(6)] or [AP(5)],[INBUILT],[LIMITED USE(2)]",
   },
   {
     name: "Arm Rotary Cannon",
@@ -45,12 +45,12 @@ export const RANGED = [
     rof: 5,
     range: "15|25|30|–",
     mod: "+2|+0|-2|–",
-    dam: 6,
+    dam: 8,
     ton: 2,
     fro: "–",
     mcu: 25,
     faction: "–",
-    keywords: "[INBUILT],[QUICK SWAP]",
+    keywords: "[INBUILT]",
   },
   {
     name: "Heavy Bazooka",

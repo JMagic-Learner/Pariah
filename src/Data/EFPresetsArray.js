@@ -1331,14 +1331,14 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "-",
           tonnage: "2",
-          notes: "[INBUILT],[QUICK SWAP]",
+          notes: "[INBUILT]",
         },
         {
           name: "Arm Rotary Cannon",
           mcuCost: "FREE",
           fro: "-",
           tonnage: "2",
-          notes: "[INBUILT],[QUICK SWAP]",
+          notes: "[INBUILT]",
         },
         {
           name: "Beam Saber",

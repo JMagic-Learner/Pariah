@@ -1045,7 +1045,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
-          notes: "[INBUILT],[QUICK SWAP]",
+          notes: "[INBUILT]",
         },
         B(),
         B(),
