@@ -105,7 +105,7 @@ export const CROSSBONE_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[SCOPE]",
         },
         {
           name: "Beam Shield",
@@ -576,7 +576,7 @@ export const CROSSBONE_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[SCOPE]",
         },
         {
           name: "Beam Shield",

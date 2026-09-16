@@ -136,7 +136,7 @@ export const REZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[SCOPE]",
         },
         {
           name: "Extra Armor 10 (Torso)",
@@ -551,7 +551,7 @@ export const REZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[SCOPE]",
         },
         {
           name: "Beam Saber",
@@ -1029,7 +1029,7 @@ export const REZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[SCOPE]",
         },
         {
           name: "Shield Booster (Heavy Boosters)",
@@ -1241,7 +1241,7 @@ export const REZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[SCOPE]",
         },
         {
           name: "Heavy Boosters",
@@ -2384,7 +2384,7 @@ export const REZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[SCOPE]",
         },
         {
           name: "Composite Shields (Beam SMG)",

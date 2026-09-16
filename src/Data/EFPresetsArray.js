@@ -3171,10 +3171,18 @@ export const EF_PRESETS = [
           notes: "[WARTIME INNOVATIONS],[SCOPE]",
         },
         {
-          name: "Shield + Missile Pod 2",
+          name: "Shield",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "10",
+          tonnage: "6",
+          notes:
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
+        },
+        {
+          name: "Missile Pod 2",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "4",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
@@ -3416,13 +3424,20 @@ export const EF_PRESETS = [
           notes: "[MUNITIONS],[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
         },
         {
-          name: "Shield + Missile Pod 2",
+          name: "Shield",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "10",
+          tonnage: "6",
+          notes:
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
+        },
+        {
+          name: "Missile Pod 2",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "4",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
-        B(),
       ],
       addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
       locations: {
@@ -3521,18 +3536,19 @@ export const EF_PRESETS = [
           notes: "[MUNITIONS],[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
         },
         {
-          name: "Shield + Missile Pod 2",
+          name: "Shield",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "10",
-          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
+          tonnage: "6",
+          notes:
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
         },
         {
-          name: "Enhanced Fusion Reactors",
+          name: "Missile Pod 2",
           mcuCost: "FREE",
-          fro: "+2 FRO",
+          fro: "",
           tonnage: "4",
-          notes: "Increase FRO limit by 2",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
       ],
       addlEquip: [
@@ -3543,7 +3559,14 @@ export const EF_PRESETS = [
           tonnage: "2",
           notes: "[INDIRECT],[LIMITED USE(3)]",
         },
-        B(),
+        {
+          name: "Enhanced Fusion Reactors",
+          mcuCost: "FREE",
+          fro: "+2 FRO",
+          tonnage: "4",
+          notes: "Increase FRO limit by 2",
+        },
+        ,
         B(),
         B(),
         B(),
@@ -3637,10 +3660,18 @@ export const EF_PRESETS = [
           notes: "[CLEAVE],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
         },
         {
-          name: "Shield + Missile Pod 2",
+          name: "Shield",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "10",
+          tonnage: "6",
+          notes:
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
+        },
+        {
+          name: "Missile Pod 2",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "4",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
@@ -3657,7 +3688,6 @@ export const EF_PRESETS = [
           tonnage: "3",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
-        B(),
       ],
       addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
       locations: {
@@ -3728,6 +3758,55 @@ export const EF_PRESETS = [
           notes: "[BRACE],[AOE(6)],[QUICK SWAP],[SCOPE],[LIMITED USE(2)]",
         },
         {
+          name: "Napalm Grenades",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "1",
+          notes:
+            "[MUNITIONS]: Napalm,[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
+        },
+        {
+          name: "Napalm Grenades",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "1",
+          notes:
+            "[MUNITIONS]: Napalm,[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
+        },
+        {
+          name: "Napalm Grenades",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "1",
+          notes:
+            "[MUNITIONS]: Napalm,[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
+        },
+        {
+          name: "Shield",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "6",
+          notes:
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
+        },
+        {
+          name: "Missile Pod 2",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "4",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
+        },
+        {
+          name: "Enhanced Visors",
+          mcuCost: "FREE",
+          fro: "1 PFRO",
+          tonnage: "2",
+          notes:
+            "All ranged weapons are treated as having the Thermal Scope upgrade and [PRECISE] keyword",
+        },
+      ],
+      addlEquip: [
+        {
           name: "Beam Rifle or Beam Pistol",
           mcuCost: "FREE",
           fro: "3/1",
@@ -3741,49 +3820,6 @@ export const EF_PRESETS = [
           tonnage: "1",
           notes: "Choose one weapon at loadout",
         },
-        {
-          name: "Napalm Grenades",
-          mcuCost: "FREE",
-          fro: "",
-          tonnage: "1",
-          notes:
-            "[MUNITIONS]: Napalm,[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
-        },
-        {
-          name: "Napalm Grenades",
-          mcuCost: "FREE",
-          fro: "",
-          tonnage: "1",
-          notes:
-            "[MUNITIONS]: Napalm,[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
-        },
-        {
-          name: "Napalm Grenades",
-          mcuCost: "FREE",
-          fro: "",
-          tonnage: "1",
-          notes:
-            "[MUNITIONS]: Napalm,[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
-        },
-        {
-          name: "Shield + Missile Pod 2",
-          mcuCost: "FREE",
-          fro: "",
-          tonnage: "10",
-          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
-        },
-      ],
-      addlEquip: [
-        {
-          name: "Enhanced Visors",
-          mcuCost: "FREE",
-          fro: "1 PFRO",
-          tonnage: "2",
-          notes:
-            "All ranged weapons are treated as having the Thermal Scope upgrade and [PRECISE] keyword",
-        },
-        B(),
-        B(),
         B(),
         B(),
         B(),
@@ -4055,12 +4091,19 @@ export const EF_PRESETS = [
           notes: "[WARTIME INNOVATIONS],[SCOPE]",
         },
         {
-          name: "Shield + Beam Cannon (INBUILT)",
+          name: "Shield",
           mcuCost: "FREE",
-          fro: "3",
-          tonnage: "8",
+          fro: "",
+          tonnage: "6",
           notes:
             "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
+        },
+        {
+          name: "Beam Cannon (INBUILT)",
+          mcuCost: "FREE",
+          fro: "3",
+          tonnage: "2",
+          notes: "[INBUILT],[MOUNTABLE],[BEAM FOCUS]",
         },
         {
           name: "Beam Saber",
@@ -4097,13 +4140,6 @@ export const EF_PRESETS = [
           tonnage: "2",
           notes: "[INDIRECT],[LIMITED USE(3)]",
         },
-        {
-          name: "Heavy Boosters",
-          mcuCost: "FREE",
-          fro: "",
-          tonnage: "8",
-          notes: "[BOOST(1)] becomes [BOOST(2)]",
-        },
       ],
       addlEquip: [
         {
@@ -4113,7 +4149,14 @@ export const EF_PRESETS = [
           tonnage: "",
           notes: "See Keywords",
         },
-        B(),
+        {
+          name: "Heavy Boosters",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "8",
+          notes: "[BOOST(1)] becomes [BOOST(2)]",
+        },
+        ,
         B(),
         B(),
         B(),

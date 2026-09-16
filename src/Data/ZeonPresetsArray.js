@@ -928,10 +928,18 @@ export const ZEON_PRESETS = [
       armorValue: "22",
       baseEquip: [
         {
-          name: "Shield + Gatling (INBUILT)",
+          name: "Shield",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "8",
+          tonnage: "6",
+          notes:
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
+        },
+        {
+          name: "Gatling (Kinetic) (INBUILT)",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "3",
           notes:
             "[MILITANT INNOVATION],[INBUILT],[FULL AUTO],[SUPPRESSIVE],[GRIP],[MOUNTABLE]",
         },
@@ -964,7 +972,6 @@ export const ZEON_PRESETS = [
           tonnage: "2",
           notes: "[AOE(6)] or [AP(5)],[INBUILT],[LIMITED USE(1)]",
         },
-        B(),
         B(),
         B(),
       ],
@@ -1018,10 +1025,18 @@ export const ZEON_PRESETS = [
       armorValue: "22",
       baseEquip: [
         {
-          name: "Shield + Gatling (INBUILT)",
+          name: "Shield",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "8",
+          tonnage: "6",
+          notes:
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
+        },
+        {
+          name: "Gatling (Kinetic) (INBUILT)",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "3",
           notes:
             "[MILITANT INNOVATION],[INBUILT],[FULL AUTO],[SUPPRESSIVE],[GRIP],[MOUNTABLE]",
         },
@@ -2460,7 +2475,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[SCOPE]",
         },
         {
           name: "Sturm Booster (Heavy Booster)",
@@ -2953,7 +2968,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[SCOPE]",
         },
         {
           name: "Shield",
@@ -3259,7 +3274,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[SCOPE]",
         },
         {
           name: "Heavy Boosters",
@@ -3369,7 +3384,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "Quasi Psycommu",
+          notes: "[SCOPE]",
         },
         {
           name: "Enhanced Fusion Reactors",
@@ -3958,7 +3973,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "Psycommu",
+          notes: "[SCOPE]",
         },
         {
           name: "Beam Saber x2",
@@ -4188,11 +4203,11 @@ export const ZEON_PRESETS = [
       armorValue: "29",
       baseEquip: [
         {
-          name: "Beam Rifle x 1",
+          name: "Beam Rifle",
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[SCOPE]",
         },
         {
           name: "Beam Hawk",
@@ -4223,13 +4238,20 @@ export const ZEON_PRESETS = [
           notes: "[FULL AUTO],[INBUILT],[AKIMBO]",
         },
         {
-          name: "Shield + GL (ZEON)",
+          name: "Shield",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "4 – (1)",
-          notes: "",
+          tonnage: "6",
+          notes:
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
         },
-        B(),
+        {
+          name: "Grenade Launcher [INBUILT]",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "1",
+          notes: "[MILITANT INNOVATION],[INBUILT],[INDIRECT],[LIMITED USE(3)]",
+        },
         B(),
       ],
       addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],

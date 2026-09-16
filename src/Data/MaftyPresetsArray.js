@@ -28,7 +28,7 @@ export const MAFTY_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[SCOPE]",
         },
         {
           name: "Heavy Shield (30 ARM)",
@@ -215,7 +215,7 @@ export const MAFTY_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[SCOPE]",
         },
         {
           name: "Heavy Shield",
@@ -316,7 +316,7 @@ export const MAFTY_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "",
+          notes: "[SCOPE]",
         },
         {
           name: "Shield",
