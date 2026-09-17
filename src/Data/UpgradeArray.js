@@ -67,6 +67,16 @@ export const UPGRADES = [
       "+1 ROF to Sniper Rifle,Rifle/MG/Pistol/Grenade Launcher type weapons. If two [CYCLIC] upgrades are given to a beam rifle, increase active FRO cost by 1. You may only purchase one [CYCLIC] upgrade on a Sniper Rifle.",
   },
   {
+    name: "Upgrade:Dismemberment",
+    loc: "Weapon",
+    ton: "-",
+    pfro: "–",
+    qty: 1,
+    mcu: 35,
+    effect:
+      "This weapon can make a ROF 1 attack, with a -2 penalty. IF this attack hits, this [PILOT] chooses which of the following hit locations suffers damage: Left Leg. Right Leg, Left Arm, Right Arm.",
+  },
+  {
     name: "Upgrade:Dual Barrel",
     loc: "Weapon",
     ton: 4,
@@ -105,7 +115,17 @@ export const UPGRADES = [
       "Reduce ROF by 1 to a mininum of 1. Increase the positive range bands bonuses by 2. Decrease negative range bands penalities by 2. For example, an rangeband mod of +2 | 0 | -1 | -2 would become +4 | +0 | -3 | -4",
   },
   {
-    name: "Upgrade:[IMPACT] ",
+    name: "Upgrade:Imminent Force",
+    loc: "Weapon",
+    ton: "4",
+    pfro: "–",
+    qty: 2,
+    mcu: 35,
+    effect:
+      "Enemy Pilots hit by this non-beam melee weapon must make a 4+ PS skil check or suffer [KNOCKDOWN] State.",
+  },
+  {
+    name: "Upgrade:[IMPACT]",
     loc: "Weapon",
     ton: 2,
     pfro: "–",
@@ -160,7 +180,7 @@ export const UPGRADES = [
     effect: "Add [SCOPE] to one ranged weapon.",
   },
   {
-    name: "Upgrade: Pinpoint Scope",
+    name: "Upgrade:Pinpoint Scope",
     loc: "Weapon",
     ton: "–",
     pfro: "–",
@@ -170,7 +190,7 @@ export const UPGRADES = [
       "Requires [SCOPE] Keyword. Reroll one hit location die once per attack declaration.",
   },
   {
-    name: "Upgrade: Thermal Scope",
+    name: "Upgrade:Thermal Scope",
     loc: "Weapon",
     ton: "–",
     pfro: "–",
@@ -180,7 +200,7 @@ export const UPGRADES = [
       "Requires [SCOPE] Keyword.This [PILOT] may draw LOS through [OBSCURING COVER] and ignores all negative range penalties from [OBSCURING COVER] when declaring an attack with this weapon. A [PILOT] with this weapon gains a +1 circumstance mod to PS Checks to discover [STEALTH] state enemies",
   },
   {
-    name: "Upgrade: Reflex Scope",
+    name: "Upgrade:Reflex Scope",
     loc: "Weapon",
     ton: "–",
     pfro: "–",
@@ -255,6 +275,16 @@ export const UPGRADES = [
     effect: "Increase [LIMITED USE(X)] of a weapon by 1.",
   },
   {
+    name: "Upgrade:Overcharged Battery Packs",
+    loc: "Weapon",
+    ton: 2,
+    pfro: "-",
+    qty: 2,
+    mcu: 35,
+    effect:
+      "Ranged Beam Weapons only. This beam weapon costs 1 addtional FRO to fire. Gain AOE(X) where X is double the FRO cost to fire this beam weapon.",
+  },
+  {
     name: "Upgrade:Pistol Caliber",
     loc: "Weapon",
     ton: "–",
@@ -291,6 +321,15 @@ export const UPGRADES = [
     mcu: 25,
     effect:
       "One Shotgun loses [CLUSTER], gain ROF 2. Arm Cannons/Shotguns gain [AP(10)]. Pistols gain [AP(5)].",
+  },
+  {
+    name: "Upgrade:Sweeping Blow",
+    loc: "Weapon",
+    ton: "-",
+    pfro: "-",
+    qty: 2,
+    mcu: 15,
+    effect: "Melee weapons now attack all enemies within frontal arc",
   },
   {
     name: "Upgrade:Underslung",
