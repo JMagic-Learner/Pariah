@@ -47,7 +47,7 @@ export const ACTIONS = [
     section: "3.5",
     tags: ["ACTION", "ATTACK/COMBAT PHASE"],
     effect:
-      "Declare two [READIED]/[INBUILT]/[MOUNTED] weapons ([MOUNTED] weapons are not eligible). −2 penalty to all attack dice unless a keyword (e.g. [AKIMBO]) says otherwise. Each weapon rolls its own BATCH (ROF dice + [GS]/[BR] + mods − 2). Defender rolls one Evasion Check against both batches; resolve hits per batch as normal (2d6 per hit for location).",
+      "Declare two [READIED]/[INBUILT]/[MOUNTED] weapons. −2 penalty to all attack dice unless a keyword (e.g. [AKIMBO]) says otherwise. Each weapon rolls its own BATCH (ROF dice + [GS]/[BR] + mods − 2). Defender rolls one Evasion Check against both batches; resolve hits per batch as normal (2d6 per hit for location).",
   },
   {
     name: "GRAPPLE",

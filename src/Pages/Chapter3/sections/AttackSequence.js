@@ -113,8 +113,7 @@ export const AttackSequence = () => {
         </ul>
         <p className="lh-copy f7 mt2 mb0">
           Note: You may assign 1 attack die per individual target, including
-          [MISSILE] tokens. <span className="fw6 red"> [MOUNTED] </span> weapons
-          cannot be used in [SIMULTANEOUS ATTACK].
+          [MISSILE] tokens.
         </p>
       </div>
 
