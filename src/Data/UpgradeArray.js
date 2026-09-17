@@ -74,7 +74,7 @@ export const UPGRADES = [
     qty: 1,
     mcu: 35,
     effect:
-      "This weapon can make a ROF 1 attack, with a -2 penalty. IF this attack hits, this [PILOT] chooses which of the following hit locations suffers damage: Left Leg. Right Leg, Left Arm, Right Arm.",
+      "This weapon can make a ROF 1 attack, with a -2 penalty. IF this attack hits, this [PILOT] chooses one of the following hit locations: Left Leg. Right Leg, Left Arm, Right Arm.",
   },
   {
     name: "Upgrade:Dual Barrel",
@@ -93,7 +93,16 @@ export const UPGRADES = [
     pfro: "–",
     qty: 1,
     mcu: 15,
-    effect: "Extend all range bands brackets by 5",
+    effect: "Extend all ranged weapon band brackets by 5",
+  },
+  {
+    name: "Upgrade:Extended Reach",
+    loc: "Weapon",
+    ton: 2,
+    pfro: "–",
+    qty: 1,
+    mcu: 15,
+    effect: "Extend all melee range bands by 3",
   },
   {
     name: "Upgrade:[GRIP]",
