@@ -140,7 +140,7 @@ export const TRAITS = [
     name: "Evasive",
     cost: 1,
     effect:
-      "This [PILOT]'s evasion max bonus is now 5 instead of 4. Moving less than 8 inches no longer incurs a -1 penalty to evasion rolls (see Evasion Tier Table)",
+      "This [PILOT]'s evasion max bonus is now 5 instead of 4. Moving less than 4 inches no longer incurs a -1 penalty to evasion rolls (see Evasion Tier Table)",
   },
   {
     name: "Executioner",
