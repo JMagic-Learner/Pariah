@@ -98,7 +98,7 @@ export const UPGRADES = [
   {
     name: "Upgrade:Extended Reach",
     loc: "Weapon",
-    ton: 2,
+    ton: 1,
     pfro: "–",
     qty: 1,
     mcu: 15,
