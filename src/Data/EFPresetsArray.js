@@ -2937,13 +2937,13 @@ export const EF_PRESETS = [
           current: "24",
           max: "24",
           weapon: "Beam Rifle",
-          equipment: ["Side Verniers", "Missile Pod 3", ""],
+          equipment: ["Side Verniers", "Missile Pod 2", ""],
         },
         leftArm: {
           current: "24",
           max: "24",
           weapon: "Shield",
-          equipment: ["Side Verniers", "Missile Pod 3", ""],
+          equipment: ["Side Verniers", "Missile Pod 2", ""],
         },
         rightLeg: {
           current: "24",
