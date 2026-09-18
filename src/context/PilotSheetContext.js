@@ -29,6 +29,9 @@ const defaultPilotState = () => ({
   newtypeChoice1: "",
   newtypeChoice2: "",
   cyberNewtypeChoice: "",
+  rookieChoice: "",
+  childSoldierChoice1: "",
+  childSoldierChoice2: "",
   ramboChoice: "",
   grypsVetChoice: "",
   locations: {
@@ -57,7 +60,7 @@ const PilotSheetContext = createContext(null);
 
 export const PilotSheetProvider = ({ children }) => {
   const [pilots, setPilots] = useState(() =>
-    Array(6).fill(null).map(defaultPilotState)
+    Array(6).fill(null).map(defaultPilotState),
   );
   const [activeTab, setActiveTab] = useState(0);
   const [tabNames, setTabNames] = useState([
@@ -162,6 +165,9 @@ export const usePilotSlot = (slotIndex) => {
     setNewtypeChoice1: makeSet("newtypeChoice1"),
     setNewtypeChoice2: makeSet("newtypeChoice2"),
     setCyberNewtypeChoice: makeSet("cyberNewtypeChoice"),
+    setRookieChoice: makeSet("rookieChoice"),
+    setChildSoldierChoice1: makeSet("childSoldierChoice1"),
+    setChildSoldierChoice2: makeSet("childSoldierChoice2"),
     setRamboChoice: makeSet("ramboChoice"),
     setGrypsVetChoice: makeSet("grypsVetChoice"),
     setLocations: makeSet("locations"),

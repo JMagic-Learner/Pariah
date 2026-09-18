@@ -100,6 +100,12 @@ const PilotSheetPanel = ({ slotIndex }) => {
     setNewtypeChoice2,
     cyberNewtypeChoice,
     setCyberNewtypeChoice,
+    rookieChoice,
+    setRookieChoice,
+    childSoldierChoice1,
+    childSoldierChoice2,
+    setChildSoldierChoice1,
+    setChildSoldierChoice2,
     ramboChoice,
     setRamboChoice,
     grypsVetChoice,
@@ -137,6 +143,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
     hasMechanic,
     hasNewtype,
     hasCyberNewtype,
+    hasChildSoldier,
     hasRambo,
     hasRookie,
     hasScavenger,
@@ -172,6 +179,9 @@ const PilotSheetPanel = ({ slotIndex }) => {
     cyberNewtypeChoice,
     ramboChoice,
     grypsVetChoice,
+    rookieChoice,
+    childSoldierChoice1,
+    childSoldierChoice2,
   });
 
   // Ephemeral UI-only state (dialogs/popups — not persisted)
@@ -264,27 +274,18 @@ const PilotSheetPanel = ({ slotIndex }) => {
                     </TD>
                     <TD className="tc">
                       <NumInput value={gunnery} onChange={setGunnery} />
-                      {hasRookie && (
-                        <div className="f8 fw6 mt1 red">base: 0</div>
-                      )}
                     </TD>
                     <TD className="tc">
                       <NumInput value={gsBonus} onChange={() => {}} />
                     </TD>
                     <TD className="tc">
                       <NumInput value={brawl} onChange={setBrawl} />
-                      {hasRookie && (
-                        <div className="f8 fw6 mt1 red">base: 0</div>
-                      )}
                     </TD>
                     <TD className="tc">
                       <NumInput value={brBonus} onChange={() => {}} />
                     </TD>
                     <TD className="tc">
                       <NumInput value={piloting} onChange={setPiloting} />
-                      {hasRookie && (
-                        <div className="f8 fw6 mt1 red">base: 0</div>
-                      )}
                     </TD>
                     <TD className="tc">
                       <NumInput value={psBonus} onChange={() => {}} />
@@ -326,6 +327,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
               hasCyberNewtype ||
               hasRambo ||
               hasRookie ||
+              hasChildSoldier ||
               hasGrypsVet ||
               hasHonorable) &&
               (() => {
@@ -472,11 +474,49 @@ const PilotSheetPanel = ({ slotIndex }) => {
 
                     {/* Rookie — reminder */}
                     {hasRookie && (
-                      <div className="flex items-center mb2">
-                        <span className="f7 fw6 red mr2 nowrap">Rookie:</span>
-                        <span className="f8 red">
-                          Base GS / BR / PS default to 0
+                      <div className="flex items-center mb2 flex-wrap">
+                        <span className="f7 fw6 mr2 nowrap">Rookie:</span>
+                        {["gs", "br", "ps"].map((s) => (
+                          <StatBtn
+                            key={s}
+                            label={`-1 ${s.toUpperCase()}`}
+                            active={rookieChoice === s}
+                            onClick={() =>
+                              setRookieChoice((p) => (p === s ? "" : s))
+                            }
+                          />
+                        ))}
+                      </div>
+                    )}
+                    {/* ChildSoldier — reminder */}
+                    {hasChildSoldier && (
+                      <div className="flex items-center mb2 flex-wrap">
+                        <span className="f7 fw6 mr2 nowrap">
+                          Child Soldier:
                         </span>
+                        {["gs", "br", "ps"].map((s) => (
+                          <StatBtn
+                            key={s}
+                            label={`-1 ${s.toUpperCase()}`}
+                            active={childSoldierChoice1 === s}
+                            onClick={() =>
+                              setChildSoldierChoice1((p) => (p === s ? "" : s))
+                            }
+                          />
+                        ))}
+                        <span className="f7 fw6 mr2 nowrap">
+                          Child Soldier:
+                        </span>
+                        {["gs", "br", "ps"].map((s) => (
+                          <StatBtn
+                            key={s}
+                            label={`-1 ${s.toUpperCase()}`}
+                            active={childSoldierChoice2 === s}
+                            onClick={() =>
+                              setChildSoldierChoice2((p) => (p === s ? "" : s))
+                            }
+                          />
+                        ))}
                       </div>
                     )}
 

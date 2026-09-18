@@ -59,6 +59,9 @@ export const usePilotDerivedStats = ({
   cyberNewtypeChoice,
   ramboChoice,
   grypsVetChoice,
+  rookieChoice,
+  childSoldierChoice1,
+  childSoldierChoice2,
 }) => {
   const hasMechanic = traits.some((t) => t === "Mechanic");
   const hasNewtype = traits.some((t) => t === "Newtype");
@@ -66,7 +69,8 @@ export const usePilotDerivedStats = ({
     (t) => t === "Cyber-Newtype" || t === "Cyber-Newtype (TITANS)",
   );
   const hasRambo = traits.some((t) => t === "Rambo");
-  const hasRookie = traits.some((t) => t === "Rookie" || t === "Child Soldier");
+  const hasRookie = traits.some((t) => t === "Rookie");
+  const hasChildSoldier = traits.some((t) => t === "Child Soldier");
   const hasScavenger = traits.some((t) => t === "Scavenger");
   const hasPurgableArmor =
     baseEquip.some((row, i) => row.name === "Purgable Armor" && !soldBase[i]) ||
@@ -85,7 +89,12 @@ export const usePilotDerivedStats = ({
     (hasCyberNewtype && cyberNewtypeChoice === "gs" ? 1 : 0) +
     (hasRambo && ramboChoice === "gs" ? 1 : 0) +
     (hasGrypsVet && grypsVetChoice === "gs" ? 1 : 0) +
-    (hasHonorable ? 1 : 0);
+    (hasHonorable ? 1 : 0) +
+    (hasRookie && rookieChoice === "gs" ? -1 : 0) +
+    (hasChildSoldier
+      ? (childSoldierChoice1 === "gs" ? -1 : 0) +
+        (childSoldierChoice2 === "gs" ? -1 : 0)
+      : 0);
   const brBonus =
     brawlerTraitCount +
     (hasNewtype
@@ -94,14 +103,24 @@ export const usePilotDerivedStats = ({
     (hasCyberNewtype && cyberNewtypeChoice === "br" ? 1 : 0) +
     (hasRambo && ramboChoice === "br" ? 1 : 0) +
     (hasGrypsVet && grypsVetChoice === "br" ? 1 : 0) +
-    (hasHonorable ? 1 : 0);
+    (hasHonorable ? 1 : 0) +
+    (hasRookie && rookieChoice === "br" ? -1 : 0) +
+    (hasChildSoldier
+      ? (childSoldierChoice1 === "br" ? -1 : 0) +
+        (childSoldierChoice2 === "br" ? -1 : 0)
+      : 0);
   const psBonus =
     pilotingTraitCount +
     (hasNewtype
       ? (newtypeChoice1 === "ps" ? 1 : 0) + (newtypeChoice2 === "ps" ? 1 : 0)
       : 0) +
     (hasCyberNewtype && cyberNewtypeChoice === "ps" ? 1 : 0) +
-    (hasGrypsVet && grypsVetChoice === "ps" ? 1 : 0);
+    (hasGrypsVet && grypsVetChoice === "ps" ? 1 : 0) +
+    (hasRookie && rookieChoice === "ps" ? -1 : 0) +
+    (hasChildSoldier
+      ? (childSoldierChoice1 === "ps" ? -1 : 0) +
+        (childSoldierChoice2 === "ps" ? -1 : 0)
+      : 0);
 
   const efrCount =
     baseEquip.filter(
@@ -140,7 +159,8 @@ export const usePilotDerivedStats = ({
   const totalMCU =
     parseMCU(mcu) +
     baseEquip.reduce((sum, row, i) => {
-      if (!soldBase[i]) return sum + parseMCU(row.mcuCost) + upgradeStatFor(row, "mcu");
+      if (!soldBase[i])
+        return sum + parseMCU(row.mcuCost) + upgradeStatFor(row, "mcu");
       return sum - sellRefund(row);
     }, 0) +
     addlEquip.reduce((sum, row, i) => {
@@ -200,6 +220,7 @@ export const usePilotDerivedStats = ({
     hasCyberNewtype,
     hasRambo,
     hasRookie,
+    hasChildSoldier,
     hasScavenger,
     hasPurgableArmor,
     hasGrypsVet,
