@@ -558,7 +558,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0088",
         faction: "EF, AEUG",
         equipment:
-          "Beam Rifle, Beam Saber, Shield, Vulcans, Missile Pod 2 x2, Missile Pod 3 x2",
+          "Beam Rifle, Beam Saber, Shield, Vulcans, Missile Pod 2 x4 [INBUILT]",
       },
       {
         msu: "RX-178 MK II Gundam",
