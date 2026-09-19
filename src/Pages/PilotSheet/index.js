@@ -40,6 +40,8 @@ import { MobileEquipRow } from "./components/MobileEquipRow";
 import { RefToggle } from "./components/RefToggle";
 import { PanelToggle } from "./components/PanelToggle";
 import { EquipmentPickerModal } from "./components/EquipmentPickerModal";
+import { TraitPickerModal } from "./components/TraitPickerModal";
+import { MsuPresetPickerModal } from "./components/MsuPresetPickerModal";
 
 import { usePilotDerivedStats } from "./hooks/usePilotDerivedStats";
 import { useSupportLocations } from "./hooks/useSupportLocations";
@@ -188,6 +190,8 @@ const PilotSheetPanel = ({ slotIndex }) => {
   const [equipPopup, setEquipPopup] = useState(null);
   const [slotWarning, setSlotWarning] = useState(null);
   const [kwDialog, setKwDialog] = useState(null);
+  const [traitPickerIdx, setTraitPickerIdx] = useState(null);
+  const [presetPicker, setPresetPicker] = useState(null);
   const openEquipPopup = (onSelect, restrictTab) =>
     setEquipPopup({ onSelect, restrictTab });
   const closeEquipPopup = () => setEquipPopup(null);
@@ -310,7 +314,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                     <TraitRow
                       key={i}
                       value={t}
-                      onChange={(v) => updateTrait(i, v)}
+                      onClick={() => setTraitPickerIdx(i)}
                       onKeywordClick={setKwDialog}
                     />
                   ))}
@@ -611,20 +615,13 @@ const PilotSheetPanel = ({ slotIndex }) => {
                 style={{ flex: "1 1 10rem" }}
               >
                 <span className="f8 mr1 nowrap">{label}:</span>
-                <select
-                  className="f7 ba b--black-20 pa1 bg-white pointer normal w-100"
-                  value=""
-                  onChange={(e) => {
-                    if (e.target.value) applyPreset(e.target.value);
-                  }}
+                <button
+                  type="button"
+                  className="f7 ba b--black-20 pa1 bg-white pointer normal w-100 tl dim"
+                  onClick={() => setPresetPicker({ label, presets })}
                 >
-                  <option value="">— Preset —</option>
-                  {presets.map((p) => (
-                    <option key={p.id} value={p.id}>
-                      {p.name}
-                    </option>
-                  ))}
-                </select>
+                  — Select Preset —
+                </button>
               </div>
             ))}
             <div
@@ -1312,6 +1309,25 @@ const PilotSheetPanel = ({ slotIndex }) => {
           restrictTab={equipPopup.restrictTab}
           tonnageLimit={tonnageLimit}
           fro={fro}
+        />
+      )}
+
+      {/* Pilot trait picker modal */}
+      {traitPickerIdx !== null && (
+        <TraitPickerModal
+          onClose={() => setTraitPickerIdx(null)}
+          onSelect={(name) => updateTrait(traitPickerIdx, name)}
+          onKeywordClick={setKwDialog}
+        />
+      )}
+
+      {/* MSU preset picker modal */}
+      {presetPicker && (
+        <MsuPresetPickerModal
+          label={presetPicker.label}
+          presets={presetPicker.presets}
+          onClose={() => setPresetPicker(null)}
+          onSelect={(id) => applyPreset(id)}
         />
       )}
 
