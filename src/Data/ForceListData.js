@@ -1782,8 +1782,8 @@ export const FORCE_LIST_FACTIONS = [
     ],
     theme: {
       header: { background: "#1a0000", color: "#ffffff" },
-      rowEven: { background: "#1a0000" },
-      rowOdd: { background: "#150c0c" },
+      rowEven: { background: "#ffffff" },
+      rowOdd: { background: "#ffffff" },
       accent: "#ffffff",
     },
     units: [
