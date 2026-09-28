@@ -1782,9 +1782,9 @@ export const FORCE_LIST_FACTIONS = [
     ],
     theme: {
       header: { background: "#1a0000", color: "#ffffff" },
-      rowEven: { background: "#f0dada" },
-      rowOdd: { background: "#faeaea" },
-      accent: "#ccff00",
+      rowEven: { background: "#1a0000" },
+      rowOdd: { background: "#150c0c" },
+      accent: "#ffffff",
     },
     units: [
       {
