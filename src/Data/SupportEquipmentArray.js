@@ -156,14 +156,13 @@ export const SUPPORT = [
     effect: "Melee weapons equipped in the arms increase melee rangebands by 8",
   },
   {
-    name: "Extra Arms (Pair)",
+    name: "Extra Arms (1)",
     loc: "Torso",
-    ton: 2,
+    ton: 1,
     pfro: "–",
-    qty: 1,
-    mcu: 30,
-    effect:
-      "Add a pair of arms; each can hold one weapon or support equipment.",
+    qty: 2,
+    mcu: 15,
+    effect: "Add an extra arm; each can hold one weapon or support equipment.",
   },
   {
     name: "Firing Drills",

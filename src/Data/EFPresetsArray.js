@@ -1647,22 +1647,60 @@ export const EF_PRESETS = [
           notes: "[WARTIME INNOVATIONS],[FULL AUTO],[INBUILT],[AKIMBO]",
         },
         {
-          name: "Anti-Beam Coating Kit x5",
-          mcuCost: "FREE",
-          fro: "",
-          tonnage: "",
-          notes: "",
-        },
-        {
           name: "Hyper Bazooka",
           mcuCost: "FREE",
           fro: "",
           tonnage: "6",
           notes: "[AP(5)],[BRACE],[SCOPE],[GRIP]",
         },
+        {
+          name: "Anti-Beam Coating Kit",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "",
+          notes:
+            "First time hit by a Beam attack, reduce damage by 10. Cannot be stacked with Beam Shields. [LIMITED USE(1)]",
+        },
+        {
+          name: "Anti-Beam Coating Kit",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "",
+          notes:
+            "First time hit by a Beam attack, reduce damage by 10. Cannot be stacked with Beam Shields. [LIMITED USE(1)]",
+        },
+      ],
+      addlEquip: [
+        {
+          name: "Anti-Beam Coating Kit",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "",
+          notes:
+            "First time hit by a Beam attack, reduce damage by 10. Cannot be stacked with Beam Shields. [LIMITED USE(1)]",
+        },
+        {
+          name: "Anti-Beam Coating Kit",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "",
+          notes:
+            "First time hit by a Beam attack, reduce damage by 10. Cannot be stacked with Beam Shields. [LIMITED USE(1)]",
+        },
+        {
+          name: "Anti-Beam Coating Kit",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "",
+          notes:
+            "First time hit by a Beam attack, reduce damage by 10. Cannot be stacked with Beam Shields. [LIMITED USE(1)]",
+        },
+        B(),
+        B(),
+        B(),
+        B(),
         B(),
       ],
-      addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
       locations: {
         head: {
           current: "24",

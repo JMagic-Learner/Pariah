@@ -30,6 +30,7 @@ import {
   CROSSBONE_PRESETS,
   MAFTY_PRESETS,
   REZEON_PRESETS,
+  ALT_TIMELINE_PRESETS,
 } from "../../Data/PresetsArray";
 
 import { TH, TD } from "./components/TableCells";
@@ -1364,6 +1365,7 @@ export const PilotSheet = () => {
             { label: "CBV", presets: CROSSBONE_PRESETS },
             { label: "MAFTY", presets: MAFTY_PRESETS },
             { label: "REZEON", presets: REZEON_PRESETS },
+            { label: "AT", presets: ALT_TIMELINE_PRESETS },
           ].map(({ label, presets }) => (
             <div
               key={label}
