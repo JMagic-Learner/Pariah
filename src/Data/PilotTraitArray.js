@@ -216,9 +216,9 @@ export const TRAITS = [
   },
   {
     name: "Guns Blazing",
-    cost: 1,
+    cost: 2,
     effect:
-      "When declaring [SIMULTANEOUS ATTACK], the [PILOT] may now nominate three ranged weapon to fire instead of two. In addition, [MOUNTED] weapons are now eligible for [REACTIVE ATTACKS]",
+      "When declaring [SIMULTANEOUS ATTACK], the [PILOT] may now nominate up to four ranged weapons to fire instead of two. In addition, [MOUNTED] weapons are now eligible for [REACTIVE ATTACKS]",
   },
   { name: "Gunnery", cost: 2, effect: "Increase Gunnery by 1 (Stackable)." },
   {
