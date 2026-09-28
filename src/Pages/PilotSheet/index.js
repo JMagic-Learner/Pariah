@@ -1139,7 +1139,9 @@ const PilotSheetPanel = ({ slotIndex }) => {
             <RefToggle
               open={showSupport}
               onToggle={() => setShowSupport((v) => !v)}
-              label={isMobile ? "Support Equipment" : "Support Equipment Reference"}
+              label={
+                isMobile ? "Support Equipment" : "Support Equipment Reference"
+              }
             />
             <RefToggle
               open={showUpgrades}
@@ -1149,7 +1151,9 @@ const PilotSheetPanel = ({ slotIndex }) => {
             <RefToggle
               open={showFrameImprovements}
               onToggle={() => setShowFrameImprovements((v) => !v)}
-              label={isMobile ? "Frame Improvements" : "Frame Improvements Reference"}
+              label={
+                isMobile ? "Frame Improvements" : "Frame Improvements Reference"
+              }
             />
             <RefToggle
               open={showKeywords}
@@ -1289,6 +1293,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
 };
 
 export const PilotSheet = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   const { activeTab, setActiveTab, tabNames, initiatives, setInitiatives } =
     usePilotSheet();
   const [showTeamNav, setShowTeamNav] = useState(true);
@@ -1353,7 +1358,13 @@ export const PilotSheet = () => {
       {/* ── Presets (applies to the active pilot tab) ── */}
       {showTeamNav && (
         <div
-          className="flex flex-wrap items-center bb b--black-20 bg-near-white ph2 pv2"
+          className={classNames(
+            "flex bb b--black-20 bg-near-white ph2 pv2",
+            {
+              "flex-wrap items-center": !isMobile,
+              "flex-column items-stretch": isMobile,
+            },
+          )}
           style={{ gap: "0.5rem" }}
         >
           <span className="f7 fw7 dark-gray nowrap">
@@ -1370,7 +1381,7 @@ export const PilotSheet = () => {
             <div
               key={label}
               className="flex items-center"
-              style={{ flex: "1 1 10rem" }}
+              style={isMobile ? undefined : { flex: "1 1 10rem" }}
             >
               <span className="f8 mr1 nowrap">{label}:</span>
               <button
@@ -1378,13 +1389,17 @@ export const PilotSheet = () => {
                 className="f7 ba b--black-20 pa1 bg-white pointer normal w-100 tl dim"
                 onClick={() => setPresetPicker({ label, presets })}
               >
-                — Select Preset —
+                Select Preset
               </button>
             </div>
           ))}
           <div
             className="flex items-center"
-            style={{ flex: "1 1 10rem", gap: "0.25rem" }}
+            style={
+              isMobile
+                ? { gap: "0.25rem" }
+                : { flex: "1 1 10rem", gap: "0.25rem" }
+            }
           >
             <button
               className="f8 ph2 pv1 bn br1 pointer bg-white dark-green fw7 dim w-100"
