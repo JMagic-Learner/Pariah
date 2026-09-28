@@ -1781,10 +1781,10 @@ export const FORCE_LIST_FACTIONS = [
       "For franchises like Gundam Seed, IBO, Witch from Mercury, etc",
     ],
     theme: {
-      header: { background: "#1a0000", color: "#ffffff" },
-      rowEven: { background: "#ffffff" },
+      header: { background: "#34c5ff", color: "#ffffff" },
+      rowEven: { background: "#81d6fd" },
       rowOdd: { background: "#ffffff" },
-      accent: "#ffffff",
+      accent: "#3a3a3a",
     },
     units: [
       {
