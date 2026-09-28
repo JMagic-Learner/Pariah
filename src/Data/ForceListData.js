@@ -1084,7 +1084,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0088",
         faction: "Zeon, Neo Zeon",
         equipment:
-          "Beam Rifle, Shield, 8x Grenade Launcher [INBUILT], Heavy Booster, Beam Saber x2",
+          "Beam Rifle + [MOUNTABLE], Shield, 8x Grenade Launcher [INBUILT], Heavy Booster, Beam Saber x2",
       },
       {
         msu: "AMX-008 Ga Zowmn",

@@ -3060,11 +3060,11 @@ export const ZEON_PRESETS = [
       armorValue: "25",
       baseEquip: [
         {
-          name: "Beam Rifle",
+          name: "Beam Rifle [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "[SCOPE]",
+          notes: "[SCOPE],[MOUNTABLE]",
         },
         {
           name: "Shield",
