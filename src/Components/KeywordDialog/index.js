@@ -1,3 +1,5 @@
+import { Z_POPOVER } from "../../utils/zIndex";
+
 export const KeywordDialog = ({ kw, onClose }) => {
   if (!kw) return null;
   return (
@@ -5,7 +7,7 @@ export const KeywordDialog = ({ kw, onClose }) => {
       style={{
         position: "fixed",
         inset: 0,
-        zIndex: 3000,
+        zIndex: Z_POPOVER,
         background: "rgba(0,0,0,0.55)",
         display: "flex",
         alignItems: "center",

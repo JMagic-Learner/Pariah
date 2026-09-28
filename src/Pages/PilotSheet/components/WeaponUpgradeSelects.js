@@ -1,11 +1,12 @@
+import classNames from "classnames";
 import { UpgradeInput } from "../../../Components/TextInput";
 import { UPGRADES } from "../../../Data/UpgradeArray";
-import { useMediaQuery } from "@custom-react-hooks/use-media-query";
+import { useMediaQuery } from "@custom-react-hooks/all";
 
 const findUpgrade = (name) => UPGRADES.find((u) => u.name === name);
 
 const UpgradeSlot = ({ label, value, onClick, onClear }) => {
-  const isMobile = useMediaQuery();
+  const isMobile = useMediaQuery("(max-width: 600px)");
   const info = value ? findUpgrade(value) : null;
   return (
     <div className="flex items-center" style={{ gap: "0.5rem" }}>
@@ -20,7 +21,13 @@ const UpgradeSlot = ({ label, value, onClick, onClear }) => {
           placeholder={label}
         />
 
-        <div className="f8 tc flex-shrink-0" style={{ width: "2.5rem" }}>
+        <div
+          className={classNames("tc flex-shrink-0", {
+            f7: isMobile,
+            f8: !isMobile,
+          })}
+          style={{ width: "2.5rem" }}
+        >
           {info ? (info.ton ?? "–") : "—"}
         </div>
         {value && (
@@ -40,31 +47,37 @@ const UpgradeSlot = ({ label, value, onClick, onClear }) => {
   );
 };
 
-export const WeaponUpgradeSelects = ({ row, onChange, onPickUpgrade }) => (
-  <div className="flex flex-column" style={{ gap: "0.35rem" }}>
-    <div
-      className="flex items-center f8 fw6 dark-green"
-      style={{ gap: "0.5rem" }}
-    >
-      <span className="flex-shrink-0" style={{ width: "9rem" }}>
-        Upgrade
-      </span>
-      <span className="tc flex-shrink-0" style={{ width: "2.5rem" }}>
-        Ton
-      </span>
-      <span className="flex-auto">Effect</span>
+export const WeaponUpgradeSelects = ({ row, onChange, onPickUpgrade }) => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
+  return (
+    <div className="flex flex-column" style={{ gap: "0.35rem" }}>
+      <div
+        className={classNames("flex items-center fw6 dark-green", {
+          f7: isMobile,
+          f8: !isMobile,
+        })}
+        style={{ gap: "0.5rem" }}
+      >
+        <span className="flex-shrink-0" style={{ width: "9rem" }}>
+          Upgrade
+        </span>
+        <span className="tc flex-shrink-0" style={{ width: "2.5rem" }}>
+          Ton
+        </span>
+        <span className="flex-auto">Effect</span>
+      </div>
+      <UpgradeSlot
+        label="— Slot 1 —"
+        value={row.upgrade1 || ""}
+        onClick={() => onPickUpgrade(1)}
+        onClear={() => onChange("upgrade1", "")}
+      />
+      <UpgradeSlot
+        label="— Slot 2 —"
+        value={row.upgrade2 || ""}
+        onClick={() => onPickUpgrade(2)}
+        onClear={() => onChange("upgrade2", "")}
+      />
     </div>
-    <UpgradeSlot
-      label="— Slot 1 —"
-      value={row.upgrade1 || ""}
-      onClick={() => onPickUpgrade(1)}
-      onClear={() => onChange("upgrade1", "")}
-    />
-    <UpgradeSlot
-      label="— Slot 2 —"
-      value={row.upgrade2 || ""}
-      onClick={() => onPickUpgrade(2)}
-      onClear={() => onChange("upgrade2", "")}
-    />
-  </div>
-);
+  );
+};

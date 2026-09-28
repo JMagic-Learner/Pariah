@@ -1,3 +1,5 @@
+import { useMediaQuery } from "@custom-react-hooks/all";
+import classNames from "classnames";
 const ERAS = [
   {
     name: "One Year War",
@@ -65,11 +67,12 @@ const ERAS = [
 ];
 
 export const Timeline = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <div>
       <h2 className="f2 fw7 red bb pb2 mb3">6.1 — Timeline</h2>
 
-      <p className="lh-copy tj mb4">
+      <p className={classNames("lh-copy tj mb4", { f7: isMobile })}>
         The Universal Century spans decades of conflict. The eras below offer a
         loose throughline of major battles a Campaign can draw from — use them
         as a backbone for linking Campaign Battles together, or as inspiration
@@ -89,7 +92,7 @@ export const Timeline = () => {
                 className="mb3 pa3 bg-near-white ba b--black-10"
               >
                 <p className="fw7 ma0 mb1 red">{b.title}</p>
-                <p className="lh-copy ma0 f6">{b.text}</p>
+                <p className={classNames("lh-copy ma0", { f7: isMobile, "f6": !isMobile })}>{b.text}</p>
               </div>
             ))}
           </div>

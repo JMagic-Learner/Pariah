@@ -1,4 +1,7 @@
+import { useMediaQuery } from "@custom-react-hooks/all";
+import classNames from "classnames";
 export const EquippingWeapons = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <div>
       <h2 className="f2 fw7 red bb pb2 mb3">
@@ -7,7 +10,7 @@ export const EquippingWeapons = () => {
         <span className="fw6 red"> [STOWED] </span> vs{" "}
         <span className="fw6 red"> [MOUNTED] </span>
       </h2>
-      <p className="lh-copy tj">
+      <p className={classNames("lh-copy tj", { f7: isMobile })}>
         Gunpla have numerous ways to equip weapons. The way a weapon is
         held/readied determines how it interacts with certain ACTIONS. On the
         Pilot Sheet, weapons equipped to a Gunpla may occupy the same slot as
@@ -17,7 +20,7 @@ export const EquippingWeapons = () => {
       </p>
 
       <h5 className="f5 fw7 mt3 mb1 lh-copy tj">[READIED] Weapons</h5>
-      <p className="lh-copy tj">
+      <p className={classNames("lh-copy tj", { f7: isMobile })}>
         The most common way for Gunpla and MSU to hold weapons. These are
         weapons physically held by the Gunpla in either arm(s).{" "}
         <span className="fw6 red"> [READIED] </span>
@@ -33,7 +36,7 @@ export const EquippingWeapons = () => {
       <h5 className="f5 fw7 mt3 mb1 lh-copy tj">
         [INBUILT] Weapons (built into the frame)
       </h5>
-      <p className="lh-copy tj">
+      <p className={classNames("lh-copy tj", { f7: isMobile })}>
         A somewhat rare feature on Gunpla and MSUs. These are weapons concealed
         or attached directly to the frame of the MSU.{" "}
         <span className="fw6 red"> [INBUILT] </span> weapons can be used for{" "}
@@ -47,7 +50,7 @@ export const EquippingWeapons = () => {
       <h5 className="f5 fw7 mt3 mb1 lh-copy tj">
         [STOWED] Weapons (in storage)
       </h5>
-      <p className="lh-copy tj">
+      <p className={classNames("lh-copy tj", { f7: isMobile })}>
         <span className="fw6 red"> [STOWED] </span> weapons are usually
         represented by racked weapons on the back or any other location. These
         weapons are not readied and therefore cannot be used in{" "}
@@ -63,7 +66,7 @@ export const EquippingWeapons = () => {
       <h5 className="f5 fw7 mt3 mb1 lh-copy tj">
         [MOUNTED] Weapons (attached to outer armor)
       </h5>
-      <p className=" lh-copy tj">
+      <p className={classNames(" lh-copy tj", { f7: isMobile })}>
         Weapons attached via <span className="fw6 red"> [HARDPOINTS] </span> to
         the outside of an MSU. <span className="fw6 red"> [MOUNTED] </span>
         weapons can only be used for <span className="fw6 red">

@@ -47,7 +47,7 @@ export const Gallery = () => {
             <button
               className={classNames("w-100", {
                 pv3: !isMobile,
-                pv2: isMobile,
+                "pv2 f7": isMobile,
               })}
               onClick={() => Open(entry.title)}
             >

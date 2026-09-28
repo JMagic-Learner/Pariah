@@ -1,10 +1,14 @@
+import classNames from "classnames";
+import { useMediaQuery } from "@custom-react-hooks/all";
+
 export const RightHandPanel = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <div className="w-40-ns">
       {/* What to ring */}
       <div className="ba b--black-20 pa3 mb4 bg-near-white">
         <h3 className="f4 fw7 red mt0 mb3">What to bring</h3>
-        <ul className="pl3 lh-copy">
+        <ul className={classNames("pl3 lh-copy", { f7: isMobile })}>
           <li className="pv1">Two D6 (six-sided dice) (at mininum)</li>
           <li className="pv1">
             Two Gunpla Models (any scale; preferably 1/144 or 1/100)
@@ -18,7 +22,12 @@ export const RightHandPanel = () => {
       {/* Earth Federation */}
       <div className="ba b--black-20 pa3 mb4">
         <h3 className="f4 fw7 red mt0 mb2">Earth Federation</h3>
-        <p className="lh-copy f6 tj">
+        <p
+          className={classNames("lh-copy tj", {
+            f7: isMobile,
+            f6: !isMobile,
+          })}
+        >
           The Earth Federation was formed in the pre-(UC) era when
           overpopulation caused famines, outbreaks of disease, and wars over
           resources. The inauguration of its charter marked the beginning of the
@@ -32,7 +41,12 @@ export const RightHandPanel = () => {
       {/* ZEON */}
       <div className="ba b--black-20 pa3 mb4">
         <h3 className="f4 fw7 red mt0 mb2">Principality of ZEON</h3>
-        <p className="lh-copy f6 tj">
+        <p
+          className={classNames("lh-copy tj", {
+            f7: isMobile,
+            f6: !isMobile,
+          })}
+        >
           When Zeon Zum Deikun died in (UC) 0068, Degwin Sodo Zabi seized
           control and pushed for rapid military development. Research by Doctor
           Minovsky led to the Minovsky Particle and its effect on communication

@@ -1,10 +1,13 @@
+import { useMediaQuery } from "@custom-react-hooks/all";
+import classNames from "classnames";
 export const ColonyDrop = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <div>
       <h2 className="f2 fw7 red bb pb2 mb3">Mission 6 — Colony Drop</h2>
 
       <div className="pa3 bg-near-white ba b--black-10 mb4">
-        <p className="i lh-copy ma0">
+        <p className={classNames("i lh-copy ma0", { f7: isMobile })}>
           "They've detached the colony. It's on a collision course. Someone has
           to stop it — or finish the job. Eight rounds. One destiny."
         </p>
@@ -13,43 +16,43 @@ export const ColonyDrop = () => {
       <div className="flex-ns mb4">
         <div className="w-50-ns pr3-ns">
           <h3 className="f4 fw7 mb2">Setup</h3>
-          <ul className="lh-copy pl3 tj">
-            <li className="pv1">
+          <ul className={classNames("lh-copy pl3 tj", { f7: isMobile })}>
+            <li className={classNames("pv1", { f7: isMobile })}>
               <strong>Table:</strong> 48"×72" recommended (large engagement)
             </li>
-            <li className="pv1">
+            <li className={classNames("pv1", { f7: isMobile })}>
               <strong>Defender (ZEON or Neutral):</strong> Deploys within 8" of
               one short edge
             </li>
-            <li className="pv1">
+            <li className={classNames("pv1", { f7: isMobile })}>
               <strong>Attacker (Earth Federation or Neutral):</strong> Deploys
               within 8" of the opposite short edge
             </li>
-            <li className="pv1">
+            <li className={classNames("pv1", { f7: isMobile })}>
               <strong>Colony Drop Core:</strong> A large marker placed at the
               center of the table. Has 140 Armor.
             </li>
-            <li className="pv1">
+            <li className={classNames("pv1", { f7: isMobile })}>
               <strong>Rounds:</strong> 5
             </li>
           </ul>
         </div>
         <div className="w-50-ns pl3-ns">
           <h3 className="f4 fw7 mb2">Victory Conditions</h3>
-          <ul className="lh-copy pl3 tj">
-            <li className="pv1">
+          <ul className={classNames("lh-copy pl3 tj", { f7: isMobile })}>
+            <li className={classNames("pv1", { f7: isMobile })}>
               <strong className="red">+10 VP</strong> — Attacker: Reduce Colony
               Drop Core to 0 HP
             </li>
-            <li className="pv1">
+            <li className={classNames("pv1", { f7: isMobile })}>
               <strong className="red">+10 VP</strong> — Defender: Colony Drop
               Core survives all 8 rounds
             </li>
-            <li className="pv1">
+            <li className={classNames("pv1", { f7: isMobile })}>
               <strong className="red">+3 VP</strong> — Either: Destroy enemy
               Commander MSU
             </li>
-            <li className="pv1">
+            <li className={classNames("pv1", { f7: isMobile })}>
               <strong className="red">+3 VP</strong> — Attacker: Deal 40+ damage
               to Colony Drop Core
             </li>
@@ -58,33 +61,33 @@ export const ColonyDrop = () => {
       </div>
 
       <h3 className="f4 fw7 mb2">Colony Drop Core Rules</h3>
-      <ul className="lh-copy pl3 tj">
-        <li className="pv1">
+      <ul className={classNames("lh-copy pl3 tj", { f7: isMobile })}>
+        <li className={classNames("pv1", { f7: isMobile })}>
           <strong>Targeting the Core:</strong> Any Attacker MSU may target the
           Colony Drop Core as if it were an enemy MSU (it does not evade). It
           has no hit location table — all damage is applied directly to its HP
           pool after Armor reduction.
         </li>
-        <li className="pv1">
+        <li className={classNames("pv1", { f7: isMobile })}>
           <strong>Defender Interference:</strong> Defender MSUs within 6" of the
           Core may intercept one attack per round that targets the Core
           (reactive mechanic, costs their Reaction).
         </li>
-        <li className="pv1">
+        <li className={classNames("pv1", { f7: isMobile })}>
           <strong>Light Debris:</strong> At the start of Round 3, if the Core
           still has HP, it crashes into one quarter of the table (decided by a
           d4 roll). All MSUs within that quarter take 15 damage to two hit
           locations. All [HARD COVER] and [OBSCURING COVER] terrain features
           within that quarter are removed from the table.
         </li>
-        <li className="pv1">
+        <li className={classNames("pv1", { f7: isMobile })}>
           <strong>Skyfall:</strong> At the start of Round 4, if the Core still
           has HP, it crashes into one quarter of the table (decided by a d4
           roll). All MSUs within that quarter take 20 damage to two hit
           locations. All [HARD COVER] and [OBSCURING COVER] terrain features
           within that quarter are removed from the table.
         </li>
-        <li className="pv1">
+        <li className={classNames("pv1", { f7: isMobile })}>
           <strong>Colony Impact:</strong> At the start of Round 5, if the Core
           still has HP, it crashes into one quarter of the table (decided by a
           d4 roll). All MSUs within that quarter take 25 damage to two hit
@@ -94,18 +97,18 @@ export const ColonyDrop = () => {
       </ul>
 
       <h3 className="f4 fw7 mt4 mb2">Special Mission Rules</h3>
-      <ul className="lh-copy pl3 tj">
-        <li className="pv1">
+      <ul className={classNames("lh-copy pl3 tj", { f7: isMobile })}>
+        <li className={classNames("pv1", { f7: isMobile })}>
           <strong>No Retreat:</strong> Neither side may voluntarily move MSUs
           off the table. MSUs pushed off via Impact must be placed at the
           nearest table edge within 1" instead.
         </li>
-        <li className="pv1">
+        <li className={classNames("pv1", { f7: isMobile })}>
           <strong>Newtype Awakening:</strong> If either side has a Newtype pilot
           still active at Round 5+, that pilot gains +1 to all stats for the
           remainder of the game (the weight of the moment).
         </li>
-        <li className="pv1">
+        <li className={classNames("pv1", { f7: isMobile })}>
           <strong>ZEON Axis Doctrine:</strong> If playing as ZEON Defender with
           the Neo Zeon subfaction, the Colony Drop Core gains +10 HP (total 90
           HP).
@@ -113,7 +116,7 @@ export const ColonyDrop = () => {
       </ul>
 
       <h3 className="f4 fw7 mt4 mb2">Terrain Suggestions</h3>
-      <p className="lh-copy">
+      <p className={classNames("lh-copy", { f7: isMobile })}>
         Colony Drop is best played on a densely-built table representing a
         colony interior or a devastated city. Debris fields (Difficult Terrain)
         should dominate the middle thirds. The Colony Drop Core should sit on

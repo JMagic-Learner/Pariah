@@ -1,21 +1,24 @@
+import { useMediaQuery } from "@custom-react-hooks/all";
+import classNames from "classnames";
 export const Reactions = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <div>
       <h2 className="f2 fw7 red bb pb2 mb3">3.4 — Reactions</h2>
 
-      <p className="lh-copy mb4 tj">
+      <p className={classNames("lh-copy mb4 tj", { f7: isMobile })}>
         Reactions are special actions performed outside of a enemy unit's normal
         activation. Each unit may perform multiple reactions per turn as long as
         they have the resources to do so, unless a trait or special ability
         imposes a limit.
       </p>
 
-      <p className="lh-copy mb4 tj red">
+      <p className={classNames("lh-copy mb4 tj red", { f7: isMobile })}>
         Reactions interrupt enemy actions, meaning the reaction resolves first
         before resuming normal turn sequence.
       </p>
 
-      <p className="lh-copy mb4 tj red">
+      <p className={classNames("lh-copy mb4 tj red", { f7: isMobile })}>
         Reactions can be chained in response to a single instance of an enemy
         activation as long as there are no duplicate REACTIONS in the chained
         sequence, meaning a <span className="fw6 red"> [UNIT]</span> cannot
@@ -42,7 +45,7 @@ export const Reactions = () => {
 
           <span className="fw4 f5">[REACTION] [1 Action]</span>
         </h3>
-        <p className="lh-copy f6 mb2">
+        <p className={classNames("lh-copy mb2", { f7: isMobile, "f6": !isMobile })}>
           When an enemy unit moves more than 3" and ends within LOS of this
           [UNIT]. Qualifying movement:{" "}
           <span className="fw6 red"> [MOVEMENT] </span> actions (including{" "}
@@ -53,17 +56,17 @@ export const Reactions = () => {
           <span className="fw6 red"> [REACTIVE ATTACK] </span>
           before the enemy resolves their respective action.
         </p>
-        <ul className="lh-copy pl3 f6 ma0">
-          <li className="pv1 tj">
+        <ul className={classNames("lh-copy pl3 ma0", { f7: isMobile, "f6": !isMobile })}>
+          <li className={classNames("pv1 tj", { f7: isMobile })}>
             Only <span className="fw6 red"> [READIED] </span>,{" "}
             <span className="fw6 red"> [INBUILT] </span> can be used in{" "}
             <span className="fw6 red"> [REACTIVE ATTACK] </span> actions .
           </li>
-          <li className="pv1 tj">
+          <li className={classNames("pv1 tj", { f7: isMobile })}>
             The reacting <span className="fw6 red"> [UNIT] </span> must have LOS
             to the enemy unit at the moment the qualifying action is declared.
           </li>
-          <li className="pv1 tj">
+          <li className={classNames("pv1 tj", { f7: isMobile })}>
             The enemy unit must be within the eligible weapon's range band.
           </li>
         </ul>
@@ -78,8 +81,8 @@ export const Reactions = () => {
           </span>{" "}
           Sequence
         </h3>
-        <ul className="lh-copy pl3 f6 ma0">
-          <li className="pv1 tj">
+        <ul className={classNames("lh-copy pl3 ma0", { f7: isMobile, "f6": !isMobile })}>
+          <li className={classNames("pv1 tj", { f7: isMobile })}>
             <span className="fw6 red">Step 1:</span> The reacting{" "}
             <span className="fw6 red"> [UNIT] </span>
             declares{" "}
@@ -91,7 +94,7 @@ export const Reactions = () => {
             <span className="fw6 red"> [READIED] </span>,{" "}
             <span className="fw6 red"> [INBUILT] </span>).
           </li>
-          <li className="pv1 tj">
+          <li className={classNames("pv1 tj", { f7: isMobile })}>
             <span className="fw6 red">Step 2:</span> The enemy{" "}
             <span className="fw6 red"> [UNIT]</span> immediately pauses it's
             action, waiting for the{" "}
@@ -101,18 +104,18 @@ export const Reactions = () => {
             </span>
             sequence to resolve
           </li>
-          <li className="pv1 tj">
+          <li className={classNames("pv1 tj", { f7: isMobile })}>
             <span className="fw6 red">Step 3:</span> The reacting{" "}
             <span className="fw6 red"> [UNIT]</span> rolls their attack dice
             against the enemy MSU using the nominated weapon. Apply any relevant
             modifiers.
           </li>
-          <li className="pv1 tj">
+          <li className={classNames("pv1 tj", { f7: isMobile })}>
             <span className="fw6 red">Step 4:</span> The enemy{" "}
             <span className="fw6 red"> [UNIT]</span> rolls Evasion dice as
             normal.
           </li>
-          <li className="pv1 tj">
+          <li className={classNames("pv1 tj", { f7: isMobile })}>
             <span className="fw6 red">Step 5:</span> Resolve hits — roll 2d6 for
             each hit location and apply damage.
           </li>
@@ -126,16 +129,16 @@ export const Reactions = () => {
             [EYES ON YOU]{" "}
             <span className="fw4 f5">[REACTION] [PILOT TRAIT]</span>
           </h3>
-          <p className="lh-copy f6 mb2">
+          <p className={classNames("lh-copy mb2", { f7: isMobile, "f6": !isMobile })}>
             A <span className="fw6 red"> [UNIT]</span> with the [EYES ON YOU]
             trait may, once per Battle Round, declare an [EYES ON YOU] Reaction.
           </p>
-          <ul className="lh-copy pl3 f6 ma0">
-            <li className="pv1 tj">
+          <ul className={classNames("lh-copy pl3 ma0", { f7: isMobile, "f6": !isMobile })}>
+            <li className={classNames("pv1 tj", { f7: isMobile })}>
               The reacting MSU immediately rotates to face the enemy MSU before
               the enemy finishes their movement.
             </li>
-            <li className="pv1 tj">
+            <li className={classNames("pv1 tj", { f7: isMobile })}>
               This rotation does not cost any movement or FRO.
             </li>
           </ul>
@@ -146,18 +149,18 @@ export const Reactions = () => {
           <h3 className="f4 fw7 red mt0 mb1">
             [JUKE] <span className="fw4 f5">[REACTION] [PILOT TRAIT]</span>
           </h3>
-          <p className="lh-copy f6 mb2">
+          <p className={classNames("lh-copy mb2", { f7: isMobile, "f6": !isMobile })}>
             A <span className="fw6 red"> [UNIT]</span> with the [JUKE] trait
             may, once per attack declaration, declare a [JUKE] Reaction when
             their MSU is targeted by an attack and the reacting{" "}
             <span className="fw6 red"> [UNIT]</span> has LOS to the attacker.
           </p>
-          <ul className="lh-copy pl3 f6 ma0">
-            <li className="pv1">
+          <ul className={classNames("lh-copy pl3 ma0", { f7: isMobile, "f6": !isMobile })}>
+            <li className={classNames("pv1", { f7: isMobile })}>
               The reacting <span className="fw6 red"> [UNIT]</span> may reroll
               one of their Evasion dice.
             </li>
-            <li className="pv1">
+            <li className={classNames("pv1", { f7: isMobile })}>
               The new result stands — the die cannot be rerolled again.
             </li>
           </ul>

@@ -1,14 +1,17 @@
+import { useMediaQuery } from "@custom-react-hooks/all";
+import classNames from "classnames";
 import {
   AircraftTable,
   AircraftWeaponsTable,
 } from "../../../Components/Table/SupportUnitsTable";
 
 export const AirSupport = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <div>
       <h2 className="f2 fw7 red bb pb2 mb3">5.3 — Air Support</h2>
 
-      <p className="lh-copy mb4">
+      <p className={classNames("lh-copy mb4", { f7: isMobile })}>
         Fighter Jets and Bombers follow the same movement restrictions as MSU
         but must complete their mandatory movement distance each activation.
         Jets excel at harassment and missile strafing runs, but their mandatory
@@ -17,7 +20,7 @@ export const AirSupport = () => {
 
       <div className="pa3 bg-near-white ba b--black-10 mb4">
         <h3 className="f5 fw7 mb2">Variable Altitude (High vs Attack)</h3>
-        <p className="lh-copy ma0">
+        <p className={classNames("lh-copy ma0", { f7: isMobile })}>
           In <span className="fw6 red"> HIGH ALTITUDE </span> mode, Aircraft are
           considered at unlimited height, ignoring terrain elevation, and can
           simply move over any terrain without movement penalty. They cannot
@@ -32,7 +35,7 @@ export const AirSupport = () => {
 
       <div className="pa3 bg-near-white ba b--black-10 mb4">
         <h3 className="f5 fw7 mb2">Flexibile Doctrines</h3>
-        <p className="lh-copy ma0">
+        <p className={classNames("lh-copy ma0", { f7: isMobile })}>
           <strong>Fighter jets and Intercepter Jets </strong> before they
           declare their <span className="fw6 red"> [MOVEMENT] </span> action,
           must choose to be <span className="fw6 red"> HIGH ALTITUDE </span> or
@@ -42,7 +45,7 @@ export const AirSupport = () => {
 
       <div className="pa3 bg-near-white ba b--black-10 mb4">
         <h3 className="f5 fw7 mb2">High Altitude Operations</h3>
-        <p className="lh-copy ma0">
+        <p className={classNames("lh-copy ma0", { f7: isMobile })}>
           <strong>AWACs and Bomber units </strong> are always in considered to
           be in <span className="fw6 red"> HIGH ALTITUDE </span>.
         </p>
@@ -50,7 +53,7 @@ export const AirSupport = () => {
 
       <div className="pa3 bg-near-white ba b--black-10 mb4">
         <h3 className="f5 fw7 mb2">Helicopter Operations </h3>
-        <p className="lh-copy ma0">
+        <p className={classNames("lh-copy ma0", { f7: isMobile })}>
           <strong> Helicopters </strong>operate in{" "}
           <span className="fw6 red"> ATTACK RUN </span> mode by default.
         </p>
@@ -58,7 +61,7 @@ export const AirSupport = () => {
 
       <div className="pa3 bg-near-white ba b--black-10 mb4">
         <h3 className="f5 fw7 mb2">Mandatory Movement</h3>
-        <p className="lh-copy ma0">
+        <p className={classNames("lh-copy ma0", { f7: isMobile })}>
           Jets, Bombers, and AWACs <strong>must</strong> move their full
           mandatory movement distance each time they activate. If terrain or
           board edges would prevent this, the jet is removed from play.
@@ -67,7 +70,7 @@ export const AirSupport = () => {
 
       <div className="pa3 bg-near-white ba b--black-10 mb4">
         <h3 className="f5 fw7 mb2">Tailspin Risk</h3>
-        <p className="lh-copy ma0">
+        <p className={classNames("lh-copy ma0", { f7: isMobile })}>
           All aircraft that have been hit by any attack <strong>must</strong>{" "}
           make a PS 3+ check at risk entering a tailspin. Pilots that fail will
           move their mandatory movement next round in a random direction and
@@ -80,7 +83,7 @@ export const AirSupport = () => {
 
       <div className="pa3 bg-near-white ba b--black-10 mb4">
         <h3 className="f5 fw7 mb2">Carpet Bombing</h3>
-        <p className="lh-copy ma0">
+        <p className={classNames("lh-copy ma0", { f7: isMobile })}>
           Bombers may to deploy up to three AIRSTRIKE tokens per Limited Use
           during it's mandatory movement. These tokens are deployed directly
           under the flight path of this Bomber Unit.

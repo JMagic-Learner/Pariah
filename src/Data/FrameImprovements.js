@@ -166,7 +166,7 @@ export const FRAME_IMPROVEMENTS = [
   {
     name: "Lightweight Frame Improvements (Torso)",
     loc: "Torso",
-    ton: -1,
+    ton: -2,
     pfro: "–",
     qty: 1,
     mcu: 20,
@@ -176,7 +176,7 @@ export const FRAME_IMPROVEMENTS = [
   {
     name: "Lightweight Frame Improvements (Left Leg)",
     loc: "Left Leg",
-    ton: -1,
+    ton: -2,
     pfro: "–",
     qty: 1,
     mcu: 20,
@@ -186,7 +186,7 @@ export const FRAME_IMPROVEMENTS = [
   {
     name: "Lightweight Frame Improvements (Left Arm)",
     loc: "Left Arm",
-    ton: -1,
+    ton: -2,
     pfro: "–",
     qty: 1,
     mcu: 20,
@@ -196,7 +196,7 @@ export const FRAME_IMPROVEMENTS = [
   {
     name: "Lightweight Frame Improvements (Right Leg)",
     loc: "Right Leg",
-    ton: -1,
+    ton: -2,
     pfro: "–",
     qty: 1,
     mcu: 20,
@@ -206,7 +206,7 @@ export const FRAME_IMPROVEMENTS = [
   {
     name: "Lightweight Frame Improvements (Right Arm)",
     loc: "Right Arm",
-    ton: -1,
+    ton: -2,
     pfro: "–",
     qty: 1,
     mcu: 20,

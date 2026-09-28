@@ -40,7 +40,7 @@ export const MobileEquipRow = ({
             className={sold ? "strike" : ""}
             placeholder="— Empty —"
           />
-          {limitedUse && used && <span className="f8 fw6 orange">(USED)</span>}
+          {limitedUse && used && <span className="f7 fw6 orange">(USED)</span>}
         </div>
         {isWeapon && !sold && (
           <button
@@ -56,7 +56,7 @@ export const MobileEquipRow = ({
           </button>
         )}
         {isWeapon && !sold && (
-          <span className="f8 fw7 dark-green mr1 flex-shrink-0">
+          <span className="f7 fw7 dark-green mr1 flex-shrink-0">
             {getWeaponWeightClass(row)}
           </span>
         )}

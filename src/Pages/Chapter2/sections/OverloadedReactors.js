@@ -1,4 +1,7 @@
+import { useMediaQuery } from "@custom-react-hooks/all";
+import classNames from "classnames";
 export const OverloadedReactors = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <div>
       <h2 className="f2 fw7 red bb pb2 mb3">
@@ -6,13 +9,13 @@ export const OverloadedReactors = () => {
       </h2>
 
       <h5 className="f4 fw7 mt4 mb2 tj red"> OVERLOADED REACTORS </h5>
-      <p className="lh-copy tj">
+      <p className={classNames("lh-copy tj", { f7: isMobile })}>
         If FRO expenditure ever exceeds the FRO Limit/Total, the{" "}
         <span className="fw6 red"> [PILOT]</span> suffers a -3 PS penalty.
       </p>
 
       <h4 className="f4 fw7 mt4 mb2 tj red"> REACTOR CRITICAL </h4>
-      <p className="lh-copy tj">
+      <p className={classNames("lh-copy tj", { f7: isMobile })}>
         If the MSU is ever destroyed via a direct [TORSO] hit or a hit location
         spillover from a hit roll of doubles (double 1s, double 2s, double 3s,
         double 6s etc), the enemy <span className="fw6 red"> [PILOT]</span>{" "}

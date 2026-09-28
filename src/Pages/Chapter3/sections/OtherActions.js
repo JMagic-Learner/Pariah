@@ -1,4 +1,7 @@
+import { useMediaQuery } from "@custom-react-hooks/all";
+import classNames from "classnames";
 export const OtherActions = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <div>
       <h2 className="f2 fw7 red bb pb2 mb3">3.7 — Other Actions</h2>
@@ -6,11 +9,11 @@ export const OtherActions = () => {
       {/* Seek Cover */}
       <div className="bg-light-gray pa3 mb3 br2">
         <p className="fw7 red f5 ma0 mb1">SEEK COVER! [AUTOMATIC]</p>
-        <p className="lh-copy f6 mb2 i">
+        <p className={classNames("lh-copy mb2 i", { f7: isMobile, "f6": !isMobile })}>
           When a Mobile Suit receives damage, its Pilot isn't going to stand
           still. It will actively seek a safer location.
         </p>
-        <p className="lh-copy f6 mb2 tj">
+        <p className={classNames("lh-copy mb2 tj", { f7: isMobile, "f6": !isMobile })}>
           The Pilot makes a{" "}
           <span className="fw6 red">PS Skill Check of 5+</span> after receiving
           damage in any location. If successful, the Pilot immediately
@@ -21,17 +24,22 @@ export const OtherActions = () => {
           Seek Cover move. (A [SUPPRESSED] MSU can still move backward /
           sideways to one of the following priorities.)
         </p>
-        <ol className="lh-copy pl3 f6 ma0">
-          <li className="pv1">
+        <ol
+          className={classNames("lh-copy pl3 ma0", {
+            f7: isMobile,
+            f6: !isMobile,
+          })}
+        >
+          <li className={classNames("pv1", { f7: isMobile })}>
             Toward the nearest full cover, obscuring as much of the MSU as it
             can.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             Toward the nearest partial cover, obscuring as much of the MSU as it
             can.
           </li>
-          <li className="pv1">Toward the nearest friendly unit.</li>
-          <li className="pv1">To the nearest board edge.</li>
+          <li className={classNames("pv1", { f7: isMobile })}>Toward the nearest friendly unit.</li>
+          <li className={classNames("pv1", { f7: isMobile })}>To the nearest board edge.</li>
         </ol>
         <p className="lh-copy f7 mt2 mb0 tj">
           This movement is also counted in the Evasion Table. This mechanic aims
@@ -44,10 +52,10 @@ export const OtherActions = () => {
         <p className="fw7 red f5 ma0 mb1">
           GET IT TOGETHER! [COMMANDER ACTIONS] [ONCE PER GAME]
         </p>
-        <p className="lh-copy f6 mb2 i">
+        <p className={classNames("lh-copy mb2 i", { f7: isMobile, "f6": !isMobile })}>
           A <span className="fw6 red"> [COMMANDER] </span> can rally the squad.
         </p>
-        <p className="lh-copy f6 mb0 tj">
+        <p className={classNames("lh-copy mb0 tj", { f7: isMobile, "f6": !isMobile })}>
           A <span className="fw6 red"> [COMMANDER] </span> can spend an
           [COMMANDER ACTION] to rally{" "}
           <span className="fw6 red"> [FIRETEAM] </span> members at{" "}
@@ -65,11 +73,11 @@ export const OtherActions = () => {
         <p className="fw7 red f5 ma0 mb1">
           REPOSITION! [COMMANDER ACTIONS] [ONCE PER GAME]
         </p>
-        <p className="lh-copy f6 mb2 i">
+        <p className={classNames("lh-copy mb2 i", { f7: isMobile, "f6": !isMobile })}>
           Sometimes a <span className="fw6 red"> [COMMANDER] </span> realizes
           that his / her squad is completely out of position.
         </p>
-        <p className="lh-copy f6 mb0 tj">
+        <p className={classNames("lh-copy mb0 tj", { f7: isMobile, "f6": !isMobile })}>
           A <span className="fw6 red"> [COMMANDER] </span> can spend an
           [COMMANDER ACTION] to reposition squadmates at{" "}
           <span className="fw6 red">Step 1.4 of the Status Phase</span>. All
@@ -84,11 +92,11 @@ export const OtherActions = () => {
         <p className="fw7 red f5 ma0 mb1">
           FOCUS FIRE! [COMMANDER ACTIONS] [ONCE PER GAME]
         </p>
-        <p className="lh-copy f6 mb2 i">
+        <p className={classNames("lh-copy mb2 i", { f7: isMobile, "f6": !isMobile })}>
           The <span className="fw6 red"> [COMMANDER] </span> demands that an
           particular threat needs to be eliminated, ASAP
         </p>
-        <p className="lh-copy f6 mb0 tj">
+        <p className={classNames("lh-copy mb0 tj", { f7: isMobile, "f6": !isMobile })}>
           A <span className="fw6 red"> [COMMANDER] </span> can spend an
           [COMMANDER ACTION] declare FOCUS FIRE!. At{" "}
           <span className="fw6 red">Step 1.4 of the Status Phase</span>, the
@@ -103,10 +111,10 @@ export const OtherActions = () => {
       {/* Airstrike */}
       <div className="bg-light-gray pa3 mb3 br2">
         <p className="fw7 red f5 ma0 mb1">AIRSTRIKE! [ACTION]</p>
-        <p className="lh-copy f6 mb2 i">
+        <p className={classNames("lh-copy mb2 i", { f7: isMobile, "f6": !isMobile })}>
           MSUs equipped with a Target Designator can call in AIRSTRIKE!
         </p>
-        <p className="lh-copy f6 mb2 tj">
+        <p className={classNames("lh-copy mb2 tj", { f7: isMobile, "f6": !isMobile })}>
           A MSU with a Target Designator spends an Action in{" "}
           <span className="fw6 red">Step 4 of the Status Phase</span>, nominates
           a Point of Interest (on the ground, cover, or terrain). Roll a{" "}
@@ -114,23 +122,23 @@ export const OtherActions = () => {
           success, place an AIRSTRIKE token on that exact point. At the start of
           the next Shooting Phase, that POI is hit by an AIRSTRIKE!
         </p>
-        <ul className="lh-copy pl3 f6 ma0">
-          <li className="pv1">
+        <ul className={classNames("lh-copy pl3 ma0", { f7: isMobile, "f6": !isMobile })}>
+          <li className={classNames("pv1", { f7: isMobile })}>
             MSUs standing directly on an AIRSTRIKE marker, or with their bases
             in contact with one, take <span className="fw6 red">15 damage</span>{" "}
             to one hit location.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             All other MSUs within <span className="fw6 red">8 inches</span> of
             the AIRSTRIKE marker are hit with{" "}
             <span className="fw6 red">10 damage</span>.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             MSUs affected by an AIRSTRIKE!{" "}
             <span className="fw6 red">cannot evade</span> and{" "}
             <span className="fw6 red">cannot benefit from [HARD COVER]</span>.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             All [HARD COVER] and [OBSCURING COVER] within 8 inches that are less
             than <span className="fw6 red">4 inches in height</span> and less
             than <span className="fw6 red">6 inches in length and width</span>{" "}
@@ -142,27 +150,27 @@ export const OtherActions = () => {
       {/* Forward Observe */}
       <div className="bg-light-gray pa3 mb3 br2">
         <p className="fw7 red f5 ma0 mb1">FORWARD OBSERVE [ACTION]</p>
-        <p className="lh-copy f6 mb2 i">
+        <p className={classNames("lh-copy mb2 i", { f7: isMobile, "f6": !isMobile })}>
           Pinpoints an enemy for target tracing and pinpoint attacks.
         </p>
-        <p className="lh-copy f6 mb2 tj">
+        <p className={classNames("lh-copy mb2 tj", { f7: isMobile, "f6": !isMobile })}>
           A unit with the Forward Observer Support Equipment spends an Action in{" "}
           <span className="fw6 red">Step 4 of the Status Phase</span>, nominates
           an enemy unit within LOS. Mark that unit with a Forward Observe token
           / marker. Roll a{" "}
           <span className="fw6 red">PS 5+ skill check three times</span>.
         </p>
-        <ul className="lh-copy pl3 f6 ma0">
-          <li className="pv1">
+        <ul className={classNames("lh-copy pl3 ma0", { f7: isMobile, "f6": !isMobile })}>
+          <li className={classNames("pv1", { f7: isMobile })}>
             <span className="fw6 red">One Success:</span> Enemy MSU no longer
             benefits from [OBSCURING COVER] until end of round.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             <span className="fw6 red">Two Successes:</span> Enemy MSU grants a{" "}
             <span className="fw6 red">+1 modifier</span> to ranged attacks made
             against it until end of round.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             <span className="fw6 red">Three Successes:</span> All ranged attacks
             made against the enemy MSU now roll{" "}
             <span className="fw6 red">3d3 instead of 1d6</span> until end of
@@ -174,13 +182,13 @@ export const OtherActions = () => {
       {/* Swap */}
       <div className="bg-light-gray pa3 mb3 br2">
         <p className="fw7 red f5 ma0 mb1">SWAP [ACTION][REACTION]</p>
-        <p className="lh-copy f6 mb2 i">
+        <p className={classNames("lh-copy mb2 i", { f7: isMobile, "f6": !isMobile })}>
           An MSU can retrieve a weapon from [STOWAGE] into{" "}
           <span className="fw6 red"> [READIED] </span> position. Mark which
           weapon has been <span className="fw6 red"> [READIED] </span> and which
           has been <span className="fw6 red"> [STOWED] </span>
         </p>
-        <p className="lh-copy f6 mb2 i">
+        <p className={classNames("lh-copy mb2 i", { f7: isMobile, "f6": !isMobile })}>
           An MSU can stow a weapon from{" "}
           <span className="fw6 red"> [READIED] </span> position into [STOWAGE].
           Mark which weapon has been{" "}
@@ -192,7 +200,7 @@ export const OtherActions = () => {
       {/* Drop Weapon / Shield */}
       <div className="bg-light-gray pa3 mb3 br2">
         <p className="fw7 red f5 ma0 mb1">DROP [FREE][REACTION]</p>
-        <p className="lh-copy f6 mb2 i">
+        <p className={classNames("lh-copy mb2 i", { f7: isMobile, "f6": !isMobile })}>
           An MSU can drop a weapon or shield from{" "}
           <span className="fw6 red"> [READIED] </span> position without costing
           an action.
@@ -202,7 +210,7 @@ export const OtherActions = () => {
       {/* Reload */}
       <div className="bg-light-gray pa3 mb3 br2">
         <p className="fw7 red f5 ma0 mb1">RELOAD [ACTION][REACTION]</p>
-        <p className="lh-copy f6 mb2 i">
+        <p className={classNames("lh-copy mb2 i", { f7: isMobile, "f6": !isMobile })}>
           Some weapons marked with the [SLOW RELOAD] requires an action to fire
           again.
         </p>

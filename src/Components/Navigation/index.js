@@ -75,7 +75,7 @@ export const Navigation = () => {
           {NAV_LINKS.map(({ to, label }) => (
             <Link
               key={to}
-              className="db link dim black no-underline f6 pv3 ph3 bb b--black-10 bg-near-white"
+              className="db link dim black no-underline f7 pv3 ph3 bb b--black-10 bg-near-white"
               to={to}
               onClick={() => setOpen(false)}
             >

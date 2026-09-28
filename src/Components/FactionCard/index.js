@@ -1,4 +1,7 @@
+import { useMediaQuery } from "@custom-react-hooks/all";
+import classNames from "classnames";
 export const FactionCard = ({ faction }) => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   if (!faction) return null;
   return (
     <div className="mb5 ba b--black-20">
@@ -6,7 +9,7 @@ export const FactionCard = ({ faction }) => {
         <h3 className="f3 fw7 white ma0">{faction.name}</h3>
       </div>
       <div className="pa4">
-        <p className="lh-copy tj mb3">{faction.lore}</p>
+        <p className={classNames("lh-copy tj mb3", { f7: isMobile })}>{faction.lore}</p>
         {faction.generalBonuses.length > 0 && (
           <>
             <h4 className="f5 fw7 mb2 mt3">General Bonuses</h4>
@@ -14,7 +17,7 @@ export const FactionCard = ({ faction }) => {
               {faction.generalBonuses.map((b, bi) => (
                 <div key={bi} className="mb3 pa3 bg-near-white ba b--black-10">
                   <p className="fw7 ma0 mb1 red">{b.title}</p>
-                  <p className="lh-copy ma0 f6">{b.text}</p>
+                  <p className={classNames("lh-copy ma0", { f7: isMobile, "f6": !isMobile })}>{b.text}</p>
                 </div>
               ))}
             </div>

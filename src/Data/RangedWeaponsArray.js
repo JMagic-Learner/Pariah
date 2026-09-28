@@ -37,7 +37,7 @@ export const RANGED = [
     fro: "–",
     mcu: 25,
     faction: "–",
-    keywords: "[AOE(6)] or [AP(5)],[INBUILT],[LIMITED USE(2)]",
+    keywords: "[AOE(6)] or [AP(5)],[INBUILT],[LIMITED USE(3)]",
   },
   {
     name: "Arm Rotary Cannon",

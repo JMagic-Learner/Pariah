@@ -1,9 +1,12 @@
+import { useMediaQuery } from "@custom-react-hooks/all";
+import classNames from "classnames";
 export const States = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <div>
       <h2 className="f2 fw7 red bb pb2 mb3">3.6 — States</h2>
 
-      <p className="lh-copy mb4 tj">
+      <p className={classNames("lh-copy mb4 tj", { f7: isMobile })}>
         States are condition tokens placed on an MSU to track ongoing effects.
         An MSU may have multiple states simultaneously unless noted otherwise.
       </p>
@@ -13,16 +16,16 @@ export const States = () => {
         <h3 className="f4 fw7 red mt0 mb1">
           [CRIPPLED] <span className="fw4 f5">[STATE]</span>
         </h3>
-        <p className="lh-copy f6 mb2 fw6">
+        <p className={classNames("lh-copy mb2 fw6", { f7: isMobile, "f6": !isMobile })}>
           When a MSU receives severe damage to its legs, the model experiences
           Crippled state.
         </p>
-        <ul className="lh-copy pl3 f6 ma0">
-          <li className="pv1">
+        <ul className={classNames("lh-copy pl3 ma0", { f7: isMobile, "f6": !isMobile })}>
+          <li className={classNames("pv1", { f7: isMobile })}>
             <span className="fw6 red">Ground Operations:</span> The MSU reduces
             its movespeed by 2 inches.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             <span className="fw6 red">Space Operations:</span> The MSU does not
             fall down. The MSU reduces its movespeed by 50%.
           </li>
@@ -34,7 +37,7 @@ export const States = () => {
         <h3 className="f4 fw7 red mt0 mb1">
           [CROUCHED] <span className="fw4 f5">[STATE]</span>
         </h3>
-        <p className="lh-copy f6 mb0">
+        <p className={classNames("lh-copy mb0", { f7: isMobile, "f6": !isMobile })}>
           An MSU that has physically reposed into a crouching state. Reduce
           movement by half.
         </p>
@@ -45,13 +48,13 @@ export const States = () => {
         <h3 className="f4 fw7 red mt0 mb1">
           [KNOCKDOWN] <span className="fw4 f5">[STATE]</span>
         </h3>
-        <p className="lh-copy f6 mb0">
+        <p className={classNames("lh-copy mb0", { f7: isMobile, "f6": !isMobile })}>
           MSUs that are in [KNOCKDOWN] state crawl at half speed. MSU can still
           shoot normally, but must use one hand to prop itself up. [KNOCKDOWN]
           state also applies a{" "}
           <span className="fw6 red">−2 penalty to all skill checks</span>.
         </p>
-        <p className="lh-copy f6 mb0">
+        <p className={classNames("lh-copy mb0", { f7: isMobile, "f6": !isMobile })}>
           MSUs that are in [KNOCKDOWN] state may spend half movement to stand up
           and remove [KNOCKDOWN] state.
           <span className="fw6 red">−2 penalty to all skill checks</span>.
@@ -63,10 +66,10 @@ export const States = () => {
         <h3 className="f4 fw7 red mt0 mb1">
           [FEAR/SHAKEN] <span className="fw4 f5">[AUTOMATIC]</span>
         </h3>
-        <p className="lh-copy f6 mb2 fw6">
+        <p className={classNames("lh-copy mb2 fw6", { f7: isMobile, "f6": !isMobile })}>
           When a friendly MSU is destroyed nearby, Pilots may experience fear.
         </p>
-        <p className="lh-copy f6 mb0">
+        <p className={classNames("lh-copy mb0", { f7: isMobile, "f6": !isMobile })}>
           Whenever a friendly MSU is destroyed, all surrounding friendly units
           within <span className="fw6 red">8 inches</span> must make a{" "}
           <span className="fw6 red">PS Skill Check of 5+</span>. Pilots who fail
@@ -77,7 +80,7 @@ export const States = () => {
           for the rest of the game. This penalty is not stackable with multiple
           instances of [FEAR/SHAKEN].
         </p>
-        <p className="lh-copy f6 mb0">
+        <p className={classNames("lh-copy mb0", { f7: isMobile, "f6": !isMobile })}>
           Units in [FEAR/SHAKEN] state must first make use a action to conduct a
           mandatory movement action if possible toward the nearest board edge.
         </p>
@@ -88,7 +91,7 @@ export const States = () => {
         <h3 className="f4 fw7 red mt0 mb1">
           [AIMING] <span className="fw4 f5">[STATE]</span>
         </h3>
-        <p className="lh-copy f6 mb0">
+        <p className={classNames("lh-copy mb0", { f7: isMobile, "f6": !isMobile })}>
           The aim state is a special status to denote a MSU lying in wait / or
           carefully tracking a enemy. The{" "}
           <span className="fw6 red"> [PILOT]</span>/MSU remains in this state
@@ -107,14 +110,14 @@ export const States = () => {
         <h3 className="f4 fw7 red mt0 mb1">
           [STEALTH] <span className="fw4 f5">[STATE]</span>
         </h3>
-        <p className="lh-copy f6 mb2">
+        <p className={classNames("lh-copy mb2", { f7: isMobile, "f6": !isMobile })}>
           The MSU receives a{" "}
           <span className="fw6 red">
             +1 circumstance bonus to all Evasion Skill Checks
           </span>
           .
         </p>
-        <p className="lh-copy f6 mb2">
+        <p className={classNames("lh-copy mb2", { f7: isMobile, "f6": !isMobile })}>
           When this MSU is outside line of sight of all enemy [UNITS], replace
           this MSU with a <span className="fw6 red">60mm token</span> centered
           on the original base. Enemy [UNITS] that later come into Line of Sight
@@ -124,7 +127,7 @@ export const States = () => {
           ability to be renter [STEALTH] state until it moves out of line of
           sight of all enemy [UNITS] again.
         </p>
-        <p className="lh-copy f6 mb0">
+        <p className={classNames("lh-copy mb0", { f7: isMobile, "f6": !isMobile })}>
           If attacks are declared while in Token form, the enemy MSU suffers a{" "}
           <span className="fw6 red">−2 penalty to Evasion checks</span>. Enemy
           MSUs cannot declare Reactions against, or use abilities with Free
@@ -137,24 +140,24 @@ export const States = () => {
         <h3 className="f4 fw7 red mt0 mb1">
           [SUPPRESSED] <span className="fw4 f5">[STATE]</span>
         </h3>
-        <p className="lh-copy f6 mb2">
+        <p className={classNames("lh-copy mb2", { f7: isMobile, "f6": !isMobile })}>
           When a <span className="fw6 red"> [SUPPRESSIVE] </span> weapon hits an
           enemy more than twice — rolling two hit locations and dealing damage
           to both — that enemy enters the Suppressed state.
         </p>
-        <ul className="lh-copy pl3 f6 ma0">
-          <li className="pv1">
+        <ul className={classNames("lh-copy pl3 ma0", { f7: isMobile, "f6": !isMobile })}>
+          <li className={classNames("pv1", { f7: isMobile })}>
             Suppressed MSUs must immediately stop any ongoing forward movement
             (Boosts, Blitz, Support Equipment, Base Movement Actions, etc.).
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             Suppressed MSUs can only move sideways or backwards.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             Suppressed MSUs cannot move closer to the wielder of the When a{" "}
             <span className="fw6 red"> [SUPPRESSIVE] </span> weapon.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             [SUPPRESSED] state is removed when: the Suppressed MSU spends an
             action in the Status Phase; the wielder breaks LOS with the target;
             the wielder moves with a{" "}
@@ -173,25 +176,25 @@ export const States = () => {
           <span className="fw6 red"> [HOVER] </span>{" "}
           <span className="fw4 f5">[STATE]</span>
         </h3>
-        <p className="lh-copy f6 mb2">
+        <p className={classNames("lh-copy mb2", { f7: isMobile, "f6": !isMobile })}>
           An MSU that ends its movement airborne may declare{" "}
           <span className="fw6 red"> [HOVER] </span> to maintain its current
           altitude for the round.
         </p>
-        <ul className="lh-copy pl3 f6 ma0">
-          <li className="pv1">
+        <ul className={classNames("lh-copy pl3 ma0", { f7: isMobile, "f6": !isMobile })}>
+          <li className={classNames("pv1", { f7: isMobile })}>
             The MSU expends{" "}
             <span className="fw6 red">1 FRO during [Status Phase] Step 2</span>{" "}
             to maintain altitude. If it cannot pay this cost, it immediately
             enters <span className="fw6 red"> [FALL] </span> state.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             At the start of its next activation, a{" "}
             <span className="fw6 red"> [HOVER] </span>ing MSU must again choose{" "}
             <span className="fw6 red"> [HOVER] </span> (paying 1 FRO) or{" "}
             <span className="fw6 red"> [FALL] </span>.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             Falling from <span className="fw6 red"> [HOVER] </span> state counts
             the drop distance as movement for Evasion Tier Table calculations.
           </li>
@@ -204,29 +207,29 @@ export const States = () => {
           <span className="fw6 red"> [FALL] </span>{" "}
           <span className="fw4 f5">[STATE]</span>
         </h3>
-        <p className="lh-copy f6 mb2">
+        <p className={classNames("lh-copy mb2", { f7: isMobile, "f6": !isMobile })}>
           An MSU that is airborne and does not (or cannot){" "}
           <span className="fw6 red"> [HOVER] </span> drops to ground level at no
           movement cost. Fall damage is then resolved.
         </p>
-        <ul className="lh-copy pl3 f6 ma0">
-          <li className="pv1">
+        <ul className={classNames("lh-copy pl3 ma0", { f7: isMobile, "f6": !isMobile })}>
+          <li className={classNames("pv1", { f7: isMobile })}>
             The falling <span className="fw6 red"> [PILOT]</span> makes a{" "}
             <span className="fw6 red">PS 5 Skill Check</span>.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             <span className="fw6 red">Failure:</span> The MSU suffers{" "}
             <span className="fw6 red">3 damage per 4 inches</span> of distance
             fallen to one hit location.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             <span className="fw6 red">Success:</span> No fall damage is taken.
             If the MSU finishes its <span className="fw6 red"> [FALL] </span>{" "}
             movement within melee range of an enemy{" "}
             <span className="fw6 red"> [PILOT]</span>/MSU, it may immediately
             declare an <span className="fw6 red"> [ATTACK] </span> action.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             Fall distance counts toward the Evasion Tier Table total for the
             round.
           </li>

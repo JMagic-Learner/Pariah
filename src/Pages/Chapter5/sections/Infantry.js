@@ -1,31 +1,34 @@
+import { useMediaQuery } from "@custom-react-hooks/all";
+import classNames from "classnames";
 import {
   InfantryTable,
   InfantryWeaponsTable,
 } from "../../../Components/Table/SupportUnitsTable";
 
 export const Infantry = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <div>
       <h2 className="f2 fw7 red bb pb2 mb3">5.1 — Infantry</h2>
 
-      <p className="lh-copy mb4">
+      <p className={classNames("lh-copy mb4", { f7: isMobile })}>
         Infantry squads are represented by individual 28mm hex bases grouped
         into units. Each model in the squad is its own hit location with Armor 1
         — AOE and Napalm Munitions eliminate one hex base per successful hit.
       </p>
 
-      <p className="lh-copy mb4">
+      <p className={classNames("lh-copy mb4", { f7: isMobile })}>
         MSU's have a -1 to hit against Infantry Squads.
       </p>
 
-      <p className="lh-copy mb4">
+      <p className={classNames("lh-copy mb4", { f7: isMobile })}>
         Each Infantry Squad has 5 members, each equipped with all weapons listed
         in the Infantry Weapons table below. A player moves all squads within
         one unit activation, and shoot at the same time in the
         <span className="fw6 red"> [SHOOTING PHASE] </span>.
       </p>
 
-      <p className="lh-copy mb4">
+      <p className={classNames("lh-copy mb4", { f7: isMobile })}>
         Infantry squads can occupy any{" "}
         <span className="fw6 red"> [HARD COVER] </span> or building. By doing
         so, the infantry squad cannot be targeted directly by attacks, and do
@@ -43,7 +46,7 @@ export const Infantry = () => {
       <InfantryWeaponsTable />
 
       <div className="pa3 bg-near-white ba b--black-10 mt4">
-        <p className="ma0 lh-copy">
+        <p className={classNames("ma0 lh-copy", { f7: isMobile })}>
           <strong>Note:</strong> AOE and Napalm Munitions wipe out one hex base
           per successful hit. Infantry cannot benefit from Hard Cover unless the
           terrain physically conceals their hex bases.

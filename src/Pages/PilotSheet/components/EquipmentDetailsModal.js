@@ -7,6 +7,7 @@ import { lookupWeaponInfo } from "../utilities/lookupWeaponInfo";
 import { lookupSupportInfo } from "../utilities/lookupSupportInfo";
 import { isLimitedUseItem } from "../../../utils/limitedUseEquipment";
 import { useMediaQuery } from "@custom-react-hooks/all";
+import { Z_MODAL } from "../../../utils/zIndex";
 
 export const EquipmentDetailsModal = ({
   row,
@@ -20,7 +21,7 @@ export const EquipmentDetailsModal = ({
   used,
   onToggleUsed,
 }) => {
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  const isMobile = useMediaQuery("(max-width: 600px)");
   const [kwDialog, setKwDialog] = useState(null);
   const weaponInfo = lookupWeaponInfo(row.name);
   const supportInfo = !weaponInfo ? lookupSupportInfo(row.name) : null;
@@ -30,23 +31,24 @@ export const EquipmentDetailsModal = ({
       style={{
         position: "fixed",
         inset: 0,
-        zIndex: 1000,
+        zIndex: Z_MODAL,
         background: "rgba(0,0,0,0.55)",
         display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        alignItems: isMobile ? "" : "center",
+        justifyContent: isMobile ? "" : "center",
       }}
       onClick={onClose}
     >
       <KeywordDialog kw={kwDialog} onClose={() => setKwDialog(null)} />
       <div
         style={{
-          width: "90vw",
-          maxWidth: "26rem",
-          maxHeight: "85vh",
+          width: isMobile ? "100vw" : "90vw",
+          maxWidth: isMobile ? "100vw" : "26rem",
+          height: isMobile ? "100vh" : undefined,
+          maxHeight: isMobile ? "100vh" : "85vh",
           overflowY: "auto",
           background: "white",
-          borderRadius: "4px",
+          borderRadius: isMobile ? 0 : "4px",
         }}
         className="pa3"
         onClick={(e) => e.stopPropagation()}

@@ -1,3 +1,5 @@
+import { useMediaQuery } from "@custom-react-hooks/all";
+import classNames from "classnames";
 const RESTRICTED_UNITS = [
   {
     name: "RX-78 GP01 / RX-78 GP03",
@@ -53,11 +55,12 @@ const WITHDRAWAL_MISSIONS = [
 ];
 
 export const OperationOdessa = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <div>
       <h2 className="f2 fw7 red bb pb2 mb3">6.5 — Operation Odessa</h2>
 
-      <p className="lh-copy tj mb4">
+      <p className={classNames("lh-copy tj mb4", { f7: isMobile })}>
         Operation Odessa was the Earth Federation Space Force's turning-point
         offensive of the One Year War — a combined-arms counterattack that broke
         Zeon's grip on the resource-rich supply lines of North Africa. This
@@ -68,7 +71,7 @@ export const OperationOdessa = () => {
 
       <div className="mb4 pa3 bg-near-white ba b--black-10">
         <h3 className="f4 fw7 red mt0 mb2">MSU Restrictions</h3>
-        <p className="lh-copy f6 mb0">
+        <p className={classNames("lh-copy mb0", { f7: isMobile, "f6": !isMobile })}>
           Only MSU entries dated <strong>0079</strong> on the Force List may be
           fielded for this Campaign. This restriction represents the state of
           mobile suit technology at the time of the operation — later refits,
@@ -78,15 +81,15 @@ export const OperationOdessa = () => {
 
       <div className="mb4 pa3 bg-near-white ba b--black-10">
         <h3 className="f4 fw7 red mt0 mb2">Restricted Unit List</h3>
-        <p className="lh-copy f6 mb3">
+        <p className={classNames("lh-copy mb3", { f7: isMobile, "f6": !isMobile })}>
           Even among 0079-dated MSU, the following units are considered too
           rare, too experimental, or otherwise out of theater to appear in
           Operation Odessa. They cannot be fielded by either side for the
           duration of this Campaign:
         </p>
-        <ul className="lh-copy pl3 f6 ma0">
+        <ul className={classNames("lh-copy pl3 ma0", { f7: isMobile, "f6": !isMobile })}>
           {RESTRICTED_UNITS.map((unit, i) => (
-            <li key={i} className="pv1">
+            <li key={i} className={classNames("pv1", { f7: isMobile })}>
               <span className="fw7 red">{unit.name}</span> — {unit.reason}
             </li>
           ))}
@@ -94,7 +97,7 @@ export const OperationOdessa = () => {
       </div>
 
       <h3 className="f3 fw7 mb3">The Withdrawal Track</h3>
-      <p className="lh-copy tj mb3">
+      <p className={classNames("lh-copy tj mb3", { f7: isMobile })}>
         Operation Odessa is played as a series of four linked Campaign Battles,
         tracking Zeon's gradual retreat out of North Africa and into Europe.
         Results carry forward: the further Zeon is pushed, the harder the next
@@ -103,25 +106,25 @@ export const OperationOdessa = () => {
 
       <div className="mb4 pa3 bg-near-white ba b--black-10">
         <h3 className="f4 fw7 red mt0 mb2">Tracking the Withdrawal</h3>
-        <ul className="lh-copy pl3 f6 ma0">
-          <li className="pv1">
+        <ul className={classNames("lh-copy pl3 ma0", { f7: isMobile, "f6": !isMobile })}>
+          <li className={classNames("pv1", { f7: isMobile })}>
             The Withdrawal Track begins at <strong>0</strong> before Mission 1.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             If the Earth Federation wins a mission, advance the Track by{" "}
             <strong>+1</strong> (maximum 3).
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             If Zeon wins a mission, reduce the Track by <strong>-1</strong>{" "}
             (minimum 0).
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             At the start of Missions 2–4, reduce Zeon's deployment zone by{" "}
             <strong>4 inches per Track point</strong>, and the Earth Federation
             gains <strong>1 additional Support Unit</strong> (Chapter 5) per
             Track point.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             If the Track reaches <strong>3</strong>, Zeon also fields one fewer
             MSU for the remainder of the series, representing accumulated
             attrition.
@@ -139,7 +142,7 @@ export const OperationOdessa = () => {
           </div>
           <div className="pa3">
             <p className="f7 fw6 gray ma0 mb2">{mission.type}</p>
-            <p className="lh-copy f6 ma0">{mission.text}</p>
+            <p className={classNames("lh-copy ma0", { f7: isMobile, "f6": !isMobile })}>{mission.text}</p>
           </div>
         </div>
       ))}

@@ -1,20 +1,30 @@
 import { RightHandPanel } from "./RightHandPanel";
+import classNames from "classnames";
+import { useMediaQuery } from "@custom-react-hooks/all";
 
 export const Chapter1 = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <div className="w-90 center pv4">
-      <h1 className="f1 fw9 red bb pb3 mb4">Chapter 1: What is Flashpoint?</h1>
+      <h1
+        className={classNames("red bb mb4", {
+          "f1 fw9 pb3": !isMobile,
+          "f5 fw7 pb2": isMobile,
+        })}
+      >
+        Chapter 1: What is Flashpoint?
+      </h1>
 
       <div className="flex-ns">
         <div className="w-60-ns mr5-ns">
-          <p className="tj lh-copy f5">
+          <p className={classNames("tj lh-copy", { f7: isMobile, f5: !isMobile })}>
             Flashpoint is a skirmish game set in the Universal Century. It aims
             to establish a tabletop simulation of mecha combat as depicted in
             the Gundam franchise. Flashpoint allows you to build and customize
             your mobile suit and pilot it in an alternating activation system.
             How you build your Mobile Suit unit (MSU) depends entirely on you.
           </p>
-          <p className="tj lh-copy">
+          <p className={classNames("tj lh-copy", { f7: isMobile })}>
             Flashpoint is designed with Gunpla in mind. Whether you have 1/144
             or 1/100 scale Gunpla, the rules are meant to be adaptable. Tabletop
             battles can be set in any era, from the ONE YEAR WAR to the far
@@ -24,7 +34,7 @@ export const Chapter1 = () => {
           </p>
 
           <h2 className="f3 fw7 red mt4 mb2">What is Universal Century?</h2>
-          <p className="tj lh-copy">
+          <p className={classNames("tj lh-copy", { f7: isMobile })}>
             Universal Century (UC) is the timeline setting where the original
             Gundam series took place, originally airing on April 7, 1979. The
             (UC) timeline spans from 0068 (Mobile Suit Gundam: The Origin) to
@@ -38,7 +48,7 @@ export const Chapter1 = () => {
           </p>
 
           <h2 className="f3 fw7 red mt4 mb2">Mobile Suits and Gundams</h2>
-          <p className="tj lh-copy">
+          <p className={classNames("tj lh-copy", { f7: isMobile })}>
             Mobile Suits are bipedal machines ranging in height from 15m to
             116m. All mobile suits use a fusion reactor that consumes Helium-3.
             The consumption of Helium-3 produces Minovsky Particles — crucial to
@@ -46,7 +56,7 @@ export const Chapter1 = () => {
             used for civilian or military purposes; in Flashpoint, they are
             military assets.
           </p>
-          <p className="tj lh-copy">
+          <p className={classNames("tj lh-copy", { f7: isMobile })}>
             All Gundams are Mobile Suits, but only a portion of Mobile Suits are
             considered Gundams. Gundams are typically constructed with
             high-performance materials and the latest technology of their era.

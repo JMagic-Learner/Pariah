@@ -321,7 +321,7 @@ export const RulesBook = () => {
       >
         {isMobile ? (
           <select
-            className="w-100 pa2 f6 ba b--black-20 bg-white"
+            className="w-100 pa2 f7 ba b--black-20 bg-white"
             value={activeSectionId}
             onChange={(e) => setActiveSectionId(e.target.value)}
           >

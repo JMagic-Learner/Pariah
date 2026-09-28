@@ -1,10 +1,12 @@
 import { useState } from "react";
 import classNames from "classnames";
+import { useMediaQuery } from "@custom-react-hooks/all";
 import { PICKER_TABS } from "../../../Data/EquipmentPickerArray";
 import {
   isDynamicTonnageItem,
   computeDynamicTonnage,
 } from "../../../utils/dynamicTonnage";
+import { Z_MODAL } from "../../../utils/zIndex";
 
 export const EquipmentPickerModal = ({
   onClose,
@@ -13,6 +15,7 @@ export const EquipmentPickerModal = ({
   fro,
   restrictTab,
 }) => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   const tabs = restrictTab
     ? PICKER_TABS.filter((t) => t.label === restrictTab)
     : PICKER_TABS.filter((t) => t.label !== "Upgrades");
@@ -27,18 +30,18 @@ export const EquipmentPickerModal = ({
       style={{
         position: "fixed",
         inset: 0,
-        zIndex: 1000,
+        zIndex: Z_MODAL,
         background: "rgba(0,0,0,0.55)",
         display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        alignItems: isMobile ? "" : "center",
+        justifyContent: isMobile ? "" : "center",
       }}
       onClick={onClose}
     >
       <div
         style={{
-          width: "92vw",
-          height: "86vh",
+          width: isMobile ? "100vw" : "92vw",
+          height: isMobile ? "100vh" : "86vh",
           display: "flex",
           flexDirection: "column",
           background: "white",

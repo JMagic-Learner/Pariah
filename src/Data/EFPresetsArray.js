@@ -2401,23 +2401,21 @@ export const EF_PRESETS = [
           mcuCost: "FREE",
           fro: "1 (PASSIVE)",
           tonnage: "3",
-          notes: "",
+          notes: "Gain [STEALTH] state when moving <8",
         },
         {
-          name: "Arm Cannons",
+          name: "Arm Cannon",
           mcuCost: "FREE",
           fro: "",
           tonnage: "4",
-          notes:
-            "[INBUILT],[AOE(6)] or [AP(5)],[INBUILT],[QUICK SWAP],[LIMITED USE(1)]",
+          notes: "[AOE(6)] or [AP(5)],[INBUILT],[LIMITED USE(3)]",
         },
         {
-          name: "Arm Cannons",
+          name: "Arm Cannon",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
-          notes:
-            "[INBUILT],[AOE(6)] or [AP(5)],[INBUILT],[QUICK SWAP],[LIMITED USE(1)]",
+          notes: "[AOE(6)] or [AP(5)],[INBUILT],[LIMITED USE(3)]",
         },
         B(),
         B(),
@@ -2440,13 +2438,13 @@ export const EF_PRESETS = [
           current: "25",
           max: "25",
           weapon: "Combo Weapon",
-          equipment: ["Arm Cannon (INBUILT)", "", ""],
+          equipment: ["Arm Cannon", "", ""],
         },
         leftArm: {
           current: "25",
           max: "25",
           weapon: "Combo Weapon",
-          equipment: ["Arm Cannon (INBUILT)", "", ""],
+          equipment: ["Arm Cannon", "", ""],
         },
         rightLeg: {
           current: "25",
@@ -2677,7 +2675,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "3",
           notes:
-            "[COMMANDER] can perform the RALLY action for free at Step 1.1 of the Status Phase.",
+            "[COMMANDER] can perform the REPOSITION action for free at Step 1.1 of the Status Phase. This [COMMANDER] may perform more than one REPOSITION Command action in a game.",
         },
         {
           name: "Vulcan Cannons",
@@ -2988,14 +2986,14 @@ export const EF_PRESETS = [
           notes: "[MUNITIONS],[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
         },
         {
-          name: "Arm Cannons",
+          name: "Arm Cannon",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
           notes: "[AOE(6)] or [AP(5)],[INBUILT],[QUICK SWAP],[LIMITED USE(1)]",
         },
         {
-          name: "Arm Cannons",
+          name: "Arm Cannon",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
@@ -4028,11 +4026,11 @@ export const EF_PRESETS = [
           notes: "[WARTIME INNOVATIONS],[FULL AUTO],[INBUILT],[AKIMBO]",
         },
         {
-          name: "Arm Cannons (INBUILT)",
+          name: "Arm Cannon)",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
-          notes: "[INBUILT]",
+          notes: "[AOE(6)] or [AP(5)],[INBUILT],[LIMITED USE(3)]",
         },
         {
           name: "Heavy Boosters",
@@ -4062,13 +4060,13 @@ export const EF_PRESETS = [
           current: "24",
           max: "24",
           weapon: "Beam Rifle",
-          equipment: ["Arm Cannons (INBUILT)", "", ""],
+          equipment: ["Arm Cannon", "", ""],
         },
         leftArm: {
           current: "24",
           max: "24",
           weapon: "Shield",
-          equipment: ["Arm Cannons (INBUILT)", "", ""],
+          equipment: ["Arm Cannon", "", ""],
         },
         rightLeg: {
           current: "24",

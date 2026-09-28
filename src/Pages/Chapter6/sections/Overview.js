@@ -1,9 +1,12 @@
+import { useMediaQuery } from "@custom-react-hooks/all";
+import classNames from "classnames";
 export const CampaignOverview = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <div>
       <h2 className="f2 fw7 red bb pb2 mb3">6.0 — Campaign Overview</h2>
 
-      <p className="lh-copy tj mb4">
+      <p className={classNames("lh-copy tj mb4", { f7: isMobile })}>
         Campaign rules are a narrative set of restrictions and scenarios that
         allow <span className="fw6 red"> [PILOT]</span>s to experience the
         Universal Century's canon battles first-hand. Rather than a single
@@ -15,7 +18,7 @@ export const CampaignOverview = () => {
 
       <div className="mb4 pa3 bg-near-white ba b--black-10">
         <h3 className="f4 fw7 red mt0 mb2">Permanent Consequences</h3>
-        <p className="lh-copy f6 mb0">
+        <p className={classNames("lh-copy mb0", { f7: isMobile, "f6": !isMobile })}>
           Campaign rules emphasize that{" "}
           <span className="fw6 red"> [PILOT] </span>
           death is permanent. Unlike standard play, a{" "}
@@ -31,7 +34,7 @@ export const CampaignOverview = () => {
 
       <div className="mb4 pa3 bg-near-white ba b--black-10">
         <h3 className="f4 fw7 red mt0 mb2">Experience and Accolades</h3>
-        <p className="lh-copy f6 mb0">
+        <p className={classNames("lh-copy mb0", { f7: isMobile, "f6": !isMobile })}>
           <span className="fw6 red"> [PILOT]</span>s that survive Campaign
           Battles earn EXP as a reward for combat experience. This EXP is spent
           between battles to obtain Pilot Accolades — upgrades attributed to
@@ -43,20 +46,25 @@ export const CampaignOverview = () => {
 
       <div className="pa3 bg-near-white ba b--black-10">
         <h3 className="f4 fw7 red mt0 mb2">Running a Campaign</h3>
-        <ol className="lh-copy pl3 f6 ma0">
-          <li className="pv1">
+        <ol
+          className={classNames("lh-copy pl3 ma0", {
+            f7: isMobile,
+            f6: !isMobile,
+          })}
+        >
+          <li className={classNames("pv1", { f7: isMobile })}>
             Select a Campaign Battle, using the Timeline (Section 6.1) as
             inspiration for missions and combatants.
           </li>
-          <li className="pv1">Play the mission as normal.</li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>Play the mission as normal.</li>
+          <li className={classNames("pv1", { f7: isMobile })}>
             Resolve the Pilot Fate Table (Section 6.3) for any{" "}
             <span className="fw6 red"> [PILOT]</span> whose MSU was destroyed.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             Award EXP to surviving <span className="fw6 red"> [PILOT]</span>s.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             Spend accumulated EXP on Pilot Accolades (Section 6.4), and
             generate any Replacement Recruits (Section 6.2) before the next
             Campaign Battle.

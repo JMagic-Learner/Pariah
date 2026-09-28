@@ -1,33 +1,36 @@
+import { useMediaQuery } from "@custom-react-hooks/all";
+import classNames from "classnames";
 import { NewtypeUpgradesTable } from "../../../Components/Table/NewtypeUpgradesTable";
 
 export const NewtypeUpgrades = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <div>
       <h2 className="f2 fw7 red bb pb2 mb3 tc">2.11 Newtype Upgrades</h2>
-      <p className="lh-copy tj mb2">
+      <p className={classNames("lh-copy tj mb2", { f7: isMobile })}>
         Newtype Upgrades are exclusive enhancements available only to pilots
         with the <strong>NEWTYPE</strong> or <strong>CYBER-NEWTYPE</strong>{" "}
         pilot traits. These upgrades represent the expanded capabilities of
         enhanced pilots, from psychic foresight to remote weapons control.
       </p>
-      <ul className="lh-copy mb4 pl4">
-        <li className="lh-copy tj">
+      <ul className={classNames("lh-copy mb4 pl4", { f7: isMobile })}>
+        <li className={classNames("lh-copy tj", { f7: isMobile })}>
           Only available for pilots who have taken the NEWTYPE or CYBER-NEWTYPE
           pilot trait.
         </li>
-        <li className="lh-copy tj">
+        <li className={classNames("lh-copy tj", { f7: isMobile })}>
           Each Newtype Upgrade is <strong>unique in Force</strong> — a Force
           with multiple Newtypes cannot assign the same upgrade to more than one
           pilot.
         </li>
-        <li className="lh-copy tj">
+        <li className={classNames("lh-copy tj", { f7: isMobile })}>
           A pilot can only have one Newtype upgrade at a time.
         </li>
       </ul>
       <div className="mt4">
         <h3 className="f3 fw7 mb3 bb pb2">Psycommu Bits — Rules</h3>
-        <ul className="lh-copy pl4">
-          <li className="lh-copy tj">
+        <ul className={classNames("lh-copy pl4", { f7: isMobile })}>
+          <li className={classNames("lh-copy tj", { f7: isMobile })}>
             Bits and Psycommu Hands may be deployed or retracted at Step 1.4 of
             the Status Phase, If they are deployed, they are deployed 12 inches
             from the controlling MSU, in any direction. Both equipment are
@@ -35,16 +38,16 @@ export const NewtypeUpgrades = () => {
             they are considered part of the MSU and then take up one single
             equipment slot (or one in each arm in the case of Psycommu Hands).
           </li>
-          <li className="lh-copy tj">
+          <li className={classNames("lh-copy tj", { f7: isMobile })}>
             Bits are repositioned at the end of the controller's movement,
             within 12 inches. They do not move on their own and receive only 1d6
             for evasion.
           </li>
-          <li className="lh-copy tj">
+          <li className={classNames("lh-copy tj", { f7: isMobile })}>
             Bits can be targeted by enemy attacks. Attacks against Bits suffer a
             –1 hit penalty (small target).
           </li>
-          <li className="lh-copy tj">
+          <li className={classNames("lh-copy tj", { f7: isMobile })}>
             <strong>Beam Bits and Psycommu Hands (Pair):</strong> During the
             Shooting Phase, the controlling pilot may direct Beam Bits/Psycommu
             Hands to attack an enemy MSU, using LOS and facing from the Beam
@@ -52,11 +55,11 @@ export const NewtypeUpgrades = () => {
             attacks do not count as
             <span className="fw6 red"> [SIMULTANEOUS ATTACK] </span>.
           </li>
-          <li className="lh-copy tj">
+          <li className={classNames("lh-copy tj", { f7: isMobile })}>
             <strong>Shield Bits &amp; Inhibitor Bits:</strong> Can intercept
             missiles and physically block enemy MSU movement.
           </li>
-          <li className="lh-copy tj">
+          <li className={classNames("lh-copy tj", { f7: isMobile })}>
             <strong>Inhibitor Bits:</strong> Prevent enemy{" "}
             <span className="fw6 red"> [NEWTYPE] </span> pilots from using any
             Newtype Upgrade Traits or enemy Bits within{" "}

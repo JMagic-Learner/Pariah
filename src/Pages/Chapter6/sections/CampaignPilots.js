@@ -1,3 +1,5 @@
+import { useMediaQuery } from "@custom-react-hooks/all";
+import classNames from "classnames";
 const RECRUIT_ORIGINS = [
   {
     roll: 1,
@@ -32,11 +34,12 @@ const RECRUIT_ORIGINS = [
 ];
 
 export const CampaignPilots = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <div>
       <h2 className="f2 fw7 red bb pb2 mb3">6.2 — Campaign Pilots</h2>
 
-      <p className="lh-copy tj mb4">
+      <p className={classNames("lh-copy tj mb4", { f7: isMobile })}>
         Whenever a <span className="fw6 red"> [PILOT]</span> is Killed in Action
         (see the Pilot Fate Table, Section 6.3), or a player begins a Campaign
         without a <span className="fw6 red"> [PILOT]</span> of their own, they
@@ -45,7 +48,7 @@ export const CampaignPilots = () => {
 
       <div className="mb4 pa3 bg-near-white ba b--black-10">
         <h3 className="f4 fw7 red mt0 mb2">Generating a Recruit</h3>
-        <p className="lh-copy f6 mb0">
+        <p className={classNames("lh-copy mb0", { f7: isMobile, "f6": !isMobile })}>
           A Replacement Recruit begins with the normal 250 MCU and 5 Trait
           Points, as described in Section 2.1, modified by the result rolled
           below. Roll 1d6 on the Recruit Origin table and apply the result.
@@ -54,7 +57,7 @@ export const CampaignPilots = () => {
 
       <div className="mb4 pa3 bg-near-white ba b--black-10">
         <h3 className="f4 fw7 red mt0 mb2">Starting From Zero</h3>
-        <p className="lh-copy f6 mb0">
+        <p className={classNames("lh-copy mb0", { f7: isMobile, "f6": !isMobile })}>
           A Replacement Recruit always begins with 0 EXP and 0 Accolades,
           regardless of how much the fallen{" "}
           <span className="fw6 red"> [PILOT]</span> had accumulated. Accolades
@@ -67,17 +70,17 @@ export const CampaignPilots = () => {
         <table className="f6 w-100" cellSpacing="0">
           <thead>
             <tr>
-              <th className="fw6 bb b--black-20 pb3 pr3 bg-white tl">1d6</th>
-              <th className="fw6 bb b--black-20 pb3 pr3 bg-white tl">Origin</th>
-              <th className="fw6 bb b--black-20 pb3 pr3 bg-white tl">Effect</th>
+              <th className={classNames("fw6 bb b--black-20 pb3 pr3 bg-white tl", { f7: isMobile })}>1d6</th>
+              <th className={classNames("fw6 bb b--black-20 pb3 pr3 bg-white tl", { f7: isMobile })}>Origin</th>
+              <th className={classNames("fw6 bb b--black-20 pb3 pr3 bg-white tl", { f7: isMobile })}>Effect</th>
             </tr>
           </thead>
           <tbody className="lh-copy">
             {RECRUIT_ORIGINS.map((origin, i) => (
               <tr key={i}>
-                <td className="pv3 pr3 bb b--black-20 fw6 tc">{origin.roll}</td>
-                <td className="pv3 pr3 bb b--black-20 fw6">{origin.name}</td>
-                <td className="pv3 pr3 bb b--black-20">{origin.text}</td>
+                <td className={classNames("pv3 pr3 bb b--black-20 fw6 tc", { f7: isMobile })}>{origin.roll}</td>
+                <td className={classNames("pv3 pr3 bb b--black-20 fw6", { f7: isMobile })}>{origin.name}</td>
+                <td className={classNames("pv3 pr3 bb b--black-20", { f7: isMobile })}>{origin.text}</td>
               </tr>
             ))}
           </tbody>

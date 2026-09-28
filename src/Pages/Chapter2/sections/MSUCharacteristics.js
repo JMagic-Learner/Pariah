@@ -1,25 +1,28 @@
+import { useMediaQuery } from "@custom-react-hooks/all";
+import classNames from "classnames";
 export const MSUCharacteristics = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <div>
       <h2 className="f2 fw7 red bb pb2 mb3">
         2.2.2 — Mobile Suits and Universal Characteristics
       </h2>
-      <p className="lh-copy tj">
+      <p className={classNames("lh-copy tj", { f7: isMobile })}>
         All MSU have a number of characteristics to denote individual values.
       </p>
 
-      <ul className="lh-copy pl3 tj">
-        <li className="pv1 red fw6">
+      <ul className={classNames("lh-copy pl3 tj", { f7: isMobile })}>
+        <li className={classNames("pv1 red fw6", { f7: isMobile })}>
           MCU (MONETARY CREDIT UNITS) Cost:{" "}
           <span className="fw4 black">How much a MSU typically costs.</span>
         </li>
-        <li className="pv1 red fw6">
+        <li className={classNames("pv1 red fw6", { f7: isMobile })}>
           FRO (FUSION REACTOR OUTPUT):{" "}
           <span className="fw4 black">
             How much power the MSU can use per round.
           </span>
         </li>
-        <li className="pv1 red fw6">
+        <li className={classNames("pv1 red fw6", { f7: isMobile })}>
           Equipment Tonnage (TONNAGE/3):{" "}
           <span className="fw4 black">
             How much weight a MSU can incur for equipment and weapons. Equipment
@@ -27,13 +30,13 @@ export const MSUCharacteristics = () => {
             This value can be sourced from Gundam Wiki
           </span>
         </li>
-        <li className="pv1 red fw6">
+        <li className={classNames("pv1 red fw6", { f7: isMobile })}>
           Movement (Inches):{" "}
           <span className="fw4 black">
             How far/fast a MSU can traverse the battlefield.
           </span>
         </li>
-        <li className="pv1 red fw6">
+        <li className={classNames("pv1 red fw6", { f7: isMobile })}>
           Armor:{" "}
           <span className="fw4 black">
             How tough / how many hit points per hit location.
@@ -42,11 +45,11 @@ export const MSUCharacteristics = () => {
       </ul>
 
       <h3 className="f4 fw7 mt4 mb2">MCU Cost Formula</h3>
-      <p className="lh-copy mb2">
+      <p className={classNames("lh-copy mb2", { f7: isMobile })}>
         To calculate a base MSU's MCU cost, use the following formula:
       </p>
       <div className="pa3 bg-near-white ba b--black-20 br2 mv3">
-        <code className="f6 db lh-copy">
+        <code className={classNames("db lh-copy", { f7: isMobile, "f6": !isMobile })}>
           MCU = (Armor x2 MCU) + (Move × 2 MCU) + (FRO × 3 MCU) + (Tonnage x 1
           MCU) + (10 per distinct weapon type) + (5 MCU per Shield support
           equipment) + (Entire Support Equipment Cost) +(Full Newtype Upgrade
@@ -55,7 +58,7 @@ export const MSUCharacteristics = () => {
       </div>
 
       <h3 className="f4 fw7 mt4 mb2 tj">MCU - Monetary Credit Units</h3>
-      <p className="lh-copy tj">
+      <p className={classNames("lh-copy tj", { f7: isMobile })}>
         {" "}
         As noted previosuly in Section 2.1, [PILOTS] begin at 250 MCU. This
         essentially connotes a MCU limit of 250 per pilot. A typical{" "}
@@ -64,7 +67,7 @@ export const MSUCharacteristics = () => {
         <span className="fw6 red"> [FIRETEAM] </span> construction rules will be
         in Section 2.3
       </p>
-      <p className="lh-copy tj">
+      <p className={classNames("lh-copy tj", { f7: isMobile })}>
         {" "}
         [PILOTS] can purchase MSU according to each individaul MSU cost. Up to
         25 unused MCU can be transfered to another{" "}
@@ -74,12 +77,12 @@ export const MSUCharacteristics = () => {
 
       <h3 className="f4 fw7 mt4 mb2 tj">FRO - Fusion Reactor Output</h3>
 
-      <p className="tj lh-copy">
+      <p className={classNames("tj lh-copy", { f7: isMobile })}>
         Mobile Suits are powered by Helium 3 Fusion Reactors. These reactors
         emit Minovsky particles, which interefere with conventional radar and
         other systems equipment.
       </p>
-      <p className="tj lh-copy">
+      <p className={classNames("tj lh-copy", { f7: isMobile })}>
         Fusion Reactors are an in-game feature serving as a balancing tool for
         high-mobility and beam weapon–centric Mobile Suits. FRO (Fusion Reactor
         Output) typically ranges from 5–8, with most grunt suits near 5. Given
@@ -87,7 +90,7 @@ export const MSUCharacteristics = () => {
         bandwidth for high-end prototype suits.
       </p>
 
-      <p className="tj lh-copy">
+      <p className={classNames("tj lh-copy", { f7: isMobile })}>
         Each MSU's FRO count essentially represents how much power is available
         to use beam weapons, [BOOST(X)], turn facing, etc. When choosing a MSU
         to purchase, [PILOTS] must visualize their individaul playstyle and how
@@ -96,14 +99,14 @@ export const MSUCharacteristics = () => {
       </p>
 
       <h5 className="f4 fw7 mt4 mb2 tj"> Active FRO Costs </h5>
-      <p className="lh-copy tj">
+      <p className={classNames("lh-copy tj", { f7: isMobile })}>
         {" "}
         Cost to using Beam Weapons or use other high-energy equipment. When
         using a Beam Weapon, subtract total FRO by the ACTIVE FRO COST.
       </p>
 
       <h5 className="f4 fw7 mt4 mb2 tj"> Passive FRO Costs </h5>
-      <p className="lh-copy tj">
+      <p className={classNames("lh-copy tj", { f7: isMobile })}>
         {" "}
         Native costs of running certain support equipment. Support equipment
         with PASSIVE FRO COSTS usually denote high energy requirements and
@@ -114,15 +117,15 @@ export const MSUCharacteristics = () => {
       </p>
 
       <h3 className="f4 fw7 mt4 mb2 tj">MOVEMENT</h3>
-      <p className="tj lh-copy">
+      <p className={classNames("tj lh-copy", { f7: isMobile })}>
         A MSU's base movespeed. Used in{" "}
         <span className="fw6 red"> [MOVEMENT] </span> actions. See Chapter 3,
         Section 3.2 for movement rules
       </p>
-      <p className="tj lh-copy">
+      <p className={classNames("tj lh-copy", { f7: isMobile })}>
         A MSU's base movespeed can never decrease below 1.
       </p>
-      <p className="tj lh-copy">
+      <p className={classNames("tj lh-copy", { f7: isMobile })}>
         How far an MSU moves during the movement phase is factored into evasion
         tier tables. This means that how far an MSU moved after{" "}
         <span className="fw6 red"> [MOVEMENT] </span>, [BOOST(X)], and [BLITZ]
@@ -130,7 +133,7 @@ export const MSUCharacteristics = () => {
       </p>
 
       <h3 className="f4 fw7 mt4 mb2 tj">ARMOR</h3>
-      <p className="tj lh-copy">
+      <p className={classNames("tj lh-copy", { f7: isMobile })}>
         The Armor value attributed to every hit location of a MSU
       </p>
     </div>

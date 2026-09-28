@@ -318,7 +318,7 @@ export const UPGRADES = [
     ton: "–",
     pfro: "–",
     qty: 2,
-    mcu: 25,
+    mcu: 15,
     effect: "One ranged weapon gains the [STABLE] keyword. ",
   },
   {

@@ -1,17 +1,20 @@
+import { useMediaQuery } from "@custom-react-hooks/all";
+import classNames from "classnames";
 import { MunitionsTable } from "../../../Components/Table/MunitionsTable";
 
 export const Munitions = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <div>
       <h2 className="f2 fw7 red bb pb2 mb3">2.7 — Munitions</h2>
-      <p className="lh-copy tj">
+      <p className={classNames("lh-copy tj", { f7: isMobile })}>
         [MUNITIONS] are special payloads used by missiles, grenade launchers,
         grenades, and other [INDIRECT]-fire weapons. When a weapon lists{" "}
         <span className="fw6 red">[MUNITIONS]</span> as its damage value, the
         actual damage and area of effect are determined by the munition type
         loaded at the time of firing.
       </p>
-      <p className="lh-copy tj red">
+      <p className={classNames("lh-copy tj red", { f7: isMobile })}>
         Flash, and Tagging Smoke do not stack effects when multiple missile type
         or grenade type weapons hit the same MSU
       </p>

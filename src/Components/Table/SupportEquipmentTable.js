@@ -104,7 +104,7 @@ export const SupportEquipmentTable = ({
         <div className="w-100 h-100">
           <h1> {mobileTitle} </h1>
           {showTonnageNote && (
-            <p className="f8 i mid-gray mb2">
+            <p className="f7 i mid-gray mb2">
               * Tonnage is calculated dynamically from this suit's own stats —
               Tonnage Limit ÷ 4 (Heavy Boosters, Side Verniers, Front Facing
               Thrusters) or Starting FRO ÷ 2 (Enhanced Fusion Reactors),

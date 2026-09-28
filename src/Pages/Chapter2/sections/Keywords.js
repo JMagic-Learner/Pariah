@@ -1,13 +1,12 @@
 import { KEYWORDS } from "../../../Data/KeywordArray";
 import classNames from "classnames";
-import { useMediaQuery } from "@custom-react-hooks/use-media-query";
+import { useMediaQuery } from "@custom-react-hooks/all";
 export const Keywords = () => {
   const isMobile = useMediaQuery("(max-width: 600px)");
-  console.log(isMobile);
   return (
     <div>
       <h2 className="f2 fw7 red bb pb2 mb3">2.13 — Keywords</h2>
-      <p className="lh-copy mb4">
+      <p className={classNames("lh-copy mb4", { f7: isMobile })}>
         Keywords appear on weapons, support systems, and abilities to define
         special rules. When a keyword conflicts with a general rule, the keyword
         takes precedence. Keywords marked with <strong>(X)</strong> include a

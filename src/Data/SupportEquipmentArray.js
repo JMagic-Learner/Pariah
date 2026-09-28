@@ -77,7 +77,7 @@ export const SUPPORT = [
     qty: 1,
     mcu: 50,
     effect:
-      "[COMMANDER] can perform the RALLY action for free at Step 1.1 of the Status Phase.",
+      "[COMMANDER] can perform the REPOSITION action for free at Step 1.1 of the Status Phase. This [COMMANDER] may perform more than one REPOSITION Command action in a game.",
   },
   {
     name: "Dummy Balloons",
@@ -250,6 +250,16 @@ export const SUPPORT = [
     mcu: 15,
     effect:
       'During any phase, deploy AOE(8) chaff cloud blocking LOS and detonating all missiles entering or within the 8" cloud. [LIMITED USE(1)].',
+  },
+  {
+    name: "Parachutist Pack",
+    loc: "Torso",
+    ton: 1,
+    pfro: "–",
+    qty: 1,
+    mcu: 30,
+    effect:
+      "instead of setting this MCU on the field during deployment within mission restrictions, it may perform a airborne deployment at end of round 2. This MCU is set up anywhere outside 15 inches of the enemy deployment zone. Roll 1d6 to determine the direction in which the MCU drifts as it parachutes down. Place the MCU 6 inches away in that random direction.",
   },
   {
     name: "Panoptic Canopy",

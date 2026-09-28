@@ -1,3 +1,5 @@
+import { useMediaQuery } from "@custom-react-hooks/all";
+import classNames from "classnames";
 const TERRAIN_TYPES = [
   {
     name: "HARD COVER",
@@ -44,26 +46,27 @@ const TERRAIN_TYPES = [
 ];
 
 export const Terrain = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <div>
       <h2 className="f2 fw7 red bb pb2 mb3">3.8 — Terrain and Cover</h2>
 
       <div className="bg-near-white ba b--black-10 pa3 mb4">
         <h3 className="f5 fw7 mb2">Hit Locations and Cover</h3>
-        <p className="lh-copy mb2">
+        <p className={classNames("lh-copy mb2", { f7: isMobile })}>
           Gundam Flashpoint operates on a true line of sight basis.
         </p>
-        <p className="lh-copy mb2 red b">
+        <p className={classNames("lh-copy mb2 red b", { f7: isMobile })}>
           If the player gets down on the "eye to eye level" (aka behind the
           MSU's head) and cannot draw line of sight to any hit locations, those
           hit locations are considered protected.
         </p>
-        <p className="lh-copy mb2">
+        <p className={classNames("lh-copy mb2", { f7: isMobile })}>
           For example, if a Zaku has his right leg and right arm covered by the
           side of a building, any hit locations of right arm / right leg made
           against that Zaku are considered nullified.
         </p>
-        <p className="lh-copy">
+        <p className={classNames("lh-copy", { f7: isMobile })}>
           If a Zaku is in the open field, but you can only see the side (aka
           right arm, right leg), those are the only two hit locations available
           to your ranged attacks.
@@ -77,17 +80,26 @@ export const Terrain = () => {
               <h3 className="f4 fw7 white ma0">{t.name}</h3>
             </div>
             <div className="pa3">
-              <ul className="lh-copy pl3 mb3">
+              <ul className={classNames("lh-copy pl3 mb3", { f7: isMobile })}>
                 {t.rules.map((rule, j) => (
-                  <li key={j} className="pv1">
+                  <li key={j} className={classNames("pv1", { f7: isMobile })}>
                     {rule}
                   </li>
                 ))}
               </ul>
-              <p className="f6 lh-copy mb2">
+              <p className={classNames("lh-copy mb2", { f7: isMobile, "f6": !isMobile })}>
                 <strong>Examples:</strong> {t.examples.join(", ")}
               </p>
-              {t.note && <p className="f6 lh-copy i">{t.note}</p>}
+              {t.note && (
+                <p
+                  className={classNames("lh-copy i", {
+                    f7: isMobile,
+                    f6: !isMobile,
+                  })}
+                >
+                  {t.note}
+                </p>
+              )}
             </div>
           </div>
         ))}

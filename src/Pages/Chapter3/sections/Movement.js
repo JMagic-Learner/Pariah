@@ -1,4 +1,7 @@
+import { useMediaQuery } from "@custom-react-hooks/all";
+import classNames from "classnames";
 export const Movement = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <div>
       <h2 className="f2 fw7 red bb pb2 mb3">3.2 — Facing and Movement</h2>
@@ -8,18 +11,18 @@ export const Movement = () => {
         <h3 className="f4 fw7 red mt0 mb2">
           Measuring Distance and Line of Sight
         </h3>
-        <ul className="lh-copy pl3 f6 ma0">
-          <li className="pv1">
+        <ul className={classNames("lh-copy pl3 ma0", { f7: isMobile, "f6": !isMobile })}>
+          <li className={classNames("pv1", { f7: isMobile })}>
             <span className="fw6 red">Distance</span> is measured from any part
             of the base.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             <span className="fw6 red">Line of Sight</span> is measured the head
             of the MSU. Players should get to eye level with the MSU's head and
             ascertain from the MSU's head if the enemy hit locations can be
             seen".
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             Firing arcs, [BOOST(X)] paths, and rear arc vulnerability are all
             determined by the MSU's current facing.
           </li>
@@ -29,7 +32,7 @@ export const Movement = () => {
       {/* Evasion Tier Table */}
       <div className="bg-near-white ba b--black-10 br2 pa3 mb3">
         <h3 className="f4 fw7 red mt0 mb2">Evasion Tier Table</h3>
-        <p className="lh-copy f6 mb3">
+        <p className={classNames("lh-copy mb3", { f7: isMobile, "f6": !isMobile })}>
           Total movement made during the Movement Phase determines how many
           evasion mods a <span className="fw6 red"> [PILOT]</span> adds when
           defending against attacks. Distance moved from all{" "}
@@ -43,38 +46,38 @@ export const Movement = () => {
           <table className="f6 w-100" cellSpacing="0">
             <thead>
               <tr>
-                <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">
+                <th className={classNames("fw6 bb b--black-20 pb3 pr3 bg-white tc", { f7: isMobile })}>
                   Evasion Tier
                 </th>
-                <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">
+                <th className={classNames("fw6 bb b--black-20 pb3 pr3 bg-white tc", { f7: isMobile })}>
                   Movement (inches)
                 </th>
-                <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">
+                <th className={classNames("fw6 bb b--black-20 pb3 pr3 bg-white tc", { f7: isMobile })}>
                   Evasion Dice
                 </th>
-                <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">
+                <th className={classNames("fw6 bb b--black-20 pb3 pr3 bg-white tc", { f7: isMobile })}>
                   Gunnery Penalty
                 </th>
               </tr>
             </thead>
             <tbody className="lh-copy">
               <tr>
-                <td className="pv2 pr3 bb b--black-20 fw6 red">Tier 1</td>
-                <td className="pv2 pr3 bb b--black-20">0-3″</td>
-                <td className="pv2 pr3 bb b--black-20 fw6">2d3 + PS − 1</td>
-                <td className="pv2 pr3 bb b--black-20 fw6">+ 1 GS</td>
+                <td className={classNames("pv2 pr3 bb b--black-20 fw6 red", { f7: isMobile })}>Tier 1</td>
+                <td className={classNames("pv2 pr3 bb b--black-20", { f7: isMobile })}>0-3″</td>
+                <td className={classNames("pv2 pr3 bb b--black-20 fw6", { f7: isMobile })}>2d3 + PS − 1</td>
+                <td className={classNames("pv2 pr3 bb b--black-20 fw6", { f7: isMobile })}>+ 1 GS</td>
               </tr>
               <tr>
-                <td className="pv2 pr3 bb b--black-20 fw6 red">Tier 2</td>
-                <td className="pv2 pr3 bb b--black-20">4″ – 13″</td>
-                <td className="pv2 pr3 bb b--black-20 fw6">2d3 + PS</td>
-                <td className="pv2 pr3 bb b--black-20 fw6"> -1 GS </td>
+                <td className={classNames("pv2 pr3 bb b--black-20 fw6 red", { f7: isMobile })}>Tier 2</td>
+                <td className={classNames("pv2 pr3 bb b--black-20", { f7: isMobile })}>4″ – 13″</td>
+                <td className={classNames("pv2 pr3 bb b--black-20 fw6", { f7: isMobile })}>2d3 + PS</td>
+                <td className={classNames("pv2 pr3 bb b--black-20 fw6", { f7: isMobile })}> -1 GS </td>
               </tr>
               <tr>
-                <td className="pv2 pr3 fw6 red">Tier 3 — Fast</td>
-                <td className="pv2 pr3">13″ +</td>
-                <td className="pv2 pr3 fw6">2d3 + PS + 1</td>
-                <td className="pv2 pr3 bb b--black-20 fw6"> -2 GS </td>
+                <td className={classNames("pv2 pr3 fw6 red", { f7: isMobile })}>Tier 3 — Fast</td>
+                <td className={classNames("pv2 pr3", { f7: isMobile })}>13″ +</td>
+                <td className={classNames("pv2 pr3 fw6", { f7: isMobile })}>2d3 + PS + 1</td>
+                <td className={classNames("pv2 pr3 bb b--black-20 fw6", { f7: isMobile })}> -2 GS </td>
               </tr>
             </tbody>
           </table>
@@ -92,7 +95,7 @@ export const Movement = () => {
             <span className="fw6 red"> [MOVEMENT] </span> [1 ACTION]
           </span>
         </h3>
-        <p className="lh-copy f6 mb2">
+        <p className={classNames("lh-copy mb2", { f7: isMobile, "f6": !isMobile })}>
           An MSU can move forward up to its{" "}
           <span className="fw6 red"> [MOVEMENT] </span> value in inches. It may
           not pass through enemy MSU. If the moving MSU does not have the{" "}
@@ -102,14 +105,14 @@ export const Movement = () => {
           over terrain freely as long as terrain features are below 3 inches in
           height.
         </p>
-        <ul className="lh-copy pl3 f6 ma0">
-          <li className="pv1">
+        <ul className={classNames("lh-copy pl3 ma0", { f7: isMobile, "f6": !isMobile })}>
+          <li className={classNames("pv1", { f7: isMobile })}>
             <span className="fw6 red">
               Turning one hex facing, moving backwards, or moving sideways each
               cost 2 inches of movement
             </span>
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             Moving or flying <span className="fw6 red">vertically</span>{" "}
             (jumping) costs{" "}
             <span className="fw6 red">
@@ -117,18 +120,18 @@ export const Movement = () => {
             </span>{" "}
             travelled.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             An MSU may end its movement while airborne (mid-air). An MSU that
             begins its activation in mid-air must choose one of the following:
-            <ul className="pl3 mt1">
-              <li className="pv1">
+            <ul className={classNames("pl3 mt1", { f7: isMobile })}>
+              <li className={classNames("pv1", { f7: isMobile })}>
                 <span className="fw6 red">
                   <span className="fw6 red"> [FALL] </span>
                 </span>{" "}
                 — drop to ground level at no movement cost. The MSU takes fall
                 damage (see below).
               </li>
-              <li className="pv1">
+              <li className={classNames("pv1", { f7: isMobile })}>
                 <span className="fw6 red">
                   <span className="fw6 red"> [HOVER] </span>
                 </span>{" "}
@@ -137,7 +140,7 @@ export const Movement = () => {
               </li>
             </ul>
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             An MSU may [REPOSE] for 4 inches of movement. Repositioning allows
             the MSU to adjust its stance to better benefit from [HARD COVER].
           </li>
@@ -164,33 +167,33 @@ export const Movement = () => {
             or vertically per 1 FRO spent]
           </span>
         </h3>
-        <p className="lh-copy f6 mb2">
+        <p className={classNames("lh-copy mb2", { f7: isMobile, "f6": !isMobile })}>
           An MSU that BOOST9(X) can accelerate directly forward or vertically{" "}
           <span className="fw6 red">[X] inches</span> by spending{" "}
           <span className="fw6 red">1 FRO</span>.
         </p>
-        <ul className="lh-copy pl3 f6 ma0">
-          <li className="pv1">
+        <ul className={classNames("lh-copy pl3 ma0", { f7: isMobile, "f6": !isMobile })}>
+          <li className={classNames("pv1", { f7: isMobile })}>
             All MSUs have <span className="fw6 red">[BOOST(1)]</span> by
             default. The Heavy Boosters support equipment upgrades this to
             <span className="fw6 red"> [BOOST(2)]</span>.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             If an MSU consumes three FRO to{" "}
             <span className="fw6 red"> [BOOST(X)]</span>, that MSU gains +1
             Evasion mod .
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             An MSU may <span className="fw6 red"> [BOOST] </span> more than once
             per activation, as long as it can pay the [FRO] cost for each{" "}
             <span className="fw6 red"> [BOOST] </span>.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             An MSU may also use a <span className="fw6 red"> [BOOST] </span> to{" "}
             <span className="fw6 red">turn one hex facing</span> instead of
             moving forward or vertically.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             <span className="fw6 red"> [BOOST] </span> movement is counted when
             calculating Evasion modifiers from the Evasion Tier Table.
           </li>
@@ -205,47 +208,47 @@ export const Movement = () => {
             <span className="fw6 red"> [MOVEMENT] </span> [2 Actions] [1 FRO]
           </span>
         </h3>
-        <p className="lh-copy f6 mb2 i">
+        <p className={classNames("lh-copy mb2 i", { f7: isMobile, "f6": !isMobile })}>
           Maneuvers are special actions that require two Actions to perform.
         </p>
-        <ul className="lh-copy pl3 f6 ma0">
-          <li className="pv1">
+        <ul className={classNames("lh-copy pl3 ma0", { f7: isMobile, "f6": !isMobile })}>
+          <li className={classNames("pv1", { f7: isMobile })}>
             <span className="fw6 red">Minimum distance:</span> 6 inches between
             the Blitzing MSU and the target MSU at the start of the action.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             This movement must be in a{" "}
             <span className="fw6 red">straight line</span>.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             Move the Blitzing MSU double its base movement, and increase its
             movement by any additional [FRO] it wishes to spend.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             If the enemy MSU has LOS to the Blitzing MSU, the enemy may spend an
             Action to evade. That MSU rolls a Evasion Check vs a static value of
             6. If successful, the opposing MSU may move its base movement
             sideways without penalty.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             If the Blitzing MSU comes into contact with one or more enemy MSUs,
             those MSUs are pushed along the straight path. A single [BLITZ] can
             push multiple MSUs simultaneously.
           </li>
-          <li className="pv1">
+          <li className={classNames("pv1", { f7: isMobile })}>
             <span className="fw6 red">Collision damage:</span>
-            <ul className="pl3 mt1">
-              <li className="pv1">
+            <ul className={classNames("pl3 mt1", { f7: isMobile })}>
+              <li className={classNames("pv1", { f7: isMobile })}>
                 Target MSU:{" "}
                 <span className="fw6 red">10 damage + 1 per 3 inches</span> of
                 movement.
               </li>
-              <li className="pv1">
+              <li className={classNames("pv1", { f7: isMobile })}>
                 Blitzing MSU:{" "}
                 <span className="fw6 red">5 damage + 1 per 3 inches</span> of
                 movement.
               </li>
-              <li className="pv1">
+              <li className={classNames("pv1", { f7: isMobile })}>
                 The Blitzing MSU may choose to assign damage it's equipped
                 Shield first. IF it does so, it may not benefit from Spiky
                 Shoulder supprot equipment.
@@ -267,7 +270,7 @@ export const Movement = () => {
             <span className="fw6 red"> [MOVEMENT] </span>
           </span>
         </h3>
-        <p className="lh-copy f6 ma0">
+        <p className={classNames("lh-copy ma0", { f7: isMobile, "f6": !isMobile })}>
           Repositioning the MSU may allow a player to adjust its model to better
           benefit from [HARD COVER]. For example, a player may repose the MSU
           into a crouching position, shifting [HARD COVER] protection to also
@@ -284,7 +287,7 @@ export const Movement = () => {
             <span className="fw6 red"> [MOVEMENT] </span> [ACTION]
           </span>
         </h3>
-        <p className="lh-copy f6 ma0">
+        <p className={classNames("lh-copy ma0", { f7: isMobile, "f6": !isMobile })}>
           The pilot gains the
           <span className="fw6 red"> [AIMING]</span> state..
         </p>

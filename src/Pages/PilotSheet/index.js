@@ -42,7 +42,8 @@ import { PanelToggle } from "./components/PanelToggle";
 import { EquipmentPickerModal } from "./components/EquipmentPickerModal";
 import { TraitPickerModal } from "./components/TraitPickerModal";
 import { MsuPresetPickerModal } from "./components/MsuPresetPickerModal";
-
+import { ReferenceModal } from "./components/ReferenceModal";
+import { Z_ALERT } from "../../utils/zIndex";
 import { usePilotDerivedStats } from "./hooks/usePilotDerivedStats";
 import { useSupportLocations } from "./hooks/useSupportLocations";
 import { useEquipmentUpdaters } from "./hooks/useEquipmentUpdaters";
@@ -136,9 +137,6 @@ const PilotSheetPanel = ({ slotIndex }) => {
     setShowBaseEquip,
     showAddlEquip,
     setShowAddlEquip,
-    showPresets,
-    setShowPresets,
-    customPreset,
   } = pilotSlot;
 
   const {
@@ -191,7 +189,6 @@ const PilotSheetPanel = ({ slotIndex }) => {
   const [slotWarning, setSlotWarning] = useState(null);
   const [kwDialog, setKwDialog] = useState(null);
   const [traitPickerIdx, setTraitPickerIdx] = useState(null);
-  const [presetPicker, setPresetPicker] = useState(null);
   const openEquipPopup = (onSelect, restrictTab) =>
     setEquipPopup({ onSelect, restrictTab });
   const closeEquipPopup = () => setEquipPopup(null);
@@ -211,8 +208,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
       "Upgrades",
     );
 
-  const { handleMsuName, saveCustomPreset, loadCustomPreset, applyPreset } =
-    usePilotSlotActions(slotIndex, pilotSlot);
+  const { handleMsuName } = usePilotSlotActions(slotIndex, pilotSlot);
 
   const updateTrait = (i, v) =>
     setTraits((prev) => prev.map((t, idx) => (idx === i ? v : t)));
@@ -223,7 +219,12 @@ const PilotSheetPanel = ({ slotIndex }) => {
   // ─── Render ──────────────────────────────────────────────────────────────────
 
   return (
-    <div className="pa3 pa4-ns mw9 center">
+    <div
+      className={classNames(" pa4-ns mw9 center", {
+        pa3: !isMobile,
+        pa1: isMobile,
+      })}
+    >
       {/* ── MSU Name ── */}
       <div className="ba b--black-20 mb3">
         <SheetHeader>MSU Name</SheetHeader>
@@ -259,11 +260,8 @@ const PilotSheetPanel = ({ slotIndex }) => {
                   <tr>
                     <TH className="w-30 tc">Pilot Name</TH>
                     <TH className="tc">Gunnery</TH>
-                    <TH className="tc">+Mod</TH>
                     <TH className="tc">Brawl</TH>
-                    <TH className="tc">+Mod</TH>
                     <TH className="tc">Piloting</TH>
-                    <TH className="tc">+Mod</TH>
                   </tr>
                 </thead>
                 <tbody>
@@ -277,22 +275,22 @@ const PilotSheetPanel = ({ slotIndex }) => {
                       />
                     </TD>
                     <TD className="tc">
-                      <NumInput value={gunnery} onChange={setGunnery} />
+                      <NumInput
+                        value={Number(gunnery || 0) + gsBonus}
+                        onChange={setGunnery}
+                      />
                     </TD>
                     <TD className="tc">
-                      <NumInput value={gsBonus} onChange={() => {}} />
+                      <NumInput
+                        value={Number(brawl || 0) + brBonus}
+                        onChange={setBrawl}
+                      />
                     </TD>
                     <TD className="tc">
-                      <NumInput value={brawl} onChange={setBrawl} />
-                    </TD>
-                    <TD className="tc">
-                      <NumInput value={brBonus} onChange={() => {}} />
-                    </TD>
-                    <TD className="tc">
-                      <NumInput value={piloting} onChange={setPiloting} />
-                    </TD>
-                    <TD className="tc">
-                      <NumInput value={psBonus} onChange={() => {}} />
+                      <NumInput
+                        value={Number(piloting || 0) + psBonus}
+                        onChange={setPiloting}
+                      />
                     </TD>
                   </tr>
                 </tbody>
@@ -558,7 +556,10 @@ const PilotSheetPanel = ({ slotIndex }) => {
               />
             </div>
             {showTraits && (
-              <div className="bt b--black-10 overflow-auto">
+              <ReferenceModal
+                title="Trait Reference"
+                onClose={() => setShowTraits(false)}
+              >
                 <table className="w-100 f7" cellSpacing="0">
                   <thead>
                     <tr>
@@ -577,7 +578,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                     ))}
                   </tbody>
                 </table>
-              </div>
+              </ReferenceModal>
             )}
           </>
         )}
@@ -588,65 +589,6 @@ const PilotSheetPanel = ({ slotIndex }) => {
         <div className="flex items-center justify-between flex-wrap bg-dark-green white fw7 f7 pa2 ttu tracked">
           <span>Mobile Suit Unit</span>
         </div>
-
-        {/* ── Presets section ── */}
-        <div className="bg-dark-green white fw7 f7 pa2 ttu tracked flex items-center justify-between bt b--black-20">
-          <span className="v-mid">Presets</span>
-          <PanelToggle
-            open={showPresets}
-            onToggle={() => setShowPresets((v) => !v)}
-          />
-        </div>
-        {showPresets && (
-          <div
-            className="pa2 flex flex-wrap items-center bt b--black-10"
-            style={{ gap: "0.5rem" }}
-          >
-            {[
-              { label: "EF", presets: EF_PRESETS },
-              { label: "ZEON", presets: ZEON_PRESETS },
-              { label: "CBV", presets: CROSSBONE_PRESETS },
-              { label: "MAFTY", presets: MAFTY_PRESETS },
-              { label: "REZEON", presets: REZEON_PRESETS },
-            ].map(({ label, presets }) => (
-              <div
-                key={label}
-                className="flex items-center"
-                style={{ flex: "1 1 10rem" }}
-              >
-                <span className="f8 mr1 nowrap">{label}:</span>
-                <button
-                  type="button"
-                  className="f7 ba b--black-20 pa1 bg-white pointer normal w-100 tl dim"
-                  onClick={() => setPresetPicker({ label, presets })}
-                >
-                  — Select Preset —
-                </button>
-              </div>
-            ))}
-            <div
-              className="flex items-center"
-              style={{ flex: "1 1 10rem", gap: "0.25rem" }}
-            >
-              <button
-                className="f8 ph2 pv1 bn br1 pointer bg-white dark-green fw7 dim w-100"
-                onClick={saveCustomPreset}
-                title="Save current sheet as custom preset"
-              >
-                SAVE CUSTOM
-              </button>
-              {customPreset && (
-                <button
-                  className="f8 ph2 pv1 bn br1 pointer bg-yellow dark-green fw7 dim w-100"
-                  onClick={loadCustomPreset}
-                  title="Load saved custom preset"
-                >
-                  LOAD CUSTOM
-                </button>
-              )}
-            </div>
-          </div>
-        )}
 
         <div className="overflow-auto">
           <table className="w-100 f7" cellSpacing="0">
@@ -819,22 +761,22 @@ const PilotSheetPanel = ({ slotIndex }) => {
 
         {/* ── Additional Equipment section ── */}
         <div className="bg-dark-green white fw7 f7 pa2 ttu tracked flex items-center justify-between bt b--black-20">
+          <span className="v-mid">Additional Equipment</span>
           <span className="flex items-center" style={{ gap: "0.75rem" }}>
-            <span className="v-mid">Additional Equipment</span>
+            <button
+              className="f7 fw6 ph2 pv1 bg-red white bn br1 pointer ttu tracked v-mid"
+              onClick={() => {
+                addlEquip.forEach((row) => removeSupportLoc(row.name));
+                setAddlEquip(Array(8).fill(null).map(blankEquip));
+              }}
+            >
+              Clear All
+            </button>
             <PanelToggle
               open={showAddlEquip}
               onToggle={() => setShowAddlEquip((v) => !v)}
             />
           </span>
-          <button
-            className="f7 fw6 ph2 pv1 bg-red white bn br1 pointer ttu tracked v-mid"
-            onClick={() => {
-              addlEquip.forEach((row) => removeSupportLoc(row.name));
-              setAddlEquip(Array(8).fill(null).map(blankEquip));
-            }}
-          >
-            Clear All
-          </button>
         </div>
         {showAddlEquip &&
           (isMobile ? (
@@ -973,119 +915,54 @@ const PilotSheetPanel = ({ slotIndex }) => {
             </div>
           ))}
 
-        {/* Reference toggles */}
-
-        {!isMobile && (
-          <div className="ph2 pb2 flex">
-            <RefToggle
-              open={showWeapons}
-              onToggle={() => setShowWeapons((v) => !v)}
-              label="Ranged Weapons Reference"
-            />
-            <span className="mr2" />
-            <RefToggle
-              open={showMelee}
-              onToggle={() => setShowMelee((v) => !v)}
-              label="Melee Weapons Reference"
-            />
-            <span className="mr2" />
-            <RefToggle
-              open={showSupport}
-              onToggle={() => setShowSupport((v) => !v)}
-              label="Support Equipment Reference"
-            />
-            <span className="mr2" />
-            <RefToggle
-              open={showUpgrades}
-              onToggle={() => setShowUpgrades((v) => !v)}
-              label="Upgrades Reference"
-            />
-            <span className="mr2" />
-            <RefToggle
-              open={showFrameImprovements}
-              onToggle={() => setShowFrameImprovements((v) => !v)}
-              label="Frame Improvements Reference"
-            />
-            <span className="mr2" />
-            <RefToggle
-              open={showKeywords}
-              onToggle={() => setShowKeywords((v) => !v)}
-              label="Keyword Reference"
-            />
-            <span className="mr2" />
-            <RefToggle
-              open={showNewtype}
-              onToggle={() => setShowNewtype((v) => !v)}
-              label="Newtype Upgrades"
-            />
-          </div>
-        )}
-
-        {isMobile && (
-          <div className="ph2 pb2 flex">
-            <span className="mr2" />
-            <RefToggle
-              open={showSupport}
-              onToggle={() => setShowSupport((v) => !v)}
-              label="Support Equipment"
-            />
-            <span className="mr2" />
-            <RefToggle
-              open={showUpgrades}
-              onToggle={() => setShowUpgrades((v) => !v)}
-              label="Upgrades"
-            />
-            <span className="mr2" />
-            <RefToggle
-              open={showFrameImprovements}
-              onToggle={() => setShowFrameImprovements((v) => !v)}
-              label="Frame Improvements"
-            />
-            <span className="mr2" />
-            <RefToggle
-              open={showKeywords}
-              onToggle={() => setShowKeywords((v) => !v)}
-              label="Keyword"
-            />
-            <span className="mr2" />
-            <RefToggle
-              open={showNewtype}
-              onToggle={() => setShowNewtype((v) => !v)}
-              label="Newtype"
-            />
-          </div>
-        )}
-
         {showWeapons && (
-          <div className="bt b--black-10 ph2 pb2">
+          <ReferenceModal
+            title="Ranged Weapons Reference"
+            onClose={() => setShowWeapons(false)}
+          >
             <RangedWeaponTable />
-          </div>
+          </ReferenceModal>
         )}
         {showMelee && (
-          <div className="bt b--black-10 ph2 pb2">
+          <ReferenceModal
+            title="Melee Weapons Reference"
+            onClose={() => setShowMelee(false)}
+          >
             <MeleeWeaponTable />
-          </div>
+          </ReferenceModal>
         )}
         {showSupport && (
-          <div className="bt b--black-10 ph2 pb2">
+          <ReferenceModal
+            title="Support Equipment Reference"
+            onClose={() => setShowSupport(false)}
+          >
             <SupportEquipmentTable tonnageLimit={tonnageLimit} fro={fro} />
-          </div>
+          </ReferenceModal>
         )}
         {showUpgrades && (
-          <div className="bt b--black-10 ph2 pb2">
+          <ReferenceModal
+            title="Upgrades Reference"
+            onClose={() => setShowUpgrades(false)}
+          >
             <SupportEquipmentTable items={UPGRADES} mobileTitle="Upgrades" />
-          </div>
+          </ReferenceModal>
         )}
         {showFrameImprovements && (
-          <div className="bt b--black-10 ph2 pb2">
+          <ReferenceModal
+            title="Frame Improvements Reference"
+            onClose={() => setShowFrameImprovements(false)}
+          >
             <SupportEquipmentTable
               items={FRAME_IMPROVEMENTS}
               mobileTitle="Frame Improvements"
             />
-          </div>
+          </ReferenceModal>
         )}
         {showNewtype && (
-          <div className="bt b--black-10 ph2 pb2 overflow-auto">
+          <ReferenceModal
+            title="Newtype Upgrades"
+            onClose={() => setShowNewtype(false)}
+          >
             <p className="f7 fw7 ttu tracked mv2 dark-green">
               Newtype Upgrades
             </p>
@@ -1148,10 +1025,13 @@ const PilotSheetPanel = ({ slotIndex }) => {
                 ))}
               </tbody>
             </table>
-          </div>
+          </ReferenceModal>
         )}
         {showKeywords && (
-          <div className="bt b--black-10 ph2 pb2 overflow-auto">
+          <ReferenceModal
+            title="Keyword Reference"
+            onClose={() => setShowKeywords(false)}
+          >
             <table className="w-100 f7" cellSpacing="0">
               <thead>
                 <tr>
@@ -1173,7 +1053,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
                 ))}
               </tbody>
             </table>
-          </div>
+          </ReferenceModal>
         )}
       </div>
 
@@ -1236,6 +1116,51 @@ const PilotSheetPanel = ({ slotIndex }) => {
 
         {/* Reference column */}
         <div className={classNames("ba b--black-20", { "w-25": !isMobile })}>
+          <SheetHeader>Reference Tables</SheetHeader>
+          <div
+            className="ph2 pv2 flex flex-column flex-wrap bb b--black-10"
+            style={{ gap: "0.4rem" }}
+          >
+            {!isMobile && (
+              <>
+                <RefToggle
+                  open={showWeapons}
+                  onToggle={() => setShowWeapons((v) => !v)}
+                  label="Ranged Weapons Reference"
+                />
+                <RefToggle
+                  open={showMelee}
+                  onToggle={() => setShowMelee((v) => !v)}
+                  label="Melee Weapons Reference"
+                />
+              </>
+            )}
+            <RefToggle
+              open={showSupport}
+              onToggle={() => setShowSupport((v) => !v)}
+              label={isMobile ? "Support Equipment" : "Support Equipment Reference"}
+            />
+            <RefToggle
+              open={showUpgrades}
+              onToggle={() => setShowUpgrades((v) => !v)}
+              label={isMobile ? "Upgrades" : "Upgrades Reference"}
+            />
+            <RefToggle
+              open={showFrameImprovements}
+              onToggle={() => setShowFrameImprovements((v) => !v)}
+              label={isMobile ? "Frame Improvements" : "Frame Improvements Reference"}
+            />
+            <RefToggle
+              open={showKeywords}
+              onToggle={() => setShowKeywords((v) => !v)}
+              label={isMobile ? "Keyword" : "Keyword Reference"}
+            />
+            <RefToggle
+              open={showNewtype}
+              onToggle={() => setShowNewtype((v) => !v)}
+              label={isMobile ? "Newtype" : "Newtype Upgrades"}
+            />
+          </div>
           <SheetHeader>Evasion Tier Table</SheetHeader>
           <table className="w-100 f7" cellSpacing="0">
             <thead>
@@ -1321,23 +1246,13 @@ const PilotSheetPanel = ({ slotIndex }) => {
         />
       )}
 
-      {/* MSU preset picker modal */}
-      {presetPicker && (
-        <MsuPresetPickerModal
-          label={presetPicker.label}
-          presets={presetPicker.presets}
-          onClose={() => setPresetPicker(null)}
-          onSelect={(id) => applyPreset(id)}
-        />
-      )}
-
       {/* Slot overflow warning */}
       {slotWarning && (
         <div
           style={{
             position: "fixed",
             inset: 0,
-            zIndex: 2000,
+            zIndex: Z_ALERT,
             background: "rgba(0,0,0,0.55)",
             display: "flex",
             alignItems: "center",
@@ -1377,6 +1292,11 @@ export const PilotSheet = () => {
     usePilotSheet();
   const [showTeamNav, setShowTeamNav] = useState(true);
   const [showInitiative, setShowInitiative] = useState(true);
+  const [presetPicker, setPresetPicker] = useState(null);
+
+  const activePilotSlot = usePilotSlot(activeTab);
+  const { saveCustomPreset, loadCustomPreset, applyPreset } =
+    usePilotSlotActions(activeTab, activePilotSlot);
 
   const updateInitiative = (i, v) =>
     setInitiatives((prev) => prev.map((val, idx) => (idx === i ? v : val)));
@@ -1426,6 +1346,61 @@ export const PilotSheet = () => {
               ))}
             </div>
           ))}
+        </div>
+      )}
+
+      {/* ── Presets (applies to the active pilot tab) ── */}
+      {showTeamNav && (
+        <div
+          className="flex flex-wrap items-center bb b--black-20 bg-near-white ph2 pv2"
+          style={{ gap: "0.5rem" }}
+        >
+          <span className="f7 fw7 dark-gray nowrap">
+            Presets — {tabNames[activeTab]}:
+          </span>
+          {[
+            { label: "EF", presets: EF_PRESETS },
+            { label: "ZEON", presets: ZEON_PRESETS },
+            { label: "CBV", presets: CROSSBONE_PRESETS },
+            { label: "MAFTY", presets: MAFTY_PRESETS },
+            { label: "REZEON", presets: REZEON_PRESETS },
+          ].map(({ label, presets }) => (
+            <div
+              key={label}
+              className="flex items-center"
+              style={{ flex: "1 1 10rem" }}
+            >
+              <span className="f8 mr1 nowrap">{label}:</span>
+              <button
+                type="button"
+                className="f7 ba b--black-20 pa1 bg-white pointer normal w-100 tl dim"
+                onClick={() => setPresetPicker({ label, presets })}
+              >
+                — Select Preset —
+              </button>
+            </div>
+          ))}
+          <div
+            className="flex items-center"
+            style={{ flex: "1 1 10rem", gap: "0.25rem" }}
+          >
+            <button
+              className="f8 ph2 pv1 bn br1 pointer bg-white dark-green fw7 dim w-100"
+              onClick={saveCustomPreset}
+              title="Save current sheet as custom preset"
+            >
+              SAVE CUSTOM
+            </button>
+            {activePilotSlot.customPreset && (
+              <button
+                className="f8 ph2 pv1 bn br1 pointer bg-yellow dark-green fw7 dim w-100"
+                onClick={loadCustomPreset}
+                title="Load saved custom preset"
+              >
+                LOAD CUSTOM
+              </button>
+            )}
+          </div>
         </div>
       )}
 
@@ -1480,6 +1455,16 @@ export const PilotSheet = () => {
           <PilotSheetPanel slotIndex={i} />
         </div>
       ))}
+
+      {/* MSU preset picker modal — applies to the active pilot tab */}
+      {presetPicker && (
+        <MsuPresetPickerModal
+          label={presetPicker.label}
+          presets={presetPicker.presets}
+          onClose={() => setPresetPicker(null)}
+          onSelect={(id) => applyPreset(id)}
+        />
+      )}
     </div>
   );
 };

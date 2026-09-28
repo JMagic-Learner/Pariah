@@ -1,25 +1,28 @@
 import classNames from "classnames";
+import { useMediaQuery } from "@custom-react-hooks/all";
 import { TRAITS } from "../../../Data/PilotTraitArray";
 import { renderKeywords } from "../../../utils/renderKeywords";
+import { Z_MODAL } from "../../../utils/zIndex";
 
 export const TraitPickerModal = ({ onClose, onSelect, onKeywordClick }) => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <div
       style={{
         position: "fixed",
         inset: 0,
-        zIndex: 1000,
+        zIndex: Z_MODAL,
         background: "rgba(0,0,0,0.55)",
         display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        alignItems: isMobile ? "" : "center",
+        justifyContent: isMobile ? "" : "center",
       }}
       onClick={onClose}
     >
       <div
         style={{
-          width: "92vw",
-          height: "86vh",
+          width: isMobile ? "100vw" : "92vw",
+          height: isMobile ? "100vh" : "86vh",
           display: "flex",
           flexDirection: "column",
           background: "white",

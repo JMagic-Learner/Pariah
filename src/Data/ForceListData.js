@@ -1205,6 +1205,18 @@ export const FORCE_LIST_FACTIONS = [
           "Cannon, Shield (Shoulder), Spiky Shoulder, Beam Hawk, Heavy Boosters",
       },
       {
+        msu: "AMS-119S Geara Doga Kai",
+        mcu: 205,
+        move: '7"',
+        armor: 28,
+        fro: 7,
+        tonnage: 30,
+        year: "0093",
+        faction: "Zeon, Neo Zeon",
+        equipment:
+          "(Beam) Machine Gun [GRIP], Shield (Shoulder), Spiky Shoulder, Beam Hawk, Shield, Command Protocol",
+      },
+      {
         msu: "MSN-04 Sazabi",
         mcu: 255,
         move: '8"',

@@ -1,11 +1,14 @@
+import { useMediaQuery } from "@custom-react-hooks/all";
+import classNames from "classnames";
 import { SupportEquipmentTable } from "../../../Components/Table/SupportEquipmentTable";
 import { FRAME_IMPROVEMENTS } from "../../../Data/FrameImprovements";
 
 export const FrameImprovements = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <div>
       <h2 className="f2 fw7 red bb pb2 mb3">2.9 — Frame Improvements</h2>
-      <p className="lh-copy tj">
+      <p className={classNames("lh-copy tj", { f7: isMobile })}>
         Frame Improvements are structural and armor modifications installed
         directly on the MSU's frame, covering a specific hit location. Each
         item lists its install location, tonnage cost, passive FRO drain,

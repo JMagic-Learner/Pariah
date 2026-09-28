@@ -1,3 +1,5 @@
+import { useMediaQuery } from "@custom-react-hooks/all";
+import classNames from "classnames";
 const PILOT_FATE_TABLE = [
   {
     roll: "1",
@@ -22,11 +24,12 @@ const PILOT_FATE_TABLE = [
 ];
 
 export const PilotDeath = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <div>
       <h2 className="f2 fw7 red bb pb2 mb3">6.3 — Pilot Death</h2>
 
-      <p className="lh-copy tj mb4">
+      <p className={classNames("lh-copy tj mb4", { f7: isMobile })}>
         This section details what happens when a{" "}
         <span className="fw6 red"> [PILOT]</span> is incapacitated or otherwise
         killed in action during a Campaign Battle. These rules only apply to
@@ -36,7 +39,7 @@ export const PilotDeath = () => {
 
       <div className="mb4 pa3 bg-near-white ba b--black-10">
         <h3 className="f4 fw7 red mt0 mb2">Trigger</h3>
-        <p className="lh-copy f6 mb0">
+        <p className={classNames("lh-copy mb0", { f7: isMobile, "f6": !isMobile })}>
           Whenever a <span className="fw6 red"> [PILOT]</span>'s MSU torso hit
           locations destroyed, or otherwise suffers a{" "}
           <span className="fw6 red"> [REACTOR CRITICAL] </span>
@@ -49,17 +52,17 @@ export const PilotDeath = () => {
         <table className="f6 w-100" cellSpacing="0">
           <thead>
             <tr>
-              <th className="fw6 bb b--black-20 pb3 pr3 bg-white tl">1d6</th>
-              <th className="fw6 bb b--black-20 pb3 pr3 bg-white tl">Result</th>
-              <th className="fw6 bb b--black-20 pb3 pr3 bg-white tl">Effect</th>
+              <th className={classNames("fw6 bb b--black-20 pb3 pr3 bg-white tl", { f7: isMobile })}>1d6</th>
+              <th className={classNames("fw6 bb b--black-20 pb3 pr3 bg-white tl", { f7: isMobile })}>Result</th>
+              <th className={classNames("fw6 bb b--black-20 pb3 pr3 bg-white tl", { f7: isMobile })}>Effect</th>
             </tr>
           </thead>
           <tbody className="lh-copy">
             {PILOT_FATE_TABLE.map((row, i) => (
               <tr key={i}>
-                <td className="pv3 pr3 bb b--black-20 fw6 tc">{row.roll}</td>
-                <td className="pv3 pr3 bb b--black-20 fw6">{row.name}</td>
-                <td className="pv3 pr3 bb b--black-20">{row.text}</td>
+                <td className={classNames("pv3 pr3 bb b--black-20 fw6 tc", { f7: isMobile })}>{row.roll}</td>
+                <td className={classNames("pv3 pr3 bb b--black-20 fw6", { f7: isMobile })}>{row.name}</td>
+                <td className={classNames("pv3 pr3 bb b--black-20", { f7: isMobile })}>{row.text}</td>
               </tr>
             ))}
           </tbody>
@@ -67,7 +70,7 @@ export const PilotDeath = () => {
       </div>
 
       <div className="mt4 pa3 bg-near-white ba b--black-10">
-        <p className="ma0 lh-copy f6">
+        <p className={classNames("ma0 lh-copy", { f7: isMobile, "f6": !isMobile })}>
           <strong>Note:</strong> This roll cannot be modified by pilot traits or
           support equipment unless a Pilot Accolade (Section 6.4) explicitly
           states otherwise.

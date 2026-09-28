@@ -1,9 +1,12 @@
+import { useMediaQuery } from "@custom-react-hooks/all";
+import classNames from "classnames";
 export const Overview = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <div>
       <h2 className="f2 fw7 red bb pb2 mb3">4.0 — Missions Overview</h2>
 
-      <p className="lh-copy mb3">
+      <p className={classNames("lh-copy mb3", { f7: isMobile })}>
         Chapter 4 contains all playable missions for Flashpoint. Each mission
         defines a Field of Operations (map size and setup), Deployment Zones,
         Victory Conditions, and any Mission-Specific Rules. Players agree on the
@@ -11,12 +14,12 @@ export const Overview = () => {
       </p>
 
       <h3 className="f4 fw7 mt3 mb2">Force Restrictions</h3>
-      <p className="lh-copy mb2">
+      <p className={classNames("lh-copy mb2", { f7: isMobile })}>
         Unless a mission states otherwise, all Fireteams follow these
         restrictions:
       </p>
-      <ul className="lh-copy pl3">
-        <li className="pv1">
+      <ul className={classNames("lh-copy pl3", { f7: isMobile })}>
+        <li className={classNames("pv1", { f7: isMobile })}>
           Minimum of 2 MSUs per <span className="fw6 red"> [FIRETEAM] </span>{" "}
           regardless of budget.
         </li>
@@ -27,14 +30,14 @@ export const Overview = () => {
         <table className="f9 w-100 mh2" cellSpacing="0">
           <thead>
             <tr>
-              <th className="fw6 bb b--black-20 pb3 pr3 bg-white">Game Size</th>
-              <th className="fw6 bb b--black-20 pb3 pr3 bg-white">
+              <th className={classNames("fw6 bb b--black-20 pb3 pr3 bg-white", { f7: isMobile })}>Game Size</th>
+              <th className={classNames("fw6 bb b--black-20 pb3 pr3 bg-white", { f7: isMobile })}>
                 Table Size
               </th>
-              <th className="fw6 bb b--black-20 pb3 pr3 bg-white">
+              <th className={classNames("fw6 bb b--black-20 pb3 pr3 bg-white", { f7: isMobile })}>
                 Deployment Zone
               </th>
-              <th className="fw6 bb b--black-20 pb3 pr3 bg-white">
+              <th className={classNames("fw6 bb b--black-20 pb3 pr3 bg-white", { f7: isMobile })}>
                 Recommended Terrain
               </th>
             </tr>
@@ -61,7 +64,7 @@ export const Overview = () => {
                 className={i % 2 === 0 ? "bg-near-white" : "bg-white"}
               >
                 {row.map((cell, j) => (
-                  <td key={j} className="pv3 pr3 bb b--black-20">
+                  <td key={j} className={classNames("pv3 pr3 bb b--black-20", { f7: isMobile })}>
                     {cell}
                   </td>
                 ))}
@@ -72,25 +75,25 @@ export const Overview = () => {
       </div>
 
       <h3 className="f4 fw7 mt4 mb2">Capturing Objectives</h3>
-      <p className="lh-copy mb2 tj">
+      <p className={classNames("lh-copy mb2 tj", { f7: isMobile })}>
         Many missions use Objective Markers. Unless stated otherwise, capturing
         rules are:
       </p>
       <ol className="lh-copy pl3 tj">
-        <li className="pv1">Move within 3" of the objective marker.</li>
-        <li className="pv1">
+        <li className={classNames("pv1", { f7: isMobile })}>Move within 3" of the objective marker.</li>
+        <li className={classNames("pv1", { f7: isMobile })}>
           Spend one full action to begin capturing (CAPTURE action).
         </li>
-        <li className="pv1">
+        <li className={classNames("pv1", { f7: isMobile })}>
           At the end of the round, if no there is no enemy unit of type MSU,
           Vehicle, or Infantry is within 3" of the marker, it is captured.
         </li>
-        <li className="pv1">
+        <li className={classNames("pv1", { f7: isMobile })}>
           A player having more eligible friendly units (MSU, Vehicle, or
           Infantry) within 3" of the marker gives capture priority to that
           player.
         </li>
-        <li className="pv1">
+        <li className={classNames("pv1", { f7: isMobile })}>
           Captured markers score VP as defined by the mission rules.
         </li>
       </ol>
@@ -100,11 +103,11 @@ export const Overview = () => {
         <table className="f9 w-100 mh2" cellSpacing="0">
           <thead>
             <tr>
-              <th className="fw6 bb b--black-20 pb3 pr3 bg-white">Mission</th>
-              <th className="fw6 bb b--black-20 pb3 pr3 bg-white">
+              <th className={classNames("fw6 bb b--black-20 pb3 pr3 bg-white", { f7: isMobile })}>Mission</th>
+              <th className={classNames("fw6 bb b--black-20 pb3 pr3 bg-white", { f7: isMobile })}>
                 Primary Win Condition
               </th>
-              <th className="fw6 bb b--black-20 pb3 pr3 bg-white tc">Rounds</th>
+              <th className={classNames("fw6 bb b--black-20 pb3 pr3 bg-white tc", { f7: isMobile })}>Rounds</th>
             </tr>
           </thead>
           <tbody className="lh-copy">
@@ -130,9 +133,9 @@ export const Overview = () => {
                 key={i}
                 className={i % 2 === 0 ? "bg-near-white" : "bg-white"}
               >
-                <td className="pv3 pr3 bb b--black-20 fw6">{row[0]}</td>
-                <td className="pv3 pr3 bb b--black-20">{row[1]}</td>
-                <td className="pv3 pr3 bb b--black-20 tc">{row[2]}</td>
+                <td className={classNames("pv3 pr3 bb b--black-20 fw6", { f7: isMobile })}>{row[0]}</td>
+                <td className={classNames("pv3 pr3 bb b--black-20", { f7: isMobile })}>{row[1]}</td>
+                <td className={classNames("pv3 pr3 bb b--black-20 tc", { f7: isMobile })}>{row[2]}</td>
               </tr>
             ))}
           </tbody>

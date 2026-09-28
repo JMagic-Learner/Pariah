@@ -1,10 +1,13 @@
+import { useMediaQuery } from "@custom-react-hooks/all";
+import classNames from "classnames";
 export const TorringtonBase = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <div>
       <h2 className="f2 fw7 red bb pb2 mb3">Mission 1 — Torrington Base</h2>
 
       <div className="pa3 bg-near-white ba b--black-10 mb4">
-        <p className="i lh-copy ma0">
+        <p className={classNames("i lh-copy ma0", { f7: isMobile })}>
           "The base at Torrington is a key stronghold — whoever controls it
           controls the continent. One side advances to take it; the other must
           hold or die trying."
@@ -14,34 +17,34 @@ export const TorringtonBase = () => {
       <div className="flex-ns mb4">
         <div className="w-50-ns pr3-ns">
           <h3 className="f4 fw7 mb2">Setup</h3>
-          <ul className="lh-copy pl3 tj">
-            <li className="pv1">
+          <ul className={classNames("lh-copy pl3 tj", { f7: isMobile })}>
+            <li className={classNames("pv1", { f7: isMobile })}>
               <strong>Table:</strong> 36"×36" recommended
             </li>
-            <li className="pv1">
+            <li className={classNames("pv1", { f7: isMobile })}>
               <strong>Attacker:</strong> Deploys within 6" of one short edge
             </li>
-            <li className="pv1">
+            <li className={classNames("pv1", { f7: isMobile })}>
               <strong>Defender:</strong> Deploys within 12" of the opposite
               short edge
             </li>
-            <li className="pv1">
+            <li className={classNames("pv1", { f7: isMobile })}>
               <strong>Objective:</strong> Place a Command Bunker marker at the
               center of the table
             </li>
-            <li className="pv1">
+            <li className={classNames("pv1", { f7: isMobile })}>
               <strong>Rounds:</strong> 5
             </li>
           </ul>
         </div>
         <div className="w-50-ns pl3-ns">
           <h3 className="f4 fw7 mb2">Victory Conditions</h3>
-          <ul className="lh-copy pl3 tj">
-            <li className="pv1">
+          <ul className={classNames("lh-copy pl3 tj", { f7: isMobile })}>
+            <li className={classNames("pv1", { f7: isMobile })}>
               <strong className="red">+2 VP</strong> — Hold Command Bunker at
               round end
             </li>
-            <li className="pv1">
+            <li className={classNames("pv1", { f7: isMobile })}>
               <strong className="red">+3 VP</strong> — Attacker: any [UNIT]
               reaches Defender's deployment zone
             </li>
@@ -50,31 +53,31 @@ export const TorringtonBase = () => {
       </div>
 
       <h3 className="f4 fw7 mb2">Mission Rules</h3>
-      <ul className="lh-copy pl3 tj">
-        <li className="pv1">
+      <ul className={classNames("lh-copy pl3 tj", { f7: isMobile })}>
+        <li className={classNames("pv1", { f7: isMobile })}>
           <strong>Defender Fortified:</strong> The Defender may place 2
           additional Hard Cover terrain pieces in their half of the table before
           deployment.
         </li>
-        <li className="pv1">
+        <li className={classNames("pv1", { f7: isMobile })}>
           <strong>Command Bunker:</strong> The center objective marker counts as
           Hard Cover for any MSU occupying it. Capturing the bunker requires the
           CAPTURE action (full action). The bunker can be contested.
         </li>
-        <li className="pv1">
+        <li className={classNames("pv1", { f7: isMobile })}>
           <strong>Reinforcement Call:</strong> If the Defender's Commander is
           still alive at round 3, the Defender may add one destroyed MSU back to
           the table at their deployment edge at full HP (but no FRO
           regeneration).
         </li>
-        <li className="pv1">
+        <li className={classNames("pv1", { f7: isMobile })}>
           <strong>Attacker's Last Stand:</strong> If all Attacker MSUs are
           destroyed before round 4, the game ends immediately — Defender wins.
         </li>
       </ul>
 
       <h3 className="f4 fw7 mt4 mb2">Terrain Suggestions</h3>
-      <p className="lh-copy">
+      <p className={classNames("lh-copy", { f7: isMobile })}>
         Place a central fortified structure (Hard Cover, Difficult Terrain to
         enter) at the midpoint. Flank approaches should have Obscuring Cover
         (smoke, rubble). Open firing lanes on one or both sides reward
