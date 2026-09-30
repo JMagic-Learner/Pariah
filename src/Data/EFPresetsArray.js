@@ -1644,11 +1644,11 @@ export const EF_PRESETS = [
           notes: "[WARTIME INNOVATIONS],[FULL AUTO],[INBUILT],[AKIMBO]",
         },
         {
-          name: "Hyper Bazooka",
+          name: "Clay Bazooka",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "6",
-          notes: "[AP(5)],[BRACE],[SCOPE],[GRIP]",
+          tonnage: "3",
+          notes: "[BRACE],[MUNITIONS]: ADHESIVE",
         },
         {
           name: "Anti-Beam Coating Kit",
