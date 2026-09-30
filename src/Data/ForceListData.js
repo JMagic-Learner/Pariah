@@ -82,7 +82,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0079",
         faction: "EF",
         equipment:
-          "Beam Cannon x2 (Inbuilt), Extra Armor 10 x5, Beam Saber, Vulcans",
+          "Beam Cannon x2 [INBUILT], Extra Armor 10 x5, Beam Saber, Vulcans",
       },
       {
         msu: "RGM-79C Light Type Guncannon II",
@@ -93,7 +93,7 @@ export const FORCE_LIST_FACTIONS = [
         tonnage: 18,
         year: "0079",
         faction: "EF",
-        equipment: "Beam Cannon (Inbuilt), Beam Rifle, Beam Saber, Vulcans",
+        equipment: "Beam Cannon [INBUILT], Beam Rifle, Beam Saber, Vulcans",
       },
       {
         msu: "RGM-79FP GM Striker",
@@ -105,7 +105,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0079",
         faction: "EF",
         equipment:
-          "Beam SMG (Mounted), Heavy Bazooka, Side Verniers, Grenades x2, Heavy Booster",
+          "Beam SMG [MOUNTABLE], Heavy Bazooka, Side Verniers, Grenades x2, Heavy Booster",
       },
       {
         msu: "RGM-79[G] EZ-08",
@@ -266,7 +266,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0084",
         faction: "EF, TITANS",
         equipment:
-          "Beam Rifle, Light Bazooka (Mounted), Beam Saber, Shield, Vulcans",
+          "Beam Rifle, Light Bazooka [MOUNTABLE], Beam Saber, Shield, Vulcans",
       },
       {
         msu: "RGM-79 EW EWAC GM",
@@ -322,7 +322,7 @@ export const FORCE_LIST_FACTIONS = [
         tonnage: 34,
         year: "0087",
         faction: "EF, TITANS",
-        equipment: "Feydayeen Rifle, Gauntlets x2, Beam Rifle x2 (Mounted)",
+        equipment: "Feydayeen Rifle, Gauntlets x2, Beam Rifle x2 [MOUNTABLE]",
       },
       {
         msu: "RMS-154 Barzam",
@@ -367,7 +367,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0088",
         faction: "EF, AEUG",
         equipment:
-          "Beam Rifle, Beam Saber, Shield, Vulcans,Grenade Launchers (INBUILT) x2, Heavy Bazooka",
+          "Beam Rifle, Beam Saber, Shield, Vulcans,Grenade Launchers [INBUILT] x2, Heavy Bazooka",
       },
       {
         msu: "MSZ-007 Mass Production Type Z",
@@ -522,7 +522,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0088",
         faction: "EF, TITANS",
         equipment:
-          "Beam Cannons (Inbuilt), Missile Pod 10 x2, Beam Saber x2, 2x Gauntlets, Vulcans",
+          "Beam Cannons [INBUILT], Missile Pod 10 x2, Beam Saber x2, 2x Gauntlets, Vulcans",
       },
       {
         msu: "PMX-001 Palace Athene",
@@ -687,7 +687,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0123",
         faction: "EF",
         equipment:
-          "Vulcan Cannons, Beam Rifle, Beam Saber x2, Shield + Missile Pod 2, Missile Pod 4 x2 (Mounted)",
+          "Vulcan Cannons, Beam Rifle, Beam Saber x2, Shield + Missile Pod 2, Missile Pod 4 x2 [MOUNTABLE]",
       },
       {
         msu: "F91 Gundam",
@@ -699,7 +699,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0123",
         faction: "EF",
         equipment:
-          "Beam Rifle, Beam Cannon x2 (INBUILT), Beam Saber, Vulcans, Shield, Side Verniers",
+          "Beam Rifle, Beam Cannon x2 [INBUILT], Beam Saber, Vulcans, Shield, Side Verniers",
       },
     ],
   },
@@ -764,7 +764,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0079",
         faction: "Zeon",
         equipment:
-          "Machine Gun, Spiky Shoulders (ZEON), Shield (Shoulder), Missile Pod 4 (Mounted), Amphibious",
+          "Machine Gun, Spiky Shoulders (ZEON), Shield (Shoulder), Missile Pod 4 [MOUNTABLE], Amphibious",
       },
       {
         msu: "MS-06K Zaku Cannon",
@@ -776,7 +776,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0079",
         faction: "Zeon",
         equipment:
-          "Machine Gun (ZEON), Cannon (INBUILT), Heat Hawk, Smoke Grenades x3, Shield (Shoulder)",
+          "Machine Gun (ZEON), Cannon [INBUILT], Heat Hawk, Smoke Grenades x3, Shield (Shoulder)",
       },
       {
         msu: "MS-06J Zaku II Ground",
@@ -812,7 +812,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0079",
         faction: "Zeon",
         equipment:
-          "Cannon, Machine Gun, Heat Hawk (Mounted), Missile Pod 3 (Mounted), Shield (Shoulder) etc",
+          "Cannon, Machine Gun, Heat Hawk [MOUNTABLE], Missile Pod 3 [MOUNTABLE], Shield (Shoulder) etc",
       },
       {
         msu: "MS-06S Zaku II Commander",
@@ -836,7 +836,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0079",
         faction: "Zeon",
         equipment:
-          "Beam Cannon x2 (Inbuilt), Missile Pod 2 x2 (Inbuilt), Gauntlet x2, Machine Gun Mounted",
+          "Beam Cannon x2 [INBUILT], Missile Pod 2 x2 [INBUILT], Gauntlet x2, Machine Gun Mounted",
       },
       {
         msu: "MS-07B Gouf",
@@ -872,7 +872,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0079",
         faction: "Zeon",
         equipment:
-          "Beam SMG (Mounted),Heavy Bazooka,Side Verniers,Grenades x2,Heavy Booster",
+          "Beam SMG [MOUNTABLE],Heavy Bazooka,Side Verniers,Grenades x2,Heavy Booster",
       },
       {
         msu: "MSM-08 Zogok",
@@ -919,7 +919,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0080",
         faction: "Zeon",
         equipment:
-          "CQC Weapon x2, Heavy Booster, Kunai Knives x4, Machine Gun, Gatling (Mounted)",
+          "CQC Weapon x2, Heavy Booster, Kunai Knives x4, Machine Gun, Gatling [MOUNTABLE]",
       },
       {
         msu: "MS-09R Rick Dom",
@@ -931,7 +931,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0079",
         faction: "Zeon",
         equipment:
-          "Machine Gun, Heavy Bazooka, Side Verniers, Flash Grenade (Mounted), Heavy Booster",
+          "Machine Gun, Heavy Bazooka, Side Verniers, Flash Grenade [MOUNTABLE], Heavy Booster",
       },
       {
         msu: "MS-09RS Rick Dom",
@@ -943,7 +943,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0079",
         faction: "Zeon",
         equipment:
-          "Beam Cannon, Heavy Bazooka, Side Verniers, Flash Grenade (Mounted), Heat Blade, Heavy Booster",
+          "Beam Cannon, Heavy Bazooka, Side Verniers, Flash Grenade [MOUNTABLE], Heat Blade, Heavy Booster",
       },
       {
         msu: "MSN-07 Z'Gok-E",
@@ -955,7 +955,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0079",
         faction: "Zeon",
         equipment:
-          "Beam Cannon x2 (Inbuilt), Missile Pod 3 x2 (Inbuilt), Gauntlet x2, Amphibious",
+          "Beam Cannon x2 [INBUILT], Missile Pod 3 x2 [INBUILT], Gauntlet x2, Amphibious",
       },
       {
         msu: "MSN-01 Psycommu Zaku",
@@ -977,7 +977,7 @@ export const FORCE_LIST_FACTIONS = [
         tonnage: 20,
         year: "0079",
         faction: "Zeon",
-        equipment: "Beam Rifle (Cyclic),Shield,Beam Naginata,Heavy Bazooka",
+        equipment: "Beam Rifle [CYCLIC],Shield,Beam Naginata,Heavy Bazooka",
       },
       {
         msu: "MSN-02 Zeong",
@@ -1059,7 +1059,7 @@ export const FORCE_LIST_FACTIONS = [
         tonnage: 27,
         year: "0083",
         faction: "Zeon",
-        equipment: "Beam Rifle (Cyclic), MG ×4 (Inbuilt), Heavy Booster",
+        equipment: "Beam Rifle [CYCLIC], MG ×4 [INBUILT], Heavy Booster",
       },
       {
         msu: "RX-78GP02A Physilis",
@@ -1119,7 +1119,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0088",
         faction: "Zeon, Neo Zeon",
         equipment:
-          "2x Arm Cannon (Inbuilt),Heavy Bazooka, Beam Hawk, Panoptic Canopy",
+          "2x Arm Cannon [INBUILT],Heavy Bazooka, Beam Hawk, Panoptic Canopy",
       },
       {
         msu: "AMX-011 Zaku III",
@@ -1272,7 +1272,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0096",
         faction: "Zeon, Neo Zeon",
         equipment:
-          "I Field Generator, [PSYCOFRAME], 24 Beam Bits, Beam Saber x2, Beam Cannon x2 (Mounted), Extra Arms x2 (Pair), 4x Shields [20]",
+          "I Field Generator, [PSYCOFRAME], 24 Beam Bits, Beam Saber x2, Beam Cannon x2 [MOUNTABLE], Extra Arms x2 (Pair), 4x Shields [20]",
       },
       {
         msu: "MSN-06S Sinanju",
@@ -1327,7 +1327,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0105",
         faction: "MAFTY",
         equipment:
-          "Vulcans, Beam Rifle (Cyclic), Heavy Booster, Beam Saber, Spiky Shoulder",
+          "Vulcans, Beam Rifle [CYCLIC], Heavy Booster, Beam Saber, Spiky Shoulder",
       },
       {
         msu: "Me02R-F02c Messer Type F02c",
@@ -1382,7 +1382,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0123",
         faction: "Crossbone Vanguard",
         equipment:
-          "Beam Rifle (Cyclic), Beam Shield, Beam Saber, Panoptic Canopy",
+          "Beam Rifle [CYCLIC], Beam Shield, Beam Saber, Panoptic Canopy",
       },
       {
         msu: "XM-02 Den'an Gei",
@@ -1406,7 +1406,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0123",
         faction: "Crossbone Vanguard",
         equipment:
-          "HMG (INBUILT), Shield, Lance, Panoptic Canopy, Missile Pod 3",
+          "HMG [INBUILT], Shield, Lance, Panoptic Canopy, Missile Pod 3",
       },
       {
         msu: "XMS-01 Berga Giros",
@@ -1418,7 +1418,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0123",
         faction: "Crossbone Vanguard",
         equipment:
-          "HMG (INBUILT), Beam Shield, Lance, Panoptic Canopy, Side Verniers",
+          "HMG [INBUILT], Beam Shield, Lance, Panoptic Canopy, Side Verniers",
       },
       {
         msu: "XMS-02 Berga Dalas",
@@ -1430,7 +1430,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0123",
         faction: "Crossbone Vanguard",
         equipment:
-          "HMG (INBUILT), Beam Shield, Lance, Panoptic Canopy, Side Verniers",
+          "HMG [INBUILT], Beam Shield, Lance, Panoptic Canopy, Side Verniers",
       },
       {
         msu: "XM-X1 Crossbone Gundam X-1",
@@ -1519,7 +1519,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0085",
         faction: "ReZeon, TITANS",
         equipment:
-          "Kinetic Rifle, Bazooka (Inbuilt), Missile Pod 3 x2 (Mounted), Shield, Heat Hawk",
+          "Kinetic Rifle, Bazooka [INBUILT], Missile Pod 3 x2 [MOUNTABLE], Shield, Heat Hawk",
       },
       {
         msu: "RX-121 Gundam TR-1 Hazel",
@@ -1531,7 +1531,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0085",
         faction: "ReZeon, TITANS",
         equipment:
-          "Beam Rifle, Shield Boosters x2, Grenade Launcher (Mounted) x2, Beam Saber, Vulcans [TR]",
+          "Beam Rifle, Shield Boosters x2, Grenade Launcher [MOUNTABLE] x2, Beam Saber, Vulcans [TR]",
       },
       {
         msu: "RX-121 Gundam TR-1 Full Armor",
@@ -1626,7 +1626,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0087",
         faction: "ReZeon, TITANS",
         equipment:
-          " Beam Rifle,Beam Saber,Beam Saber, Shield + Missile Pod 2, Heavy Boosters, Cannon (Inbuilt), Flares",
+          " Beam Rifle,Beam Saber,Beam Saber, Shield + Missile Pod 2, Heavy Boosters, Cannon [INBUILT], Flares",
       },
       {
         msu: "RX-110C Gabthley [HUGIN]",
@@ -1637,7 +1637,7 @@ export const FORCE_LIST_FACTIONS = [
         tonnage: 62,
         year: "0087",
         faction: "ReZeon, TITANS",
-        equipment: "Feydayeen Rifle, Gauntlets x2, Beam Rifle x2 (Mounted)",
+        equipment: "Feydayeen Rifle, Gauntlets x2, Beam Rifle x2 [MOUNTABLE]",
       },
       {
         msu: "RX-121-3C Haze'n-thley-Rah II",

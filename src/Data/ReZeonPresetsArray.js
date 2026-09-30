@@ -124,7 +124,7 @@ export const REZEON_PRESETS = [
       armorValue: "23",
       baseEquip: [
         {
-          name: "Beam SMG (Mounted)",
+          name: "Beam SMG [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
@@ -172,7 +172,7 @@ export const REZEON_PRESETS = [
         torso: {
           current: "33",
           max: "33",
-          weapon: "Beam SMG (Mounted)",
+          weapon: "Beam SMG [MOUNTABLE]",
           equipment: ["Extra Armor (10)", "", ""],
         },
         rightArm: {
@@ -469,7 +469,7 @@ export const REZEON_PRESETS = [
             "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
-          name: "Bazooka (INBUILT)",
+          name: "Bazooka [INBUILT]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "4",
@@ -498,10 +498,10 @@ export const REZEON_PRESETS = [
         torso: {
           current: "24",
           max: "24",
-          weapon: "Bazooka (INBUILT)",
+          weapon: "Bazooka [INBUILT]",
           equipment: [
-            "Missile Pod 3 (MOUNTED)",
-            "Missile Pod 3 (MOUNTED)",
+            "Missile Pod 3 [MOUNTABLE]",
+            "Missile Pod 3 [MOUNTABLE]",
             "Heat Hawk (Stowed)",
           ],
         },
@@ -589,7 +589,7 @@ export const REZEON_PRESETS = [
           notes: "[BOOST(1)] becomes [BOOST(2)]",
         },
         {
-          name: "Cannon (INBUILT)",
+          name: "Cannon [INBUILT]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "4",
@@ -603,7 +603,7 @@ export const REZEON_PRESETS = [
         torso: {
           current: "24",
           max: "24",
-          weapon: "Cannon (INBUILT)",
+          weapon: "Cannon [INBUILT]",
           equipment: ["Flares", "Beam Saber x2 (Stowed)", "Heavy Boosters"],
         },
         rightArm: {
@@ -692,7 +692,7 @@ export const REZEON_PRESETS = [
         head: {
           current: "24",
           max: "24",
-          weapon: "Vulcan Cannons (INBUILT)",
+          weapon: "Vulcan Cannons [INBUILT]",
           equipment: ["", "", ""],
         },
         torso: {
@@ -743,7 +743,7 @@ export const REZEON_PRESETS = [
       armorValue: "22",
       baseEquip: [
         {
-          name: "Beam SMG (MOUNTED)",
+          name: "Beam SMG [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
@@ -780,7 +780,7 @@ export const REZEON_PRESETS = [
         head: {
           current: "22",
           max: "22",
-          weapon: "Vulcan Cannons (INBUILT)",
+          weapon: "Vulcan Cannons [INBUILT]",
           equipment: ["", "", ""],
         },
         torso: {
@@ -942,14 +942,14 @@ export const REZEON_PRESETS = [
           notes: "[AKIMBO],[AP(5)],[GRAPPLE]",
         },
         {
-          name: "Beam Rifle (Mounted)",
+          name: "Beam Rifle [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
           notes: "[MOUNTED]",
         },
         {
-          name: "Beam Rifle (Mounted)",
+          name: "Beam Rifle [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
@@ -987,13 +987,13 @@ export const REZEON_PRESETS = [
           current: "26",
           max: "26",
           weapon: "Feydayeen Rifle",
-          equipment: ["Beam Rifle (Mounted)", "", ""],
+          equipment: ["Beam Rifle [MOUNTABLE]", "", ""],
         },
         leftArm: {
           current: "26",
           max: "26",
           weapon: "",
-          equipment: ["Beam Rifle (Mounted)", "", ""],
+          equipment: ["Beam Rifle [MOUNTABLE]", "", ""],
         },
         rightLeg: {
           current: "26",
@@ -1054,14 +1054,14 @@ export const REZEON_PRESETS = [
           notes: "[FULL AUTO],[INBUILT],[AKIMBO]",
         },
         {
-          name: "Grenade Launcher (MOUNTED)",
+          name: "Grenade Launcher [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
           notes: "[INDIRECT],[LIMITED USE(3)]",
         },
         {
-          name: "Grenade Launcher (MOUNTED)",
+          name: "Grenade Launcher [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
@@ -1087,7 +1087,7 @@ export const REZEON_PRESETS = [
         torso: {
           current: "26",
           max: "26",
-          weapon: "2 x GL (Mounted)",
+          weapon: "2 x GL [MOUNTABLE]",
           equipment: ["Beam Saber (Stowed)", "", ""],
         },
         rightArm: {
@@ -1175,7 +1175,7 @@ export const REZEON_PRESETS = [
         head: {
           current: "24",
           max: "24",
-          weapon: "Vulcan Cannons (INBUILT)",
+          weapon: "Vulcan Cannons [INBUILT]",
           equipment: ["", "", ""],
         },
         torso: {
@@ -1280,7 +1280,7 @@ export const REZEON_PRESETS = [
         head: {
           current: "25",
           max: "25",
-          weapon: "Vulcan Cannons (INBUILT)",
+          weapon: "Vulcan Cannons [INBUILT]",
           equipment: ["", "", ""],
         },
         torso: {
@@ -1379,7 +1379,7 @@ export const REZEON_PRESETS = [
         head: {
           current: "26",
           max: "26",
-          weapon: "Vulcan Cannons (INBUILT)",
+          weapon: "Vulcan Cannons [INBUILT]",
           equipment: ["", "", ""],
         },
         torso: {
@@ -1444,13 +1444,6 @@ export const REZEON_PRESETS = [
           notes: "[MOUNTABLE],[BEAM FOCUS]",
         },
         {
-          name: "Extra Armor 10 x3",
-          mcuCost: "FREE",
-          fro: "",
-          tonnage: "3",
-          notes: "",
-        },
-        {
           name: "Heavy Boosters",
           mcuCost: "FREE",
           fro: "",
@@ -1478,7 +1471,20 @@ export const REZEON_PRESETS = [
           tonnage: "6",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
-        B(),
+        {
+          name: "Extra Armor 10",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "2",
+          notes: "",
+        },
+        {
+          name: "Extra Armor 10",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "2",
+          notes: "",
+        },
       ],
       addlEquip: [
         {
@@ -1488,7 +1494,13 @@ export const REZEON_PRESETS = [
           tonnage: "",
           notes: "See Keywords",
         },
-        B(),
+        {
+          name: "Extra Armor 10",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "2",
+          notes: "",
+        },
         B(),
         B(),
         B(),
@@ -1500,7 +1512,7 @@ export const REZEON_PRESETS = [
         head: {
           current: "28",
           max: "28",
-          weapon: "Vulcan Cannons (INBUILT)",
+          weapon: "Vulcan Cannons [INBUILT]",
           equipment: ["", "", ""],
         },
         torso: {
@@ -2207,7 +2219,7 @@ export const REZEON_PRESETS = [
         head: {
           current: "30",
           max: "30",
-          weapon: "Vulcan Cannons (INBUILT)",
+          weapon: "Vulcan Cannons [INBUILT]",
           equipment: ["", "", ""],
         },
         torso: {
@@ -2536,7 +2548,7 @@ export const REZEON_PRESETS = [
         head: {
           current: "24",
           max: "24",
-          weapon: "Vulcan Cannons (INBUILT)",
+          weapon: "Vulcan Cannons [INBUILT]",
           equipment: ["", "", ""],
         },
         torso: {

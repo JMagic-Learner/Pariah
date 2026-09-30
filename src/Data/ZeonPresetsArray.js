@@ -471,7 +471,7 @@ export const ZEON_PRESETS = [
           notes: "[AKIMBO],[QUICK SWAP],[CLEAVE],[THROW]",
         },
         {
-          name: "Smoke Grenades x3 (MOUNTED)",
+          name: "Smoke Grenades x3 [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "3",
@@ -551,7 +551,7 @@ export const ZEON_PRESETS = [
           notes: "[FULL AUTO],[MILITANT INNOVATION]",
         },
         {
-          name: "Missile Pod 2 x2 (MOUNTED)",
+          name: "Missile Pod 2 x2 [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
@@ -594,7 +594,7 @@ export const ZEON_PRESETS = [
         torso: {
           current: "22",
           max: "22",
-          weapon: "Missile Pod 2 x2 (MOUNTED)",
+          weapon: "Missile Pod 2 x2 [MOUNTABLE]",
           equipment: ["", "", ""],
         },
         rightArm: {
@@ -734,7 +734,7 @@ export const ZEON_PRESETS = [
           notes: "[MOUNTABLE],[FULL AUTO],[MILITANT INNOVATION]",
         },
         {
-          name: "Heat Hawk (MOUNTED)",
+          name: "Heat Hawk [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "1",
           tonnage: "1",
@@ -763,7 +763,7 @@ export const ZEON_PRESETS = [
             "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
-          name: "Missile Pod 3 (MOUNTED)",
+          name: "Missile Pod 3 [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "6",
@@ -783,7 +783,7 @@ export const ZEON_PRESETS = [
         head: {
           current: "25",
           max: "25",
-          weapon: "Heat Hawk (MOUNTED)",
+          weapon: "Heat Hawk [MOUNTABLE]",
           equipment: ["", "", ""],
         },
         torso: {
@@ -796,12 +796,12 @@ export const ZEON_PRESETS = [
           current: "25",
           max: "25",
           weapon: "Cannon",
-          equipment: ["Shield (Shoulder)", "Missile Pod 3 (MOUNTED)", ""],
+          equipment: ["Shield (Shoulder)", "Missile Pod 3 [MOUNTABLE]", ""],
         },
         leftArm: {
           current: "25",
           max: "25",
-          weapon: "Machine Gun (MOUNTED)",
+          weapon: "Machine Gun [MOUNTABLE]",
           equipment: ["Spiky Shoulder", "", ""],
         },
         rightLeg: {
@@ -936,7 +936,7 @@ export const ZEON_PRESETS = [
             "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
         },
         {
-          name: "Gatling (Kinetic) (INBUILT)",
+          name: "Gatling (Kinetic) [INBUILT]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "3",
@@ -993,7 +993,7 @@ export const ZEON_PRESETS = [
         leftArm: {
           current: "22",
           max: "22",
-          weapon: "Gatling (INBUILT)",
+          weapon: "Gatling [INBUILT]",
           equipment: ["Shield", "Arm Cannon", "Spiky Shoulder"],
         },
         rightLeg: {
@@ -1033,7 +1033,7 @@ export const ZEON_PRESETS = [
             "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
         },
         {
-          name: "Gatling (Kinetic) (INBUILT)",
+          name: "Gatling (Kinetic) [INBUILT]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "3",
@@ -1085,7 +1085,7 @@ export const ZEON_PRESETS = [
         leftArm: {
           current: "22",
           max: "22",
-          weapon: "Gatling (INBUILT)",
+          weapon: "Gatling [INBUILT]",
           equipment: ["Shield", "Arm Rotary Cannon", ""],
         },
         rightLeg: {
@@ -1117,28 +1117,28 @@ export const ZEON_PRESETS = [
       armorValue: "24",
       baseEquip: [
         {
-          name: "Missile Pod 3 (MOUNTED)",
+          name: "Missile Pod 3 [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "6",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
-          name: "Missile Pod 3 (MOUNTED)",
+          name: "Missile Pod 3 [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "6",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
-          name: "Missile Pod 3 (MOUNTED)",
+          name: "Missile Pod 3 [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "6",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
-          name: "Missile Pod 3 (MOUNTED)",
+          name: "Missile Pod 3 [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "6",
@@ -1223,7 +1223,7 @@ export const ZEON_PRESETS = [
       armorValue: "23",
       baseEquip: [
         {
-          name: "Gatling Kinetic (MOUNTED)",
+          name: "Gatling Kinetic [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "5",
@@ -1297,7 +1297,7 @@ export const ZEON_PRESETS = [
           current: "23",
           max: "23",
           weapon: "CQC Weapon",
-          equipment: ["Gatling (MOUNTED)", "", ""],
+          equipment: ["Gatling [MOUNTABLE]", "", ""],
         },
         rightLeg: {
           current: "23",
@@ -1363,21 +1363,21 @@ export const ZEON_PRESETS = [
           notes: "[BOOST(1)] becomes [BOOST(2)]",
         },
         {
-          name: "Smoke Grenades (MOUNTED)",
+          name: "Smoke Grenades [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
           notes: "[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
         },
         {
-          name: "Smoke Grenades (MOUNTED)",
+          name: "Smoke Grenades [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
           notes: "[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
         },
         {
-          name: "Smoke Grenades (MOUNTED)",
+          name: "Smoke Grenades [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
@@ -1439,7 +1439,7 @@ export const ZEON_PRESETS = [
       armorValue: "24",
       baseEquip: [
         {
-          name: "SMG (Beam) (MOUNTED)",
+          name: "SMG (Beam) [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "2",
           tonnage: "1",
@@ -1483,7 +1483,7 @@ export const ZEON_PRESETS = [
         torso: {
           current: "24",
           max: "24",
-          weapon: "SMG (BEAM) (MOUNTED)",
+          weapon: "SMG (BEAM) [MOUNTABLE]",
           equipment: ["Side Verniers", "Heavy Booster", ""],
         },
         rightArm: {
@@ -1527,7 +1527,7 @@ export const ZEON_PRESETS = [
       armorValue: "24",
       baseEquip: [
         {
-          name: "Flash Grenade (MOUNTED)",
+          name: "Flash Grenade [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
@@ -1571,7 +1571,7 @@ export const ZEON_PRESETS = [
         torso: {
           current: "24",
           max: "24",
-          weapon: "Flash Grenade (MOUNTED)",
+          weapon: "Flash Grenade [MOUNTABLE]",
           equipment: ["Side Verniers", "Heavy Booster", ""],
         },
         rightArm: {
@@ -1615,7 +1615,7 @@ export const ZEON_PRESETS = [
       armorValue: "24",
       baseEquip: [
         {
-          name: "Flash Grenade (MOUNTED)",
+          name: "Flash Grenade [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
@@ -1659,7 +1659,7 @@ export const ZEON_PRESETS = [
         torso: {
           current: "24",
           max: "24",
-          weapon: "Flash Grenade (MOUNTED)",
+          weapon: "Flash Grenade [MOUNTABLE]",
           equipment: ["Side Verniers", "Heavy Booster", ""],
         },
         rightArm: {
@@ -1748,7 +1748,7 @@ export const ZEON_PRESETS = [
         rightArm: {
           current: "24",
           max: "24",
-          weapon: "Beam Rifle (Cyclic)",
+          weapon: "Beam Rifle [CYCLIC]",
           equipment: ["", "", ""],
         },
         leftArm: {
@@ -2088,7 +2088,7 @@ export const ZEON_PRESETS = [
           notes: "[INBUILT],[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
-          name: "Machine Gun (MOUNTED)",
+          name: "Machine Gun [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
@@ -2144,7 +2144,7 @@ export const ZEON_PRESETS = [
         torso: {
           current: "25",
           max: "25",
-          weapon: "Machine Gun (MOUNTED)",
+          weapon: "Machine Gun [MOUNTABLE]",
           equipment: ["", "", ""],
         },
         rightArm: {
@@ -2534,7 +2534,7 @@ export const ZEON_PRESETS = [
         rightArm: {
           current: "23",
           max: "23",
-          weapon: "Beam Rifle (Cyclic)",
+          weapon: "Beam Rifle [CYCLIC]",
           equipment: ["MG x2 [INBUILT]", "", ""],
         },
         leftArm: {
@@ -3219,14 +3219,14 @@ export const ZEON_PRESETS = [
           notes: "[MOUNTABLE]",
         },
         {
-          name: "Missile Pod 10 (MOUNTED)",
+          name: "Missile Pod 10 [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "5",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
-          name: "Missile Pod 10 (MOUNTED)",
+          name: "Missile Pod 10 [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "5",
@@ -3291,13 +3291,13 @@ export const ZEON_PRESETS = [
           current: "23",
           max: "23",
           weapon: "Knuckle Duster",
-          equipment: ["Missile Pod 10 (MOUNTED)", "Vulcan Cannons", ""],
+          equipment: ["Missile Pod 10 [MOUNTABLE]", "Vulcan Cannons", ""],
         },
         leftArm: {
           current: "23",
           max: "23",
           weapon: "",
-          equipment: ["Missile Pod 10 (MOUNTED)", "Vulcan Cannons", ""],
+          equipment: ["Missile Pod 10 [MOUNTABLE]", "Vulcan Cannons", ""],
         },
         rightLeg: {
           current: "23",
@@ -3431,13 +3431,6 @@ export const ZEON_PRESETS = [
           notes: "[BOOST(1)] becomes [BOOST(2)]",
         },
         {
-          name: "3x Grenades",
-          mcuCost: "FREE",
-          fro: "",
-          tonnage: "3",
-          notes: "[MUNITIONS],[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
-        },
-        {
           name: "Shield (Shoulder)",
           mcuCost: "FREE",
           fro: "",
@@ -3463,17 +3456,45 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "3/1",
           tonnage: "2",
-          notes: "Beam Cannons are [INBUILT],[CLEAVE]",
+          notes: "Beam Cannons are [INBUILT]",
         },
         {
           name: "Beam Cannon/Beam Sabers",
           mcuCost: "FREE",
           fro: "3/1",
           tonnage: "2",
-          notes: "Beam Cannons are [INBUILT],[CLEAVE]",
+          notes: "Beam Cannons are [INBUILT]",
+        },
+        {
+          name: "Grenades",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "1",
+          notes: "[MUNITIONS],[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
         },
       ],
-      addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
+      addlEquip: [
+        {
+          name: "Grenades",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "1",
+          notes: "[MUNITIONS],[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
+        },
+        {
+          name: "Grenades",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "1",
+          notes: "[MUNITIONS],[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
+        },
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+      ],
       locations: {
         head: { current: "26", max: "26", weapon: "", equipment: ["", "", ""] },
         torso: {
@@ -3841,14 +3862,14 @@ export const ZEON_PRESETS = [
           notes: "[AOE(6)] or [MUNITIONS],[BRACE],[SCOPE]",
         },
         {
-          name: "Missile Pod 2 (MOUNTED)",
+          name: "Missile Pod 2 [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
-          name: "Missile Pod 3 (MOUNTED)",
+          name: "Missile Pod 3 [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "6",
@@ -3891,13 +3912,13 @@ export const ZEON_PRESETS = [
           current: "26",
           max: "26",
           weapon: "Heavy Bazooka",
-          equipment: ["Missile Pod 2 (MOUNTED)", "", ""],
+          equipment: ["Missile Pod 2 [MOUNTABLE]", "", ""],
         },
         leftArm: {
           current: "26",
           max: "26",
           weapon: "",
-          equipment: ["Missile Pod 3 (MOUNTED)", "", ""],
+          equipment: ["Missile Pod 3 [MOUNTABLE]", "", ""],
         },
         rightLeg: {
           current: "26",
@@ -3956,14 +3977,14 @@ export const ZEON_PRESETS = [
           notes: "[INBUILT],[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
-          name: "Missile Pod 8 (MOUNTED)",
+          name: "Missile Pod 8 [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "16",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
-          name: "Missile Pod 8 (MOUNTED)",
+          name: "Missile Pod 8 [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "16",
@@ -3996,13 +4017,13 @@ export const ZEON_PRESETS = [
         rightLeg: {
           current: "26",
           max: "26",
-          weapon: "Missile Pod 8 (MOUNTED)",
+          weapon: "Missile Pod 8 [MOUNTABLE]",
           equipment: ["", "", ""],
         },
         leftLeg: {
           current: "26",
           max: "26",
-          weapon: "Missile Pod 8 (MOUNTED)",
+          weapon: "Missile Pod 8 [MOUNTABLE]",
           equipment: ["", "", ""],
         },
       },
@@ -4563,7 +4584,7 @@ export const ZEON_PRESETS = [
         torso: {
           current: "27",
           max: "27",
-          weapon: "Beam Cannon x2 (Mounted)",
+          weapon: "Beam Cannon x2 [MOUNTABLE]",
           equipment: [
             "I Field Generator",
             "Extra Arm (Pair)",

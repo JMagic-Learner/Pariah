@@ -17,7 +17,7 @@ export const CROSSBONE_PRESETS = [
       armorValue: "26",
       baseEquip: [
         {
-          name: "Beam Rifle (Cyclic)",
+          name: "Beam Rifle [CYCLIC]",
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
@@ -63,7 +63,7 @@ export const CROSSBONE_PRESETS = [
         rightArm: {
           current: "24",
           max: "24",
-          weapon: "Beam Rifle (Cyclic)",
+          weapon: "Beam Rifle [CYCLIC]",
           equipment: ["", "", ""],
         },
         leftArm: {
@@ -159,7 +159,7 @@ export const CROSSBONE_PRESETS = [
           current: "25",
           max: "25",
           weapon: "Beam Shield",
-          equipment: ["Missile Pod 3 (MOUNTED)", "", ""],
+          equipment: ["Missile Pod 3 [MOUNTABLE]", "", ""],
         },
         rightLeg: {
           current: "25",
@@ -190,7 +190,7 @@ export const CROSSBONE_PRESETS = [
       armorValue: "24",
       baseEquip: [
         {
-          name: "Heavy Machine Gun (INBUILT)",
+          name: "Heavy Machine Gun [INBUILT]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "3",
@@ -248,7 +248,7 @@ export const CROSSBONE_PRESETS = [
           current: "27",
           max: "27",
           weapon: "Lance",
-          equipment: ["Missile Pod 3 (MOUNTED)", "HMG (INBUILT)", ""],
+          equipment: ["Missile Pod 3 [MOUNTABLE]", "HMG [INBUILT]", ""],
         },
         rightLeg: {
           current: "27",
@@ -279,7 +279,7 @@ export const CROSSBONE_PRESETS = [
       armorValue: "26",
       baseEquip: [
         {
-          name: "Heavy Machine Gun (INBUILT)",
+          name: "Heavy Machine Gun [INBUILT]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "3",
@@ -331,7 +331,7 @@ export const CROSSBONE_PRESETS = [
           current: "26",
           max: "26",
           weapon: "Lance",
-          equipment: ["HMG (INBUILT)", "Side Verniers", ""],
+          equipment: ["HMG [INBUILT]", "Side Verniers", ""],
         },
         leftArm: {
           current: "26",
@@ -368,7 +368,7 @@ export const CROSSBONE_PRESETS = [
       armorValue: "26",
       baseEquip: [
         {
-          name: "Heavy Machine Gun (INBUILT)",
+          name: "Heavy Machine Gun [INBUILT]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "3",
@@ -425,7 +425,7 @@ export const CROSSBONE_PRESETS = [
           current: "26",
           max: "26",
           weapon: "Lance",
-          equipment: ["HMG (INBUILT)", "Side Verniers", ""],
+          equipment: ["HMG [INBUILT]", "Side Verniers", ""],
         },
         leftArm: {
           current: "26",

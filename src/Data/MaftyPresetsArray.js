@@ -118,7 +118,7 @@ export const MAFTY_PRESETS = [
           notes: "[FULL AUTO],[INBUILT],[AKIMBO]",
         },
         {
-          name: "Beam Rifle (Cyclic)",
+          name: "Beam Rifle [CYCLIC]",
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
@@ -166,7 +166,7 @@ export const MAFTY_PRESETS = [
         rightArm: {
           current: "24",
           max: "24",
-          weapon: "Beam Rifle (Cyclic)",
+          weapon: "Beam Rifle [CYCLIC]",
           equipment: ["Spiky Shoulder", "", ""],
         },
         leftArm: {

@@ -480,18 +480,18 @@ export const EF_PRESETS = [
       armorValue: "24",
       baseEquip: [
         {
-          name: "Beam Cannon (INBUILT)",
+          name: "Beam Cannon [INBUILT]",
           mcuCost: "FREE",
           fro: "3",
           tonnage: "2",
-          notes: "[INBUILT],[MOUNTABLE]",
+          notes: "[INBUILT],[MOUNTABLE],[BEAM FOCUS]",
         },
         {
-          name: "Beam Cannon (INBUILT)",
+          name: "Beam Cannon [INBUILT]",
           mcuCost: "FREE",
           fro: "3",
           tonnage: "2",
-          notes: "[INBUILT],[MOUNTABLE]",
+          notes: "[INBUILT],[MOUNTABLE],[BEAM FOCUS]",
         },
         {
           name: "Beam Saber",
@@ -562,7 +562,7 @@ export const EF_PRESETS = [
         torso: {
           current: "34",
           max: "34",
-          weapon: "Beam Cannon x2 (INBUILT)",
+          weapon: "Beam Cannon x2 [INBUILT]",
           equipment: ["Beam Saber (Stowed)", "Extra Armor (10)", ""],
         },
         rightArm: {
@@ -606,11 +606,11 @@ export const EF_PRESETS = [
       armorValue: "22",
       baseEquip: [
         {
-          name: "Beam Cannon (INBUILT)",
+          name: "Beam Cannon [INBUILT]",
           mcuCost: "FREE",
           fro: "3",
           tonnage: "2",
-          notes: "[INBUILT],[MOUNTABLE]",
+          notes: "[INBUILT],[MOUNTABLE],[BEAM FOCUS]",
         },
         {
           name: "Beam Saber",
@@ -649,7 +649,7 @@ export const EF_PRESETS = [
         torso: {
           current: "22",
           max: "22",
-          weapon: "Beam Cannon (INBUILT)",
+          weapon: "Beam Cannon [INBUILT]",
           equipment: ["Beam Saber (Stowed)", "", ""],
         },
         rightArm: {
@@ -1204,31 +1204,28 @@ export const EF_PRESETS = [
           notes: "[WARTIME INNOVATIONS],[FULL AUTO],[INBUILT],[AKIMBO]",
         },
         {
-          name: "Grenade",
+          name: "Grenade [MUNITIONS]: Smoke",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes:
-            "[MUNITIONS]: Smoke,[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
+          notes: "[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
         },
         {
-          name: "Grenade",
+          name: "Grenade [MUNITIONS]: Smoke",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes:
-            "[MUNITIONS]: Smoke,[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
+          notes: "[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
         },
         {
-          name: "Grenade",
+          name: "Grenade [MUNITIONS]: AP",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes:
-            "[MUNITIONS]: AP,[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
+          notes: "[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
         },
         {
-          name: "Grenade",
+          name: "Grenade [MUNITIONS]: AP,",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
@@ -1255,7 +1252,7 @@ export const EF_PRESETS = [
           current: "23",
           max: "23",
           weapon: "Smoke Grenades x2",
-          equipment: ["CAMO", "Grenades (AP) x3 (Stowed)", ""],
+          equipment: ["CAMO", "Grenades (AP) x2 (Stowed)", ""],
         },
         rightArm: {
           current: "23",
@@ -1373,13 +1370,13 @@ export const EF_PRESETS = [
           current: "24",
           max: "24",
           weapon: "Beam Rifle",
-          equipment: ["A.R.C (INBUILT)", "", ""],
+          equipment: ["A.R.C [INBUILT]", "", ""],
         },
         leftArm: {
           current: "24",
           max: "24",
           weapon: "Shield",
-          equipment: ["A.R.C (INBUILT)", "", ""],
+          equipment: ["A.R.C [INBUILT]", "", ""],
         },
         rightLeg: {
           current: "24",
@@ -1418,18 +1415,18 @@ export const EF_PRESETS = [
           notes: "[WARTIME INNOVATIONS],[SCOPE]",
         },
         {
-          name: "Beam Cannon (INBUILT)",
+          name: "Beam Cannon [INBUILT]",
           mcuCost: "FREE",
           fro: "3",
           tonnage: "2",
-          notes: "[INBUILT],[MOUNTABLE]",
+          notes: "[INBUILT],[MOUNTABLE],[BEAM FOCUS]",
         },
         {
-          name: "Beam Cannon (INBUILT)",
+          name: "Beam Cannon [INBUILT]",
           mcuCost: "FREE",
           fro: "3",
           tonnage: "2",
-          notes: "[INBUILT],[MOUNTABLE]",
+          notes: "[INBUILT],[MOUNTABLE],[BEAM FOCUS]",
         },
         {
           name: "Beam Saber",
@@ -1473,7 +1470,7 @@ export const EF_PRESETS = [
         torso: {
           current: "26",
           max: "26",
-          weapon: "Beam Cannon (INBUILT) x2",
+          weapon: "Beam Cannon x2 [INBUILT]",
           equipment: ["Beam Saber (Stowed)", "Side Verniers", ""],
         },
         rightArm: {
@@ -1876,14 +1873,14 @@ export const EF_PRESETS = [
           notes: "[WARTIME INNOVATIONS],[FULL AUTO],[INBUILT],[AKIMBO]",
         },
         {
-          name: "Grenade Launcher (INBUILT)",
+          name: "Grenade Launcher [INBUILT]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
           notes: "[INBUILT],[INDIRECT],[LIMITED USE(3)]",
         },
         {
-          name: "Grenade Launcher (INBUILT)",
+          name: "Grenade Launcher [INBUILT]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
@@ -1931,13 +1928,13 @@ export const EF_PRESETS = [
           current: "25",
           max: "25",
           weapon: "Beam Rifle",
-          equipment: ["G. Launcher (INBUILT)", "", ""],
+          equipment: ["G. Launcher [INBUILT]", "", ""],
         },
         leftArm: {
           current: "25",
           max: "25",
           weapon: "Shield",
-          equipment: ["G. Launcher (INBUILT)", "", ""],
+          equipment: ["G. Launcher [INBUILT]", "", ""],
         },
         rightLeg: {
           current: "25",
@@ -2189,18 +2186,18 @@ export const EF_PRESETS = [
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
-          name: "Beam Cannon (INBUILT)",
+          name: "Beam Cannon [INBUILT]",
           mcuCost: "FREE",
           fro: "3",
           tonnage: "2",
-          notes: "[INBUILT],[MOUNTABLE]",
+          notes: "[INBUILT],[MOUNTABLE],[BEAM FOCUS]",
         },
         {
-          name: "Beam Cannon (INBUILT)",
+          name: "Beam Cannon [INBUILT]",
           mcuCost: "FREE",
           fro: "3",
           tonnage: "2",
-          notes: "[INBUILT],[MOUNTABLE]",
+          notes: "[INBUILT],[MOUNTABLE],[BEAM FOCUS]",
         },
         {
           name: "Beam Saber",
@@ -2233,7 +2230,7 @@ export const EF_PRESETS = [
       ],
       addlEquip: [
         {
-          name: "Vulcan Cannons (INBUILT)",
+          name: "Vulcan Cannons [INBUILT]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "",
@@ -2377,13 +2374,13 @@ export const EF_PRESETS = [
           current: "27",
           max: "27",
           weapon: "Beam Rifle + GL x2",
-          equipment: ["Beam Cannons (Mounted)", "", ""],
+          equipment: ["Beam Cannons [MOUNTABLE]", "", ""],
         },
         leftArm: {
           current: "27",
           max: "27",
           weapon: "Shield",
-          equipment: ["Missile Pod 8 (Shield)", "Beam Cannons (Mounted)", ""],
+          equipment: ["Missile Pod 8 (Shield)", "Beam Cannons [MOUNTABLE]", ""],
         },
         rightLeg: {
           current: "27",
@@ -2428,7 +2425,7 @@ export const EF_PRESETS = [
           notes: "Combined weapon — declare mode on activation",
         },
         {
-          name: "Vulcan Cannon (INBUILT)",
+          name: "Vulcan Cannon [INBUILT]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "",
@@ -2520,7 +2517,7 @@ export const EF_PRESETS = [
           notes: "[WARTIME INNOVATIONS],[SCOPE]",
         },
         {
-          name: "Light Bazooka (Mounted)",
+          name: "Light Bazooka [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "4",
@@ -2563,7 +2560,7 @@ export const EF_PRESETS = [
         torso: {
           current: "20",
           max: "20",
-          weapon: "Light Bazooka (Mounted)",
+          weapon: "Light Bazooka [MOUNTABLE]",
           equipment: ["Beam Saber (Stowed)", "", ""],
         },
         rightArm: {
@@ -2919,21 +2916,21 @@ export const EF_PRESETS = [
           notes: "No movement penalty sideways; can BOOST sideways.",
         },
         {
-          name: "Missile Pod 2 (INBUILT)",
+          name: "Missile Pod 2 [INBUILT]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
-          name: "Missile Pod 2 (INBUILT)",
+          name: "Missile Pod 2 [INBUILT]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
-          name: "Missile Pod 2 (INBUILT)",
+          name: "Missile Pod 2 [INBUILT]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
@@ -2942,7 +2939,7 @@ export const EF_PRESETS = [
       ],
       addlEquip: [
         {
-          name: "Missile Pod 2 (INBUILT)",
+          name: "Missile Pod 2 [INBUILT]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
@@ -3363,14 +3360,14 @@ export const EF_PRESETS = [
           notes: "[BOOST(1)] becomes [BOOST(2)]",
         },
         {
-          name: "Missile Pod 3 (MOUNTED)",
+          name: "Missile Pod 3 [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "6",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
-          name: "Missile Pod 3 (MOUNTED)",
+          name: "Missile Pod 3 [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "6",
@@ -3726,14 +3723,14 @@ export const EF_PRESETS = [
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
-          name: "Missile Pod 4 (Mounted)",
+          name: "Missile Pod 4 [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "3",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
-          name: "Missile Pod 4 (Mounted)",
+          name: "Missile Pod 4 [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "3",
@@ -4150,7 +4147,7 @@ export const EF_PRESETS = [
             "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
-          name: "Beam Cannon (INBUILT)",
+          name: "Beam Cannon [INBUILT]",
           mcuCost: "FREE",
           fro: "3",
           tonnage: "2",
@@ -4178,14 +4175,14 @@ export const EF_PRESETS = [
           notes: "[WARTIME INNOVATIONS],[FULL AUTO],[INBUILT],[AKIMBO]",
         },
         {
-          name: "Grenade Launcher (INBUILT)",
+          name: "Grenade Launcher [INBUILT]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
           notes: "[INDIRECT],[LIMITED USE(3)]",
         },
         {
-          name: "Grenade Launcher (INBUILT)",
+          name: "Grenade Launcher [INBUILT]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
@@ -4233,15 +4230,15 @@ export const EF_PRESETS = [
           max: "24",
           weapon: "Beam Rifle",
           equipment: [
-            "Grenade Launcher (INBUILT)",
-            "Grenade Launcher (INBUILT)",
+            "Grenade Launcher [INBUILT]",
+            "Grenade Launcher [INBUILT]",
             "",
           ],
         },
         leftArm: {
           current: "24",
           max: "24",
-          weapon: "Shield + Beam Cannon (INBUILT)",
+          weapon: "Shield + Beam Cannon [INBUILT]",
           equipment: ["Beam Saber (Stowed)", "Beam Saber (Stowed)", ""],
         },
         rightLeg: {
@@ -4273,7 +4270,7 @@ export const EF_PRESETS = [
       armorValue: "26",
       baseEquip: [
         {
-          name: "Hyper Beam Cannon (MOUNTABLE)",
+          name: "Hyper Beam Cannon [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "5",
           tonnage: "6",
@@ -4288,7 +4285,7 @@ export const EF_PRESETS = [
             "[COMMANDER] can perform the RALLY action for free at Step 1.1 of the Status Phase.",
         },
         {
-          name: "Shield + Beam Cannon (INBUILT)",
+          name: "Shield + Beam Cannon [INBUILT]",
           mcuCost: "FREE",
           fro: "3",
           tonnage: "8",
@@ -4317,14 +4314,14 @@ export const EF_PRESETS = [
           notes: "[WARTIME INNOVATIONS],[FULL AUTO],[INBUILT],[AKIMBO]",
         },
         {
-          name: "Grenade Launcher (INBUILT)",
+          name: "Grenade Launcher [INBUILT]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
           notes: "[INDIRECT],[LIMITED USE(3)]",
         },
         {
-          name: "Grenade Launcher (INBUILT)",
+          name: "Grenade Launcher [INBUILT]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "2",
@@ -4371,15 +4368,15 @@ export const EF_PRESETS = [
           max: "26",
           weapon: "Hyper Beam Cannon",
           equipment: [
-            "Grenade Launcher (INBUILT)",
-            "Grenade Launcher (INBUILT)",
+            "Grenade Launcher [INBUILT]",
+            "Grenade Launcher [INBUILT]",
             "",
           ],
         },
         leftArm: {
           current: "26",
           max: "26",
-          weapon: "Shield + Beam Cannon (INBUILT)",
+          weapon: "Shield + Beam Cannon [INBUILT]",
           equipment: ["Beam Saber (Stowed)", "Beam Saber (Stowed)", ""],
         },
         rightLeg: {
@@ -4729,7 +4726,7 @@ export const EF_PRESETS = [
             "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
-          name: "Vulcan Cannon (INBUILT)",
+          name: "Vulcan Cannon [INBUILT]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "",
@@ -5155,14 +5152,14 @@ export const EF_PRESETS = [
       ],
       addlEquip: [
         {
-          name: "Large Beam Sabers (INBUILT)",
+          name: "Large Beam Sabers [INBUILT]",
           mcuCost: "FREE",
           fro: "2",
           tonnage: "4",
           notes: "[INBUILT],[CLEAVE],[AKIMBO],[MOMENTUM]",
         },
         {
-          name: "Large Beam Sabers (INBUILT)",
+          name: "Large Beam Sabers [INBUILT]",
           mcuCost: "FREE",
           fro: "2",
           tonnage: "4",
@@ -5233,7 +5230,7 @@ export const EF_PRESETS = [
           max: "32",
           weapon: "Gauntlets",
           equipment: [
-            "Large Saber (Inbuilt)",
+            "Large Saber [INBUILT]",
             "Missile Pod 10",
             "Missile Pod 10",
           ],
@@ -5243,7 +5240,7 @@ export const EF_PRESETS = [
           max: "32",
           weapon: "Gauntlets",
           equipment: [
-            "Large Saber (Inbuilt)",
+            "Large Saber [INBUILT]",
             "Missile Pod 10",
             "Missile Pod 10",
           ],
@@ -5788,14 +5785,14 @@ export const EF_PRESETS = [
           notes: "[BOOST(1)] becomes [BOOST(2)]",
         },
         {
-          name: "Missile Pod 8 (GUIDED) (INBUILT)",
+          name: "Missile Pod 8 (GUIDED) [INBUILT]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "8",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
-          name: "Missile Pod 8 (GUIDED) (INBUILT)",
+          name: "Missile Pod 8 (GUIDED) [INBUILT]",
           mcuCost: "FREE",
           fro: "",
           tonnage: "8",
@@ -5881,14 +5878,14 @@ export const EF_PRESETS = [
             "Feydayeen Rifle is a combination weapon of a Beam Rifle + Beam Saber",
         },
         {
-          name: "Beam Rifle (Mounted)",
+          name: "Beam Rifle [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
           notes: "[MOUNTABLE]",
         },
         {
-          name: "Beam Rifle (Mounted)",
+          name: "Beam Rifle [MOUNTABLE]",
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
@@ -5939,13 +5936,13 @@ export const EF_PRESETS = [
           current: "26",
           max: "26",
           weapon: "Feydayeen Rifle",
-          equipment: ["Beam Rifle (Mounted)", "", ""],
+          equipment: ["Beam Rifle [MOUNTABLE]", "", ""],
         },
         leftArm: {
           current: "26",
           max: "26",
           weapon: "",
-          equipment: ["Beam Rifle (Mounted)", "", ""],
+          equipment: ["Beam Rifle [MOUNTABLE]", "", ""],
         },
         rightLeg: {
           current: "26",
