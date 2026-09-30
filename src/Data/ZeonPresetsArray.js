@@ -551,10 +551,17 @@ export const ZEON_PRESETS = [
           notes: "[FULL AUTO],[MILITANT INNOVATION]",
         },
         {
-          name: "Missile Pod 2 x2 [MOUNTABLE]",
+          name: "Missile Pod 2",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "2",
+          tonnage: "4",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
+        },
+        {
+          name: "Missile Pod 2",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "4",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
@@ -581,7 +588,6 @@ export const ZEON_PRESETS = [
         },
         { name: "[AMPHIBIOUS]", mcuCost: "", fro: "", tonnage: "", notes: "" },
         B(),
-        B(),
       ],
       addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
       locations: {
@@ -594,7 +600,7 @@ export const ZEON_PRESETS = [
         torso: {
           current: "22",
           max: "22",
-          weapon: "Missile Pod 2 x2 [MOUNTABLE]",
+          weapon: "Missile Pod 2 x2",
           equipment: ["", "", ""],
         },
         rightArm: {
@@ -763,7 +769,7 @@ export const ZEON_PRESETS = [
             "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
-          name: "Missile Pod 3 [MOUNTABLE]",
+          name: "Missile Pod 3",
           mcuCost: "FREE",
           fro: "",
           tonnage: "6",
@@ -796,7 +802,7 @@ export const ZEON_PRESETS = [
           current: "25",
           max: "25",
           weapon: "Cannon",
-          equipment: ["Shield (Shoulder)", "Missile Pod 3 [MOUNTABLE]", ""],
+          equipment: ["Shield (Shoulder)", "Missile Pod 3", ""],
         },
         leftArm: {
           current: "25",
@@ -1117,28 +1123,28 @@ export const ZEON_PRESETS = [
       armorValue: "24",
       baseEquip: [
         {
-          name: "Missile Pod 3 [MOUNTABLE]",
+          name: "Missile Pod 3",
           mcuCost: "FREE",
           fro: "",
           tonnage: "6",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
-          name: "Missile Pod 3 [MOUNTABLE]",
+          name: "Missile Pod 3",
           mcuCost: "FREE",
           fro: "",
           tonnage: "6",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
-          name: "Missile Pod 3 [MOUNTABLE]",
+          name: "Missile Pod 3",
           mcuCost: "FREE",
           fro: "",
           tonnage: "6",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
-          name: "Missile Pod 3 [MOUNTABLE]",
+          name: "Missile Pod 3",
           mcuCost: "FREE",
           fro: "",
           tonnage: "6",
@@ -3862,14 +3868,14 @@ export const ZEON_PRESETS = [
           notes: "[AOE(6)] or [MUNITIONS],[BRACE],[SCOPE]",
         },
         {
-          name: "Missile Pod 2 [MOUNTABLE]",
+          name: "Missile Pod 2",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "1",
+          tonnage: "4",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
-          name: "Missile Pod 3 [MOUNTABLE]",
+          name: "Missile Pod 3",
           mcuCost: "FREE",
           fro: "",
           tonnage: "6",
@@ -3912,13 +3918,13 @@ export const ZEON_PRESETS = [
           current: "26",
           max: "26",
           weapon: "Heavy Bazooka",
-          equipment: ["Missile Pod 2 [MOUNTABLE]", "", ""],
+          equipment: ["Missile Pod 2", "", ""],
         },
         leftArm: {
           current: "26",
           max: "26",
           weapon: "",
-          equipment: ["Missile Pod 3 [MOUNTABLE]", "", ""],
+          equipment: ["Missile Pod 3", "", ""],
         },
         rightLeg: {
           current: "26",

@@ -812,7 +812,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0079",
         faction: "Zeon",
         equipment:
-          "Cannon, Machine Gun, Heat Hawk [MOUNTABLE], Missile Pod 3 [MOUNTABLE], Shield (Shoulder) etc",
+          "Cannon, Machine Gun, Heat Hawk [MOUNTABLE], Missile Pod 3, Shield (Shoulder) etc",
       },
       {
         msu: "MS-06S Zaku II Commander",

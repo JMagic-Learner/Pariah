@@ -499,11 +499,7 @@ export const REZEON_PRESETS = [
           current: "24",
           max: "24",
           weapon: "Bazooka [INBUILT]",
-          equipment: [
-            "Missile Pod 3 [MOUNTABLE]",
-            "Missile Pod 3 [MOUNTABLE]",
-            "Heat Hawk (Stowed)",
-          ],
+          equipment: ["Missile Pod 3", "Missile Pod 3", "Heat Hawk (Stowed)"],
         },
         rightArm: {
           current: "24",

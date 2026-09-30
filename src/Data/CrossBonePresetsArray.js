@@ -159,7 +159,7 @@ export const CROSSBONE_PRESETS = [
           current: "25",
           max: "25",
           weapon: "Beam Shield",
-          equipment: ["Missile Pod 3 [MOUNTABLE]", "", ""],
+          equipment: ["Missile Pod 3", "", ""],
         },
         rightLeg: {
           current: "25",
@@ -248,7 +248,7 @@ export const CROSSBONE_PRESETS = [
           current: "27",
           max: "27",
           weapon: "Lance",
-          equipment: ["Missile Pod 3 [MOUNTABLE]", "HMG [INBUILT]", ""],
+          equipment: ["Missile Pod 3", "HMG [INBUILT]", ""],
         },
         rightLeg: {
           current: "27",
