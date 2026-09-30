@@ -3806,28 +3806,25 @@ export const EF_PRESETS = [
           notes: "[BRACE],[AOE(6)],[QUICK SWAP],[SCOPE],[LIMITED USE(2)]",
         },
         {
-          name: "Napalm Grenades",
+          name: "Grenades [MUNITIONS]: Napalm",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes:
-            "[MUNITIONS]: Napalm,[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
+          notes: "[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
         },
         {
-          name: "Napalm Grenades",
+          name: "Grenades [MUNITIONS]: Napalm",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes:
-            "[MUNITIONS]: Napalm,[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
+          notes: "[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
         },
         {
-          name: "Napalm Grenades",
+          name: "Grenades [MUNITIONS]: Napalm",
           mcuCost: "FREE",
           fro: "",
           tonnage: "1",
-          notes:
-            "[MUNITIONS]: Napalm,[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
+          notes: "[INDIRECT],[QUICK SWAP],[LIMITED USE(1)],[THROW]",
         },
         {
           name: "Shield",

@@ -462,10 +462,18 @@ export const CROSSBONE_PRESETS = [
       armorValue: "23",
       baseEquip: [
         {
-          name: "2x Buster Gun (Beam Pistol)",
+          name: "Buster Gun (Beam Pistol)",
           mcuCost: "FREE",
           fro: "1",
-          tonnage: "2",
+          tonnage: "1",
+          notes:
+            "Simultaneous Attack → Zanbuster (Beam Cannon); ignore −2 penalty",
+        },
+        {
+          name: "Buster Gun (Beam Pistol)",
+          mcuCost: "FREE",
+          fro: "1",
+          tonnage: "1",
           notes:
             "Simultaneous Attack → Zanbuster (Beam Cannon); ignore −2 penalty",
         },
@@ -511,7 +519,6 @@ export const CROSSBONE_PRESETS = [
           tonnage: "1",
           notes: "[AKIMBO],[QUICK SWAP],[THROW],[PRECISE],[COUNTERSTRIKE]",
         },
-        B(),
       ],
       addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
       locations: {
