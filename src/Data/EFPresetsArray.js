@@ -4840,7 +4840,13 @@ export const EF_PRESETS = [
           tonnage: "8",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
-        { name: "Flares", mcuCost: "FREE", fro: "", tonnage: "2", notes: "" },
+        {
+          name: "Flares",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "",
+          notes: `During any phase, deploy a Flare token within 8". This Flare token lasts until end of round. Enemy missiles within 9" of this Flare token during step 1.2 of the Status Phase must rotate 45* if possible and move toward the Flare token. [LIMITED USE(1)].`,
+        },
         {
           name: "Beam Saber",
           mcuCost: "FREE",

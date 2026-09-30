@@ -574,8 +574,8 @@ export const REZEON_PRESETS = [
           name: "Flares",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "2",
-          notes: `Deploy Flare token within 8"; enemy missiles can rotate 45* if possible and move toward it. [LIMITED USE(1)].`,
+          tonnage: "",
+          notes: `During any phase, deploy a Flare token within 8". This Flare token lasts until end of round. Enemy missiles within 9" of this Flare token during step 1.2 of the Status Phase must rotate 45* if possible and move toward the Flare token. [LIMITED USE(1)].`,
         },
         {
           name: "Heavy Boosters",

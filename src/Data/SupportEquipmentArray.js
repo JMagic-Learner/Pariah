@@ -178,7 +178,7 @@ export const SUPPORT = [
   {
     name: "Flares",
     loc: "Any",
-    ton: 1,
+    ton: 0,
     pfro: "–",
     qty: 2,
     mcu: 25,
