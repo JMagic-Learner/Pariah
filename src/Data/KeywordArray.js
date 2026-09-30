@@ -41,7 +41,7 @@ export const KEYWORDS = [
   },
   {
     name: "[CLUSTER]",
-    desc: "Automatically hits enemy targets within 6 inches — no evasion roll allowed. Additionally, one attack die (up to ROF) can be assigned per MISSILE TOKEN within 12 inches; those tokens are destroyed immediately without triggering their MUNITIONS effects.",
+    desc: "Automatically hits all [UNITS] and [TOKENS/MARKERS] within 6 inches — no evasion roll allowed. Additionally, one attack die (up to ROF) can be assigned per MISSILE TOKEN within 12 inches; those tokens are destroyed immediately without triggering their MUNITIONS effects.",
   },
   {
     name: "[COUNTERSTRIKE]",

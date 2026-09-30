@@ -66,11 +66,11 @@ export const MELEE = [
     rof: 2,
     range: '0–8"',
     mod: "+0",
-    dam: 10,
+    dam: 14,
     ton: 1,
     fro: 2,
     mcu: 35,
-    keywords: "–",
+    keywords: "[BEAM FOCUS],[LETHAL]",
   },
   {
     name: "Chain Mines",

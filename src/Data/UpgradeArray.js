@@ -74,7 +74,7 @@ export const UPGRADES = [
     qty: 1,
     mcu: 35,
     effect:
-      "This weapon can make a ROF 1 attack, with a -2 penalty. IF this attack hits, this [PILOT] chooses one of the following hit locations: Left Leg. Right Leg, Left Arm, Right Arm.",
+      "This weapon can make a ROF 1 attack, with a -2 penalty. IF this attack hits, this [PILOT] chooses one of the following hit locations: Left Leg. Right Leg, Left Arm, Right Arm. If the weapon has [CLEAVE], the second hit location is still rolled as normal",
   },
   {
     name: "Upgrade:Dual Barrel",
@@ -338,7 +338,8 @@ export const UPGRADES = [
     pfro: "-",
     qty: 2,
     mcu: 15,
-    effect: "Melee weapons now attack all enemies within frontal arc",
+    effect:
+      "This melee weapon gains [CLEAVE], melee attacks made with this weapon now attack all [UNITS],and [TOKENS] within frontal arc.",
   },
   {
     name: "Upgrade:Underslung",
