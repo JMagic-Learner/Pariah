@@ -1692,7 +1692,14 @@ export const EF_PRESETS = [
           notes:
             "First time hit by a Beam attack, reduce damage by 10. Cannot be stacked with Beam Shields. [LIMITED USE(1)]",
         },
-        B(),
+        {
+          name: "Anti-Beam Coating Kit",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "",
+          notes:
+            "First time hit by a Beam attack, reduce damage by 10. Cannot be stacked with Beam Shields. [LIMITED USE(1)]",
+        },
         B(),
         B(),
         B(),

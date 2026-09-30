@@ -355,7 +355,7 @@ export const FORCE_LIST_FACTIONS = [
         tonnage: 23,
         year: "0088",
         faction: "EF, AEUG",
-        equipment: "Beam Rifle, Beam Saber, Shield, Vulcans, ABC Kit x5",
+        equipment: "Beam Rifle, Beam Saber, Shield, Vulcans, ABC Kit x6",
       },
       {
         msu: "MSZ-006 Zeta Gundam",
