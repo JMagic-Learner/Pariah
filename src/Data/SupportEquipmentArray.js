@@ -329,6 +329,16 @@ export const SUPPORT = [
     effect: 'No fall damage from heights up to 24".',
   },
   {
+    name: "Reinforced Actuators",
+    loc: "Arms (Both)",
+    ton: 4,
+    pfro: "–",
+    qty: 1,
+    mcu: 40,
+    effect:
+      "This MCU may equip and use [HEAVY] weapons in one hand, with a -1 penalty to hit rolls.",
+  },
+  {
     name: "Shields (HEAVY) [30]",
     loc: "Arm",
     ton: 12,

@@ -6070,7 +6070,7 @@ export const EF_PRESETS = [
     data: {
       msuName: "FA-93HWS ν Gundam Heavy Weapons System Type",
       mobileSuit: "FA-93HWS ν Gundam Heavy Weapons System Type",
-      mcu: "265",
+      mcu: "275",
       fro: "7",
       tonnageLimit: "54",
       movement: '6"',
@@ -6170,7 +6170,13 @@ export const EF_PRESETS = [
           tonnage: "",
           notes: "Gain +1 Newtype Trait",
         },
-        B(),
+        {
+          name: "Hyper Beam Cannon [BIPOD]",
+          mcuCost: "FREE",
+          fro: "4",
+          tonnage: "6",
+          notes: "[BIPOD],[AP(5)] or [ANTI-MATERIAL],[LINEAR],[BRACE]",
+        },
         B(),
         B(),
       ],

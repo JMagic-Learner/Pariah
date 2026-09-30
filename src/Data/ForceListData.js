@@ -628,7 +628,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0093",
         faction: "EF",
         equipment:
-          "Beam Rifle, Beam Saber x2, Beam Cannon x2, Missile Pod 4 x2, Vulcan Cannons, Shield, Dummy Balloons",
+          "Hyper Beam Cannon, Beam Rifle, Beam Saber x2, Beam Cannon x2, Missile Pod 4 x2, Vulcan Cannons, Shield, Dummy Balloons",
       },
       {
         msu: "RX-0 Unicorn Gundam",
