@@ -1124,7 +1124,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "AMX-014 Doven Wolf",
-        mcu: 245,
+        mcu: 220,
         move: '8"',
         armor: 29,
         fro: "8 (10)",
@@ -1132,7 +1132,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0088",
         faction: "Zeon, Neo Zeon",
         equipment:
-          "Beam Rifle, Enhanced Fusion Reactors, 2x Missile Pod 10, 2x Beam Cannon, Vulcan Cannons",
+          "Beam Rifle, Enhanced Fusion Reactors, 2x Missile Pod 10 [INBUILT], 2x Beam Cannon [INBUILT], Vulcan Cannons",
       },
       {
         msu: "AMX-101 Gallus J",
