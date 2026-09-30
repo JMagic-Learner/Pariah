@@ -572,6 +572,17 @@ export const FORCE_LIST_FACTIONS = [
         equipment: "Beam Rifle, Shield, Beam Saber, Heavy Bazooka, Vulcans",
       },
       {
+        msu: "MS-007 MK III Gundam",
+        mcu: 140,
+        move: '8"',
+        armor: 25,
+        fro: 7,
+        tonnage: 16,
+        year: "0088",
+        faction: "EF, AEUG",
+        equipment: "Beam Rifle, Shield, Beam Saber x2, Beam Cannon x2, Vulcans",
+      },
+      {
         msu: "RGM-88X Jedah",
         mcu: 185,
         move: '7"',
@@ -1532,7 +1543,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0085",
         faction: "ReZeon, TITANS",
         equipment:
-          "Long Blade Rifle, Shield Boosters x2, GL Mounted x2, Beam Saber, Vulcans, Extra Armor [TR]",
+          "Long Blade Rifle, Shield Boosters x2, GL Mounted x2, Beam Saber x2, Vulcans, Extra Armor [TR]",
       },
       {
         msu: "RX-107 Rosette",
