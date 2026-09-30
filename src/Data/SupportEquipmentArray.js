@@ -103,9 +103,9 @@ export const SUPPORT = [
     name: "Emergency Proximity System",
     loc: "Legs (Both)",
     ton: 3,
-    pfro: "1 PFRO",
+    pfro: "-",
     qty: 1,
-    mcu: 45,
+    mcu: 25,
     effect: 'Once per round when an enemy enters within 12", [BOOST(6)].',
   },
   {
@@ -297,7 +297,7 @@ export const SUPPORT = [
     qty: 3,
     mcu: 20,
     effect:
-      'Enemy [UNITS] entering, starting, or stopping within 4" of a Proximity Mine location takes 15 damage to both LEG locations. MSU may hover vertically or move vertically without triggering the mine. [LIMITED USE(1)]. [AOE(4)], [DEPLOYABLE].',
+      'Enemy [UNITS] declaring a [ADVANCE],[BLITZ], or is pushed via an effect,  4" of a Proximity Mine location takes 15 damage to both LEG locations. MSU may hover vertically or move vertically without triggering the mine. [LIMITED USE(1)]. [AOE(4)], [DEPLOYABLE].',
   },
   {
     name: "Psycommu Funnel/Bit",
