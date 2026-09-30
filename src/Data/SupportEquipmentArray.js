@@ -36,7 +36,7 @@ export const SUPPORT = [
     qty: 1,
     mcu: 25,
     effect:
-      'At Step 1.1 of the Status Phase, roll PS 5+ for each enemy [MISSILE] token within 18"; remove tokens on success.',
+      'Whenever an enemy [MISSILE] is within 10" of this MCU, roll PS 6+ for each enemy [MISSILE] token within 10"; remove tokens on success. [MISSILE] tokens do not produce secondary effects when removed in this manner.',
   },
   {
     name: "Beam Shields (20 Armor)",
