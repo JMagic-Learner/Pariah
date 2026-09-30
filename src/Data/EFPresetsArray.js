@@ -4901,9 +4901,9 @@ export const EF_PRESETS = [
     data: {
       msuName: "RMS-154 BARZAM",
       mobileSuit: "RMS-154 BARZAM",
-      mcu: "150",
+      mcu: "130",
       fro: "6",
-      tonnageLimit: "43",
+      tonnageLimit: "22",
       movement: '7"',
       armorValue: "22",
       baseEquip: [
@@ -4935,7 +4935,7 @@ export const EF_PRESETS = [
           tonnage: "-",
           notes: "[WARTIME INNOVATIONS],[FULL AUTO],[INBUILT],[AKIMBO]",
         },
-        { name: "", mcuCost: "FREE", fro: "", tonnage: "", notes: "" },
+        B(),
         B(),
         B(),
         B(),

@@ -326,7 +326,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RMS-154 Barzam",
-        mcu: 150,
+        mcu: 130,
         move: '7"',
         armor: 22,
         fro: 6,
