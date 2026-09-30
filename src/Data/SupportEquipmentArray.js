@@ -106,7 +106,8 @@ export const SUPPORT = [
     pfro: "-",
     qty: 1,
     mcu: 25,
-    effect: 'Once per round when an enemy enters within 12", [BOOST(6)].',
+    effect:
+      'Once per round when an enemy [UNIT] enters within 12", [BOOST(6)].',
   },
   {
     name: "Enhanced Ejection",
