@@ -727,11 +727,11 @@ export const ZEON_PRESETS = [
       armorValue: "22",
       baseEquip: [
         {
-          name: "Machine Gun (MOUNTED)",
+          name: "Machine Gun (ZEON) [MOUNTED]",
           mcuCost: "FREE",
-          fro: "3",
-          tonnage: "1",
-          notes: "[FULL AUTO],[MOUNTABLE]",
+          fro: "-",
+          tonnage: "2",
+          notes: "[MOUNTABLE],[FULL AUTO],[MILITANT INNOVATION]",
         },
         {
           name: "Heat Hawk (MOUNTED)",
