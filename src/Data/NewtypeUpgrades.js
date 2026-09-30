@@ -23,7 +23,7 @@ export const NEWTYPE_UPGRADES = [
     limit: 5,
     mcu: 10,
     effect:
-      "Requires CYBER-NEWTYPE trait. Deploy up to 5 Inhibitor Bits (see Psycommu Bits section).",
+      'Requires CYBER-NEWTYPE trait. Can intercept missiles and physically block enemy MSU movement. Prevent [NEWTYPE] pilots from using any Newtype Upgrade Traits or enemy Bits within 18 inches of a Inhibitor Bit. Enemy Newtypes within 12" inches of the Bit gain FEAR/SHAKEN',
   },
   {
     name: "Psychosis",
@@ -70,7 +70,8 @@ export const NEWTYPE_UPGRADES = [
     name: "Shield Bits",
     limit: 5,
     mcu: 10,
-    effect: "Deploy up to 5 Shield Bits (see Psycommu Bits section).",
+    effect:
+      "Can intercept missiles and physically block enemy MSU movement. May also provide [HARD COVER] for MSU if large enough.",
   },
 ];
 
@@ -106,7 +107,7 @@ export const BITS = [
     mods: "–",
     dam: "–",
     mcu: 10,
-    faction: "TITAN",
+    faction: "",
   },
   {
     type: "Psycommu Hand [AP(5)]",
