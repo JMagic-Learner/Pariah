@@ -102,7 +102,7 @@ export const SUPPORT = [
   {
     name: "Emergency Proximity System",
     loc: "Legs (Both)",
-    ton: 3,
+    ton: 2,
     pfro: "-",
     qty: 1,
     mcu: 25,
