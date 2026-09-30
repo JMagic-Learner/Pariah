@@ -2,11 +2,18 @@
 // Sourced from Chapter 3 (States.js, section 3.6).
 export const STATES = [
   {
+    name: "[ADHESIVE]",
+    section: "3.6",
+    tags: ["STATE"],
+    effect:
+      "Each stack of [ADHESIVE] reduces movement by 2. Each stack of [ADHESIVE] is removed by spending 1 FRO in Status Phase 1.4",
+  },
+  {
     name: "[CRIPPLED]",
     section: "3.6",
     tags: ["STATE"],
     effect:
-      "Legs have suffered severe damage. Ground Operations: reduce movespeed by 2\". Space Operations: does not fall — reduce movespeed by 50% instead.",
+      'Legs have suffered severe damage. Ground Operations: reduce movespeed by 2". Space Operations: does not fall — reduce movespeed by 50% instead.',
   },
   {
     name: "[CROUCHED]",
@@ -40,7 +47,7 @@ export const STATES = [
     section: "3.6",
     tags: ["STATE"],
     effect:
-      "+1 circumstance bonus to Evasion checks. Outside the LOS of all enemy [UNITS], replace the MSU with a 60mm token on the same base position; enemies need a 5+ to \"reveal\" it (swap the token for the model, facing any direction). Once revealed, cannot re-enter [STEALTH] until it breaks LOS with all enemies again. Attacks declared against the token form impose a −2 penalty to the attacker's Evasion checks; enemies cannot declare Reactions or free-reaction abilities against its activation or movement.",
+      '+1 circumstance bonus to Evasion checks. Outside the LOS of all enemy [UNITS], replace the MSU with a 60mm token on the same base position; enemies need a 5+ to "reveal" it (swap the token for the model, facing any direction). Once revealed, cannot re-enter [STEALTH] until it breaks LOS with all enemies again. Attacks declared against the token form impose a −2 penalty to the attacker\'s Evasion checks; enemies cannot declare Reactions or free-reaction abilities against its activation or movement.',
   },
   {
     name: "[SUPPRESSED]",
@@ -61,6 +68,6 @@ export const STATES = [
     section: "3.6",
     tags: ["STATE"],
     effect:
-      "An airborne MSU that does not (or cannot) [HOVER] drops to ground level at no movement cost. PS 5 check: Failure = 3 damage per 4\" fallen to one hit location. Success = no damage, and if it lands within melee range of an enemy PILOT/MSU it may immediately declare an [ATTACK] action. Fall distance counts toward the Evasion Tier Table.",
+      'An airborne MSU that does not (or cannot) [HOVER] drops to ground level at no movement cost. PS 5 check: Failure = 3 damage per 4" fallen to one hit location. Success = no damage, and if it lands within melee range of an enemy PILOT/MSU it may immediately declare an [ATTACK] action. Fall distance counts toward the Evasion Tier Table.',
   },
 ];

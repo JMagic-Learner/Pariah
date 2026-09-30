@@ -4,7 +4,7 @@ export const MUNITIONS = [
     name: "[MUNITIONS]: Adhesive",
     dam: "-",
     effect:
-      "Enemy MSU that are directly hit by [MUNITIONS]:ADHESIVE reduce base movement by 2 inches until end of round. This effect stacks with multiple hits.",
+      "Enemy MSU that are directly hit by [MUNITIONS]:ADHESIVE gain one stack of [ADHESIVE]. This effect stacks with multiple hits.",
   },
   {
     name: "[MUNITIONS]: Buckshot",

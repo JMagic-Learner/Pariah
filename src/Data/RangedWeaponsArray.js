@@ -158,10 +158,10 @@ export const RANGED = [
   },
   {
     name: "Clay Bazooka",
-    type: "Bazooka",
+    type: "Cannon",
     rof: 3,
     range: "18|36",
-    mod: "+2|+1",
+    mod: "+1 |-1",
     dam: "12 or [MUNITIONS]",
     ton: 3,
     fro: "–",
