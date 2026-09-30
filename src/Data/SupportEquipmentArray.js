@@ -183,7 +183,7 @@ export const SUPPORT = [
     qty: 2,
     mcu: 25,
     effect:
-      'Spend one action during any phase to deploy a Flare token within 8". This Flare token lasts until end of round. Enemy missiles within 9" of this Flare token during step 1.2 of the Status Phase must rotate 45* if possible and move toward the Flare token. [LIMITED USE(1)].',
+      'During any phase, deploy a Flare token within 8". This Flare token lasts until end of round. Enemy missiles within 9" of this Flare token during step 1.2 of the Status Phase must rotate 45* if possible and move toward the Flare token. [LIMITED USE(1)].',
   },
   {
     name: "Forward Observer",
