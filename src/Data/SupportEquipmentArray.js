@@ -313,8 +313,8 @@ export const SUPPORT = [
   {
     name: "Quasi Psycommu System",
     loc: "Torso",
-    ton: 3,
-    pfro: "3 PFRO",
+    ton: 2,
+    pfro: "2 PFRO",
     qty: 1,
     mcu: 50,
     effect: "Access to [INCOMS] Beam/Shield Bits without Newtype trait.",
@@ -414,7 +414,7 @@ export const SUPPORT = [
     qty: 1,
     mcu: 50,
     effect:
-      "Determine rangebands from any friendly [UNIT] not in [HIGH ALTITUDE] with LOS.",
+      "Determine rangebands from any friendly [UNIT] not in [HIGH ALTITUDE] with LOS to the enemy [UNIT].",
   },
   {
     name: "Target Designator",
