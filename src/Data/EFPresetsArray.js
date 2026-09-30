@@ -2906,7 +2906,7 @@ export const EF_PRESETS = [
           fro: "",
           tonnage: "6",
           notes:
-            "Optional: replace with Jegan Shield + Missile Pod 2 for +15 MCU (ton 3)",
+            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
         },
         {
           name: "Side Verniers",
@@ -3227,10 +3227,10 @@ export const EF_PRESETS = [
             "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
         },
         {
-          name: "Missile Pod 2",
+          name: "Missile Pod 4",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "4",
+          tonnage: "8",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
@@ -3293,7 +3293,7 @@ export const EF_PRESETS = [
         leftArm: {
           current: "24",
           max: "24",
-          weapon: "Shield + Missile Pod 2",
+          weapon: "Shield + Missile Pod 4",
           equipment: ["", "", ""],
         },
         rightLeg: {
@@ -3360,14 +3360,14 @@ export const EF_PRESETS = [
           notes: "[BOOST(1)] becomes [BOOST(2)]",
         },
         {
-          name: "Missile Pod 3 [MOUNTABLE]",
+          name: "Missile Pod 3",
           mcuCost: "FREE",
           fro: "",
           tonnage: "6",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
-          name: "Missile Pod 3 [MOUNTABLE]",
+          name: "Missile Pod 3",
           mcuCost: "FREE",
           fro: "",
           tonnage: "6",
@@ -3480,10 +3480,10 @@ export const EF_PRESETS = [
             "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
         },
         {
-          name: "Missile Pod 2",
+          name: "Missile Pod 4",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "4",
+          tonnage: "8",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
       ],
@@ -3510,7 +3510,7 @@ export const EF_PRESETS = [
         leftArm: {
           current: "25",
           max: "25",
-          weapon: "Shield + Missile Pod 2",
+          weapon: "Shield + Missile Pod 4",
           equipment: ["", "", ""],
         },
         rightLeg: {
@@ -3592,10 +3592,10 @@ export const EF_PRESETS = [
             "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
         },
         {
-          name: "Missile Pod 2",
+          name: "Missile Pod 4",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "4",
+          tonnage: "8",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
       ],
@@ -3648,7 +3648,7 @@ export const EF_PRESETS = [
         leftArm: {
           current: "25",
           max: "25",
-          weapon: "Shield + Missile Pod 2",
+          weapon: "Shield + Missile Pod 4",
           equipment: ["Grenade Launcher [CYCLIC]", "", ""],
         },
         rightLeg: {
@@ -3716,10 +3716,10 @@ export const EF_PRESETS = [
             "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
         },
         {
-          name: "Missile Pod 2",
+          name: "Missile Pod 4",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "4",
+          tonnage: "8",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
@@ -3760,7 +3760,7 @@ export const EF_PRESETS = [
         leftArm: {
           current: "25",
           max: "25",
-          weapon: "Shield + Missile Pod 2",
+          weapon: "Shield + Missile Pod 4",
           equipment: ["Beam Saber (Stowed)", "", ""],
         },
         rightLeg: {
@@ -3835,10 +3835,10 @@ export const EF_PRESETS = [
             "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot.",
         },
         {
-          name: "Missile Pod 2",
+          name: "Missile Pod 4",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "4",
+          tonnage: "8",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         {
@@ -3897,7 +3897,7 @@ export const EF_PRESETS = [
         leftArm: {
           current: "25",
           max: "25",
-          weapon: "Shield + Missile Pod 2",
+          weapon: "Shield + Missile Pod 4",
           equipment: ["", "", ""],
         },
         rightLeg: {
@@ -4827,10 +4827,17 @@ export const EF_PRESETS = [
           notes: "[WARTIME INNOVATIONS],[SCOPE]",
         },
         {
-          name: "Shield + Missile Pod 2",
+          name: "Shield",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "10",
+          tonnage: "6",
+          notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
+        },
+        {
+          name: "Missile Pod 4",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "8",
           notes: "[MISSILE(16)],[MOUNTABLE],[LIMITED USE(1)]",
         },
         { name: "Flares", mcuCost: "FREE", fro: "", tonnage: "2", notes: "" },
@@ -4870,7 +4877,7 @@ export const EF_PRESETS = [
         leftArm: {
           current: "24",
           max: "24",
-          weapon: "Shield + Missile Pod 2",
+          weapon: "Shield + Missile Pod 4",
           equipment: ["", "", ""],
         },
         rightLeg: {

@@ -311,7 +311,7 @@ export const FORCE_LIST_FACTIONS = [
         tonnage: 21,
         year: "0087",
         faction: "EF, TITANS",
-        equipment: "Beam Rifle, Shield + Missile Pod 2, Flares",
+        equipment: "Beam Rifle, Shield + Missile Pod 4, Flares",
       },
       {
         msu: "RX-110 Gabthley",
@@ -402,7 +402,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0088",
         faction: "EF, AEUG",
         equipment:
-          "Beam Rifle, Shield + Missile Pod 2, Beam Saber, Vulcans, 3x Grenades",
+          "Beam Rifle, Shield + Missile Pod 4, Beam Saber, Vulcans, 3x Grenades",
       },
       {
         msu: "RGM-89De Jegan [ECOAS Type]",
@@ -414,7 +414,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0093",
         faction: "EF",
         equipment:
-          "Light Bazooka, Beam Rifle or Beam Pistol, Beam Saber or Combat Knife, Napalm Grenades x3, Shield + Missile Pod 2, Enhanced Visors, Vulcan Cannons",
+          "Light Bazooka, Beam Rifle or Beam Pistol, Beam Saber or Combat Knife, Napalm Grenades x3, Shield + Missile Pod 4, Enhanced Visors, Vulcan Cannons",
       },
       {
         msu: "RGM-89D Jegan [Type D]",
@@ -426,7 +426,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0093",
         faction: "EF",
         equipment:
-          "Vulcan Cannons, Beam Rifle, Beam Saber, Grenades x3, Shield + Missile Pod 2",
+          "Vulcan Cannons, Beam Rifle, Beam Saber, Grenades x3, Shield + Missile Pod 4",
       },
       {
         msu: "RGM-89R Jegan [Type A]",
@@ -438,7 +438,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0093",
         faction: "EF",
         equipment:
-          "Vulcan Cannons, Beam Rifle, Beam Saber, Grenades x3, Shield + Missile Pod 2, Enhanced Reactor, Grenade Launcher + [CYCLIC]",
+          "Vulcan Cannons, Beam Rifle, Beam Saber, Grenades x3, Shield + Missile Pod 4, Enhanced Reactor, Grenade Launcher + [CYCLIC]",
       },
       {
         msu: "RGM-89 Stark Jegan",
@@ -687,7 +687,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0123",
         faction: "EF",
         equipment:
-          "Vulcan Cannons, Beam Rifle, Beam Saber x2, Shield + Missile Pod 2, Missile Pod 4 x2 [MOUNTABLE]",
+          "Vulcan Cannons, Beam Rifle, Beam Saber x2, Shield + Missile Pod 4, Missile Pod 4 x2 [MOUNTABLE]",
       },
       {
         msu: "F91 Gundam",
@@ -1626,7 +1626,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0087",
         faction: "ReZeon, TITANS",
         equipment:
-          " Beam Rifle,Beam Saber,Beam Saber, Shield + Missile Pod 2, Heavy Boosters, Cannon [INBUILT], Flares",
+          " Beam Rifle,Beam Saber,Beam Saber, Shield + Missile Pod 4, Heavy Boosters, Cannon [INBUILT], Flares",
       },
       {
         msu: "RX-110C Gabthley [HUGIN]",
