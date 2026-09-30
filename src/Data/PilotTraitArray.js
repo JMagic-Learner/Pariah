@@ -475,7 +475,7 @@ export const TRAITS = [
     name: "Tricky",
     cost: 1,
     effect:
-      "After rolling initiative but before rerolling ties, adjust [PILOT] initiative result by +2 or -2.",
+      "You may modify the [PILOT]'s initiative bidding result by +2 or -2.",
   },
   {
     name: "Unorthodox Training",
