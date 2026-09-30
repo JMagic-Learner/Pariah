@@ -18,7 +18,7 @@ export const MELEE = [
     rof: 2,
     range: '0–8(24)"',
     mod: "+1",
-    dam: 8,
+    dam: 12,
     ton: 2,
     fro: 1,
     mcu: 15,
