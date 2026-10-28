@@ -32,8 +32,7 @@ export const FinalStand = () => {
               additional Actions for 175 MCU each. The [PILOT] of this MSU gains
               the following additional pilot traits for free without counting
               toward the pilot trait limit: Juke, Martyr, Fearless, Eyes on
-              You!. This Pilot rolls two sets of initiative rolls each battle
-              round, and can activate on each initiative.
+              You!.
             </li>
             <li className={classNames("pv1", { f7: isMobile })}>
               <strong>Rounds:</strong> 5

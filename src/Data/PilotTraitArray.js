@@ -344,7 +344,7 @@ export const TRAITS = [
     name: "Patient",
     cost: 1,
     effect:
-      "This [PILOT] can reduce its own initiative result to 0 at end of the initiative phase.",
+      "This [PILOT] can reduce its own initiative result to 0 at end of the initiative phase. Despite being the lowest initiative, this [PILOT] is always the first MSU to declare attacks during the Shooting Phase. IF multiple [PILOT]s have the Patient pilot trait, roll off to determine activation order.",
   },
   { name: "Piloting", cost: 2, effect: "Increase Piloting by 1 (Stackable)." },
   {
