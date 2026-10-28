@@ -144,7 +144,7 @@ export const MELEE = [
     fro: 1,
     mcu: 20,
     faction: "ZEON",
-    keywords: "[CLEAVE],[LETHAL]",
+    keywords: "[CLEAVE],[LETHAL],[MOMENTUM]",
   },
   {
     name: "Heat Hawk",

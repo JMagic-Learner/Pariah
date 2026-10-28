@@ -4800,11 +4800,11 @@ export const EF_PRESETS = [
   {
     id: "rms108-marasai",
     name: "RMS-108 MARASAI",
-    faction: "EF",
+    faction: "EF,TITAN",
     data: {
       msuName: "RMS-108 MARASAI",
       mobileSuit: "RMS-108 MARASAI",
-      mcu: "140",
+      mcu: "165",
       fro: "6",
       tonnageLimit: "26",
       movement: '7"',
@@ -4818,19 +4818,18 @@ export const EF_PRESETS = [
           notes: "[WARTIME INNOVATIONS],[SCOPE]",
         },
         {
-          name: "Shield",
+          name: "Shield (Shoulder)",
           mcuCost: "FREE",
           fro: "",
-          tonnage: "6",
-          notes:
-            "When damage is assigned to the Torso or the respective's attached arm's side (left leg + left arm example), assign all damage dealth (even with cleave and AOE) to the shield. Shields occupy a weapon slot or an equipment slot",
+          tonnage: "4",
+          notes: "20 Additional Armor, only protects the Limb Attached",
         },
         {
-          name: "Vulcan Cannon [INBUILT]",
+          name: "Vulcan Cannons",
           mcuCost: "FREE",
           fro: "",
           tonnage: "",
-          notes: "[INBUILT]",
+          notes: "[WARTIME INNOVATIONS],[FULL AUTO],[INBUILT],[AKIMBO]",
         },
         {
           name: "Grenades",
@@ -4868,7 +4867,22 @@ export const EF_PRESETS = [
           notes: "[CLEAVE],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
         },
       ],
-      addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
+      addlEquip: [
+        {
+          name: "Spiky Shoulders",
+          mcuCost: "FREE",
+          fro: "",
+          tonnage: "2",
+          notes: "[BLITZ] collision: 15 damage + 1 per 3 inches traveled.",
+        },
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+      ],
       locations: {
         head: {
           current: "24",

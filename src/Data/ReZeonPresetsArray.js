@@ -916,12 +916,11 @@ export const REZEON_PRESETS = [
       armorValue: "26",
       baseEquip: [
         {
-          name: "Feydayeen Rifle ",
+          name: "Fedayeen Rifle (Beam Rifle + Beam Saber)",
           mcuCost: "FREE",
           fro: "3/1",
           tonnage: "4",
-          notes:
-            "Feydayeen Rifle is a combination weapon of a Beam Rifle + Beam Saber",
+          notes: "[COMBO],[SCOPE] or [CLEAVE],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
         },
         {
           name: "Gauntlets",

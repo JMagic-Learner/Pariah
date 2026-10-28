@@ -293,14 +293,15 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "RMS-108 Marasai",
-        mcu: 140,
+        mcu: 165,
         move: '7"',
         armor: 24,
         fro: 6,
         tonnage: 26,
         year: "0087",
         faction: "EF, TITANS",
-        equipment: "Beam Rifle, Beam Saber, Grenades, Vulcans, Shield",
+        equipment:
+          "Beam Rifle, Beam Saber, Grenades x3, Vulcans, Spiky Shoulders, Shield (Shoulder)",
       },
       {
         msu: "RMS-117 Galbaldy B",
@@ -896,7 +897,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0079",
         faction: "Zeon",
         equipment:
-          "Heat Sword x2, Shotgun (Kinetic), Smoke Grenades x4 Mounted, Heavy Booster",
+          "Heat Sword x2, Shotgun (Kinetic), Smoke Grenades x4 Mounted, Heavy Booster, Spiky Shoulders x2",
       },
       {
         msu: "MS-08TX Efreet Custom (EXAM)",
@@ -908,7 +909,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0080",
         faction: "Zeon",
         equipment:
-          "Heat Sword x2, Shotgun (Kinetic), Missile Pod 3 x4, Heavy Boosters, EXAM System",
+          "Heat Sword x2, Shotgun (Kinetic), Missile Pod 3 x4, Heavy Boosters, EXAM System, Spiky Shoulders x2",
       },
       {
         msu: "MS-08TX Efreet Nacht",
@@ -920,7 +921,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0080",
         faction: "Zeon",
         equipment:
-          "CQC Weapon x2, Heavy Booster, Kunai Knives x4, Machine Gun, Gatling [MOUNTABLE]",
+          "CQC Weapon x2, Heavy Booster, Kunai Knives x4, Kinetic Gatling [INBUILT] x3, Spiky Shoulders x2",
       },
       {
         msu: "MS-09R Rick Dom",
@@ -1085,6 +1086,18 @@ export const FORCE_LIST_FACTIONS = [
         faction: "Zeon (Captured)",
         equipment:
           "Atomic Bazooka, Vulcan, Beam Saber, Heavy Shield, Enhanced Fusion Reactor",
+      },
+      {
+        msu: "RMS-108 Marasai",
+        mcu: 150,
+        move: '7"',
+        armor: 24,
+        fro: 6,
+        tonnage: 26,
+        year: "0087",
+        faction: "Zeon",
+        equipment:
+          "Fedayeen Beam Rifle, Beam Saber, Grenades x3, Vulcan Cannons, Spiky Shoulders, Shield (Shoulder)",
       },
       {
         msu: "AMX-004 Qubeley",
