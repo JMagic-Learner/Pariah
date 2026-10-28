@@ -1713,7 +1713,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "3",
           tonnage: "3",
-          notes: "[CYCLIC]",
+          notes: "[CYCLIC],[SCOPE]",
         },
         {
           name: "Shield",
@@ -1761,6 +1761,88 @@ export const ZEON_PRESETS = [
           current: "24",
           max: "24",
           weapon: "Shield",
+          equipment: ["", "", ""],
+        },
+        rightLeg: {
+          current: "24",
+          max: "24",
+          weapon: "",
+          equipment: ["", "", ""],
+        },
+        leftLeg: {
+          current: "24",
+          max: "24",
+          weapon: "",
+          equipment: ["", "", ""],
+        },
+      },
+    },
+  },
+  {
+    id: "MS-14JG-gelgoog-jäger",
+    name: "MS-14JG GELGOOG Jäger",
+    faction: "ZEON",
+    data: {
+      msuName: "MS-14JG GELGOOG Jäger",
+      mobileSuit: "MS-14JG GELGOOG Jäger",
+      mcu: "175",
+      fro: "5",
+      tonnageLimit: "20",
+      movement: '7"',
+      armorValue: "24",
+      baseEquip: [
+        {
+          name: "Beam Machine Gun + Beam Sniper Rifle",
+          mcuCost: "FREE",
+          fro: "2/4",
+          tonnage: "8",
+          notes: "[COMBO],[FULL AUTO] OR [SCOPE],[GRIP],[PRECISE]",
+        },
+        {
+          name: "Command Interface",
+          mcuCost: "FREE",
+          fro: "1 PFRO",
+          tonnage: "4",
+          notes:
+            "All friendly units (including this MSU) within 8 inches receives a +1 modifier to PS",
+        },
+        {
+          name: "Beam Saber",
+          mcuCost: "FREE",
+          fro: "1",
+          tonnage: "1",
+          notes: "[CLEAVE],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+        },
+        B(),
+        B(),
+        B(),
+        B(),
+        B(),
+      ],
+      addlEquip: [B(), B(), B(), B(), B(), B(), B(), B()],
+      locations: {
+        head: {
+          current: "24",
+          max: "24",
+          weapon: "",
+          equipment: ["Command Interface", "", ""],
+        },
+        torso: {
+          current: "24",
+          max: "24",
+          weapon: "",
+          equipment: ["Command Interface", "Beam Saber (Stowed)", ""],
+        },
+        rightArm: {
+          current: "24",
+          max: "24",
+          weapon: "Beam Machine Gun + Beam Sniper Rifle",
+          equipment: ["", "", ""],
+        },
+        leftArm: {
+          current: "24",
+          max: "24",
+          weapon: "",
           equipment: ["", "", ""],
         },
         rightLeg: {
@@ -2985,16 +3067,14 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "3/1",
           tonnage: "4",
-          notes:
-            "The Beam Rifles and Beam Sabers are actually the same weapon. They are considered active at the same time. Psycommu",
+          notes: "[COMBO],[SCOPE] Or [QUICK SWAP],[CLEAVE],[AKIMBO],[MOMENTUM]",
         },
         {
           name: "Beam Rifle + Beam Saber",
           mcuCost: "FREE",
           fro: "3/1",
           tonnage: "4",
-          notes:
-            "The Beam Rifles and Beam Sabers are actually the same weapon. They are considered active at the same time. Psycommu",
+          notes: "[COMBO],[SCOPE] Or [QUICK SWAP],[CLEAVE],[AKIMBO],[MOMENTUM]",
         },
         {
           name: "Psycommu Funnel/Bit",
@@ -3669,18 +3749,18 @@ export const ZEON_PRESETS = [
       armorValue: "26",
       baseEquip: [
         {
-          name: "Energy Gun (Grip)",
+          name: "Energy Gun (Beam Rifle + Missile Pod 4) [GRIP]",
           mcuCost: "FREE",
           fro: "3/0",
           tonnage: "5",
-          notes: "Beam Rifle + Missile Pod 4",
+          notes: "[COMBO],[GRIP],[SCOPE] or [MOUNTABLE]",
         },
         {
           name: "Machine Gun",
           mcuCost: "FREE",
           fro: "3",
           tonnage: "1",
-          notes: "Left Hand,[FULL AUTO]",
+          notes: "[FULL AUTO]",
         },
         {
           name: "Side Verniers",
@@ -4402,7 +4482,7 @@ export const ZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "",
           tonnage: "8",
-          notes: "",
+          notes: "[BOOST(1)] becomes [BOOST(2)]",
         },
         {
           name: "Vulcan Cannons",

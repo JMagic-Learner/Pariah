@@ -2444,15 +2444,17 @@ export const EF_PRESETS = [
           name: "Beam Rifle + GL",
           mcuCost: "FREE",
           fro: "3/0",
-          tonnage: "4",
-          notes: "[INDIRECT],[LIMITED USE(3)]",
+          tonnage: "5",
+          notes:
+            "[COMBO],[INDIRECT],[LIMITED USE(3)] or [SCOPE],[WARTIME INNOVATIONS]",
         },
         {
           name: "Beam Rifle + GL",
           mcuCost: "FREE",
           fro: "3/0",
-          tonnage: "4",
-          notes: "[INDIRECT],[LIMITED USE(3)]",
+          tonnage: "5",
+          notes:
+            "[COMBO],[INDIRECT],[LIMITED USE(3)] or [SCOPE],[WARTIME INNOVATIONS]",
         },
         B(),
         B(),
@@ -5387,9 +5389,10 @@ export const EF_PRESETS = [
         {
           name: "Beam Rifle + GL",
           mcuCost: "FREE",
-          fro: "3",
+          fro: "3/0",
           tonnage: "5",
-          notes: "",
+          notes:
+            "[COMBO],[INDIRECT],[LIMITED USE(3)] or [SCOPE],[WARTIME INNOVATIONS]",
         },
         {
           name: "Shield",
@@ -5493,9 +5496,10 @@ export const EF_PRESETS = [
         {
           name: "Beam Rifle + GL",
           mcuCost: "FREE",
-          fro: "3",
+          fro: "3/0",
           tonnage: "5",
-          notes: "",
+          notes:
+            "[COMBO],[INDIRECT],[LIMITED USE(3)] or [SCOPE],[WARTIME INNOVATIONS]",
         },
         {
           name: "Shield",

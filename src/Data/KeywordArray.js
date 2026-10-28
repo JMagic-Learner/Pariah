@@ -48,6 +48,10 @@ export const KEYWORDS = [
     desc: "When an incoming melee attack is declared: rotate the MSU up to two hex facings. Use Brawl instead of Piloting for Evasion checks against melee (formula: 1d6 + Brawl + Weapon Mod vs. incoming attack roll). If the check succeeds, the attacker suffers this weapon's damage to one hit location. Does not interact with CLEAVE — only one location is rolled.",
   },
   {
+    name: "[COMBO]",
+    desc: "A weapon with this keyword usually designates two separate weapons that share a single weapon slot. When attacking with a [COMBO] weapon, the [PILOT] must declare one of the two weapons to use for that attack. The [PILOT] may swap between the two weapons on subsequent attacks. Weapon Upgrades that specify a weapon restriction (e.g. [FULL AUTO], [BURST], [SCOPE]) only apply to one of the weapon types.",
+  },
+  {
     name: "[COMMANDER]",
     desc: "If a [PILOT] is a [COMMANDER], the [PILOT] gains one Command Action. These Command Actions are not refreshed on Staus Phase Step 1.4, so they are single use. These Command Actions can only be spent on [COMMANDER ACTION] abilities. A [PILOT] with this keyword gains access to [COMMANDER ACTIONS]",
   },

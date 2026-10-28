@@ -37,7 +37,7 @@ export const REZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "3/0",
           tonnage: "4",
-          notes: "[CLEAVE]",
+          notes: "[COMBO],[CLEAVE] or [SCOPE]",
         },
         {
           name: "Arm Extra (1)",
@@ -648,7 +648,7 @@ export const REZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "3/0",
           tonnage: "5",
-          notes: "[INDIRECT],[LIMITED USE(3)]",
+          notes: "[COMBO],[INDIRECT],[LIMITED USE(3)] or [SCOPE]",
         },
         {
           name: "Heavy Bazooka",
@@ -1132,7 +1132,7 @@ export const REZEON_PRESETS = [
           mcuCost: "FREE",
           fro: "3/0",
           tonnage: "4",
-          notes: "[CLEAVE]",
+          notes: "[COMBO],[CLEAVE] or [SCOPE]",
         },
         {
           name: "Beam Saber",
@@ -2133,18 +2133,18 @@ export const REZEON_PRESETS = [
       armorValue: "30",
       baseEquip: [
         {
-          name: "Long Blade Rifle (BR + CQC)",
+          name: "Long Blade Rifle (Beam Rifle + CQC)",
           mcuCost: "FREE",
-          fro: "3",
+          fro: "3/0",
           tonnage: "4",
-          notes: "[CLEAVE]",
+          notes: "[COMBO],[CLEAVE] or [SCOPE]",
         },
         {
-          name: "Long Blade Rifle (BR + CQC)",
+          name: "Long Blade Rifle (Beam Rifle + CQC)",
           mcuCost: "FREE",
-          fro: "3",
+          fro: "3/0",
           tonnage: "4",
-          notes: "[CLEAVE]",
+          notes: "[COMBO],[CLEAVE] or [SCOPE]",
         },
         {
           name: "Panoptic Canopy",

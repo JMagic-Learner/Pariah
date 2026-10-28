@@ -128,6 +128,21 @@ export const usePilotDerivedStats = ({
     ).length +
     addlEquip.filter(
       (row, i) => row.name === "Enhanced Fusion Reactors" && !soldAddl[i],
+    ).length +
+    addlEquip.filter(
+      (row, i) => row.name === "Helium-3 Fuel Tank (Torso)" && !soldAddl[i],
+    ).length +
+    addlEquip.filter(
+      (row, i) => row.name === "Helium-3 Fuel Tank (Left Arm)" && !soldAddl[i],
+    ).length +
+    addlEquip.filter(
+      (row, i) => row.name === "Helium-3 Fuel Tank (Right Arm)" && !soldAddl[i],
+    ).length +
+    addlEquip.filter(
+      (row, i) => row.name === "Helium-3 Fuel Tank (Left Leg)" && !soldAddl[i],
+    ).length +
+    addlEquip.filter(
+      (row, i) => row.name === "Helium-3 Fuel Tank (Right Leg)" && !soldAddl[i],
     ).length;
   const froBonus =
     (hasMechanic && mechanicChoice === "fro" ? 2 : 0) + efrCount * 2;

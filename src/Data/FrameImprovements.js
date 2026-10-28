@@ -164,6 +164,56 @@ export const FRAME_IMPROVEMENTS = [
       "First time hit by a Non-Beam attack, ignore damage. Cannot be equipped in a same hit location as Extra Armor. [LIMITED USE(1)]",
   },
   {
+    name: "Helium-3 Fuel Tank (Torso)",
+    loc: "Torso",
+    ton: `1`,
+    pfro: "–",
+    qty: 2,
+    mcu: 15,
+    effect:
+      "Increase FRO by 2. If a hit location is rolled while a Helium-3 Fuel Tank is equipped in that hit location, roll 1d6. On a 5+, the tank explodes and deals one [AOE(3)] hit,10 damage to that hit location.",
+  },
+  {
+    name: "Helium-3 Fuel Tank (Left Leg)",
+    loc: "Left Leg",
+    ton: `1`,
+    pfro: "–",
+    qty: 2,
+    mcu: 15,
+    effect:
+      "Increase FRO by 2. If a hit location is rolled while a Helium-3 Fuel Tank is equipped in that hit location, roll 1d6. On a 5+, the tank explodes and deals one [AOE(3)] hit,10 damage to that hit location.",
+  },
+  {
+    name: "Helium-3 Fuel Tank (Left Arm)",
+    loc: "Left Arm",
+    ton: `1`,
+    pfro: "–",
+    qty: 2,
+    mcu: 15,
+    effect:
+      "Increase FRO by 2. If a hit location is rolled while a Helium-3 Fuel Tank is equipped in that hit location, roll 1d6. On a 5+, the tank explodes and deals one [AOE(3)] hit,10 damage to that hit location.",
+  },
+  {
+    name: "Helium-3 Fuel Tank (Right Leg)",
+    loc: "Right Leg",
+    ton: `1`,
+    pfro: "–",
+    qty: 2,
+    mcu: 15,
+    effect:
+      "Increase FRO by 2. If a hit location is rolled while a Helium-3 Fuel Tank is equipped in that hit location, roll 1d6. On a 5+, the tank explodes and deals one [AOE(3)] hit,10 damage to that hit location.",
+  },
+  {
+    name: "Helium-3 Fuel Tank (Right Arm)",
+    loc: "Right Arm",
+    ton: `1`,
+    pfro: "–",
+    qty: 2,
+    mcu: 15,
+    effect:
+      "Increase FRO by 2. If a hit location is rolled while a Helium-3 Fuel Tank is equipped in that hit location, roll 1d6 for EACH Helium-3 Fuel Tank equipped in that hit location. On a 5+, the tank explodes and deals one [AOE(3)] hit,10 damage to that hit location.",
+  },
+  {
     name: "Lightweight Frame Improvements (Torso)",
     loc: "Torso",
     ton: -2,
@@ -171,7 +221,7 @@ export const FRAME_IMPROVEMENTS = [
     qty: 1,
     mcu: 20,
     effect:
-      "Reduce the total tonnage of equipped weapons and support equipment by 1 ton.",
+      "Reduce the total tonnage of equipped weapons and support equipment by 2 tons.",
   },
   {
     name: "Lightweight Frame Improvements (Left Leg)",
@@ -181,7 +231,7 @@ export const FRAME_IMPROVEMENTS = [
     qty: 1,
     mcu: 20,
     effect:
-      "Reduce the total tonnage of equipped weapons and support equipment by 1 ton.",
+      "Reduce the total tonnage of equipped weapons and support equipment by 2 tons.",
   },
   {
     name: "Lightweight Frame Improvements (Left Arm)",
@@ -191,7 +241,7 @@ export const FRAME_IMPROVEMENTS = [
     qty: 1,
     mcu: 20,
     effect:
-      "Reduce the total tonnage of equipped weapons and support equipment by 1 ton.",
+      "Reduce the total tonnage of equipped weapons and support equipment by 2 tons.",
   },
   {
     name: "Lightweight Frame Improvements (Right Leg)",
@@ -201,7 +251,7 @@ export const FRAME_IMPROVEMENTS = [
     qty: 1,
     mcu: 20,
     effect:
-      "Reduce the total tonnage of equipped weapons and support equipment by 1 ton.",
+      "Reduce the total tonnage of equipped weapons and support equipment by 2 tons.",
   },
   {
     name: "Lightweight Frame Improvements (Right Arm)",
@@ -211,6 +261,6 @@ export const FRAME_IMPROVEMENTS = [
     qty: 1,
     mcu: 20,
     effect:
-      "Reduce the total tonnage of equipped weapons and support equipment by 1 ton.",
+      "Reduce the total tonnage of equipped weapons and support equipment by 2 tons.",
   },
 ];

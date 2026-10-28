@@ -28,6 +28,16 @@ export const UPGRADES = [
     effect: "One ranged weapon gains the [ANTI-AIRCRAFT] keyword.",
   },
   {
+    name: "Upgrade:Auto-Loader",
+    loc: "Weapon",
+    ton: "–",
+    pfro: "–",
+    qty: 2,
+    mcu: 15,
+    effect:
+      "When a weapon with the [SLOW RELOAD] is [STOWED], it is considered reloaded and is able to fire again when it is [READIED].",
+  },
+  {
     name: "Upgrade:Bipod",
     loc: "Weapon",
     ton: "–",

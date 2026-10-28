@@ -419,7 +419,7 @@ export const TRAITS = [
   },
   {
     name: "Serial Killer",
-    cost: 1,
+    cost: 0,
     effect:
       "For each enemy [UNIT] destroyed by this [PILOT], gain +1 Gunnery or Brawl.",
   },
@@ -437,7 +437,7 @@ export const TRAITS = [
   },
   {
     name: "Shrug it off",
-    cost: 1,
+    cost: 0,
     effect:
       "When this [PILOT] is affected by an area affect of an [AOE(X)] attack, this [PILOT] may roll a PS 5+ check to ignore the [AOE] effect.",
   },
@@ -491,13 +491,13 @@ export const TRAITS = [
   },
   {
     name: "Wolf Pack",
-    cost: 2,
+    cost: 1,
     effect:
       'If 1 friendly MSU within 8": This [PILOT] mayreroll 1 attack dice per round. If 2 friendly MSUs within 8": This [PILOT] may reroll 1 evasion roll per round. If 3+ friendly MSUs within 8": This [PILOT] gain +1 Piloting, +1 Brawl, +1 Gunnery.',
   },
   {
     name: "War Criminal",
-    cost: 1,
+    cost: 0,
     effect:
       "This [PILOT] may target [CIVILIANS] without penalty. This [PILOT] does not incur Victory Point penalties for killing [CIVILIANS]",
   },

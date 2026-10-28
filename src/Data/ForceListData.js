@@ -981,6 +981,18 @@ export const FORCE_LIST_FACTIONS = [
         equipment: "Beam Rifle [CYCLIC],Shield,Beam Naginata,Heavy Bazooka",
       },
       {
+        msu: "MS-14JG GELGOOG Jäger",
+        mcu: 175,
+        move: '7"',
+        armor: 24,
+        fro: 5,
+        tonnage: 20,
+        year: "0079",
+        faction: "Zeon",
+        equipment:
+          "Beam Machine Gun + Beam Sniper Rifle,Command Interface,Beam Saber,",
+      },
+      {
         msu: "MSN-02 Zeong",
         mcu: 200,
         move: '6"',
