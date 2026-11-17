@@ -261,7 +261,7 @@ export const TRAITS = [
     name: "Leapfrog",
     cost: 1,
     effect:
-      "This [PILOT] may purchase Vertical Jump Jets for free. When declaring a [ADVNCE] action, this MSU may now move over obstacles 7 inches or less in height wihtout movement penalty. This MSU may also move over friendly MSUs without penalty.",
+      "When using Vertical Jump Jets, this MSU can [BOOST(8)] vertically without spending FRO. When declaring a [ADVNCE] action, this MSU may now move over obstacles 7 inches or less in height wihtout movement penalty. This MSU may also move over friendly MSUs without penalty.",
   },
   {
     name: "Lucky Cat",
