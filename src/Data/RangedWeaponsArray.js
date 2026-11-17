@@ -15,7 +15,7 @@ export const RANGED_COLUMNS = [
 export const RANGED = [
   {
     name: "Atomic Bazooka",
-    type: "Cannon",
+    type: ["Cannon", "Kinetic"],
     rof: 1,
     range: "18|36|90|180",
     mod: "-3|-2|-1|+0",
@@ -28,7 +28,7 @@ export const RANGED = [
   },
   {
     name: "Arm Cannon",
-    type: "Cannon",
+    type: ["Cannon", "Kinetic"],
     rof: 3,
     range: "10|20|–|–",
     mod: "+2|+0|–|–",
@@ -41,7 +41,7 @@ export const RANGED = [
   },
   {
     name: "Arm Rotary Cannon",
-    type: "Cannon",
+    type: ["Cannon", "Kinetic"],
     rof: 5,
     range: "15|25|30|–",
     mod: "+2|+0|-2|–",
@@ -54,7 +54,7 @@ export const RANGED = [
   },
   {
     name: "Heavy Bazooka",
-    type: "Cannon",
+    type: ["Cannon", "Kinetic"],
     rof: 3,
     range: "16|32|42|-",
     mod: "-2|+2|-2|-",
@@ -67,7 +67,7 @@ export const RANGED = [
   },
   {
     name: "Light Bazooka",
-    type: "Cannon",
+    type: ["Cannon", "Kinetic"],
     rof: 2,
     range: "16|32|42|-",
     mod: "+0|+1|-1|-",
@@ -80,7 +80,7 @@ export const RANGED = [
   },
   {
     name: "Hyper Bazooka",
-    type: "Cannon",
+    type: ["Cannon", "Kinetic"],
     rof: 2,
     range: "12|24|36|-",
     mod: "-2|+1|-1|-",
@@ -93,7 +93,7 @@ export const RANGED = [
   },
   {
     name: "Hyper Beam Cannon",
-    type: "Cannon",
+    type: ["Cannon", "Beam"],
     rof: 2,
     range: "20|40|60|80",
     mod: "-1|+0|+2|+1",
@@ -106,7 +106,7 @@ export const RANGED = [
   },
   {
     name: "Beam Cannon",
-    type: "Cannon",
+    type: ["Cannon", "Beam"],
     rof: 2,
     range: "14|28|42|-",
     mod: "-1|+0|+1|-",
@@ -119,7 +119,7 @@ export const RANGED = [
   },
   {
     name: "Beam Magnum",
-    type: "Rifle",
+    type: ["Rifle", "Beam"],
     rof: 1,
     range: "15|30|45|-",
     mod: "-1|+2|-1|-",
@@ -132,7 +132,7 @@ export const RANGED = [
   },
   {
     name: "Cannon",
-    type: "Cannon",
+    type: ["Cannon", "Kinetic"],
     rof: 2,
     range: "12|28|36",
     mod: "-2|+1|+0",
@@ -145,7 +145,7 @@ export const RANGED = [
   },
   {
     name: "Artillery Cannon",
-    type: "Cannon",
+    type: ["Cannon", "Kinetic"],
     rof: 1,
     range: "24|48|72|96",
     mod: "-2|-1|+0|+0",
@@ -158,7 +158,7 @@ export const RANGED = [
   },
   {
     name: "Clay Bazooka",
-    type: "Cannon",
+    type: ["Cannon", "Kinetic"],
     rof: 3,
     range: "18|36",
     mod: "+1 |-1",
@@ -170,21 +170,22 @@ export const RANGED = [
     keywords: "[BRACE],[MUNITIONS]: ADHESIVE",
   },
   {
-    name: "Fedayeen Rifle (Beam Rifle + Beam Saber)",
-    type: "Rifle / Sword",
+    name: "Fedayeen Rifle",
+    type: ["Rifle", "Sword", "Beam"],
     rof: 1,
     range: "15|25|35|-",
     mod: "-1|+1|-1|-",
-    dam: 16 / 15,
+    dam: 15,
     ton: 4,
     fro: 3 / 1,
     mcu: 35,
     faction: "–",
-    keywords: "[COMBO],[SCOPE] or [CLEAVE],[AKIMBO],[QUICK SWAP],[MOMENTUM]",
+    keywords:
+      "[COMBO],[SCOPE] or Sword Range 0-3,[CLEAVE],[AKIMBO],[QUICK SWAP],[MOMENTUM],",
   },
   {
     name: "Gatling (Beam)",
-    type: "MG",
+    type: ["MG", "Beam"],
     rof: 6,
     range: "14|28|42|-",
     mod: "-1|+1|+0|",
@@ -197,7 +198,7 @@ export const RANGED = [
   },
   {
     name: "Gatling (Kinetic)",
-    type: "MG",
+    type: ["MG", "Kinetic"],
     rof: 8,
     range: "14|28|38|-",
     mod: "-2|+1|+0|-",
@@ -210,7 +211,7 @@ export const RANGED = [
   },
   {
     name: "Grenade Launcher",
-    type: "Grenade",
+    type: ["Grenade", "Kinetic"],
     rof: "1",
     range: "18|26|32|–",
     mod: "+1|+0|-1|–",
@@ -223,7 +224,7 @@ export const RANGED = [
   },
   {
     name: "Grenades",
-    type: "Grenade",
+    type: ["Grenade", "Kinetic"],
     rof: "1",
     range: "(18)|(36)|–|–",
     mod: "+0|-2|–|–",
@@ -236,7 +237,7 @@ export const RANGED = [
   },
   {
     name: "Homing Missiles",
-    type: "Missile",
+    type: ["Missile", "Kinetic"],
     rof: 2,
     range: 'Min Band 16"',
     mod: "–",
@@ -249,7 +250,7 @@ export const RANGED = [
   },
   {
     name: "Hypersonic Missiles",
-    type: "Missile",
+    type: ["Missile", "Kinetic"],
     rof: 1,
     range: 'Min Band 24"',
     mod: "–",
@@ -262,7 +263,7 @@ export const RANGED = [
   },
   {
     name: "Machine Gun",
-    type: "MG",
+    type: ["MG", "Kinetic"],
     rof: 4,
     range: "14|22|28|-",
     mod: "+1|+0|-2|-",
@@ -275,7 +276,7 @@ export const RANGED = [
   },
   {
     name: "(Heavy) Machine Gun",
-    type: "MG",
+    type: ["MG", "Kinetic"],
     rof: 4,
     range: "18|28|36|-",
     mod: "-2|+1|+0|-",
@@ -288,7 +289,7 @@ export const RANGED = [
   },
   {
     name: "(Beam) Machine Gun",
-    type: "MG",
+    type: ["MG", "Beam"],
     rof: 4,
     range: "18|28|36|-",
     mod: "+1|+0|-1|-",
@@ -301,7 +302,7 @@ export const RANGED = [
   },
   {
     name: "Missile Pod ×2",
-    type: "Missile",
+    type: ["Missile", "Kinetic"],
     rof: 2,
     range: 'Min Band 16"',
     mod: "–",
@@ -314,7 +315,7 @@ export const RANGED = [
   },
   {
     name: "Missile Pod ×3",
-    type: "Missile",
+    type: ["Missile", "Kinetic"],
     rof: 3,
     range: 'Min Band 16"',
     mod: "–",
@@ -327,7 +328,7 @@ export const RANGED = [
   },
   {
     name: "Missile Pod ×4",
-    type: "Missile",
+    type: ["Missile", "Kinetic"],
     rof: 4,
     range: 'Min Band 16"',
     mod: "–",
@@ -340,7 +341,7 @@ export const RANGED = [
   },
   {
     name: "Missile Pod ×8",
-    type: "Missile",
+    type: ["Missile", "Kinetic"],
     rof: 8,
     range: 'Min Band 16"',
     mod: "–",
@@ -353,7 +354,7 @@ export const RANGED = [
   },
   {
     name: "Missile Pod ×10",
-    type: "Missile",
+    type: ["Missile", "Kinetic"],
     rof: 10,
     range: 'Min Band 16"',
     mod: "–",
@@ -366,7 +367,7 @@ export const RANGED = [
   },
   {
     name: "Multi-Launcher",
-    type: "Missile",
+    type: ["Missile", "Kinetic"],
     rof: 6,
     range: 'Min Band 16"',
     mod: "–",
@@ -379,7 +380,7 @@ export const RANGED = [
   },
   {
     name: "PanzerFaust",
-    type: "Missile",
+    type: ["Missile", "Kinetic"],
     rof: 1,
     range: 'Min Band 9"',
     mod: "–",
@@ -392,7 +393,7 @@ export const RANGED = [
   },
   {
     name: "Pistol (Kinetic)",
-    type: "Pistol",
+    type: ["Pistol", "Kinetic"],
     rof: 2,
     range: "12|24|-|–",
     mod: "+1|+0|-|–",
@@ -405,7 +406,7 @@ export const RANGED = [
   },
   {
     name: "Pistol (Beam)",
-    type: "Pistol",
+    type: ["Pistol", "Beam"],
     rof: 1,
     range: "18|36|-|–",
     mod: "+2|+0|-|–",
@@ -418,7 +419,7 @@ export const RANGED = [
   },
   {
     name: "Rail Gun",
-    type: "Cannon",
+    type: ["Cannon", "Kinetic"],
     rof: 1,
     range: "18|36|90|180",
     mod: "-2|+0|+1|+2",
@@ -431,7 +432,7 @@ export const RANGED = [
   },
   {
     name: "Rifle (Anti-Mat)",
-    type: "Rifle",
+    type: ["Rifle", "Kinetic"],
     rof: 1,
     range: "15|30|40|-",
     mod: "-2|+1|+0|-",
@@ -444,7 +445,7 @@ export const RANGED = [
   },
   {
     name: "Rifle (Beam)",
-    type: "Rifle",
+    type: ["Rifle", "Beam"],
     rof: 1,
     range: "15|25|35|-",
     mod: "-1|+1|-1|-",
@@ -457,7 +458,7 @@ export const RANGED = [
   },
   {
     name: "Rifle (Kinetic)",
-    type: "Rifle",
+    type: ["Rifle", "Kinetic"],
     rof: 3,
     range: "12|28|40|48",
     mod: "-2|+0|+1|+0",
@@ -470,7 +471,7 @@ export const RANGED = [
   },
   {
     name: "Shotgun (Kinetic)",
-    type: "Shotgun",
+    type: ["Shotgun", "Kinetic"],
     rof: "2d3",
     range: "6|12|18|–",
     mod: "+2|+0|-2|–",
@@ -483,7 +484,7 @@ export const RANGED = [
   },
   {
     name: "Shotgun (Beam)",
-    type: "Shotgun",
+    type: ["Shotgun", "Beam"],
     rof: "2d3",
     range: "10|16|22|–",
     mod: "+2|+0|-1|–",
@@ -496,7 +497,7 @@ export const RANGED = [
   },
   {
     name: "SMG (Beam)",
-    type: "SMG",
+    type: ["SMG", "Beam"],
     rof: 6,
     range: "10|15|20|–",
     mod: "+2|+0|-1|–",
@@ -509,7 +510,7 @@ export const RANGED = [
   },
   {
     name: "SMG (Kinetic)",
-    type: "SMG",
+    type: ["SMG", "Kinetic"],
     rof: 6,
     range: "8|14|20|–",
     mod: "+2|+0|-2|–",
@@ -522,7 +523,7 @@ export const RANGED = [
   },
   {
     name: "Sniper Rifle (Anti-Ship)",
-    type: "Sniper",
+    type: ["Sniper", "Kinetic"],
     rof: 1,
     range: "18|36|90|180",
     mod: "-2|+1|+2|+2",
@@ -535,7 +536,7 @@ export const RANGED = [
   },
   {
     name: "Sniper Rifle (Beam)",
-    type: "Sniper",
+    type: ["Sniper", "Beam"],
     rof: 1,
     range: "15|45|90|180",
     mod: "-1|+0|+2|+1",
@@ -548,7 +549,7 @@ export const RANGED = [
   },
   {
     name: "Sniper Rifle (Kinetic)",
-    type: "Sniper",
+    type: ["Sniper", "Kinetic"],
     rof: 2,
     range: "15|45|90|180",
     mod: "-2|+0|+2|+1",
@@ -561,7 +562,7 @@ export const RANGED = [
   },
   {
     name: "Vulcan Cannons",
-    type: "MG",
+    type: ["MG", "Kinetic"],
     rof: 6,
     range: "6|14|20|–",
     mod: "+2|+1|-1|–",

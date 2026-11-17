@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { usePilotSheet, usePilotSlot } from "../../context/PilotSheetContext";
 import { useMediaQuery } from "@custom-react-hooks/all";
 import classNames from "classnames";
@@ -49,6 +49,7 @@ import { usePilotDerivedStats } from "./hooks/usePilotDerivedStats";
 import { useSupportLocations } from "./hooks/useSupportLocations";
 import { useEquipmentUpdaters } from "./hooks/useEquipmentUpdaters";
 import { usePilotSlotActions } from "./hooks/usePilotSlotActions";
+import { downloadLoadout, readLoadoutFile } from "./utilities/exportLoadout";
 
 // ─── Single sheet panel ───────────────────────────────────────────────────────
 
@@ -1294,8 +1295,14 @@ const PilotSheetPanel = ({ slotIndex }) => {
 
 export const PilotSheet = () => {
   const isMobile = useMediaQuery("(max-width: 600px)");
-  const { activeTab, setActiveTab, tabNames, initiatives, setInitiatives } =
-    usePilotSheet();
+  const {
+    activeTab,
+    setActiveTab,
+    tabNames,
+    setTabNames,
+    initiatives,
+    setInitiatives,
+  } = usePilotSheet();
   const [showTeamNav, setShowTeamNav] = useState(true);
   const [showInitiative, setShowInitiative] = useState(true);
   const [presetPicker, setPresetPicker] = useState(null);
@@ -1303,6 +1310,25 @@ export const PilotSheet = () => {
   const activePilotSlot = usePilotSlot(activeTab);
   const { saveCustomPreset, loadCustomPreset, applyPreset } =
     usePilotSlotActions(activeTab, activePilotSlot);
+  const activeDerived = usePilotDerivedStats(activePilotSlot);
+
+  const importInputRef = useRef(null);
+  const [importStatus, setImportStatus] = useState(null);
+  const handleImportFile = async (e) => {
+    const file = e.target.files?.[0];
+    e.target.value = ""; // allow re-importing the same file
+    if (!file) return;
+    const target = activeTab;
+    try {
+      const patch = await readLoadoutFile(file);
+      activePilotSlot.setAll(patch);
+      const label = patch.msuName.trim() || `Pilot ${target + 1}`;
+      setTabNames((prev) => prev.map((l, i) => (i === target ? label : l)));
+      setImportStatus({ ok: true, message: `Loaded "${label}" into Pilot ${target + 1}.` });
+    } catch (err) {
+      setImportStatus({ ok: false, message: `Import failed: ${err.message}` });
+    }
+  };
 
   const updateInitiative = (i, v) =>
     setInitiatives((prev) => prev.map((val, idx) => (idx === i ? v : val)));
@@ -1322,6 +1348,39 @@ export const PilotSheet = () => {
           onToggle={() => setShowInitiative((v) => !v)}
           label="Initiative Tracker"
         />
+        <span className="mr2" />
+        <button
+          className="f7 pa1 ph2 ba b--dark-green white bg-dark-green pointer dim br1 mt2"
+          onClick={() => downloadLoadout(activePilotSlot, activeDerived)}
+          title={`Download ${tabNames[activeTab]}'s loadout as JSON`}
+        >
+          ⬇ Export Loadout
+        </button>
+        <span className="mr2" />
+        <button
+          className="f7 pa1 ph2 ba b--dark-green dark-green bg-white pointer dim br1 mt2"
+          onClick={() => importInputRef.current?.click()}
+          title={`Load a loadout JSON file into ${tabNames[activeTab]}`}
+        >
+          ⬆ Import Loadout
+        </button>
+        <input
+          ref={importInputRef}
+          type="file"
+          accept=".json,application/json"
+          style={{ display: "none" }}
+          onChange={handleImportFile}
+        />
+        {importStatus && (
+          <span
+            className={classNames("f7 ml2 mt2 self-center", {
+              "dark-green": importStatus.ok,
+              red: !importStatus.ok,
+            })}
+          >
+            {importStatus.message}
+          </span>
+        )}
       </div>
 
       {/* ── Tab bar ── */}

@@ -94,6 +94,28 @@ export const EquipmentDetailsModal = ({
             <p className="f7 fw6 dark-green ttu tracked mb2">
               {weaponInfo.kind} Weapon Reference
             </p>
+            {weaponInfo.types.length > 0 && (
+              <div className="mb2">
+                <label className="db f7 fw6 gray mb1">Type</label>
+                <div className="flex flex-wrap" style={{ gap: "0.25rem" }}>
+                  {weaponInfo.classes.map((t) => (
+                    <span key={t} className="f7 ph2 pv1 br1 bg-white ba b--black-20">
+                      {t}
+                    </span>
+                  ))}
+                  {weaponInfo.damageType && (
+                    <span
+                      className={classNames("f7 ph2 pv1 br1 white fw6", {
+                        "bg-blue": weaponInfo.damageType === "Beam",
+                        "bg-dark-gray": weaponInfo.damageType === "Kinetic",
+                      })}
+                    >
+                      {weaponInfo.damageType}
+                    </span>
+                  )}
+                </div>
+              </div>
+            )}
             <div
               className="flex flex-wrap mb2 w-100"
               style={{ gap: "0.75rem" }}

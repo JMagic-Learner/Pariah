@@ -261,7 +261,7 @@ export const TRAITS = [
     name: "Leapfrog",
     cost: 1,
     effect:
-      "This [PILOT] may immediately perform an Attack action at a -2 penalty after moving vertically, such as making an Advance action vertically or boosting vertically or using Vertical Jump Jets",
+      "This [PILOT] may purchase Vertical Jump Jets for free. When declaring a [ADVNCE] action, this MSU may now move over obstacles 7 inches or less in height wihtout movement penalty. This MSU may also move over friendly MSUs without penalty.",
   },
   {
     name: "Lucky Cat",

@@ -1,7 +1,7 @@
 export const MELEE = [
   {
     name: "Beam Hawk",
-    type: "Axe",
+    type: ["Axe", "Beam"],
     rof: 2,
     range: '0–3"',
     mod: "+0",
@@ -14,7 +14,7 @@ export const MELEE = [
   },
   {
     name: "Beam Javelin/Spear",
-    type: "Spear",
+    type: ["Spear", "Beam"],
     rof: 2,
     range: '0–8(24)"',
     mod: "+1",
@@ -26,7 +26,7 @@ export const MELEE = [
   },
   {
     name: "Beam Knife",
-    type: "Knife",
+    type: ["Knife", "Beam"],
     rof: 3,
     range: '0–2"',
     mod: "+2",
@@ -38,7 +38,7 @@ export const MELEE = [
   },
   {
     name: "Beam Naginata",
-    type: "Sword",
+    type: ["Sword", "Beam"],
     rof: 2,
     range: '0–4"',
     mod: "+1",
@@ -50,7 +50,7 @@ export const MELEE = [
   },
   {
     name: "Beam Saber",
-    type: "Sword",
+    type: ["Sword", "Beam"],
     rof: 1,
     range: '0–4"',
     mod: "+1",
@@ -62,7 +62,7 @@ export const MELEE = [
   },
   {
     name: "Beam Whip",
-    type: "Whip",
+    type: ["Whip", "Beam"],
     rof: 2,
     range: '0–8"',
     mod: "+0",
@@ -74,7 +74,7 @@ export const MELEE = [
   },
   {
     name: "Chain Mines",
-    type: "Whip",
+    type: ["Whip", "Kinetic"],
     rof: 1,
     range: '0–8"',
     mod: "+0",
@@ -87,7 +87,7 @@ export const MELEE = [
   },
   {
     name: "Combat Knife",
-    type: "Knife",
+    type: ["Knife", "Kinetic"],
     rof: 3,
     range: '0–2"(12)',
     mod: "+2",
@@ -99,7 +99,7 @@ export const MELEE = [
   },
   {
     name: "CQC Weapon",
-    type: "Any",
+    type: ["Any", "Kinetic"],
     rof: 2,
     range: '0–4"',
     mod: "+1",
@@ -111,7 +111,7 @@ export const MELEE = [
   },
   {
     name: "Gauntlets",
-    type: "Hands",
+    type: ["Hands", "Kinetic"],
     rof: 1,
     range: '0–2"',
     mod: "+1",
@@ -123,7 +123,7 @@ export const MELEE = [
   },
   {
     name: "Hand(s)",
-    type: "Hands",
+    type: ["Hands", "Kinetic"],
     rof: 2,
     range: '0–2"',
     mod: "+0",
@@ -135,7 +135,7 @@ export const MELEE = [
   },
   {
     name: "Heat Blade",
-    type: "Sword",
+    type: ["Sword", "Kinetic"],
     rof: 2,
     range: '0–4"',
     mod: "+1",
@@ -148,7 +148,7 @@ export const MELEE = [
   },
   {
     name: "Heat Hawk",
-    type: "Axe",
+    type: ["Axe", "Kinetic"],
     rof: 2,
     range: '0–3"(12)',
     mod: "+0",
@@ -161,7 +161,7 @@ export const MELEE = [
   },
   {
     name: "Heavy Weapon",
-    type: "Any",
+    type: ["Any", "Kinetic"],
     rof: 1,
     range: '0–4"',
     mod: "+1",
@@ -173,7 +173,7 @@ export const MELEE = [
   },
   {
     name: "Kick",
-    type: "Any",
+    type: ["Any", "Kinetic"],
     rof: 1,
     range: '0–4"',
     mod: "-1",
@@ -185,7 +185,7 @@ export const MELEE = [
   },
   {
     name: "Lance",
-    type: "Lance",
+    type: ["Lance", "Kinetic"],
     rof: 1,
     range: '0–8"',
     mod: "+2",
@@ -197,7 +197,7 @@ export const MELEE = [
   },
   {
     name: "Mace",
-    type: "Mace",
+    type: ["Mace", "Kinetic"],
     rof: 2,
     range: '0–3"',
     mod: "+2",
@@ -209,7 +209,7 @@ export const MELEE = [
   },
   {
     name: "Pile Bunker",
-    type: "Any",
+    type: ["Any", "Kinetic"],
     rof: 1,
     range: '0–4"',
     mod: "+0",
@@ -221,7 +221,7 @@ export const MELEE = [
   },
   {
     name: "Restraint Cables",
-    type: "Whip",
+    type: ["Whip", "Kinetic"],
     rof: 1,
     range: '0–15"',
     mod: "+1",
@@ -234,7 +234,7 @@ export const MELEE = [
   },
   {
     name: "Rocket Arm (Wired)",
-    type: "Hands",
+    type: ["Hands", "Kinetic"],
     rof: 1,
     range: '0–2(See Keywords)"',
     mod: "+0",

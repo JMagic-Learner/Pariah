@@ -3,6 +3,7 @@ import { useMediaQuery } from "@custom-react-hooks/all";
 import classNames from "classnames";
 import { RANGED } from "../../Data/RangedWeaponsArray";
 import { MELEE } from "../../Data/MeleeWeaponsArray";
+import { formatWeaponType } from "../../utils/weaponType";
 import { renderKeywords } from "../../utils/renderKeywords";
 import { KeywordDialog } from "../KeywordDialog";
 
@@ -68,7 +69,7 @@ export const RangedWeaponTable = () => {
                             {weapon.name}
                           </td>
                           <td className="pv3 pr3 bb b--black-20">
-                            {weapon.type}
+                            {formatWeaponType(weapon.type)}
                           </td>
                           <td className="pv3 pr3 bb b--black-20">
                             {weapon.rof}
@@ -124,7 +125,7 @@ export const RangedWeaponTable = () => {
               <p className="lh-copy ma0 f7 tj">MCU: {weapon.mcu}</p>
               <p className="lh-copy ma0 f7 tj">Tonnage: {weapon.ton}</p>
               <p className="lh-copy ma0 f7 tj">FRO Cost: {weapon.fro}</p>
-              <p className="lh-copy ma0 f7 tj">Type: {weapon.type}</p>
+              <p className="lh-copy ma0 f7 tj">Type: {formatWeaponType(weapon.type)}</p>
               <p className="lh-copy ma0 f7 tj">ROF: {weapon.rof}</p>
               <p className="lh-copy ma0 f7 tj">
                 range: {weapon?.range || "-"}{" "}
@@ -210,7 +211,7 @@ export const MeleeWeaponTable = () => {
                             {weapon.name}
                           </td>
                           <td className="pv3 pr3 bb b--black-20">
-                            {weapon.type}
+                            {formatWeaponType(weapon.type)}
                           </td>
                           <td className="pv3 pr3 bb b--black-20">
                             {weapon.rof}
@@ -266,7 +267,7 @@ export const MeleeWeaponTable = () => {
               <p className="lh-copy ma0 f7 tj">MCU: {weapon.mcu}</p>
               <p className="lh-copy ma0 f7 tj">Tonnage: {weapon.ton}</p>
               <p className="lh-copy ma0 f7 tj">FRO Cost: {weapon.fro}</p>
-              <p className="lh-copy ma0 f7 tj">Type: {weapon.type}</p>
+              <p className="lh-copy ma0 f7 tj">Type: {formatWeaponType(weapon.type)}</p>
               <p className="lh-copy ma0 f7 tj">ROF: {weapon.rof}</p>
               <p className="lh-copy ma0 f7 tj">
                 range: {weapon?.range || "-"}{" "}

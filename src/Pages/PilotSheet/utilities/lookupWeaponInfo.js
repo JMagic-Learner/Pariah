@@ -1,5 +1,10 @@
 import { RANGED } from "../../../Data/RangedWeaponsArray";
 import { MELEE } from "../../../Data/MeleeWeaponsArray";
+import {
+  getWeaponTypes,
+  getWeaponClasses,
+  getDamageType,
+} from "../../../utils/weaponType";
 
 const norm = (s) =>
   s
@@ -42,13 +47,23 @@ const findMatch = (name, list) => {
   return bestScore >= 0.5 ? best : null;
 };
 
+const withTypeInfo = (kind, weapon) => ({
+  kind,
+  ...weapon,
+  types: getWeaponTypes(weapon.type),
+  classes: getWeaponClasses(weapon.type),
+  damageType: getDamageType(weapon.type),
+});
+
 // Looks up a weapon by name across the Ranged and Melee reference arrays.
-// Returns { kind: "Ranged" | "Melee", ...weapon } or null if no match.
+// Returns { kind: "Ranged" | "Melee", ...weapon, types, classes, damageType }
+// or null if no match. `types` is the normalized type array, `classes` the
+// weapon classes (Rifle, Sword, ...) and `damageType` "Beam" | "Kinetic".
 export const lookupWeaponInfo = (name) => {
   if (!name) return null;
   const ranged = findMatch(name, RANGED);
-  if (ranged) return { kind: "Ranged", ...ranged };
+  if (ranged) return withTypeInfo("Ranged", ranged);
   const melee = findMatch(name, MELEE);
-  if (melee) return { kind: "Melee", ...melee };
+  if (melee) return withTypeInfo("Melee", melee);
   return null;
 };

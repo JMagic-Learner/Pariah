@@ -6,6 +6,7 @@ import { UPGRADES } from "./UpgradeArray";
 import { FRAME_IMPROVEMENTS } from "./FrameImprovements";
 import { NEWTYPE_UPGRADES } from "./NewtypeUpgrades";
 import { BITS } from "./NewtypeUpgrades";
+import { formatWeaponType } from "../utils/weaponType";
 // ─── Equipment picker modal ───────────────────────────────────────────────────
 
 export const PICKER_TABS = [
@@ -27,7 +28,7 @@ export const PICKER_TABS = [
     data: RANGED,
     getCells: (w) => [
       w.name,
-      w.type,
+      formatWeaponType(w.type),
       w.rof,
       w.range,
       w.mod,
@@ -64,7 +65,7 @@ export const PICKER_TABS = [
     data: MELEE,
     getCells: (w) => [
       w.name,
-      w.type,
+      formatWeaponType(w.type),
       w.rof,
       w.range,
       w.mod,
