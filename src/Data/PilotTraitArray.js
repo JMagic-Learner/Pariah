@@ -255,13 +255,13 @@ export const TRAITS = [
     name: "Kinetic Force",
     cost: 1,
     effect:
-      "When this MSU moves over 21 inches, all non-beam melee attacks gain +2 base damage. Enemy MSU's that are hit by this [PILOT]'s [BLITZ] actions now causes [KNOCKDOWN] state",
+      "When this MSU moves over 13 inches, all non-beam melee attacks gain +2 base damage. Enemy MSU's that are hit by this [PILOT]'s [BLITZ] actions now causes [KNOCKDOWN] state",
   },
   {
     name: "Leapfrog",
     cost: 1,
     effect:
-      "When using Vertical Jump Jets, this MSU can [BOOST(8)] vertically without spending FRO. When declaring a [ADVNCE] action, this MSU may now move over obstacles 7 inches or less in height wihtout movement penalty. This MSU may also move over friendly MSUs without penalty.",
+      "When using Vertical Jump Jets, this MSU can [BOOST(8)] vertically without spending FRO. When declaring a [ADVANCE] action, this MSU may now move over obstacles 7 inches or less in height wihtout movement penalty.If this MSU declares a [BLITZ] while airborne, enemy MSU that are hit with this [PILOT]'s [BLITZ] action now causes [KNOCKDOWN] state.",
   },
   {
     name: "Lucky Cat",
