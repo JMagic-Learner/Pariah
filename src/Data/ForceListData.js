@@ -85,7 +85,19 @@ export const FORCE_LIST_FACTIONS = [
           "Beam Cannon x2 [INBUILT], Extra Armor 10 x5, Beam Saber, Vulcans",
       },
       {
-        msu: "RGM-79C Light Type Guncannon II",
+        msu: "RX-77-2-GUNCANNON",
+        mcu: 175,
+        move: '6"',
+        armor: 24,
+        fro: 5,
+        tonnage: 20,
+        year: "0079",
+        faction: "EF",
+        equipment:
+          "Cannon x 2 [INBUILT]+[AKIMBO], Beam Rifle, Beam Saber, Vulcans, 4x Extra Armor 10",
+      },
+      {
+        msu: "RX-77-2-GUNCANNON Light Type Guncannon II",
         mcu: 130,
         move: '7"',
         armor: 22,
