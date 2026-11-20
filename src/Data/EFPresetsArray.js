@@ -480,14 +480,14 @@ export const EF_PRESETS = [
       armorValue: "24",
       baseEquip: [
         {
-          name: "Cannon [INBUILT] + [AKIMBO]",
+          name: "Cannon",
           mcuCost: "FREE",
           fro: "-",
           tonnage: "4",
           notes: "[AKIMBO],[INBUILT],[AP(5)],[MOUNTABLE]",
         },
         {
-          name: "Cannon [INBUILT] + [AKIMBO]",
+          name: "Cannon",
           mcuCost: "FREE",
           fro: "-",
           tonnage: "4",
