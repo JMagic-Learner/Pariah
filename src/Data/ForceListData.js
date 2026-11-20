@@ -528,11 +528,11 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "PMX-001 Palace Athene",
-        mcu: 155,
+        mcu: 165,
         move: '7"',
         armor: 27,
         fro: 8,
-        tonnage: 15,
+        tonnage: 28,
         year: "0088",
         faction: "EF, TITANS",
         equipment:

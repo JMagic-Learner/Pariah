@@ -2398,11 +2398,11 @@ export const EF_PRESETS = [
     data: {
       msuName: "PMX-001 PALACE ATHENE",
       mobileSuit: "PMX-001 PALACE ATHENE",
-      mcu: "155",
+      mcu: "165",
       fro: "8",
-      tonnageLimit: "15",
+      tonnageLimit: "28",
       movement: '7"',
-      armorValue: "27",
+      armorValue: "28",
       baseEquip: [
         {
           name: "Vulcan Cannons",
