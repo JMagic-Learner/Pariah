@@ -536,7 +536,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0088",
         faction: "EF, TITANS",
         equipment:
-          "2x Beam Cannons, Shield + Missile Pod 8, Beam + Grenade Launcher x2, Vulcans",
+          "2x Beam Cannons, Shield + Missile Pod 8, Beam Rifle x 2 + Grenade Launcher , Vulcans, Beam Sabers x2",
       },
       {
         msu: "PMX-002 Bolinoak Sammahn",
