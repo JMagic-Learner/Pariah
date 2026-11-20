@@ -87,7 +87,7 @@ export const FORCE_LIST_FACTIONS = [
       {
         msu: "RX-77-2-GUNCANNON",
         mcu: 175,
-        move: '6"',
+        move: '4"',
         armor: 24,
         fro: 5,
         tonnage: 20,

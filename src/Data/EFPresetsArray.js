@@ -476,7 +476,7 @@ export const EF_PRESETS = [
       mcu: "175",
       fro: "5",
       tonnageLimit: "20",
-      movement: '6"',
+      movement: '4"',
       armorValue: "24",
       baseEquip: [
         {
