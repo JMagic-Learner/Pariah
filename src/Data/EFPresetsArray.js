@@ -560,7 +560,7 @@ export const EF_PRESETS = [
           equipment: ["", "", ""],
         },
         torso: {
-          current: "34",
+          current: "24",
           max: "34",
           weapon: "Cannon x2 [INBUILT]+[AKIMBO]",
           equipment: ["Beam Saber (Stowed)", "", ""],
