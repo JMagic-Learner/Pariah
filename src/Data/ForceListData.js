@@ -335,7 +335,8 @@ export const FORCE_LIST_FACTIONS = [
         tonnage: 34,
         year: "0087",
         faction: "EF, TITANS",
-        equipment: "Feydayeen Rifle, Gauntlets x2, Beam Rifle x2 [MOUNTABLE]",
+        equipment:
+          "Feydayeen Rifle, Gauntlets x2, Beam Rifle x2 [MOUNTABLE], [TRANSFORMABLE]",
       },
       {
         msu: "RMS-141 Xeku Eins Type 1",
@@ -408,6 +409,29 @@ export const FORCE_LIST_FACTIONS = [
         equipment: "Beam Rifle, Beam Saber x2, Shield, Vulcans",
       },
       {
+        msu: "MSA-003 NEMO (AEUG)",
+        mcu: 100,
+        move: '8"',
+        armor: 22,
+        fro: 7,
+        tonnage: 19,
+        year: "0088",
+        faction: "EF, AEUG",
+        equipment: "Beam Rifle, Beam Saber x2, Shield, Vulcans",
+      },
+      {
+        msu: "MSA-005 Methuss",
+        mcu: 135,
+        move: '8"',
+        armor: 20,
+        fro: 6,
+        tonnage: 25,
+        year: "0088",
+        faction: "EF, AEUG",
+        equipment:
+          "Beam Rifle, Beam Saber, Shield, Beam Pistol x2, [TRANSFORMABLE]",
+      },
+      {
         msu: "MSN-00100 Hyaku Shiki",
         mcu: 155,
         move: '7"',
@@ -429,7 +453,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0088",
         faction: "EF, AEUG",
         equipment:
-          "Beam Rifle, Beam Saber, Shield, Vulcans,Grenade Launchers [INBUILT] x2, Heavy Bazooka",
+          "Beam Rifle, Beam Saber, Shield, Vulcans,Grenade Launchers [INBUILT] x2, Heavy Bazooka, [TRANSFORMABLE]",
       },
       {
         msu: "MSZ-007 Mass Production Type Z",
@@ -548,7 +572,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0095",
         faction: "EF",
         equipment:
-          "Beam Rifle, Beam Saber x2, Shield + Beam Cannon, Vulcans, Grenade Launcher x2, Heavy Booster",
+          "Beam Rifle, Beam Saber x2, Shield + Beam Cannon, Vulcans, Grenade Launcher x2, Heavy Booster,[TRANSFORMABLE]",
       },
       {
         msu: "RGZ-95 REZEL COMMANDER",
@@ -560,7 +584,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0095",
         faction: "EF",
         equipment:
-          "Hyper Beam Cannon, Beam Saber x2, Shield + Beam Cannon, Vulcans, Grenade Launcher x2, Heavy Booster,Command Protocl",
+          "Hyper Beam Cannon, Beam Saber x2, Shield + Beam Cannon, Vulcans, Grenade Launcher x2, Heavy Booster,Command Protocol,[TRANSFORMABLE]",
       },
       {
         msu: "ORX-005 Gaplant",
@@ -572,7 +596,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0088",
         faction: "EF, TITANS",
         equipment:
-          "Shield Binders x2, Side Verniers, Heavy Booster, Beam Saber x2, ABC Kit",
+          "Shield Binders x2, Side Verniers, Heavy Booster, Beam Saber x2, ABC Kit, [TRANSFORMABLE]",
       },
       {
         msu: "PMX-000 Messala",
@@ -584,7 +608,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0088",
         faction: "EF, TITANS",
         equipment:
-          "Beam Cannons [INBUILT], Missile Pod 10 x2, Beam Saber x2, 2x Gauntlets, Vulcans",
+          "Beam Cannons [INBUILT], Missile Pod 10 x2, Beam Saber x2, 2x Gauntlets, Vulcans, [TRANSFORMABLE]",
       },
       {
         msu: "PMX-001 Palace Athene",
@@ -749,7 +773,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0105",
         faction: "EF",
         equipment:
-          "Beam Rifle, Beam Cannon, Beam Saber, Vulcan Cannons, Missile Pod 8 x2, Heavy Boosters",
+          "Beam Rifle, Beam Cannon, Beam Saber, Vulcan Cannons, Missile Pod 8 x2, Heavy Boosters, [TRANSFORMABLE]",
       },
       {
         msu: "RGM-89M Jegan [Type B]",
@@ -1205,7 +1229,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0088",
         faction: "Zeon, Neo Zeon",
         equipment:
-          "Beam Rifle + [MOUNTABLE], Shield, 8x Grenade Launcher [INBUILT], Heavy Booster, Beam Saber x2",
+          "Beam Rifle + [MOUNTABLE], Shield, 8x Grenade Launcher [INBUILT], Heavy Booster, Beam Saber x2, [TRANSFORMABLE]",
       },
       {
         msu: "AMX-008 Ga Zowmn",
@@ -1217,7 +1241,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0088",
         faction: "Zeon, Neo Zeon",
         equipment:
-          "Knuckle Duster (Beam Cannon), Missile Pod 10 x2, 2x Vulcan Cannons, Beam Saber x2",
+          "Knuckle Duster (Beam Cannon), Missile Pod 10 x2, 2x Vulcan Cannons, Beam Saber x2, [TRANSFORMABLE]",
       },
       {
         msu: "AMX-009 Dreissen",
@@ -1593,7 +1617,8 @@ export const FORCE_LIST_FACTIONS = [
         tonnage: 23,
         year: "0085",
         faction: "ReZeon, TITANS",
-        equipment: "Machine Gun (ZEON), Heat Hawk, Spiky Shoulders (ZEON)",
+        equipment:
+          "Machine Gun (ZEON), Heat Hawk, Spiky Shoulders (ZEON), [TRANSFORMABLE]",
       },
       {
         msu: "ORX-005 Gaplant TR",
@@ -1605,7 +1630,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0085",
         faction: "ReZeon, TITANS",
         equipment:
-          "Beam Saber x2, 2x Shield Binders (Beam Cannons), Heavy Boosters, E.F.R, I Field [TR]",
+          "Beam Saber x2, 2x Shield Binders (Beam Cannons), Heavy Boosters, E.F.R, I Field [TR], [TRANSFORMABLE]",
       },
       {
         msu: "ORX-005 Gaplant TR5 Hrairoo",
@@ -1617,7 +1642,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0085",
         faction: "ReZeon, TITANS",
         equipment:
-          "Beam Saber x2, 2x Shield Boosters (Heavy Boosters), Long Blade Rifle [TR]",
+          "Beam Saber x2, 2x Shield Boosters (Heavy Boosters), Long Blade Rifle [TR], [TRANSFORMABLE]",
       },
       {
         msu: "RMS-106C Hizack Cannon",
@@ -1701,7 +1726,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0086",
         faction: "ReZeon, TITANS",
         equipment:
-          "Beam Rifle, Marksman Rifle, Heavy Booster, Beam Saber, Vulcans, Shield",
+          "Beam Rifle, Marksman Rifle, Heavy Booster, Beam Saber, Vulcans, Shield, [TRANSFORMABLE]",
       },
       {
         msu: "RX-121-2A Gundam TR-1 Adv.",
@@ -1724,7 +1749,8 @@ export const FORCE_LIST_FACTIONS = [
         tonnage: 15,
         year: "0086",
         faction: "ReZeon, TITANS",
-        equipment: "Beam Rifle (Scope), Panoptic Canopy, Shield (I Field)",
+        equipment:
+          "Beam Rifle (Scope), Panoptic Canopy, Shield (I Field), [TRANSFORMABLE]",
       },
       {
         msu: "RMS-117 Galbaldy B High Mobility",
@@ -1758,7 +1784,8 @@ export const FORCE_LIST_FACTIONS = [
         tonnage: 70,
         year: "0087",
         faction: "ReZeon, TITANS",
-        equipment: "Beam Cannon x2, Heavy Booster, Extra Armor 10-x3, Vulcans",
+        equipment:
+          "Beam Cannon x2, Heavy Booster, Extra Armor 10-x3, Vulcans, [TRANSFORMABLE]",
       },
       {
         msu: "RX-124 TR-6 Haze'n'thley Rah II",
@@ -1782,7 +1809,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0087",
         faction: "ReZeon, TITANS",
         equipment:
-          "Feydayeen Rifle, Beam Cannon x2, Shield Booster (Heavy Booster), Panoptic",
+          "Feydayeen Rifle, Beam Cannon x2, Shield Booster (Heavy Booster), Panoptic, [TRANSFORMABLE]",
       },
       {
         msu: "RX-124 Gundam TR-6 Fiver II",
@@ -1794,7 +1821,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0087",
         faction: "ReZeon, TITANS",
         equipment:
-          "Hyper Long Range Beam Cannon (Railgun Ver), Panoptic Canopy, I-Field [TR]",
+          "Hyper Long Range Beam Cannon (Railgun Ver), Panoptic Canopy, I-Field [TR], [TRANSFORMABLE]",
       },
       {
         msu: "RX-124 Gundam TR-6 Hizack II",
@@ -1853,7 +1880,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0087",
         faction: "ReZeon, TITANS",
         equipment:
-          "ECM/ECCM, Beam Rifle, Composite Shield (Beam SMG), Enhanced Fusion Reactor, HB [TR]",
+          "ECM/ECCM, Beam Rifle, Composite Shield (Beam SMG), Enhanced Fusion Reactor, HB [TR], [TRANSFORMABLE]",
       },
       {
         msu: "RX-124 Gundam TR-6 Keh..II Ad",
@@ -1865,7 +1892,7 @@ export const FORCE_LIST_FACTIONS = [
         year: "0087",
         faction: "ReZeon, TITANS",
         equipment:
-          "Beam Cannon, Composite Shield (LBR + I-Field), EFR, Heavy Booster, Extra Arm (1) [TR]",
+          "Beam Cannon, Composite Shield (LBR + I-Field), EFR, Heavy Booster, Extra Arm (1) [TR], [TRANSFORMABLE]",
       },
       {
         msu: "ARZ-125 RE HAZE",
