@@ -714,7 +714,19 @@ export const FORCE_LIST_FACTIONS = [
         year: "0096",
         faction: "EF",
         equipment:
-          "Beam Magnum, Beam Saber x4, Shield, Command Interface, Vulcans [PSYCOMMU]",
+          "Beam Magnum, Beam Saber x4, Shield, Command Interface, Vulcans Cannons, [PSYCOMMU]",
+      },
+      {
+        msu: "RX-78AN-01 Gundam AN-01 Tristan",
+        mcu: 135,
+        move: '7"',
+        armor: 25,
+        fro: 7,
+        tonnage: 15,
+        year: "0096",
+        faction: "EF",
+        equipment:
+          "Beam Rifle, Beam Saber x2, Shield, Arm Rotary Cannons x2, Vulcan Cannons, [PSYCOMMU]",
       },
       {
         msu: "FD-03 Karl Gustav",
@@ -926,7 +938,7 @@ export const FORCE_LIST_FACTIONS = [
       },
       {
         msu: "MS-09 Dom",
-        mcu: 190,
+        mcu: 200,
         move: '7"',
         armor: 24,
         fro: 5,
@@ -934,7 +946,43 @@ export const FORCE_LIST_FACTIONS = [
         year: "0079",
         faction: "Zeon",
         equipment:
-          "Beam SMG [MOUNTABLE],Heavy Bazooka,Side Verniers,Grenades x2,Heavy Booster",
+          "Beam SMG [MOUNTABLE],Heavy Bazooka,Side Verniers,Grenades x2,Heavy Booster, Heat Blade",
+      },
+      {
+        msu: "MS-09F Dom",
+        mcu: 225,
+        move: '7"',
+        armor: 24,
+        fro: 5,
+        tonnage: 34,
+        year: "0079",
+        faction: "Zeon",
+        equipment:
+          "Beam SMG [MOUNTABLE],Heavy Bazooka,Side Verniers,PanzerFaust x4,Machine Gun (ZEON),Heavy Booster, Heat Balde",
+      },
+      {
+        msu: "MS-09R Rick Dom",
+        mcu: 215,
+        move: '7"',
+        armor: 24,
+        fro: 4,
+        tonnage: 35,
+        year: "0079",
+        faction: "Zeon",
+        equipment:
+          "Machine Gun, Heavy Bazooka, Side Verniers, Flash Grenade [MOUNTABLE], Heavy Booster, Heat Blade",
+      },
+      {
+        msu: "MS-09RS Rick Dom",
+        mcu: 215,
+        move: '7"',
+        armor: 24,
+        fro: 7,
+        tonnage: 35,
+        year: "0079",
+        faction: "Zeon",
+        equipment:
+          "Beam Cannon, Side Verniers, Flash Grenade [MOUNTABLE], Heat Blade, Heavy Booster",
       },
       {
         msu: "MSM-08 Zogok",
@@ -982,30 +1030,6 @@ export const FORCE_LIST_FACTIONS = [
         faction: "Zeon",
         equipment:
           "CQC Weapon x2, Heavy Booster, Kunai Knives x4, Kinetic Gatling [INBUILT] x3, Spiky Shoulders x2",
-      },
-      {
-        msu: "MS-09R Rick Dom",
-        mcu: 205,
-        move: '7"',
-        armor: 24,
-        fro: 4,
-        tonnage: 35,
-        year: "0079",
-        faction: "Zeon",
-        equipment:
-          "Machine Gun, Heavy Bazooka, Side Verniers, Flash Grenade [MOUNTABLE], Heavy Booster",
-      },
-      {
-        msu: "MS-09RS Rick Dom",
-        mcu: 215,
-        move: '7"',
-        armor: 24,
-        fro: 7,
-        tonnage: 35,
-        year: "0079",
-        faction: "Zeon",
-        equipment:
-          "Beam Cannon, Heavy Bazooka, Side Verniers, Flash Grenade [MOUNTABLE], Heat Blade, Heavy Booster",
       },
       {
         msu: "MSN-07 Z'Gok-E",

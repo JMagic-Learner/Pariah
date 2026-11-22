@@ -171,7 +171,7 @@ export const FRAME_IMPROVEMENTS = [
     qty: 2,
     mcu: 15,
     effect:
-      "Increase FRO by 2. If a hit location is rolled while a Helium-3 Fuel Tank is equipped in that hit location, roll 1d6. On a 5+, the tank explodes and deals one [AOE(3)] hit,10 damage to that hit location.",
+      "Increase FRO by 1. If a hit location is rolled while a Helium-3 Fuel Tank is equipped in that hit location, roll 1d6. On a 5+, the tank explodes and deals one [AOE(3)] hit,10 damage to that hit location.",
   },
   {
     name: "Helium-3 Fuel Tank (Left Leg)",

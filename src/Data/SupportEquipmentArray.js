@@ -336,7 +336,7 @@ export const SUPPORT = [
     qty: 1,
     mcu: 40,
     effect:
-      "This MCU may equip and use [HEAVY] weapons in one hand, with a -1 penalty to hit rolls.",
+      "All weapons equipped in the arms or hands have the [BRACE] keyword.",
   },
   {
     name: "Shields (HEAVY) [30]",
