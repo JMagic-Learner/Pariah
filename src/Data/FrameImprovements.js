@@ -167,7 +167,7 @@ export const FRAME_IMPROVEMENTS = [
     name: "Helium-3 Fuel Tank (Torso)",
     loc: "Torso",
     ton: `1`,
-    pfro: "–",
+    pfro: 1,
     qty: 2,
     mcu: 15,
     effect:
@@ -177,41 +177,41 @@ export const FRAME_IMPROVEMENTS = [
     name: "Helium-3 Fuel Tank (Left Leg)",
     loc: "Left Leg",
     ton: `1`,
-    pfro: "–",
+    pfro: 1,
     qty: 2,
     mcu: 15,
     effect:
-      "Increase FRO by 2. If a hit location is rolled while a Helium-3 Fuel Tank is equipped in that hit location, roll 1d6. On a 5+, the tank explodes and deals one [AOE(3)] hit,10 damage to that hit location.",
+      "Increase FRO by 1. If a hit location is rolled while a Helium-3 Fuel Tank is equipped in that hit location, roll 1d6. On a 5+, the tank explodes and deals one [AOE(3)] hit,10 damage to that hit location.",
   },
   {
     name: "Helium-3 Fuel Tank (Left Arm)",
     loc: "Left Arm",
     ton: `1`,
-    pfro: "–",
+    pfro: 1,
     qty: 2,
     mcu: 15,
     effect:
-      "Increase FRO by 2. If a hit location is rolled while a Helium-3 Fuel Tank is equipped in that hit location, roll 1d6. On a 5+, the tank explodes and deals one [AOE(3)] hit,10 damage to that hit location.",
+      "Increase FRO by 1. If a hit location is rolled while a Helium-3 Fuel Tank is equipped in that hit location, roll 1d6. On a 5+, the tank explodes and deals one [AOE(3)] hit,10 damage to that hit location.",
   },
   {
     name: "Helium-3 Fuel Tank (Right Leg)",
     loc: "Right Leg",
     ton: `1`,
-    pfro: "–",
+    pfro: 1,
     qty: 2,
     mcu: 15,
     effect:
-      "Increase FRO by 2. If a hit location is rolled while a Helium-3 Fuel Tank is equipped in that hit location, roll 1d6. On a 5+, the tank explodes and deals one [AOE(3)] hit,10 damage to that hit location.",
+      "Increase FRO by 1. If a hit location is rolled while a Helium-3 Fuel Tank is equipped in that hit location, roll 1d6. On a 5+, the tank explodes and deals one [AOE(3)] hit,10 damage to that hit location.",
   },
   {
     name: "Helium-3 Fuel Tank (Right Arm)",
     loc: "Right Arm",
     ton: `1`,
-    pfro: "–",
+    pfro: 1,
     qty: 2,
     mcu: 15,
     effect:
-      "Increase FRO by 2. If a hit location is rolled while a Helium-3 Fuel Tank is equipped in that hit location, roll 1d6 for EACH Helium-3 Fuel Tank equipped in that hit location. On a 5+, the tank explodes and deals one [AOE(3)] hit,10 damage to that hit location.",
+      "Increase FRO by 1. If a hit location is rolled while a Helium-3 Fuel Tank is equipped in that hit location, roll 1d6 for EACH Helium-3 Fuel Tank equipped in that hit location. On a 5+, the tank explodes and deals one [AOE(3)] hit,10 damage to that hit location.",
   },
   {
     name: "Lightweight Frame Improvements (Torso)",

@@ -143,7 +143,8 @@ export const usePilotDerivedStats = ({
     ).length +
     addlEquip.filter(
       (row, i) => row.name === "Helium-3 Fuel Tank (Right Leg)" && !soldAddl[i],
-    ).length;
+    ).length -
+    1;
   const froBonus =
     (hasMechanic && mechanicChoice === "fro" ? 2 : 0) + efrCount * 2;
   const effectiveTonnageLimit =
