@@ -29,7 +29,7 @@ export const KEYWORDS = [
   },
   {
     name: "[BURST(X)]",
-    desc: "When declaring an attack, reduce the weapon's ROF TO (X) attack dice. Reroll all hits. Cannot be used simultaneously with [FULL AUTO].",
+    desc: "When declaring an attack, change the weapon's ROF TO (X) attack dice. Reroll all hits. When firing in [BURST] mode, any modifiers to ROF are ignored.",
   },
   {
     name: "[CIVILIANS]",
