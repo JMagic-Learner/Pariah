@@ -16,9 +16,13 @@ export const Upgrades = () => {
       </p>
 
       <p className={classNames("lh-copy tj", { f7: isMobile })}>
+        There is a limit of two upgrades per weapon.
+      </p>
+
+      <p className={classNames("lh-copy tj", { f7: isMobile })}>
         When an Upgrade has a install location of "Weapon", the tonnage cost is
         added to the weapon itself. Meaning that a weapon can change weight
-        classification from [LIGHT] to [MEDIUM] or [HEAVY ].
+        classification from [LIGHT] to [MEDIUM] or [HEAVY].
       </p>
       <SupportEquipmentTable items={UPGRADES} mobileTitle="Upgrades" />
     </div>

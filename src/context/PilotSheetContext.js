@@ -179,6 +179,7 @@ export const usePilotSlot = (slotIndex) => {
     setShowFrameImprovements: makeSet("showFrameImprovements"),
     setShowKeywords: makeSet("showKeywords"),
     setShowNewtype: makeSet("showNewtype"),
+    setShowWarcriminal: makeSet("showWarcriminal"),
     setShowPilotPanel: makeSet("showPilotPanel"),
     setShowBaseEquip: makeSet("showBaseEquip"),
     setShowAddlEquip: makeSet("showAddlEquip"),

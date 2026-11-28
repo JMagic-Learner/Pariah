@@ -58,6 +58,15 @@ export const UPGRADES = [
       "Choose one [LIGHT] or [MEDIUM] Rifle/MG/Pistol type weapon. This weapon now has a combat knife attached to the barrel. This Combat Knife occupies no slots, and also gains [MOMENTUM].",
   },
   {
+    name: "Upgrade:Backhanded Strike",
+    loc: "Weapon",
+    ton: "-",
+    pfro: "–",
+    qty: 2,
+    mcu: 25,
+    effect: "One melee weapon gains +1 ROF. Limit one per melee weapon",
+  },
+  {
     name: "Upgrade:[COUNTERSTRIKE]",
     loc: "Weapon",
     ton: "–",
@@ -121,7 +130,7 @@ export const UPGRADES = [
     pfro: "–",
     qty: 2,
     mcu: 10,
-    effect: "Add [GRIP] keyword to one ranged weapon.",
+    effect: "Add [GRIP] keyword to one weapon.",
   },
   {
     name: "Upgrade:Heavy Barrel",
@@ -134,14 +143,24 @@ export const UPGRADES = [
       "Reduce ROF by 1 to a mininum of 1. Increase the positive range bands bonuses by 2. Decrease negative range bands penalities by 2. For example, an rangeband mod of +2 | 0 | -1 | -2 would become +4 | +0 | -3 | -4",
   },
   {
+    name: "Upgrade:Heavy Ordnance",
+    loc: "Weapon",
+    ton: 4,
+    pfro: "–",
+    qty: 2,
+    mcu: 20,
+    effect:
+      "[HEAVY] ranged weapons only. After rolling hit locations, enemy MSU hit by this ranged weapon must make a 5+ PS skill check or suffer [KNOCKDOWN] State.",
+  },
+  {
     name: "Upgrade:Imminent Force",
     loc: "Weapon",
-    ton: "4",
+    ton: 4,
     pfro: "–",
     qty: 2,
     mcu: 35,
     effect:
-      "Enemy Pilots hit by this non-beam melee weapon must make a 4+ PS skil check or suffer [KNOCKDOWN] State.",
+      "After rolling hit locations, enemy MSU hit by this non-beam melee weapon must make a 5+ PS skil check or suffer [KNOCKDOWN] State.",
   },
   {
     name: "Upgrade:[IMPACT]",

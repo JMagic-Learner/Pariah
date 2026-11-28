@@ -29,7 +29,7 @@ export const Navigation = () => {
             })}
           >
             <Link className="link dim red no-underline fw7 h3" to="/">
-              Gundam Flashpoint 0.7.6
+              Gundam Flashpoint 0.7.7
             </Link>
           </div>
           <div

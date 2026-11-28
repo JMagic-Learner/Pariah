@@ -80,6 +80,7 @@ export const usePilotDerivedStats = ({
   const gunneryTraitCount = traits.filter((t) => t === "Gunnery").length;
   const brawlerTraitCount = traits.filter((t) => t === "Brawler").length;
   const pilotingTraitCount = traits.filter((t) => t === "Piloting").length;
+  const hasWarcriminal = traits.some((t) => t === "War Criminal");
 
   const gsBonus =
     gunneryTraitCount +
@@ -156,8 +157,6 @@ export const usePilotDerivedStats = ({
     (traits.some((t) => t === "One Year War Veteran") ? 75 : 0) +
     (traits.some((t) => t === "CORRUPT GOVERNMENT (EF GENERAL)") ? 50 : 0);
 
-  const hasMerchantOfDeath = traits.some((t) => t === "Merchant of Death");
-
   // Selling a stock (FREE) item refunds MCU: plain shields are a flat 5,
   // shield/weapon combos are a flat 15, support equipment refunds its full
   // catalog cost, weapons only refund a flat amount. A non-FREE item
@@ -168,8 +167,7 @@ export const usePilotDerivedStats = ({
     if (isPureShield(row.name)) return 5;
     if (isShieldWeaponCombo(row.name)) return 15;
     const supportMCU = lookupSupportMCU(row.name);
-    const freeWeaponRefund = hasMerchantOfDeath ? 35 : 10;
-    return supportMCU !== null ? supportMCU : freeWeaponRefund;
+    return supportMCU !== null ? supportMCU : 10;
   };
 
   const totalMCU =
@@ -241,6 +239,7 @@ export const usePilotDerivedStats = ({
     hasPurgableArmor,
     hasGrypsVet,
     hasHonorable,
+    hasWarcriminal,
     gunneryTraitCount,
     brawlerTraitCount,
     pilotingTraitCount,

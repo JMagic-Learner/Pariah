@@ -6,6 +6,7 @@ import { UPGRADES } from "./UpgradeArray";
 import { FRAME_IMPROVEMENTS } from "./FrameImprovements";
 import { NEWTYPE_UPGRADES } from "./NewtypeUpgrades";
 import { BITS } from "./NewtypeUpgrades";
+import { WARCRIMINAL_UPGRADES } from "./WarcriminalTraitsArray";
 import { formatWeaponType } from "../utils/weaponType";
 // ─── Equipment picker modal ───────────────────────────────────────────────────
 
@@ -26,6 +27,7 @@ export const PICKER_TABS = [
       "Keywords",
     ],
     data: RANGED,
+    getMobileCells: (w) => [w.name, formatWeaponType(w.type), w.mcu],
     getCells: (w) => [
       w.name,
       formatWeaponType(w.type),
@@ -63,6 +65,7 @@ export const PICKER_TABS = [
       "Keywords",
     ],
     data: MELEE,
+    getMobileCells: (w) => [w.name, formatWeaponType(w.type), w.mcu],
     getCells: (w) => [
       w.name,
       formatWeaponType(w.type),
@@ -88,6 +91,7 @@ export const PICKER_TABS = [
     label: "Support",
     headers: ["Name", "Loc", "Ton", "PFRO", "Qty", "MCU", "Faction", "Effect"],
     data: SUPPORT,
+    getMobileCells: (s) => [s.name, s.loc, s.mcu],
     getCells: (s) => [
       s.name,
       s.loc,
@@ -110,6 +114,7 @@ export const PICKER_TABS = [
     label: "Upgrades",
     headers: ["Name", "Loc", "Ton", "PFRO", "Qty", "MCU", "Effect"],
     data: UPGRADES,
+    getMobileCells: (u) => [u.name, u.loc, u.mcu],
     getCells: (u) => [u.name, u.loc, u.ton, u.pfro, u.qty, u.mcu, u.effect],
     getFields: (u) => ({
       name: u.name,
@@ -123,6 +128,7 @@ export const PICKER_TABS = [
     label: "Frame Improvements",
     headers: ["Name", "Loc", "Ton", "PFRO", "Qty", "MCU", "Effect"],
     data: FRAME_IMPROVEMENTS,
+    getMobileCells: (f) => [f.name, f.loc, f.mcu],
     getCells: (f) => [f.name, f.loc, f.ton, f.pfro, f.qty, f.mcu, f.effect],
     getFields: (f) => ({
       name: f.name,
@@ -136,6 +142,7 @@ export const PICKER_TABS = [
     label: "Munitions",
     headers: ["Name", "DAM", "Effect"],
     data: MUNITIONS,
+    getMobileCells: (m) => [m.name, "Munition", "—"],
     getCells: (m) => [m.name, m.dam, m.effect],
     getFields: (m) => ({
       name: m.name,
@@ -149,6 +156,7 @@ export const PICKER_TABS = [
     label: "Newtype",
     headers: ["Name", "Limit", "MCU", "Effect"],
     data: NEWTYPE_UPGRADES,
+    getMobileCells: (n) => [n.name, "Newtype", n.mcu],
     getCells: (n) => [n.name, n.limit, n.mcu, n.effect],
     getFields: (n) => ({
       name: n.name,
@@ -156,6 +164,20 @@ export const PICKER_TABS = [
       fro: "",
       tonnage: "",
       notes: n.effect || "",
+    }),
+  },
+  {
+    label: "War Criminal",
+    headers: ["Name", "Cost", "Effect"],
+    data: WARCRIMINAL_UPGRADES,
+    getMobileCells: (w) => [w.name, "War Criminal", w.cost],
+    getCells: (w) => [w.name, w.cost, w.effect],
+    getFields: (w) => ({
+      name: w.name,
+      mcuCost: String(w.cost ?? ""),
+      fro: "",
+      tonnage: "",
+      notes: w.effect || "",
     }),
   },
   {
@@ -172,6 +194,7 @@ export const PICKER_TABS = [
       "Faction",
     ],
     data: BITS,
+    getMobileCells: (b) => [b.type, b.cat, b.mcu],
     getCells: (b) => [
       b.type,
       b.cat,

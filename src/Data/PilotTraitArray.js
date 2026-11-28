@@ -134,19 +134,13 @@ export const TRAITS = [
     name: "Enduring Will",
     cost: 1,
     effect:
-      "[PILOT] ignores the [KNOCKDOWN] state when the first leg location is destroyed. This [PILOT] also ignores any [KNOCKDOWN] effects from [REACTOR CRITICALS] explosions. [CRIPPLED] state reduces base movespeed by 2 instead of half.",
+      "[PILOT] ignores the [KNOCKDOWN] state when the first leg location is destroyed. This [PILOT] also ignores any [KNOCKDOWN] effects from [REACTOR CRITICALS] explosions, and or effects from Weapon upgrades. [CRIPPLED] state reduces base movespeed by 2 instead of half.",
   },
   {
     name: "Evasive",
     cost: 1,
     effect:
       "This [PILOT]'s evasion max bonus is now 5 instead of 4. Moving less than 4 inches no longer incurs a -1 penalty to evasion rolls (see Evasion Tier Table)",
-  },
-  {
-    name: "Executioner",
-    cost: 2,
-    effect:
-      "Make a single ROF 1 melee attack at -2 penalty. If successful, hit location is treated as a double 1 (Torso Hit).",
   },
   {
     name: "Explosive Pro",
@@ -244,6 +238,12 @@ export const TRAITS = [
     cost: 1,
     effect:
       "This [PILOT] cannot declare attacks in the rear arcs of enemy MSU. This [PILOT] gains +1 GS and +1 BR. This [PILOT] loses this trait whenever he/she or a [FIRETEAM] member destroys [CIVILIANS]",
+  },
+  {
+    name: "Immovable Object",
+    cost: 1,
+    effect:
+      "This [PILOT] may perform a 4+ PS skill check to ignore push, pull, [IMPACT]",
   },
   {
     name: "Juke",
@@ -366,12 +366,6 @@ export const TRAITS = [
       'This unit cannot be declared as a target of ranged REACTIVE ATTACKS if it moves 5" or less and ends movement touching the edge of the battlefield',
   },
   {
-    name: "Pyromaniac",
-    cost: 1,
-    effect:
-      "All [AOE(X)] ranged weapons now also have [MUNITIONS]: Napalm effect in addition to base damage. Use the greatest [AOE(X)] value for determining area of effect radius.",
-  },
-  {
     name: "Quick Hands",
     cost: 1,
     effect: "All [LIGHT] or [MEDIUM] weapons gain [QUICK SWAP] trait.",
@@ -416,12 +410,6 @@ export const TRAITS = [
     name: "Scavenger",
     cost: 1,
     effect: "Reduce one Support Equipment's or Weapon's cost by 50% MCU.",
-  },
-  {
-    name: "Serial Killer",
-    cost: 0,
-    effect:
-      "For each enemy [UNIT] destroyed by this [PILOT], gain +1 Gunnery or Brawl.",
   },
   {
     name: "Sharpshooter",
@@ -499,7 +487,7 @@ export const TRAITS = [
     name: "War Criminal",
     cost: 0,
     effect:
-      "This [PILOT] may target [CIVILIANS] without penalty. This [PILOT] does not incur Victory Point penalties for killing [CIVILIANS]",
+      "This [PILOT] may target [CIVILIANS] without penalty. This [PILOT] does not incur Victory Point penalties for killing [CIVILIANS]. This [PILOT] gains access to Warcriminal Upgrades",
   },
   {
     name: "Black Ops (REZEON)",

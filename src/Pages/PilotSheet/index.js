@@ -32,7 +32,6 @@ import {
   REZEON_PRESETS,
   ALT_TIMELINE_PRESETS,
 } from "../../Data/PresetsArray";
-
 import { TH, TD } from "./components/TableCells";
 import { MsuColgroup } from "./components/MsuColgroup";
 import { TraitRow } from "./components/TraitRow";
@@ -44,6 +43,7 @@ import { EquipmentPickerModal } from "./components/EquipmentPickerModal";
 import { TraitPickerModal } from "./components/TraitPickerModal";
 import { MsuPresetPickerModal } from "./components/MsuPresetPickerModal";
 import { ReferenceModal } from "./components/ReferenceModal";
+import { WARCRIMINAL_UPGRADES } from "../../Data/WarcriminalTraitsArray";
 import { Z_ALERT } from "../../utils/zIndex";
 import { usePilotDerivedStats } from "./hooks/usePilotDerivedStats";
 import { useSupportLocations } from "./hooks/useSupportLocations";
@@ -133,6 +133,8 @@ const PilotSheetPanel = ({ slotIndex }) => {
     setShowKeywords,
     showNewtype,
     setShowNewtype,
+    setShowWarcriminal,
+    showWarcriminal,
     showPilotPanel,
     setShowPilotPanel,
     showBaseEquip,
@@ -152,6 +154,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
     hasPurgableArmor,
     hasGrypsVet,
     hasHonorable,
+    hasWarcriminal,
     gunneryTraitCount,
     brawlerTraitCount,
     pilotingTraitCount,
@@ -1057,6 +1060,31 @@ const PilotSheetPanel = ({ slotIndex }) => {
             </table>
           </ReferenceModal>
         )}
+        {showWarcriminal && (
+          <ReferenceModal
+            title="War Criminal Upgrades"
+            onClose={() => setShowWarcriminal(false)}
+          >
+            <table className="w-100 f7" cellSpacing="0">
+              <thead>
+                <tr>
+                  <TH className="w-25">Upgrade</TH>
+                  <TH className="tc w-10">Cost</TH>
+                  <TH>Effect</TH>
+                </tr>
+              </thead>
+              <tbody>
+                {WARCRIMINAL_UPGRADES.map((t) => (
+                  <tr key={t.name} className="stripe-light">
+                    <TD className="fw6">{t.name}</TD>
+                    <TD className="tc fw6 dark-green">{t.cost}</TD>
+                    <TD className="lh-copy">{t.effect}</TD>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </ReferenceModal>
+        )}
       </div>
 
       {/* ── Hit Locations + Reference Tables ── */}
@@ -1165,6 +1193,11 @@ const PilotSheetPanel = ({ slotIndex }) => {
               open={showNewtype}
               onToggle={() => setShowNewtype((v) => !v)}
               label={isMobile ? "Newtype" : "Newtype Upgrades"}
+            />
+            <RefToggle
+              open={showWarcriminal}
+              onToggle={() => setShowWarcriminal((v) => !v)}
+              label={isMobile ? "Warcriminal" : "Warcriminal Upgrades"}
             />
           </div>
           <SheetHeader>Evasion Tier Table</SheetHeader>
@@ -1324,7 +1357,10 @@ export const PilotSheet = () => {
       activePilotSlot.setAll(patch);
       const label = patch.msuName.trim() || `Pilot ${target + 1}`;
       setTabNames((prev) => prev.map((l, i) => (i === target ? label : l)));
-      setImportStatus({ ok: true, message: `Loaded "${label}" into Pilot ${target + 1}.` });
+      setImportStatus({
+        ok: true,
+        message: `Loaded "${label}" into Pilot ${target + 1}.`,
+      });
     } catch (err) {
       setImportStatus({ ok: false, message: `Import failed: ${err.message}` });
     }
@@ -1417,13 +1453,10 @@ export const PilotSheet = () => {
       {/* ── Presets (applies to the active pilot tab) ── */}
       {showTeamNav && (
         <div
-          className={classNames(
-            "flex bb b--black-20 bg-near-white ph2 pv2",
-            {
-              "flex-wrap items-center": !isMobile,
-              "flex-column items-stretch": isMobile,
-            },
-          )}
+          className={classNames("flex bb b--black-20 bg-near-white ph2 pv2", {
+            "flex-wrap items-center": !isMobile,
+            "flex-column items-stretch": isMobile,
+          })}
           style={{ gap: "0.5rem" }}
         >
           <span className="f7 fw7 dark-gray nowrap">

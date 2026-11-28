@@ -31,7 +31,17 @@ export const ReferenceModal = ({ title, onClose, children }) => {
             ✕
           </button>
         </div>
-        <div style={{ flex: 1, overflowY: "auto" }} className="pa2">
+        <style>{`
+          .reference-modal-body th {
+            text-align: center !important;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+          }
+        `}</style>
+        <div
+          style={{ flex: 1, overflowY: "auto" }}
+          className="pa2 reference-modal-body"
+        >
           {children}
         </div>
       </div>

@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { useMediaQuery } from "@custom-react-hooks/all";
 import classNames from "classnames";
-
 import { Chapter1 } from "../Chapter1";
-
 import { Pilots } from "../Chapter2/sections/Pilots";
 import { MobileSuitsAndArmors } from "../Chapter2/sections/MobileSuitsAndArmors";
 import { MSUCharacteristics } from "../Chapter2/sections/MSUCharacteristics";
@@ -28,7 +26,6 @@ import { Munitions } from "../Chapter2/sections/Munitions";
 import { Upgrades } from "../Chapter2/sections/Upgrades";
 import { FrameImprovements } from "../Chapter2/sections/FrameImprovements";
 import { SupportEquipment } from "../Chapter2/sections/SupportEquipment";
-
 import { Phases } from "../Chapter3/sections/Phases";
 import { Movement } from "../Chapter3/sections/Movement";
 import { HitLocations } from "../Chapter3/sections/HitLocations";
@@ -37,7 +34,6 @@ import { AttackSequence } from "../Chapter3/sections/AttackSequence";
 import { States } from "../Chapter3/sections/States";
 import { OtherActions } from "../Chapter3/sections/OtherActions";
 import { Terrain } from "../Chapter3/sections/Terrain";
-
 import { Overview } from "../Chapter4/sections/Overview";
 import { TorringtonBase } from "../Chapter4/sections/TorringtonBase";
 import { Recon } from "../Chapter4/sections/Recon";
@@ -48,12 +44,11 @@ import { ColonyDrop } from "../Chapter4/sections/ColonyDrop";
 import { CivilianEvac } from "../Chapter4/sections/CivilianEvac";
 import { FinalStand } from "../Chapter4/sections/FinalStand";
 import { NewtypeUpgrades } from "../Chapter2/sections/NewtypeUpgrades";
-
+import { WarcriminalUpgrades } from "../Chapter2/sections/WarcriminalUpgrades";
 import { SupportUnitsOverview } from "../Chapter5/sections/Overview";
 import { Infantry } from "../Chapter5/sections/Infantry";
 import { ArmoredVehicles } from "../Chapter5/sections/ArmoredVehicles";
 import { AirSupport } from "../Chapter5/sections/AirSupport";
-
 import { CampaignOverview } from "../Chapter6/sections/Overview";
 import { Timeline } from "../Chapter6/sections/Timeline";
 import { CampaignPilots } from "../Chapter6/sections/CampaignPilots";
@@ -156,8 +151,13 @@ const CHAPTERS = [
       },
       {
         id: "newtypeUpgrades",
-        title: "2.11 — Newtype Upgrades",
+        title: "2.11.1 — Newtype Upgrades",
         Component: NewtypeUpgrades,
+      },
+      {
+        id: "warCriminalUpgrades",
+        title: "2.11.2 — Warcriminal Upgrades",
+        Component: WarcriminalUpgrades,
       },
       {
         id: "factions-ef",
@@ -279,7 +279,11 @@ const CHAPTERS = [
     id: "ch6",
     title: "Ch.6 — Campaign",
     sections: [
-      { id: "campaign-overview", title: "6.0 — Overview", Component: CampaignOverview },
+      {
+        id: "campaign-overview",
+        title: "6.0 — Overview",
+        Component: CampaignOverview,
+      },
       { id: "campaign-timeline", title: "6.1 — Timeline", Component: Timeline },
       {
         id: "campaign-pilots",
