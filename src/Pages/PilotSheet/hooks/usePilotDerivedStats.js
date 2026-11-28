@@ -123,31 +123,21 @@ export const usePilotDerivedStats = ({
         (childSoldierChoice2 === "ps" ? -1 : 0)
       : 0);
 
-  const efrCount =
-    baseEquip.filter(
-      (row, i) => row.name === "Enhanced Fusion Reactors" && !soldBase[i],
-    ).length +
-    addlEquip.filter(
-      (row, i) => row.name === "Enhanced Fusion Reactors" && !soldAddl[i],
-    ).length +
-    addlEquip.filter(
-      (row, i) => row.name === "Helium-3 Fuel Tank (Torso)" && !soldAddl[i],
-    ).length +
-    addlEquip.filter(
-      (row, i) => row.name === "Helium-3 Fuel Tank (Left Arm)" && !soldAddl[i],
-    ).length +
-    addlEquip.filter(
-      (row, i) => row.name === "Helium-3 Fuel Tank (Right Arm)" && !soldAddl[i],
-    ).length +
-    addlEquip.filter(
-      (row, i) => row.name === "Helium-3 Fuel Tank (Left Leg)" && !soldAddl[i],
-    ).length +
-    addlEquip.filter(
-      (row, i) => row.name === "Helium-3 Fuel Tank (Right Leg)" && !soldAddl[i],
-    ).length -
-    1;
+  // Counts unsold equipment rows (base + additional) matching `match`.
+  const countEquipped = (match) =>
+    baseEquip.filter((row, i) => match(row.name) && !soldBase[i]).length +
+    addlEquip.filter((row, i) => match(row.name) && !soldAddl[i]).length;
+  const efrCount = countEquipped(
+    (name) => name === "Enhanced Fusion Reactors",
+  );
+  // Helium-3 Fuel Tank (Torso / Left Arm / Right Arm / Left Leg / Right Leg)
+  const heliumCount = countEquipped((name) =>
+    (name || "").startsWith("Helium-3 Fuel Tank"),
+  );
   const froBonus =
-    (hasMechanic && mechanicChoice === "fro" ? 2 : 0) + efrCount * 2;
+    (hasMechanic && mechanicChoice === "fro" ? 2 : 0) +
+    efrCount * 2 +
+    heliumCount;
   const effectiveTonnageLimit =
     Number(tonnageLimit) +
     (hasMechanic && mechanicChoice === "tonnage" ? 6 : 0);
@@ -228,6 +218,10 @@ export const usePilotDerivedStats = ({
       purgeArmorTonnageSavings,
   );
 
+  // Featherweight: an MSU carrying 9 tons or less gets +4" base movement
+  // and +1 EVA. A blank sheet (0 tons) doesn't count.
+  const isFeatherweight = totalTonnage > 0 && totalTonnage <= 9;
+
   return {
     hasMechanic,
     hasNewtype,
@@ -253,5 +247,6 @@ export const usePilotDerivedStats = ({
     purgeArmorTonnageSavings,
     purgedArmorFor,
     totalTonnage,
+    isFeatherweight,
   };
 };

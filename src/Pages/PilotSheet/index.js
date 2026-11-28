@@ -167,6 +167,7 @@ const PilotSheetPanel = ({ slotIndex }) => {
     totalMCU,
     purgedArmorFor,
     totalTonnage,
+    isFeatherweight,
   } = usePilotDerivedStats({
     traits,
     baseEquip,
@@ -611,14 +612,14 @@ const PilotSheetPanel = ({ slotIndex }) => {
             <tbody>
               {/* Mobile Suit row */}
               <tr>
-                <TD>
+                <TD className="v-top">
                   <TextInput
                     value={mobileSuit}
                     onChange={setMobileSuit}
                     placeholder="e.g. GM Sniper II"
                   />
                 </TD>
-                <TD className="tc">
+                <TD className="tc v-top">
                   <NumInput value={mcu} onChange={setMcu} width="4rem" />
                   <div
                     className={classNames("f8 fw6 mt1", {
@@ -630,15 +631,15 @@ const PilotSheetPanel = ({ slotIndex }) => {
                     {totalMCU} / {mcuLimit}
                   </div>
                 </TD>
-                <TD className="tc">
+                <TD className="tc v-top">
                   <NumInput value={fro} onChange={setFro} />
                   {froBonus > 0 && (
                     <div className="f8 fw6 mt1 dark-green">
-                      +{froBonus} bonus
+                      {(Number(fro) || 0) + froBonus} total (+{froBonus})
                     </div>
                   )}
                 </TD>
-                <TD className="tc">
+                <TD className="tc v-top">
                   <NumInput value={tonnageLimit} onChange={setTonnageLimit} />
                   <div
                     className={classNames("f8 fw6 mt1", {
@@ -652,15 +653,20 @@ const PilotSheetPanel = ({ slotIndex }) => {
                     {totalTonnage} / {effectiveTonnageLimit || 0}
                   </div>
                 </TD>
-                <TD className="tc">
+                <TD className="tc v-top">
                   <TextInput
                     value={movement}
                     onChange={setMovement}
                     placeholder='e.g. 16"'
                     className="tc"
                   />
+                  {isFeatherweight && (
+                    <div className="f8 fw6 mt1 dark-green">
+                      +4", +1 EVA
+                    </div>
+                  )}
                 </TD>
-                <TD className="tc">
+                <TD className="tc v-top">
                   <NumInput
                     value={armorValue}
                     onChange={setArmorValue}

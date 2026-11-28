@@ -73,7 +73,7 @@ export const KEYWORDS = [
   },
   {
     name: "[FEATHERWEIGHT]",
-    desc: "MSU whose total equipment tonnage weighs 10 tons or less gain +4 base movespeed and +1 Evasion",
+    desc: "MSU whose total equipment tonnage weighs 9 tons or less gain +4 base movespeed and +1 Evasion",
   },
   {
     name: "[GRIP]",

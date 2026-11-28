@@ -324,9 +324,9 @@ export const TRAITS = [
   },
   {
     name: "Oldtype Ace",
-    cost: 1,
+    cost: 2,
     effect:
-      "This [PILOT] cannot take the [CYBER NEWTYPE] or [NEWTYPE] pilot traits. Once per round, this [PILOT] may reroll an Evasion Check",
+      "This [PILOT] cannot take the [CYBER NEWTYPE] or [NEWTYPE] pilot traits. This [PILOT] rerolls all evasion dice results of 1",
   },
   {
     name: "Opportunistic",

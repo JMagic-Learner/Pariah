@@ -149,7 +149,7 @@ export const RANGED = [
     rof: 1,
     range: "24|48|72|96",
     mod: "-2|-1|+0|+0",
-    dam: 10,
+    dam: 18,
     ton: 8,
     fro: "–",
     mcu: 55,

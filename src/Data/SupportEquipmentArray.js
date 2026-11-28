@@ -123,7 +123,7 @@ export const SUPPORT = [
     name: "Enhanced Fusion Reactors",
     loc: "Torso",
     ton: "Starting FRO / 2",
-    pfro: "–",
+    pfro: "+2",
     qty: 1,
     mcu: 35,
     effect: "Increase FRO by 2.",
